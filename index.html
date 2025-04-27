@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metricus | Your Communication Coach for Career Growth</title>
+    <style>
+        :root {
+            --primary: #8ab4f8;
+            --secondary: #4d5bce;
+            --accent: #ff7597;
+            --dark: #121212;
+            --dark-secondary: #1e1e1e;
+            --text: #e0e0e0;
+            --text-secondary: #9e9e9e;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        body {
+            background-color: var(--dark);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
+        
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 0 60px;
+        }
+        
+        .hero-content {
+            flex: 1;
+            padding-right: 40px;
+        }
+        
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-weight: 800;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: var(--text-secondary);
+            max-width: 540px;
+        }
+        
+        .signup-form {
+            background: linear-gradient(145deg, rgba(40,40,45,0.9), rgba(25,25,30,0.9));
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            flex: 0 0 380px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .signup-form h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+        
+        input {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 14px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            font-size: 15px;
+            background-color: rgba(255,255,255,0.05);
+            color: var(--text);
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        button:hover {
+            background-color: #ff5a83;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(255,117,151,0.2);
+        }
+
+        .email-button {
+            background-color: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .email-button:hover {
+            background-color: rgba(138, 180, 248, 0.1);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(138, 180, 248, 0.1);
+        }
+
+        .email-button svg {
+            margin-right: 8px;
+        }
+        
+        .features {
+            padding: 60px 0;
+        }
+        
+        .features h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 30px;
+            color: var(--text);
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        
+        .feature-card {
+            background-color: var(--dark-secondary);
+            padding: 25px;
+            border-radius: 14px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+        
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+        
+        footer {
+            padding: 30px 0;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                padding: 60px 0 40px;
+            }
+            
+            .hero-content {
+                padding-right: 0;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .signup-form {
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero {
+                padding: 40px 0 30px;
+            }
+
+            .features {
+                padding: 40px 0;
+            }
+            
+            .signup-form {
+                padding: 25px;
+            }
+            
+            .feature-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">metricus</div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Communicate better.<br>Get promoted faster.</h1>
+                <p>Metricus analyzes your meetings and delivers actionable insights to help you demonstrate impact, influence decisions, and develop leadership skills.</p>
+            </div>
+            
+            <div class="signup-form">
+                <h3>Get early access</h3>
+                <form>
+                    <input type="email" placeholder="Work email" required>
+                    <button type="submit">Get early access →</button>
+                </form>
+                <p style="font-size: 13px; margin-top: 12px; color: var(--text-secondary); text-align: center;">Be first to boost your career through better communication.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="container">
+            <h2>Track what matters for your career</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Show Your Impact</h3>
+                    <p>Get feedback on linking actions to results (STAR method) to clearly demonstrate value in performance reviews.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Evidence-Based Points</h3>
+                    <p>Learn to support ideas with compelling evidence (PREP framework) to be more influential in decisions.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Clarity Score</h3>
+                    <p>Receive a clarity score after each meeting to measure how effectively you communicate ideas.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Problem Framing</h3>
+                    <p>Track your ability to frame problems strategically, a critical skill for leadership positions.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Solution Orientation</h3>
+                    <p>Monitor how you present solutions to build a reputation as a proactive problem-solver.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Growth Trends</h3>
+                    <p>Visualize your communication improvement over time to showcase your leadership potential.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 Metricus</p>
+        </div>
+    </footer>
+</body>
+</html>
