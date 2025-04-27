@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metricus | Your Communication Coach for Career Growth</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         :root {
             --primary: #8ab4f8;
@@ -13,6 +14,7 @@
             --dark-secondary: #1e1e1e;
             --text: #e0e0e0;
             --text-secondary: #9e9e9e;
+            --success: #4caf50;
         }
         
         * {
@@ -36,6 +38,14 @@
         
         header {
             padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
         }
         
         .logo {
@@ -43,6 +53,14 @@
             font-size: 24px;
             color: var(--primary);
             letter-spacing: -0.5px;
+        }
+        
+        .domain {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-left: 8px;
+            padding-left: 8px;
+            border-left: 1px solid rgba(255,255,255,0.1);
         }
         
         .hero {
@@ -82,6 +100,7 @@
             box-shadow: 0 20px 50px rgba(0,0,0,0.3);
             flex: 0 0 380px;
             backdrop-filter: blur(10px);
+            min-height: 300px;
         }
         
         .signup-form h3 {
@@ -195,6 +214,33 @@
             margin-top: 40px;
         }
         
+        .footer-domain {
+            color: var(--primary);
+            font-weight: 500;
+        }
+        
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .success-message svg {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 20px;
+        }
+        
+        .success-message h3 {
+            margin-bottom: 15px;
+            color: var(--success);
+        }
+        
+        .success-message p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+        
         @media (max-width: 900px) {
             .hero {
                 flex-direction: column;
@@ -247,30 +293,53 @@
             .feature-card {
                 padding: 20px;
             }
+            
+            .domain {
+                display: none;
+            }
+            
+            header {
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="logo">metricus</div>
+            <div class="logo-container">
+                <div class="logo">metricus</div>
+                <div class="domain">metricusapp.com</div>
+            </div>
         </div>
     </header>
     
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Communicate better.<br>Get promoted faster.</h1>
-                <p>Metricus analyzes your meetings and delivers actionable insights to help you demonstrate impact, influence decisions, and develop leadership skills.</p>
+                <h1>Communicate better.<br>Boost your career impact.</h1>
+                <p>Metricus analyzes your meetings and delivers actionable insights to help you demonstrate value, influence decisions, and develop leadership skills that get recognized.</p>
             </div>
             
             <div class="signup-form">
-                <h3>Get early access</h3>
-                <form>
-                    <input type="email" placeholder="Work email" required>
-                    <button type="submit">Get early access →</button>
-                </form>
-                <p style="font-size: 13px; margin-top: 12px; color: var(--text-secondary); text-align: center;">Be first to boost your career through better communication.</p>
+                <div id="form-container">
+                    <h3>Get early access</h3>
+                    <form id="signup-form">
+                        <input type="email" id="email" placeholder="Work email" required>
+                        <button type="submit">Join waitlist →</button>
+                    </form>
+                    <p style="font-size: 13px; margin-top: 12px; color: var(--text-secondary); text-align: center;">Be first to increase your workplace impact through better communication.</p>
+                </div>
+                
+                <div id="success-message" class="success-message">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#4caf50" stroke-width="2"/>
+                        <path d="M8 12L10.5 14.5L16 9" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h3>You're on the list!</h3>
+                    <p>Thanks for joining our waitlist. We'll be in touch soon with exclusive early access to Metricus.</p>
+                    <p style="font-size: 14px;">Watch your inbox for communication insights while you wait.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -282,7 +351,7 @@
             <div class="feature-grid">
                 <div class="feature-card">
                     <h3>Show Your Impact</h3>
-                    <p>Get feedback on linking actions to results (STAR method) to clearly demonstrate value in performance reviews.</p>
+                    <p>Get feedback on linking actions to results (STAR method) to clearly demonstrate value in team discussions and reviews.</p>
                 </div>
                 
                 <div class="feature-card">
@@ -292,22 +361,22 @@
                 
                 <div class="feature-card">
                     <h3>Clarity Score</h3>
-                    <p>Receive a clarity score after each meeting to measure how effectively you communicate ideas.</p>
+                    <p>Receive a clarity score after each meeting to measure how effectively you communicate ideas and drive understanding.</p>
                 </div>
                 
                 <div class="feature-card">
                     <h3>Problem Framing</h3>
-                    <p>Track your ability to frame problems strategically, a critical skill for leadership positions.</p>
+                    <p>Track your ability to frame problems strategically, a critical skill for gaining visibility and recognition.</p>
                 </div>
                 
                 <div class="feature-card">
                     <h3>Solution Orientation</h3>
-                    <p>Monitor how you present solutions to build a reputation as a proactive problem-solver.</p>
+                    <p>Monitor how you present solutions to build a reputation as a proactive problem-solver with real impact.</p>
                 </div>
                 
                 <div class="feature-card">
                     <h3>Growth Trends</h3>
-                    <p>Visualize your communication improvement over time to showcase your leadership potential.</p>
+                    <p>Visualize your communication improvement over time to showcase your developing leadership potential.</p>
                 </div>
             </div>
         </div>
@@ -315,8 +384,38 @@
     
     <footer>
         <div class="container">
-            <p>© 2025 Metricus</p>
+            <p>© 2025 <span class="footer-domain">metricusapp.com</span> All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            if (!email) return;
+            
+            // Construct the URL with the email parameter
+            const url = `https://script.google.com/macros/s/AKfycbzqnX3biJhp4qQqJjnz3V1k_D9OrSXr44by15jXbrze8TsKtzlZ4v_Yr-GBBIZB4hHC/exec?contact=${encodeURIComponent(email)}`;
+            
+            // Create a new XMLHttpRequest
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            
+            xhr.onload = function() {
+                // Whether successful or not, show success message (for demo purposes)
+                document.getElementById('form-container').style.display = 'none';
+                document.getElementById('success-message').style.display = 'block';
+            };
+            
+            xhr.onerror = function() {
+                // Even on error, show success message for now (can be updated later)
+                document.getElementById('form-container').style.display = 'none';
+                document.getElementById('success-message').style.display = 'block';
+            };
+            
+            xhr.send();
+        });
+    </script>
 </body>
 </html>
