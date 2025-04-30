@@ -25,6 +25,11 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
+        html {
+             scroll-behavior: smooth; /* Enable smooth scrolling */
+        }
+
+
         body {
             background-color: var(--dark);
             color: var(--text);
@@ -87,7 +92,8 @@
             max-width: 650px;
         }
 
-        .cta-button-hero {
+        /* Generic CTA Button Style */
+        .cta-button {
              display: inline-block;
              padding: 12px 25px;
              background-color: var(--accent);
@@ -99,13 +105,26 @@
              cursor: pointer;
              transition: all 0.2s ease;
              text-decoration: none; /* If using <a> */
-             margin-top: 10px;
+             text-align: center;
         }
 
-        .cta-button-hero:hover {
+        .cta-button:hover {
              background-color: #ff5a83;
              transform: translateY(-2px);
              box-shadow: 0 6px 15px rgba(255,117,151,0.2);
+        }
+
+        .cta-button-secondary {
+             background-color: transparent;
+             border: 1px solid var(--primary);
+             color: var(--primary);
+             padding: 10px 20px;
+             font-size: 14px;
+        }
+        .cta-button-secondary:hover {
+            background-color: rgba(138, 180, 248, 0.1);
+            border-color: var(--primary);
+            box-shadow: 0 4px 10px rgba(138, 180, 248, 0.1);
         }
 
 
@@ -156,6 +175,7 @@
         /* --- Pricing Section --- */
         .pricing {
             padding: 60px 0;
+            text-align: center; /* Center the grid and button */
         }
 
         .pricing h2 {
@@ -170,6 +190,8 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
             align-items: stretch; /* Make cards same height */
+            margin-bottom: 40px; /* Space before the main CTA */
+            text-align: left; /* Reset text align for cards */
         }
 
         .pricing-card {
@@ -184,13 +206,12 @@
         }
 
         .pricing-card:hover {
-             transform: translateY(-5px);
-             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+             transform: translateY(-3px); /* Subtle hover */
         }
 
         .pricing-card.popular {
             border-color: var(--highlight);
-            box-shadow: 0 0 25px rgba(240, 198, 116, 0.2);
+            box-shadow: 0 0 20px rgba(240, 198, 116, 0.15);
             position: relative;
             overflow: hidden; /* Needed for the badge */
         }
@@ -206,6 +227,7 @@
             font-weight: 700;
             transform: rotate(45deg);
             transform-origin: top right;
+            z-index: 1;
          }
 
 
@@ -252,37 +274,7 @@
             font-weight: bold;
          }
 
-
-        .pricing-card button {
-            width: 100%;
-            padding: 14px;
-            background-color: var(--accent);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            margin-top: auto; /* Pushes button to bottom */
-        }
-
-        .pricing-card button:hover {
-            background-color: #ff5a83;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(255,117,151,0.2);
-        }
-
-        .pricing-card.popular button {
-            background-color: var(--highlight);
-            color: var(--dark);
-        }
-
-         .pricing-card.popular button:hover {
-            background-color: #e6b868; /* Darker yellow on hover */
-            box-shadow: 0 6px 15px rgba(240, 198, 116, 0.3);
-         }
-
+        /* REMOVED individual buttons from cards */
 
         /* --- Signup Modal --- */
         .modal-overlay {
@@ -305,7 +297,7 @@
             border-radius: 16px;
             box-shadow: 0 20px 50px rgba(0,0,0,0.4);
             width: 90%;
-            max-width: 420px;
+            max-width: 450px; /* Slightly wider */
             position: relative;
             text-align: center;
         }
@@ -322,6 +314,14 @@
             line-height: 1;
         }
 
+        .modal-step {
+            display: none; /* Hide all steps initially */
+        }
+        .modal-step.active {
+            display: block; /* Show active step */
+        }
+
+
         .modal-content h3 {
             font-size: 22px;
             margin-bottom: 10px;
@@ -333,8 +333,7 @@
             margin-bottom: 25px;
         }
 
-
-        .modal-content input {
+        .modal-content input[type="email"] {
             width: 100%;
             padding: 14px;
             margin-bottom: 14px;
@@ -361,31 +360,67 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s ease;
+            margin-top: 5px; /* Small top margin */
         }
 
         .modal-content button[type="submit"]:hover {
             background-color: #ff5a83;
         }
 
-        /* --- Success Message (within modal) --- */
-        #modal-success-message {
-            display: none; /* Hidden initially */
-            text-align: center;
+        /* Preference Step Styles */
+        #modal-preference-step label {
+            display: block;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            text-align: left;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+        }
+        #modal-preference-step label:hover {
+             background-color: rgba(255, 255, 255, 0.08);
         }
 
-        #modal-success-message svg {
+        #modal-preference-step input[type="radio"] {
+            margin-right: 10px;
+            accent-color: var(--primary); /* Style radio button color */
+        }
+
+        #modal-preference-step label span {
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
+        #modal-preference-step label:has(input:checked) { /* Highlight selected */
+             border-color: var(--primary);
+             background-color: rgba(138, 180, 248, 0.1);
+        }
+
+        .preference-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            gap: 15px;
+        }
+        .preference-buttons button {
+            flex-grow: 1; /* Make buttons share space */
+        }
+
+        /* --- Success Message (within modal) --- */
+        #modal-success-step svg {
             width: 50px; /* Smaller for modal */
             height: 50px;
             margin-bottom: 15px;
         }
 
-        #modal-success-message h4 { /* Use h4 to avoid conflict */
+        #modal-success-step h4 { /* Use h4 to avoid conflict */
             margin-bottom: 10px;
             color: var(--success);
             font-size: 20px;
         }
 
-        #modal-success-message p {
+        #modal-success-step p {
             color: var(--text-secondary);
             margin-bottom: 15px;
             font-size: 15px;
@@ -418,6 +453,7 @@
                 max-width: 500px; /* Constrain width on tablet */
                 margin-left: auto;
                 margin-right: auto;
+                margin-bottom: 40px;
             }
              .popular-badge {
                 top: 10px;
@@ -463,6 +499,12 @@
              .modal-content {
                  padding: 25px;
              }
+             .pricing-grid {
+                 gap: 20px;
+             }
+             .preference-buttons {
+                 flex-direction: column;
+             }
         }
 
     </style>
@@ -479,14 +521,14 @@
     function gtag_report_conversion(url) {
       var callback = function () {
         if (typeof(url) != 'undefined') {
-          // Optional: Redirect after conversion, though maybe not needed if staying on page
-          // window.location = url;
+          // Optional: Redirect after conversion if needed
         }
       };
       gtag('event', 'conversion', {
           'send_to': 'AW-970082336/043PCI3MocwBEKCQyc4D', /* Replace with YOUR specific conversion ID */
           'event_callback': callback
       });
+      console.log("gtag_report_conversion called"); // For debugging
       return false;
     }
     </script>
@@ -505,7 +547,8 @@
         <div class="container">
             <h1>Communicate better.<br>Boost your career impact.</h1>
             <p>Metricus analyzes your meetings and delivers actionable, private feedback to help you demonstrate value, influence decisions, and develop leadership skills that get recognized.</p>
-             <a href="#pricing" class="cta-button-hero">View Plans & Get Early Access</a>
+             <!-- Button now opens modal -->
+             <button id="hero-cta-button" class="cta-button">Join the Waitlist</button>
         </div>
     </section>
 
@@ -513,6 +556,7 @@
         <div class="container">
             <h2>Track What Matters for Your Career</h2>
             <div class="feature-grid">
+                 <!-- Feature cards remain the same -->
                 <div class="feature-card">
                     <h3>Show Your Impact (STAR)</h3>
                     <p>Get post-meeting feedback on linking Situations/Tasks to Actions & Results to clearly demonstrate value.</p>
@@ -543,7 +587,7 @@
 
     <section class="pricing" id="pricing">
         <div class="container">
-            <h2>Choose Your Path to Growth</h2>
+            <h2>Choose Your Path to Growth (Pricing Preview)</h2>
             <div class="pricing-grid">
                 <!-- Tier 1: Growth -->
                 <div class="pricing-card">
@@ -559,7 +603,7 @@
                         <li>Personal Dashboard</li>
                         <li>30-Day Trend History</li>
                     </ul>
-                    <button class="cta-select-plan" data-tier="lo" data-plan-name="Growth">Get Early Access</button>
+                    <!-- NO BUTTON HERE -->
                 </div>
 
                 <!-- Tier 2: Accelerator (Popular) -->
@@ -576,7 +620,7 @@
                         <li>90-Day Trend History</li>
                         <li>Priority Email Support</li>
                     </ul>
-                    <button class="cta-select-plan" data-tier="mid" data-plan-name="Accelerator">Get Early Access</button>
+                     <!-- NO BUTTON HERE -->
                 </div>
 
                 <!-- Tier 3: Leadership -->
@@ -592,10 +636,12 @@
                         <li>Feedback Form for Feature Requests</li>
                         <li>Top Priority Support Queue</li>
                     </ul>
-                    <button class="cta-select-plan" data-tier="hi" data-plan-name="Leadership">Get Early Access</button>
+                     <!-- NO BUTTON HERE -->
                 </div>
             </div>
-            <p style="text-align: center; margin-top: 30px; color: var(--text-secondary); font-size: 14px;">All plans include automatic meeting detection & transcription via secure desktop app.</p>
+             <!-- SINGLE CTA BUTTON BELOW THE GRID -->
+             <button id="pricing-cta-button" class="cta-button">Join Early Access Waitlist</button>
+             <p style="text-align: center; margin-top: 20px; color: var(--text-secondary); font-size: 14px;">Get notified when Metricus launches. Plans are billed monthly after launch.</p>
         </div>
     </section>
 
@@ -610,140 +656,220 @@
         <div class="modal-content">
             <button class="close-button" id="close-modal-button">×</button>
 
-            <div id="modal-form-container">
-                 <h3 id="modal-title">Join the Early Access List</h3>
-                 <p id="modal-subtitle">Be the first to know when Metricus launches. Enter your email below.</p>
+            <!-- Step 1: Email Collection -->
+            <div class="modal-step active" id="modal-email-step">
+                 <h3>Join the Early Access List</h3>
+                 <p>Be the first to know when Metricus launches. Enter your email below.</p>
                  <form id="modal-signup-form">
                     <input type="email" id="modal-email" placeholder="Work email" required>
-                    <input type="hidden" id="chosen-tier" name="pricing"> <!-- This will hold 'lo', 'mid', or 'hi' -->
-                    <button type="submit">Notify Me →</button>
+                    <input type="hidden" id="hidden-pricing" name="pricing" value="unk"> <!-- Default to unk -->
+                    <button type="submit" id="submit-email-button">Notify Me →</button>
                  </form>
                   <p style="font-size: 12px; margin-top: 15px; color: var(--text-secondary);">We respect your privacy. No spam, ever.</p>
              </div>
 
-             <div id="modal-success-message">
+             <!-- Step 2: Preference Collection (Optional) -->
+             <div class="modal-step" id="modal-preference-step">
+                <h3>Thanks! One quick question...</h3>
+                <p>To help us build the best Metricus, which plan looks most interesting to you right now? (Optional)</p>
+                <form id="modal-preference-form">
+                     <label>
+                        <input type="radio" name="plan_preference" value="lo">
+                        Growth <span>($29/month)</span> - Essential feedback & tracking.
+                    </label>
+                     <label>
+                        <input type="radio" name="plan_preference" value="mid">
+                        Accelerator <span>($59/month)</span> - Deeper insights & goal setting.
+                    </label>
+                    <label>
+                        <input type="radio" name="plan_preference" value="hi">
+                        Leadership <span>($99/month)</span> - Long-term tracking for strategic impact.
+                    </label>
+                    <label>
+                        <input type="radio" name="plan_preference" value="unsure" checked> <!-- Default checked -->
+                        Not sure yet / Decide later
+                    </label>
+                    <div class="preference-buttons">
+                        <button type="submit" id="submit-preference-button" class="cta-button">Submit Preference</button>
+                        <button type="button" id="skip-preference-button" class="cta-button cta-button-secondary">Skip</button>
+                    </div>
+                </form>
+             </div>
+
+             <!-- Step 3: Final Success Message -->
+             <div class="modal-step" id="modal-success-step">
                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#4caf50" stroke-width="2"/>
                     <path d="M8 12L10.5 14.5L16 9" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                  </svg>
                  <h4>You're on the list!</h4>
-                 <p>Thanks for your interest! We'll email you when Metricus is ready for early access.</p>
-                 <p style="font-size: 14px;">Watch your inbox for updates.</p>
+                 <p>Thank you for your interest! We'll email you <span id="user-email-placeholder"></span> when Metricus is ready for early access.</p>
+                 <p style="font-size: 14px;">Watch your inbox for updates and communication tips.</p>
+                  <button type="button" id="close-success-button" class="cta-button" style="margin-top: 20px;">Close</button>
              </div>
         </div>
     </div>
 
 
     <script>
+        // --- Modal Elements ---
         const modalOverlay = document.getElementById('signup-modal');
         const modalContent = modalOverlay.querySelector('.modal-content');
-        const modalTitle = document.getElementById('modal-title');
-        const modalSubtitle = document.getElementById('modal-subtitle');
         const closeModalButton = document.getElementById('close-modal-button');
-        const modalFormContainer = document.getElementById('modal-form-container');
-        const modalSuccessMessage = document.getElementById('modal-success-message');
-        const modalSignupForm = document.getElementById('modal-signup-form');
-        const modalEmailInput = document.getElementById('modal-email');
-        const chosenTierInput = document.getElementById('chosen-tier');
-        const selectPlanButtons = document.querySelectorAll('.cta-select-plan');
+        const heroCtaButton = document.getElementById('hero-cta-button');
+        const pricingCtaButton = document.getElementById('pricing-cta-button');
 
-        // Function to open the modal
-        function openModal(tier, planName) {
-            chosenTierInput.value = tier; // Set the hidden input value based on button clicked
-            modalTitle.textContent = `Join Early Access for ${planName}`;
-            modalSubtitle.textContent = `Enter your email to be notified when the ${planName} plan ($${getPrice(tier)}/month) is available.` // Add price context
-            modalFormContainer.style.display = 'block'; // Ensure form is visible
-            modalSuccessMessage.style.display = 'none'; // Ensure success message is hidden
-            modalEmailInput.value = ''; // Clear email input
-            modalOverlay.style.display = 'flex'; // Show the modal
+        // Modal Steps
+        const emailStep = document.getElementById('modal-email-step');
+        const preferenceStep = document.getElementById('modal-preference-step');
+        const successStep = document.getElementById('modal-success-step');
+
+        // Forms & Inputs
+        const emailForm = document.getElementById('modal-signup-form');
+        const emailInput = document.getElementById('modal-email');
+        const hiddenPricingInput = document.getElementById('hidden-pricing');
+        const preferenceForm = document.getElementById('modal-preference-form');
+        const submitPreferenceButton = document.getElementById('submit-preference-button');
+        const skipPreferenceButton = document.getElementById('skip-preference-button');
+        const closeSuccessButton = document.getElementById('close-success-button');
+        const userEmailPlaceholder = document.getElementById('user-email-placeholder');
+
+        let submittedEmail = ''; // Store email temporarily
+
+        // --- Google Apps Script URL ---
+        // --- IMPORTANT: Replace this URL with your actual Google Apps Script URL ---
+        const SCRIPT_URL = `https://script.google.com/macros/s/AKfycbzqnX3biJhp4qQqJjnz3V1k_D9OrSXr44by15jXbrze8TsKtzlZ4v_Yr-GBBIZB4hHC/exec`; // YOUR SCRIPT URL HERE
+        // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+
+        // --- Functions ---
+        function showStep(stepElement) {
+            // Hide all steps first
+            emailStep.classList.remove('active');
+            preferenceStep.classList.remove('active');
+            successStep.classList.remove('active');
+            // Show the target step
+            stepElement.classList.add('active');
         }
 
-        // Helper function to get price based on tier
-        function getPrice(tier) {
-            if (tier === 'lo') return '29';
-            if (tier === 'mid') return '59';
-            if (tier === 'hi') return '99';
-            return ''; // Default
+        function openModal() {
+            submittedEmail = ''; // Clear previous email
+            emailInput.value = ''; // Clear input field
+            hiddenPricingInput.value = 'unk'; // Reset hidden field
+             // Reset preference form
+            const defaultPreference = preferenceForm.querySelector('input[value="unsure"]');
+            if (defaultPreference) {
+                defaultPreference.checked = true;
+            }
+            showStep(emailStep); // Start at email step
+            modalOverlay.style.display = 'flex';
         }
 
-        // Function to close the modal
         function closeModal() {
             modalOverlay.style.display = 'none';
         }
 
-        // Add event listeners to all "Get Early Access" buttons
-        selectPlanButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const tier = this.getAttribute('data-tier');
-                const planName = this.getAttribute('data-plan-name');
-                openModal(tier, planName);
-            });
-        });
+        // Function to send data to Google Apps Script
+        function sendToGoogleScript(email, pricingTier) {
+            const urlWithParams = `${SCRIPT_URL}?contact=${encodeURIComponent(email)}&pricing=${encodeURIComponent(pricingTier)}`;
 
-        // Add event listener to close button
+            console.log(`Sending: ${urlWithParams}`); // For debugging
+
+            // Use fetch API
+             fetch(urlWithParams, {
+                 method: 'GET',
+                 mode: 'no-cors' // Necessary for simple cross-origin GET requests to Apps Script if not returning JSONP
+                 })
+                .then(response => {
+                    console.log('Data submission attempted to Google Script.');
+                     // For 'no-cors', we can't read the response, so we assume success here for the flow.
+                     // If it's the FIRST submission (pricing='unk'), report conversion.
+                     if (pricingTier === 'unk') {
+                        gtag_report_conversion(); // Report conversion after successful email submission
+                     }
+                })
+                .catch(error => {
+                    console.error('Error sending data to Google Script:', error);
+                    // Handle error - maybe still proceed in the UI for waitlist?
+                     // If it's the FIRST submission, maybe still report conversion attempt? Decide based on goals.
+                     if (pricingTier === 'unk') {
+                       console.warn('Reporting conversion despite potential submission error.');
+                       gtag_report_conversion();
+                     }
+                });
+        }
+
+
+        // --- Event Listeners ---
+
+        // Open Modal Listeners
+        if(heroCtaButton) heroCtaButton.addEventListener('click', openModal);
+        if(pricingCtaButton) pricingCtaButton.addEventListener('click', openModal);
+
+        // Close Modal Listeners
         closeModalButton.addEventListener('click', closeModal);
-
-        // Add event listener to modal overlay (close when clicking outside content)
+        closeSuccessButton.addEventListener('click', closeModal); // Close from final success screen
         modalOverlay.addEventListener('click', function(event) {
             if (event.target === modalOverlay) {
                 closeModal();
             }
         });
 
-        // Add event listener for form submission
-        modalSignupForm.addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent default form submission
+        // Email Form Submission (Step 1)
+        emailForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            submittedEmail = emailInput.value;
+            if (!submittedEmail) return; // Basic validation
 
-            const email = modalEmailInput.value;
-            const tier = chosenTierInput.value; // Get tier from hidden input
+            // Disable button to prevent double submit
+            const emailSubmitButton = document.getElementById('submit-email-button');
+            emailSubmitButton.disabled = true;
+            emailSubmitButton.textContent = 'Submitting...';
 
-            if (!email || !tier) return; // Basic validation
+            // Send initial data with pricing = 'unk'
+            sendToGoogleScript(submittedEmail, 'unk');
 
-            // --- IMPORTANT: Replace this URL with your actual Google Apps Script URL ---
-            const scriptURL = `https://script.google.com/macros/s/AKfycbzqnX3biJhp4qQqJjnz3V1k_D9OrSXr44by15jXbrze8TsKtzlZ4v_Yr-GBBIZB4hHC/exec`; // YOUR SCRIPT URL HERE
-            // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
-
-            const urlWithParams = `${scriptURL}?contact=${encodeURIComponent(email)}&pricing=${encodeURIComponent(tier)}`;
-
-            // Send data using fetch (modern approach)
-            fetch(urlWithParams, {
-                 method: 'GET',
-                 mode: 'no-cors' // Use 'no-cors' for simple GET requests to Apps Script deployed to run as 'me' executing as 'anyone' if you don't need to read the response directly in JS. If you need a response, you'll need a different setup.
-                 })
-                .then(response => {
-                    console.log('Attempted to send data.'); // Cannot read response with no-cors
-                    // Assume success for the user flow in this test
-                    modalFormContainer.style.display = 'none';
-                    modalSuccessMessage.style.display = 'block';
-                    // Report conversion to Google Ads (Make sure the ID/Label is correct)
-                    gtag_report_conversion();
-                    // Optional: Close modal after a delay
-                    // setTimeout(closeModal, 3000);
-                })
-                .catch(error => {
-                    console.error('Error sending data:', error);
-                    // Even on error, show success to the user for this waitlist scenario
-                    // You might want more robust error handling in a production app
-                    modalFormContainer.style.display = 'none';
-                    modalSuccessMessage.style.display = 'block';
-                    // Still report conversion attempt if appropriate for your campaign goals
-                     gtag_report_conversion();
-                });
+            // Proceed to preference step after a short delay (simulates processing)
+            setTimeout(() => {
+                 showStep(preferenceStep);
+                 emailSubmitButton.disabled = false; // Re-enable button
+                 emailSubmitButton.textContent = 'Notify Me →';
+            }, 500); // Adjust delay as needed
         });
 
-        // Smooth scroll for hero CTA button
-        const heroCta = document.querySelector('.cta-button-hero');
-        if (heroCta) {
-            heroCta.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetSection = document.querySelector(this.getAttribute('href')); // Get target section from href
-                if(targetSection) {
-                    targetSection.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        }
+        // Preference Form Submission (Step 2 - Optional)
+        preferenceForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const selectedPreferenceInput = preferenceForm.querySelector('input[name="plan_preference"]:checked');
+            const preferenceValue = selectedPreferenceInput ? selectedPreferenceInput.value : 'unsure'; // Default to unsure if somehow none selected
+
+            // Disable button
+            submitPreferenceButton.disabled = true;
+            submitPreferenceButton.textContent = 'Saving...';
+
+            // Send the *second* update with the actual preference
+            if (submittedEmail) { // Make sure we have the email from step 1
+                 sendToGoogleScript(submittedEmail, preferenceValue);
+            } else {
+                console.error("Email not found from previous step.");
+                // Optionally handle this error - maybe go back to step 1?
+            }
+
+             // Proceed to final success step
+             setTimeout(() => {
+                userEmailPlaceholder.textContent = `to ${submittedEmail}`; // Show email in success msg
+                showStep(successStep);
+                submitPreferenceButton.disabled = false; // Re-enable
+                submitPreferenceButton.textContent = 'Submit Preference';
+             }, 500);
+        });
+
+        // Skip Preference Button (Step 2 - Optional)
+        skipPreferenceButton.addEventListener('click', function() {
+            // Just go directly to the success step without sending preference
+             userEmailPlaceholder.textContent = `to ${submittedEmail}`;
+             showStep(successStep);
+        });
 
     </script>
 
