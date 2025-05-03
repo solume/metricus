@@ -3,517 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- *** MODIFIED TITLE *** -->
     <title>Metricus | AI Communication Coach for Work Meetings</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         :root {
-            --primary: #8ab4f8; /* Lighter blue for accents */
-            --secondary: #4d5bce; /* Deeper blue */
-            --accent: #ff7597; /* Pink/Red accent */
-            --dark: #121212; /* Main background */
-            --dark-secondary: #1e1e1e; /* Card background */
-            --text: #e0e0e0; /* Main text */
-            --text-secondary: #9e9e9e; /* Lighter text */
-            --success: #4caf50; /* Green for success */
-            --highlight: #f0c674; /* Yellow highlight for popular plan */
+            --primary: #8ab4f8;
+            --secondary: #4d5bce;
+            --accent: #ff7597;
+            --dark: #121212;
+            --dark-secondary: #1e1e1e;
+            --text: #e0e0e0;
+            --text-secondary: #9e9e9e;
+            --success: #4caf50;
+            --highlight: #f0c674;
         }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--dark); color: var(--text); line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        header { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
+        .logo-container { display: flex; align-items: center; }
+        .logo { font-weight: 700; font-size: 24px; color: var(--primary); letter-spacing: -0.5px; }
+        .domain { font-size: 14px; color: var(--text-secondary); margin-left: 8px; padding-left: 8px; border-left: 1px solid rgba(255,255,255,0.1); }
+        .hero { text-align: center; padding: 80px 0 60px; }
+        .hero h1 { font-size: 42px; margin-bottom: 20px; line-height: 1.2; font-weight: 800; background: linear-gradient(90deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero p { font-size: 18px; margin: 0 auto 30px auto; color: var(--text-secondary); max-width: 650px; }
+        #primary-signup-section { background: linear-gradient(145deg, rgba(40,40,45,0.6), rgba(25,25,30,0.6)); padding: 35px; border-radius: 16px; max-width: 500px; margin: 40px auto 0 auto; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1); }
+        #primary-signup-section h3 { font-size: 22px; margin-bottom: 20px; color: var(--text); }
+        #primary-signup-section input[type="email"] { width: 100%; padding: 14px; margin-bottom: 14px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; font-size: 15px; background-color: rgba(255,255,255,0.05); color: var(--text); }
+        #primary-signup-section input:focus { outline: none; border-color: var(--primary); }
+        #primary-signup-section button { width: 100%; padding: 14px; background-color: var(--accent); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; }
+        #primary-signup-section button:hover { background-color: #ff5a83; transform: translateY(-2px); box-shadow: 0 6px 15px rgba(255,117,151,0.2); }
+        #primary-signup-section button:disabled { background-color: #555; cursor: not-allowed; transform: none; box-shadow: none; }
+        #primary-signup-section p.subtext { font-size: 13px; margin-top: 12px; color: var(--text-secondary); text-align: center; }
+        .success-message { display: none; text-align: center; padding: 20px 0; }
+        .success-message svg { width: 48px; height: 48px; margin-bottom: 15px; }
+        .success-message h4 { margin-bottom: 10px; color: var(--success); font-size: 20px;}
+        .success-message p { color: var(--text-secondary); font-size: 15px; }
+        .features { padding: 60px 0; }
+        .features h2 { text-align: center; margin-bottom: 50px; font-size: 30px; color: var(--text); }
+        .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+        .feature-card { background-color: var(--dark-secondary); padding: 25px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s ease; display: flex; flex-direction: column; }
+        .feature-card:hover { transform: translateY(-5px); }
+        .feature-card h3 { font-size: 18px; margin-bottom: 12px; color: var(--primary); }
+        .feature-card p { color: var(--text-secondary); font-size: 15px; flex-grow: 1; }
+        .pricing { padding: 60px 0; }
+        .pricing h2 { text-align: center; margin-bottom: 50px; font-size: 30px; color: var(--text); }
+        .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; align-items: stretch; margin-bottom: 40px; text-align: left; }
+        .pricing-card { background-color: var(--dark-secondary); padding: 30px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .pricing-card:hover { transform: translateY(-3px); }
+        .pricing-card.popular { border-color: var(--highlight); box-shadow: 0 0 20px rgba(240, 198, 116, 0.15); position: relative; overflow: hidden; }
+        .popular-badge { position: absolute; top: 15px; right: -30px; background-color: var(--highlight); color: var(--dark); padding: 4px 30px; font-size: 12px; font-weight: 700; transform: rotate(45deg); transform-origin: top right; z-index: 1; }
+        .pricing-card h3 { font-size: 22px; margin-bottom: 15px; color: var(--primary); font-weight: 600; }
+        .price { font-size: 38px; font-weight: 700; margin-bottom: 10px; color: var(--text); }
+        .price span { font-size: 16px; font-weight: 400; color: var(--text-secondary); }
+        .pricing-card p.tier-desc { color: var(--text-secondary); font-size: 14px; margin-bottom: 20px; min-height: 40px; }
+        .pricing-card ul { list-style: none; margin: 25px 0; text-align: left; padding-left: 10px; flex-grow: 1; }
+        .pricing-card li { margin-bottom: 12px; color: var(--text-secondary); font-size: 15px; position: relative; padding-left: 25px; }
+        .pricing-card li::before { content: '✓'; color: var(--success); position: absolute; left: 0; font-weight: bold; }
+        #optional-pricing-section { display: none; padding: 40px 20px; margin-top: 40px; background-color: var(--dark-secondary); border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); text-align: center; max-width: 700px; margin-left: auto; margin-right: auto; }
+        #optional-pricing-section h3 { font-size: 20px; margin-bottom: 10px; color: var(--text); }
+        #optional-pricing-section p { color: var(--text-secondary); margin-bottom: 25px; font-size: 15px; }
+        #optional-pricing-form label { display: inline-block; background-color: rgba(255, 255, 255, 0.05); padding: 10px 18px; margin: 5px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1); cursor: pointer; transition: background-color 0.2s ease, border-color 0.2s ease; }
+        #optional-pricing-form label:hover { background-color: rgba(255, 255, 255, 0.08); }
+        #optional-pricing-form input[type="radio"] { margin-right: 8px; accent-color: var(--primary); vertical-align: middle;}
+        #optional-pricing-form label span { color: var(--text-secondary); font-size: 0.9em; }
+        #optional-pricing-form label:has(input:checked) { border-color: var(--primary); background-color: rgba(138, 180, 248, 0.1); }
+        #optional-pricing-form button { display: inline-block; padding: 12px 25px; background-color: var(--primary); color: var(--dark); border: none; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; margin-top: 20px; }
+        #optional-pricing-form button:hover { background-color: #a6c9fa; }
+        #optional-pricing-form button:disabled { background-color: #555; color: #888; cursor: not-allowed;}
+        #optional-pricing-success { display: none; margin-top: 20px; }
+        #optional-pricing-success p { color: var(--success); font-weight: 500; }
+        footer { padding: 30px 0; text-align: center; color: var(--text-secondary); font-size: 14px; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 60px; }
+        .footer-domain { color: var(--primary); font-weight: 500; }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
-        html {
-             scroll-behavior: smooth; /* Enable smooth scrolling */
-        }
-
-
-        body {
-            background-color: var(--dark);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            padding: 20px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo {
-            font-weight: 700;
-            font-size: 24px;
-            color: var(--primary);
-            letter-spacing: -0.5px;
-        }
-
-        .domain {
-            font-size: 14px;
-            color: var(--text-secondary);
-            margin-left: 8px;
-            padding-left: 8px;
-            border-left: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .hero {
-            text-align: center;
-            padding: 80px 0 60px;
-        }
-
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 20px;
-            line-height: 1.2;
-            font-weight: 800;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-             /* *** MODIFIED HEADLINE *** */
-             /* Using the AI-first, benefit-driven approach */
-             content: "AI-Powered Communication.\AUnlock Your Career Impact."; /* CSS content doesn't work like this in HTML directly, setting in HTML below */
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin: 0 auto 30px auto;
-            color: var(--text-secondary);
-            max-width: 650px;
-        }
-
-        /* Generic CTA Button Style */
-        .cta-button {
-             display: inline-block;
-             padding: 12px 25px;
-             background-color: var(--accent);
-             color: white;
-             border: none;
-             border-radius: 8px;
-             font-size: 16px;
-             font-weight: 600;
-             cursor: pointer;
-             transition: all 0.2s ease;
-             text-decoration: none; /* If using <a> */
-             text-align: center;
-        }
-
-        .cta-button:hover {
-             background-color: #ff5a83;
-             transform: translateY(-2px);
-             box-shadow: 0 6px 15px rgba(255,117,151,0.2);
-        }
-
-        .cta-button-secondary {
-             background-color: transparent;
-             border: 1px solid var(--primary);
-             color: var(--primary);
-             padding: 10px 20px;
-             font-size: 14px;
-        }
-        .cta-button-secondary:hover {
-            background-color: rgba(138, 180, 248, 0.1);
-            border-color: var(--primary);
-            box-shadow: 0 4px 10px rgba(138, 180, 248, 0.1);
-        }
-
-
-        /* --- Features Section --- */
-        .features {
-            padding: 60px 0;
-        }
-
-        .features h2 {
-            text-align: center;
-            margin-bottom: 50px;
-            font-size: 30px;
-            color: var(--text);
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .feature-card {
-            background-color: var(--dark-secondary);
-            padding: 25px;
-            border-radius: 14px;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-card h3 {
-            font-size: 18px;
-            margin-bottom: 12px;
-            color: var(--primary);
-        }
-
-        .feature-card p {
-            color: var(--text-secondary);
-            font-size: 15px;
-            flex-grow: 1; /* Make text take available space */
-        }
-
-        /* --- Pricing Section --- */
-        .pricing {
-            padding: 60px 0;
-            text-align: center; /* Center the grid and button */
-        }
-
-        .pricing h2 {
-            text-align: center;
-            margin-bottom: 50px;
-            font-size: 30px;
-            color: var(--text);
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            align-items: stretch; /* Make cards same height */
-            margin-bottom: 40px; /* Space before the main CTA */
-            text-align: left; /* Reset text align for cards */
-        }
-
-        .pricing-card {
-            background-color: var(--dark-secondary);
-            padding: 30px;
-            border-radius: 16px;
-            border: 1px solid rgba(255,255,255,0.1);
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .pricing-card:hover {
-             transform: translateY(-3px); /* Subtle hover */
-        }
-
-        .pricing-card.popular {
-            border-color: var(--highlight);
-            box-shadow: 0 0 20px rgba(240, 198, 116, 0.15);
-            position: relative;
-            overflow: hidden; /* Needed for the badge */
-        }
-
-         .popular-badge {
-            position: absolute;
-            top: 15px;
-            right: -30px; /* Start off-screen */
-            background-color: var(--highlight);
-            color: var(--dark);
-            padding: 4px 30px; /* Wide padding */
-            font-size: 12px;
-            font-weight: 700;
-            transform: rotate(45deg);
-            transform-origin: top right;
-            z-index: 1;
-         }
-
-
-        .pricing-card h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: var(--primary);
-            font-weight: 600;
-        }
-
-        .price {
-            font-size: 38px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: var(--text);
-        }
-
-        .price span {
-            font-size: 16px;
-            font-weight: 400;
-            color: var(--text-secondary);
-        }
-
-        .pricing-card ul {
-            list-style: none;
-            margin: 25px 0;
-            text-align: left;
-            padding-left: 10px; /* Indent list slightly */
-            flex-grow: 1; /* Push button to bottom */
-        }
-
-        .pricing-card li {
-            margin-bottom: 12px;
-            color: var(--text-secondary);
-            font-size: 15px;
-            position: relative;
-            padding-left: 25px; /* Space for checkmark */
-        }
-         .pricing-card li::before {
-            content: '✓'; /* Checkmark */
-            color: var(--success);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-         }
-
-        /* REMOVED individual buttons from cards */
-
-        /* --- Signup Modal --- */
-        .modal-overlay {
-            display: none; /* Hidden by default */
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(5px);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .modal-content {
-            background: linear-gradient(145deg, rgba(40,40,45,0.95), rgba(25,25,30,0.95));
-            padding: 35px;
-            border-radius: 16px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
-            width: 90%;
-            max-width: 450px; /* Slightly wider */
-            position: relative;
-            text-align: center;
-        }
-
-        .close-button {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: none;
-            border: none;
-            color: var(--text-secondary);
-            font-size: 24px;
-            cursor: pointer;
-            line-height: 1;
-        }
-
-        .modal-step {
-            display: none; /* Hide all steps initially */
-        }
-        .modal-step.active {
-            display: block; /* Show active step */
-        }
-
-
-        .modal-content h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: var(--text);
-        }
-        .modal-content p {
-            font-size: 15px;
-            color: var(--text-secondary);
-            margin-bottom: 25px;
-        }
-
-        .modal-content input[type="email"] {
-            width: 100%;
-            padding: 14px;
-            margin-bottom: 14px;
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 8px;
-            font-size: 15px;
-            background-color: rgba(255,255,255,0.05);
-            color: var(--text);
-        }
-
-        .modal-content input:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        .modal-content button[type="submit"] {
-            width: 100%;
-            padding: 14px;
-            background-color: var(--accent);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            margin-top: 5px; /* Small top margin */
-        }
-
-        .modal-content button[type="submit"]:hover {
-            background-color: #ff5a83;
-        }
-
-        /* Preference Step Styles */
-        #modal-preference-step label {
-            display: block;
-            background-color: rgba(255, 255, 255, 0.05);
-            padding: 12px 15px;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            cursor: pointer;
-            text-align: left;
-            transition: background-color 0.2s ease, border-color 0.2s ease;
-        }
-        #modal-preference-step label:hover {
-             background-color: rgba(255, 255, 255, 0.08);
-        }
-
-        #modal-preference-step input[type="radio"] {
-            margin-right: 10px;
-            accent-color: var(--primary); /* Style radio button color */
-        }
-
-        #modal-preference-step label span {
-            color: var(--text-secondary);
-            font-size: 0.9em;
-        }
-        #modal-preference-step label:has(input:checked) { /* Highlight selected */
-             border-color: var(--primary);
-             background-color: rgba(138, 180, 248, 0.1);
-        }
-
-        .preference-buttons {
-            display: flex;
-            justify-content: space-between; /* Changed from space-between */
-            margin-top: 20px;
-            gap: 15px;
-        }
-        .preference-buttons button {
-            flex-grow: 1; /* Make buttons share space */
-            /* Adjust button width/padding if needed */
-             padding: 12px; /* Example adjustment */
-        }
-
-
-        /* --- Success Message (within modal) --- */
-        #modal-success-step svg {
-            width: 50px; /* Smaller for modal */
-            height: 50px;
-            margin-bottom: 15px;
-        }
-
-        #modal-success-step h4 { /* Use h4 to avoid conflict */
-            margin-bottom: 10px;
-            color: var(--success);
-            font-size: 20px;
-        }
-
-        #modal-success-step p {
-            color: var(--text-secondary);
-            margin-bottom: 15px;
-            font-size: 15px;
-        }
-
-
-        /* --- Footer --- */
-        footer {
-            padding: 30px 0;
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 14px;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            margin-top: 40px;
-        }
-
-        .footer-domain {
-            color: var(--primary);
-            font-weight: 500;
-        }
-
-
-        /* --- Responsive Design --- */
         @media (max-width: 992px) {
-            .feature-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .pricing-grid {
-                grid-template-columns: 1fr; /* Stack pricing cards */
-                max-width: 500px; /* Constrain width on tablet */
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: 40px;
-            }
-             .popular-badge {
-                top: 10px;
-                right: -35px; /* Adjust position */
-            }
-
+            .feature-grid { grid-template-columns: repeat(2, 1fr); }
+            .pricing-grid { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
+            .popular-badge { top: 10px; right: -35px; }
         }
-
         @media (max-width: 768px) {
-             .hero h1 {
-                font-size: 36px;
-            }
-             .hero p {
-                 font-size: 16px;
-             }
-             .features h2, .pricing h2 {
-                 font-size: 28px;
-             }
-             .feature-grid {
-                grid-template-columns: 1fr; /* Stack features */
-            }
+             .hero h1 { font-size: 36px; }
+             .hero p { font-size: 16px; }
+             .features h2, .pricing h2 { font-size: 28px; }
+             .feature-grid { grid-template-columns: 1fr; }
+             #primary-signup-section { padding: 25px; }
+             #optional-pricing-form label { display: block; margin: 10px 0; text-align: left; }
         }
-
         @media (max-width: 600px) {
-            .domain {
-                display: none;
-            }
-            header {
-                justify-content: center;
-            }
-            .hero h1 {
-                font-size: 32px;
-            }
-            .hero {
-                padding: 60px 0 40px;
-            }
-             .features, .pricing {
-                padding: 40px 0;
-            }
-            .feature-card, .pricing-card {
-                padding: 20px;
-            }
-             .modal-content {
-                 padding: 25px;
-             }
-             .pricing-grid {
-                 gap: 20px;
-             }
-             .preference-buttons {
-                 flex-direction: column;
-             }
+            .domain { display: none; }
+            header { justify-content: center; }
+            .hero h1 { font-size: 32px; }
+            .hero { padding: 60px 0 40px; }
+             .features, .pricing { padding: 40px 0; }
+            .feature-card, .pricing-card { padding: 20px; }
+             .pricing-grid { gap: 20px; }
+             footer { margin-top: 40px; }
         }
-
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
     <script>
@@ -522,20 +108,16 @@
       gtag('js', new Date());
       gtag('config', 'AW-970082336');
     </script>
-    <!-- Event snippet for Website traffic conversion page -->
     <script>
-    // IMPORTANT: Make sure 'AW-970082336/043PCI3MocwBEKCQyc4D' is your correct Conversion Action ID/Label
     function gtag_report_conversion(url) {
       var callback = function () {
-        if (typeof(url) != 'undefined') {
-          // Optional: Redirect after conversion if needed
-        }
+        if (typeof(url) != 'undefined') { }
       };
       gtag('event', 'conversion', {
-          'send_to': 'AW-970082336/043PCI3MocwBEKCQyc4D', /* Replace with YOUR specific conversion ID */
+          'send_to': 'AW-970082336/043PCI3MocwBEKCQyc4D',
           'event_callback': callback
       });
-      console.log("gtag_report_conversion called"); // For debugging
+      console.log("gtag_report_conversion called");
       return false;
     }
     </script>
@@ -552,21 +134,32 @@
 
     <section class="hero">
         <div class="container">
-             <!-- *** MODIFIED HEADLINE *** -->
             <h1>AI-Powered Communication.<br>Unlock Your Career Impact.</h1>
-             <!-- *** MODIFIED SUB-HEADLINE *** -->
             <p>Metricus is your private AI communication coach. It analyzes your speech in work meetings, providing objective feedback to help you speak with clarity, influence decisions, and get recognized.</p>
-             <!-- *** MODIFIED BUTTON TEXT *** -->
-             <button id="hero-cta-button" class="cta-button">See Plans & Join Waitlist</button>
+
+            <div id="primary-signup-section">
+                <div id="primary-form-container">
+                    <h3>Get early access</h3>
+                    <form id="primary-signup-form">
+                        <input type="email" id="primary-email" placeholder="Work email" required>
+                        <button type="submit" id="primary-submit-button">Join Waitlist →</button>
+                    </form>
+                    <p class="subtext">Be first to increase your workplace impact through better communication.</p>
+                </div>
+
+                <div id="primary-success-message" class="success-message">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#4caf50" stroke-width="2"/><path d="M8 12L10.5 14.5L16 9" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <h4>You're on the list!</h4>
+                    <p>Thanks for joining. We'll email <strong id="user-email-display">[email]</strong> when early access opens.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="features">
         <div class="container">
-            <!-- *** MODIFIED SECTION TITLE *** -->
             <h2>Get AI Feedback On Skills That Drive Your Career</h2>
             <div class="feature-grid">
-                 <!-- *** MODIFIED FEATURE CARDS *** -->
                 <div class="feature-card">
                     <h3>AI Feedback: Show Your Impact</h3>
                     <p>Get AI analysis on how effectively you use the STAR method to demonstrate clear results in meetings.</p>
@@ -597,15 +190,12 @@
 
     <section class="pricing" id="pricing">
         <div class="container">
-            <!-- *** MODIFIED SECTION TITLE *** -->
             <h2>Choose Your AI Coaching Plan (Early Access Preview)</h2>
             <div class="pricing-grid">
-                <!-- Tier 1: Growth -->
                 <div class="pricing-card">
                     <h3>Growth</h3>
                     <div class="price">$29<span>/month</span></div>
-                     <!-- *** MODIFIED SUB-DESCRIPTION *** -->
-                    <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 20px;">Essential AI feedback & tracking.</p>
+                    <p class="tier-desc">Essential AI feedback & tracking.</p>
                     <ul>
                         <li>Unlimited Meeting Transcription</li>
                         <li>Post-Meeting AI Feedback (STAR, PREP)</li>
@@ -616,14 +206,11 @@
                         <li>30-Day Trend History</li>
                     </ul>
                 </div>
-
-                <!-- Tier 2: Accelerator (Popular) -->
                 <div class="pricing-card popular">
                      <div class="popular-badge">POPULAR</div>
                     <h3>Accelerator</h3>
                     <div class="price">$59<span>/month</span></div>
-                     <!-- *** MODIFIED SUB-DESCRIPTION *** -->
-                    <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 20px;">Deeper AI insights & goal setting.</p>
+                    <p class="tier-desc">Deeper AI insights & goal setting.</p>
                     <ul>
                         <li>Everything in Growth, plus:</li>
                         <li>Detailed Filler Word Analysis</li>
@@ -633,13 +220,10 @@
                         <li>Priority Email Support</li>
                     </ul>
                 </div>
-
-                <!-- Tier 3: Leadership -->
                 <div class="pricing-card">
                     <h3>Leadership</h3>
                     <div class="price">$99<span>/month</span></div>
-                     <!-- *** MODIFIED SUB-DESCRIPTION *** -->
-                    <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 20px;">Advanced AI analysis & long-term trends.</p>
+                    <p class="tier-desc">Advanced AI analysis & long-term trends.</p>
                     <ul>
                         <li>Everything in Accelerator, plus:</li>
                         <li>Compare Trends Across Meeting Types</li>
@@ -650,261 +234,130 @@
                     </ul>
                 </div>
             </div>
-             <!-- *** MODIFIED BUTTON TEXT *** -->
-             <button id="pricing-cta-button" class="cta-button">Select Plan & Join Waitlist</button>
-             <!-- *** MODIFIED SUB-TEXT *** -->
-             <p style="text-align: center; margin-top: 20px; color: var(--text-secondary); font-size: 14px;">Select your preferred plan to join the early access waitlist. No charges until launch.</p>
+             <p style="text-align: center; margin-top: -20px; color: var(--text-secondary); font-size: 14px;">Pricing shown for reference. Join the waitlist above for early access info.</p>
         </div>
     </section>
 
+    <section id="optional-pricing-section">
+        <div class="container">
+            <h3>Thanks! Which plan looks most interesting?</h3>
+            <p>This is optional feedback to help us prioritize (no commitment).</p>
+            <form id="optional-pricing-form">
+                 <label>
+                    <input type="radio" name="plan_preference" value="lo">
+                    Growth <span>($29/mo)</span>
+                </label>
+                 <label>
+                    <input type="radio" name="plan_preference" value="mid">
+                    Accelerator <span>($59/mo)</span>
+                </label>
+                <label>
+                    <input type="radio" name="plan_preference" value="hi">
+                    Leadership <span>($99/mo)</span>
+                </label>
+                <label>
+                    <input type="radio" name="plan_preference" value="unsure">
+                    Undecided
+                </label>
+                <div>
+                    <button type="submit" id="optional-submit-button">Submit Preference</button>
+                </div>
+            </form>
+            <div id="optional-pricing-success" class="success-message" style="padding: 10px 0 0 0;">
+                 <p>Got it, thanks for the feedback!</p>
+            </div>
+        </div>
+    </section>
+
+
     <footer>
         <div class="container">
-             <!-- *** MODIFIED FOOTER TEXT *** -->
             <p>© 2025 <span class="footer-domain">metricusapp.com</span> | Private AI Communication Analysis</p>
         </div>
     </footer>
 
-    <!-- Signup Modal (Flow: Plan -> Email -> Success) -->
-    <div class="modal-overlay" id="signup-modal">
-        <div class="modal-content">
-            <button class="close-button" id="close-modal-button">×</button>
-
-            <!-- Step 1: Preference Collection (Now First) -->
-            <div class="modal-step" id="modal-preference-step">
-                 <!-- *** MODIFIED TEXT *** -->
-                <h3>Which Early Access Plan Interests You?</h3>
-                <p>Select a plan to join the waitlist. Helps us focus development (no commitment yet!).</p>
-                <form id="modal-preference-form">
-                     <label>
-                        <input type="radio" name="plan_preference" value="lo" required> <!-- Make selection required -->
-                        Growth <span>($29/month)</span> - Essential AI feedback.
-                    </label>
-                     <label>
-                        <input type="radio" name="plan_preference" value="mid">
-                        Accelerator <span>($59/month)</span> - Deeper insights & goals.
-                    </label>
-                    <label>
-                        <input type="radio" name="plan_preference" value="hi">
-                        Leadership <span>($99/month)</span> - Advanced analysis & trends.
-                    </label>
-                    <label>
-                        <input type="radio" name="plan_preference" value="unsure"> <!-- Keep unsure option -->
-                        Undecided - Tell me more later
-                    </label>
-                    <div class="preference-buttons">
-                        <!-- *** MODIFIED BUTTON TEXT *** -->
-                        <!-- Submit button is now the primary action to proceed -->
-                        <button type="submit" id="submit-preference-button" class="cta-button">Next: Confirm Email →</button>
-                         <!-- Removed skip button as selection is required -->
-                    </div>
-                </form>
-             </div>
-
-             <!-- Step 2: Email Collection (Now Second) -->
-             <div class="modal-step" id="modal-email-step">
-                  <!-- *** MODIFIED TEXT *** -->
-                 <h3>Confirm Your Email to Join</h3>
-                 <p>You're joining the waitlist for the <strong id="selected-plan-name">selected</strong> tier. We'll email you at:</p>
-                 <form id="modal-signup-form">
-                    <input type="email" id="modal-email" placeholder="Your work email" required>
-                    <input type="hidden" id="hidden-pricing" name="pricing" value="unk"> <!-- Will be populated by JS -->
-                    <!-- *** MODIFIED BUTTON TEXT *** -->
-                    <button type="submit" id="submit-email-button">Join Early Access Waitlist</button>
-                 </form>
-                  <p style="font-size: 12px; margin-top: 15px; color: var(--text-secondary);">We respect your privacy. No spam, ever.</p>
-             </div>
-
-
-             <!-- Step 3: Final Success Message -->
-             <div class="modal-step" id="modal-success-step">
-                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#4caf50" stroke-width="2"/>
-                    <path d="M8 12L10.5 14.5L16 9" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                 </svg>
-                  <!-- *** MODIFIED TEXT *** -->
-                 <h4>You're In!</h4>
-                 <p>Thanks! We'll email <strong id="user-email-placeholder">[email]</strong> when Metricus Early Access (<span id="final-plan-placeholder">[Plan]</span>) is ready.</p>
-                 <p style="font-size: 14px;">Watch your inbox for updates and AI communication tips.</p>
-                  <button type="button" id="close-success-button" class="cta-button" style="margin-top: 20px;">Close</button>
-             </div>
-        </div>
-    </div>
-
-
     <script>
-        // --- Modal Elements ---
-        const modalOverlay = document.getElementById('signup-modal');
-        const modalContent = modalOverlay.querySelector('.modal-content');
-        const closeModalButton = document.getElementById('close-modal-button');
-        const heroCtaButton = document.getElementById('hero-cta-button');
-        const pricingCtaButton = document.getElementById('pricing-cta-button');
+        const primarySignupForm = document.getElementById('primary-signup-form');
+        const primaryEmailInput = document.getElementById('primary-email');
+        const primarySubmitButton = document.getElementById('primary-submit-button');
+        const primaryFormContainer = document.getElementById('primary-form-container');
+        const primarySuccessMessage = document.getElementById('primary-success-message');
+        const userEmailDisplay = document.getElementById('user-email-display');
 
-        // Modal Steps
-        const preferenceStep = document.getElementById('modal-preference-step'); // Now Step 1
-        const emailStep = document.getElementById('modal-email-step');       // Now Step 2
-        const successStep = document.getElementById('modal-success-step');      // Now Step 3
+        const optionalPricingSection = document.getElementById('optional-pricing-section');
+        const optionalPricingForm = document.getElementById('optional-pricing-form');
+        const optionalSubmitButton = document.getElementById('optional-submit-button');
+        const optionalPricingSuccess = document.getElementById('optional-pricing-success');
 
-        // Forms & Inputs & Placeholders
-        const preferenceForm = document.getElementById('modal-preference-form');
-        const submitPreferenceButton = document.getElementById('submit-preference-button');
-         const selectedPlanNamePlaceholder = document.getElementById('selected-plan-name'); // Placeholder in email step
+        const SCRIPT_URL = `https://script.google.com/macros/s/AKfycbzqnX3biJhp4qQqJjnz3V1k_D9OrSXr44by15jXbrze8TsKtzlZ4v_Yr-GBBIZB4hHC/exec`;
 
-        const emailForm = document.getElementById('modal-signup-form');
-        const emailInput = document.getElementById('modal-email');
-        const hiddenPricingInput = document.getElementById('hidden-pricing');
-        const submitEmailButton = document.getElementById('submit-email-button'); // Renamed for clarity
+        let submittedEmail = '';
 
-        const userEmailPlaceholder = document.getElementById('user-email-placeholder'); // Placeholder in success step
-        const finalPlanPlaceholder = document.getElementById('final-plan-placeholder'); // Placeholder in success step
-        const closeSuccessButton = document.getElementById('close-success-button');
-
-        let selectedPlanValue = 'unk'; // Store selected plan value ('lo', 'mid', 'hi', 'unsure')
-        let selectedPlanText = 'Undecided'; // Store plan text for display
-        let submittedEmail = ''; // Store email temporarily
-
-        // --- Google Apps Script URL ---
-        // --- IMPORTANT: Replace this URL with your actual Google Apps Script URL ---
-        const SCRIPT_URL = `https://script.google.com/macros/s/AKfycbzqnX3biJhp4qQqJjnz3V1k_D9OrSXr44by15jXbrze8TsKtzlZ4v_Yr-GBBIZB4hHC/exec`; // YOUR SCRIPT URL HERE
-        // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
-
-        // --- Functions ---
-        function showStep(stepElement) {
-            // Hide all steps first
-            preferenceStep.classList.remove('active');
-            emailStep.classList.remove('active');
-            successStep.classList.remove('active');
-            // Show the target step
-            stepElement.classList.add('active');
-        }
-
-        function openModal() {
-            submittedEmail = ''; // Clear previous email
-            selectedPlanValue = 'unk'; // Reset plan value
-             selectedPlanText = 'Undecided'; // Reset plan text
-            emailInput.value = ''; // Clear input field
-            hiddenPricingInput.value = 'unk'; // Reset hidden field
-
-             // Reset preference form to default (or ensure one is checked if required)
-            const defaultPreference = preferenceForm.querySelector('input[name="plan_preference"][value="unsure"]');
-             if (defaultPreference) defaultPreference.checked = false; // Uncheck unsure initially if required
-             // Ensure required validation prevents submission without selection
-
-            showStep(preferenceStep); // Start at preference step now
-            modalOverlay.style.display = 'flex';
-        }
-
-        function closeModal() {
-            modalOverlay.style.display = 'none';
-        }
-
-        // Function to send data to Google Apps Script
         function sendToGoogleScript(email, pricingTier) {
             const urlWithParams = `${SCRIPT_URL}?contact=${encodeURIComponent(email)}&pricing=${encodeURIComponent(pricingTier)}`;
-
-            console.log(`Sending: ${urlWithParams}`); // For debugging
-
-            // Use fetch API
-             fetch(urlWithParams, {
-                 method: 'GET',
-                 mode: 'no-cors' // Necessary for simple cross-origin GET requests to Apps Script
-                 })
-                .then(response => {
-                    console.log('Data submission attempted to Google Script.');
-                     // We assume success here for the UI flow because 'no-cors' hides the actual response.
-                     // Conversion is reported AFTER email submission.
-                })
-                .catch(error => {
-                    console.error('Error sending data to Google Script:', error);
-                    // Handle error - maybe still proceed in the UI for waitlist?
-                    // Decide if conversion should still be reported on error.
-                     console.warn('Proceeding UI flow despite potential submission error.');
-                });
+            console.log(`Sending: ${urlWithParams}`);
+             fetch(urlWithParams, { method: 'GET', mode: 'no-cors' })
+                .then(response => { console.log('Data submission attempted to Google Script.'); })
+                .catch(error => { console.error('Error sending data to Google Script:', error); });
         }
 
-         // Helper to get plan text from value
-         function getPlanText(value) {
-            switch(value) {
-                case 'lo': return 'Growth';
-                case 'mid': return 'Accelerator';
-                case 'hi': return 'Leadership';
-                default: return 'Undecided';
-            }
-        }
-
-
-        // --- Event Listeners ---
-
-        // Open Modal Listeners
-        if(heroCtaButton) heroCtaButton.addEventListener('click', openModal);
-        if(pricingCtaButton) pricingCtaButton.addEventListener('click', openModal);
-
-        // Close Modal Listeners
-        closeModalButton.addEventListener('click', closeModal);
-        closeSuccessButton.addEventListener('click', closeModal); // Close from final success screen
-        modalOverlay.addEventListener('click', function(event) {
-            if (event.target === modalOverlay) {
-                closeModal();
-            }
-        });
-
-        // Preference Form Submission (Step 1)
-        preferenceForm.addEventListener('submit', function(e) {
+        primarySignupForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            const selectedPreferenceInput = preferenceForm.querySelector('input[name="plan_preference"]:checked');
-
-            if (!selectedPreferenceInput) {
-                alert("Please select a plan option."); // Basic validation
-                return;
-            }
-
-            selectedPlanValue = selectedPreferenceInput.value;
-             selectedPlanText = getPlanText(selectedPlanValue); // Get text name
-
-            // Update placeholder in the *next* step (Email Step)
-            if(selectedPlanNamePlaceholder) {
-                 selectedPlanNamePlaceholder.textContent = selectedPlanText;
-            }
-
-            // Proceed to email step
-            showStep(emailStep);
-        });
-
-
-        // Email Form Submission (Step 2)
-        emailForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            submittedEmail = emailInput.value;
-            if (!submittedEmail || !submittedEmail.includes('@')) { // Basic email validation
+            submittedEmail = primaryEmailInput.value;
+            if (!submittedEmail || !submittedEmail.includes('@')) {
                  alert("Please enter a valid email address.");
                  return;
             }
 
-             // Update hidden pricing input *just before* sending
-             hiddenPricingInput.value = selectedPlanValue;
+            primarySubmitButton.disabled = true;
+            primarySubmitButton.textContent = 'Joining...';
 
-            // Disable button to prevent double submit
-            submitEmailButton.disabled = true;
-            submitEmailButton.textContent = 'Submitting...';
-
-            // Send data with selected plan and email
-            sendToGoogleScript(submittedEmail, selectedPlanValue);
-
-            // Report conversion *after* email is submitted with plan preference
+            sendToGoogleScript(submittedEmail, 'unk');
             gtag_report_conversion();
 
-            // Update success step placeholders
-            if(userEmailPlaceholder) userEmailPlaceholder.textContent = submittedEmail;
-            if(finalPlanPlaceholder) finalPlanPlaceholder.textContent = selectedPlanText;
+            userEmailDisplay.textContent = submittedEmail;
+            primaryFormContainer.style.display = 'none';
+            primarySuccessMessage.style.display = 'block';
+            optionalPricingSection.style.display = 'block';
 
-            // Proceed to final success step after a short delay
             setTimeout(() => {
-                 showStep(successStep);
-                 submitEmailButton.disabled = false; // Re-enable button
-                 submitEmailButton.textContent = 'Join Early Access Waitlist';
-            }, 500); // Adjust delay as needed
+                primarySubmitButton.disabled = false;
+                primarySubmitButton.textContent = 'Join Waitlist →';
+             }, 2000);
         });
 
-        // No Skip button listener needed as it was removed.
+        optionalPricingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const selectedPreferenceInput = optionalPricingForm.querySelector('input[name="plan_preference"]:checked');
+
+            if (!selectedPreferenceInput) {
+                alert("Please select an option.");
+                return;
+            }
+            if (!submittedEmail) {
+                console.error("Original email not found for secondary submission.");
+                alert("An error occurred. Please try signing up again.");
+                return;
+            }
+
+            const selectedPricingValue = selectedPreferenceInput.value;
+
+            optionalSubmitButton.disabled = true;
+            optionalSubmitButton.textContent = 'Submitting...';
+
+            sendToGoogleScript(submittedEmail, selectedPricingValue);
+
+
+            optionalPricingForm.style.display = 'none';
+            optionalPricingSuccess.style.display = 'block';
+
+
+             setTimeout(() => {
+                optionalSubmitButton.disabled = false;
+                optionalSubmitButton.textContent = 'Submit Preference';
+
+             }, 2000);
+        });
 
     </script>
 
