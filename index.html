@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metricus | AI Communication Coach for Work Meetings</title>
+    <title>Metricus | Your AI Communication Coach for Career Growth</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         :root {
@@ -15,112 +15,158 @@
             --text: #e0e0e0;
             --text-secondary: #9e9e9e;
             --success: #4caf50;
-            --highlight: #f0c674;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
-        html { scroll-behavior: smooth; }
         body { background-color: var(--dark); color: var(--text); line-height: 1.6; }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         header { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
         .logo-container { display: flex; align-items: center; }
         .logo { font-weight: 700; font-size: 24px; color: var(--primary); letter-spacing: -0.5px; }
         .domain { font-size: 14px; color: var(--text-secondary); margin-left: 8px; padding-left: 8px; border-left: 1px solid rgba(255,255,255,0.1); }
-        .hero { text-align: center; padding: 80px 0 60px; }
+
+        /* --- Hero Layout --- */
+        .hero { padding: 80px 0 60px; }
+        .hero-inner {
+            display: flex;
+            align-items: center; /* Vertically align items */
+            justify-content: space-between; /* Default, maybe adjust */
+            gap: 40px; /* Add gap between content and form area */
+        }
+        .hero-content {
+            flex: 1 1 55%; /* Allow content to take slightly more space */
+            max-width: 540px; /* Maintain max width */
+        }
         .hero h1 { font-size: 42px; margin-bottom: 20px; line-height: 1.2; font-weight: 800; background: linear-gradient(90deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .hero p { font-size: 18px; margin: 0 auto 30px auto; color: var(--text-secondary); max-width: 650px; }
-        #primary-signup-section { background: linear-gradient(145deg, rgba(40,40,45,0.6), rgba(25,25,30,0.6)); padding: 35px; border-radius: 16px; max-width: 500px; margin: 40px auto 0 auto; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1); }
-        #primary-signup-section h3 { font-size: 22px; margin-bottom: 20px; color: var(--text); }
-        #primary-signup-section input[type="email"] { width: 100%; padding: 14px; margin-bottom: 14px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; font-size: 15px; background-color: rgba(255,255,255,0.05); color: var(--text); }
-        #primary-signup-section input:focus { outline: none; border-color: var(--primary); }
-        #primary-signup-section button { width: 100%; padding: 14px; background-color: var(--accent); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; }
-        #primary-signup-section button:hover { background-color: #ff5a83; transform: translateY(-2px); box-shadow: 0 6px 15px rgba(255,117,151,0.2); }
-        #primary-signup-section button:disabled { background-color: #555; cursor: not-allowed; transform: none; box-shadow: none; }
-        #primary-signup-section p.subtext { font-size: 13px; margin-top: 12px; color: var(--text-secondary); text-align: center; }
-        .success-message { display: none; text-align: center; padding: 20px 0; }
-        .success-message svg { width: 48px; height: 48px; margin-bottom: 15px; }
-        .success-message h4 { margin-bottom: 10px; color: var(--success); font-size: 20px;}
-        .success-message p { color: var(--text-secondary); font-size: 15px; }
+        .hero p { font-size: 18px; margin-bottom: 30px; color: var(--text-secondary); } /* Removed max-width here, handled by parent */
+
+        /* --- Form Wrapper (New) --- */
+        .hero-form-wrapper {
+            flex: 1 1 40%; /* Allow wrapper to take space */
+            display: flex;
+            justify-content: center; /* Center the form box horizontally */
+            align-items: center; /* Center the form box vertically */
+        }
+
+        /* --- Signup Form Container --- */
+        .signup-form-container {
+            background: linear-gradient(145deg, rgba(40,40,45,0.9), rgba(25,25,30,0.9));
+            padding: 35px 30px;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            width: 100%; /* Take width of wrapper */
+            max-width: 380px; /* Limit max width */
+            backdrop-filter: blur(10px);
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            /* Removed explicit flex property */
+        }
+        .signup-form-container h3 { font-size: 22px; margin-bottom: 20px; color: var(--text); }
+        #form-container p { font-size: 13px; margin-top: 12px; color: var(--text-secondary); }
+        .signup-form-container input { width: 100%; padding: 14px; margin-bottom: 14px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; font-size: 15px; background-color: rgba(255,255,255,0.05); color: var(--text); text-align: left; }
+        .signup-form-container input:focus { outline: none; border-color: var(--primary); }
+        .signup-form-container button { width: 100%; padding: 14px; background-color: var(--accent); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; }
+        .signup-form-container button:hover { background-color: #ff5a83; transform: translateY(-2px); box-shadow: 0 6px 15px rgba(255,117,151,0.2); }
+        .signup-form-container button:disabled { background-color: #555; cursor: not-allowed; transform: none; box-shadow: none; }
+
         .features { padding: 60px 0; }
         .features h2 { text-align: center; margin-bottom: 50px; font-size: 30px; color: var(--text); }
         .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
-        .feature-card { background-color: var(--dark-secondary); padding: 25px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s ease; display: flex; flex-direction: column; }
+        .feature-card { background-color: var(--dark-secondary); padding: 25px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s ease; }
         .feature-card:hover { transform: translateY(-5px); }
         .feature-card h3 { font-size: 18px; margin-bottom: 12px; color: var(--primary); }
-        .feature-card p { color: var(--text-secondary); font-size: 15px; flex-grow: 1; }
-        .pricing { padding: 60px 0; }
-        .pricing h2 { text-align: center; margin-bottom: 50px; font-size: 30px; color: var(--text); }
-        .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; align-items: stretch; margin-bottom: 40px; text-align: left; }
-        .pricing-card { background-color: var(--dark-secondary); padding: 30px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .pricing-card:hover { transform: translateY(-3px); }
-        .pricing-card.popular { border-color: var(--highlight); box-shadow: 0 0 20px rgba(240, 198, 116, 0.15); position: relative; overflow: hidden; }
-        .popular-badge { position: absolute; top: 15px; right: -30px; background-color: var(--highlight); color: var(--dark); padding: 4px 30px; font-size: 12px; font-weight: 700; transform: rotate(45deg); transform-origin: top right; z-index: 1; }
-        .pricing-card h3 { font-size: 22px; margin-bottom: 15px; color: var(--primary); font-weight: 600; }
-        .price { font-size: 38px; font-weight: 700; margin-bottom: 10px; color: var(--text); }
-        .price span { font-size: 16px; font-weight: 400; color: var(--text-secondary); }
-        .pricing-card p.tier-desc { color: var(--text-secondary); font-size: 14px; margin-bottom: 20px; min-height: 40px; }
-        .pricing-card ul { list-style: none; margin: 25px 0; text-align: left; padding-left: 10px; flex-grow: 1; }
-        .pricing-card li { margin-bottom: 12px; color: var(--text-secondary); font-size: 15px; position: relative; padding-left: 25px; }
-        .pricing-card li::before { content: '✓'; color: var(--success); position: absolute; left: 0; font-weight: bold; }
-        #optional-pricing-section { display: none; padding: 40px 20px; margin-top: 40px; background-color: var(--dark-secondary); border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); text-align: center; max-width: 700px; margin-left: auto; margin-right: auto; }
-        #optional-pricing-section h3 { font-size: 20px; margin-bottom: 10px; color: var(--text); }
-        #optional-pricing-section p { color: var(--text-secondary); margin-bottom: 25px; font-size: 15px; }
-        #optional-pricing-form label { display: inline-block; background-color: rgba(255, 255, 255, 0.05); padding: 10px 18px; margin: 5px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1); cursor: pointer; transition: background-color 0.2s ease, border-color 0.2s ease; }
-        #optional-pricing-form label:hover { background-color: rgba(255, 255, 255, 0.08); }
-        #optional-pricing-form input[type="radio"] { margin-right: 8px; accent-color: var(--primary); vertical-align: middle;}
-        #optional-pricing-form label span { color: var(--text-secondary); font-size: 0.9em; }
-        #optional-pricing-form label:has(input:checked) { border-color: var(--primary); background-color: rgba(138, 180, 248, 0.1); }
-        #optional-pricing-form button { display: inline-block; padding: 12px 25px; background-color: var(--primary); color: var(--dark); border: none; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; margin-top: 20px; }
-        #optional-pricing-form button:hover { background-color: #a6c9fa; }
-        #optional-pricing-form button:disabled { background-color: #555; color: #888; cursor: not-allowed;}
-        #optional-pricing-success { display: none; margin-top: 20px; }
-        #optional-pricing-success p { color: var(--success); font-weight: 500; }
-        footer { padding: 30px 0; text-align: center; color: var(--text-secondary); font-size: 14px; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 60px; }
+        .feature-card p { color: var(--text-secondary); font-size: 15px; }
+        footer { padding: 30px 0; text-align: center; color: var(--text-secondary); font-size: 14px; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 40px; }
         .footer-domain { color: var(--primary); font-weight: 500; }
 
-        @media (max-width: 992px) {
+        /* --- Fixed Success Message Style --- */
+        .success-message { display: none; text-align: center; padding: 20px 0; }
+        .success-message svg { width: 64px; height: 64px; margin-bottom: 20px; }
+        .success-message h3 { margin-bottom: 15px; color: var(--success); font-size: 20px; }
+        .success-message p { color: var(--text-secondary); margin-bottom: 15px; font-size: 15px; }
+
+        /* --- Modal Styles --- */
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); backdrop-filter: blur(5px); justify-content: center; align-items: center; z-index: 1000; }
+        .modal-content { background: linear-gradient(145deg, rgba(45,45,50,0.95), rgba(30,30,35,0.95)); padding: 30px; border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.4); width: 90%; max-width: 550px; position: relative; text-align: center; border: 1px solid rgba(255,255,255,0.1); }
+        .close-button { position: absolute; top: 15px; right: 15px; background: none; border: none; color: var(--text-secondary); font-size: 24px; cursor: pointer; line-height: 1; }
+        .modal-content h3 { font-size: 20px; margin-bottom: 10px; color: var(--text); }
+        .modal-content p { font-size: 15px; color: var(--text-secondary); margin-bottom: 25px; }
+        #optional-pricing-form { text-align: left; }
+        #optional-pricing-form label { display: block; background-color: rgba(255, 255, 255, 0.05); padding: 12px 15px; margin-bottom: 10px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1); cursor: pointer; transition: background-color 0.2s ease, border-color 0.2s ease; }
+        #optional-pricing-form label:hover { background-color: rgba(255, 255, 255, 0.08); }
+        #optional-pricing-form input[type="radio"] { margin-right: 10px; accent-color: var(--primary); vertical-align: middle; }
+        #optional-pricing-form label strong { color: var(--text); }
+        #optional-pricing-form label span.price-inline { color: var(--text-secondary); font-size: 0.9em; margin-left: 5px; }
+        #optional-pricing-form label div.feature-summary { font-size: 0.85em; color: var(--text-secondary); margin-top: 5px; padding-left: 28px; }
+        #optional-pricing-form label:has(input:checked) { border-color: var(--primary); background-color: rgba(138, 180, 248, 0.1); }
+        #optional-pricing-form button { display: inline-block; width: auto; padding: 12px 25px; background-color: var(--primary); color: var(--dark); border: none; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; margin-top: 20px; }
+        #optional-pricing-form button:hover { background-color: #a6c9fa; }
+        #optional-pricing-form button:disabled { background-color: #555; color: #888; cursor: not-allowed;}
+        #modal-success-message { display: none; text-align: center; padding-top: 15px; }
+        #modal-success-message p { color: var(--success); font-weight: 500; font-size: 16px; margin-bottom: 0;}
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 900px) {
+            .hero-inner {
+                 flex-direction: column; /* Stack on medium screens */
+                 gap: 40px;
+            }
+            .hero-content {
+                padding-right: 0;
+                text-align: center; /* Center text when stacked */
+                flex-basis: auto; /* Reset basis */
+                max-width: 600px; /* Allow wider text when centered */
+                margin: 0 auto; /* Center the block */
+            }
+            .hero-form-wrapper {
+                width: 100%; /* Take full width */
+                justify-content: center; /* Ensure centering */
+                flex-basis: auto; /* Reset basis */
+            }
+            .signup-form-container {
+                max-width: 400px; /* Limit width even when wrapper is full */
+                /* flex-basis removed earlier */
+            }
             .feature-grid { grid-template-columns: repeat(2, 1fr); }
-            .pricing-grid { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
-            .popular-badge { top: 10px; right: -35px; }
-        }
-        @media (max-width: 768px) {
-             .hero h1 { font-size: 36px; }
-             .hero p { font-size: 16px; }
-             .features h2, .pricing h2 { font-size: 28px; }
-             .feature-grid { grid-template-columns: 1fr; }
-             #primary-signup-section { padding: 25px; }
-             #optional-pricing-form label { display: block; margin: 10px 0; text-align: left; }
         }
         @media (max-width: 600px) {
+            .feature-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 32px; }
+            .hero { padding: 40px 0 30px; }
+            .features { padding: 40px 0; }
+            .signup-form-container { padding: 25px; max-width: none; /* Allow full bleed on smallest */ }
+            .feature-card { padding: 20px; }
             .domain { display: none; }
             header { justify-content: center; }
-            .hero h1 { font-size: 32px; }
-            .hero { padding: 60px 0 40px; }
-             .features, .pricing { padding: 40px 0; }
-            .feature-card, .pricing-card { padding: 20px; }
-             .pricing-grid { gap: 20px; }
-             footer { margin-top: 40px; }
+            .modal-content { padding: 20px; }
+             #optional-pricing-form label { padding: 10px 12px; }
+             #optional-pricing-form label div.feature-summary { font-size: 0.8em; }
         }
     </style>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-970082336');
-    </script>
-    <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') { }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-970082336/043PCI3MocwBEKCQyc4D',
-          'event_callback': callback
-      });
-      console.log("gtag_report_conversion called");
-      return false;
-    }
-    </script>
+<!-- Google Tag Manager and gtag scripts remain the same -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-970082336');
+</script>
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') { /* window.location = url; */ }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-970082336/043PCI3MocwBEKCQyc4D',
+      'event_callback': callback
+  });
+  console.log("gtag_report_conversion called");
+  return false;
+}
+</script>
+
 </head>
 <body>
     <header>
@@ -134,141 +180,70 @@
 
     <section class="hero">
         <div class="container">
-            <h1>AI-Powered Communication.<br>Unlock Your Career Impact.</h1>
-            <p>Metricus is your private AI communication coach. It analyzes your speech in work meetings, providing objective feedback to help you speak with clarity, influence decisions, and get recognized.</p>
-
-            <div id="primary-signup-section">
-                <div id="primary-form-container">
-                    <h3>Get early access</h3>
-                    <form id="primary-signup-form">
-                        <input type="email" id="primary-email" placeholder="Work email" required>
-                        <button type="submit" id="primary-submit-button">Join Waitlist →</button>
-                    </form>
-                    <p class="subtext">Be first to increase your workplace impact through better communication.</p>
+            <!-- Added hero-inner div for flex control -->
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <h1>Meet Metricus: Your AI Coach to Communicate Better & Boost Career Impact.</h1>
+                    <p>Metricus uses AI to analyze your meeting communication and delivers actionable insights, helping you demonstrate value, influence decisions, and develop leadership skills.</p>
                 </div>
 
-                <div id="primary-success-message" class="success-message">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#4caf50" stroke-width="2"/><path d="M8 12L10.5 14.5L16 9" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    <h4>You're on the list!</h4>
-                    <p>Thanks for joining. We'll email <strong id="user-email-display">[email]</strong> when early access opens.</p>
-                </div>
-            </div>
+                <!-- Added hero-form-wrapper -->
+                <div class="hero-form-wrapper">
+                    <div class="signup-form-container">
+                        <div id="form-container">
+                            <h3>Get early access</h3>
+                            <form id="signup-form">
+                                <input type="email" id="email" placeholder="Work email" required>
+                                <button type="submit" id="primary-submit-button">Join waitlist →</button>
+                            </form>
+                            <p>Be first to increase your workplace impact through better communication.</p>
+                        </div>
+
+                        <div id="success-message" class="success-message">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#4caf50" stroke-width="2"/>
+                                <path d="M8 12L10.5 14.5L16 9" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <h3>You're on the list!</h3>
+                            <p>Thanks for joining. We'll email you when early access opens.</p>
+                        </div>
+                    </div>
+                </div> <!-- End hero-form-wrapper -->
+            </div> <!-- End hero-inner -->
         </div>
     </section>
 
     <section class="features">
         <div class="container">
-            <h2>Get AI Feedback On Skills That Drive Your Career</h2>
+            <h2>Track Communication Skills That Matter For Your Career</h2>
             <div class="feature-grid">
-                <div class="feature-card">
-                    <h3>AI Feedback: Show Your Impact</h3>
-                    <p>Get AI analysis on how effectively you use the STAR method to demonstrate clear results in meetings.</p>
+                 <div class="feature-card">
+                    <h3>Show Your Impact (STAR)</h3>
+                    <p>Get AI feedback on linking actions to results using the STAR method to clearly demonstrate value.</p>
                 </div>
                 <div class="feature-card">
-                    <h3>AI Guidance: Evidence-Based Points</h3>
-                    <p>Receive AI feedback on structuring arguments using Point, Reason, Example, Point (PREP) for greater influence.</p>
+                    <h3>Evidence-Based Points (PREP)</h3>
+                    <p>Learn how AI scores your ability to support ideas with evidence using the PREP framework for influence.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>Objective Clarity Score</h3>
-                    <p>Get an AI-calculated score post-meeting measuring conciseness, structure, and filler word usage.</p>
+                 <div class="feature-card">
+                    <h3>AI Clarity Score</h3>
+                    <p>Receive an objective score post-meeting on conciseness, structure, and filler words.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>AI Tracking: Problem Framing</h3>
-                    <p>Metricus analyzes and tracks how effectively you frame problems, a key leadership indicator.</p>
+                 <div class="feature-card">
+                    <h3>Problem Framing Analysis</h3>
+                    <p>AI tracks how effectively you frame problems, a critical skill for visibility and leadership.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>AI Monitoring: Solution Orientation</h3>
-                    <p>See metrics on how proactively you propose solutions and clear next steps in discussions.</p>
+                 <div class="feature-card">
+                    <h3>Solution Orientation Metrics</h3>
+                    <p>Monitor how AI measures your proactivity in proposing solutions and clear next steps.</p>
                 </div>
-                <div class="feature-card">
+                 <div class="feature-card">
                     <h3>Personal Growth Trends</h3>
-                    <p>Track your AI-measured progress across all key communication metrics on your private dashboard.</p>
+                    <p>Visualize your AI-measured communication improvement over time on your private dashboard.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <h2>Choose Your AI Coaching Plan (Early Access Preview)</h2>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Growth</h3>
-                    <div class="price">$29<span>/month</span></div>
-                    <p class="tier-desc">Essential AI feedback & tracking.</p>
-                    <ul>
-                        <li>Unlimited Meeting Transcription</li>
-                        <li>Post-Meeting AI Feedback (STAR, PREP)</li>
-                        <li>AI Clarity Score Analysis</li>
-                        <li>Problem Framing Analysis</li>
-                        <li>Solution Orientation Analysis</li>
-                        <li>Personal Dashboard</li>
-                        <li>30-Day Trend History</li>
-                    </ul>
-                </div>
-                <div class="pricing-card popular">
-                     <div class="popular-badge">POPULAR</div>
-                    <h3>Accelerator</h3>
-                    <div class="price">$59<span>/month</span></div>
-                    <p class="tier-desc">Deeper AI insights & goal setting.</p>
-                    <ul>
-                        <li>Everything in Growth, plus:</li>
-                        <li>Detailed Filler Word Analysis</li>
-                        <li>Set Personal Communication Goals</li>
-                        <li>Track Goal Progress Visually</li>
-                        <li>90-Day Trend History</li>
-                        <li>Priority Email Support</li>
-                    </ul>
-                </div>
-                <div class="pricing-card">
-                    <h3>Leadership</h3>
-                    <div class="price">$99<span>/month</span></div>
-                    <p class="tier-desc">Advanced AI analysis & long-term trends.</p>
-                    <ul>
-                        <li>Everything in Accelerator, plus:</li>
-                        <li>Compare Trends Across Meeting Types</li>
-                        <li>Unlimited Trend History</li>
-                        <li>Advanced Goal Tracking Insights</li>
-                        <li>Direct Feedback Channel for Features</li>
-                        <li>Top Priority Support Queue</li>
-                    </ul>
-                </div>
-            </div>
-             <p style="text-align: center; margin-top: -20px; color: var(--text-secondary); font-size: 14px;">Pricing shown for reference. Join the waitlist above for early access info.</p>
-        </div>
-    </section>
-
-    <section id="optional-pricing-section">
-        <div class="container">
-            <h3>Thanks! Which plan looks most interesting?</h3>
-            <p>This is optional feedback to help us prioritize (no commitment).</p>
-            <form id="optional-pricing-form">
-                 <label>
-                    <input type="radio" name="plan_preference" value="lo">
-                    Growth <span>($29/mo)</span>
-                </label>
-                 <label>
-                    <input type="radio" name="plan_preference" value="mid">
-                    Accelerator <span>($59/mo)</span>
-                </label>
-                <label>
-                    <input type="radio" name="plan_preference" value="hi">
-                    Leadership <span>($99/mo)</span>
-                </label>
-                <label>
-                    <input type="radio" name="plan_preference" value="unsure">
-                    Undecided
-                </label>
-                <div>
-                    <button type="submit" id="optional-submit-button">Submit Preference</button>
-                </div>
-            </form>
-            <div id="optional-pricing-success" class="success-message" style="padding: 10px 0 0 0;">
-                 <p>Got it, thanks for the feedback!</p>
-            </div>
-        </div>
-    </section>
-
 
     <footer>
         <div class="container">
@@ -276,29 +251,83 @@
         </div>
     </footer>
 
-    <script>
-        const primarySignupForm = document.getElementById('primary-signup-form');
-        const primaryEmailInput = document.getElementById('primary-email');
-        const primarySubmitButton = document.getElementById('primary-submit-button');
-        const primaryFormContainer = document.getElementById('primary-form-container');
-        const primarySuccessMessage = document.getElementById('primary-success-message');
-        const userEmailDisplay = document.getElementById('user-email-display');
+    <!-- Optional Pricing Feedback Modal -->
+    <div class="modal-overlay" id="pricing-modal">
+        <div class="modal-content">
+            <button class="close-button" id="close-modal-button">×</button>
+            <h3>Help Us Shape Pricing (Optional)</h3>
+            <p>Thanks for joining the waitlist! To help us finalize features, which potential monthly plan looks most interesting to you? (No commitment)</p>
 
-        const optionalPricingSection = document.getElementById('optional-pricing-section');
+            <form id="optional-pricing-form">
+                 <label>
+                    <input type="radio" name="plan_preference" value="lo" required>
+                    <strong>Growth</strong><span class="price-inline">($29/mo estimate)</span>
+                    <div class="feature-summary">Essential AI feedback (STAR, PREP, Clarity Score) & 30-day trends.</div>
+                </label>
+                 <label>
+                    <input type="radio" name="plan_preference" value="mid">
+                    <strong>Accelerator</strong><span class="price-inline">($59/mo estimate)</span>
+                    <div class="feature-summary">Adds detailed filler word analysis, goal setting & 90-day trends.</div>
+                </label>
+                <label>
+                    <input type="radio" name="plan_preference" value="hi">
+                    <strong>Leadership</strong><span class="price-inline">($99/mo estimate)</span>
+                    <div class="feature-summary">Adds meeting type comparisons, advanced insights & unlimited history.</div>
+                </label>
+                <label>
+                    <input type="radio" name="plan_preference" value="unsure">
+                    <strong>Undecided / Need More Info</strong>
+                    <div class="feature-summary">Not sure yet which plan fits best.</div>
+                </label>
+                <div style="text-align: center;">
+                    <button type="submit" id="optional-submit-button">Submit Preference</button>
+                </div>
+            </form>
+             <div id="modal-success-message">
+                 <p>Got it, thanks for the feedback!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript remains the same -->
+    <script>
+        const primarySignupForm = document.getElementById('signup-form');
+        const primaryEmailInput = document.getElementById('email');
+        const primarySubmitButton = document.getElementById('primary-submit-button');
+        const primaryFormContainer = document.getElementById('form-container');
+        const primarySuccessMessage = document.getElementById('success-message'); // Success message in hero
+
+        const pricingModal = document.getElementById('pricing-modal');
+        const closeModalButton = document.getElementById('close-modal-button');
         const optionalPricingForm = document.getElementById('optional-pricing-form');
         const optionalSubmitButton = document.getElementById('optional-submit-button');
-        const optionalPricingSuccess = document.getElementById('optional-pricing-success');
+        const modalSuccessMessage = document.getElementById('modal-success-message'); // Success message in modal
 
+        // **IMPORTANT**: Replace with your actual Google Apps Script URL
         const SCRIPT_URL = `https://script.google.com/macros/s/AKfycbzqnX3biJhp4qQqJjnz3V1k_D9OrSXr44by15jXbrze8TsKtzlZ4v_Yr-GBBIZB4hHC/exec`;
 
-        let submittedEmail = '';
+        let submittedEmail = ''; // Store the email temporarily
 
         function sendToGoogleScript(email, pricingTier) {
             const urlWithParams = `${SCRIPT_URL}?contact=${encodeURIComponent(email)}&pricing=${encodeURIComponent(pricingTier)}`;
             console.log(`Sending: ${urlWithParams}`);
              fetch(urlWithParams, { method: 'GET', mode: 'no-cors' })
-                .then(response => { console.log('Data submission attempted to Google Script.'); })
+                .then(response => { console.log('Data submission attempted:', pricingTier); })
                 .catch(error => { console.error('Error sending data to Google Script:', error); });
+        }
+
+        function openModal() {
+            const checkedRadio = optionalPricingForm.querySelector('input[name="plan_preference"]:checked');
+            if(checkedRadio) checkedRadio.checked = false;
+            optionalPricingForm.style.display = 'block';
+            modalSuccessMessage.style.display = 'none';
+            optionalSubmitButton.disabled = false;
+            optionalSubmitButton.textContent = 'Submit Preference';
+            pricingModal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            pricingModal.style.display = 'none';
         }
 
         primarySignupForm.addEventListener('submit', function(e) {
@@ -312,18 +341,20 @@
             primarySubmitButton.disabled = true;
             primarySubmitButton.textContent = 'Joining...';
 
-            sendToGoogleScript(submittedEmail, 'unk');
+            sendToGoogleScript(submittedEmail, 'waitlist_signup');
             gtag_report_conversion();
 
-            userEmailDisplay.textContent = submittedEmail;
             primaryFormContainer.style.display = 'none';
-            primarySuccessMessage.style.display = 'block';
-            optionalPricingSection.style.display = 'block';
+            primarySuccessMessage.style.display = 'block'; // Show success in hero
 
+             // Re-enable button after a delay
             setTimeout(() => {
                 primarySubmitButton.disabled = false;
-                primarySubmitButton.textContent = 'Join Waitlist →';
-             }, 2000);
+                primarySubmitButton.textContent = 'Join waitlist →';
+            }, 2000);
+
+            // Open the optional pricing modal AFTER showing success in hero
+            setTimeout(openModal, 700);
         });
 
         optionalPricingForm.addEventListener('submit', function(e) {
@@ -331,12 +362,12 @@
             const selectedPreferenceInput = optionalPricingForm.querySelector('input[name="plan_preference"]:checked');
 
             if (!selectedPreferenceInput) {
-                alert("Please select an option.");
+                alert("Please select an option to provide feedback.");
                 return;
             }
             if (!submittedEmail) {
-                console.error("Original email not found for secondary submission.");
-                alert("An error occurred. Please try signing up again.");
+                console.error("Original email not found for pricing submission.");
+                 closeModal();
                 return;
             }
 
@@ -347,16 +378,17 @@
 
             sendToGoogleScript(submittedEmail, selectedPricingValue);
 
+             optionalPricingForm.style.display = 'none';
+             modalSuccessMessage.style.display = 'block'; // Show success in modal
 
-            optionalPricingForm.style.display = 'none';
-            optionalPricingSuccess.style.display = 'block';
+             setTimeout(closeModal, 2500); // Close modal after showing success
+        });
 
-
-             setTimeout(() => {
-                optionalSubmitButton.disabled = false;
-                optionalSubmitButton.textContent = 'Submit Preference';
-
-             }, 2000);
+        closeModalButton.addEventListener('click', closeModal);
+        pricingModal.addEventListener('click', function(event) {
+            if (event.target === pricingModal) {
+                closeModal();
+            }
         });
 
     </script>
