@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Details — Metricus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .ob { max-width: 520px; margin: 0 auto; padding: 48px 0 80px; }
+        .ob h1 { font-size: 1.3rem; font-weight: 800; color: var(--text-bright); margin-bottom: 4px; }
+        .ob .ob-sub { font-size: 0.82rem; color: var(--text-dim); margin-bottom: 20px; }
+
+        .tier-badge-bar {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2);
+            border-radius: 8px; padding: 8px 14px; margin-bottom: 24px;
+            font-size: 0.78rem; color: var(--primary-bright);
+        }
+        .tier-badge-bar strong { color: var(--text-bright); font-weight: 700; }
+        .tier-badge-bar .tier-price { color: var(--accent); font-weight: 800; }
+
+        .ob-progress { display: flex; gap: 8px; margin-bottom: 32px; }
+        .ob-progress .bar { flex: 1; height: 4px; border-radius: 2px; background: var(--border); transition: background 0.3s; }
+        .ob-progress .bar.done { background: var(--primary); }
+
+        .ob-step { display: none; }
+        .ob-step.active { display: block; }
+
+        .ob-step h2 { font-size: 1rem; font-weight: 700; color: var(--text-bright); margin-bottom: 4px; }
+        .ob-step .step-desc { font-size: 0.8rem; color: var(--text-dim); margin-bottom: 20px; }
+
+        .field { margin-bottom: 16px; }
+        .field label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--text-mid); margin-bottom: 6px; }
+        .field input, .field textarea {
+            width: 100%; padding: 10px 12px; border-radius: 8px;
+            border: 1px solid var(--border); background: var(--card); color: var(--text-bright);
+            font-size: 0.85rem; font-family: inherit; outline: none; transition: border-color 0.2s;
+            box-sizing: border-box;
+        }
+        .field input:focus, .field textarea:focus { border-color: var(--primary); }
+        .field textarea { resize: vertical; min-height: 80px; }
+        .field .hint { font-size: 0.72rem; color: var(--text-dim); margin-top: 4px; }
+
+        .ob-nav { display: flex; gap: 10px; margin-top: 24px; }
+        .ob-nav .btn { flex: 1; }
+        .btn-back { background: transparent; border: 1px solid var(--border); color: var(--text-mid); cursor: pointer; padding: 10px 16px; border-radius: 8px; font-size: 0.85rem; font-family: inherit; }
+        .btn-back:hover { border-color: var(--text-dim); color: var(--text-bright); }
+
+        .step-count { font-size: 0.72rem; color: var(--text-dim); margin-bottom: 6px; }
+
+        .checkout-note { font-size: 0.72rem; color: var(--text-dim); margin-top: 8px; text-align: center; }
+        .checkout-note svg { width: 10px; height: 10px; fill: var(--text-dim); vertical-align: -1px; margin-right: 3px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="w-wide">
+        <div class="header-inner">
+            <a href="../" class="logo">
+                <div class="logo-icon">M</div>
+                metricus
+            </a>
+        </div>
+    </div>
+</header>
+
+<div class="w">
+    <div class="ob">
+        <h1>Set up your AI visibility report</h1>
+        <p class="ob-sub">Tell us about your brand so we can build your report. Takes about 2 minutes.</p>
+
+        <div class="tier-badge-bar" id="tierBar">
+            <strong id="tierName">Deep Dive</strong> report &mdash; <span class="tier-price" id="tierPrice">$149</span>
+        </div>
+
+        <div class="ob-progress">
+            <div class="bar done" id="bar1"></div>
+            <div class="bar" id="bar2"></div>
+            <div class="bar" id="bar3"></div>
+        </div>
+
+        <!-- Step 1: Your brand -->
+        <div class="ob-step active" id="obStep1">
+            <div class="step-count">Step 1 of 3</div>
+            <h2>Your brand</h2>
+            <p class="step-desc">What's your company and what do you do?</p>
+
+            <div class="field">
+                <label>Brand / company name</label>
+                <input type="text" id="brandName" placeholder="e.g. Acme CRM" required>
+            </div>
+            <div class="field">
+                <label>Website</label>
+                <input type="text" id="brandUrl" placeholder="e.g. acmecrm.com">
+            </div>
+            <div class="field">
+                <label>What does your product/service do? (one sentence)</label>
+                <input type="text" id="brandDesc" placeholder="e.g. CRM for small sales teams">
+                <div class="hint">This helps us pick the right queries to test.</div>
+            </div>
+
+            <div class="ob-nav">
+                <button class="btn btn-checkout" onclick="goStep(2)" style="flex:1;">Continue</button>
+            </div>
+        </div>
+
+        <!-- Step 2: Competitors -->
+        <div class="ob-step" id="obStep2">
+            <div class="step-count">Step 2 of 3</div>
+            <h2>Your competitors</h2>
+            <p class="step-desc">Who are you competing with? We'll compare AI visibility head-to-head.</p>
+
+            <div class="field">
+                <label>Competitor 1</label>
+                <input type="text" id="comp1" placeholder="e.g. HubSpot">
+            </div>
+            <div class="field">
+                <label>Competitor 2</label>
+                <input type="text" id="comp2" placeholder="e.g. Salesforce">
+            </div>
+            <div class="field">
+                <label>Competitor 3</label>
+                <input type="text" id="comp3" placeholder="e.g. Pipedrive">
+            </div>
+            <div class="field">
+                <label>More competitors (optional)</label>
+                <input type="text" id="compMore" placeholder="e.g. Zoho, Monday CRM">
+                <div class="hint">Comma-separated. The more you list, the richer the comparison.</div>
+            </div>
+
+            <div class="ob-nav">
+                <button class="btn-back" onclick="goStep(1)">Back</button>
+                <button class="btn btn-checkout" onclick="goStep(3)" style="flex:1;">Continue</button>
+            </div>
+        </div>
+
+        <!-- Step 3: Queries & checkout -->
+        <div class="ob-step" id="obStep3">
+            <div class="step-count">Step 3 of 3</div>
+            <h2>Target queries &amp; checkout</h2>
+            <p class="step-desc">What would your ideal customer ask AI? Then we'll take you to secure payment.</p>
+
+            <div class="field">
+                <label>Queries to test</label>
+                <textarea id="queries" placeholder="e.g.&#10;best CRM for small teams&#10;HubSpot vs alternatives&#10;what CRM should I use for a startup"></textarea>
+                <div class="hint">One per line. We'll also generate additional relevant queries based on your category.</div>
+            </div>
+            <div class="field">
+                <label>Email for report delivery</label>
+                <input type="email" id="obEmail" placeholder="you@company.com" required>
+                <div class="hint">Your report PDF will be sent here within 24 hours of payment.</div>
+            </div>
+            <div class="field">
+                <label>Anything else we should know? (optional)</label>
+                <input type="text" id="notes" placeholder="e.g. We just launched a new API, focus on developer queries">
+            </div>
+
+            <div class="ob-nav">
+                <button class="btn-back" onclick="goStep(2)">Back</button>
+                <button class="btn btn-checkout" onclick="submitAndCheckout()" style="flex:1;" id="submitBtn">Continue to payment &mdash; <span id="btnPrice">$149</span></button>
+            </div>
+            <div class="checkout-note">
+                <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z"/></svg>
+                Secure checkout via Stripe. 100% money-back guarantee.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="w">metricus &copy; 2026 &nbsp;&middot;&nbsp; <a href="mailto:hello@metricusapp.com">Contact</a> &nbsp;&middot;&nbsp; <a href="../privacy-policy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="../terms-of-service/">Terms</a> &nbsp;&middot;&nbsp; <a href="../support/">Support</a></div>
+</div>
+
+<script>
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlMZxJmAmm90HGKg6AJxEeB8xOP83Dyq4rUHnCD8aubV1NzPqb1ZlSbjzmBAnO63r2/exec';
+
+const STRIPE = {
+    snapshot:  'https://buy.stripe.com/4gMeVe6IOfSjauBgma7g400',
+    deepdive:  'https://buy.stripe.com/9B614ogjobC346dd9Y7g401',
+    arsenal:   'https://buy.stripe.com/8x2cN63wC5dF7ipd9Y7g402'
+};
+
+const TIER_INFO = {
+    snapshot:  { name: 'Snapshot', price: '$49' },
+    deepdive:  { name: 'Deep Dive', price: '$149' },
+    arsenal:   { name: 'Full Arsenal', price: '$349' }
+};
+
+// Read tier and email from URL params
+const params = new URLSearchParams(window.location.search);
+const selectedTier = params.get('tier') || 'deepdive';
+const prefillEmail = params.get('email') || '';
+
+// Set tier info in UI
+const info = TIER_INFO[selectedTier] || TIER_INFO.deepdive;
+document.getElementById('tierName').textContent = info.name;
+document.getElementById('tierPrice').textContent = info.price;
+document.getElementById('btnPrice').textContent = info.price;
+
+// Prefill email if passed from hero form
+if (prefillEmail) {
+    document.getElementById('obEmail').value = prefillEmail;
+}
+
+function goStep(n) {
+    if (n === 2) {
+        const name = document.getElementById('brandName').value.trim();
+        if (!name) { document.getElementById('brandName').focus(); return; }
+    }
+    if (n === 3) {
+        const c1 = document.getElementById('comp1').value.trim();
+        if (!c1) { document.getElementById('comp1').focus(); return; }
+    }
+
+    document.querySelectorAll('.ob-step').forEach(s => s.classList.remove('active'));
+    document.getElementById('obStep' + n).classList.add('active');
+
+    for (let i = 1; i <= 3; i++) {
+        document.getElementById('bar' + i).classList.toggle('done', i <= n);
+    }
+    window.scrollTo(0, 0);
+}
+
+function submitAndCheckout() {
+    const email = document.getElementById('obEmail').value.trim();
+    if (!email) { document.getElementById('obEmail').focus(); return; }
+
+    const brand = document.getElementById('brandName').value.trim();
+    const url = document.getElementById('brandUrl').value.trim();
+    const desc = document.getElementById('brandDesc').value.trim();
+    const comps = [
+        document.getElementById('comp1').value.trim(),
+        document.getElementById('comp2').value.trim(),
+        document.getElementById('comp3').value.trim(),
+        document.getElementById('compMore').value.trim()
+    ].filter(Boolean).join(', ');
+    const queries = document.getElementById('queries').value.trim();
+    const notes = document.getElementById('notes').value.trim();
+
+    const details = [
+        selectedTier.toUpperCase(),
+        'Brand: ' + brand,
+        url ? 'URL: ' + url : '',
+        desc ? 'Desc: ' + desc : '',
+        'Competitors: ' + comps,
+        queries ? 'Queries: ' + queries.replace(/\n/g, ' | ') : '',
+        notes ? 'Notes: ' + notes : ''
+    ].filter(Boolean).join(' // ');
+
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'Redirecting to checkout...';
+    btn.disabled = true;
+
+    // Log to spreadsheet
+    const p = new URLSearchParams({ contact: email, pricing: details });
+    fetch(SCRIPT_URL + '?' + p.toString(), { mode: 'no-cors' }).catch(() => {});
+
+    // Redirect to Stripe with prefilled email
+    const stripeUrl = STRIPE[selectedTier] || STRIPE.deepdive;
+    setTimeout(() => {
+        window.location.href = stripeUrl + '?prefilled_email=' + encodeURIComponent(email);
+    }, 400);
+}
+</script>
+
+</body>
+</html>
