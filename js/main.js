@@ -12,6 +12,7 @@ function send(email, data) {
 }
 
 function buyTier(tier) {
+    send('', 'funnel:tier-click:' + tier);
     window.location.href = 'onboarding/?tier=' + tier;
 }
 

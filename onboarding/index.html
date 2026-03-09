@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brand Details — Metricus</title>
+    <meta name="description" content="Tell us about your brand and competitors so we can build your AI visibility report.">
+    <!-- Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');</script>
+    <script>function gtag_report_conversion(url){var callback=function(){if(typeof(url)!='undefined'){}};gtag('event','conversion',{'send_to':'AW-970082336/043PCI3MocwBEKCQyc4D','event_callback':callback});return false;}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
@@ -44,7 +49,7 @@
         .field .hint { font-size: 0.72rem; color: var(--text-dim); margin-top: 4px; }
 
         .ob-nav { display: flex; gap: 10px; margin-top: 24px; }
-        .ob-nav .btn { flex: 1; }
+        .ob-nav .btn { flex: 1; padding: 14px 20px; font-size: 0.92rem; }
         .btn-back { background: transparent; border: 1px solid var(--border); color: var(--text-mid); cursor: pointer; padding: 10px 16px; border-radius: 8px; font-size: 0.85rem; font-family: inherit; }
         .btn-back:hover { border-color: var(--text-dim); color: var(--text-bright); }
 
@@ -52,6 +57,13 @@
 
         .checkout-note { font-size: 0.72rem; color: var(--text-dim); margin-top: 8px; text-align: center; }
         .checkout-note svg { width: 10px; height: 10px; fill: var(--text-dim); vertical-align: -1px; margin-right: 3px; }
+
+        .order-summary {
+            background: rgba(52,211,153,0.06); border: 1px solid rgba(52,211,153,0.15);
+            border-radius: 8px; padding: 10px 14px; margin-top: 16px; margin-bottom: -8px;
+            font-size: 0.78rem; color: var(--text); text-align: center; font-weight: 500;
+        }
+        .order-summary span { color: var(--text-bright); font-weight: 700; }
     </style>
 </head>
 <body>
@@ -86,7 +98,7 @@
         <div class="ob-step active" id="obStep1">
             <div class="step-count">Step 1 of 3</div>
             <h2>Your brand</h2>
-            <p class="step-desc">What's your company and what do you do?</p>
+            <p class="step-desc">Takes about 2 minutes. No credit card until the last step.</p>
 
             <div class="field">
                 <label>Brand / company name</label>
@@ -97,74 +109,64 @@
                 <input type="text" id="brandUrl" placeholder="e.g. acmecrm.com">
             </div>
             <div class="field">
-                <label>What does your product/service do? (one sentence)</label>
+                <label>What do you sell? (optional &mdash; we'll infer from your website if you skip)</label>
                 <input type="text" id="brandDesc" placeholder="e.g. CRM for small sales teams">
-                <div class="hint">This helps us pick the right queries to test.</div>
             </div>
 
             <div class="ob-nav">
-                <button class="btn btn-checkout" onclick="goStep(2)" style="flex:1;">Continue</button>
+                <button class="btn btn-checkout" onclick="goStep(2)" style="flex:1;">Continue &rarr;</button>
             </div>
+            <div class="checkout-note">We use this only to build your report. No spam.</div>
         </div>
 
         <!-- Step 2: Competitors -->
         <div class="ob-step" id="obStep2">
             <div class="step-count">Step 2 of 3</div>
             <h2>Your competitors</h2>
-            <p class="step-desc">Who are you competing with? We'll compare AI visibility head-to-head.</p>
+            <p class="step-desc">List any brands a buyer might compare you to &mdash; direct competitors or "good enough" alternatives.</p>
 
             <div class="field">
-                <label>Competitor 1</label>
-                <input type="text" id="comp1" placeholder="e.g. HubSpot">
-            </div>
-            <div class="field">
-                <label>Competitor 2</label>
-                <input type="text" id="comp2" placeholder="e.g. Salesforce">
-            </div>
-            <div class="field">
-                <label>Competitor 3</label>
-                <input type="text" id="comp3" placeholder="e.g. Pipedrive">
-            </div>
-            <div class="field">
-                <label>More competitors (optional)</label>
-                <input type="text" id="compMore" placeholder="e.g. Zoho, Monday CRM">
-                <div class="hint">Comma-separated. The more you list, the richer the comparison.</div>
+                <label>Competitors</label>
+                <textarea id="compAll" rows="3" placeholder="e.g. HubSpot, Salesforce, Pipedrive, Zoho"></textarea>
+                <div class="hint">Comma-separated or one per line. We don't contact competitors &mdash; this is used only for your report.</div>
             </div>
 
             <div class="ob-nav">
                 <button class="btn-back" onclick="goStep(1)">Back</button>
-                <button class="btn btn-checkout" onclick="goStep(3)" style="flex:1;">Continue</button>
+                <button class="btn btn-checkout" onclick="goStep(3)" style="flex:1;">Continue &rarr;</button>
             </div>
+            <div class="checkout-note"><a href="#" onclick="skipComps(event)" style="color:var(--primary);text-decoration:none;">Not sure? Skip &mdash; we'll run a category-level baseline.</a></div>
         </div>
 
         <!-- Step 3: Queries & checkout -->
         <div class="ob-step" id="obStep3">
             <div class="step-count">Step 3 of 3</div>
-            <h2>Target queries &amp; checkout</h2>
-            <p class="step-desc">What would your ideal customer ask AI? Then we'll take you to secure payment.</p>
+            <h2>Queries &amp; checkout</h2>
+            <p class="step-desc">Edit the suggested queries or leave as-is. We'll also generate more from your site.</p>
 
             <div class="field">
                 <label>Queries to test</label>
-                <textarea id="queries" placeholder="e.g.&#10;best CRM for small teams&#10;HubSpot vs alternatives&#10;what CRM should I use for a startup"></textarea>
-                <div class="hint">One per line. We'll also generate additional relevant queries based on your category.</div>
+                <textarea id="queries" rows="6"></textarea>
+                <div class="hint">Edit these or add your own. We'll generate additional queries based on your category.</div>
             </div>
             <div class="field">
                 <label>Email for report delivery</label>
                 <input type="email" id="obEmail" placeholder="you@company.com" required>
-                <div class="hint">Your report PDF will be sent here within 24 hours of payment.</div>
+                <div class="hint">Your report PDF will be sent here within 24 hours.</div>
             </div>
-            <div class="field">
-                <label>Anything else we should know? (optional)</label>
-                <input type="text" id="notes" placeholder="e.g. We just launched a new API, focus on developer queries">
+
+            <!-- Order summary -->
+            <div class="order-summary" id="orderSummary">
+                <span id="summaryTier">Deep Dive</span> &mdash; <span id="summaryPrice">$149</span> &middot; PDF in 24h &middot; Full refund if fewer than 3 actionable insights
             </div>
 
             <div class="ob-nav">
                 <button class="btn-back" onclick="goStep(2)">Back</button>
-                <button class="btn btn-checkout" onclick="submitAndCheckout()" style="flex:1;" id="submitBtn">Continue to payment &mdash; <span id="btnPrice">$149</span></button>
+                <button class="btn btn-checkout" onclick="submitAndCheckout()" style="flex:1;" id="submitBtn">Get your report &mdash; <span id="btnPrice">$149</span></button>
             </div>
             <div class="checkout-note">
                 <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z"/></svg>
-                Secure checkout via Stripe. 100% money-back guarantee.
+                Secure checkout via Stripe
             </div>
         </div>
     </div>
@@ -199,10 +201,23 @@ const info = TIER_INFO[selectedTier] || TIER_INFO.deepdive;
 document.getElementById('tierName').textContent = info.name;
 document.getElementById('tierPrice').textContent = info.price;
 document.getElementById('btnPrice').textContent = info.price;
+document.getElementById('summaryTier').textContent = info.name;
+document.getElementById('summaryPrice').textContent = info.price;
 
 // Prefill email if passed from hero form
 if (prefillEmail) {
     document.getElementById('obEmail').value = prefillEmail;
+}
+
+// Funnel: log onboarding page load with tier
+(function() {
+    const p = new URLSearchParams({ contact: prefillEmail || '', pricing: 'funnel:onboard-start:' + selectedTier });
+    fetch(SCRIPT_URL + '?' + p.toString(), { mode: 'no-cors' }).catch(() => {});
+})();
+
+function skipComps(e) {
+    e.preventDefault();
+    goStep(3);
 }
 
 function goStep(n) {
@@ -210,10 +225,33 @@ function goStep(n) {
         const name = document.getElementById('brandName').value.trim();
         if (!name) { document.getElementById('brandName').focus(); return; }
     }
+
+    // Auto-fill queries when entering step 3
     if (n === 3) {
-        const c1 = document.getElementById('comp1').value.trim();
-        if (!c1) { document.getElementById('comp1').focus(); return; }
+        const q = document.getElementById('queries');
+        if (!q.value.trim()) {
+            const brand = document.getElementById('brandName').value.trim() || '[Your brand]';
+            const comps = document.getElementById('compAll').value.trim();
+            const comp1 = comps ? comps.split(/[,\n]/)[0].trim() : '[Competitor]';
+            const desc = document.getElementById('brandDesc').value.trim();
+            const category = desc || 'your category';
+            q.value = [
+                'best ' + category,
+                brand + ' vs ' + comp1,
+                brand + ' pricing',
+                brand + ' alternatives',
+                'is ' + brand + ' good for ' + category,
+                brand + ' review',
+                comp1 + ' vs alternatives',
+                'best ' + category + ' for small teams'
+            ].join('\n');
+        }
     }
+
+    // Funnel: log step transition
+    const email = document.getElementById('obEmail').value.trim() || prefillEmail || '';
+    const pf = new URLSearchParams({ contact: email, pricing: 'funnel:onboard-step' + n + ':' + selectedTier });
+    fetch(SCRIPT_URL + '?' + pf.toString(), { mode: 'no-cors' }).catch(() => {});
 
     document.querySelectorAll('.ob-step').forEach(s => s.classList.remove('active'));
     document.getElementById('obStep' + n).classList.add('active');
@@ -231,23 +269,16 @@ function submitAndCheckout() {
     const brand = document.getElementById('brandName').value.trim();
     const url = document.getElementById('brandUrl').value.trim();
     const desc = document.getElementById('brandDesc').value.trim();
-    const comps = [
-        document.getElementById('comp1').value.trim(),
-        document.getElementById('comp2').value.trim(),
-        document.getElementById('comp3').value.trim(),
-        document.getElementById('compMore').value.trim()
-    ].filter(Boolean).join(', ');
+    const comps = document.getElementById('compAll').value.trim().replace(/\n/g, ', ');
     const queries = document.getElementById('queries').value.trim();
-    const notes = document.getElementById('notes').value.trim();
 
     const details = [
         selectedTier.toUpperCase(),
         'Brand: ' + brand,
         url ? 'URL: ' + url : '',
         desc ? 'Desc: ' + desc : '',
-        'Competitors: ' + comps,
-        queries ? 'Queries: ' + queries.replace(/\n/g, ' | ') : '',
-        notes ? 'Notes: ' + notes : ''
+        comps ? 'Competitors: ' + comps : '',
+        queries ? 'Queries: ' + queries.replace(/\n/g, ' | ') : ''
     ].filter(Boolean).join(' // ');
 
     const btn = document.getElementById('submitBtn');
@@ -257,6 +288,9 @@ function submitAndCheckout() {
     // Log to spreadsheet
     const p = new URLSearchParams({ contact: email, pricing: details });
     fetch(SCRIPT_URL + '?' + p.toString(), { mode: 'no-cors' }).catch(() => {});
+
+    // Fire Google Ads conversion
+    if (typeof gtag_report_conversion === 'function') gtag_report_conversion();
 
     // Redirect to Stripe with prefilled email
     const stripeUrl = STRIPE[selectedTier] || STRIPE.deepdive;

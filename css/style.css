@@ -111,13 +111,35 @@ header { padding: 16px 0; position: relative; z-index: 10; }
 .hero-form .btn { padding: 10px 20px; font-size: 0.82rem; border-radius: 8px; }
 .hero-note { font-size: 0.72rem; color: var(--text-dim); }
 
-/* -------- STATS -------- */
-.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border-radius: 12px; overflow: hidden; margin: 48px 0; }
-.stat { background: var(--bg-card-solid); padding: 20px 16px; text-align: center; }
-.stat-val { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.02em; }
-.stat-val.warn { color: var(--warning); }
-.stat-val.red { color: var(--danger-soft); }
-.stat-lbl { font-size: 0.7rem; color: var(--text-dim); margin-top: 2px; line-height: 1.35; }
+/* -------- PROOF BLOCK -------- */
+.proof-block {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center;
+    margin: 48px 0; padding: 28px; background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 14px;
+}
+.proof-list { list-style: none; padding: 0; margin: 8px 0 12px; }
+.proof-list li {
+    font-size: 0.85rem; color: var(--text); padding: 4px 0 4px 20px; position: relative; line-height: 1.5;
+}
+.proof-list li::before { content: "\2713"; position: absolute; left: 0; color: var(--accent); font-weight: 700; font-size: 0.78rem; }
+.proof-method { font-size: 0.68rem; color: var(--text-dim); border-top: 1px solid var(--border); padding-top: 10px; }
+.proof-right a { text-decoration: none; }
+.proof-report-card {
+    background: var(--bg-card-solid); border: 1px solid var(--border-strong); border-radius: 10px;
+    padding: 16px 18px; transition: border-color 0.2s, transform 0.2s;
+}
+.proof-report-card:hover { border-color: var(--primary-dim); transform: translateY(-2px); }
+.proof-report-badge { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary); margin-bottom: 2px; }
+.proof-report-title { font-size: 0.82rem; font-weight: 700; color: var(--text-bright); margin-bottom: 6px; }
+.proof-report-score { font-size: 1.6rem; font-weight: 900; color: var(--warning); letter-spacing: -0.02em; margin-bottom: 8px; }
+.proof-report-score span { font-size: 0.7rem; font-weight: 400; color: var(--text-dim); margin-left: 4px; }
+.proof-report-detail { font-size: 0.72rem; }
+.proof-row { display: flex; justify-content: space-between; padding: 3px 0; color: var(--text-dim); border-bottom: 1px solid var(--border); }
+.proof-row:last-child { border-bottom: none; }
+.proof-report-link { font-size: 0.72rem; color: var(--primary-bright); font-weight: 600; margin-top: 8px; }
+@media (max-width: 640px) {
+    .proof-block { grid-template-columns: 1fr; gap: 20px; }
+}
 
 /* -------- PAIN -------- */
 .pain { padding: 56px 0 48px; }
@@ -209,11 +231,14 @@ header { padding: 16px 0; position: relative; z-index: 10; }
     background: var(--accent); color: #000; padding: 3px 12px; border-radius: 4px;
 }
 .tier-name { font-size: 0.82rem; font-weight: 700; color: var(--text-bright); margin-bottom: 4px; }
-.tier-anchor { font-size: 0.78rem; color: var(--text-dim); }
+.tier-anchor { font-size: 0.78rem; color: var(--text-dim); display: none; }
 .tier-anchor s { color: #555; }
 .tier-price { font-size: 2.2rem; font-weight: 900; color: var(--text-bright); letter-spacing: -0.03em; margin: 4px 0 2px; }
 .tier-price span { font-size: 0.75rem; font-weight: 400; color: var(--text-dim); }
 .tier-promo { font-size: 0.65rem; font-weight: 600; color: var(--warning); margin-bottom: 16px; }
+.tier-desc { font-size: 0.72rem; color: var(--text-dim); margin-bottom: 16px; }
+.pricing-intro-note { font-size: 0.78rem; color: var(--warning); font-weight: 600; margin-bottom: 24px; }
+.pricing-after { font-size: 0.78rem; color: var(--text-dim); margin-top: 16px; }
 .tier-features { list-style: none; flex: 1; margin-bottom: 20px; }
 .tier-features li { font-size: 0.75rem; color: var(--text-dim); padding: 3px 0; display: flex; gap: 6px; }
 .tier-features li::before { content: "\2713"; color: var(--accent); font-weight: 700; font-size: 0.7rem; flex-shrink: 0; }
