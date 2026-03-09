@@ -520,13 +520,7 @@
 
     function send(email) {
         const p = new URLSearchParams({ contact: email, pricing: 'monthly' });
-        const url = SCRIPT_URL + '?' + p.toString();
-        // Use hidden iframe to avoid CORS issues while preserving query params
-        const iframe = document.createElement('iframe');
-        iframe.style.display = 'none';
-        iframe.src = url;
-        document.body.appendChild(iframe);
-        setTimeout(() => iframe.remove(), 10000);
+        fetch(SCRIPT_URL + '?' + p.toString(), { mode: 'no-cors' }).catch(() => {});
     }
 
     function heroSubmit(e) {
