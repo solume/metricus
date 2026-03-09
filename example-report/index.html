@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Report — Metricus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gate-wrap { position: relative; min-height: 100vh; overflow: hidden; }
+        .gate-bg {
+            position: absolute; top: 220px; left: 0; right: 0; padding: 0 24px;
+            filter: blur(6px); opacity: 0.25; pointer-events: none; user-select: none;
+            max-width: 680px; margin: 0 auto;
+        }
+        .gate-bg .fake-heading { height: 14px; width: 180px; background: rgba(255,255,255,0.08); border-radius: 4px; margin-bottom: 16px; }
+        .gate-bg .fake-score { font-size: 3rem; font-weight: 900; color: var(--warning); text-align: center; margin: 12px 0 8px; }
+        .gate-bg .fake-bar-wrap { margin-bottom: 6px; display: flex; align-items: center; gap: 10px; }
+        .gate-bg .fake-label { width: 80px; height: 8px; background: rgba(255,255,255,0.05); border-radius: 3px; }
+        .gate-bg .fake-track { flex: 1; height: 20px; background: rgba(255,255,255,0.03); border-radius: 4px; overflow: hidden; }
+        .gate-bg .fake-fill { height: 100%; border-radius: 4px; }
+        .gate-bg .fake-fill.f72 { width: 72%; background: rgba(255,255,255,0.1); }
+        .gate-bg .fake-fill.f41 { width: 41%; background: var(--primary); opacity: 0.5; }
+        .gate-bg .fake-fill.f38 { width: 38%; background: rgba(255,255,255,0.08); }
+        .gate-bg .fake-fill.f35 { width: 35%; background: rgba(255,255,255,0.07); }
+        .gate-bg .fake-text { height: 8px; background: rgba(255,255,255,0.04); border-radius: 3px; margin: 5px 0; }
+        .gate-bg .fake-text.w90 { width: 90%; } .gate-bg .fake-text.w70 { width: 70%; } .gate-bg .fake-text.w50 { width: 50%; }
+        .gate-bg .fake-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.04); border-radius: 8px; padding: 14px; margin-bottom: 8px; }
+
+        .gate {
+            position: relative; z-index: 2; text-align: center; padding: 56px 0 40px;
+            max-width: 440px; margin: 0 auto;
+        }
+        .gate h1 { font-size: 1.3rem; font-weight: 800; color: var(--text-bright); margin-bottom: 8px; }
+        .gate .gate-sub { font-size: 0.88rem; color: var(--text-dim); margin-bottom: 24px; }
+        .gate-form { display: flex; gap: 8px; }
+        .gate-form input { flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-strong); background: var(--bg-card-solid); color: var(--text-bright); font-size: 0.85rem; font-family: inherit; outline: none; }
+        .gate-form input:focus { border-color: var(--primary); }
+        .gate-hint { font-size: 0.72rem; color: var(--text-dim); margin-top: 8px; }
+        .gate-preview { margin-top: 28px; padding: 20px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-card); text-align: left; }
+        .gate-preview h3 { font-size: 0.82rem; font-weight: 600; color: var(--text-bright); margin-bottom: 8px; }
+        .gate-preview ul { font-size: 0.78rem; color: var(--text-dim); padding-left: 16px; line-height: 1.8; }
+        #reportContent { display: none; }
+        @media (max-width: 640px) { .gate-form { flex-direction: column; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="w-wide">
+        <div class="header-inner">
+            <a href="../" class="logo">
+                <div class="logo-icon">M</div>
+                metricus
+            </a>
+            <a href="../#pricing" class="btn btn-ghost header-cta">Get your report</a>
+        </div>
+    </div>
+</header>
+
+<!-- EMAIL GATE -->
+<div class="gate-wrap" id="emailGate">
+    <!-- Blurred fake report preview behind the gate -->
+    <div class="gate-bg">
+        <div style="text-align:center;"><div class="fake-score">41%</div><div class="fake-text w50" style="margin:0 auto 24px;"></div></div>
+        <div class="fake-heading"></div>
+        <div class="fake-bar-wrap"><div class="fake-label"></div><div class="fake-track"><div class="fake-fill f72"></div></div></div>
+        <div class="fake-bar-wrap"><div class="fake-label"></div><div class="fake-track"><div class="fake-fill f41"></div></div></div>
+        <div class="fake-bar-wrap"><div class="fake-label"></div><div class="fake-track"><div class="fake-fill f38"></div></div></div>
+        <div class="fake-bar-wrap"><div class="fake-label"></div><div class="fake-track"><div class="fake-fill f35"></div></div></div>
+        <div style="margin-top:24px;">
+            <div class="fake-heading"></div>
+            <div class="fake-card"><div class="fake-text w90"></div><div class="fake-text w70"></div></div>
+            <div class="fake-card"><div class="fake-text w90"></div><div class="fake-text w50"></div></div>
+            <div class="fake-card"><div class="fake-text w70"></div><div class="fake-text w90"></div></div>
+        </div>
+        <div style="margin-top:24px;">
+            <div class="fake-heading"></div>
+            <div class="fake-text w90"></div><div class="fake-text w70"></div><div class="fake-text w50"></div>
+            <div class="fake-text w90"></div><div class="fake-text w70"></div>
+        </div>
+    </div>
+
+    <div class="w">
+        <div class="gate">
+            <h1>See a real AI visibility report</h1>
+            <p class="gate-sub">Enter your work email to view our sample report for Bank of America's consumer banking division.</p>
+            <form class="gate-form" onsubmit="unlockReport(event)">
+                <input type="email" id="gateEmail" placeholder="you@company.com" required>
+                <button type="submit" class="btn btn-checkout">View report</button>
+            </form>
+            <p class="gate-hint">Free, instant access</p>
+
+            <div class="gate-preview">
+                <h3>What's inside:</h3>
+                <ul>
+                    <li>AI visibility score across 8 platforms</li>
+                    <li>Head-to-head competitor comparison (Chase, Wells Fargo, Capital One)</li>
+                    <li>Exact AI quotes — what ChatGPT, Claude, Perplexity say</li>
+                    <li>Accuracy audit — factual errors AI gets wrong</li>
+                    <li>Prioritized action plan to improve visibility</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FULL REPORT (hidden until email submitted) -->
+<div id="reportContent">
+<div class="w">
+    <div class="report-header">
+        <h1>AI Visibility Report: Bank of America</h1>
+        <div class="report-date">Sample Report &middot; March 2026</div>
+    </div>
+
+    <div class="report-banner">
+        This is a sample report. <a href="../#pricing">Get the real report for YOUR brand.</a>
+    </div>
+
+    <!-- ===== EXECUTIVE SUMMARY ===== -->
+    <div class="report-section">
+        <h2><span class="dot" style="background:var(--primary)"></span> Executive Summary</h2>
+        <div class="exec-summary">
+            <strong>Bank of America appears in 41% of AI-generated banking recommendations</strong> — behind Chase (72%) and ahead of Wells Fargo (38%). While ChatGPT and Perplexity consistently mention BofA, <strong>Gemini and Grok rarely recommend it for personal banking</strong>. AI frequently cites BofA's mobile app strength but <strong>incorrectly states there is no fee-free checking option</strong> (Advantage SafePass is fee-free with direct deposit). Additionally, AI overstates minimum balance requirements by 2-3x across platforms. Correcting these errors and strengthening content around key query clusters could push visibility above 60%.
+        </div>
+    </div>
+
+    <!-- ===== VISIBILITY SCORE ===== -->
+    <div class="report-section">
+        <h2><span class="dot" style="background:var(--warning)"></span> Visibility Score</h2>
+        <div class="score-overall">
+            <div class="score-num">41%</div>
+            <div class="score-label">Overall AI Visibility</div>
+            <div class="score-bar-bg">
+                <div class="score-bar-fill" style="width:41%; background: linear-gradient(90deg, var(--warning), var(--accent));"></div>
+            </div>
+        </div>
+
+        <table class="vis-table">
+            <thead>
+                <tr><th>AI Platform</th><th>Mentioned</th><th>Position</th><th>Sentiment</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>ChatGPT</td><td><span class="badge badge-green">Yes</span></td><td>2nd of 5</td><td><span class="badge badge-green">Positive</span></td></tr>
+                <tr><td>Claude</td><td><span class="badge badge-green">Yes</span></td><td>2nd of 4</td><td><span class="badge badge-green">Positive</span></td></tr>
+                <tr><td>Perplexity</td><td><span class="badge badge-green">Yes</span></td><td>3rd of 5</td><td><span class="badge badge-yellow">Neutral</span></td></tr>
+                <tr><td>Gemini</td><td><span class="badge badge-red">No</span></td><td>Not listed</td><td><span class="badge badge-dim">N/A</span></td></tr>
+                <tr><td>AI Overviews</td><td><span class="badge badge-green">Yes</span></td><td>3rd of 4</td><td><span class="badge badge-yellow">Neutral</span></td></tr>
+                <tr><td>Grok</td><td><span class="badge badge-red">No</span></td><td>Not listed</td><td><span class="badge badge-dim">N/A</span></td></tr>
+                <tr><td>DeepSeek</td><td><span class="badge badge-green">Yes</span></td><td>2nd of 6</td><td><span class="badge badge-green">Positive</span></td></tr>
+                <tr><td>Copilot</td><td><span class="badge badge-red">No</span></td><td>Not listed</td><td><span class="badge badge-dim">N/A</span></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ===== COMPETITOR COMPARISON ===== -->
+    <div class="report-section">
+        <h2><span class="dot" style="background:var(--accent)"></span> Competitor Comparison</h2>
+        <p style="font-size:0.82rem;color:var(--text-dim);margin-bottom:16px;">How often each brand appears in AI recommendations (across all queries and platforms):</p>
+
+        <div class="bar-row">
+            <div class="bar-label">Chase</div>
+            <div class="bar-track"><div class="bar-fill comp" style="width:72%;background:rgba(255,255,255,0.15);">72%</div></div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label" style="color:var(--primary-bright);font-weight:600;">Bank of America</div>
+            <div class="bar-track"><div class="bar-fill you" style="width:41%;">41%</div></div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Wells Fargo</div>
+            <div class="bar-track"><div class="bar-fill comp" style="width:38%;background:rgba(255,255,255,0.12);">38%</div></div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Capital One</div>
+            <div class="bar-track"><div class="bar-fill comp" style="width:35%;background:rgba(255,255,255,0.1);">35%</div></div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Citi</div>
+            <div class="bar-track"><div class="bar-fill comp" style="width:22%;background:rgba(255,255,255,0.08);">22%</div></div>
+        </div>
+    </div>
+
+    <!-- ===== QUERY BREAKDOWN ===== -->
+    <div class="report-section">
+        <h2><span class="dot" style="background:var(--primary)"></span> Query Breakdown</h2>
+        <p style="font-size:0.82rem;color:var(--text-dim);margin-bottom:16px;">BofA visibility by query type (% of responses that mention the brand):</p>
+
+        <table class="vis-table">
+            <thead>
+                <tr><th>Query</th><th>BofA Mentioned</th><th>#1 Result</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>"best bank for checking account"</td><td><strong style="color:var(--accent);">52%</strong></td><td>Chase</td></tr>
+                <tr><td>"best bank for savings 2026"</td><td><strong style="color:var(--warning);">31%</strong></td><td>Marcus (Goldman)</td></tr>
+                <tr><td>"best mobile banking app"</td><td><strong style="color:var(--accent);">67%</strong></td><td>Bank of America</td></tr>
+                <tr><td>"best bank for small business"</td><td><strong style="color:var(--danger);">18%</strong></td><td>Chase</td></tr>
+                <tr><td>"Chase vs Bank of America"</td><td><strong style="color:var(--accent);">94%</strong></td><td>Chase (favored)</td></tr>
+                <tr><td>"bank with lowest fees"</td><td><strong style="color:var(--danger);">12%</strong></td><td>Capital One</td></tr>
+                <tr><td>"best bank for young adults"</td><td><strong style="color:var(--warning);">29%</strong></td><td>Chase</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ===== EXACT AI QUOTES ===== -->
+    <div class="report-section">
+        <h2><span class="dot" style="background:var(--primary)"></span> What AI Says About Bank of America</h2>
+
+        <div class="quote-card">
+            <div class="engine">ChatGPT</div>
+            <blockquote>"For a full-service bank with excellent digital tools, <strong>Bank of America</strong> is a strong choice. Their mobile app consistently ranks among the best, and the Preferred Rewards program offers solid perks for customers with higher balances. However, their fee structure can be confusing for basic checking."</blockquote>
+        </div>
+        <div class="quote-card">
+            <div class="engine">Claude</div>
+            <blockquote>"<strong>Bank of America</strong> is well-suited for customers who want a large branch network combined with strong digital banking. Their Erica AI assistant is genuinely useful. The main downside: you'll likely pay monthly fees unless you maintain a minimum balance or have direct deposit set up."</blockquote>
+        </div>
+        <div class="quote-card">
+            <div class="engine">Perplexity</div>
+            <blockquote>"The best banks in 2026 include Chase for overall banking, Capital One 360 for no-fee accounts, and <strong>Bank of America</strong> for mobile banking and rewards. Marcus by Goldman Sachs leads for high-yield savings."</blockquote>
+        </div>
+        <div class="quote-card">
+            <div class="engine">Gemini</div>
+            <blockquote>"For personal banking, I'd recommend Chase for the most complete experience, Capital One for fee-free banking, or a credit union for the best rates. Wells Fargo and Citi are also solid options for those who need a national branch network." <em style="color:var(--danger-soft);">(BofA not mentioned)</em></blockquote>
+        </div>
+        <div class="quote-card">
+            <div class="engine">Grok</div>
+            <blockquote>"If you want a big bank, Chase is the obvious choice — best app, best rewards, biggest ATM network. For savings, look at online banks like Ally or Marcus. For no fees, Capital One 360 is unbeatable." <em style="color:var(--danger-soft);">(BofA not mentioned)</em></blockquote>
+        </div>
+    </div>
+
+    <!-- ===== ACCURACY AUDIT ===== -->
+    <div class="report-section">
+        <h2><span class="dot" style="background:var(--danger)"></span> Accuracy Audit — Errors Found</h2>
+
+        <table class="error-table">
+            <thead>
+                <tr><th>AI Claim</th><th>Reality</th><th>Severity</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>"No fee-free checking option"</td>
+                    <td>Advantage SafePass Checking is <strong style="color:var(--accent);">fee-free with direct deposit</strong></td>
+                    <td><span class="badge badge-red">HIGH</span></td>
+                </tr>
+                <tr>
+                    <td>"$1,500 minimum balance required"</td>
+                    <td>Advantage SafePass has <strong style="color:var(--accent);">no minimum balance</strong> with qualifying direct deposit</td>
+                    <td><span class="badge badge-red">HIGH</span></td>
+                </tr>
+                <tr>
+                    <td>"Limited to US branches only"</td>
+                    <td>Merrill Edge integration provides <strong style="color:var(--accent);">global investment access</strong></td>
+                    <td><span class="badge badge-yellow">MEDIUM</span></td>
+                </tr>
+                <tr>
+                    <td>"Savings rate of 0.01% APY"</td>
+                    <td>Current savings rate is <strong style="color:var(--accent);">0.04% APY</strong> (still low, but misquoted)</td>
+                    <td><span class="badge badge-yellow">LOW</span></td>
+                </tr>
+                <tr>
+                    <td>"No Zelle support"</td>
+                    <td>Zelle is <strong style="color:var(--accent);">fully integrated</strong> in the BofA mobile app since 2017</td>
+                    <td><span class="badge badge-red">HIGH</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ===== ACTION PLAN (partially locked) ===== -->
+    <div class="report-section">
+        <h2><span class="dot" style="background:var(--accent)"></span> Prioritized Action Plan</h2>
+
+        <div style="margin-bottom:16px;">
+            <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--border);">
+                <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">1.</span>
+                <div>
+                    <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Fix fee-free checking visibility</div>
+                    <div style="font-size:0.78rem;color:var(--text-dim);">AI universally claims BofA has no free checking. A dedicated landing page with Schema.org markup for Advantage SafePass would give AI crawlers the structured data they need.</div>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--border);">
+                <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">2.</span>
+                <div>
+                    <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Publish head-to-head comparison content vs. Chase</div>
+                    <div style="font-size:0.78rem;color:var(--text-dim);">In "Chase vs BofA" queries, Chase is favored 3:1. BofA's own comparison content is buried in marketing pages. A direct, factual comparison page would give AI balanced citation material.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Locked actions -->
+        <div class="locked" style="min-height:180px;">
+            <div class="locked-content">
+                <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--border);">
+                    <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">3.</span>
+                    <div>
+                        <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Create structured data for product lineup</div>
+                        <div style="font-size:0.78rem;color:var(--text-dim);">AI platforms pull outdated fee structures from third-party comparison sites. Adding JSON-LD to each product page would fix this at the source.</div>
+                    </div>
+                </div>
+                <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--border);">
+                    <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">4.</span>
+                    <div>
+                        <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Target "best bank for young adults" query cluster</div>
+                        <div style="font-size:0.78rem;color:var(--text-dim);">BofA has student products but AI never mentions them. This is a high-volume, low-competition query group.</div>
+                    </div>
+                </div>
+                <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;">
+                    <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">5.</span>
+                    <div>
+                        <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Address Gemini and Grok blind spots</div>
+                        <div style="font-size:0.78rem;color:var(--text-dim);">Two major platforms don't mention BofA at all. Specific content strategy to fix this.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="locked-overlay">
+                <p>Unlock the full action plan</p>
+                <a href="../#pricing" class="btn btn-checkout">Get your report — from $49</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== BOTTOM CTA ===== -->
+    <div style="text-align:center;padding:48px 0;">
+        <h2 style="font-size:1.3rem;font-weight:800;color:var(--text-bright);margin-bottom:8px;">This was a sample.</h2>
+        <p style="font-size:0.92rem;color:var(--text-dim);margin-bottom:20px;max-width:400px;margin-left:auto;margin-right:auto;">Get the real report for YOUR brand. Find out what AI says about you, what it gets wrong, and exactly what to fix.</p>
+        <a href="../#pricing" class="btn btn-checkout" style="padding:14px 32px;font-size:0.95rem;">Get your AI visibility report</a>
+        <div class="hero-note" style="margin-top:12px;">One-time purchase. From $49. Report in 24h.</div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="w">metricus &copy; 2026 &nbsp;&middot;&nbsp; <a href="mailto:hello@metricusapp.com">Contact</a> &nbsp;&middot;&nbsp; <a href="../privacy-policy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="../terms-of-service/">Terms</a> &nbsp;&middot;&nbsp; <a href="../support/">Support</a></div>
+</div>
+
+<script>
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlMZxJmAmm90HGKg6AJxEeB8xOP83Dyq4rUHnCD8aubV1NzPqb1ZlSbjzmBAnO63r2/exec';
+
+function unlockReport(e) {
+    e.preventDefault();
+    const email = document.getElementById('gateEmail').value.trim();
+    if (!email) return;
+
+    // Log to spreadsheet
+    const p = new URLSearchParams({ contact: email, pricing: 'sample-report-view' });
+    fetch(SCRIPT_URL + '?' + p.toString(), { mode: 'no-cors' }).catch(() => {});
+
+    // Show report
+    document.getElementById('emailGate').style.display = 'none';
+    document.getElementById('reportContent').style.display = 'block';
+    window.scrollTo(0, 0);
+}
+</script>
+
+</body>
+</html>
