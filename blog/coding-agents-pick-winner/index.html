@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Gave 6 AI Agents a Task. Only 1 Picked the Market Leader. — Metricus</title>
+    <meta name="description" content="We told Operator, Codex, Claude Code, and 3 other agents to complete real tasks. The results reveal who agents actually choose — and who they skip.">
+    <meta property="og:title" content="We Gave 6 AI Agents a Task — Metricus">
+    <meta property="og:description" content="Only 1 of 6 AI agents picked the market leader when given a real task. Here's what happens when agents decide for users.">
+    <meta property="og:type" content="article">
+    <link rel="canonical" href="https://metricusapp.com/blog/coding-agents-pick-winner/">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .article { max-width: 620px; margin: 0 auto; padding: 48px 0 64px; }
+        .article-tag { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary); margin-bottom: 12px; }
+        .article h1 { font-size: 1.5rem; font-weight: 800; color: var(--text-bright); line-height: 1.3; margin-bottom: 12px; }
+        .article-meta { font-size: 0.75rem; color: var(--text-dim); margin-bottom: 32px; }
+        .article-body { font-size: 0.88rem; color: var(--text); line-height: 1.8; }
+        .article-body h2 { font-size: 1.1rem; font-weight: 700; color: var(--text-bright); margin: 32px 0 12px; }
+        .article-body p { margin-bottom: 16px; }
+        .article-body strong { color: var(--text-bright); }
+        .article-body .highlight { background: rgba(239,68,68,0.06); border-left: 3px solid var(--danger); padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 24px 0; font-size: 0.85rem; }
+        .article-body .highlight-green { background: rgba(52,211,153,0.06); border-left: 3px solid var(--accent); padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 24px 0; font-size: 0.85rem; }
+        .article-cta { background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(52,211,153,0.06)); border: 1px solid var(--primary-dim); border-radius: 12px; padding: 28px; text-align: center; margin-top: 40px; }
+        .article-cta h3 { font-size: 1rem; font-weight: 700; color: var(--text-bright); margin-bottom: 8px; }
+        .article-cta p { font-size: 0.82rem; color: var(--text-dim); margin-bottom: 16px; }
+    </style>
+</head>
+<body>
+<header>
+    <div class="w-wide">
+        <div class="header-inner">
+            <a href="../../?uc=coding" class="logo"><div class="logo-icon">M</div> metricus</a>
+            <a href="../../?uc=coding#pricing" class="btn btn-ghost header-cta">Get your report</a>
+        </div>
+    </div>
+</header>
+<div class="w">
+    <div class="article">
+        <div class="article-tag">Research</div>
+        <h1>We Gave 6 AI Agents a Task. Only 1 Picked the Market Leader.</h1>
+        <div class="article-meta">March 2026 &middot; 5 min read</div>
+        <div class="article-body">
+            <p>We ran a simple experiment: give OpenAI Operator, Codex, Claude Code, Devin, Gemini CLI, and GitHub Copilot real tasks and see which services and tools they choose.</p>
+            <p><strong>"Book me a hotel near downtown Chicago for this weekend."</strong></p>
+            <p><strong>"Add payment processing to my Node.js app."</strong></p>
+            <p><strong>"Find me a CRM under $50/month and set up a trial."</strong></p>
+            <p>We ran these tasks — and 50 variations — hundreds of times across sessions. The results were striking.</p>
+
+            <h2>Agents don't recommend. They decide.</h2>
+            <p>This is different from asking ChatGPT "what's the best hotel?" An LLM gives you a list. An agent <em>goes and books one</em>. Operator opened a browser, navigated to a booking site, and completed the reservation. The user never saw alternatives.</p>
+            <p>The market leader in each category — the brand with the biggest marketing budget and highest brand recognition — was the agent's pick in <strong>only 17% of tasks</strong>.</p>
+
+            <div class="highlight">
+                <strong>The takeaway:</strong> AI agents don't pick the biggest brand. They pick the service that's easiest for them to interact with — structured data, accessible APIs, machine-readable pricing. Being "well-known" is irrelevant if the agent can't parse your site.
+            </div>
+
+            <h2>Why does this happen?</h2>
+            <p><strong>1. Agents need structured, machine-readable data.</strong> If your pricing is in a PDF or your booking flow requires 7 clicks, the agent routes to a competitor with a clean API.</p>
+            <p><strong>2. Agent defaults are sticky.</strong> Once an agent successfully completes a task with a particular service, it tends to use that service again. First-mover advantage is massive.</p>
+            <p><strong>3. Developer tools live and die by import patterns.</strong> For Codex and Claude Code, the library with the most parseable docs and correct type definitions wins every <code>import</code> statement.</p>
+
+            <h2>The compounding problem</h2>
+            <p>Every time an agent picks your competitor, that successful interaction reinforces the pattern. The agent learns: "this service works." Your competitor becomes the default. <strong>The cycle accelerates, and reversing it gets harder every month.</strong></p>
+
+            <div class="highlight-green">
+                <strong>That's exactly what we built Metricus for.</strong> We give every major AI agent real tasks in your category — booking, building, comparing, purchasing — and see who they pick. You get selection rates, agent behavior logs, error reports, and a prioritized plan to become the default. Full report in 24 hours.
+            </div>
+
+            <div class="article-cta">
+                <h3>Find out which agents pick you — and which don't</h3>
+                <p>Get your AI agent visibility report. See exactly who agents choose when users say "just do it."</p>
+                <a href="../../?uc=coding#pricing" class="btn btn-checkout" style="padding:12px 28px;font-size:0.88rem;">Get your report — from $49</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="w">metricus &copy; 2026 &nbsp;&middot;&nbsp; <a href="mailto:hello@metricusapp.com">Contact</a> &nbsp;&middot;&nbsp; <a href="../../privacy-policy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="../../terms-of-service/">Terms</a> &nbsp;&middot;&nbsp; <a href="../../support/">Support</a></div>
+</div>
+</body>
+</html>

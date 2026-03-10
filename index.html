@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metricus — AI Brand Visibility Monitoring</title>
-    <meta name="description" content="Find out what ChatGPT, Claude, Perplexity and 5 other AI platforms say about your brand. Get a full visibility report with scores, quotes, errors, and an action plan. Delivered in 24 hours.">
+    <title id="uc-meta-title">Metricus — AI Brand Visibility Monitoring</title>
+    <meta name="description" id="uc-meta-desc" content="">
     <link rel="canonical" href="https://metricusapp.com/">
-    <meta property="og:title" content="Metricus — AI Brand Visibility Monitoring">
-    <meta property="og:description" content="AI is telling your customers to buy from someone else. Find out what every major AI says about your brand — and how to fix it.">
+    <meta property="og:title" id="uc-og-title" content="">
+    <meta property="og:description" id="uc-og-desc" content="">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://metricusapp.com/">
     <meta property="og:site_name" content="Metricus">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Metricus — AI Brand Visibility Monitoring">
-    <meta name="twitter:description" content="AI is telling your customers to buy from someone else. Find out what every major AI says about your brand — and how to fix it.">
+    <meta name="twitter:title" id="uc-tw-title" content="">
+    <meta name="twitter:description" id="uc-tw-desc" content="">
     <!-- Google Tag Manager -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');</script>
@@ -31,7 +31,7 @@
                 <div class="logo-icon">M</div>
                 metricus
             </a>
-            <a href="example-report/" class="btn btn-ghost header-cta">See sample report</a>
+            <a id="uc-header-cta" href="example-report/" class="btn btn-ghost header-cta">See sample report</a>
         </div>
     </div>
 </header>
@@ -39,14 +39,16 @@
 <!-- ===== HERO ===== -->
 <div class="hero-wrap">
     <div class="w hero">
-        <div class="hero-eyebrow">Your competitors already know this</div>
-        <h1>Right now, AI is telling your customers to <em>buy from someone else.</em></h1>
-        <p class="subtitle">Every day, millions of people ask ChatGPT, Claude, and Perplexity for recommendations. <strong>If you're not in those answers, your competitors are getting those leads.</strong></p>
+        <div class="hero-eyebrow" id="uc-eyebrow"></div>
+        <h1 id="uc-hero-h1"></h1>
+        <p class="subtitle" id="uc-hero-subtitle"></p>
         <form class="hero-form" onsubmit="heroSubmit(event)">
             <input type="email" id="heroEmail" placeholder="you@company.com" required>
-            <button type="submit" class="btn btn-primary">Get your AI visibility report</button>
+            <button type="submit" class="btn btn-primary" id="uc-hero-cta"></button>
         </form>
-        <div class="hero-note">One-time purchase. Report in 24h. 100% money-back guarantee.</div>
+        <div class="hero-note" id="uc-hero-note"></div>
+        <!-- Trust bar -->
+        <div class="trust-bar" id="uc-trust-bar"></div>
     </div>
 </div>
 
@@ -54,27 +56,18 @@
 <div class="w">
     <div class="proof-block">
         <div class="proof-left">
-            <div class="section-label">What you get in 24 hours</div>
-            <ul class="proof-list">
-                <li>Visibility score across 8 AI engines</li>
-                <li>Exact quotes + errors (pricing, features, comparisons)</li>
-                <li>Head-to-head competitor ranking per platform</li>
-                <li>Top 5 prioritized actions to fix what AI says</li>
-            </ul>
-            <div class="proof-method">200+ queries per report &middot; 8 engines &middot; scored for mention rate, positioning &amp; citations</div>
+            <div class="section-label" id="uc-proof-label"></div>
+            <ul class="proof-list" id="uc-proof-list"></ul>
+            <div class="proof-method" id="uc-proof-method"></div>
         </div>
         <div class="proof-right">
-            <a href="example-report/">
+            <a id="uc-proof-link-wrap" href="example-report/">
                 <div class="proof-report-card">
-                    <div class="proof-report-badge">Sample Report</div>
-                    <div class="proof-report-title">Bank of America</div>
-                    <div class="proof-report-score">41%<span>visibility</span></div>
-                    <div class="proof-report-detail">
-                        <div class="proof-row"><span>ChatGPT</span><span style="color:var(--accent);">Mentioned — 2nd</span></div>
-                        <div class="proof-row"><span>Gemini</span><span style="color:var(--danger-soft);">Not mentioned</span></div>
-                        <div class="proof-row"><span>Errors found</span><span style="color:var(--warning);">5 factual errors</span></div>
-                    </div>
-                    <div class="proof-report-link">View full sample report &rarr;</div>
+                    <div class="proof-report-badge" id="uc-proof-badge"></div>
+                    <div class="proof-report-title" id="uc-proof-title"></div>
+                    <div class="proof-report-score" id="uc-proof-score"></div>
+                    <div class="proof-report-detail" id="uc-proof-detail"></div>
+                    <div class="proof-report-link" id="uc-proof-link-text"></div>
                 </div>
             </a>
         </div>
@@ -85,26 +78,9 @@
 <div class="w">
     <div class="pain">
         <div class="section-label" style="text-align:center;">The problem</div>
-        <h2>You're flying blind — <em>and losing deals daily</em></h2>
-        <p class="pain-sub">You spend thousands on SEO, content, and ads. But you have zero visibility into what AI tells your customers about you.</p>
-        <div class="pain-grid">
-            <div class="pain-card">
-                <h3>AI recommends your competitors</h3>
-                <p>"Best [your category]?" — AI lists 3 competitors. Not you. Every. Single. Time.</p>
-            </div>
-            <div class="pain-card">
-                <h3>AI gets your facts wrong</h3>
-                <p>Wrong pricing. Outdated features. False comparisons. Millions see it, you don't know.</p>
-            </div>
-            <div class="pain-card">
-                <h3>Your SEO strategy is outdated</h3>
-                <p>You're optimizing for Google. Your buyers already moved to ChatGPT.</p>
-            </div>
-            <div class="pain-card">
-                <h3>Every day costs you money</h3>
-                <p>AI adoption grows 1% month over month. Each week = more leads to competitors.</p>
-            </div>
-        </div>
+        <h2 id="uc-pain-h2"></h2>
+        <p class="pain-sub" id="uc-pain-sub"></p>
+        <div class="pain-grid" id="uc-pain-grid"></div>
     </div>
 </div>
 
@@ -112,22 +88,12 @@
 <div class="w">
     <div class="contrast">
         <div class="contrast-pain">
-            <div class="contrast-label">Every day you do nothing:</div>
-            <ul>
-                <li>AI trains on more data that doesn't mention you — the gap gets wider</li>
-                <li>Your competitors' content gets cited — yours doesn't</li>
-                <li>Buyers form opinions before they ever visit your website</li>
-                <li>The cost to fix it grows every month</li>
-            </ul>
+            <div class="contrast-label" id="uc-contrast-pain-label"></div>
+            <ul id="uc-contrast-pain-list"></ul>
         </div>
         <div class="contrast-dream">
-            <div class="contrast-label">After you fix it:</div>
-            <ul>
-                <li>AI recommends you by name when buyers ask</li>
-                <li>Your pricing and features are quoted correctly</li>
-                <li>You show up in head-to-head comparisons with competitors</li>
-                <li>Leads come in that never touched Google</li>
-            </ul>
+            <div class="contrast-label" id="uc-contrast-dream-label"></div>
+            <ul id="uc-contrast-dream-list"></ul>
         </div>
     </div>
 </div>
@@ -135,9 +101,9 @@
 <!-- ===== MID CTA ===== -->
 <div class="w">
     <div class="mid-cta">
-        <p><strong>Stop guessing.</strong> Know exactly what every major AI says about your brand — and how to fix it.</p>
-        <a href="#pricing" class="btn btn-primary" style="text-decoration:none;">Get your report — from $49</a>
-        <a href="example-report/" class="sample-link">See a sample report first &rarr;</a>
+        <p id="uc-mid-cta-text"></p>
+        <a href="#pricing" class="btn btn-primary" style="text-decoration:none;" id="uc-mid-cta-btn"></a>
+        <a id="uc-mid-cta-sample" href="example-report/" class="sample-link"></a>
     </div>
 </div>
 
@@ -147,109 +113,33 @@
 <div class="w">
     <div class="how">
         <div class="section-label" style="text-align:center;">How it works</div>
-        <h2>We monitor AI for you. You get a report.</h2>
-        <p class="how-sub">No dashboard to learn. No subscription. Pay once, get your report in 24 hours.</p>
-        <div class="steps">
-            <div class="step">
-                <div class="step-n">1</div>
-                <div>
-                    <h3>Tell us your brand &amp; competitors</h3>
-                    <p>Brand, website, 3-5 competitors, target queries. Takes 5 minutes.</p>
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-n">2</div>
-                <div>
-                    <h3>Our agents query every AI platform hundreds of times</h3>
-                    <p>AI is nondeterministic — we run hundreds of queries to find real patterns, not noise.</p>
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-n">3</div>
-                <div>
-                    <h3>You get a clear report with what to fix</h3>
-                    <p>In your inbox within 24h. Visibility scores, AI quotes, errors, and a prioritized action plan.</p>
-                </div>
-            </div>
-        </div>
+        <h2 id="uc-how-h2"></h2>
+        <p class="how-sub" id="uc-how-sub"></p>
+        <div class="steps" id="uc-steps"></div>
     </div>
 </div>
 
 <!-- ===== ENGINES ===== -->
 <div class="w">
     <div class="engines">
-        <p>All major AI platforms covered. No add-on fees.</p>
-        <div class="engines-row">
-            <span class="eng">ChatGPT</span>
-            <span class="eng">Claude</span>
-            <span class="eng">Perplexity</span>
-            <span class="eng">Gemini</span>
-            <span class="eng">AI Overviews</span>
-            <span class="eng">Grok</span>
-            <span class="eng">DeepSeek</span>
-            <span class="eng">Copilot</span>
-        </div>
+        <p id="uc-engines-text"></p>
+        <div class="engines-row" id="uc-engines-row"></div>
     </div>
 </div>
 
 <div class="w"><div class="divider"></div></div>
+
+<!-- ===== FEATURED TESTIMONIAL ===== -->
+<div class="w">
+    <div class="featured-testimonial" id="uc-featured-testimonial"></div>
+</div>
 
 <!-- ===== TESTIMONIALS ===== -->
 <div class="w-wide">
     <div class="testimonials">
         <div class="section-label" style="text-align:center;">What our clients say</div>
         <div class="testimonial-track-wrapper">
-            <div class="testimonial-track">
-                <div class="testimonial-card">
-                    <p>"ChatGPT was telling people our product was discontinued. We fixed the source and mentions went from 0 to 3 out of 5 engines in two weeks."</p>
-                    <div class="testimonial-author">Head of Marketing <span>Series B SaaS &middot; 120 employees</span></div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"Report found 9 factual errors across platforms. Within a week of fixing them, we started showing up in Claude's recommendations for our core query."</p>
-                    <div class="testimonial-author">VP Growth <span>E-commerce platform &middot; $8M ARR</span></div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"I asked my team to manually audit AI mentions. They spent 3 days and missed half of what this report caught in 24 hours."</p>
-                    <div class="testimonial-author">CEO <span>B2B fintech &middot; Series A</span></div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"Perplexity was recommending our competitor for every query in our category. After the fixes, we're in 4 out of 5 results."</p>
-                    <div class="testimonial-author">Director of SEO <span>Health tech &middot; 200 employees</span></div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"AI was quoting our pricing from 2022 — $99 instead of $29. The report flagged it with the exact source. Fixed in a day."</p>
-                    <div class="testimonial-author">Product Marketing Lead <span>Developer tools &middot; Series B</span></div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"Our board asked about AI visibility. This report gave us the data and a roadmap. Went from 15% to 52% visibility in 6 weeks."</p>
-                    <div class="testimonial-author">CMO <span>Series C marketplace &middot; $20M ARR</span></div>
-                </div>
-                <!-- Duplicate set for seamless loop -->
-                <div class="testimonial-card">
-                    <p>"ChatGPT was telling people our product was discontinued. We fixed the source and mentions went from 0 to 3 out of 5 engines in two weeks."</p>
-                    <div class="testimonial-author">Head of Marketing <span>Series B SaaS &middot; 120 employees</span></div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"Report found 9 factual errors across platforms. Within a week of fixing them, we started showing up in Claude's recommendations for our core query."</p>
-                    <div class="testimonial-author">VP Growth <span>E-commerce platform &middot; $8M ARR</span></div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"I asked my team to manually audit AI mentions. They spent 3 days and missed half of what this report caught in 24 hours."</p>
-                    <div class="testimonial-author">CEO <span>B2B fintech &middot; Series A</span></div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"Perplexity was recommending our competitor for every query in our category. After the fixes, we're in 4 out of 5 results."</p>
-                    <div class="testimonial-author">Director of SEO <span>Health tech &middot; 200 employees</span></div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"AI was quoting our pricing from 2022 — $99 instead of $29. The report flagged it with the exact source. Fixed in a day."</p>
-                    <div class="testimonial-author">Product Marketing Lead <span>Developer tools &middot; Series B</span></div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"Our board asked about AI visibility. This report gave us the data and a roadmap. Went from 15% to 52% visibility in 6 weeks."</p>
-                    <div class="testimonial-author">CMO <span>Series C marketplace &middot; $20M ARR</span></div>
-                </div>
-            </div>
+            <div class="testimonial-track" id="uc-testimonials"></div>
         </div>
     </div>
 </div>
@@ -260,72 +150,18 @@
 <div class="w-wide" id="pricing">
     <div class="pricing">
         <div class="section-label">Pricing</div>
-        <h2>Less than one lost deal.</h2>
-        <p class="pricing-sub">Companies spend $5,000+ on SEO consultants that don't cover AI at all. Get a complete AI visibility report for a fraction of that.</p>
-        <div class="pricing-intro-note">Intro pricing — limited to the first 50 reports at these rates.</div>
-
-        <div class="pricing-grid">
-            <!-- Tier 1: Snapshot -->
-            <div class="tier">
-                <div class="tier-name">Snapshot</div>
-                <div class="tier-price">$49</div>
-                <div class="tier-desc">Quick read on where you stand</div>
-                <ul class="tier-features">
-                    <li>3 AI engines (ChatGPT, Claude, Perplexity)</li>
-                    <li>5 target queries</li>
-                    <li>2 competitor comparison</li>
-                    <li>Visibility score</li>
-                    <li>Top AI quotes per engine</li>
-                    <li>Accuracy summary</li>
-                    <li class="no">Citation tracking</li>
-                    <li class="no">Prioritized action plan</li>
-                </ul>
-                <button class="btn btn-ghost" onclick="buyTier('snapshot')">Get Snapshot — $49</button>
-            </div>
-
-            <!-- Tier 2: Deep Dive (featured) -->
-            <div class="tier featured">
-                <div class="tier-badge">Most popular</div>
-                <div class="tier-name">Deep Dive</div>
-                <div class="tier-price">$149</div>
-                <div class="tier-desc">Full audit with action plan</div>
-                <ul class="tier-features">
-                    <li>All 8 AI engines</li>
-                    <li>20 target queries</li>
-                    <li>5 competitor comparison</li>
-                    <li>Visibility score</li>
-                    <li>All AI quotes captured</li>
-                    <li>Full accuracy audit</li>
-                    <li>Citation tracking</li>
-                    <li>Top 5 prioritized actions</li>
-                </ul>
-                <button class="btn btn-checkout" onclick="buyTier('deepdive')">Get Deep Dive — $149</button>
-            </div>
-
-            <!-- Tier 3: Full Arsenal -->
-            <div class="tier">
-                <div class="tier-name">Full Arsenal</div>
-                <div class="tier-price">$349</div>
-                <div class="tier-desc">Enterprise-grade with regional data</div>
-                <ul class="tier-features">
-                    <li>All 8 AI engines</li>
-                    <li>50 target queries</li>
-                    <li>10 competitor comparison</li>
-                    <li>Visibility score</li>
-                    <li>All AI quotes captured</li>
-                    <li>Full accuracy audit</li>
-                    <li>Citation tracking</li>
-                    <li>Unlimited prioritized actions</li>
-                    <li>Executive summary PDF</li>
-                    <li>Regional breakdown (US/EU/APAC)</li>
-                </ul>
-                <button class="btn btn-primary" onclick="buyTier('arsenal')">Get Full Arsenal — $349</button>
-            </div>
+        <h2 id="uc-pricing-h2"></h2>
+        <p class="pricing-sub" id="uc-pricing-sub"></p>
+        <div class="scarcity" id="uc-scarcity">
+            <div class="scarcity-dot"></div>
+            <span id="uc-scarcity-text"></span>
         </div>
+        <div class="pricing-intro-note" id="uc-pricing-intro-note" style="margin-top:12px;"></div>
 
-        <div class="pricing-after">Tell us your brand &rarr; we query 8 AI engines &rarr; report in your inbox within 24h.</div>
+        <div class="pricing-grid" id="uc-pricing-grid"></div>
 
-        <div class="pricing-guarantee"><strong>100% money-back guarantee:</strong> If your report doesn't surface at least 3 actionable insights, full refund. No questions asked.</div>
+        <div class="pricing-after" id="uc-pricing-after"></div>
+        <div class="pricing-guarantee" id="uc-pricing-guarantee"></div>
 
         <div class="price-lock" style="margin-top:12px;">
             <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z"/></svg>
@@ -334,23 +170,49 @@
     </div>
 </div>
 
-<!-- ===== FINAL CTA ===== -->
+<!-- ===== FAQ ===== -->
 <div class="w">
-    <div class="final">
-        <h2>Know what AI says about you. Fix it before your competitors do.</h2>
-        <p>Right now, someone is asking ChatGPT "what's the best [your category]?" — and your name may not be in the answer. Find out in 24 hours.</p>
-        <form class="hero-form" onsubmit="heroSubmit(event)" style="margin-bottom:12px;">
-            <input type="email" placeholder="you@company.com" required>
-            <button type="submit" class="btn btn-primary">Get your report</button>
-        </form>
-        <div class="hero-note">One-time purchase. From $49. Report in 24h.</div>
+    <div class="faq">
+        <h2>Frequently asked questions</h2>
+        <div id="uc-faq"></div>
     </div>
 </div>
 
-<div class="footer">
-    <div class="w">metricus &copy; 2026 &nbsp;&middot;&nbsp; <a href="mailto:hello@metricusapp.com">Contact</a> &nbsp;&middot;&nbsp; <a href="blog/">Blog</a> &nbsp;&middot;&nbsp; <a href="privacy-policy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="terms-of-service/">Terms</a> &nbsp;&middot;&nbsp; <a href="support/">Support</a></div>
+<div class="w"><div class="divider"></div></div>
+
+<!-- ===== BLOG TEASE ===== -->
+<div class="w-wide">
+    <div class="blog-tease">
+        <div class="section-label" style="text-align:center;">Research</div>
+        <h3>Read the data behind these claims</h3>
+        <div class="blog-tease-grid" id="uc-blog-tease"></div>
+    </div>
 </div>
 
+<!-- ===== FINAL CTA ===== -->
+<div class="w">
+    <div class="final">
+        <h2 id="uc-final-h2"></h2>
+        <p id="uc-final-p"></p>
+        <form class="hero-form" onsubmit="heroSubmit(event)" style="margin-bottom:12px;">
+            <input type="email" placeholder="you@company.com" required>
+            <button type="submit" class="btn btn-primary" id="uc-final-cta"></button>
+        </form>
+        <div class="hero-note" id="uc-final-note"></div>
+    </div>
+</div>
+
+<!-- ===== STICKY CTA ===== -->
+<div class="sticky-cta" id="sticky-cta">
+    <span class="sticky-cta-text" id="uc-sticky-text"></span>
+    <a href="#pricing" class="btn btn-checkout" style="text-decoration:none;" id="uc-sticky-btn"></a>
+</div>
+
+<div class="footer">
+    <div class="w">metricus &copy; 2026 &nbsp;&middot;&nbsp; <a href="mailto:hello@metricusapp.com">Contact</a> &nbsp;&middot;&nbsp; <a id="uc-footer-blog" href="blog/">Blog</a> &nbsp;&middot;&nbsp; <a href="privacy-policy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="terms-of-service/">Terms</a> &nbsp;&middot;&nbsp; <a href="support/">Support</a></div>
+</div>
+
+<script src="js/content.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
