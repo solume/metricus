@@ -246,7 +246,7 @@ coding: {
         { label: 'Errors found', value: '3 wrong details', color: 'var(--warning)' },
       ],
       link: 'View full sample report &rarr;',
-      href: 'example-report/',
+      href: 'example-report-agents/',
     },
   },
   pain: {
@@ -283,7 +283,7 @@ coding: {
     text: '<strong>Agents don\'t browse. They decide.</strong> Know whether Operator, Codex, and Claude Code choose you — or route users to your competitor.',
     btn: 'Get your report — from $49',
     sampleText: 'See a sample report first &rarr;',
-    sampleHref: 'example-report/',
+    sampleHref: 'example-report-agents/',
   },
   how: {
     h2: 'We give agents real tasks. You see who they pick.',
@@ -451,7 +451,7 @@ data: {
         { label: 'Quick wins', value: '4 immediate actions', color: 'var(--primary-bright)' },
       ],
       link: 'View full sample report &rarr;',
-      href: 'example-report/',
+      href: 'example-report-readiness/',
     },
   },
   pain: {
@@ -488,7 +488,7 @@ data: {
     text: '<strong>Stop guessing where to use agents.</strong> Get a concrete, prioritized roadmap based on your actual business — analyzed from the outside, delivered in 24 hours.',
     btn: 'Get your report — from $49',
     sampleText: 'See a sample report first &rarr;',
-    sampleHref: 'example-report/',
+    sampleHref: 'example-report-readiness/',
   },
   how: {
     h2: 'We analyze your business. You get a roadmap.',

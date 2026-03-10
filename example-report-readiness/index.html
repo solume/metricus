@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Report: Zendesk AI Agent Readiness — Metricus</title>
+    <meta name="description" content="See a real AI agent readiness report. Where Zendesk should deploy agents, what data they already have, and a prioritized implementation roadmap.">
+    <meta property="og:title" content="Sample Readiness Report: Zendesk — Metricus">
+    <meta property="og:type" content="article">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gate-wrap { position: relative; min-height: 100vh; overflow: hidden; }
+        .gate-bg {
+            position: absolute; top: 220px; left: 0; right: 0; padding: 0 24px;
+            filter: blur(6px); opacity: 0.25; pointer-events: none; user-select: none;
+            max-width: 680px; margin: 0 auto;
+        }
+        .gate-bg .fake-heading { height: 14px; width: 180px; background: rgba(255,255,255,0.08); border-radius: 4px; margin-bottom: 16px; }
+        .gate-bg .fake-score { font-size: 3rem; font-weight: 900; color: var(--accent); text-align: center; margin: 12px 0 8px; }
+        .gate-bg .fake-bar-wrap { margin-bottom: 6px; display: flex; align-items: center; gap: 10px; }
+        .gate-bg .fake-label { width: 80px; height: 8px; background: rgba(255,255,255,0.05); border-radius: 3px; }
+        .gate-bg .fake-track { flex: 1; height: 20px; background: rgba(255,255,255,0.03); border-radius: 4px; overflow: hidden; }
+        .gate-bg .fake-fill { height: 100%; border-radius: 4px; }
+        .gate-bg .fake-fill.f67 { width: 67%; background: var(--accent); opacity: 0.5; }
+        .gate-bg .fake-fill.f45 { width: 45%; background: rgba(255,255,255,0.1); }
+        .gate-bg .fake-fill.f80 { width: 80%; background: rgba(255,255,255,0.08); }
+        .gate-bg .fake-text { height: 8px; background: rgba(255,255,255,0.04); border-radius: 3px; margin: 5px 0; }
+        .gate-bg .fake-text.w90 { width: 90%; } .gate-bg .fake-text.w70 { width: 70%; } .gate-bg .fake-text.w50 { width: 50%; }
+        .gate-bg .fake-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.04); border-radius: 8px; padding: 14px; margin-bottom: 8px; }
+        .gate {
+            position: relative; z-index: 2; text-align: center; padding: 56px 0 40px;
+            max-width: 440px; margin: 0 auto;
+        }
+        .gate h1 { font-size: 1.3rem; font-weight: 800; color: var(--text-bright); margin-bottom: 8px; }
+        .gate .gate-sub { font-size: 0.88rem; color: var(--text-dim); margin-bottom: 24px; }
+        .gate-form { display: flex; gap: 8px; }
+        .gate-form input { flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-strong); background: var(--bg-card-solid); color: var(--text-bright); font-size: 0.85rem; font-family: inherit; outline: none; }
+        .gate-form input:focus { border-color: var(--primary); }
+        .gate-hint { font-size: 0.72rem; color: var(--text-dim); margin-top: 8px; }
+        .gate-preview { margin-top: 28px; padding: 20px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-card); text-align: left; }
+        .gate-preview h3 { font-size: 0.82rem; font-weight: 600; color: var(--text-bright); margin-bottom: 8px; }
+        .gate-preview ul { font-size: 0.78rem; color: var(--text-dim); padding-left: 16px; line-height: 1.8; }
+        #reportContent { display: none; }
+        .opp-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin-bottom: 10px; }
+        .opp-card h4 { font-size: 0.88rem; font-weight: 700; color: var(--text-bright); margin-bottom: 4px; }
+        .opp-card .opp-impact { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
+        .opp-card p { font-size: 0.78rem; color: var(--text-dim); margin: 0; }
+        @media (max-width: 640px) { .gate-form { flex-direction: column; } }
+    </style>
+</head>
+<body>
+<header>
+    <div class="w-wide">
+        <div class="header-inner">
+            <a href="../?uc=data" class="logo"><div class="logo-icon">M</div> metricus</a>
+            <a href="../?uc=data#pricing" class="btn btn-ghost header-cta">Get your report</a>
+        </div>
+    </div>
+</header>
+
+<div class="gate-wrap" id="emailGate">
+    <div class="gate-bg">
+        <div style="text-align:center;"><div class="fake-score">67%</div><div class="fake-text w50" style="margin:0 auto 24px;"></div></div>
+        <div class="fake-heading"></div>
+        <div class="fake-bar-wrap"><div class="fake-label"></div><div class="fake-track"><div class="fake-fill f80"></div></div></div>
+        <div class="fake-bar-wrap"><div class="fake-label"></div><div class="fake-track"><div class="fake-fill f67"></div></div></div>
+        <div class="fake-bar-wrap"><div class="fake-label"></div><div class="fake-track"><div class="fake-fill f45"></div></div></div>
+        <div style="margin-top:24px;">
+            <div class="fake-heading"></div>
+            <div class="fake-card"><div class="fake-text w90"></div><div class="fake-text w70"></div></div>
+            <div class="fake-card"><div class="fake-text w90"></div><div class="fake-text w50"></div></div>
+        </div>
+    </div>
+
+    <div class="w">
+        <div class="gate">
+            <h1>See a real AI agent readiness report</h1>
+            <p class="gate-sub">Enter your work email to view our sample report for Zendesk — where AI agents can have the highest impact.</p>
+            <form class="gate-form" onsubmit="unlockReport(event)">
+                <input type="email" id="gateEmail" placeholder="you@company.com" required>
+                <button type="submit" class="btn btn-checkout">View report</button>
+            </form>
+            <p class="gate-hint">Free, instant access</p>
+            <div class="gate-preview">
+                <h3>What's inside:</h3>
+                <ul>
+                    <li>Agent readiness score across 6 business areas</li>
+                    <li>Top 5 agent opportunities ranked by ROI</li>
+                    <li>Data inventory — what Zendesk already has that agents can use</li>
+                    <li>Quick wins — changes that deliver results in weeks</li>
+                    <li>Prioritized implementation roadmap</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="reportContent">
+<div class="w">
+    <div class="report-header">
+        <h1>AI Agent Readiness Report: Zendesk</h1>
+        <div class="report-date">Sample Report &middot; March 2026</div>
+    </div>
+    <div class="report-banner">
+        This is a sample report. <a href="../?uc=data#pricing">Get the real report for YOUR company.</a>
+    </div>
+
+    <div class="report-section">
+        <h2><span class="dot" style="background:var(--primary)"></span> Executive Summary</h2>
+        <div class="exec-summary">
+            <strong>Zendesk scores 67% on agent readiness</strong> — well above the average mid-size SaaS company (42%). Their biggest opportunity is internal support automation: Zendesk's own support ticket history contains 5+ years of structured Q&A data that could power a tier-1 support agent immediately. Secondary opportunities include sales follow-up automation (CRM data available via Salesforce integration) and internal knowledge retrieval (extensive Confluence documentation). <strong>Estimated annual savings from top 3 agent deployments: $840K.</strong>
+        </div>
+    </div>
+
+    <div class="report-section">
+        <h2><span class="dot" style="background:var(--accent)"></span> Readiness Score</h2>
+        <div class="score-overall">
+            <div class="score-num" style="color:var(--accent);">67%</div>
+            <div class="score-label">Overall Agent Readiness</div>
+            <div class="score-bar-bg">
+                <div class="score-bar-fill" style="width:67%; background: linear-gradient(90deg, var(--primary), var(--accent));"></div>
+            </div>
+        </div>
+
+        <table class="vis-table">
+            <thead>
+                <tr><th>Business Area</th><th>Readiness</th><th>Data Available</th><th>Opportunity</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Customer Support</td><td><span class="badge badge-green">High</span></td><td>5 years of tickets</td><td><span style="color:var(--accent);font-weight:600;">$420K/yr savings</span></td></tr>
+                <tr><td>Sales & CRM</td><td><span class="badge badge-yellow">Medium</span></td><td>Salesforce connected</td><td><span style="color:var(--accent);font-weight:600;">$240K/yr savings</span></td></tr>
+                <tr><td>Internal Knowledge</td><td><span class="badge badge-green">High</span></td><td>Confluence + Notion</td><td><span style="color:var(--accent);font-weight:600;">$180K/yr savings</span></td></tr>
+                <tr><td>Marketing & Content</td><td><span class="badge badge-yellow">Medium</span></td><td>Blog + help center</td><td><span style="color:var(--warning);font-weight:600;">$95K/yr savings</span></td></tr>
+                <tr><td>Engineering Ops</td><td><span class="badge badge-yellow">Medium</span></td><td>Jira + GitHub</td><td><span style="color:var(--warning);font-weight:600;">$110K/yr savings</span></td></tr>
+                <tr><td>Finance & Admin</td><td><span class="badge badge-red">Low</span></td><td>Limited structure</td><td><span style="color:var(--text-dim);font-weight:600;">$45K/yr savings</span></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="report-section">
+        <h2><span class="dot" style="background:var(--accent)"></span> Top Agent Opportunities</h2>
+
+        <div class="opp-card">
+            <div class="opp-impact" style="color:var(--accent);">High impact · Quick win</div>
+            <h4>1. Tier-1 Support Ticket Automation</h4>
+            <p>Zendesk's own ticket history (200K+ resolved tickets) is perfectly structured for a support agent. An AI agent could auto-resolve 40-50% of tier-1 tickets using existing knowledge base articles and past resolution patterns. Estimated savings: 8 FTE hours/day.</p>
+        </div>
+        <div class="opp-card">
+            <div class="opp-impact" style="color:var(--accent);">High impact · 2-4 weeks</div>
+            <h4>2. Sales Follow-Up Automation</h4>
+            <p>Salesforce CRM data shows average 3.2 day delay on follow-ups after demos. An agent connected to CRM + calendar could auto-draft personalized follow-ups within 2 hours of every demo, pulling in discussed features and pricing from call notes.</p>
+        </div>
+        <div class="opp-card">
+            <div class="opp-impact" style="color:var(--warning);">Medium impact · Quick win</div>
+            <h4>3. Internal Knowledge Retrieval</h4>
+            <p>Engineering and support teams spend ~8 hours/week searching Confluence and Notion for internal docs. An agent with access to both could answer "how do we handle X?" questions instantly, sourced from actual documentation.</p>
+        </div>
+    </div>
+
+    <div class="report-section">
+        <h2><span class="dot" style="background:var(--primary)"></span> Data You Already Have</h2>
+        <table class="vis-table">
+            <thead>
+                <tr><th>Data Source</th><th>Format</th><th>Agent-Ready?</th><th>Use For</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Zendesk tickets (own product)</td><td>Structured API</td><td><span class="badge badge-green">Yes</span></td><td>Support agent training</td></tr>
+                <tr><td>Salesforce CRM</td><td>API + exports</td><td><span class="badge badge-green">Yes</span></td><td>Sales follow-up agent</td></tr>
+                <tr><td>Confluence docs</td><td>Semi-structured</td><td><span class="badge badge-yellow">Partial</span></td><td>Knowledge retrieval</td></tr>
+                <tr><td>Help center articles</td><td>Structured HTML</td><td><span class="badge badge-green">Yes</span></td><td>Customer self-service agent</td></tr>
+                <tr><td>Jira tickets</td><td>API</td><td><span class="badge badge-green">Yes</span></td><td>Engineering ops agent</td></tr>
+                <tr><td>Slack history</td><td>Unstructured</td><td><span class="badge badge-red">No</span></td><td>Needs processing first</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="report-section">
+        <h2><span class="dot" style="background:var(--accent)"></span> Implementation Roadmap</h2>
+        <div style="margin-bottom:16px;">
+            <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--border);">
+                <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">Week 1-2</span>
+                <div>
+                    <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Deploy tier-1 support agent</div>
+                    <div style="font-size:0.78rem;color:var(--text-dim);">Connect to existing ticket history + knowledge base. Start with auto-suggested responses (human-in-the-loop). Estimated 30% of tier-1 tickets auto-resolved within 2 weeks.</div>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--border);">
+                <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">Week 3-4</span>
+                <div>
+                    <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Launch sales follow-up automation</div>
+                    <div style="font-size:0.78rem;color:var(--text-dim);">Connect Salesforce CRM to agent. Auto-draft follow-ups after demos using call notes and CRM data. Reduces follow-up time from 3.2 days to 2 hours.</div>
+                </div>
+            </div>
+        </div>
+        <div class="locked" style="min-height:140px;">
+            <div class="locked-content">
+                <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--border);">
+                    <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">Month 2</span>
+                    <div><div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Internal knowledge agent + Confluence integration</div><div style="font-size:0.78rem;color:var(--text-dim);">Full roadmap with tool recommendations and integration specs.</div></div>
+                </div>
+                <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;">
+                    <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">Month 3</span>
+                    <div><div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Engineering ops + marketing content agents</div><div style="font-size:0.78rem;color:var(--text-dim);">Expansion plan with ROI tracking framework.</div></div>
+                </div>
+            </div>
+            <div class="locked-overlay">
+                <p>Unlock the full roadmap</p>
+                <a href="../?uc=data#pricing" class="btn btn-checkout">Get your report — from $49</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align:center;padding:48px 0;">
+        <h2 style="font-size:1.3rem;font-weight:800;color:var(--text-bright);margin-bottom:8px;">This was a sample.</h2>
+        <p style="font-size:0.92rem;color:var(--text-dim);margin-bottom:20px;max-width:400px;margin-left:auto;margin-right:auto;">Get the real report for YOUR company. Find out where AI agents will have the highest impact — and exactly where to start.</p>
+        <a href="../?uc=data#pricing" class="btn btn-checkout" style="padding:14px 32px;font-size:0.95rem;">Get your readiness report</a>
+        <div class="hero-note" style="margin-top:12px;">One-time purchase. From $49. Report in 24h.</div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="w">metricus &copy; 2026 &nbsp;&middot;&nbsp; <a href="mailto:hello@metricusapp.com">Contact</a> &nbsp;&middot;&nbsp; <a href="../privacy-policy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="../terms-of-service/">Terms</a> &nbsp;&middot;&nbsp; <a href="../support/">Support</a></div>
+</div>
+
+<script>
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlMZxJmAmm90HGKg6AJxEeB8xOP83Dyq4rUHnCD8aubV1NzPqb1ZlSbjzmBAnO63r2/exec';
+function unlockReport(e) {
+    e.preventDefault();
+    const email = document.getElementById('gateEmail').value.trim();
+    if (!email) return;
+    const p = new URLSearchParams({ contact: email, pricing: 'sample-report-readiness', uc: 'data' });
+    fetch(SCRIPT_URL + '?' + p.toString(), { mode: 'no-cors' }).catch(() => {});
+    document.getElementById('emailGate').style.display = 'none';
+    document.getElementById('reportContent').style.display = 'block';
+    window.scrollTo(0, 0);
+}
+</script>
+</body>
+</html>
