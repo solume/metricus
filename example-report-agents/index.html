@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Report: Kayak AI Agent Visibility — Metricus</title>
+    <meta name="description" content="See a real AI agent visibility report. How Kayak scores when Operator, Codex, and other AI agents are given travel and booking tasks.">
+    <meta property="og:title" content="Sample AI Agent Report: Kayak — Metricus">
+    <meta property="og:type" content="article">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gate-wrap { position: relative; min-height: 100vh; overflow: hidden; }
+        .gate-bg {
+            position: absolute; top: 220px; left: 0; right: 0; padding: 0 24px;
+            filter: blur(6px); opacity: 0.25; pointer-events: none; user-select: none;
+            max-width: 680px; margin: 0 auto;
+        }
+        .gate-bg .fake-heading { height: 14px; width: 180px; background: rgba(255,255,255,0.08); border-radius: 4px; margin-bottom: 16px; }
+        .gate-bg .fake-score { font-size: 3rem; font-weight: 900; color: var(--danger); text-align: center; margin: 12px 0 8px; }
+        .gate-bg .fake-bar-wrap { margin-bottom: 6px; display: flex; align-items: center; gap: 10px; }
+        .gate-bg .fake-label { width: 80px; height: 8px; background: rgba(255,255,255,0.05); border-radius: 3px; }
+        .gate-bg .fake-track { flex: 1; height: 20px; background: rgba(255,255,255,0.03); border-radius: 4px; overflow: hidden; }
+        .gate-bg .fake-fill { height: 100%; border-radius: 4px; }
+        .gate-bg .fake-fill.f65 { width: 65%; background: rgba(255,255,255,0.1); }
+        .gate-bg .fake-fill.f22 { width: 22%; background: var(--danger); opacity: 0.5; }
+        .gate-bg .fake-fill.f48 { width: 48%; background: rgba(255,255,255,0.08); }
+        .gate-bg .fake-text { height: 8px; background: rgba(255,255,255,0.04); border-radius: 3px; margin: 5px 0; }
+        .gate-bg .fake-text.w90 { width: 90%; } .gate-bg .fake-text.w70 { width: 70%; } .gate-bg .fake-text.w50 { width: 50%; }
+        .gate-bg .fake-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.04); border-radius: 8px; padding: 14px; margin-bottom: 8px; }
+        .gate {
+            position: relative; z-index: 2; text-align: center; padding: 56px 0 40px;
+            max-width: 440px; margin: 0 auto;
+        }
+        .gate h1 { font-size: 1.3rem; font-weight: 800; color: var(--text-bright); margin-bottom: 8px; }
+        .gate .gate-sub { font-size: 0.88rem; color: var(--text-dim); margin-bottom: 24px; }
+        .gate-form { display: flex; gap: 8px; }
+        .gate-form input { flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-strong); background: var(--bg-card-solid); color: var(--text-bright); font-size: 0.85rem; font-family: inherit; outline: none; }
+        .gate-form input:focus { border-color: var(--primary); }
+        .gate-hint { font-size: 0.72rem; color: var(--text-dim); margin-top: 8px; }
+        .gate-preview { margin-top: 28px; padding: 20px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-card); text-align: left; }
+        .gate-preview h3 { font-size: 0.82rem; font-weight: 600; color: var(--text-bright); margin-bottom: 8px; }
+        .gate-preview ul { font-size: 0.78rem; color: var(--text-dim); padding-left: 16px; line-height: 1.8; }
+        #reportContent { display: none; }
+        @media (max-width: 640px) { .gate-form { flex-direction: column; } }
+    </style>
+</head>
+<body>
+<header>
+    <div class="w-wide">
+        <div class="header-inner">
+            <a href="../?uc=coding" class="logo"><div class="logo-icon">M</div> metricus</a>
+            <a href="../?uc=coding#pricing" class="btn btn-ghost header-cta">Get your report</a>
+        </div>
+    </div>
+</header>
+
+<div class="gate-wrap" id="emailGate">
+    <div class="gate-bg">
+        <div style="text-align:center;"><div class="fake-score">22%</div><div class="fake-text w50" style="margin:0 auto 24px;"></div></div>
+        <div class="fake-heading"></div>
+        <div class="fake-bar-wrap"><div class="fake-label"></div><div class="fake-track"><div class="fake-fill f65"></div></div></div>
+        <div class="fake-bar-wrap"><div class="fake-label"></div><div class="fake-track"><div class="fake-fill f22"></div></div></div>
+        <div class="fake-bar-wrap"><div class="fake-label"></div><div class="fake-track"><div class="fake-fill f48"></div></div></div>
+        <div style="margin-top:24px;">
+            <div class="fake-heading"></div>
+            <div class="fake-card"><div class="fake-text w90"></div><div class="fake-text w70"></div></div>
+            <div class="fake-card"><div class="fake-text w90"></div><div class="fake-text w50"></div></div>
+        </div>
+    </div>
+
+    <div class="w">
+        <div class="gate">
+            <h1>See a real AI agent visibility report</h1>
+            <p class="gate-sub">Enter your work email to view our sample report for Kayak — how AI agents handle travel and booking tasks.</p>
+            <form class="gate-form" onsubmit="unlockReport(event)">
+                <input type="email" id="gateEmail" placeholder="you@company.com" required>
+                <button type="submit" class="btn btn-checkout">View report</button>
+            </form>
+            <p class="gate-hint">Free, instant access</p>
+            <div class="gate-preview">
+                <h3>What's inside:</h3>
+                <ul>
+                    <li>Agent selection rate across 6 autonomous AI agents</li>
+                    <li>Task-by-task breakdown — which agent picks Kayak vs. competitors</li>
+                    <li>Agent behavior logs — how Operator, Codex, and others navigate</li>
+                    <li>Accuracy audit — wrong prices, outdated info agents act on</li>
+                    <li>Prioritized action plan to become the agent's default pick</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="reportContent">
+<div class="w">
+    <div class="report-header">
+        <h1>AI Agent Visibility Report: Kayak</h1>
+        <div class="report-date">Sample Report &middot; March 2026</div>
+    </div>
+    <div class="report-banner">
+        This is a sample report. <a href="../?uc=coding#pricing">Get the real report for YOUR business.</a>
+    </div>
+
+    <div class="report-section">
+        <h2><span class="dot" style="background:var(--primary)"></span> Executive Summary</h2>
+        <div class="exec-summary">
+            <strong>Kayak is selected by AI agents in only 22% of travel-related tasks</strong> — behind Booking.com (61%) and Expedia (45%). When users tell Operator to "book a hotel" or "find a flight," the agent bypasses Kayak in most cases because competitors have simpler booking flows and better structured data. Codex and Claude Code do reference Kayak's API for developer tasks, but <strong>Operator and Devin route directly to competitors</strong> for end-user booking tasks. Kayak's meta-search model (redirecting to other sites) creates friction that agents avoid.
+        </div>
+    </div>
+
+    <div class="report-section">
+        <h2><span class="dot" style="background:var(--danger)"></span> Agent Selection Rate</h2>
+        <div class="score-overall">
+            <div class="score-num" style="color:var(--danger);">22%</div>
+            <div class="score-label">Overall Agent Selection Rate</div>
+            <div class="score-bar-bg">
+                <div class="score-bar-fill" style="width:22%; background: linear-gradient(90deg, var(--danger), var(--warning));"></div>
+            </div>
+        </div>
+
+        <table class="vis-table">
+            <thead>
+                <tr><th>AI Agent</th><th>Selects Kayak?</th><th>Default Pick</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Operator</td><td><span class="badge badge-red">No</span></td><td>Booking.com</td><td>Avoids meta-search redirect flow</td></tr>
+                <tr><td>Codex</td><td><span class="badge badge-green">Yes</span></td><td>Kayak API</td><td>Uses API for flight search code</td></tr>
+                <tr><td>Claude Code</td><td><span class="badge badge-green">Yes</span></td><td>Kayak API</td><td>References API in travel integrations</td></tr>
+                <tr><td>Devin</td><td><span class="badge badge-red">No</span></td><td>Expedia</td><td>Prefers direct booking capability</td></tr>
+                <tr><td>Gemini CLI</td><td><span class="badge badge-yellow">Sometimes</span></td><td>Google Flights</td><td>Defaults to Google's own product</td></tr>
+                <tr><td>Copilot</td><td><span class="badge badge-red">No</span></td><td>Booking.com</td><td>Follows Operator-like patterns</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="report-section">
+        <h2><span class="dot" style="background:var(--accent)"></span> Competitor Comparison</h2>
+        <p style="font-size:0.82rem;color:var(--text-dim);margin-bottom:16px;">How often each service is selected by AI agents across all travel tasks:</p>
+        <div class="bar-row">
+            <div class="bar-label">Booking.com</div>
+            <div class="bar-track"><div class="bar-fill comp" style="width:61%;background:rgba(255,255,255,0.15);">61%</div></div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Expedia</div>
+            <div class="bar-track"><div class="bar-fill comp" style="width:45%;background:rgba(255,255,255,0.12);">45%</div></div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Google Flights</div>
+            <div class="bar-track"><div class="bar-fill comp" style="width:38%;background:rgba(255,255,255,0.1);">38%</div></div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label" style="color:var(--primary-bright);font-weight:600;">Kayak</div>
+            <div class="bar-track"><div class="bar-fill you" style="width:22%;">22%</div></div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Hopper</div>
+            <div class="bar-track"><div class="bar-fill comp" style="width:12%;background:rgba(255,255,255,0.06);">12%</div></div>
+        </div>
+    </div>
+
+    <div class="report-section">
+        <h2><span class="dot" style="background:var(--primary)"></span> Agent Behavior Log — Sample Task</h2>
+        <div class="quote-card">
+            <div class="engine">Operator — "Book me a hotel in Chicago under $200/night"</div>
+            <blockquote>
+                1. Opens Google, searches "hotels in Chicago"<br>
+                2. Clicks Booking.com (first result with direct booking)<br>
+                3. Filters by price &lt; $200, sorts by rating<br>
+                4. Selects Hampton Inn Downtown for $179/night<br>
+                5. Proceeds to booking — <strong>never visits Kayak</strong><br>
+                <em style="color:var(--danger-soft);">Kayak's meta-search model means Operator would need an extra redirect step. It avoids this friction entirely.</em>
+            </blockquote>
+        </div>
+        <div class="quote-card">
+            <div class="engine">Codex — "Add flight search to my Node.js travel app"</div>
+            <blockquote>
+                1. Imports kayak-api package<br>
+                2. Sets up flight search endpoint using Kayak's API<br>
+                3. <strong>Kayak is the first choice</strong> for programmatic flight search<br>
+                <em style="color:var(--accent);">Kayak's developer API is well-documented and Codex defaults to it for code-level integrations.</em>
+            </blockquote>
+        </div>
+    </div>
+
+    <div class="report-section">
+        <h2><span class="dot" style="background:var(--danger)"></span> Accuracy Issues Found</h2>
+        <table class="error-table">
+            <thead>
+                <tr><th>Agent Behavior</th><th>Issue</th><th>Impact</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Operator quotes Kayak prices from cached data</td>
+                    <td>Prices shown are <strong style="color:var(--danger-soft);">12-48 hours stale</strong></td>
+                    <td><span class="badge badge-red">HIGH</span></td>
+                </tr>
+                <tr>
+                    <td>Devin lists Kayak as "booking site"</td>
+                    <td>Kayak is meta-search — <strong style="color:var(--danger-soft);">doesn't complete bookings directly</strong></td>
+                    <td><span class="badge badge-yellow">MEDIUM</span></td>
+                </tr>
+                <tr>
+                    <td>Claude Code generates deprecated API calls</td>
+                    <td>Uses v1 endpoints that <strong style="color:var(--danger-soft);">return 404 errors</strong></td>
+                    <td><span class="badge badge-red">HIGH</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="report-section">
+        <h2><span class="dot" style="background:var(--accent)"></span> Prioritized Action Plan</h2>
+        <div style="margin-bottom:16px;">
+            <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--border);">
+                <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">1.</span>
+                <div>
+                    <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Add direct booking completion for agent flows</div>
+                    <div style="font-size:0.78rem;color:var(--text-dim);">Agents avoid Kayak because the meta-search redirect creates friction. An agent-friendly booking endpoint that completes without redirect would dramatically increase selection rate.</div>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--border);">
+                <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">2.</span>
+                <div>
+                    <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Serve real-time pricing via structured data</div>
+                    <div style="font-size:0.78rem;color:var(--text-dim);">Agents are using stale price data because Kayak's prices are dynamically loaded. Adding JSON-LD with real-time pricing would fix accuracy across all agents.</div>
+                </div>
+            </div>
+        </div>
+        <div class="locked" style="min-height:140px;">
+            <div class="locked-content">
+                <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--border);">
+                    <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">3.</span>
+                    <div><div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Update API docs for v2 endpoints</div><div style="font-size:0.78rem;color:var(--text-dim);">Codex and Claude Code generate deprecated v1 calls. Updated docs with v2 examples would fix this.</div></div>
+                </div>
+                <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;">
+                    <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">4.</span>
+                    <div><div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Create agent-specific landing flow</div><div style="font-size:0.78rem;color:var(--text-dim);">A simplified, agent-parseable booking path optimized for automated navigation.</div></div>
+                </div>
+            </div>
+            <div class="locked-overlay">
+                <p>Unlock the full action plan</p>
+                <a href="../?uc=coding#pricing" class="btn btn-checkout">Get your report — from $49</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align:center;padding:48px 0;">
+        <h2 style="font-size:1.3rem;font-weight:800;color:var(--text-bright);margin-bottom:8px;">This was a sample.</h2>
+        <p style="font-size:0.92rem;color:var(--text-dim);margin-bottom:20px;max-width:400px;margin-left:auto;margin-right:auto;">Get the real report for YOUR business. Find out which AI agents pick you, which skip you, and exactly what to fix.</p>
+        <a href="../?uc=coding#pricing" class="btn btn-checkout" style="padding:14px 32px;font-size:0.95rem;">Get your agent visibility report</a>
+        <div class="hero-note" style="margin-top:12px;">One-time purchase. From $49. Report in 24h.</div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="w">metricus &copy; 2026 &nbsp;&middot;&nbsp; <a href="mailto:hello@metricusapp.com">Contact</a> &nbsp;&middot;&nbsp; <a href="../privacy-policy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="../terms-of-service/">Terms</a> &nbsp;&middot;&nbsp; <a href="../support/">Support</a></div>
+</div>
+
+<script>
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlMZxJmAmm90HGKg6AJxEeB8xOP83Dyq4rUHnCD8aubV1NzPqb1ZlSbjzmBAnO63r2/exec';
+function unlockReport(e) {
+    e.preventDefault();
+    const email = document.getElementById('gateEmail').value.trim();
+    if (!email) return;
+    const p = new URLSearchParams({ contact: email, pricing: 'sample-report-agents', uc: 'coding' });
+    fetch(SCRIPT_URL + '?' + p.toString(), { mode: 'no-cors' }).catch(() => {});
+    document.getElementById('emailGate').style.display = 'none';
+    document.getElementById('reportContent').style.display = 'block';
+    window.scrollTo(0, 0);
+}
+</script>
+</body>
+</html>
