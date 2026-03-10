@@ -22,7 +22,8 @@ function ucParam() {
 }
 
 function send(email, data) {
-    const p = new URLSearchParams({ contact: email, pricing: data || 'unknown', uc: UC });
+    const tagged = '[' + UC + '] ' + (data || 'unknown');
+    const p = new URLSearchParams({ contact: email, pricing: tagged, uc: UC });
     fetch(SCRIPT_URL + '?' + p.toString(), { mode: 'no-cors' }).catch(() => {});
 }
 
