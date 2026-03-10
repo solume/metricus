@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brand Details — Metricus</title>
+    <title>Get Started — Metricus</title>
     <meta name="description" content="Tell us about your brand and competitors so we can build your AI visibility report.">
     <!-- Google Tag Manager -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
@@ -16,7 +16,6 @@
         .ob { max-width: 520px; margin: 0 auto; padding: 48px 0 80px; }
         .ob h1 { font-size: 1.3rem; font-weight: 800; color: var(--text-bright); margin-bottom: 4px; }
         .ob .ob-sub { font-size: 0.82rem; color: var(--text-dim); margin-bottom: 20px; }
-
         .tier-badge-bar {
             display: inline-flex; align-items: center; gap: 8px;
             background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2);
@@ -25,17 +24,13 @@
         }
         .tier-badge-bar strong { color: var(--text-bright); font-weight: 700; }
         .tier-badge-bar .tier-price { color: var(--accent); font-weight: 800; }
-
         .ob-progress { display: flex; gap: 8px; margin-bottom: 32px; }
         .ob-progress .bar { flex: 1; height: 4px; border-radius: 2px; background: var(--border); transition: background 0.3s; }
         .ob-progress .bar.done { background: var(--primary); }
-
         .ob-step { display: none; }
         .ob-step.active { display: block; }
-
         .ob-step h2 { font-size: 1rem; font-weight: 700; color: var(--text-bright); margin-bottom: 4px; }
         .ob-step .step-desc { font-size: 0.8rem; color: var(--text-dim); margin-bottom: 20px; }
-
         .field { margin-bottom: 16px; }
         .field label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--text-mid); margin-bottom: 6px; }
         .field input, .field textarea {
@@ -47,17 +42,13 @@
         .field input:focus, .field textarea:focus { border-color: var(--primary); }
         .field textarea { resize: vertical; min-height: 80px; }
         .field .hint { font-size: 0.72rem; color: var(--text-dim); margin-top: 4px; }
-
         .ob-nav { display: flex; gap: 10px; margin-top: 24px; }
         .ob-nav .btn { flex: 1; padding: 14px 20px; font-size: 0.92rem; }
         .btn-back { background: transparent; border: 1px solid var(--border); color: var(--text-mid); cursor: pointer; padding: 10px 16px; border-radius: 8px; font-size: 0.85rem; font-family: inherit; }
         .btn-back:hover { border-color: var(--text-dim); color: var(--text-bright); }
-
         .step-count { font-size: 0.72rem; color: var(--text-dim); margin-bottom: 6px; }
-
         .checkout-note { font-size: 0.72rem; color: var(--text-dim); margin-top: 8px; text-align: center; }
         .checkout-note svg { width: 10px; height: 10px; fill: var(--text-dim); vertical-align: -1px; margin-right: 3px; }
-
         .order-summary {
             background: rgba(52,211,153,0.06); border: 1px solid rgba(52,211,153,0.15);
             border-radius: 8px; padding: 10px 14px; margin-top: 16px; margin-bottom: -8px;
@@ -81,8 +72,8 @@
 
 <div class="w">
     <div class="ob">
-        <h1>Set up your AI visibility report</h1>
-        <p class="ob-sub">Tell us about your brand so we can build your report. Takes about 2 minutes.</p>
+        <h1 id="ob-h1">Set up your AI visibility report</h1>
+        <p class="ob-sub" id="ob-sub">Tell us about your brand so we can build your report. Takes about 2 minutes.</p>
 
         <div class="tier-badge-bar" id="tierBar">
             <strong id="tierName">Deep Dive</strong> report &mdash; <span class="tier-price" id="tierPrice">$149</span>
@@ -94,14 +85,13 @@
             <div class="bar" id="bar3"></div>
         </div>
 
-        <!-- Step 1: Your brand -->
+        <!-- Step 1 -->
         <div class="ob-step active" id="obStep1">
             <div class="step-count">Step 1 of 3</div>
-            <h2>Your brand</h2>
-            <p class="step-desc">Takes about 2 minutes. No credit card until the last step.</p>
-
+            <h2 id="ob-step1-h2">Your brand</h2>
+            <p class="step-desc" id="ob-step1-desc">Takes about 2 minutes. No credit card until the last step.</p>
             <div class="field">
-                <label>Brand / company name</label>
+                <label id="ob-brand-label">Brand / company name</label>
                 <input type="text" id="brandName" placeholder="e.g. Acme CRM" required>
             </div>
             <div class="field">
@@ -109,57 +99,50 @@
                 <input type="text" id="brandUrl" placeholder="e.g. acmecrm.com">
             </div>
             <div class="field">
-                <label>What do you sell? (optional &mdash; we'll infer from your website if you skip)</label>
+                <label id="ob-desc-label">What do you sell? (optional — we'll infer from your website if you skip)</label>
                 <input type="text" id="brandDesc" placeholder="e.g. CRM for small sales teams">
             </div>
-
             <div class="ob-nav">
                 <button class="btn btn-checkout" onclick="goStep(2)" style="flex:1;">Continue &rarr;</button>
             </div>
             <div class="checkout-note">We use this only to build your report. No spam.</div>
         </div>
 
-        <!-- Step 2: Competitors -->
+        <!-- Step 2 -->
         <div class="ob-step" id="obStep2">
             <div class="step-count">Step 2 of 3</div>
-            <h2>Your competitors</h2>
-            <p class="step-desc">List any brands a buyer might compare you to &mdash; direct competitors or "good enough" alternatives.</p>
-
+            <h2 id="ob-step2-h2">Your competitors</h2>
+            <p class="step-desc" id="ob-step2-desc">List any brands a buyer might compare you to — direct competitors or "good enough" alternatives.</p>
             <div class="field">
-                <label>Competitors</label>
+                <label id="ob-comp-label">Competitors</label>
                 <textarea id="compAll" rows="3" placeholder="e.g. HubSpot, Salesforce, Pipedrive, Zoho"></textarea>
-                <div class="hint">Comma-separated or one per line. We don't contact competitors &mdash; this is used only for your report.</div>
+                <div class="hint">Comma-separated or one per line.</div>
             </div>
-
             <div class="ob-nav">
                 <button class="btn-back" onclick="goStep(1)">Back</button>
                 <button class="btn btn-checkout" onclick="goStep(3)" style="flex:1;">Continue &rarr;</button>
             </div>
-            <div class="checkout-note"><a href="#" onclick="skipComps(event)" style="color:var(--primary);text-decoration:none;">Not sure? Skip &mdash; we'll run a category-level baseline.</a></div>
+            <div class="checkout-note"><a href="#" onclick="skipComps(event)" style="color:var(--primary);text-decoration:none;">Not sure? Skip — we'll run a category-level baseline.</a></div>
         </div>
 
-        <!-- Step 3: Queries & checkout -->
+        <!-- Step 3 -->
         <div class="ob-step" id="obStep3">
             <div class="step-count">Step 3 of 3</div>
-            <h2>Queries &amp; checkout</h2>
-            <p class="step-desc">Edit the suggested queries or leave as-is. We'll also generate more from your site.</p>
-
+            <h2 id="ob-step3-h2">Queries &amp; checkout</h2>
+            <p class="step-desc" id="ob-step3-desc">Edit the suggested queries or leave as-is. We'll also generate more from your site.</p>
             <div class="field">
-                <label>Queries to test</label>
+                <label id="ob-queries-label">Queries to test</label>
                 <textarea id="queries" rows="6"></textarea>
                 <div class="hint">Edit these or add your own. We'll generate additional queries based on your category.</div>
             </div>
             <div class="field">
-                <label>Email for report delivery</label>
+                <label id="ob-email-label">Email for report delivery</label>
                 <input type="email" id="obEmail" placeholder="you@company.com" required>
                 <div class="hint">Your report PDF will be sent here within 24 hours.</div>
             </div>
-
-            <!-- Order summary -->
             <div class="order-summary" id="orderSummary">
                 <span id="summaryTier">Deep Dive</span> &mdash; <span id="summaryPrice">$149</span> &middot; PDF in 24h &middot; Full refund if fewer than 3 actionable insights
             </div>
-
             <div class="ob-nav">
                 <button class="btn-back" onclick="goStep(2)">Back</button>
                 <button class="btn btn-checkout" onclick="submitAndCheckout()" style="flex:1;" id="submitBtn">Get your report &mdash; <span id="btnPrice">$149</span></button>
@@ -176,6 +159,7 @@
     <div class="w">metricus &copy; 2026 &nbsp;&middot;&nbsp; <a href="mailto:hello@metricusapp.com">Contact</a> &nbsp;&middot;&nbsp; <a href="../privacy-policy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="../terms-of-service/">Terms</a> &nbsp;&middot;&nbsp; <a href="../support/">Support</a></div>
 </div>
 
+<script src="../js/content.js"></script>
 <script>
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlMZxJmAmm90HGKg6AJxEeB8xOP83Dyq4rUHnCD8aubV1NzPqb1ZlSbjzmBAnO63r2/exec';
 
@@ -191,50 +175,64 @@ const TIER_INFO = {
     arsenal:   { name: 'Full Arsenal', price: '$349' }
 };
 
-// Read tier and email from URL params
 const params = new URLSearchParams(window.location.search);
 const selectedTier = params.get('tier') || 'deepdive';
 const prefillEmail = params.get('email') || '';
+const UC = params.get('uc') || 'brand';
+const OB = UC_CONTENT[UC] ? UC_CONTENT[UC].onboarding : UC_CONTENT.brand.onboarding;
 
-// Set tier info in UI
-const info = TIER_INFO[selectedTier] || TIER_INFO.deepdive;
-document.getElementById('tierName').textContent = info.name;
-document.getElementById('tierPrice').textContent = info.price;
-document.getElementById('btnPrice').textContent = info.price;
-document.getElementById('summaryTier').textContent = info.name;
-document.getElementById('summaryPrice').textContent = info.price;
+// Apply use-case labels
+function $(id) { return document.getElementById(id); }
+function h(el, v) { if (el) el.innerHTML = v; }
+h($('ob-h1'), OB.h1);
+h($('ob-sub'), OB.sub);
+h($('ob-step1-h2'), OB.step1h2);
+h($('ob-step1-desc'), OB.step1desc);
+h($('ob-brand-label'), OB.brandLabel);
+$('brandName').placeholder = OB.brandPlaceholder;
+$('brandUrl').placeholder = OB.urlPlaceholder;
+h($('ob-desc-label'), OB.descLabel);
+$('brandDesc').placeholder = OB.descPlaceholder;
+h($('ob-step2-h2'), OB.step2h2);
+h($('ob-step2-desc'), OB.step2desc);
+h($('ob-comp-label'), OB.compLabel);
+$('compAll').placeholder = OB.compPlaceholder;
+h($('ob-step3-h2'), OB.step3h2);
+h($('ob-step3-desc'), OB.step3desc);
+h($('ob-queries-label'), OB.queriesLabel);
+h($('ob-email-label'), OB.emailLabel);
 
-// Prefill email if passed from hero form
-if (prefillEmail) {
-    document.getElementById('obEmail').value = prefillEmail;
-}
+// Set tier info
+var info = TIER_INFO[selectedTier] || TIER_INFO.deepdive;
+$('tierName').textContent = info.name;
+$('tierPrice').textContent = info.price;
+$('btnPrice').textContent = info.price;
+$('summaryTier').textContent = info.name;
+$('summaryPrice').textContent = info.price;
 
-// Funnel: log onboarding page load with tier
+if (prefillEmail) $('obEmail').value = prefillEmail;
+
+// Funnel log
 (function() {
-    const p = new URLSearchParams({ contact: prefillEmail || '', pricing: 'funnel:onboard-start:' + selectedTier });
-    fetch(SCRIPT_URL + '?' + p.toString(), { mode: 'no-cors' }).catch(() => {});
+    var p = new URLSearchParams({ contact: prefillEmail || '', pricing: 'funnel:onboard-start:' + selectedTier, uc: UC });
+    fetch(SCRIPT_URL + '?' + p.toString(), { mode: 'no-cors' }).catch(function(){});
 })();
 
-function skipComps(e) {
-    e.preventDefault();
-    goStep(3);
-}
+function skipComps(e) { e.preventDefault(); goStep(3); }
 
 function goStep(n) {
     if (n === 2) {
-        const name = document.getElementById('brandName').value.trim();
-        if (!name) { document.getElementById('brandName').focus(); return; }
+        var name = $('brandName').value.trim();
+        if (!name) { $('brandName').focus(); return; }
     }
-
-    // Auto-fill queries when entering step 3
     if (n === 3) {
-        const q = document.getElementById('queries');
+        var q = $('queries');
         if (!q.value.trim()) {
-            const brand = document.getElementById('brandName').value.trim() || '[Your brand]';
-            const comps = document.getElementById('compAll').value.trim();
-            const comp1 = comps ? comps.split(/[,\n]/)[0].trim() : '[Competitor]';
-            const desc = document.getElementById('brandDesc').value.trim();
-            const category = desc || 'your category';
+            var brand = $('brandName').value.trim() || '[Your brand]';
+            var comps = $('compAll').value.trim();
+            var comp1 = comps ? comps.split(/[,\n]/)[0].trim() : '[Competitor]';
+            var desc = $('brandDesc').value.trim();
+            var category = desc || 'your category';
             q.value = [
                 'best ' + category,
                 brand + ' vs ' + comp1,
@@ -247,54 +245,41 @@ function goStep(n) {
             ].join('\n');
         }
     }
+    var email = $('obEmail').value.trim() || prefillEmail || '';
+    var pf = new URLSearchParams({ contact: email, pricing: 'funnel:onboard-step' + n + ':' + selectedTier, uc: UC });
+    fetch(SCRIPT_URL + '?' + pf.toString(), { mode: 'no-cors' }).catch(function(){});
 
-    // Funnel: log step transition
-    const email = document.getElementById('obEmail').value.trim() || prefillEmail || '';
-    const pf = new URLSearchParams({ contact: email, pricing: 'funnel:onboard-step' + n + ':' + selectedTier });
-    fetch(SCRIPT_URL + '?' + pf.toString(), { mode: 'no-cors' }).catch(() => {});
-
-    document.querySelectorAll('.ob-step').forEach(s => s.classList.remove('active'));
-    document.getElementById('obStep' + n).classList.add('active');
-
-    for (let i = 1; i <= 3; i++) {
-        document.getElementById('bar' + i).classList.toggle('done', i <= n);
-    }
+    document.querySelectorAll('.ob-step').forEach(function(s) { s.classList.remove('active'); });
+    $('obStep' + n).classList.add('active');
+    for (var i = 1; i <= 3; i++) $('bar' + i).classList.toggle('done', i <= n);
     window.scrollTo(0, 0);
 }
 
 function submitAndCheckout() {
-    const email = document.getElementById('obEmail').value.trim();
-    if (!email) { document.getElementById('obEmail').focus(); return; }
-
-    const brand = document.getElementById('brandName').value.trim();
-    const url = document.getElementById('brandUrl').value.trim();
-    const desc = document.getElementById('brandDesc').value.trim();
-    const comps = document.getElementById('compAll').value.trim().replace(/\n/g, ', ');
-    const queries = document.getElementById('queries').value.trim();
-
-    const details = [
-        selectedTier.toUpperCase(),
-        'Brand: ' + brand,
-        url ? 'URL: ' + url : '',
-        desc ? 'Desc: ' + desc : '',
+    var email = $('obEmail').value.trim();
+    if (!email) { $('obEmail').focus(); return; }
+    var brand = $('brandName').value.trim();
+    var url = $('brandUrl').value.trim();
+    var desc = $('brandDesc').value.trim();
+    var comps = $('compAll').value.trim().replace(/\n/g, ', ');
+    var queries = $('queries').value.trim();
+    var details = [
+        selectedTier.toUpperCase(), 'UC:' + UC,
+        'Brand: ' + brand, url ? 'URL: ' + url : '', desc ? 'Desc: ' + desc : '',
         comps ? 'Competitors: ' + comps : '',
         queries ? 'Queries: ' + queries.replace(/\n/g, ' | ') : ''
     ].filter(Boolean).join(' // ');
 
-    const btn = document.getElementById('submitBtn');
+    var btn = $('submitBtn');
     btn.textContent = 'Redirecting to checkout...';
     btn.disabled = true;
 
-    // Log to spreadsheet
-    const p = new URLSearchParams({ contact: email, pricing: details });
-    fetch(SCRIPT_URL + '?' + p.toString(), { mode: 'no-cors' }).catch(() => {});
-
-    // Fire Google Ads conversion
+    var p = new URLSearchParams({ contact: email, pricing: details });
+    fetch(SCRIPT_URL + '?' + p.toString(), { mode: 'no-cors' }).catch(function(){});
     if (typeof gtag_report_conversion === 'function') gtag_report_conversion();
 
-    // Redirect to Stripe with prefilled email
-    const stripeUrl = STRIPE[selectedTier] || STRIPE.deepdive;
-    setTimeout(() => {
+    var stripeUrl = STRIPE[selectedTier] || STRIPE.deepdive;
+    setTimeout(function() {
         window.location.href = stripeUrl + '?prefilled_email=' + encodeURIComponent(email);
     }, 400);
 }
