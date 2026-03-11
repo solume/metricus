@@ -42,7 +42,7 @@
         <div class="hero-eyebrow" id="uc-eyebrow"></div>
         <h1 id="uc-hero-h1"></h1>
         <p class="subtitle" id="uc-hero-subtitle"></p>
-        <form class="hero-form" onsubmit="heroSubmit(event)">
+        <form class="hero-form">
             <input type="email" id="heroEmail" placeholder="you@company.com" required>
             <button type="submit" class="btn btn-primary" id="uc-hero-cta"></button>
         </form>
@@ -73,6 +73,51 @@
         </div>
     </div>
 </div>
+
+<!-- ===== WHO THIS IS FOR ===== -->
+<div class="w" id="audience-section" style="display:none;">
+    <div class="audience">
+        <h2 id="uc-audience-h2"></h2>
+        <div class="audience-grid">
+            <div class="audience-for">
+                <div class="audience-label" id="uc-audience-for-label"></div>
+                <ul id="uc-audience-for-list"></ul>
+            </div>
+            <div class="audience-not">
+                <div class="audience-label" id="uc-audience-not-label"></div>
+                <ul id="uc-audience-not-list"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== FREE INITIAL LOOK ===== -->
+<div class="w" id="freelook-section" style="display:none;">
+    <div class="free-look">
+        <div class="free-look-inner">
+            <h3 id="uc-fl-h3"></h3>
+            <p class="fl-sub" id="uc-fl-sub"></p>
+            <form>
+                <div class="field">
+                    <label>Company name</label>
+                    <input type="text" id="flCompany" placeholder="e.g. Acme Corp" required>
+                </div>
+                <div class="field">
+                    <label>Website</label>
+                    <input type="text" id="flWebsite" placeholder="e.g. acme.com">
+                </div>
+                <div class="field">
+                    <label>Email</label>
+                    <input type="email" id="flEmail" placeholder="you@company.com" required>
+                </div>
+                <button type="submit" class="btn btn-primary" id="uc-fl-btn"></button>
+            </form>
+            <p class="fl-note" id="uc-fl-note"></p>
+        </div>
+    </div>
+</div>
+
+<div class="w"><div class="divider"></div></div>
 
 <!-- ===== PAIN ===== -->
 <div class="w">
@@ -180,6 +225,13 @@
 
 <div class="w"><div class="divider"></div></div>
 
+<!-- ===== NEWSLETTER ===== -->
+<div class="w" id="newsletter-section" style="display:none;">
+    <div class="newsletter">
+        <div class="newsletter-inner" id="uc-newsletter"></div>
+    </div>
+</div>
+
 <!-- ===== BLOG TEASE ===== -->
 <div class="w-wide">
     <div class="blog-tease">
@@ -194,7 +246,7 @@
     <div class="final">
         <h2 id="uc-final-h2"></h2>
         <p id="uc-final-p"></p>
-        <form class="hero-form" onsubmit="heroSubmit(event)" style="margin-bottom:12px;">
+        <form class="hero-form" style="margin-bottom:12px;">
             <input type="email" placeholder="you@company.com" required>
             <button type="submit" class="btn btn-primary" id="uc-final-cta"></button>
         </form>
@@ -212,7 +264,6 @@
     <div class="w">metricus &copy; 2026 &nbsp;&middot;&nbsp; <a href="mailto:hello@metricusapp.com">Contact</a> &nbsp;&middot;&nbsp; <a id="uc-footer-blog" href="blog/">Blog</a> &nbsp;&middot;&nbsp; <a href="privacy-policy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="terms-of-service/">Terms</a> &nbsp;&middot;&nbsp; <a href="support/">Support</a></div>
 </div>
 
-<script src="js/content.js"></script>
-<script src="js/main.js"></script>
+<script type="module" src="modules/app.js"></script>
 </body>
 </html>

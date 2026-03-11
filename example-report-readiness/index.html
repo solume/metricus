@@ -16,21 +16,21 @@
         .gate-wrap { position: relative; min-height: 100vh; overflow: hidden; }
         .gate-bg {
             position: absolute; top: 220px; left: 0; right: 0; padding: 0 24px;
-            filter: blur(6px); opacity: 0.25; pointer-events: none; user-select: none;
+            filter: blur(6px); opacity: 0.3; pointer-events: none; user-select: none;
             max-width: 680px; margin: 0 auto;
         }
-        .gate-bg .fake-heading { height: 14px; width: 180px; background: rgba(255,255,255,0.08); border-radius: 4px; margin-bottom: 16px; }
+        .gate-bg .fake-heading { height: 14px; width: 180px; background: rgba(0,0,0,0.06); border-radius: 4px; margin-bottom: 16px; }
         .gate-bg .fake-score { font-size: 3rem; font-weight: 900; color: var(--accent); text-align: center; margin: 12px 0 8px; }
         .gate-bg .fake-bar-wrap { margin-bottom: 6px; display: flex; align-items: center; gap: 10px; }
-        .gate-bg .fake-label { width: 80px; height: 8px; background: rgba(255,255,255,0.05); border-radius: 3px; }
-        .gate-bg .fake-track { flex: 1; height: 20px; background: rgba(255,255,255,0.03); border-radius: 4px; overflow: hidden; }
+        .gate-bg .fake-label { width: 80px; height: 8px; background: rgba(0,0,0,0.04); border-radius: 3px; }
+        .gate-bg .fake-track { flex: 1; height: 20px; background: rgba(0,0,0,0.03); border-radius: 4px; overflow: hidden; }
         .gate-bg .fake-fill { height: 100%; border-radius: 4px; }
         .gate-bg .fake-fill.f67 { width: 67%; background: var(--accent); opacity: 0.5; }
-        .gate-bg .fake-fill.f45 { width: 45%; background: rgba(255,255,255,0.1); }
-        .gate-bg .fake-fill.f80 { width: 80%; background: rgba(255,255,255,0.08); }
-        .gate-bg .fake-text { height: 8px; background: rgba(255,255,255,0.04); border-radius: 3px; margin: 5px 0; }
+        .gate-bg .fake-fill.f45 { width: 45%; background: rgba(0,0,0,0.06); }
+        .gate-bg .fake-fill.f80 { width: 80%; background: rgba(0,0,0,0.05); }
+        .gate-bg .fake-text { height: 8px; background: rgba(0,0,0,0.04); border-radius: 3px; margin: 5px 0; }
         .gate-bg .fake-text.w90 { width: 90%; } .gate-bg .fake-text.w70 { width: 70%; } .gate-bg .fake-text.w50 { width: 50%; }
-        .gate-bg .fake-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.04); border-radius: 8px; padding: 14px; margin-bottom: 8px; }
+        .gate-bg .fake-card { background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.04); border-radius: 8px; padding: 14px; margin-bottom: 8px; }
         .gate {
             position: relative; z-index: 2; text-align: center; padding: 56px 0 40px;
             max-width: 440px; margin: 0 auto;
@@ -38,7 +38,7 @@
         .gate h1 { font-size: 1.3rem; font-weight: 800; color: var(--text-bright); margin-bottom: 8px; }
         .gate .gate-sub { font-size: 0.88rem; color: var(--text-dim); margin-bottom: 24px; }
         .gate-form { display: flex; gap: 8px; }
-        .gate-form input { flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-strong); background: var(--bg-card-solid); color: var(--text-bright); font-size: 0.85rem; font-family: inherit; outline: none; }
+        .gate-form input { flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-bright); font-size: 0.85rem; font-family: inherit; outline: none; }
         .gate-form input:focus { border-color: var(--primary); }
         .gate-hint { font-size: 0.72rem; color: var(--text-dim); margin-top: 8px; }
         .gate-preview { margin-top: 28px; padding: 20px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-card); text-align: left; }
