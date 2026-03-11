@@ -206,5 +206,8 @@ export const coding = {
     queriesLabel: 'Agent tasks to simulate',
     emailLabel: 'Email for report delivery',
     submitBtn: 'Get your report',
+    step2SkipText: 'Not sure about competitors? Skip \u2014 we\'ll do a general analysis.',
+    freeLookH2: 'Start with a free preview',
+    freeLookDesc: 'Based on what you\'ve told us, we\'ll send you 2\u20133 key findings about your agent visibility \u2014 free, no commitment. If you like what you see, you can upgrade to a full report.',
   },
 };

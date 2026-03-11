@@ -184,7 +184,7 @@
                 <button class="btn-back" data-action="go-step" data-step="1">Back</button>
                 <button class="btn btn-checkout" data-action="go-step" data-step="3" style="flex:1;">Continue &rarr;</button>
             </div>
-            <div class="checkout-note"><a href="#" data-action="skip-comps" style="color:var(--primary);text-decoration:none;">Not sure about pain points? Skip — we'll do a general analysis.</a></div>
+            <div class="checkout-note"><a href="#" data-action="skip-comps" id="ob-skip-link" style="color:var(--primary);text-decoration:none;">Not sure about pain points? Skip — we'll do a general analysis.</a></div>
         </div>
 
         <!-- Step 3 -->
@@ -195,7 +195,7 @@
             <div class="field">
                 <label id="ob-queries-label">Queries to test</label>
                 <textarea id="queries" rows="6"></textarea>
-                <div class="hint">Edit these or add your own. We'll generate additional queries based on your category.</div>
+                <div class="hint" id="ob-queries-hint">Edit these or add your own. We'll generate additional queries based on your category.</div>
             </div>
             <div class="field">
                 <label id="ob-email-label">Email for report delivery</label>
@@ -219,8 +219,8 @@
         <div class="ob-step" id="obStep3b">
             <div class="step-count">Step 3 of 3</div>
             <div class="free-look-step">
-                <h2>Start with a free preview</h2>
-                <p class="fl-desc">Based on what you've told us, we'll send you 2–3 key findings about your AI readiness — free, no commitment. If you like what you see, you can upgrade to a full report.</p>
+                <h2 id="ob-freelook-h2">Start with a free preview</h2>
+                <p class="fl-desc" id="ob-freelook-desc">Based on what you've told us, we'll send you 2–3 key findings about your AI readiness — free, no commitment. If you like what you see, you can upgrade to a full report.</p>
             </div>
             <div class="field">
                 <label>Email for your free preview</label>
