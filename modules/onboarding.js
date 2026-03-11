@@ -42,7 +42,11 @@ $('compAll').placeholder = OB.compPlaceholder;
 h($('ob-step3-h2'), OB.step3h2);
 h($('ob-step3-desc'), OB.step3desc);
 h($('ob-queries-label'), OB.queriesLabel);
+if (OB.queriesHint) h($('ob-queries-hint'), OB.queriesHint);
 h($('ob-email-label'), OB.emailLabel);
+if (OB.step2SkipText) $('ob-skip-link').textContent = OB.step2SkipText;
+if (OB.freeLookH2) h($('ob-freelook-h2'), OB.freeLookH2);
+if (OB.freeLookDesc) h($('ob-freelook-desc'), OB.freeLookDesc);
 
 // ── Set tier info ──
 function applyTier(tier) {
@@ -138,9 +142,9 @@ function goStep(n) {
     // Adapt step 3 based on profile
     adaptStep3();
 
-    // Auto-generate queries if empty
+    // Auto-generate queries if empty (skip for data variant — uses free-form context)
     var q = $('queries');
-    if (!q.value.trim()) {
+    if (!q.value.trim() && state.uc !== 'data') {
       var brand = $('brandName').value.trim() || '[Your brand]';
       var comps = $('compAll').value.trim();
       var comp1 = comps ? comps.split(/[,\n]/)[0].trim() : '[Competitor]';
