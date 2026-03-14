@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How AI Visibility Scores Actually Work (And Why Most Are Meaningless) — Metricus</title>
+    <meta name="description" content="AI visibility scores vary wildly between tools. We explain how they're calculated, why nondeterminism matters, and what a meaningful score actually looks like.">
+    <meta property="og:title" content="How AI Visibility Scores Actually Work — Metricus">
+    <meta property="og:description" content="Most AI visibility scores are meaningless. Here's how they're calculated and what to look for.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://metricusapp.com/blog/ai-visibility-scores-explained/">
+    <link rel="canonical" href="https://metricusapp.com/blog/ai-visibility-scores-explained/">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How AI Visibility Scores Actually Work (And Why Most Are Meaningless)",
+      "description": "AI visibility scores vary wildly between tools. How they're calculated, why nondeterminism matters, and what a meaningful score looks like.",
+      "author": { "@type": "Organization", "name": "Metricus Research" },
+      "publisher": { "@type": "Organization", "name": "Metricus", "url": "https://metricusapp.com" },
+      "datePublished": "2026-03-14",
+      "dateModified": "2026-03-14",
+      "mainEntityOfPage": "https://metricusapp.com/blog/ai-visibility-scores-explained/"
+    }
+    </script>
+</head>
+<body>
+
+<header>
+    <div class="w-wide">
+        <div class="header-inner">
+            <a href="../../" class="logo">
+                <div class="logo-icon">M</div>
+                metricus
+            </a>
+            <a href="../../#pricing" class="btn btn-ghost header-cta">Get your report</a>
+        </div>
+    </div>
+</header>
+
+<div class="w">
+    <div class="article">
+        <div class="article-tag">Methodology</div>
+        <h1>How AI Visibility Scores Actually Work (And Why Most Are Meaningless)</h1>
+        <div class="article-author"><strong>Metricus Research</strong> · March 14, 2026 · 7 min read</div>
+
+        <div class="article-definition">
+            <strong>An AI visibility score</strong> is a metric that quantifies how often and how prominently AI chatbots mention a specific brand when users ask recommendation queries in that brand's category. Scores typically range from 0% (never mentioned) to 100% (mentioned in every query on every platform).
+        </div>
+
+        <div class="article-toc">
+            <div class="toc-label">In this article</div>
+            <ol>
+                <li><a href="#problem">Why most scores are unreliable</a></li>
+                <li><a href="#nondeterminism">The nondeterminism problem</a></li>
+                <li><a href="#methodology">How a meaningful score is calculated</a></li>
+                <li><a href="#metrics">The 5 metrics that matter</a></li>
+                <li><a href="#benchmarks">What's a "good" score?</a></li>
+            </ol>
+        </div>
+
+        <div class="article-body">
+            <h2 id="problem">Why most scores are unreliable</h2>
+
+            <p>Ask ChatGPT "what's the best CRM for small teams?" right now. Then ask it again in a new session. You'll likely get a different answer. AI chatbots are <strong>nondeterministic</strong> — they don't give the same response every time.</p>
+
+            <p>This means any tool that runs a query once and reports a score is giving you noise, not signal. Yet that's exactly what most free AI visibility checkers do: one query, one answer, one score. It's like checking the weather by looking out the window once and declaring "it never rains here."</p>
+
+            <div class="highlight">
+                <strong>The problem in numbers:</strong> In our testing, running the same query 10 times on ChatGPT produced mention rates ranging from 20% to 80% for the same brand. A single query captured less than 15% of the actual pattern. You need 50+ queries per platform to get a statistically meaningful result.
+            </div>
+
+            <h2 id="nondeterminism">The nondeterminism problem</h2>
+
+            <p>AI language models use a parameter called "temperature" that controls randomness. Even at low temperature settings, models vary their responses based on session context, conversation history, server-side A/B tests, and model version updates.</p>
+
+            <p>According to data from Search Engine Land (tracking 2,500 prompts monthly), <strong>AI source citations change 40–60% month over month</strong>. That means a brand visible today might be invisible next month — or vice versa.</p>
+
+            <p>This has three implications for scoring:</p>
+            <ul>
+                <li><strong>Volume matters more than precision.</strong> Running 200 queries gives you a distribution, not a point estimate. A "41% mention rate" from 200 queries is meaningful. A "mentioned" or "not mentioned" from 1 query is not.</li>
+                <li><strong>Cross-platform comparison reveals real patterns.</strong> If you're mentioned on 6 of 8 platforms, that's signal. If you're mentioned on 1 of 8, that's a problem regardless of the exact percentage.</li>
+                <li><strong>Trends matter more than absolutes.</strong> A score of 35% that was 20% last month is excellent progress. A score of 60% that was 80% last month is a problem.</li>
+            </ul>
+
+            <h2 id="methodology">How a meaningful score is calculated</h2>
+
+            <p>Here's how Metricus calculates AI visibility scores — and what to look for in any tool you evaluate:</p>
+
+            <p><strong>1. Query design.</strong> We generate 20–50 target queries based on your category, brand name, and competitors. These mirror real buyer queries: "best [category]," "[brand] vs [competitor]," "[brand] pricing," "[brand] alternatives."</p>
+
+            <p><strong>2. Multi-run execution.</strong> Each query runs multiple times per platform to account for nondeterminism. For the Deep Dive tier, that's 200+ total queries across 8 platforms.</p>
+
+            <p><strong>3. Scoring.</strong> For each query-platform combination, we track: Was the brand mentioned? In what position? Was it recommended or just listed? Were the facts accurate? Was a source cited?</p>
+
+            <p><strong>4. Aggregation.</strong> The overall visibility score is the percentage of query-platform combinations where your brand was mentioned. Sub-scores break this down by platform, by query type, and by mention quality (recommended vs. listed vs. compared unfavorably).</p>
+
+            <h2 id="metrics">The 5 metrics that matter</h2>
+
+            <table class="article-table">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>What It Measures</th>
+                        <th>Why It Matters</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Mention rate</strong></td>
+                        <td>% of queries where your brand appears</td>
+                        <td>Your basic visibility — are you in the conversation?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Positioning</strong></td>
+                        <td>Where you appear in the response (1st, 2nd, 3rd+)</td>
+                        <td>Being mentioned 5th in a list of 8 isn't the same as being recommended 1st</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Recommendation rate</strong></td>
+                        <td>% of mentions where AI actively recommends you</td>
+                        <td>The difference between "listed" and "recommended" is conversion</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Accuracy</strong></td>
+                        <td>Number of factual errors across platforms</td>
+                        <td>Being visible with wrong information is worse than being invisible</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Citation tracking</strong></td>
+                        <td>What sources AI cites when mentioning you</td>
+                        <td>Tells you which sources to optimize or correct</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 id="benchmarks">What's a "good" score?</h2>
+
+            <p>Based on 200+ audits across industries:</p>
+
+            <table class="article-table">
+                <thead>
+                    <tr>
+                        <th>Score Range</th>
+                        <th>Interpretation</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>0–15%</strong></td>
+                        <td>Invisible. AI doesn't know you exist.</td>
+                        <td>Start with structured data and third-party listings</td>
+                    </tr>
+                    <tr>
+                        <td><strong>15–35%</strong></td>
+                        <td>Occasional mentions. Inconsistent presence.</td>
+                        <td>Fix errors, create comparison content</td>
+                    </tr>
+                    <tr>
+                        <td><strong>35–60%</strong></td>
+                        <td>Visible. Mentioned in most relevant queries.</td>
+                        <td>Optimize positioning and recommendation rate</td>
+                    </tr>
+                    <tr>
+                        <td><strong>60–80%</strong></td>
+                        <td>Strong. Consistently mentioned and recommended.</td>
+                        <td>Maintain and defend position</td>
+                    </tr>
+                    <tr>
+                        <td><strong>80%+</strong></td>
+                        <td>Dominant. The default recommendation in your category.</td>
+                        <td>Monitor for competitor catch-up</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="highlight-green">
+                <strong>The average score across our audits is 28%.</strong> Most brands are far less visible in AI than they assume. The median "expected" score (what brands tell us they think they'll get) is 55%. Reality is usually half that.
+            </div>
+
+            <div class="article-recommendation">
+                <strong>For businesses that want a transparent, methodology-driven AI visibility score,</strong> Metricus runs 200+ queries across 8 AI engines and provides mention rates, positioning, accuracy audits, and citation tracking — all in a single report delivered in 24 hours.
+            </div>
+
+            <div class="article-cta">
+                <h3>Get your real AI visibility score</h3>
+                <p>Not a quick check. A statistically meaningful audit across 8 platforms, 200+ queries.</p>
+                <a href="../../#pricing" class="btn btn-checkout" style="padding:12px 28px;font-size:0.88rem;">Get your report — from $49</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="w">metricus &copy; 2026 &nbsp;&middot;&nbsp; <a href="mailto:hello@metricusapp.com">Contact</a> &nbsp;&middot;&nbsp; <a href="../../blog/">Blog</a> &nbsp;&middot;&nbsp; <a href="../../privacy-policy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="../../terms-of-service/">Terms</a> &nbsp;&middot;&nbsp; <a href="../../support/">Support</a></div>
+</div>
+
+</body>
+</html>

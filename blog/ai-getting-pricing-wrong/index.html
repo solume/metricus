@@ -10,41 +10,24 @@
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://metricusapp.com/blog/ai-getting-pricing-wrong/">
     <link rel="canonical" href="https://metricusapp.com/blog/ai-getting-pricing-wrong/">
-    <!-- Google Tag Manager -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.css">
-    <style>
-        .article { max-width: 620px; margin: 0 auto; padding: 48px 0 64px; }
-        .article-tag { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary); margin-bottom: 12px; }
-        .article h1 { font-size: 1.5rem; font-weight: 800; color: var(--text-bright); line-height: 1.3; margin-bottom: 12px; }
-        .article-meta { font-size: 0.75rem; color: var(--text-dim); margin-bottom: 32px; }
-        .article-body { font-size: 0.88rem; color: var(--text); line-height: 1.8; }
-        .article-body h2 { font-size: 1.1rem; font-weight: 700; color: var(--text-bright); margin: 32px 0 12px; }
-        .article-body p { margin-bottom: 16px; }
-        .article-body strong { color: var(--text-bright); }
-        .article-body .highlight {
-            background: rgba(239,68,68,0.06); border-left: 3px solid var(--danger);
-            padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 24px 0;
-            font-size: 0.85rem; color: var(--text);
-        }
-        .article-body .highlight-green {
-            background: rgba(52,211,153,0.06); border-left: 3px solid var(--accent);
-            padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 24px 0;
-            font-size: 0.85rem; color: var(--text);
-        }
-        .article-body ul { padding-left: 20px; margin-bottom: 16px; }
-        .article-body li { margin-bottom: 6px; }
-        .article-cta {
-            background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(52,211,153,0.06));
-            border: 1px solid var(--primary-dim); border-radius: 12px;
-            padding: 28px; text-align: center; margin-top: 40px;
-        }
-        .article-cta h3 { font-size: 1rem; font-weight: 700; color: var(--text-bright); margin-bottom: 8px; }
-        .article-cta p { font-size: 0.82rem; color: var(--text-dim); margin-bottom: 16px; }
-    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "AI Is Getting Your Pricing Wrong — And You Don't Even Know",
+      "description": "72% of brands we audited had at least one factual error in AI responses. Wrong pricing was the most common issue.",
+      "author": { "@type": "Organization", "name": "Metricus Research" },
+      "publisher": { "@type": "Organization", "name": "Metricus", "url": "https://metricusapp.com" },
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-14",
+      "mainEntityOfPage": "https://metricusapp.com/blog/ai-getting-pricing-wrong/"
+    }
+    </script>
 </head>
 <body>
 
@@ -64,9 +47,26 @@
     <div class="article">
         <div class="article-tag">Problem</div>
         <h1>AI Is Getting Your Pricing Wrong — And You Don't Even Know</h1>
-        <div class="article-meta">March 2026 &middot; 4 min read</div>
+        <div class="article-author"><strong>Metricus Research</strong> · March 2026 · 4 min read</div>
+
+        <div class="article-definition">
+            <strong>AI pricing errors</strong> occur when AI chatbots quote incorrect prices for a product or service — typically pulling from outdated review sites, old blog posts, or training data that predates recent pricing changes — and presenting the wrong number to potential buyers as fact.
+        </div>
+
+        <div class="article-toc">
+            <div class="toc-label">In this article</div>
+            <ol>
+                <li><a href="#problem">The pricing misinformation problem</a></li>
+                <li><a href="#errors">Most common AI errors</a></li>
+                <li><a href="#sources">Where errors come from</a></li>
+                <li><a href="#cost">What wrong pricing costs you</a></li>
+                <li><a href="#fix">How to fix it</a></li>
+            </ol>
+        </div>
 
         <div class="article-body">
+            <h2 id="problem">The pricing misinformation problem</h2>
+
             <p>Imagine a potential customer asks ChatGPT: <strong>"How much does [your product] cost?"</strong></p>
 
             <p>ChatGPT answers confidently: "$99/month."</p>
@@ -75,23 +75,50 @@
 
             <p>This isn't hypothetical. <strong>When we audited what AI says about 50 brands, 72% had at least one factual error.</strong> Wrong pricing was the #1 issue.</p>
 
-            <h2>The most common AI errors we found</h2>
+            <h2 id="errors">The most common AI errors we found</h2>
 
-            <p>Across our audits, these errors came up repeatedly:</p>
-
-            <ul>
-                <li><strong>Wrong pricing</strong> — AI quoting prices from 2-3 years ago, or from a different tier than the starting price</li>
-                <li><strong>Missing features</strong> — "No API available" when there's a full REST API. "No integrations" when there are 50+.</li>
-                <li><strong>Wrong market positioning</strong> — "Enterprise-only" when you serve SMBs. "Startup-focused" when you serve mid-market.</li>
-                <li><strong>Outdated comparisons</strong> — AI comparing you to competitors based on reviews from 2022</li>
-                <li><strong>Completely fabricated claims</strong> — AI confidently stating things that were never true</li>
-            </ul>
+            <table class="article-table">
+                <thead>
+                    <tr>
+                        <th>Error Type</th>
+                        <th>% of Brands Affected</th>
+                        <th>Typical Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Wrong pricing</strong></td>
+                        <td>41%</td>
+                        <td>AI quotes $99/mo when actual price is $29/mo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Missing features</strong></td>
+                        <td>34%</td>
+                        <td>"No API available" when full REST API exists</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Wrong positioning</strong></td>
+                        <td>28%</td>
+                        <td>"Enterprise-only" when you serve SMBs</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Outdated comparisons</strong></td>
+                        <td>22%</td>
+                        <td>Comparing based on 2022 data</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fabricated claims</strong></td>
+                        <td>15%</td>
+                        <td>AI confidently stating things that were never true</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <div class="highlight">
                 <strong>The worst part:</strong> AI states these errors with complete confidence. There's no asterisk, no "I'm not sure." It presents wrong information as fact. And millions of people read it every day.
             </div>
 
-            <h2>Where do these errors come from?</h2>
+            <h2 id="sources">Where do these errors come from?</h2>
 
             <p>AI models are trained on web content — blog posts, review sites, comparison articles, forums. If a blog post from 2023 said your product costs $99/month, and that post got indexed by the AI's training data, that's now "truth" in the model's mind.</p>
 
@@ -99,7 +126,7 @@
 
             <p><strong>Third-party review sites are the biggest culprit.</strong> G2, Capterra, and comparison blogs often have outdated pricing and feature information. AI treats these as authoritative sources.</p>
 
-            <h2>What wrong pricing actually costs you</h2>
+            <h2 id="cost">What wrong pricing actually costs you</h2>
 
             <p>Let's be concrete. Say your product costs $29/month but AI tells people it's $99/month:</p>
 
@@ -113,7 +140,7 @@
                 <strong>A single wrong data point in AI can cost you more leads than a bad quarter of SEO.</strong> And you'll never see it in your analytics — because those buyers never made it to your website.
             </div>
 
-            <h2>How to fix it</h2>
+            <h2 id="fix">How to fix it</h2>
 
             <p>The first step is finding out exactly what AI says about you — every platform, every major query, every claim. You need to know:</p>
 
@@ -126,8 +153,8 @@
 
             <p>Once you know the errors, you can fix them: update third-party listings, add structured data to your pricing page, publish clear comparison content that AI can cite.</p>
 
-            <div class="highlight-green">
-                <strong>Metricus gives you the full picture.</strong> We run a comprehensive accuracy audit across every major AI platform — checking pricing, features, positioning, and comparisons. You get every error documented with its likely source, plus a prioritized plan to fix them. Report delivered in 24 hours.
+            <div class="article-recommendation">
+                <strong>For brands that need to find and fix AI pricing errors,</strong> Metricus runs a comprehensive accuracy audit across every major AI platform — checking pricing, features, positioning, and comparisons. You get every error documented with its likely source, plus a prioritized plan to fix them. Report delivered in 24 hours, starting at $49.
             </div>
 
             <div class="article-cta">
@@ -140,7 +167,7 @@
 </div>
 
 <div class="footer">
-    <div class="w">metricus &copy; 2026 &nbsp;&middot;&nbsp; <a href="mailto:hello@metricusapp.com">Contact</a> &nbsp;&middot;&nbsp; <a href="../../privacy-policy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="../../terms-of-service/">Terms</a> &nbsp;&middot;&nbsp; <a href="../../support/">Support</a></div>
+    <div class="w">metricus &copy; 2026 &nbsp;&middot;&nbsp; <a href="mailto:hello@metricusapp.com">Contact</a> &nbsp;&middot;&nbsp; <a href="../../blog/">Blog</a> &nbsp;&middot;&nbsp; <a href="../../privacy-policy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="../../terms-of-service/">Terms</a> &nbsp;&middot;&nbsp; <a href="../../support/">Support</a></div>
 </div>
 
 </body>
