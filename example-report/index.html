@@ -6,7 +6,7 @@
     <title>Sample Report: Bank of America AI Visibility — Metricus</title>
     <meta name="description" content="See a real AI visibility report. How Bank of America scores across ChatGPT, Claude, Perplexity and 5 other AI platforms — visibility scores, quotes, errors, and action plan.">
     <meta property="og:title" content="Sample AI Visibility Report: Bank of America — Metricus">
-    <meta property="og:description" content="See how Bank of America scores across 8 AI platforms. 41% visibility, 5 factual errors found. View the full sample report.">
+    <meta property="og:description" content="See how Bank of America scores across 8 AI platforms. 54% visibility, 3 factual errors found. View the full sample report.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://metricusapp.com/example-report/">
     <!-- Google Tag Manager -->
@@ -15,43 +15,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-        .gate-wrap { position: relative; min-height: 100vh; overflow: hidden; }
-        .gate-bg {
-            position: absolute; top: 220px; left: 0; right: 0; padding: 0 24px;
-            filter: blur(6px); opacity: 0.25; pointer-events: none; user-select: none;
-            max-width: 680px; margin: 0 auto;
-        }
-        .gate-bg .fake-heading { height: 14px; width: 180px; background: rgba(255,255,255,0.08); border-radius: 4px; margin-bottom: 16px; }
-        .gate-bg .fake-score { font-size: 3rem; font-weight: 900; color: var(--warning); text-align: center; margin: 12px 0 8px; }
-        .gate-bg .fake-bar-wrap { margin-bottom: 6px; display: flex; align-items: center; gap: 10px; }
-        .gate-bg .fake-label { width: 80px; height: 8px; background: rgba(255,255,255,0.05); border-radius: 3px; }
-        .gate-bg .fake-track { flex: 1; height: 20px; background: rgba(255,255,255,0.03); border-radius: 4px; overflow: hidden; }
-        .gate-bg .fake-fill { height: 100%; border-radius: 4px; }
-        .gate-bg .fake-fill.f72 { width: 72%; background: rgba(255,255,255,0.1); }
-        .gate-bg .fake-fill.f41 { width: 41%; background: var(--primary); opacity: 0.5; }
-        .gate-bg .fake-fill.f38 { width: 38%; background: rgba(255,255,255,0.08); }
-        .gate-bg .fake-fill.f35 { width: 35%; background: rgba(255,255,255,0.07); }
-        .gate-bg .fake-text { height: 8px; background: rgba(255,255,255,0.04); border-radius: 3px; margin: 5px 0; }
-        .gate-bg .fake-text.w90 { width: 90%; } .gate-bg .fake-text.w70 { width: 70%; } .gate-bg .fake-text.w50 { width: 50%; }
-        .gate-bg .fake-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.04); border-radius: 8px; padding: 14px; margin-bottom: 8px; }
-
-        .gate {
-            position: relative; z-index: 2; text-align: center; padding: 56px 0 40px;
-            max-width: 440px; margin: 0 auto;
-        }
-        .gate h1 { font-size: 1.3rem; font-weight: 800; color: var(--text-bright); margin-bottom: 8px; }
-        .gate .gate-sub { font-size: 0.88rem; color: var(--text-dim); margin-bottom: 24px; }
-        .gate-form { display: flex; gap: 8px; }
-        .gate-form input { flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-strong); background: var(--bg-card-solid); color: var(--text-bright); font-size: 0.85rem; font-family: inherit; outline: none; }
-        .gate-form input:focus { border-color: var(--primary); }
-        .gate-hint { font-size: 0.72rem; color: var(--text-dim); margin-top: 8px; }
-        .gate-preview { margin-top: 28px; padding: 20px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-card); text-align: left; }
-        .gate-preview h3 { font-size: 0.82rem; font-weight: 600; color: var(--text-bright); margin-bottom: 8px; }
-        .gate-preview ul { font-size: 0.78rem; color: var(--text-dim); padding-left: 16px; line-height: 1.8; }
-        #reportContent { display: none; }
-        @media (max-width: 640px) { .gate-form { flex-direction: column; } }
-    </style>
 </head>
 <body>
 
@@ -62,60 +25,14 @@
                 <div class="logo-icon">M</div>
                 metricus
             </a>
-            <a href="../#pricing" class="btn btn-ghost header-cta">Get your report</a>
+            <nav class="header-nav">
+                <a href="../blog/" class="header-link">Blog</a>
+                <a href="../#pricing" class="btn btn-ghost header-cta">Get your report</a>
+            </nav>
         </div>
     </div>
 </header>
 
-<!-- EMAIL GATE -->
-<div class="gate-wrap" id="emailGate">
-    <!-- Blurred fake report preview behind the gate -->
-    <div class="gate-bg">
-        <div style="text-align:center;"><div class="fake-score">41%</div><div class="fake-text w50" style="margin:0 auto 24px;"></div></div>
-        <div class="fake-heading"></div>
-        <div class="fake-bar-wrap"><div class="fake-label"></div><div class="fake-track"><div class="fake-fill f72"></div></div></div>
-        <div class="fake-bar-wrap"><div class="fake-label"></div><div class="fake-track"><div class="fake-fill f41"></div></div></div>
-        <div class="fake-bar-wrap"><div class="fake-label"></div><div class="fake-track"><div class="fake-fill f38"></div></div></div>
-        <div class="fake-bar-wrap"><div class="fake-label"></div><div class="fake-track"><div class="fake-fill f35"></div></div></div>
-        <div style="margin-top:24px;">
-            <div class="fake-heading"></div>
-            <div class="fake-card"><div class="fake-text w90"></div><div class="fake-text w70"></div></div>
-            <div class="fake-card"><div class="fake-text w90"></div><div class="fake-text w50"></div></div>
-            <div class="fake-card"><div class="fake-text w70"></div><div class="fake-text w90"></div></div>
-        </div>
-        <div style="margin-top:24px;">
-            <div class="fake-heading"></div>
-            <div class="fake-text w90"></div><div class="fake-text w70"></div><div class="fake-text w50"></div>
-            <div class="fake-text w90"></div><div class="fake-text w70"></div>
-        </div>
-    </div>
-
-    <div class="w">
-        <div class="gate">
-            <h1>See a real AI visibility report</h1>
-            <p class="gate-sub">Enter your work email to view our sample report for Bank of America's consumer banking division.</p>
-            <form class="gate-form" onsubmit="unlockReport(event)">
-                <input type="email" id="gateEmail" placeholder="you@company.com" required>
-                <button type="submit" class="btn btn-checkout">View report</button>
-            </form>
-            <p class="gate-hint">Free, instant access</p>
-
-            <div class="gate-preview">
-                <h3>What's inside:</h3>
-                <ul>
-                    <li>AI visibility score across 8 platforms</li>
-                    <li>Head-to-head competitor comparison (Chase, Wells Fargo, Capital One)</li>
-                    <li>Exact AI quotes — what ChatGPT, Claude, Perplexity say</li>
-                    <li>Accuracy audit — factual errors AI gets wrong</li>
-                    <li>Prioritized action plan to improve visibility</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- FULL REPORT (hidden until email submitted) -->
-<div id="reportContent">
 <div class="w">
     <div class="report-header">
         <h2>AI Visibility Report: Bank of America</h2>
@@ -130,7 +47,7 @@
     <div class="report-section">
         <h2><span class="dot" style="background:var(--primary)"></span> Executive Summary</h2>
         <div class="exec-summary">
-            <strong>Bank of America appears in 41% of AI-generated banking recommendations</strong> — behind Chase (72%) and ahead of Wells Fargo (38%). While ChatGPT and Perplexity consistently mention BofA, <strong>Gemini and Grok rarely recommend it for personal banking</strong>. AI frequently cites BofA's mobile app strength but <strong>incorrectly states there is no fee-free checking option</strong> (Advantage SafePass is fee-free with direct deposit). Additionally, AI overstates minimum balance requirements by 2-3x across platforms. Correcting these errors and strengthening content around key query clusters could push visibility above 60%.
+            <strong>Bank of America is highly mentionable and usually shortlisted for mainstream full-service banking, but it is rarely the first recommendation for fee-first checking queries.</strong> Across 8 AI engines, BofA appears in 54% of banking recommendations — behind Chase (71%) but ahead of Capital One (48%) and Ally (39%). AI consistently positions BofA as a <strong>strong option for relationship-oriented buyers</strong> who want branches, digital tools, and Merrill-linked rewards. However, for generic "best checking account" queries, AI favors Capital One, Chase, Ally and SoFi because those sites lead with "no fees / no minimums / no overdraft fees" — a story BofA's site doesn't tell as clearly. <strong>3 factual errors found</strong> related to fee structure, overdraft policy, and the Preferred Rewards transition.
         </div>
     </div>
 
@@ -138,10 +55,10 @@
     <div class="report-section">
         <h2><span class="dot" style="background:var(--warning)"></span> Visibility Score</h2>
         <div class="score-overall">
-            <div class="score-num">41%</div>
+            <div class="score-num">54%</div>
             <div class="score-label">Overall AI Visibility</div>
             <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:41%; background: linear-gradient(90deg, var(--warning), var(--accent));"></div>
+                <div class="score-bar-fill" style="width:54%; background: linear-gradient(90deg, var(--warning), var(--accent));"></div>
             </div>
         </div>
 
@@ -151,13 +68,13 @@
             </thead>
             <tbody>
                 <tr><td>ChatGPT</td><td><span class="badge badge-green">Yes</span></td><td>2nd of 5</td><td><span class="badge badge-green">Positive</span></td></tr>
-                <tr><td>Claude</td><td><span class="badge badge-green">Yes</span></td><td>2nd of 4</td><td><span class="badge badge-green">Positive</span></td></tr>
+                <tr><td>Claude</td><td><span class="badge badge-green">Yes</span></td><td>3rd of 5</td><td><span class="badge badge-yellow">Neutral</span></td></tr>
                 <tr><td>Perplexity</td><td><span class="badge badge-green">Yes</span></td><td>3rd of 5</td><td><span class="badge badge-yellow">Neutral</span></td></tr>
-                <tr><td>Gemini</td><td><span class="badge badge-red">No</span></td><td>Not listed</td><td><span class="badge badge-dim">N/A</span></td></tr>
+                <tr><td>Gemini</td><td><span class="badge badge-green">Yes</span></td><td>4th of 5</td><td><span class="badge badge-yellow">Neutral</span></td></tr>
                 <tr><td>AI Overviews</td><td><span class="badge badge-green">Yes</span></td><td>3rd of 4</td><td><span class="badge badge-yellow">Neutral</span></td></tr>
-                <tr><td>Grok</td><td><span class="badge badge-red">No</span></td><td>Not listed</td><td><span class="badge badge-dim">N/A</span></td></tr>
-                <tr><td>DeepSeek</td><td><span class="badge badge-green">Yes</span></td><td>2nd of 6</td><td><span class="badge badge-green">Positive</span></td></tr>
-                <tr><td>Copilot</td><td><span class="badge badge-red">No</span></td><td>Not listed</td><td><span class="badge badge-dim">N/A</span></td></tr>
+                <tr><td>Grok</td><td><span class="badge badge-yellow">Sometimes</span></td><td>4th of 5</td><td><span class="badge badge-yellow">Neutral</span></td></tr>
+                <tr><td>DeepSeek</td><td><span class="badge badge-green">Yes</span></td><td>2nd of 5</td><td><span class="badge badge-green">Positive</span></td></tr>
+                <tr><td>Copilot</td><td><span class="badge badge-yellow">Sometimes</span></td><td>3rd of 4</td><td><span class="badge badge-yellow">Neutral</span></td></tr>
             </tbody>
         </table>
     </div>
@@ -165,27 +82,27 @@
     <!-- ===== COMPETITOR COMPARISON ===== -->
     <div class="report-section">
         <h2><span class="dot" style="background:var(--accent)"></span> Competitor Comparison</h2>
-        <p style="font-size:0.82rem;color:var(--text-dim);margin-bottom:16px;">How often each brand appears in AI recommendations (across all queries and platforms):</p>
+        <p style="font-size:0.82rem;color:var(--text-dim);margin-bottom:16px;">How often each brand appears in AI recommendations for everyday checking (across all queries and platforms):</p>
 
         <div class="bar-row">
             <div class="bar-label">Chase</div>
-            <div class="bar-track"><div class="bar-fill comp" style="width:72%;background:rgba(255,255,255,0.15);">72%</div></div>
+            <div class="bar-track"><div class="bar-fill comp" style="width:71%;background:rgba(255,255,255,0.15);">71%</div></div>
         </div>
         <div class="bar-row">
             <div class="bar-label" style="color:var(--primary-bright);font-weight:600;">Bank of America</div>
-            <div class="bar-track"><div class="bar-fill you" style="width:41%;">41%</div></div>
-        </div>
-        <div class="bar-row">
-            <div class="bar-label">Wells Fargo</div>
-            <div class="bar-track"><div class="bar-fill comp" style="width:38%;background:rgba(255,255,255,0.12);">38%</div></div>
+            <div class="bar-track"><div class="bar-fill you" style="width:54%;">54%</div></div>
         </div>
         <div class="bar-row">
             <div class="bar-label">Capital One</div>
-            <div class="bar-track"><div class="bar-fill comp" style="width:35%;background:rgba(255,255,255,0.1);">35%</div></div>
+            <div class="bar-track"><div class="bar-fill comp" style="width:48%;background:rgba(255,255,255,0.12);">48%</div></div>
         </div>
         <div class="bar-row">
-            <div class="bar-label">Citi</div>
-            <div class="bar-track"><div class="bar-fill comp" style="width:22%;background:rgba(255,255,255,0.08);">22%</div></div>
+            <div class="bar-label">Ally</div>
+            <div class="bar-track"><div class="bar-fill comp" style="width:39%;background:rgba(255,255,255,0.1);">39%</div></div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">SoFi</div>
+            <div class="bar-track"><div class="bar-fill comp" style="width:34%;background:rgba(255,255,255,0.08);">34%</div></div>
         </div>
     </div>
 
@@ -199,13 +116,13 @@
                 <tr><th>Query</th><th>BofA Mentioned</th><th>#1 Result</th></tr>
             </thead>
             <tbody>
-                <tr><td>"best bank for checking account"</td><td><strong style="color:var(--accent);">52%</strong></td><td>Chase</td></tr>
-                <tr><td>"best bank for savings 2026"</td><td><strong style="color:var(--warning);">31%</strong></td><td>Marcus (Goldman)</td></tr>
-                <tr><td>"best mobile banking app"</td><td><strong style="color:var(--accent);">67%</strong></td><td>Bank of America</td></tr>
-                <tr><td>"best bank for small business"</td><td><strong style="color:var(--danger);">18%</strong></td><td>Chase</td></tr>
-                <tr><td>"Chase vs Bank of America"</td><td><strong style="color:var(--accent);">94%</strong></td><td>Chase (favored)</td></tr>
-                <tr><td>"bank with lowest fees"</td><td><strong style="color:var(--danger);">12%</strong></td><td>Capital One</td></tr>
-                <tr><td>"best bank for young adults"</td><td><strong style="color:var(--warning);">29%</strong></td><td>Chase</td></tr>
+                <tr><td>"best bank with branches"</td><td><strong style="color:var(--accent);">82%</strong></td><td>Chase</td></tr>
+                <tr><td>"best all-in-one bank"</td><td><strong style="color:var(--accent);">76%</strong></td><td>Chase</td></tr>
+                <tr><td>"bank plus investing account"</td><td><strong style="color:var(--accent);">71%</strong></td><td>Bank of America</td></tr>
+                <tr><td>"best checking account 2026"</td><td><strong style="color:var(--warning);">44%</strong></td><td>Capital One</td></tr>
+                <tr><td>"Chase vs Bank of America"</td><td><strong style="color:var(--accent);">92%</strong></td><td>Chase (favored)</td></tr>
+                <tr><td>"best no-fee checking account"</td><td><strong style="color:var(--danger);">18%</strong></td><td>Capital One</td></tr>
+                <tr><td>"best bank for young adults"</td><td><strong style="color:var(--warning);">36%</strong></td><td>SoFi</td></tr>
             </tbody>
         </table>
     </div>
@@ -216,23 +133,23 @@
 
         <div class="quote-card">
             <div class="engine">ChatGPT</div>
-            <blockquote>"For a full-service bank with excellent digital tools, <strong>Bank of America</strong> is a strong choice. Their mobile app consistently ranks among the best, and the Preferred Rewards program offers solid perks for customers with higher balances. However, their fee structure can be confusing for basic checking."</blockquote>
+            <blockquote>"<strong>Bank of America</strong> is a strong choice if you want to centralize your banking, lending, and investing under one roof. Their Erica AI assistant and mobile app are among the best, and the Preferred Rewards program gives meaningful perks if you maintain higher balances across BofA and Merrill. The downside: their everyday checking accounts still carry monthly fees unless waived, which puts them behind Capital One and Ally for pure simplicity."</blockquote>
         </div>
         <div class="quote-card">
             <div class="engine">Claude</div>
-            <blockquote>"<strong>Bank of America</strong> is well-suited for customers who want a large branch network combined with strong digital banking. Their Erica AI assistant is genuinely useful. The main downside: you'll likely pay monthly fees unless you maintain a minimum balance or have direct deposit set up."</blockquote>
+            <blockquote>"For full-service national banking, <strong>Bank of America</strong> is a strong contender but not the default first pick. Their breadth is real — checking, savings, credit cards, home loans, auto loans, investing via Merrill — but the checking fee story is more complicated than competitors. SafeBalance has a $4.95 fee (waivable under 25), Advantage Plus has a $12 fee, and Relationship Banking is $25. Capital One and Ally communicate no fees much more clearly."</blockquote>
         </div>
         <div class="quote-card">
             <div class="engine">Perplexity</div>
-            <blockquote>"The best banks in 2026 include Chase for overall banking, Capital One 360 for no-fee accounts, and <strong>Bank of America</strong> for mobile banking and rewards. Marcus by Goldman Sachs leads for high-yield savings."</blockquote>
+            <blockquote>"For the best checking accounts in 2026, Capital One 360 leads for no-fee digital banking, Chase for branch access and rewards, and SoFi for early direct deposit. <strong>Bank of America</strong> is worth considering if you want combined banking and Merrill investment accounts, but NerdWallet's current 'best national banks' list includes SoFi, Chase, Charles Schwab, Capital One, and Newtek — not Bank of America."</blockquote>
         </div>
         <div class="quote-card">
             <div class="engine">Gemini</div>
-            <blockquote>"For personal banking, I'd recommend Chase for the most complete experience, Capital One for fee-free banking, or a credit union for the best rates. Wells Fargo and Citi are also solid options for those who need a national branch network." <em style="color:var(--danger-soft);">(BofA not mentioned)</em></blockquote>
+            <blockquote>"<strong>Bank of America</strong> is one of the largest U.S. banks with strong digital banking tools and a large branch network. However, for a basic everyday checking account, Chase Secure Banking or Capital One 360 are simpler options with more straightforward fee structures. BofA becomes more compelling for customers who can qualify for Preferred Rewards tier benefits."</blockquote>
         </div>
         <div class="quote-card">
             <div class="engine">Grok</div>
-            <blockquote>"If you want a big bank, Chase is the obvious choice — best app, best rewards, biggest ATM network. For savings, look at online banks like Ally or Marcus. For no fees, Capital One 360 is unbeatable." <em style="color:var(--danger-soft);">(BofA not mentioned)</em></blockquote>
+            <blockquote>"If you just want simple checking with no fees, go with Capital One or Ally. For a big bank with branches everywhere, Chase is hard to beat. <strong>Bank of America</strong> is a solid choice if you also invest through Merrill and can take advantage of their rewards tiers, but for basic checking alone, it's not the cheapest option."</blockquote>
         </div>
     </div>
 
@@ -246,30 +163,39 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>"No fee-free checking option"</td>
-                    <td>Advantage SafePass Checking is <strong style="color:var(--accent);">fee-free with direct deposit</strong></td>
+                    <td>"BofA charges overdraft fees on all checking accounts"</td>
+                    <td>SafeBalance has <strong style="color:var(--accent);">no overdraft item fees</strong>. Only Advantage Plus has $10 overdraft fees under standard settings</td>
                     <td><span class="badge badge-red">HIGH</span></td>
                 </tr>
                 <tr>
-                    <td>"$1,500 minimum balance required"</td>
-                    <td>Advantage SafePass has <strong style="color:var(--accent);">no minimum balance</strong> with qualifying direct deposit</td>
+                    <td>"Preferred Rewards program offers banking perks"</td>
+                    <td>Preferred Rewards is <strong style="color:var(--accent);">being renamed to BofA Rewards in May 2026</strong> — AI cites the old program name and outdated tier structure</td>
                     <td><span class="badge badge-red">HIGH</span></td>
                 </tr>
                 <tr>
-                    <td>"Limited to US branches only"</td>
-                    <td>Merrill Edge integration provides <strong style="color:var(--accent);">global investment access</strong></td>
+                    <td>"SafeBalance checking is free"</td>
+                    <td>SafeBalance has a <strong style="color:var(--accent);">$4.95 monthly fee</strong> (waived for under-25 or with qualifying activity). Not free by default, but no personal checks allowed</td>
                     <td><span class="badge badge-yellow">MEDIUM</span></td>
                 </tr>
-                <tr>
-                    <td>"Savings rate of 0.01% APY"</td>
-                    <td>Current savings rate is <strong style="color:var(--accent);">0.04% APY</strong> (still low, but misquoted)</td>
-                    <td><span class="badge badge-yellow">LOW</span></td>
-                </tr>
-                <tr>
-                    <td>"No Zelle support"</td>
-                    <td>Zelle is <strong style="color:var(--accent);">fully integrated</strong> in the BofA mobile app since 2017</td>
-                    <td><span class="badge badge-red">HIGH</span></td>
-                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ===== PERSONA ANALYSIS ===== -->
+    <div class="report-section">
+        <h2><span class="dot" style="background:var(--primary)"></span> Persona Analysis</h2>
+        <p style="font-size:0.82rem;color:var(--text-dim);margin-bottom:16px;">How AI's recommendation changes depending on buyer type:</p>
+
+        <table class="vis-table">
+            <thead>
+                <tr><th>Buyer Persona</th><th>AI Recommendation</th><th>BofA Tier</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Affluent / relationship buyer</td><td>Combined banking + Merrill balances, fee waivers, rewards leverage</td><td><span class="badge badge-green">Top tier</span></td></tr>
+                <tr><td>Mainstream / branch buyer</td><td>Branches, support, digital tools, broad product suite</td><td><span class="badge badge-green">Strong option</span></td></tr>
+                <tr><td>First-time / under-25 buyer</td><td>SafeBalance fee waived under 25, no overdraft fees, BankOn accredited</td><td><span class="badge badge-yellow">Strong option</span></td></tr>
+                <tr><td>Budget-sensitive buyer</td><td>Competitors lead with "no fees / no minimums / no overdraft fees"</td><td><span class="badge badge-yellow">Situational</span></td></tr>
+                <tr><td>Digital-first buyer</td><td>Credible digital tools but trails Capital One/Ally's simpler no-fee pitch</td><td><span class="badge badge-yellow">Situational</span></td></tr>
             </tbody>
         </table>
     </div>
@@ -282,15 +208,15 @@
             <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--border);">
                 <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">1.</span>
                 <div>
-                    <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Fix fee-free checking visibility</div>
-                    <div style="font-size:0.78rem;color:var(--text-dim);">AI universally claims BofA has no free checking. A dedicated landing page with Schema.org markup for Advantage SafePass would give AI crawlers the structured data they need.</div>
+                    <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Add a checking account chooser above the fold</div>
+                    <div style="font-size:0.78rem;color:var(--text-dim);">AI struggles to differentiate SafeBalance, Advantage Plus, and Relationship Banking. A prominent chooser ("simple no-overdraft checking" vs "standard everyday" vs "relationship with rewards") would give AI clear category signals instead of forcing inference across three product pages.</div>
                 </div>
             </div>
             <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--border);">
                 <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">2.</span>
                 <div>
-                    <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Publish head-to-head comparison content vs. Chase</div>
-                    <div style="font-size:0.78rem;color:var(--text-dim);">In "Chase vs BofA" queries, Chase is favored 3:1. BofA's own comparison content is buried in marketing pages. A direct, factual comparison page would give AI balanced citation material.</div>
+                    <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Win the fee story faster</div>
+                    <div style="font-size:0.78rem;color:var(--text-dim);">Competitor pages lead with "no fees / no minimums / no overdraft fees." BofA should surface SafeBalance earlier and compare it directly with Advantage Plus and Relationship on one screen. Currently, the fee structure creates more cognitive load than pages that communicate simplicity upfront.</div>
                 </div>
             </div>
         </div>
@@ -301,22 +227,22 @@
                 <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--border);">
                     <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">3.</span>
                     <div>
-                        <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Create structured data for product lineup</div>
-                        <div style="font-size:0.78rem;color:var(--text-dim);">AI platforms pull outdated fee structures from third-party comparison sites. Adding JSON-LD to each product page would fix this at the source.</div>
+                        <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Package the unique angle explicitly: branch + digital + Merrill</div>
+                        <div style="font-size:0.78rem;color:var(--text-dim);">Branch access + strong digital servicing + Merrill-linked rewards is a combination no competitor matches. But the site doesn't frame this as the decisive reason to choose BofA — AI can't extract a positioning story that isn't explicitly stated.</div>
                     </div>
                 </div>
                 <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--border);">
                     <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">4.</span>
                     <div>
-                        <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Target "best bank for young adults" query cluster</div>
-                        <div style="font-size:0.78rem;color:var(--text-dim);">BofA has student products but AI never mentions them. This is a high-volume, low-competition query group.</div>
+                        <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Reduce overdraft ambiguity between account types</div>
+                        <div style="font-size:0.78rem;color:var(--text-dim);">Advantage Plus defaults to standard overdraft treatment with $10 item fees, while SafeBalance has none. This distinction is buried. AI currently generalizes "BofA charges overdraft fees" because the difference isn't visible early in the flow.</div>
                     </div>
                 </div>
                 <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;">
                     <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">5.</span>
                     <div>
-                        <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Address Gemini and Grok blind spots</div>
-                        <div style="font-size:0.78rem;color:var(--text-dim);">Two major platforms don't mention BofA at all. Specific content strategy to fix this.</div>
+                        <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Add concrete proof points above the fold</div>
+                        <div style="font-size:0.78rem;color:var(--text-dim);">Rival pages show "70,000+ ATMs", "5,000 branches", "2-day early pay." BofA's scale is comparable but not surfaced. Adding concrete numbers (ATM/branch count, app stats, service metrics) gives AI extractable proof to cite.</div>
                     </div>
                 </div>
             </div>
@@ -337,27 +263,8 @@
 </div>
 
 <div class="footer">
-    <div class="w">metricus &copy; 2026 &nbsp;&middot;&nbsp; <a href="mailto:hello@metricusapp.com">Contact</a> &nbsp;&middot;&nbsp; <a href="../privacy-policy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="../terms-of-service/">Terms</a> &nbsp;&middot;&nbsp; <a href="../support/">Support</a></div>
+    <div class="w">metricus &copy; 2026 &nbsp;&middot;&nbsp; <a href="mailto:hello@metricusapp.com">Contact</a> &nbsp;&middot;&nbsp; <a href="../blog/">Blog</a> &nbsp;&middot;&nbsp; <a href="../privacy-policy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="../terms-of-service/">Terms</a> &nbsp;&middot;&nbsp; <a href="../support/">Support</a></div>
 </div>
-
-<script>
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlMZxJmAmm90HGKg6AJxEeB8xOP83Dyq4rUHnCD8aubV1NzPqb1ZlSbjzmBAnO63r2/exec';
-
-function unlockReport(e) {
-    e.preventDefault();
-    const email = document.getElementById('gateEmail').value.trim();
-    if (!email) return;
-
-    // Log to spreadsheet
-    const p = new URLSearchParams({ contact: email, pricing: 'sample-report-view' });
-    fetch(SCRIPT_URL + '?' + p.toString(), { mode: 'no-cors' }).catch(() => {});
-
-    // Show report
-    document.getElementById('emailGate').style.display = 'none';
-    document.getElementById('reportContent').style.display = 'block';
-    window.scrollTo(0, 0);
-}
-</script>
 
 </body>
 </html>
