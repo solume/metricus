@@ -1,11 +1,9 @@
 /**
  * config.js — Central configuration
  *
- * Exports: SCRIPT_URL, STRIPE, TIER_INFO, FEATURES
+ * Exports: SCRIPT_URL, STRIPE, TIER_INFO
  *
- * Feature flags control which optional sections render.
- * Toggle any flag to false to disable a feature site-wide
- * without touching other files.
+ * Stripe payment links and tier metadata.
  */
 
 export const SCRIPT_URL =
@@ -21,16 +19,4 @@ export const TIER_INFO = {
   snapshot: { name: 'Snapshot',     price: '$49' },
   deepdive: { name: 'Deep Dive',   price: '$149' },
   arsenal:  { name: 'Full Arsenal', price: '$349' },
-};
-
-/** Feature flags — set false to hide a section globally */
-export const FEATURES = {
-  audience:             true,
-  freeLook:             true,
-  newsletter:           true,
-  scarcity:             true,
-  featuredTestimonial:  true,
-  blogTease:            true,
-  stickyCta:            true,
-  faq:                  true,
 };

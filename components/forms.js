@@ -9,7 +9,6 @@
  */
 
 import { $ } from '../modules/utils.js';
-import { state, ucParam } from '../modules/state.js';
 import { track } from '../modules/analytics.js';
 import { STRIPE } from '../modules/config.js';
 
@@ -18,7 +17,7 @@ function handleHeroSubmit(form) {
   var input = form.querySelector('input[type="email"]');
   var email = input.value;
   track(email, 'hero-email');
-  window.location.href = 'onboarding/?' + ucParam() + 'tier=deepdive&email=' + encodeURIComponent(email);
+  window.location.href = 'onboarding/?tier=deepdive&email=' + encodeURIComponent(email);
 }
 
 // ── Free look form ──
@@ -54,7 +53,7 @@ function handleNewsletterSubmit(form) {
 // ── Buy tier (pricing button click) ──
 function handleBuyTier(tier) {
   track('', 'funnel:tier-click:' + tier);
-  window.location.href = 'onboarding/?' + ucParam() + 'tier=' + tier;
+  window.location.href = 'onboarding/?tier=' + tier;
 }
 
 // ── Init: attach delegated listeners ──

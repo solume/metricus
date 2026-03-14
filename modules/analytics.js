@@ -8,15 +8,13 @@
  */
 
 import { SCRIPT_URL } from './config.js';
-import { state } from './state.js';
 
 /**
  * Send a tracking event to the backend spreadsheet.
- * Tags the event with the current use-case key.
  */
 export function track(email, data) {
-  var tagged = '[' + state.uc + '] ' + (data || 'unknown');
-  var p = new URLSearchParams({ contact: email || '', pricing: tagged, uc: state.uc });
+  var tagged = '[brand] ' + (data || 'unknown');
+  var p = new URLSearchParams({ contact: email || '', pricing: tagged });
   fetch(SCRIPT_URL + '?' + p.toString(), { mode: 'no-cors' }).catch(function () {});
 }
 

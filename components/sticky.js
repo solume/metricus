@@ -8,11 +8,8 @@
  */
 
 import { $ } from '../modules/utils.js';
-import { FEATURES } from '../modules/config.js';
 
 export function initSticky() {
-  if (!FEATURES.stickyCta) return;
-
   var sticky = $('sticky-cta');
   if (!sticky) return;
 
