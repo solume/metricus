@@ -17,3 +17,11 @@ initFaq();
 
 // 3. Sticky CTA visibility observer
 initSticky();
+
+// 4. Clone testimonial cards for infinite scroll animation
+// (keeps HTML clean for crawlers — only 6 unique cards in source)
+var track = document.getElementById('uc-testimonials');
+if (track) {
+  var cards = track.innerHTML;
+  track.insertAdjacentHTML('beforeend', cards);
+}

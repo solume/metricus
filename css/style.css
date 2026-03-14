@@ -510,7 +510,27 @@ header {
 /* ────── BLOG TEASE ────── */
 
 .blog-tease { padding: 40px 0 16px; }
-.blog-tease h3 { font-size: 0.88rem; font-weight: 700; color: var(--text-bright); margin-bottom: 14px; text-align: center; }
+.blog-tease h3 { font-size: 0.88rem; font-weight: 700; color: var(--text-bright); margin-bottom: 20px; text-align: center; }
+
+/* Featured blog tease card */
+.bt-featured {
+    display: block; text-decoration: none; max-width: 960px;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 24px; margin-bottom: 16px;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: var(--card-shadow);
+}
+.bt-featured:hover { border-color: var(--primary); transform: translateY(-2px); box-shadow: var(--card-shadow-hover); }
+.bt-featured-tag {
+    display: inline-block; font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--primary); background: rgba(99,102,241,0.08);
+    padding: 3px 8px; border-radius: 4px; margin-bottom: 10px;
+}
+.bt-featured h4 { font-size: 1rem; font-weight: 700; color: var(--text-bright); line-height: 1.35; margin-bottom: 6px; }
+.bt-featured p { font-size: 0.78rem; color: var(--text-dim); line-height: 1.55; margin-bottom: 10px; }
+.bt-featured-read { font-size: 0.75rem; color: var(--primary-bright); font-weight: 600; }
+
+/* Blog tease grid */
 .blog-tease-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 960px; }
 .blog-tease-card {
     background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
