@@ -7,14 +7,11 @@
  */
 
 import { SCRIPT_URL, STRIPE, TIER_INFO } from './config.js';
-import { UC_CONTENT } from '../content/index.js';
 import { state } from './state.js';
 import { track } from './analytics.js';
-import { $, h } from './utils.js';
+import { $ } from './utils.js';
 
-// ── Resolve onboarding content ──
-var C = UC_CONTENT[state.uc] || UC_CONTENT.brand;
-var OB = C.onboarding;
+// ── State ──
 var selectedTier = state.tier;
 var prefillEmail = state.email;
 
@@ -24,29 +21,6 @@ var profile = {
   size: '',
   trigger: '',
 };
-
-// ── Apply use-case labels ──
-h($('ob-h1'), OB.h1);
-h($('ob-sub'), OB.sub);
-h($('ob-step1-h2'), OB.step1h2);
-h($('ob-step1-desc'), OB.step1desc);
-h($('ob-brand-label'), OB.brandLabel);
-$('brandName').placeholder = OB.brandPlaceholder;
-$('brandUrl').placeholder = OB.urlPlaceholder;
-h($('ob-desc-label'), OB.descLabel);
-$('brandDesc').placeholder = OB.descPlaceholder;
-h($('ob-step2-h2'), OB.step2h2);
-h($('ob-step2-desc'), OB.step2desc);
-h($('ob-comp-label'), OB.compLabel);
-$('compAll').placeholder = OB.compPlaceholder;
-h($('ob-step3-h2'), OB.step3h2);
-h($('ob-step3-desc'), OB.step3desc);
-h($('ob-queries-label'), OB.queriesLabel);
-if (OB.queriesHint) h($('ob-queries-hint'), OB.queriesHint);
-h($('ob-email-label'), OB.emailLabel);
-if (OB.step2SkipText) $('ob-skip-link').textContent = OB.step2SkipText;
-if (OB.freeLookH2) h($('ob-freelook-h2'), OB.freeLookH2);
-if (OB.freeLookDesc) h($('ob-freelook-desc'), OB.freeLookDesc);
 
 // ── Set tier info ──
 function applyTier(tier) {
@@ -142,9 +116,9 @@ function goStep(n) {
     // Adapt step 3 based on profile
     adaptStep3();
 
-    // Auto-generate queries if empty (skip for data variant — uses free-form context)
+    // Auto-generate queries if empty
     var q = $('queries');
-    if (!q.value.trim() && state.uc !== 'data') {
+    if (!q.value.trim()) {
       var brand = $('brandName').value.trim() || '[Your brand]';
       var comps = $('compAll').value.trim();
       var comp1 = comps ? comps.split(/[,\n]/)[0].trim() : '[Competitor]';
@@ -196,7 +170,7 @@ function submitAndCheckout() {
   var comps = $('compAll').value.trim().replace(/\n/g, ', ');
   var queries = $('queries').value.trim();
   var details = [
-    selectedTier.toUpperCase(), 'UC:' + state.uc,
+    selectedTier.toUpperCase(),
     'Profile: ' + profileTag(),
     'Brand: ' + brand, url ? 'URL: ' + url : '', desc ? 'Desc: ' + desc : '',
     comps ? 'Competitors: ' + comps : '',
@@ -226,10 +200,10 @@ function submitFreeLook() {
   var url = $('brandUrl').value.trim();
   var comps = $('compAll').value.trim();
   var details = [
-    'FREE_LOOK', 'UC:' + state.uc,
+    'FREE_LOOK',
     'Profile: ' + profileTag(),
     'Company: ' + brand, url ? 'URL: ' + url : '',
-    comps ? 'PainPoints: ' + comps.replace(/\n/g, ', ') : ''
+    comps ? 'Competitors: ' + comps.replace(/\n/g, ', ') : ''
   ].filter(Boolean).join(' // ');
 
   track(email, details);
