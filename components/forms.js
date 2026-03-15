@@ -12,13 +12,13 @@ import { $ } from '../modules/utils.js';
 import { track } from '../modules/analytics.js';
 import { STRIPE } from '../modules/config.js';
 
-// ── Hero email form ──
+// ── Hero URL form ──
 function handleHeroSubmit(form) {
-  var input = form.querySelector('input[type="email"]');
-  var email = input.value;
-  track(email, 'hero-email');
-  // Store email for pricing buttons to pick up
-  try { sessionStorage.setItem('metricus_email', email); } catch (e) {}
+  var input = form.querySelector('#heroUrl');
+  var website = input.value.trim();
+  track(website, 'hero-url');
+  // Store website for pricing buttons to pick up
+  try { sessionStorage.setItem('metricus_website', website); } catch (e) {}
   // Scroll to pricing so user picks a tier
   var pricing = document.getElementById('pricing');
   if (pricing) {
@@ -58,11 +58,11 @@ function handleNewsletterSubmit(form) {
 
 // ── Buy tier (pricing button click) ──
 function handleBuyTier(tier) {
-  var email = '';
-  try { email = sessionStorage.getItem('metricus_email') || ''; } catch (e) {}
-  track(email, 'funnel:tier-click:' + tier);
+  var website = '';
+  try { website = sessionStorage.getItem('metricus_website') || ''; } catch (e) {}
+  track(website, 'funnel:tier-click:' + tier);
   var url = 'onboarding/?tier=' + tier;
-  if (email) url += '&email=' + encodeURIComponent(email);
+  if (website) url += '&website=' + encodeURIComponent(website);
   window.location.href = url;
 }
 
