@@ -14,6 +14,7 @@ import { $ } from './utils.js';
 // ── State ──
 var selectedTier = state.tier;
 var prefillEmail = state.email;
+var prefillWebsite = state.website;
 
 // ── Profile state ──
 var profile = {
@@ -35,6 +36,7 @@ function applyTier(tier) {
 applyTier(selectedTier);
 
 if (prefillEmail) $('obEmail').value = prefillEmail;
+if (prefillWebsite) $('brandUrl').value = prefillWebsite;
 
 // ── Funnel log ──
 track(prefillEmail, 'funnel:onboard-start:' + selectedTier);
@@ -93,7 +95,7 @@ function adaptStep3() {
 
   var summaryEl = $('orderSummary');
   if (summaryEl) {
-    summaryEl.innerHTML = '<span id="summaryTier">' + (TIER_INFO[selectedTier] || TIER_INFO.deepdive).name + '</span> &mdash; <span id="summaryPrice">' + (TIER_INFO[selectedTier] || TIER_INFO.deepdive).price + '</span> &middot; PDF in 24h &middot; Full refund if fewer than 3 actionable insights' + summaryExtra;
+    summaryEl.innerHTML = '<span id="summaryTier">' + (TIER_INFO[selectedTier] || TIER_INFO.deepdive).name + '</span> &mdash; <span id="summaryPrice">' + (TIER_INFO[selectedTier] || TIER_INFO.deepdive).price + '</span> &middot; PDF by email &middot; Full refund if fewer than 3 actionable insights' + summaryExtra;
   }
 
 }

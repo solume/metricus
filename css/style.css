@@ -233,6 +233,134 @@ header {
 .proof-report-link { font-size: 0.75rem; color: var(--primary); font-weight: 600; margin-top: 10px; }
 @media (max-width: 640px) { .proof-block { grid-template-columns: 1fr; gap: 20px; } }
 
+/* ────── REPORT PREVIEW (visual sample report) ────── */
+
+.report-preview-link { text-decoration: none; display: block; }
+.report-preview { padding: 16px 0 40px; max-width: 780px; margin: 0 auto; }
+.report-preview-label {
+    font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--primary); text-align: center; margin-bottom: 16px;
+}
+.report-preview-frame {
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px;
+    padding: 24px 28px; box-shadow: var(--card-shadow);
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.report-preview-link:hover .report-preview-frame {
+    border-color: var(--primary); transform: translateY(-2px); box-shadow: var(--card-shadow-hover);
+}
+.report-preview-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--border);
+}
+.rp-brand { display: flex; align-items: center; gap: 10px; }
+.rp-logo {
+    width: 32px; height: 32px; border-radius: 8px; background: var(--primary);
+    color: #fff; font-weight: 800; font-size: 0.85rem;
+    display: flex; align-items: center; justify-content: center;
+}
+.rp-title { font-size: 0.78rem; font-weight: 700; color: var(--text-bright); }
+.rp-subtitle { font-size: 0.7rem; color: var(--text-dim); }
+.rp-score-wrap { text-align: right; }
+.rp-score { font-size: 2rem; font-weight: 900; letter-spacing: -0.03em; line-height: 1; }
+.rp-score-label { font-size: 0.65rem; color: var(--text-dim); margin-top: 2px; }
+.rp-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
+.rp-card {
+    background: var(--bg-warm); border-radius: 10px; padding: 12px 14px;
+    border: 1px solid var(--border);
+}
+.rp-card-label { font-size: 0.6rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+.rp-card-value { font-size: 0.95rem; font-weight: 800; color: var(--text-bright); margin-bottom: 2px; }
+.rp-card-detail { font-size: 0.65rem; color: var(--text-dim); }
+.rp-quotes { margin-bottom: 14px; }
+.rp-quote {
+    font-size: 0.72rem; color: var(--text-dim); line-height: 1.6;
+    padding: 8px 0; border-bottom: 1px solid var(--border); font-style: italic;
+}
+.rp-quote:last-child { border-bottom: none; }
+.rp-quote-engine {
+    font-style: normal; font-weight: 700; color: var(--text);
+    font-size: 0.65rem; margin-right: 6px;
+}
+.rp-redacted {
+    display: inline-block; background: var(--text-bright); border-radius: 3px;
+    width: 70px; height: 12px; vertical-align: middle; opacity: 0.15;
+}
+.rp-redacted-short { width: 45px; }
+.rp-cta { font-size: 0.78rem; color: var(--primary); font-weight: 600; text-align: center; padding-top: 4px; }
+@media (max-width: 640px) {
+    .rp-grid { grid-template-columns: repeat(2, 1fr); }
+    .report-preview-frame { padding: 18px 16px; }
+    .rp-score { font-size: 1.5rem; }
+}
+
+/* ────── TRUST BADGES ────── */
+
+.trust-badges { text-align: center; padding: 8px 0 0; }
+.trust-badges-label { font-size: 0.72rem; color: var(--text-dim); margin-bottom: 10px; font-weight: 500; }
+.trust-badges-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
+.trust-badge {
+    font-size: 0.68rem; font-weight: 600; color: var(--text-dim);
+    background: var(--bg-card); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 20px;
+}
+
+/* ────── WHO THIS IS FOR ────── */
+
+.who-for { padding: 48px 0 40px; }
+.who-for h2 {
+    font-size: 1.3rem; font-weight: 700; color: var(--text-bright);
+    text-align: center; margin-bottom: 6px; letter-spacing: -0.02em;
+}
+.who-for-sub {
+    text-align: center; color: var(--text-dim); font-size: 0.85rem;
+    margin-bottom: 28px; max-width: 520px; margin-left: auto; margin-right: auto;
+}
+.who-for-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.who-for-card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 22px 20px; box-shadow: var(--card-shadow);
+}
+.who-for-icon { font-size: 0.5rem; color: var(--primary); margin-bottom: 10px; }
+.who-for-card h3 { font-size: 0.85rem; font-weight: 700; color: var(--text-bright); margin-bottom: 6px; }
+.who-for-card p { font-size: 0.78rem; color: var(--text-dim); line-height: 1.55; }
+@media (max-width: 640px) { .who-for-grid { grid-template-columns: 1fr; } }
+
+/* ────── WHY ONE-TIME ────── */
+
+.why-onetime { padding: 48px 0 40px; }
+.why-onetime h2 {
+    font-size: 1.3rem; font-weight: 700; color: var(--text-bright);
+    text-align: center; margin-bottom: 24px; letter-spacing: -0.02em;
+}
+.why-onetime-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+.compare-col { border-radius: 12px; padding: 22px; }
+.compare-them { background: #fef2f2; border: 1px solid rgba(220,38,38,0.1); }
+.compare-us { background: var(--accent-soft); border: 1px solid rgba(5,150,105,0.12); }
+.compare-label { font-size: 0.82rem; font-weight: 700; margin-bottom: 12px; }
+.compare-them .compare-label { color: var(--danger); }
+.compare-us .compare-label { color: var(--accent); }
+.compare-col ul { list-style: none; padding: 0; }
+.compare-col li {
+    font-size: 0.78rem; color: var(--text); padding: 4px 0 4px 20px;
+    position: relative; line-height: 1.55;
+}
+.compare-them li::before { content: "\2715"; position: absolute; left: 0; color: var(--danger); font-weight: 700; font-size: 0.72rem; }
+.compare-us li::before { content: "\2713"; position: absolute; left: 0; color: var(--accent); font-weight: 700; font-size: 0.72rem; }
+.why-onetime-bottom {
+    font-size: 0.82rem; color: var(--text-dim); text-align: center;
+    max-width: 520px; margin: 0 auto; line-height: 1.6;
+}
+.why-onetime-bottom em { font-style: italic; color: var(--text-bright); }
+@media (max-width: 640px) { .why-onetime-compare { grid-template-columns: 1fr; } }
+
+/* ────── TESTIMONIAL RESULT ────── */
+
+.testimonial-result {
+    font-size: 0.68rem; font-weight: 700; color: var(--accent);
+    margin-top: 6px;
+}
+
 /* ────── AUDIENCE (Who this is for / not for) ────── */
 
 .audience { padding: 48px 0; }
@@ -375,7 +503,7 @@ header {
 
 /* ────── HOW IT WORKS ────── */
 
-.how { padding: 56px 0; }
+.how { padding: 48px 0 40px; }
 .how h2 {
     font-size: 1.3rem; font-weight: 700; color: var(--text-bright);
     margin-bottom: 6px; text-align: center; letter-spacing: -0.02em;
@@ -498,7 +626,7 @@ header {
 
 /* ────── TESTIMONIALS ────── */
 
-.testimonials { padding: 40px 0; overflow: hidden; }
+.testimonials { padding: 48px 0; overflow: hidden; }
 .testimonial-track-wrapper { overflow: hidden; margin-top: 20px; }
 .testimonial-track {
     display: flex; gap: 16px;
@@ -554,7 +682,7 @@ header {
 
 /* ────── BLOG TEASE ────── */
 
-.blog-tease { padding: 40px 0 16px; }
+.blog-tease { padding: 48px 0 16px; }
 .blog-tease h3 { font-size: 0.88rem; font-weight: 700; color: var(--text-bright); margin-bottom: 20px; text-align: center; }
 
 /* Featured blog tease card */

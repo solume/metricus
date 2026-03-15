@@ -9,6 +9,7 @@
  *
  * state.tier    — selected pricing tier key
  * state.email   — prefilled email from URL
+ * state.website — prefilled website from URL
  */
 
 // ── Event bus ──
@@ -33,4 +34,5 @@ const params = new URLSearchParams(window.location.search);
 export const state = {
   tier:    params.get('tier') || 'deepdive',
   email:   params.get('email') || '',
+  website: params.get('website') || '',
 };
