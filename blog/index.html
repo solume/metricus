@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <title>Blog — Metricus</title>
     <meta name="description" content="Research on AI visibility, GEO (Generative Engine Optimization), AEO, and LLM visibility — how AI chatbots recommend brands, and what you can do about it.">
     <meta property="og:title" content="Blog — Metricus">
@@ -129,9 +130,14 @@
                 <div class="logo-icon">M</div>
                 metricus
             </a>
+            <button class="nav-toggle" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
             <nav class="header-nav">
-                <a href="../blog/" class="header-link">Blog</a>
-                <a href="../#pricing" class="btn btn-ghost header-cta">Get your report</a>
+                <a href="../#how-it-works" class="header-link">How It Works</a>
+                <a href="../example-report/" class="header-link">Sample Report</a>
+                <a href="./" class="header-link active">Blog</a>
+                <a href="../#pricing" class="btn btn-ghost header-cta">Get Your Report</a>
             </nav>
         </div>
     </div>
@@ -180,7 +186,7 @@
         <a href="ai-visibility-tools-compared/" class="blog-card">
             <div class="bc-tag">Buyer's Guide</div>
             <h3>AI Visibility Tools Compared: $49 vs $300/Month</h3>
-            <div class="bc-desc">We compare 10 AI visibility platforms by what you actually get — coverage, accuracy audits, action plans, and pricing.</div>
+            <div class="bc-desc">We compare 10 AI visibility platforms by what you actually get — coverage, accuracy checks, action plans, and pricing.</div>
             <div class="bc-footer">
                 <span class="bc-date">March 2026</span>
                 <span class="bc-read">Read &rarr;</span>
@@ -207,7 +213,7 @@
         <a href="ai-visibility-scores-explained/" class="blog-card">
             <div class="bc-tag">Methodology</div>
             <h3>How AI Visibility Scores Actually Work</h3>
-            <div class="bc-desc">AI visibility scores vary wildly between tools. We explain how they're calculated, why nondeterminism matters, and what a meaningful score looks like.</div>
+            <div class="bc-desc">AI visibility scores vary wildly between tools. We explain how they're calculated, why AI gives different answers every time, and what a meaningful score looks like.</div>
             <div class="bc-footer">
                 <span class="bc-date">March 2026</span>
                 <span class="bc-read">Read &rarr;</span>

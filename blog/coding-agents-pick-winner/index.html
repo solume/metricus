@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
     <title>We Gave 6 AI Agents a Task. Only 1 Picked the Market Leader. — Metricus</title>
     <meta name="description" content="We told Operator, Codex, Claude Code, and 3 other agents to complete real tasks. The results reveal who agents actually choose — and who they skip.">
     <meta property="og:title" content="We Gave 6 AI Agents a Task — Metricus">
@@ -34,8 +35,19 @@
 <header>
     <div class="w-wide">
         <div class="header-inner">
-            <a href="../../?uc=coding" class="logo"><div class="logo-icon">M</div> metricus</a>
-            <a href="../../?uc=coding#pricing" class="btn btn-ghost header-cta">Get your report</a>
+            <a href="../../" class="logo">
+                <div class="logo-icon">M</div>
+                metricus
+            </a>
+            <button class="nav-toggle" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+            <nav class="header-nav">
+                <a href="../../#how-it-works" class="header-link">How It Works</a>
+                <a href="../../example-report/" class="header-link">Sample Report</a>
+                <a href="../../blog/" class="header-link active">Blog</a>
+                <a href="../../#pricing" class="btn btn-ghost header-cta">Get Your Report</a>
+            </nav>
         </div>
     </div>
 </header>
@@ -43,7 +55,7 @@
     <div class="article">
         <div class="article-tag">Research</div>
         <h1>We Gave 6 AI Agents a Task. Only 1 Picked the Market Leader.</h1>
-        <div class="article-meta">March 2026 &middot; 5 min read</div>
+        <div class="article-meta"><strong>Metricus Research</strong> · March 2026 · 5 min read</div>
         <div class="article-body">
             <p>We ran a simple experiment: give OpenAI Operator, Codex, Claude Code, Devin, Gemini CLI, and GitHub Copilot real tasks and see which services and tools they choose.</p>
             <p><strong>"Book me a hotel near downtown Chicago for this weekend."</strong></p>

@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample Report: Bank of America AI Visibility — Metricus</title>
-    <meta name="description" content="See a real AI visibility report. How Bank of America scores across ChatGPT, Claude, Perplexity and 5 other AI platforms — visibility scores, quotes, errors, and action plan.">
-    <meta property="og:title" content="Sample AI Visibility Report: Bank of America — Metricus">
-    <meta property="og:description" content="See how Bank of America scores across 8 AI platforms. 54% visibility, 3 factual errors found. View the full sample report.">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <title>Sample Report: Boutique Hotel AI Visibility — Metricus</title>
+    <meta name="description" content="See a real AI visibility report. A boutique hotel scored 0% visibility across 8 AI platforms — completely invisible. View the full sample report with competitor analysis, AI quotes, and action plan.">
+    <meta property="og:title" content="Sample AI Visibility Report: Boutique Hotel — Metricus">
+    <meta property="og:description" content="This boutique hotel scored 0% across 8 AI platforms. AI doesn't know it exists. See the full report — and find out if the same is true for your brand.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://metricusapp.com/example-report/">
+    <link rel="canonical" href="https://metricusapp.com/example-report/">
     <!-- Google Tag Manager -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .redacted { background: #1a1a2e; color: #1a1a2e; border-radius: 3px; padding: 0 6px; user-select: none; display: inline-block; min-width: 80px; }
+        .redacted-wide { min-width: 140px; }
+        .redacted-short { min-width: 50px; }
+        .report-alert { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.2); border-radius: 10px; padding: 20px 24px; margin-bottom: 24px; font-size: 0.85rem; color: var(--text); line-height: 1.7; }
+        .report-alert strong { color: var(--danger); }
+    </style>
 </head>
 <body>
 
@@ -25,9 +34,14 @@
                 <div class="logo-icon">M</div>
                 metricus
             </a>
+            <button class="nav-toggle" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
             <nav class="header-nav">
+                <a href="../#how-it-works" class="header-link">How It Works</a>
+                <a href="./" class="header-link active">Sample Report</a>
                 <a href="../blog/" class="header-link">Blog</a>
-                <a href="../#pricing" class="btn btn-ghost header-cta">Get your report</a>
+                <a href="../#pricing" class="btn btn-ghost header-cta">Get Your Report</a>
             </nav>
         </div>
     </div>
@@ -35,30 +49,36 @@
 
 <div class="w">
     <div class="report-header">
-        <h2>AI Visibility Report: Bank of America</h2>
-        <div class="report-date">Sample Report &middot; March 2026</div>
+        <h2>AI Visibility Report: <span class="redacted redacted-wide">████████████</span></h2>
+        <div class="report-date">Sample Report &middot; Boutique Hotel &middot; March 2026</div>
     </div>
 
     <div class="report-banner">
-        This is a sample report. <a href="../#pricing">Get the real report for YOUR brand.</a>
+        This is a real report (anonymized). <a href="../#pricing">Get the full report for YOUR brand.</a>
+    </div>
+
+    <div class="report-alert">
+        <strong>Critical finding:</strong> This business is completely invisible to AI. Across 8 major AI platforms and 200+ queries, not a single platform mentions <span class="redacted redacted-short">████</span> by name. Every recommendation in this category goes to competitors.
     </div>
 
     <!-- ===== EXECUTIVE SUMMARY ===== -->
     <div class="report-section">
-        <h2><span class="dot" style="background:var(--primary)"></span> Executive Summary</h2>
+        <h2><span class="dot" style="background:var(--danger)"></span> Executive Summary</h2>
         <div class="exec-summary">
-            <strong>Bank of America is highly mentionable and usually shortlisted for mainstream full-service banking, but it is rarely the first recommendation for fee-first checking queries.</strong> Across 8 AI engines, BofA appears in 54% of banking recommendations — behind Chase (71%) but ahead of Capital One (48%) and Ally (39%). AI consistently positions BofA as a <strong>strong option for relationship-oriented buyers</strong> who want branches, digital tools, and Merrill-linked rewards. However, for generic "best checking account" queries, AI favors Capital One, Chase, Ally and SoFi because those sites lead with "no fees / no minimums / no overdraft fees" — a story BofA's site doesn't tell as clearly. <strong>3 factual errors found</strong> related to fee structure, overdraft policy, and the Preferred Rewards transition.
+            <strong><span class="redacted redacted-wide">████████████</span> has 0% AI visibility.</strong> Across 8 AI platforms, the hotel is never mentioned, never recommended, and never compared — not even unfavorably. When travelers ask AI for boutique hotel recommendations in <span class="redacted">████████</span>, London, every platform recommends the same 4–6 competitors. <span class="redacted redacted-wide">████████████</span> doesn't exist in AI's world.
+            <br><br>
+            This isn't a positioning problem — it's an <strong>existence problem</strong>. AI platforms have no structured data, no third-party reviews in parseable format, and no comparison content to surface. The hotel's website loads critical details (rooms, pricing, availability) via JavaScript that AI crawlers cannot read. <strong>5 accuracy gaps identified</strong> — information AI should know but doesn't, leaving a vacuum that competitors fill by default.
         </div>
     </div>
 
     <!-- ===== VISIBILITY SCORE ===== -->
     <div class="report-section">
-        <h2><span class="dot" style="background:var(--warning)"></span> Visibility Score</h2>
+        <h2><span class="dot" style="background:var(--danger)"></span> Visibility Score</h2>
         <div class="score-overall">
-            <div class="score-num">54%</div>
+            <div class="score-num" style="color:var(--danger);">0%</div>
             <div class="score-label">Overall AI Visibility</div>
             <div class="score-bar-bg">
-                <div class="score-bar-fill" style="width:54%; background: linear-gradient(90deg, var(--warning), var(--accent));"></div>
+                <div class="score-bar-fill" style="width:2%; background: var(--danger);"></div>
             </div>
         </div>
 
@@ -67,14 +87,14 @@
                 <tr><th>AI Platform</th><th>Mentioned</th><th>Position</th><th>Sentiment</th></tr>
             </thead>
             <tbody>
-                <tr><td>ChatGPT</td><td><span class="badge badge-green">Yes</span></td><td>2nd of 5</td><td><span class="badge badge-green">Positive</span></td></tr>
-                <tr><td>Claude</td><td><span class="badge badge-green">Yes</span></td><td>3rd of 5</td><td><span class="badge badge-yellow">Neutral</span></td></tr>
-                <tr><td>Perplexity</td><td><span class="badge badge-green">Yes</span></td><td>3rd of 5</td><td><span class="badge badge-yellow">Neutral</span></td></tr>
-                <tr><td>Gemini</td><td><span class="badge badge-green">Yes</span></td><td>4th of 5</td><td><span class="badge badge-yellow">Neutral</span></td></tr>
-                <tr><td>AI Overviews</td><td><span class="badge badge-green">Yes</span></td><td>3rd of 4</td><td><span class="badge badge-yellow">Neutral</span></td></tr>
-                <tr><td>Grok</td><td><span class="badge badge-yellow">Sometimes</span></td><td>4th of 5</td><td><span class="badge badge-yellow">Neutral</span></td></tr>
-                <tr><td>DeepSeek</td><td><span class="badge badge-green">Yes</span></td><td>2nd of 5</td><td><span class="badge badge-green">Positive</span></td></tr>
-                <tr><td>Copilot</td><td><span class="badge badge-yellow">Sometimes</span></td><td>3rd of 4</td><td><span class="badge badge-yellow">Neutral</span></td></tr>
+                <tr><td>ChatGPT</td><td><span class="badge badge-red">No</span></td><td>—</td><td>—</td></tr>
+                <tr><td>Claude</td><td><span class="badge badge-red">No</span></td><td>—</td><td>—</td></tr>
+                <tr><td>Perplexity</td><td><span class="badge badge-red">No</span></td><td>—</td><td>—</td></tr>
+                <tr><td>Gemini</td><td><span class="badge badge-red">No</span></td><td>—</td><td>—</td></tr>
+                <tr><td>AI Overviews</td><td><span class="badge badge-red">No</span></td><td>—</td><td>—</td></tr>
+                <tr><td>Grok</td><td><span class="badge badge-red">No</span></td><td>—</td><td>—</td></tr>
+                <tr><td>DeepSeek</td><td><span class="badge badge-red">No</span></td><td>—</td><td>—</td></tr>
+                <tr><td>Copilot</td><td><span class="badge badge-red">No</span></td><td>—</td><td>—</td></tr>
             </tbody>
         </table>
     </div>
@@ -82,99 +102,111 @@
     <!-- ===== COMPETITOR COMPARISON ===== -->
     <div class="report-section">
         <h2><span class="dot" style="background:var(--accent)"></span> Competitor Comparison</h2>
-        <p style="font-size:0.82rem;color:var(--text-dim);margin-bottom:16px;">How often each brand appears in AI recommendations for everyday checking (across all queries and platforms):</p>
+        <p style="font-size:0.82rem;color:var(--text-dim);margin-bottom:16px;">How often each brand appears in AI recommendations for boutique hotels in this area (across all queries and platforms):</p>
 
         <div class="bar-row">
-            <div class="bar-label">Chase</div>
-            <div class="bar-track"><div class="bar-fill comp" style="width:71%;background:rgba(255,255,255,0.15);">71%</div></div>
+            <div class="bar-label"><span class="redacted">████████</span></div>
+            <div class="bar-track"><div class="bar-fill comp" style="width:72%;background:rgba(255,255,255,0.15);">72%</div></div>
         </div>
         <div class="bar-row">
-            <div class="bar-label" style="color:var(--primary-bright);font-weight:600;">Bank of America</div>
-            <div class="bar-track"><div class="bar-fill you" style="width:54%;">54%</div></div>
+            <div class="bar-label"><span class="redacted">████████</span></div>
+            <div class="bar-track"><div class="bar-fill comp" style="width:65%;background:rgba(255,255,255,0.12);">65%</div></div>
         </div>
         <div class="bar-row">
-            <div class="bar-label">Capital One</div>
-            <div class="bar-track"><div class="bar-fill comp" style="width:48%;background:rgba(255,255,255,0.12);">48%</div></div>
+            <div class="bar-label"><span class="redacted">████████</span></div>
+            <div class="bar-track"><div class="bar-fill comp" style="width:58%;background:rgba(255,255,255,0.1);">58%</div></div>
         </div>
         <div class="bar-row">
-            <div class="bar-label">Ally</div>
-            <div class="bar-track"><div class="bar-fill comp" style="width:39%;background:rgba(255,255,255,0.1);">39%</div></div>
+            <div class="bar-label"><span class="redacted">████████</span></div>
+            <div class="bar-track"><div class="bar-fill comp" style="width:44%;background:rgba(255,255,255,0.08);">44%</div></div>
         </div>
         <div class="bar-row">
-            <div class="bar-label">SoFi</div>
-            <div class="bar-track"><div class="bar-fill comp" style="width:34%;background:rgba(255,255,255,0.08);">34%</div></div>
+            <div class="bar-label" style="color:var(--danger);font-weight:600;"><span class="redacted redacted-wide">████████████</span></div>
+            <div class="bar-track"><div class="bar-fill you" style="width:2%;background:var(--danger);">0%</div></div>
         </div>
     </div>
 
     <!-- ===== QUERY BREAKDOWN ===== -->
     <div class="report-section">
         <h2><span class="dot" style="background:var(--primary)"></span> Query Breakdown</h2>
-        <p style="font-size:0.82rem;color:var(--text-dim);margin-bottom:16px;">BofA visibility by query type (% of responses that mention the brand):</p>
+        <p style="font-size:0.82rem;color:var(--text-dim);margin-bottom:16px;">What happens when travelers ask AI for recommendations in this category:</p>
 
         <table class="vis-table">
             <thead>
-                <tr><th>Query</th><th>BofA Mentioned</th><th>#1 Result</th></tr>
+                <tr><th>Query</th><th>Mentioned</th><th>AI's Top Pick</th></tr>
             </thead>
             <tbody>
-                <tr><td>"best bank with branches"</td><td><strong style="color:var(--accent);">82%</strong></td><td>Chase</td></tr>
-                <tr><td>"best all-in-one bank"</td><td><strong style="color:var(--accent);">76%</strong></td><td>Chase</td></tr>
-                <tr><td>"bank plus investing account"</td><td><strong style="color:var(--accent);">71%</strong></td><td>Bank of America</td></tr>
-                <tr><td>"best checking account 2026"</td><td><strong style="color:var(--warning);">44%</strong></td><td>Capital One</td></tr>
-                <tr><td>"Chase vs Bank of America"</td><td><strong style="color:var(--accent);">92%</strong></td><td>Chase (favored)</td></tr>
-                <tr><td>"best no-fee checking account"</td><td><strong style="color:var(--danger);">18%</strong></td><td>Capital One</td></tr>
-                <tr><td>"best bank for young adults"</td><td><strong style="color:var(--warning);">36%</strong></td><td>SoFi</td></tr>
+                <tr><td>"best boutique hotels in <span class="redacted redacted-short">████</span>"</td><td><strong style="color:var(--danger);">0%</strong></td><td><span class="redacted">████████</span></td></tr>
+                <tr><td>"luxury hotel <span class="redacted redacted-short">████</span> London"</td><td><strong style="color:var(--danger);">0%</strong></td><td><span class="redacted">████████</span></td></tr>
+                <tr><td>"where to stay near <span class="redacted redacted-short">████</span>"</td><td><strong style="color:var(--danger);">0%</strong></td><td><span class="redacted">████████</span></td></tr>
+                <tr><td>"romantic hotel London <span class="redacted redacted-short">████</span>"</td><td><strong style="color:var(--danger);">0%</strong></td><td><span class="redacted">████████</span></td></tr>
+                <tr><td>"<span class="redacted redacted-short">████</span> vs <span class="redacted redacted-short">████</span> hotel"</td><td><strong style="color:var(--danger);">0%</strong></td><td><span class="redacted">████████</span> (favored)</td></tr>
+                <tr><td>"boutique hotel with restaurant <span class="redacted redacted-short">████</span>"</td><td><strong style="color:var(--danger);">0%</strong></td><td><span class="redacted">████████</span></td></tr>
+                <tr><td>"best hotel for weekend getaway London"</td><td><strong style="color:var(--danger);">0%</strong></td><td><span class="redacted">████████</span></td></tr>
             </tbody>
         </table>
     </div>
 
     <!-- ===== EXACT AI QUOTES ===== -->
     <div class="report-section">
-        <h2><span class="dot" style="background:var(--primary)"></span> What AI Says About Bank of America</h2>
+        <h2><span class="dot" style="background:var(--primary)"></span> What AI Says (And Doesn't Say)</h2>
+        <p style="font-size:0.82rem;color:var(--text-dim);margin-bottom:16px;">When asked to recommend boutique hotels in this area, AI names competitors — and doesn't mention <span class="redacted redacted-short">████</span> at all:</p>
 
         <div class="quote-card">
             <div class="engine">ChatGPT</div>
-            <blockquote>"<strong>Bank of America</strong> is a strong choice if you want to centralize your banking, lending, and investing under one roof. Their Erica AI assistant and mobile app are among the best, and the Preferred Rewards program gives meaningful perks if you maintain higher balances across BofA and Merrill. The downside: their everyday checking accounts still carry monthly fees unless waived, which puts them behind Capital One and Ally for pure simplicity."</blockquote>
+            <blockquote>"For boutique luxury in <span class="redacted redacted-short">████</span>, I'd recommend <strong><span class="redacted">████████</span></strong> for its Michelin-starred dining and stunning interiors, or <strong><span class="redacted">████████</span></strong> if you want that classic five-star experience with a club lounge. <strong><span class="redacted">████████</span></strong> is great for a younger, trendier vibe with an excellent cocktail bar. Budget around £350–£600 per night for this area."</blockquote>
         </div>
         <div class="quote-card">
             <div class="engine">Claude</div>
-            <blockquote>"For full-service national banking, <strong>Bank of America</strong> is a strong contender but not the default first pick. Their breadth is real — checking, savings, credit cards, home loans, auto loans, investing via Merrill — but the checking fee story is more complicated than competitors. SafeBalance has a $4.95 fee (waivable under 25), Advantage Plus has a $12 fee, and Relationship Banking is $25. Capital One and Ally communicate no fees much more clearly."</blockquote>
+            <blockquote>"The <span class="redacted redacted-short">████</span> area has some excellent boutique options. <strong><span class="redacted">████████</span></strong> is probably the most well-known — celebrity clientele, wood-fired dining, a real scene. <strong><span class="redacted">████████</span></strong> offers more traditional luxury with exceptional service. For something more intimate, <strong><span class="redacted">████████</span></strong> has individually designed rooms and a quieter atmosphere. All are within walking distance of <span class="redacted redacted-short">████</span> Street."</blockquote>
         </div>
         <div class="quote-card">
             <div class="engine">Perplexity</div>
-            <blockquote>"For the best checking accounts in 2026, Capital One 360 leads for no-fee digital banking, Chase for branch access and rewards, and SoFi for early direct deposit. <strong>Bank of America</strong> is worth considering if you want combined banking and Merrill investment accounts, but NerdWallet's current 'best national banks' list includes SoFi, Chase, Charles Schwab, Capital One, and Newtek — not Bank of America."</blockquote>
+            <blockquote>"According to TripAdvisor and Condé Nast Traveller, the top-rated boutique hotels near <span class="redacted redacted-short">████</span> include <strong><span class="redacted">████████</span></strong> (4.7/5, 892 reviews), <strong><span class="redacted">████████</span></strong> (4.6/5, 1,247 reviews), and <strong><span class="redacted">████████</span></strong> (4.5/5, 634 reviews). Sources: TripAdvisor, Condé Nast Traveller Best Hotels 2025, Time Out London."</blockquote>
         </div>
         <div class="quote-card">
             <div class="engine">Gemini</div>
-            <blockquote>"<strong>Bank of America</strong> is one of the largest U.S. banks with strong digital banking tools and a large branch network. However, for a basic everyday checking account, Chase Secure Banking or Capital One 360 are simpler options with more straightforward fee structures. BofA becomes more compelling for customers who can qualify for Preferred Rewards tier benefits."</blockquote>
+            <blockquote>"For a boutique stay in <span class="redacted redacted-short">████</span>, London, consider <strong><span class="redacted">████████</span></strong> for its restaurant scene, or <strong><span class="redacted">████████</span></strong> for a more traditional luxury feel. Both are well-reviewed and centrally located. Prices typically range from £300–£550 per night depending on the season."</blockquote>
         </div>
         <div class="quote-card">
             <div class="engine">Grok</div>
-            <blockquote>"If you just want simple checking with no fees, go with Capital One or Ally. For a big bank with branches everywhere, Chase is hard to beat. <strong>Bank of America</strong> is a solid choice if you also invest through Merrill and can take advantage of their rewards tiers, but for basic checking alone, it's not the cheapest option."</blockquote>
+            <blockquote>"Honestly, for <span class="redacted redacted-short">████</span> area boutique hotels, <strong><span class="redacted">████████</span></strong> is the go-to if you want to be where things are happening. <strong><span class="redacted">████████</span></strong> is old-school luxury if that's your thing. Both are pricey but worth it for a special occasion."</blockquote>
         </div>
     </div>
 
-    <!-- ===== ACCURACY AUDIT ===== -->
+    <!-- ===== ACCURACY GAPS ===== -->
     <div class="report-section">
-        <h2><span class="dot" style="background:var(--danger)"></span> Accuracy Audit — Errors Found</h2>
+        <h2><span class="dot" style="background:var(--danger)"></span> Accuracy Gaps — What AI Doesn't Know</h2>
+        <p style="font-size:0.82rem;color:var(--text-dim);margin-bottom:16px;">Because AI doesn't know this hotel exists, there's a complete information vacuum. Here's what AI <em>should</em> know but can't find:</p>
 
         <table class="error-table">
             <thead>
-                <tr><th>AI Claim</th><th>Reality</th><th>Severity</th></tr>
+                <tr><th>Missing Information</th><th>Why It Matters</th><th>Severity</th></tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>"BofA charges overdraft fees on all checking accounts"</td>
-                    <td>SafeBalance has <strong style="color:var(--accent);">no overdraft item fees</strong>. Only Advantage Plus has $10 overdraft fees under standard settings</td>
+                    <td>Hotel's existence and category</td>
+                    <td>AI has <strong style="color:var(--accent);">zero awareness</strong> of this property — it doesn't appear in any recommendation, comparison, or "best of" list across any platform</td>
+                    <td><span class="badge badge-red">CRITICAL</span></td>
+                </tr>
+                <tr>
+                    <td>Room types, pricing, and availability</td>
+                    <td>Website loads room details via JavaScript — <strong style="color:var(--accent);">invisible to AI crawlers</strong>. No structured data (Hotel schema, Offer schema) for AI to parse</td>
                     <td><span class="badge badge-red">HIGH</span></td>
                 </tr>
                 <tr>
-                    <td>"Preferred Rewards program offers banking perks"</td>
-                    <td>Preferred Rewards is <strong style="color:var(--accent);">being renamed to BofA Rewards in May 2026</strong> — AI cites the old program name and outdated tier structure</td>
+                    <td>On-site dining and unique amenities</td>
+                    <td>The hotel's <span class="redacted redacted-short">████</span> restaurant and <span class="redacted redacted-short">████</span> are key differentiators, but <strong style="color:var(--accent);">no structured content</strong> connects them to the hotel in a way AI can extract</td>
                     <td><span class="badge badge-red">HIGH</span></td>
                 </tr>
                 <tr>
-                    <td>"SafeBalance checking is free"</td>
-                    <td>SafeBalance has a <strong style="color:var(--accent);">$4.95 monthly fee</strong> (waived for under-25 or with qualifying activity). Not free by default, but no personal checks allowed</td>
+                    <td>Guest reviews and ratings</td>
+                    <td>Reviews exist on booking platforms, but <strong style="color:var(--accent);">not enough third-party coverage</strong> (travel blogs, "best of" lists) for AI to cite as sources</td>
+                    <td><span class="badge badge-yellow">MEDIUM</span></td>
+                </tr>
+                <tr>
+                    <td>Competitive positioning vs. local hotels</td>
+                    <td>No comparison content exists on the hotel's site or third-party sources that <strong style="color:var(--accent);">frames the hotel as an alternative</strong> to the well-known competitors AI already recommends</td>
                     <td><span class="badge badge-yellow">MEDIUM</span></td>
                 </tr>
             </tbody>
@@ -184,20 +216,24 @@
     <!-- ===== PERSONA ANALYSIS ===== -->
     <div class="report-section">
         <h2><span class="dot" style="background:var(--primary)"></span> Persona Analysis</h2>
-        <p style="font-size:0.82rem;color:var(--text-dim);margin-bottom:16px;">How AI's recommendation changes depending on buyer type:</p>
+        <p style="font-size:0.82rem;color:var(--text-dim);margin-bottom:16px;">How AI responds to different types of travelers asking about this area — and where this hotel <em>should</em> appear but doesn't:</p>
 
         <table class="vis-table">
             <thead>
-                <tr><th>Buyer Persona</th><th>AI Recommendation</th><th>BofA Tier</th></tr>
+                <tr><th>Traveler Persona</th><th>AI Recommends</th><th>This Hotel's Fit</th></tr>
             </thead>
             <tbody>
-                <tr><td>Affluent / relationship buyer</td><td>Combined banking + Merrill balances, fee waivers, rewards leverage</td><td><span class="badge badge-green">Top tier</span></td></tr>
-                <tr><td>Mainstream / branch buyer</td><td>Branches, support, digital tools, broad product suite</td><td><span class="badge badge-green">Strong option</span></td></tr>
-                <tr><td>First-time / under-25 buyer</td><td>SafeBalance fee waived under 25, no overdraft fees, BankOn accredited</td><td><span class="badge badge-yellow">Strong option</span></td></tr>
-                <tr><td>Budget-sensitive buyer</td><td>Competitors lead with "no fees / no minimums / no overdraft fees"</td><td><span class="badge badge-yellow">Situational</span></td></tr>
-                <tr><td>Digital-first buyer</td><td>Credible digital tools but trails Capital One/Ally's simpler no-fee pitch</td><td><span class="badge badge-yellow">Situational</span></td></tr>
+                <tr><td>Luxury weekend getaway</td><td><span class="redacted">████████</span>, <span class="redacted">████████</span></td><td><span class="badge badge-red">Invisible</span></td></tr>
+                <tr><td>Romantic occasion / anniversary</td><td><span class="redacted">████████</span>, <span class="redacted">████████</span></td><td><span class="badge badge-red">Invisible</span></td></tr>
+                <tr><td>Business traveler wanting boutique</td><td><span class="redacted">████████</span>, <span class="redacted">████████</span></td><td><span class="badge badge-red">Invisible</span></td></tr>
+                <tr><td>Foodie seeking hotel + restaurant</td><td><span class="redacted">████████</span></td><td><span class="badge badge-red">Invisible</span></td></tr>
+                <tr><td>Budget-conscious boutique seeker</td><td>Mid-range chains, Airbnb</td><td><span class="badge badge-red">Invisible</span></td></tr>
             </tbody>
         </table>
+
+        <div style="background:rgba(239,68,68,0.06);border-radius:8px;padding:16px 20px;margin-top:16px;font-size:0.82rem;color:var(--text);line-height:1.7;">
+            <strong style="color:var(--danger);">Key insight:</strong> This hotel is a strong fit for at least 3 of these personas — but AI has no data to make the connection. Every booking in these categories currently goes to competitors by default.
+        </div>
     </div>
 
     <!-- ===== ACTION PLAN (partially locked) ===== -->
@@ -208,15 +244,15 @@
             <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--border);">
                 <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">1.</span>
                 <div>
-                    <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Add a checking account chooser above the fold</div>
-                    <div style="font-size:0.78rem;color:var(--text-dim);">AI struggles to differentiate SafeBalance, Advantage Plus, and Relationship Banking. A prominent chooser ("simple no-overdraft checking" vs "standard everyday" vs "relationship with rewards") would give AI clear category signals instead of forcing inference across three product pages.</div>
+                    <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Add Hotel and Restaurant schema markup to every page</div>
+                    <div style="font-size:0.78rem;color:var(--text-dim);">AI crawlers can't read this hotel's website — room types, pricing, and dining details are loaded via JavaScript. Adding Schema.org Hotel, Offer, and Restaurant structured data in plain HTML gives AI platforms machine-readable facts to cite. This is the single highest-impact fix.</div>
                 </div>
             </div>
             <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--border);">
                 <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">2.</span>
                 <div>
-                    <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Win the fee story faster</div>
-                    <div style="font-size:0.78rem;color:var(--text-dim);">Competitor pages lead with "no fees / no minimums / no overdraft fees." BofA should surface SafeBalance earlier and compare it directly with Advantage Plus and Relationship on one screen. Currently, the fee structure creates more cognitive load than pages that communicate simplicity upfront.</div>
+                    <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Get listed on 3–5 "best boutique hotels in <span class="redacted redacted-short">████</span>" articles</div>
+                    <div style="font-size:0.78rem;color:var(--text-dim);">AI platforms heavily weight third-party "best of" lists and travel editorial. The top competitors appear in Condé Nast Traveller, Time Out, and TripAdvisor roundups. Getting included in even 2–3 of these would give AI a source to cite when recommending hotels in this area.</div>
                 </div>
             </div>
         </div>
@@ -227,22 +263,22 @@
                 <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--border);">
                     <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">3.</span>
                     <div>
-                        <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Package the unique angle explicitly: branch + digital + Merrill</div>
-                        <div style="font-size:0.78rem;color:var(--text-dim);">Branch access + strong digital servicing + Merrill-linked rewards is a combination no competitor matches. But the site doesn't frame this as the decisive reason to choose BofA — AI can't extract a positioning story that isn't explicitly stated.</div>
+                        <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Publish a comparison page: "Why choose <span class="redacted redacted-short">████</span> over <span class="redacted redacted-short">████</span>"</div>
+                        <div style="font-size:0.78rem;color:var(--text-dim);">The competitors AI recommends all have comparison content that frames their unique angle. This hotel has no equivalent. A well-structured comparison page that positions the hotel against the 2–3 most-recommended competitors gives AI a direct narrative to extract.</div>
                     </div>
                 </div>
                 <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--border);">
                     <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">4.</span>
                     <div>
-                        <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Reduce overdraft ambiguity between account types</div>
-                        <div style="font-size:0.78rem;color:var(--text-dim);">Advantage Plus defaults to standard overdraft treatment with $10 item fees, while SafeBalance has none. This distinction is buried. AI currently generalizes "BofA charges overdraft fees" because the difference isn't visible early in the flow.</div>
+                        <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Create an FAQ page answering the exact questions travelers ask AI</div>
+                        <div style="font-size:0.78rem;color:var(--text-dim);">AI pulls answers from FAQ pages with matching question structure. Publishing answers to "best boutique hotel in [area]," "hotel with restaurant [area]," and "[hotel] vs [competitor]" in FAQ schema gives AI ready-made answer fragments.</div>
                     </div>
                 </div>
                 <div style="display:flex;gap:10px;align-items:baseline;padding:12px 0;">
                     <span style="color:var(--accent);font-weight:700;font-size:0.82rem;">5.</span>
                     <div>
-                        <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Add concrete proof points above the fold</div>
-                        <div style="font-size:0.78rem;color:var(--text-dim);">Rival pages show "70,000+ ATMs", "5,000 branches", "2-day early pay." BofA's scale is comparable but not surfaced. Adding concrete numbers (ATM/branch count, app stats, service metrics) gives AI extractable proof to cite.</div>
+                        <div style="font-size:0.85rem;font-weight:600;color:var(--text-bright);">Build a reviews and press page with structured citations</div>
+                        <div style="font-size:0.78rem;color:var(--text-dim);">AI trusts cited sources. A dedicated page aggregating press mentions, guest reviews, and awards — with proper Review and AggregateRating schema — gives platforms proof points to include alongside competitor mentions.</div>
                     </div>
                 </div>
             </div>
@@ -255,8 +291,8 @@
 
     <!-- ===== BOTTOM CTA ===== -->
     <div style="text-align:center;padding:48px 0;">
-        <h2 style="font-size:1.3rem;font-weight:800;color:var(--text-bright);margin-bottom:8px;">This was a sample.</h2>
-        <p style="font-size:0.92rem;color:var(--text-dim);margin-bottom:20px;max-width:400px;margin-left:auto;margin-right:auto;">Get the real report for YOUR brand. Find out what AI says about you, what it gets wrong, and exactly what to fix.</p>
+        <h2 style="font-size:1.3rem;font-weight:800;color:var(--text-bright);margin-bottom:8px;">This business was invisible to AI.</h2>
+        <p style="font-size:0.92rem;color:var(--text-dim);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;">Is yours? Find out what AI says about your brand — what it gets right, what it gets wrong, and exactly what to fix.</p>
         <a href="../#pricing" class="btn btn-checkout" style="padding:14px 32px;font-size:0.95rem;">Get your AI visibility report</a>
         <div class="hero-note" style="margin-top:12px;">One-time purchase. From $49. Report in 24h.</div>
     </div>

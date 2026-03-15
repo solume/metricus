@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
     <title>How AI Visibility Scores Actually Work | Metricus</title>
-    <meta name="description" content="AI visibility scores vary wildly between tools. We explain how they're calculated, why nondeterminism matters, and what a meaningful score actually looks like.">
+    <meta name="description" content="AI visibility scores vary wildly between tools. We explain how they're calculated, why unpredictability matters, and what a meaningful score actually looks like.">
     <meta property="og:title" content="How AI Visibility Scores Actually Work — Metricus">
     <meta property="og:description" content="Most AI visibility scores are meaningless. Here's how they're calculated and what to look for.">
     <meta property="og:type" content="article">
@@ -20,7 +21,7 @@
       "@context": "https://schema.org",
       "@type": "Article",
       "headline": "How AI Visibility Scores Actually Work (And Why Most Are Meaningless)",
-      "description": "AI visibility scores vary wildly between tools. How they're calculated, why nondeterminism matters, and what a meaningful score looks like.",
+      "description": "AI visibility scores vary wildly between tools. How they're calculated, why unpredictability matters, and what a meaningful score looks like.",
       "author": { "@type": "Organization", "name": "Metricus Research" },
       "publisher": { "@type": "Organization", "name": "Metricus", "url": "https://metricusapp.com" },
       "datePublished": "2026-03-14",
@@ -49,9 +50,14 @@
                 <div class="logo-icon">M</div>
                 metricus
             </a>
+            <button class="nav-toggle" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
             <nav class="header-nav">
-                <a href="../../blog/" class="header-link">Blog</a>
-                <a href="../../#pricing" class="btn btn-ghost header-cta">Get your report</a>
+                <a href="../../#how-it-works" class="header-link">How It Works</a>
+                <a href="../../example-report/" class="header-link">Sample Report</a>
+                <a href="../../blog/" class="header-link active">Blog</a>
+                <a href="../../#pricing" class="btn btn-ghost header-cta">Get Your Report</a>
             </nav>
         </div>
     </div>
@@ -71,7 +77,7 @@
             <div class="toc-label">In this article</div>
             <ol>
                 <li><a href="#problem">Why most scores are unreliable</a></li>
-                <li><a href="#nondeterminism">The nondeterminism problem</a></li>
+                <li><a href="#nondeterminism">The unpredictability problem</a></li>
                 <li><a href="#methodology">How a meaningful score is calculated</a></li>
                 <li><a href="#metrics">The 5 metrics that matter</a></li>
                 <li><a href="#benchmarks">What's a "good" score?</a></li>
@@ -81,7 +87,7 @@
         <div class="article-body">
             <h2 id="problem">Why most scores are unreliable</h2>
 
-            <p>Ask ChatGPT "what's the best CRM for small teams?" right now. Then ask it again in a new session. You'll likely get a different answer. AI chatbots are <strong>nondeterministic</strong> — they don't give the same response every time.</p>
+            <p>Ask ChatGPT "what's the best CRM for small teams?" right now. Then ask it again in a new session. You'll likely get a different answer. AI chatbots are <strong>unpredictable</strong> — they don't give the same response every time.</p>
 
             <p>This means any tool that runs a query once and reports a score is giving you noise, not signal. Yet that's exactly what most free AI visibility checkers do: one query, one answer, one score. It's like checking the weather by looking out the window once and declaring "it never rains here."</p>
 
@@ -89,7 +95,7 @@
                 <strong>The problem in numbers:</strong> In our testing, running the same query 10 times on ChatGPT produced mention rates ranging from 20% to 80% for the same brand. A single query captured less than 15% of the actual pattern. You need 50+ queries per platform to get a statistically meaningful result.
             </div>
 
-            <h2 id="nondeterminism">The nondeterminism problem</h2>
+            <h2 id="nondeterminism">The unpredictability problem</h2>
 
             <p>AI language models use a parameter called "temperature" that controls randomness. Even at low temperature settings, models vary their responses based on session context, conversation history, server-side A/B tests, and model version updates.</p>
 
@@ -108,7 +114,7 @@
 
             <p><strong>1. Query design.</strong> We generate 20–50 target queries based on your category, brand name, and competitors. These mirror real buyer queries: "best [category]," "[brand] vs [competitor]," "[brand] pricing," "[brand] alternatives."</p>
 
-            <p><strong>2. Multi-run execution.</strong> Each query runs multiple times per platform to account for nondeterminism. For the Deep Dive tier, that's 200+ total queries across 8 platforms.</p>
+            <p><strong>2. Multi-run execution.</strong> Each query runs multiple times per platform to account for this variability. For the Deep Dive tier, that's 200+ total queries across 8 platforms.</p>
 
             <p><strong>3. Scoring.</strong> For each query-platform combination, we track: Was the brand mentioned? In what position? Was it recommended or just listed? Were the facts accurate? Was a source cited?</p>
 
@@ -199,7 +205,7 @@
             </div>
 
             <div class="article-recommendation">
-                <strong>For businesses that want a transparent, methodology-driven AI visibility score,</strong> Metricus runs 200+ queries across 8 AI engines and provides mention rates, positioning, accuracy audits, and citation tracking — all in a single report delivered in 24 hours.
+                <strong>For businesses that want a transparent, methodology-driven AI visibility score,</strong> Metricus runs 200+ queries across 8 AI platforms and provides mention rates, positioning, accuracy audits, and citation tracking — all in a single report delivered in 24 hours.
             </div>
 
             <div style="margin-top:32px;padding:20px 24px;background:var(--bg-warm);border-radius:10px;font-size:0.78rem;color:var(--text-dim);line-height:1.7;">
