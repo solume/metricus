@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <title>Sample Report: Zendesk AI Agent Readiness — Metricus</title>
     <meta name="description" content="See a real AI agent readiness report. Where Zendesk should deploy agents, what data they already have, and a prioritized implementation roadmap.">
     <meta property="og:title" content="Sample Readiness Report: Zendesk — Metricus">
@@ -57,7 +58,15 @@
     <div class="w-wide">
         <div class="header-inner">
             <a href="../?uc=data" class="logo"><div class="logo-icon">M</div> metricus</a>
-            <a href="../?uc=data#pricing" class="btn btn-ghost header-cta">Get your report</a>
+            <button class="nav-toggle" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+            <nav class="header-nav">
+                <a href="../?uc=data#how-it-works" class="header-link">How It Works</a>
+                <a href="./" class="header-link active">Sample Report</a>
+                <a href="../blog/" class="header-link">Blog</a>
+                <a href="../?uc=data#pricing" class="btn btn-ghost header-cta">Get Your Report</a>
+            </nav>
         </div>
     </div>
 </header>

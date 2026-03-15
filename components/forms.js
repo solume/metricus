@@ -17,7 +17,13 @@ function handleHeroSubmit(form) {
   var input = form.querySelector('input[type="email"]');
   var email = input.value;
   track(email, 'hero-email');
-  window.location.href = 'onboarding/?tier=deepdive&email=' + encodeURIComponent(email);
+  // Store email for pricing buttons to pick up
+  try { sessionStorage.setItem('metricus_email', email); } catch (e) {}
+  // Scroll to pricing so user picks a tier
+  var pricing = document.getElementById('pricing');
+  if (pricing) {
+    pricing.scrollIntoView({ behavior: 'smooth' });
+  }
 }
 
 // ── Free look form ──
@@ -52,8 +58,12 @@ function handleNewsletterSubmit(form) {
 
 // ── Buy tier (pricing button click) ──
 function handleBuyTier(tier) {
-  track('', 'funnel:tier-click:' + tier);
-  window.location.href = 'onboarding/?tier=' + tier;
+  var email = '';
+  try { email = sessionStorage.getItem('metricus_email') || ''; } catch (e) {}
+  track(email, 'funnel:tier-click:' + tier);
+  var url = 'onboarding/?tier=' + tier;
+  if (email) url += '&email=' + encodeURIComponent(email);
+  window.location.href = url;
 }
 
 // ── Init: attach delegated listeners ──
