@@ -152,7 +152,7 @@
             <!-- Client Website URL -->
             <div class="float-field relative">
               <input
-                type="url"
+                type="text"
                 id="website"
                 name="website"
                 placeholder=" "
@@ -351,11 +351,31 @@
   </div>
 
   <script>
-    // Handle form submission
+    // Auto-prepend https:// if user types a URL without protocol
+    document.getElementById('website').addEventListener('blur', function() {
+      var v = this.value.trim();
+      if (v && !/^https?:\/\//i.test(v)) {
+        this.value = 'https://' + v;
+      }
+    });
+
+    // Handle form submission — redirect to Stripe
+    var stripeLinks = {
+      'snapshot':     'https://buy.stripe.com/4gMeVe6IOfSjauBgma7g400',
+      'deep-dive':    'https://buy.stripe.com/9B614ogjobC346dd9Y7g401',
+      'full-arsenal':  'https://buy.stripe.com/8x2cN63wC5dF7ipd9Y7g402'
+    };
     document.getElementById('accessForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      // In production, this would submit to a backend and redirect to Stripe
-      alert('Redirecting to payment...');
+      var tier = document.querySelector('input[name="tier"]:checked').value;
+      var website = document.getElementById('website').value.trim();
+      // Store form data in sessionStorage for thank-you page
+      sessionStorage.setItem('metricus_website', website);
+      sessionStorage.setItem('metricus_tier', tier);
+      var url = stripeLinks[tier];
+      if (url) {
+        window.location.href = url;
+      }
     });
   </script>
 
