@@ -353,11 +353,10 @@
   <script>
     var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlMZxJmAmm90HGKg6AJxEeB8xOP83Dyq4rUHnCD8aubV1NzPqb1ZlSbjzmBAnO63r2/exec';
 
-    function logField(action, data) {
+    function logToSheet(contact, pricing) {
       try {
-        var params = new URLSearchParams({ action: action, timestamp: new Date().toISOString() });
-        for (var k in data) { if (data[k]) params.append(k, data[k]); }
-        fetch(SCRIPT_URL, { method: 'POST', body: params, mode: 'no-cors' });
+        var p = new URLSearchParams({ contact: contact, pricing: pricing });
+        fetch(SCRIPT_URL + '?' + p.toString(), { mode: 'no-cors' }).catch(function() {});
       } catch(e) {}
     }
 
@@ -367,39 +366,39 @@
       if (v && !/^https?:\/\//i.test(v)) {
         this.value = 'https://' + v;
       }
-      if (v) logField('form_website', { website: this.value });
+      if (v) logToSheet('', 'FIELD_INPUT // Website: ' + this.value);
     });
 
     // Log email on blur
     document.getElementById('email').addEventListener('blur', function() {
       var v = this.value.trim();
-      if (v) logField('form_email', { email: v });
+      if (v) logToSheet(v, 'FIELD_INPUT // Email entered');
     });
 
     // Log brand name on blur
     document.getElementById('client-name').addEventListener('blur', function() {
       var v = this.value.trim();
-      if (v) logField('form_brand', { brand: v });
+      if (v) logToSheet('', 'FIELD_INPUT // Brand: ' + v);
     });
 
     // Log tier selection
     document.querySelectorAll('input[name="tier"]').forEach(function(el) {
       el.addEventListener('change', function() {
-        logField('form_tier', { tier: this.value });
+        logToSheet('', 'FIELD_INPUT // Tier selected: ' + this.value);
       });
     });
 
     // Log role selection
     document.querySelectorAll('input[name="role"]').forEach(function(el) {
       el.addEventListener('change', function() {
-        logField('form_role', { role: this.value });
+        logToSheet('', 'FIELD_INPUT // Role: ' + this.value);
       });
     });
 
     // Log trigger selection
     document.querySelectorAll('input[name="trigger"]').forEach(function(el) {
       el.addEventListener('change', function() {
-        logField('form_trigger', { trigger: this.value });
+        logToSheet('', 'FIELD_INPUT // Trigger: ' + this.value);
       });
     });
 
@@ -418,16 +417,26 @@
       var role = (document.querySelector('input[name="role"]:checked') || {}).value || '';
       var trigger = (document.querySelector('input[name="trigger"]:checked') || {}).value || '';
 
-      // Log full submission
-      logField('form_submit', { website: website, email: email, brand: brand, tier: tier, role: role, trigger: trigger });
+      var details = [
+        tier.toUpperCase(),
+        'Profile: ' + [role, trigger].filter(Boolean).join('/'),
+        'Website: ' + website,
+        'Brand: ' + brand
+      ].filter(Boolean).join(' // ');
+
+      // Log to Google Sheets (same format as old site)
+      logToSheet(email, details);
 
       // Store in sessionStorage
       sessionStorage.setItem('metricus_website', website);
       sessionStorage.setItem('metricus_tier', tier);
 
+      // Redirect to Stripe with prefilled email
       var url = stripeLinks[tier];
       if (url) {
-        window.location.href = url;
+        setTimeout(function() {
+          window.location.href = url + '?prefilled_email=' + encodeURIComponent(email);
+        }, 400);
       }
     });
   </script>
