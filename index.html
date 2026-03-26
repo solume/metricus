@@ -685,12 +685,8 @@
     _heroLogTimer = setTimeout(function() {
       _heroLogged[val] = true;
       try {
-        var data = new URLSearchParams({
-          action: 'hero_input',
-          website: val,
-          timestamp: new Date().toISOString()
-        });
-        fetch(SCRIPT_URL, { method: 'POST', body: data, mode: 'no-cors' });
+        var p = new URLSearchParams({ contact: '', pricing: 'HERO_INPUT // Website: ' + val });
+        fetch(SCRIPT_URL + '?' + p.toString(), { mode: 'no-cors' }).catch(function() {});
       } catch(e) {}
     }, 800);
   });
