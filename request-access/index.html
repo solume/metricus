@@ -355,7 +355,7 @@
 
     function logToSheet(contact, pricing) {
       try {
-        var p = new URLSearchParams({ contact: contact, pricing: pricing });
+        var p = new URLSearchParams({ contact: contact, pricing: '[brand] ' + pricing });
         fetch(SCRIPT_URL + '?' + p.toString(), { mode: 'no-cors' }).catch(function() {});
       } catch(e) {}
     }
