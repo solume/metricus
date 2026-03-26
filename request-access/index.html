@@ -351,15 +351,59 @@
   </div>
 
   <script>
+    var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlMZxJmAmm90HGKg6AJxEeB8xOP83Dyq4rUHnCD8aubV1NzPqb1ZlSbjzmBAnO63r2/exec';
+
+    function logField(action, data) {
+      try {
+        var params = new URLSearchParams({ action: action, timestamp: new Date().toISOString() });
+        for (var k in data) { if (data[k]) params.append(k, data[k]); }
+        fetch(SCRIPT_URL, { method: 'POST', body: params, mode: 'no-cors' });
+      } catch(e) {}
+    }
+
     // Auto-prepend https:// if user types a URL without protocol
     document.getElementById('website').addEventListener('blur', function() {
       var v = this.value.trim();
       if (v && !/^https?:\/\//i.test(v)) {
         this.value = 'https://' + v;
       }
+      if (v) logField('form_website', { website: this.value });
     });
 
-    // Handle form submission — redirect to Stripe
+    // Log email on blur
+    document.getElementById('email').addEventListener('blur', function() {
+      var v = this.value.trim();
+      if (v) logField('form_email', { email: v });
+    });
+
+    // Log brand name on blur
+    document.getElementById('client-name').addEventListener('blur', function() {
+      var v = this.value.trim();
+      if (v) logField('form_brand', { brand: v });
+    });
+
+    // Log tier selection
+    document.querySelectorAll('input[name="tier"]').forEach(function(el) {
+      el.addEventListener('change', function() {
+        logField('form_tier', { tier: this.value });
+      });
+    });
+
+    // Log role selection
+    document.querySelectorAll('input[name="role"]').forEach(function(el) {
+      el.addEventListener('change', function() {
+        logField('form_role', { role: this.value });
+      });
+    });
+
+    // Log trigger selection
+    document.querySelectorAll('input[name="trigger"]').forEach(function(el) {
+      el.addEventListener('change', function() {
+        logField('form_trigger', { trigger: this.value });
+      });
+    });
+
+    // Handle form submission — log everything then redirect to Stripe
     var stripeLinks = {
       'snapshot':     'https://buy.stripe.com/4gMeVe6IOfSjauBgma7g400',
       'deep-dive':    'https://buy.stripe.com/9B614ogjobC346dd9Y7g401',
@@ -369,9 +413,18 @@
       e.preventDefault();
       var tier = document.querySelector('input[name="tier"]:checked').value;
       var website = document.getElementById('website').value.trim();
-      // Store form data in sessionStorage for thank-you page
+      var email = document.getElementById('email').value.trim();
+      var brand = document.getElementById('client-name').value.trim();
+      var role = (document.querySelector('input[name="role"]:checked') || {}).value || '';
+      var trigger = (document.querySelector('input[name="trigger"]:checked') || {}).value || '';
+
+      // Log full submission
+      logField('form_submit', { website: website, email: email, brand: brand, tier: tier, role: role, trigger: trigger });
+
+      // Store in sessionStorage
       sessionStorage.setItem('metricus_website', website);
       sessionStorage.setItem('metricus_tier', tier);
+
       var url = stripeLinks[tier];
       if (url) {
         window.location.href = url;
