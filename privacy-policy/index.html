@@ -1,93 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-    <title>Privacy Policy — Metricus</title>
-    <meta name="description" content="How Metricus collects, uses, and protects your information.">
-    <!-- Google Tag Manager -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <title>Privacy Policy — Metricus</title>
+  <meta name="description" content="How Metricus collects, uses, and protects your information.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500;1,6..72,600&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#515F74',
+            'on-primary': '#f6f7ff',
+            surface: '#f7f9fb',
+            'surface-container-low': '#f0f4f7',
+            'surface-container': '#e8eff3',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-highest': '#d9e4ea',
+            'on-surface': '#2a3439',
+            'on-surface-variant': '#566166',
+            outline: '#717c82',
+            'outline-variant': '#a9b4b9',
+            'on-primary-fixed': '#324054',
+            'primary-dim': '#455368',
+            'surface-variant': '#d9e4ea',
+            'surface-container-high': '#e1e9ee',
+            'primary-fixed': '#d5e3fd',
+            'primary-fixed-dim': '#c7d5ee',
+          },
+          borderRadius: {
+            none: '0px',
+            sm: '0px',
+            DEFAULT: '0px',
+            md: '0px',
+            lg: '0px',
+            xl: '0px',
+            '2xl': '0px',
+            '3xl': '0px',
+            full: '0px',
+          },
+          fontFamily: {
+            headline: ['Newsreader', 'serif'],
+            body: ['Public Sans', 'sans-serif'],
+            label: ['Public Sans', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    * { border-radius: 0px !important; }
+    body {
+      font-family: 'Public Sans', sans-serif;
+      background-color: #f7f9fb;
+      color: #2a3439;
+    }
+    .bg-grid {
+      background-image:
+        linear-gradient(rgba(81,95,116,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(81,95,116,0.05) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-surface bg-grid antialiased">
 
-<header>
-    <div class="w-wide">
-        <div class="header-inner">
-            <a href="../" class="logo">
-                <div class="logo-icon">M</div>
-                metricus
-            </a>
-            <button class="nav-toggle" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-            </button>
-            <nav class="header-nav">
-                <a href="../#how-it-works" class="header-link">How It Works</a>
-                <a href="../example-report/" class="header-link">Sample Report</a>
-                <a href="../blog/" class="header-link">Blog</a>
-                <a href="../#pricing" class="btn btn-ghost header-cta">Get Your Report</a>
-            </nav>
-        </div>
+  <!-- Fixed Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="../" class="font-headline italic text-xl text-on-surface tracking-tight">Metricus</a>
+      <div class="flex items-center gap-8">
+        <a href="../methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Methodology</a>
+        <a href="../" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
+        <a href="../blog/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Blog</a>
+        <a href="../request-access/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Request Access</a>
+      </div>
     </div>
-</header>
+  </nav>
 
-<div class="w">
-    <div style="max-width:640px;margin:0 auto;padding:48px 0;">
-        <h1 style="font-size:1.4rem;font-weight:800;color:var(--text-bright);margin-bottom:8px;">Privacy Policy</h1>
-        <p style="font-size:0.78rem;color:var(--text-dim);margin-bottom:32px;">Last updated: March 9, 2026</p>
+  <!-- Content -->
+  <article class="pt-32 pb-20 px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto">
+      <p class="uppercase tracking-widest text-xs font-label font-medium text-primary mb-6">Legal</p>
+      <h1 class="font-headline font-light text-5xl md:text-6xl text-on-surface leading-tight mb-4">Privacy Policy</h1>
+      <p class="text-sm text-on-surface-variant mb-12">Last updated: March 9, 2026</p>
 
-        <div style="font-size:0.85rem;color:var(--text-mid);line-height:1.7;">
-            <h3 style="color:var(--text-bright);font-size:0.9rem;margin:24px 0 8px;">Who we are</h3>
-            <p>Metricus ("we", "us", "our") operates metricusapp.com. This policy explains how we collect, use, and protect your information.</p>
+      <div class="text-on-surface-variant text-base leading-relaxed space-y-8">
 
-            <h3 style="color:var(--text-bright);font-size:0.9rem;margin:24px 0 8px;">What we collect</h3>
-            <ul style="padding-left:20px;">
-                <li><strong>Email address</strong> — provided when you purchase a report or submit a form.</li>
-                <li><strong>Brand and competitor information</strong> — provided by you after purchase so we can generate your report.</li>
-                <li><strong>Payment information</strong> — processed securely by Stripe. We do not store your card details.</li>
-            </ul>
+        <section>
+          <h2 class="font-headline text-2xl text-on-surface mb-3">Who we are</h2>
+          <p>Metricus ("we", "us", "our") operates metricusapp.com. This policy explains how we collect, use, and protect your information.</p>
+        </section>
 
-            <h3 style="color:var(--text-bright);font-size:0.9rem;margin:24px 0 8px;">How we use your information</h3>
-            <ul style="padding-left:20px;">
-                <li>To deliver your AI visibility report.</li>
-                <li>To communicate with you about your order.</li>
-                <li>To send you your report and any follow-up materials.</li>
-            </ul>
-            <p>We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
+        <section>
+          <h2 class="font-headline text-2xl text-on-surface mb-3">What we collect</h2>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong class="text-on-surface">Email address</strong> — provided when you purchase a report or submit a form.</li>
+            <li><strong class="text-on-surface">Brand and competitor information</strong> — provided by you after purchase so we can generate your report.</li>
+            <li><strong class="text-on-surface">Payment information</strong> — processed securely by Stripe. We do not store your card details.</li>
+          </ul>
+        </section>
 
-            <h3 style="color:var(--text-bright);font-size:0.9rem;margin:24px 0 8px;">Third-party services</h3>
-            <ul style="padding-left:20px;">
-                <li><strong>Stripe</strong> — payment processing (<a href="https://stripe.com/privacy" style="color:var(--primary);">stripe.com/privacy</a>)</li>
-                <li><strong>Google Analytics</strong> — website analytics (<a href="https://policies.google.com/privacy" style="color:var(--primary);">policies.google.com/privacy</a>)</li>
-                <li><strong>Google Fonts</strong> — font delivery</li>
-                <li><strong>GitHub Pages</strong> — website hosting</li>
-            </ul>
+        <section>
+          <h2 class="font-headline text-2xl text-on-surface mb-3">How we use your information</h2>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>To deliver your AI visibility report.</li>
+            <li>To communicate with you about your order.</li>
+            <li>To send you your report and any follow-up materials.</li>
+          </ul>
+          <p class="mt-3">We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
+        </section>
 
-            <h3 style="color:var(--text-bright);font-size:0.9rem;margin:24px 0 8px;">Cookies &amp; analytics</h3>
-            <p>We use Google Analytics to understand how visitors use our website (pages viewed, traffic sources, general engagement). Google Analytics uses cookies. You can opt out via your browser settings or the <a href="https://tools.google.com/dlpage/gaoptout" style="color:var(--primary);">Google Analytics opt-out extension</a>. Third-party services (Stripe) may also set their own cookies during checkout.</p>
+        <section>
+          <h2 class="font-headline text-2xl text-on-surface mb-3">Third-party services</h2>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong class="text-on-surface">Stripe</strong> — payment processing (<a href="https://stripe.com/privacy" class="text-primary hover:text-primary-dim underline">stripe.com/privacy</a>)</li>
+            <li><strong class="text-on-surface">Google Analytics</strong> — website analytics (<a href="https://policies.google.com/privacy" class="text-primary hover:text-primary-dim underline">policies.google.com/privacy</a>)</li>
+            <li><strong class="text-on-surface">Google Fonts</strong> — font delivery</li>
+            <li><strong class="text-on-surface">GitHub Pages</strong> — website hosting</li>
+          </ul>
+        </section>
 
-            <h3 style="color:var(--text-bright);font-size:0.9rem;margin:24px 0 8px;">Data retention</h3>
-            <p>We retain your email and report data for as long as needed to deliver our service. You can request deletion at any time by emailing us.</p>
+        <section>
+          <h2 class="font-headline text-2xl text-on-surface mb-3">Cookies &amp; analytics</h2>
+          <p>We use Google Analytics to understand how visitors use our website (pages viewed, traffic sources, general engagement). Google Analytics uses cookies. You can opt out via your browser settings or the <a href="https://tools.google.com/dlpage/gaoptout" class="text-primary hover:text-primary-dim underline">Google Analytics opt-out extension</a>. Third-party services (Stripe) may also set their own cookies during checkout.</p>
+        </section>
 
-            <h3 style="color:var(--text-bright);font-size:0.9rem;margin:24px 0 8px;">Your rights</h3>
-            <p>You may request access to, correction of, or deletion of your personal data at any time by contacting us at <a href="mailto:hello@metricusapp.com" style="color:var(--primary);">hello@metricusapp.com</a>.</p>
+        <section>
+          <h2 class="font-headline text-2xl text-on-surface mb-3">Data retention</h2>
+          <p>We retain your email and report data for as long as needed to deliver our service. You can request deletion at any time by emailing us.</p>
+        </section>
 
-            <h3 style="color:var(--text-bright);font-size:0.9rem;margin:24px 0 8px;">Changes</h3>
-            <p>We may update this policy from time to time. Changes will be posted on this page with an updated date.</p>
+        <section>
+          <h2 class="font-headline text-2xl text-on-surface mb-3">Your rights</h2>
+          <p>You may request access to, correction of, or deletion of your personal data at any time by contacting us at <a href="mailto:hello@metricusapp.com" class="text-primary hover:text-primary-dim underline">hello@metricusapp.com</a>.</p>
+        </section>
 
-            <h3 style="color:var(--text-bright);font-size:0.9rem;margin:24px 0 8px;">Contact</h3>
-            <p>Questions? Email <a href="mailto:hello@metricusapp.com" style="color:var(--primary);">hello@metricusapp.com</a></p>
-        </div>
+        <section>
+          <h2 class="font-headline text-2xl text-on-surface mb-3">Changes</h2>
+          <p>We may update this policy from time to time. Changes will be posted on this page with an updated date.</p>
+        </section>
+
+        <section>
+          <h2 class="font-headline text-2xl text-on-surface mb-3">Contact</h2>
+          <p>Questions? Email <a href="mailto:hello@metricusapp.com" class="text-primary hover:text-primary-dim underline">hello@metricusapp.com</a></p>
+        </section>
+
+      </div>
     </div>
-</div>
+  </article>
 
-<div class="footer">
-    <div class="w">metricus &copy; 2026 &nbsp;&middot;&nbsp; <a href="mailto:hello@metricusapp.com">Contact</a> &nbsp;&middot;&nbsp; <a href="../blog/">Blog</a> &nbsp;&middot;&nbsp; <a href="../privacy-policy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="../terms-of-service/">Terms</a> &nbsp;&middot;&nbsp; <a href="../support/">Support</a></div>
-</div>
+  <!-- Footer -->
+  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="../privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a>
+        <a href="../terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a>
+        <a href="../support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
+        <a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>

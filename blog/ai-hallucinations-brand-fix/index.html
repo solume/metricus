@@ -1,240 +1,489 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
-    <title>AI Is Getting Facts Wrong About Your Brand | Metricus</title>
-    <meta name="description" content="72% of brands have factual errors in AI responses. Wrong pricing, outdated features, false comparisons. Here's a 4-step process to audit and fix AI hallucinations about your brand.">
-    <meta property="og:title" content="AI Is Getting Facts Wrong About Your Brand — Metricus">
-    <meta property="og:description" content="72% of brands we audited had at least one factual error in AI answers. Here's how to find and fix them.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://metricusapp.com/blog/ai-hallucinations-brand-fix/">
-    <link rel="canonical" href="https://metricusapp.com/blog/ai-hallucinations-brand-fix/">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/style.css">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "AI Is Getting Facts Wrong About Your Brand — Here's How to Find and Fix It",
-      "description": "72% of brands have factual errors in AI responses. A 4-step process to audit and fix AI hallucinations about your brand.",
-      "author": { "@type": "Organization", "name": "Metricus Research" },
-      "publisher": { "@type": "Organization", "name": "Metricus", "url": "https://metricusapp.com" },
-      "datePublished": "2026-03-14",
-      "dateModified": "2026-03-14",
-      "mainEntityOfPage": "https://metricusapp.com/blog/ai-hallucinations-brand-fix/"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Is Getting Facts Wrong About Your Brand — Here's How to Fix It | Metricus</title>
+  <meta name="description" content="72% of brands have factual errors in AI responses. Wrong pricing, outdated features, false comparisons. Here's a 4-step process to audit and fix AI hallucinations about your brand.">
+  <meta property="og:title" content="AI Is Getting Facts Wrong About Your Brand — Here's How to Fix It">
+  <meta property="og:description" content="72% of brands we audited had at least one factual error in AI answers. Here's how to find and fix them.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metricusapp.com/blog/ai-hallucinations-brand-fix/">
+  <link rel="canonical" href="https://metricusapp.com/blog/ai-hallucinations-brand-fix/">
+
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#334155',
+            'primary-hover': '#1E293B',
+            'on-primary': '#f6f7ff',
+            'on-primary-fixed': '#324054',
+            'primary-dim': '#455368',
+            surface: '#f7f9fb',
+            'surface-container-low': '#f0f4f7',
+            'surface-container': '#e8eff3',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-highest': '#d9e4ea',
+            'surface-container-high': '#e1e9ee',
+            'surface-variant': '#d9e4ea',
+            'on-surface': '#2a3439',
+            'on-surface-variant': '#566166',
+            outline: '#717c82',
+            'outline-variant': '#a9b4b9',
+            'slate-text': '#0F172A',
+            'slate-muted': '#64748B',
+            'slate-accent': '#475569',
+          },
+          fontFamily: {
+            display: ['Newsreader', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            body: ['Public Sans', 'sans-serif'],
+            headline: ['Newsreader', 'serif'],
+          },
+          borderRadius: {
+            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
+            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
+            full: '0.75rem',
+          },
+        },
+      },
     }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
-        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
-        {"@type": "ListItem", "position": 3, "name": "AI Is Getting Facts Wrong About Your Brand — Here's How to Find and Fix It", "item": "https://metricusapp.com/blog/ai-hallucinations-brand-fix/"}
-      ]
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #0F172A;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-    </script>
+
+    .font-display { font-family: 'Newsreader', serif; }
+    .font-headline { font-family: 'Newsreader', serif; }
+    .font-body-sans { font-family: 'Public Sans', sans-serif; }
+
+    .editorial-btn {
+      transition: background-color 150ms ease-in-out, transform 150ms ease;
+    }
+    .editorial-btn:hover {
+      background-color: #1E293B;
+    }
+
+    .bg-grid-dots {
+      background-image: radial-gradient(circle, #717c82 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+      opacity: 0.05;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .blog-card {
+      transition: transform 200ms ease, background-color 200ms ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+      background-color: #f7f9fb;
+    }
+
+    .article-body h2 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      line-height: 1.2;
+      color: #0F172A;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) {
+      .article-body h2 {
+        font-size: 2rem;
+      }
+    }
+    .article-body h3 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.3;
+      color: #0F172A;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .article-body p {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+    }
+    .article-body ul, .article-body ol {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+    }
+    .article-body ul { list-style-type: disc; }
+    .article-body ol { list-style-type: decimal; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body blockquote {
+      border-left: 2px solid #334155;
+      padding-left: 1.5rem;
+      font-style: italic;
+      color: #475569;
+      font-size: 1.125rem;
+      line-height: 1.75;
+      margin: 2rem 0;
+    }
+    .article-body a {
+      color: #334155;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .article-body a:hover {
+      color: #1E293B;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI Is Getting Facts Wrong About Your Brand — Here's How to Fix It",
+    "description": "72% of brands have factual errors in AI responses. A 4-step process to audit and fix AI hallucinations about your brand.",
+    "author": { "@type": "Organization", "name": "Metricus Research" },
+    "publisher": { "@type": "Organization", "name": "Metricus", "url": "https://metricusapp.com" },
+    "datePublished": "2026-03-14",
+    "dateModified": "2026-03-14",
+    "mainEntityOfPage": "https://metricusapp.com/blog/ai-hallucinations-brand-fix/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "AI Is Getting Facts Wrong About Your Brand — Here's How to Fix It", "item": "https://metricusapp.com/blog/ai-hallucinations-brand-fix/"}
+    ]
+  }
+  </script>
 </head>
-<body>
+<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
 
-<header>
-    <div class="w-wide">
-        <div class="header-inner">
-            <a href="../../" class="logo">
-                <div class="logo-icon">M</div>
-                metricus
-            </a>
-            <button class="nav-toggle" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-            </button>
-            <nav class="header-nav">
-                <a href="../../#how-it-works" class="header-link">How It Works</a>
-                <a href="../../example-report/" class="header-link">Sample Report</a>
-                <a href="../../blog/" class="header-link active">Blog</a>
-                <a href="../../#pricing" class="btn btn-ghost header-cta">Get Your Report</a>
-            </nav>
-        </div>
+  <!-- ========== FIXED NAV ========== -->
+  <header class="h-16 flex items-center justify-between px-6 lg:px-12 border-b border-[#E2E8F0] bg-white/80 backdrop-blur-md sticky top-0 z-50">
+    <div class="flex items-center gap-2 text-slate-text">
+      <a class="flex items-center gap-2 group" href="../../">
+        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+        </svg>
+        <span class="font-display italic font-bold text-xl tracking-tight group-hover:text-primary transition-colors">Metricus</span>
+      </a>
     </div>
-</header>
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="../../methodology/">Methodology</a>
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="../../#pricing">Pricing</a>
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="../">Blog</a>
+      <a class="text-[13px] uppercase tracking-wider font-semibold text-primary hover:text-slate-text transition-colors" href="../../request-access/">Request Access</a>
+    </nav>
+    <button class="md:hidden flex items-center text-slate-text">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </header>
 
-<div class="w">
-    <div class="article">
-        <div class="article-tag">Problem</div>
-        <h1>AI Is Getting Facts Wrong About Your Brand — Here's How to Find and Fix It</h1>
-        <div class="article-author"><strong>Metricus Research</strong> · March 14, 2026 · 6 min read</div>
 
-        <div class="article-definition">
-            <strong>AI hallucination</strong> is when an AI chatbot generates factually incorrect information about a brand — wrong pricing, discontinued products listed as current, incorrect feature comparisons, or fabricated claims — and presents it to users as fact.
+  <main class="flex-grow flex flex-col relative overflow-x-hidden">
+
+    <div class="absolute inset-0 bg-grid-dots -z-10 pointer-events-none"></div>
+
+    <!-- ========== ARTICLE ========== -->
+    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
+
+      <!-- Breadcrumb -->
+      <nav class="mb-8">
+        <ol class="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-muted">
+          <li><a href="../../" class="hover:text-slate-text transition-colors">Home</a></li>
+          <li class="select-none">/</li>
+          <li><a href="../" class="hover:text-slate-text transition-colors">Blog</a></li>
+          <li class="select-none">/</li>
+          <li class="text-slate-text">AI Hallucinations Brand Fix</li>
+        </ol>
+      </nav>
+
+      <!-- Article Header -->
+      <header class="mb-12">
+        <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-4">Research</p>
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
+          AI Is Getting Facts Wrong About Your Brand &mdash; Here's How to Fix It
+        </h1>
+        <p class="text-sm text-outline">Metricus Research &middot; March 14, 2026 &middot; 6 min read</p>
+      </header>
+
+
+      <!-- Definition Box -->
+      <div class="bg-surface-container-low p-8 mb-12">
+        <p class="text-lg leading-relaxed text-on-surface">
+          <strong>AI hallucination</strong> is when an AI chatbot generates factually incorrect information about a brand &mdash; wrong pricing, discontinued products listed as current, incorrect feature comparisons, or fabricated claims &mdash; and presents it to users as fact.
+        </p>
+      </div>
+
+
+      <!-- Table of Contents -->
+      <div class="border border-[#E2E8F0] p-8 mb-12">
+        <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">In this article</p>
+        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
+          <li><a href="#scale" class="hover:text-primary-hover underline underline-offset-2">How big is the problem?</a></li>
+          <li><a href="#types" class="hover:text-primary-hover underline underline-offset-2">The 5 most common AI errors about brands</a></li>
+          <li><a href="#process" class="hover:text-primary-hover underline underline-offset-2">The 4-step fix process</a></li>
+          <li><a href="#recommendation" class="hover:text-primary-hover underline underline-offset-2">How to audit your brand</a></li>
+        </ol>
+      </div>
+
+
+      <!-- Article Body -->
+      <div class="article-body">
+
+        <h2 id="scale">How big is the problem?</h2>
+
+        <p>When we audited what AI chatbots say about 50 brands across 8 platforms, the results were alarming: <strong>72% of brands had at least one factual error</strong> in AI-generated responses. The average brand had 3.4 errors across platforms.</p>
+
+        <p>These aren't obscure edge cases. They're answers to common questions like "what does [brand] cost?" and "how does [brand] compare to [competitor]?" &mdash; the exact questions your potential customers are asking. Whether you run a 5-person business or manage visibility for a portfolio of agency clients, these errors are steering buyers toward your competitors.</p>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-2xl font-display font-bold text-slate-text mb-1">72%</p>
+          <p class="text-sm text-slate-muted">of brands have at least one factual error in AI-generated responses about them.</p>
         </div>
 
-        <div class="article-toc">
-            <div class="toc-label">In this article</div>
-            <ol>
-                <li><a href="#scale">How big is the problem?</a></li>
-                <li><a href="#types">The 5 most common AI errors about brands</a></li>
-                <li><a href="#process">The 4-step fix process</a></li>
-                <li><a href="#example">Real example: boutique hotel audit</a></li>
-                <li><a href="#recommendation">How to audit your brand</a></li>
-            </ol>
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>The danger:</strong> Unlike a wrong Google result that users can verify by clicking through, AI presents wrong information as confident fact. There's no "source link" for the user to check. The hallucination becomes the user's reality.
+          </p>
         </div>
 
-        <div class="article-body">
-            <h2 id="scale">How big is the problem?</h2>
+        <h2 id="types">The 5 most common AI errors about brands</h2>
 
-            <p>When we audited what AI chatbots say about 50 brands across 8 platforms, the results were alarming: <strong>72% of brands had at least one factual error</strong> in AI-generated responses. The average brand had 3.4 errors across platforms.</p>
-
-            <p>These aren't obscure edge cases. They're answers to common questions like "what does [brand] cost?" and "how does [brand] compare to [competitor]?" — the exact questions your potential customers are asking.</p>
-
-            <div class="highlight">
-                <strong>The danger:</strong> Unlike a wrong Google result that users can verify by clicking through, AI presents wrong information as confident fact. There's no "source link" for the user to check. The hallucination becomes the user's reality.
-            </div>
-
-            <h2 id="types">The 5 most common AI errors about brands</h2>
-
-            <table class="article-table">
-                <thead>
-                    <tr>
-                        <th>Error Type</th>
-                        <th>Frequency</th>
-                        <th>Example</th>
-                        <th>Impact</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Wrong pricing</strong></td>
-                        <td>41% of brands</td>
-                        <td>AI quotes $99/mo when actual price is $29/mo</td>
-                        <td>Customers think you're overpriced</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Outdated features</strong></td>
-                        <td>34% of brands</td>
-                        <td>AI says "no mobile app" when you launched one 6 months ago</td>
-                        <td>Customers rule you out for missing features you have</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Wrong comparisons</strong></td>
-                        <td>28% of brands</td>
-                        <td>AI says competitor has a feature you also have</td>
-                        <td>Competitor gets credit for parity features</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Fabricated limitations</strong></td>
-                        <td>19% of brands</td>
-                        <td>AI claims your product "only works for enterprises"</td>
-                        <td>SMB customers skip you entirely</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Product confusion</strong></td>
-                        <td>15% of brands</td>
-                        <td>AI confuses your product with a similarly named one</td>
-                        <td>Wrong product description reaches your customers</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h2 id="process">The 4-step fix process</h2>
-
-            <p><strong>Step 1: Audit.</strong> Query every major AI platform (ChatGPT, Claude, Perplexity, Gemini, Grok, DeepSeek, Copilot, AI Overviews) with your brand name + common buyer questions. Run each query multiple times — AI gives different answers each session. A single query tells you nothing; 50+ queries reveal patterns.</p>
-
-            <p><strong>Step 2: Identify.</strong> Catalog every factual error by platform, query, and error type. Note which errors appear on multiple platforms (harder to fix) vs. single platforms (usually one bad source).</p>
-
-            <p><strong>Step 3: Fix the sources.</strong> AI learns from web content. Trace each error to its likely source — an outdated review site listing, a competitor comparison blog post, your own website with pricing behind JavaScript. Then fix the source:</p>
-            <ul>
-                <li>Update your G2, Capterra, and TrustRadius listings with current pricing and features</li>
-                <li>Add Schema.org structured data (Product, Offer, FAQ) to your website</li>
-                <li>Make sure pricing is in plain HTML, not rendered by JavaScript</li>
-                <li>Publish a clear comparison page on your own site</li>
-            </ul>
-
-            <p><strong>Step 4: Verify.</strong> Re-query the same platforms 2–4 weeks after fixing sources. AI models update their knowledge at different rates — some within days, others within weeks. Track which errors persist and escalate those.</p>
-
-            <table class="article-table">
-                <thead>
-                    <tr>
-                        <th>Step</th>
-                        <th>Effort</th>
-                        <th>Timeline</th>
-                        <th>Impact</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>1. Audit</strong></td>
-                        <td>High (manual) or Low (with tool)</td>
-                        <td>1–3 days manual, 24h with Metricus</td>
-                        <td>Baseline knowledge</td>
-                    </tr>
-                    <tr>
-                        <td><strong>2. Identify</strong></td>
-                        <td>Medium</td>
-                        <td>1 day</td>
-                        <td>Prioritized error list</td>
-                    </tr>
-                    <tr>
-                        <td><strong>3. Fix sources</strong></td>
-                        <td>Medium–High</td>
-                        <td>1–2 weeks</td>
-                        <td>Errors start correcting</td>
-                    </tr>
-                    <tr>
-                        <td><strong>4. Verify</strong></td>
-                        <td>Low</td>
-                        <td>2–4 weeks after fixes</td>
-                        <td>Confirmation + remaining issues</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h2 id="example">Real example: boutique hotel audit</h2>
-
-            <p>In our <a href="../../example-report/" style="color:var(--primary)">sample report for a London boutique hotel</a>, we found something worse than errors: <strong>0% visibility across all 8 AI platforms</strong>. The hotel simply didn't exist in AI's world. Every recommendation in its category went to competitors.</p>
-
-            <p>The cause was structural: the hotel's website loaded room details and pricing via JavaScript (invisible to AI crawlers), had no Schema.org structured data, and wasn't listed in any "best of" roundups that AI platforms use as sources. The hotel was a great property — AI just couldn't find it.</p>
-
-            <div class="highlight-green">
-                <strong>The fix path was clear:</strong> Add Hotel and Restaurant schema markup, get listed in 3–5 "best boutique hotels" articles, and publish a comparison page positioning the hotel against the competitors AI already recommends. These are the exact actions in our report's prioritized plan.
-            </div>
-
-            <h2 id="recommendation">How to audit your brand</h2>
-
-            <div class="article-recommendation">
-                <strong>For businesses that want to find and fix AI hallucinations about their brand, a one-time AI visibility audit is the fastest path.</strong> Metricus audits 8 AI platforms with 200+ queries, identifies every factual error, traces them to sources, and gives you a prioritized fix list — delivered in 24 hours for a one-time fee starting at $49.
-            </div>
-
-            <div style="margin-top:32px;padding:20px 24px;background:var(--bg-warm);border-radius:10px;font-size:0.78rem;color:var(--text-dim);line-height:1.7;">
-                <strong style="color:var(--text-bright);">Sources</strong><br>
-                Error rate data (72% of brands) based on Metricus brand audits, March 2026. Learn more about <a href="../ai-visibility-scores-explained/" style="color:var(--primary);">how we measure AI visibility</a>.
-            </div>
-
-            <div style="margin-top:24px;font-size:0.82rem;">
-                <strong style="color:var(--text-bright);">Related reading</strong>
-                <ul style="margin-top:8px;padding-left:18px;color:var(--text-dim);line-height:2;">
-                    <li><a href="../ai-visibility-action-plan/" style="color:var(--primary);">5-Step Action Plan</a></li>
-                    <li><a href="../ai-getting-pricing-wrong/" style="color:var(--primary);">AI Getting Pricing Wrong</a></li>
-                    <li><a href="../../example-report/" style="color:var(--primary);">Sample Report</a></li>
-                </ul>
-            </div>
-
-            <div class="article-cta">
-                <h3>Find out what AI gets wrong about you</h3>
-                <p>72% of brands have errors. Get your full accuracy audit across 8 AI platforms.</p>
-                <a href="../../#pricing" class="btn btn-checkout" style="padding:12px 28px;font-size:0.88rem;">Get your report — from $49</a>
-            </div>
+        <div class="border border-[#E2E8F0] my-8 overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-surface-container-low">
+                <th class="text-left p-4 font-semibold text-slate-text">Error Type</th>
+                <th class="text-left p-4 font-semibold text-slate-text">Frequency</th>
+                <th class="text-left p-4 font-semibold text-slate-text">Example</th>
+                <th class="text-left p-4 font-semibold text-slate-text">Impact</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[#E2E8F0]">
+              <tr>
+                <td class="p-4 font-medium text-slate-text">Wrong pricing</td>
+                <td class="p-4 text-slate-muted">41% of brands</td>
+                <td class="p-4 text-slate-muted">AI quotes $99/mo when actual price is $29/mo</td>
+                <td class="p-4 text-slate-muted">Customers think you're overpriced</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text">Outdated features</td>
+                <td class="p-4 text-slate-muted">34% of brands</td>
+                <td class="p-4 text-slate-muted">AI says "no mobile app" when you launched one 6 months ago</td>
+                <td class="p-4 text-slate-muted">Customers rule you out for missing features you have</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text">Wrong comparisons</td>
+                <td class="p-4 text-slate-muted">28% of brands</td>
+                <td class="p-4 text-slate-muted">AI says competitor has a feature you also have</td>
+                <td class="p-4 text-slate-muted">Competitor gets credit for parity features</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text">Fabricated limitations</td>
+                <td class="p-4 text-slate-muted">19% of brands</td>
+                <td class="p-4 text-slate-muted">AI claims your product "only works for enterprises"</td>
+                <td class="p-4 text-slate-muted">SMB customers skip you entirely</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text">Product confusion</td>
+                <td class="p-4 text-slate-muted">15% of brands</td>
+                <td class="p-4 text-slate-muted">AI confuses your product with a similarly named one</td>
+                <td class="p-4 text-slate-muted">Wrong product description reaches your customers</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+
+        <h2 id="process">The 4-step fix process</h2>
+
+        <h3>Step 1: Audit</h3>
+        <p>Query every major AI platform (ChatGPT, Claude, Perplexity, Gemini, Grok, DeepSeek, Copilot, AI Overviews) with your brand name + common buyer questions. Run each query multiple times &mdash; AI gives different answers each session. A single query tells you nothing; 50+ queries reveal patterns.</p>
+
+        <h3>Step 2: Trace sources</h3>
+        <p>Catalog every factual error by platform, query, and error type. Note which errors appear on multiple platforms (harder to fix) vs. single platforms (usually one bad source).</p>
+
+        <h3>Step 3: Fix the sources</h3>
+        <p>AI learns from web content. Trace each error to its likely source &mdash; an outdated review site listing, a competitor comparison blog post, your own website with pricing behind JavaScript. Then fix the source:</p>
+        <ul>
+          <li>Update your G2, Capterra, and TrustRadius listings with current pricing and features</li>
+          <li>Add Schema.org structured data (Product, Offer, FAQ) to your website</li>
+          <li>Make sure pricing is in plain HTML, not rendered by JavaScript</li>
+          <li>Publish a clear comparison page on your own site</li>
+        </ul>
+
+        <h3>Step 4: Verify</h3>
+        <p>Re-query the same platforms 2&ndash;4 weeks after fixing sources. AI models update their knowledge at different rates &mdash; some within days, others within weeks. Track which errors persist and escalate those.</p>
+
+        <div class="border border-[#E2E8F0] my-8 overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-surface-container-low">
+                <th class="text-left p-4 font-semibold text-slate-text">Step</th>
+                <th class="text-left p-4 font-semibold text-slate-text">Effort</th>
+                <th class="text-left p-4 font-semibold text-slate-text">Timeline</th>
+                <th class="text-left p-4 font-semibold text-slate-text">Impact</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[#E2E8F0]">
+              <tr>
+                <td class="p-4 font-medium text-slate-text">1. Audit</td>
+                <td class="p-4 text-slate-muted">High (manual) or Low (with tool)</td>
+                <td class="p-4 text-slate-muted">1&ndash;3 days manual, 24h with Metricus</td>
+                <td class="p-4 text-slate-muted">Baseline knowledge</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text">2. Trace sources</td>
+                <td class="p-4 text-slate-muted">Medium</td>
+                <td class="p-4 text-slate-muted">1 day</td>
+                <td class="p-4 text-slate-muted">Prioritized error list</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text">3. Fix sources</td>
+                <td class="p-4 text-slate-muted">Medium&ndash;High</td>
+                <td class="p-4 text-slate-muted">1&ndash;2 weeks</td>
+                <td class="p-4 text-slate-muted">Errors start correcting</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text">4. Verify</td>
+                <td class="p-4 text-slate-muted">Low</td>
+                <td class="p-4 text-slate-muted">2&ndash;4 weeks after fixes</td>
+                <td class="p-4 text-slate-muted">Confirmation + remaining issues</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="recommendation">How to audit your brand</h2>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>For businesses and agencies that want to find and fix AI hallucinations, a one-time AI visibility audit is the fastest path.</strong> Metricus audits 8 AI platforms with 200+ queries, identifies every factual error, traces them to sources, and gives you a prioritized fix list &mdash; delivered for a one-time fee starting at $49.
+          </p>
+        </div>
+
+        <p class="text-sm text-slate-muted mt-8"><strong>Sources:</strong> Error rate data (72% of brands) based on Metricus brand audits, March 2026. Learn more about <a href="../ai-visibility-scores-explained/">how we measure AI visibility</a>.</p>
+
+      </div>
+      <!-- End Article Body -->
+
+
+      <!-- ========== ARTICLE CTA ========== -->
+      <div class="bg-primary p-8 md:p-12 mt-16">
+        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">See where any brand stands in AI</h3>
+        <p class="text-on-primary/80 text-base max-w-lg mb-8">
+          Get a full AI visibility report across 8 platforms &mdash; for your own brand or a client's. One-time fee, no subscription.
+        </p>
+        <a href="../../request-access/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
+          Get a Report
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+      </div>
+
+    </article>
+
+
+    <!-- ========== RELATED POSTS ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-8">Related articles</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <a href="../ai-getting-pricing-wrong/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Research</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            AI Is Getting Your Pricing Wrong
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            41% of brands have incorrect pricing in AI responses. Here's why it happens and how to fix it.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../ai-visibility-action-plan/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Playbook</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            You Got Your Report. Now What? The 5-Step Action Plan
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            Your AI visibility report is only valuable if you act on it. Here are the five steps every brand should take.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../ai-chatbot-recommendations/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Strategy</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            How AI Chatbot Recommendations Work
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            Understanding the mechanics behind AI recommendations so you can influence them.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="py-12 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="#" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Privacy Policy</a>
+          <a href="#" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Terms of Service</a>
+          <a href="#" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Agency Partners</a>
+          <a href="#" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Contact</a>
+        </div>
+        <p class="text-xs uppercase tracking-tighter text-slate-500">
+          &copy; 2026 Metricus. All rights reserved.
+        </p>
+      </div>
     </div>
-</div>
-
-<div class="footer">
-    <div class="w">metricus &copy; 2026 &nbsp;&middot;&nbsp; <a href="mailto:hello@metricusapp.com">Contact</a> &nbsp;&middot;&nbsp; <a href="../../blog/">Blog</a> &nbsp;&middot;&nbsp; <a href="../../privacy-policy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="../../terms-of-service/">Terms</a> &nbsp;&middot;&nbsp; <a href="../../support/">Support</a></div>
-</div>
+  </footer>
 
 </body>
 </html>

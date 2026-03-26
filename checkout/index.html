@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Metricus</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <meta name="description" content="Complete your Metricus order. Secure checkout powered by Stripe.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#334155',
+            'primary-hover': '#1E293B',
+            'on-primary': '#f6f7ff',
+            'on-primary-fixed': '#324054',
+            'primary-dim': '#455368',
+            surface: '#f7f9fb',
+            'surface-container-low': '#f0f4f7',
+            'surface-container': '#e8eff3',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-highest': '#d9e4ea',
+            'on-surface': '#2a3439',
+            'on-surface-variant': '#566166',
+            outline: '#717c82',
+            'outline-variant': '#a9b4b9',
+          },
+          fontFamily: {
+            display: ['Newsreader', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            body: ['Public Sans', 'sans-serif'],
+            headline: ['Newsreader', 'serif'],
+          },
+          borderRadius: {
+            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
+            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
+            full: '0.75rem',
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Google Ads / GTM -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-970082336');
+    gtag('config', 'G-YYR4QTRTW');
+  </script>
+  <script>
+    function gtag_report_conversion() {
+      gtag('event', 'conversion', { 'send_to': 'AW-970082336/043PCI3MocwBEKCQyc4D' });
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f7f9fb;
+      color: #2a3439;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .font-display { font-family: 'Newsreader', serif; }
+    .bg-dot-grid {
+      background-image: radial-gradient(#d9e4ea 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    @keyframes pulse-slow {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    .animate-pulse-slow { animation: pulse-slow 2s ease-in-out infinite; }
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .animate-spin-slow { animation: spin-slow 1.5s linear infinite; }
+  </style>
+</head>
+<body class="min-h-screen bg-dot-grid">
+
+  <!-- Minimal Nav -->
+  <nav class="w-full border-b border-outline-variant bg-surface-container-lowest">
+    <div class="max-w-md mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="../" class="font-display italic text-xl text-primary font-bold tracking-tight">Metricus</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-md mx-auto px-6 py-12">
+
+    <!-- Order Summary Card -->
+    <div id="order-card" class="bg-surface-container-lowest border border-outline-variant p-8 mb-6">
+      <h1 class="font-display text-2xl text-on-surface font-bold mb-6">Audit Summary</h1>
+
+      <!-- Tier Info (populated by JS) -->
+      <div id="tier-info">
+        <div class="flex items-center justify-between mb-1">
+          <span id="tier-name" class="text-lg font-semibold text-on-surface">---</span>
+          <span id="tier-price" class="text-lg font-semibold text-primary">---</span>
+        </div>
+        <p class="text-sm text-on-surface-variant mb-5">Per report</p>
+
+        <!-- Features -->
+        <ul id="tier-features" class="space-y-2 mb-6">
+          <!-- Populated by JS -->
+        </ul>
+      </div>
+
+      <!-- Divider -->
+      <div class="border-t border-outline-variant my-6"></div>
+
+      <!-- Total -->
+      <div class="flex items-center justify-between">
+        <span class="text-base font-semibold text-on-surface">Total</span>
+        <span id="tier-total" class="text-xl font-bold text-primary">---</span>
+      </div>
+    </div>
+
+    <!-- Payment / Redirect Section -->
+    <div class="bg-surface-container-lowest border border-outline-variant p-8 mb-6 text-center">
+      <div class="flex items-center justify-center gap-3 mb-4">
+        <span class="material-symbols-outlined text-3xl text-primary animate-spin-slow">progress_activity</span>
+      </div>
+      <p class="text-base font-semibold text-on-surface mb-1">Redirecting to secure checkout...</p>
+      <p class="text-sm text-on-surface-variant mb-4">You'll be taken to Stripe to complete your payment.</p>
+      <div class="flex items-center justify-center gap-2 text-xs text-outline">
+        <span class="material-symbols-outlined text-sm">lock</span>
+        Secure checkout powered by Stripe
+      </div>
+    </div>
+
+    <!-- Guarantee Note -->
+    <div class="flex items-start gap-3 px-2">
+      <span class="material-symbols-outlined text-primary text-xl mt-0.5" style="font-variation-settings: 'FILL' 1;">verified</span>
+      <p class="text-sm text-on-surface-variant leading-relaxed">
+        <strong class="text-on-surface">3+ actionable insights per report or full refund.</strong> No questions asked.
+      </p>
+    </div>
+
+  </main>
+
+  <!-- Inline JS Module -->
+  <script type="module">
+    const STRIPE = {
+      snapshot:  'https://buy.stripe.com/4gMeVe6IOfSjauBgma7g400',
+      deepdive:  'https://buy.stripe.com/9B614ogjobC346dd9Y7g401',
+      arsenal:   'https://buy.stripe.com/8x2cN63wC5dF7ipd9Y7g402',
+    };
+
+    const TIER_INFO = {
+      snapshot: {
+        name: 'Snapshot',
+        price: '$49',
+        features: [
+          '3 AI Platforms',
+          '5 Target Queries',
+          '2 Competitor Comparison',
+          'Visibility Score & AI Quotes',
+          'Accuracy Summary',
+        ],
+      },
+      deepdive: {
+        name: 'Deep Dive',
+        price: '$149',
+        features: [
+          'All 8 AI Platforms',
+          '20 Target Queries',
+          '5 Competitor Comparison',
+          'Full Accuracy Audit & Citation Tracking',
+          'Top 5 Prioritized Actions',
+        ],
+      },
+      arsenal: {
+        name: 'Full Arsenal',
+        price: '$349',
+        features: [
+          'All 8 AI Platforms',
+          '50 Target Queries',
+          '10 Competitor Comparison',
+          'Executive Summary PDF',
+          'Regional Breakdown (US/EU/APAC)',
+          'Unlimited Prioritized Actions',
+        ],
+      },
+    };
+
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlMZxJmAmm90HGKg6AJxEeB8xOP83Dyq4rUHnCD8aubV1NzPqb1ZlSbjzmBAnO63r2/exec';
+
+    // Read URL params
+    const params = new URLSearchParams(window.location.search);
+    const tier = (params.get('tier') || 'deepdive').toLowerCase().replace(/[\s_-]/g, '');
+    const email = params.get('email') || '';
+    const website = params.get('website') || '';
+
+    // Normalize tier key
+    const tierKey = Object.keys(TIER_INFO).find(k => tier.includes(k)) || 'deepdive';
+    const info = TIER_INFO[tierKey];
+
+    // Populate order summary
+    document.getElementById('tier-name').textContent = info.name;
+    document.getElementById('tier-price').textContent = info.price;
+    document.getElementById('tier-total').textContent = info.price;
+
+    const featuresList = document.getElementById('tier-features');
+    info.features.forEach(f => {
+      const li = document.createElement('li');
+      li.className = 'flex items-start gap-2 text-sm text-on-surface-variant';
+      li.innerHTML = `<span class="material-symbols-outlined text-primary text-base mt-0.5" style="font-size:16px;">check</span>${f}`;
+      featuresList.appendChild(li);
+    });
+
+    // Fire tracking event
+    async function trackCheckout() {
+      try {
+        const data = new URLSearchParams({
+          action: 'checkout',
+          email: email,
+          website: website,
+          tier: tierKey,
+          price: info.price,
+          timestamp: new Date().toISOString(),
+        });
+        await fetch(SCRIPT_URL, {
+          method: 'POST',
+          body: data,
+          mode: 'no-cors',
+        });
+      } catch (e) {
+        // Silently fail tracking
+      }
+    }
+
+    // Fire Google Ads conversion
+    if (typeof gtag_report_conversion === 'function') {
+      gtag_report_conversion();
+    }
+
+    // Track and redirect
+    trackCheckout();
+
+    const stripeUrl = new URL(STRIPE[tierKey]);
+    if (email) {
+      stripeUrl.searchParams.set('prefilled_email', email);
+    }
+
+    setTimeout(() => {
+      window.location.href = stripeUrl.toString();
+    }, 2000);
+  </script>
+
+</body>
+</html>

@@ -1,78 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-    <title>Thank You — Metricus</title>
-    <meta name="description" content="Your AI visibility report is on the way. We'll deliver it to your inbox within 24 hours.">
-    <meta name="robots" content="noindex">
-    <!-- Google Tag Manager -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Order Confirmed | Metricus</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#334155',
+            'primary-hover': '#1E293B',
+            'on-primary': '#f6f7ff',
+            'on-primary-fixed': '#324054',
+            'primary-dim': '#455368',
+            surface: '#f7f9fb',
+            'surface-container-low': '#f0f4f7',
+            'surface-container': '#e8eff3',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-highest': '#d9e4ea',
+            'on-surface': '#2a3439',
+            'on-surface-variant': '#566166',
+            outline: '#717c82',
+            'outline-variant': '#a9b4b9',
+          },
+          fontFamily: {
+            display: ['Newsreader', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            body: ['Public Sans', 'sans-serif'],
+            headline: ['Newsreader', 'serif'],
+          },
+          borderRadius: {
+            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
+            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
+            full: '0.75rem',
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Google Ads / GTM -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-970082336');
+    gtag('config', 'G-YYR4QTRTW');
+  </script>
+  <script>
+    function gtag_report_conversion() {
+      gtag('event', 'conversion', { 'send_to': 'AW-970082336/043PCI3MocwBEKCQyc4D' });
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f7f9fb;
+      color: #2a3439;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .font-display { font-family: 'Newsreader', serif; }
+    .bg-dot-grid {
+      background-image: radial-gradient(#d9e4ea 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+  </style>
 </head>
-<body>
+<body class="min-h-screen bg-dot-grid">
 
-<header>
-    <div class="w-wide">
-        <div class="header-inner">
-            <a href="../" class="logo">
-                <div class="logo-icon">M</div>
-                metricus
-            </a>
-        </div>
+  <!-- Minimal Nav -->
+  <nav class="w-full border-b border-outline-variant bg-surface-container-lowest">
+    <div class="max-w-lg mx-auto px-6 py-4">
+      <a href="../" class="font-display italic text-xl text-primary font-bold tracking-tight">Metricus</a>
     </div>
-</header>
+  </nav>
 
-<div class="w">
-    <div class="ty">
-        <div class="ty-icon">&#10003;</div>
-        <h1>You're all set. Your report is being built.</h1>
-        <p style="color:var(--text-dim);font-size:0.92rem;max-width:440px;margin:0 auto;">We have your brand details and payment. Here's what happens now:</p>
+  <!-- Main Content -->
+  <main class="max-w-lg mx-auto px-6 py-16">
 
-        <div class="ty-steps" style="margin-top:28px;">
-            <div class="ty-step">
-                <div class="ty-step-n">&#10003;</div>
-                <div>
-                    <h3 style="color:var(--accent);">Brand details received</h3>
-                    <p>We have everything we need to start your analysis.</p>
-                </div>
-            </div>
-            <div class="ty-step">
-                <div class="ty-step-n">&#10003;</div>
-                <div>
-                    <h3 style="color:var(--accent);">Payment confirmed</h3>
-                    <p>Your 24-hour clock has started.</p>
-                </div>
-            </div>
-            <div class="ty-step">
-                <div class="ty-step-n">3</div>
-                <div>
-                    <h3>Our agents are querying AI platforms now</h3>
-                    <p>Hundreds of queries across ChatGPT, Claude, Perplexity, Gemini, and 4 more platforms.</p>
-                </div>
-            </div>
-            <div class="ty-step">
-                <div class="ty-step-n">4</div>
-                <div>
-                    <h3>Report in your inbox within 24 hours</h3>
-                    <p>Full PDF report delivered to your email. Check spam if you don't see it.</p>
-                </div>
-            </div>
-        </div>
-
-        <div style="margin-top:40px;padding-top:24px;border-top:1px solid var(--border);">
-            <p style="font-size:0.82rem;color:var(--text-dim);">Questions? Email us at <a href="mailto:hello@metricusapp.com" style="color:var(--primary);text-decoration:none;">hello@metricusapp.com</a></p>
-        </div>
+    <!-- Confirmation Header -->
+    <div class="text-center mb-12">
+      <span class="material-symbols-outlined text-primary mb-4 block" style="font-size: 64px; font-variation-settings: 'FILL' 1;">check_circle</span>
+      <h1 class="font-display text-3xl text-on-surface font-bold leading-tight mb-3">Your report is being built.</h1>
+      <p class="text-base text-on-surface-variant leading-relaxed">We have your details and payment. Here's what happens next:</p>
     </div>
-</div>
 
-<div class="footer">
-    <div class="w">metricus &copy; 2026 &nbsp;&middot;&nbsp; <a href="mailto:hello@metricusapp.com">Contact</a> &nbsp;&middot;&nbsp; <a href="../privacy-policy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="../terms-of-service/">Terms</a> &nbsp;&middot;&nbsp; <a href="../support/">Support</a></div>
-</div>
+    <!-- Steps Timeline -->
+    <div class="bg-surface-container-lowest border border-outline-variant p-8 mb-8">
+      <div class="space-y-0">
+
+        <!-- Step 1: Completed -->
+        <div class="flex gap-4">
+          <div class="flex flex-col items-center">
+            <div class="w-8 h-8 flex items-center justify-center bg-primary text-on-primary text-sm font-semibold shrink-0">
+              <span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">check</span>
+            </div>
+            <div class="w-px h-full bg-outline-variant min-h-[24px]"></div>
+          </div>
+          <div class="pb-6">
+            <p class="text-sm font-semibold text-primary">Brand details received</p>
+            <p class="text-sm text-on-surface-variant mt-0.5">We have everything we need to start the audit.</p>
+          </div>
+        </div>
+
+        <!-- Step 2: Completed -->
+        <div class="flex gap-4">
+          <div class="flex flex-col items-center">
+            <div class="w-8 h-8 flex items-center justify-center bg-primary text-on-primary text-sm font-semibold shrink-0">
+              <span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">check</span>
+            </div>
+            <div class="w-px h-full bg-outline-variant min-h-[24px]"></div>
+          </div>
+          <div class="pb-6">
+            <p class="text-sm font-semibold text-primary">Payment confirmed</p>
+            <p class="text-sm text-on-surface-variant mt-0.5">Your report is now in the queue.</p>
+          </div>
+        </div>
+
+        <!-- Step 3: In Progress -->
+        <div class="flex gap-4">
+          <div class="flex flex-col items-center">
+            <div class="w-8 h-8 flex items-center justify-center border-2 border-primary text-primary text-sm font-bold shrink-0">
+              3
+            </div>
+            <div class="w-px h-full bg-outline-variant min-h-[24px]"></div>
+          </div>
+          <div class="pb-6">
+            <p class="text-sm font-semibold text-on-surface">Our GEO engine is querying AI platforms now</p>
+            <p class="text-sm text-on-surface-variant mt-0.5">200+ queries across ChatGPT, Claude, Perplexity, Gemini, AI Overviews, Grok, DeepSeek, and Copilot.</p>
+          </div>
+        </div>
+
+        <!-- Step 4: Pending -->
+        <div class="flex gap-4">
+          <div class="flex flex-col items-center">
+            <div class="w-8 h-8 flex items-center justify-center border border-outline-variant text-outline text-sm font-bold shrink-0">
+              4
+            </div>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-on-surface">Report delivered to your inbox</p>
+            <p class="text-sm text-on-surface-variant mt-0.5">You'll receive a comprehensive PDF with visibility scores, AI quotes, accuracy gaps, and a prioritized action plan.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- What's In Your Report -->
+    <div class="bg-surface-container-lowest border border-outline-variant p-8 mb-8">
+      <h2 class="font-display text-xl text-on-surface font-bold mb-4">What's in Your Report</h2>
+      <ul class="space-y-3">
+        <li class="flex items-start gap-3 text-sm text-on-surface-variant">
+          <span class="material-symbols-outlined text-primary text-base mt-0.5" style="font-size:18px;">analytics</span>
+          Visibility score across all platforms
+        </li>
+        <li class="flex items-start gap-3 text-sm text-on-surface-variant">
+          <span class="material-symbols-outlined text-primary text-base mt-0.5" style="font-size:18px;">format_quote</span>
+          AI quotes and mentions
+        </li>
+        <li class="flex items-start gap-3 text-sm text-on-surface-variant">
+          <span class="material-symbols-outlined text-primary text-base mt-0.5" style="font-size:18px;">fact_check</span>
+          Accuracy audit
+        </li>
+        <li class="flex items-start gap-3 text-sm text-on-surface-variant">
+          <span class="material-symbols-outlined text-primary text-base mt-0.5" style="font-size:18px;">compare_arrows</span>
+          Competitor comparison
+        </li>
+        <li class="flex items-start gap-3 text-sm text-on-surface-variant">
+          <span class="material-symbols-outlined text-primary text-base mt-0.5" style="font-size:18px;">checklist</span>
+          Prioritized action plan
+        </li>
+      </ul>
+    </div>
+
+    <!-- Support Note -->
+    <div class="text-center text-sm text-on-surface-variant mb-12">
+      <p>Questions? Reply to your delivery email or contact <a href="mailto:hello@metricusapp.com" class="text-primary underline underline-offset-2 hover:text-primary-dim">hello@metricusapp.com</a></p>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-outline-variant bg-surface-container-lowest">
+    <div class="max-w-lg mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-outline">
+      <span>&copy; 2026 Metricus. All rights reserved.</span>
+      <div class="flex items-center gap-4">
+        <a href="mailto:hello@metricusapp.com" class="hover:text-primary transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fire conversion on page load -->
+  <script>
+    if (typeof gtag_report_conversion === 'function') {
+      gtag_report_conversion();
+    }
+  </script>
 
 </body>
 </html>

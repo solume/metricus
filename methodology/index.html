@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Methodology — Metricus</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://metricusapp.com/methodology/">
+  <meta name="description" content="How Metricus measures AI visibility: query generation, pattern analysis, and strategic reporting across 8 AI platforms.">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500;1,6..72,600&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#515F74',
+            'on-primary': '#f6f7ff',
+            surface: '#f7f9fb',
+            'surface-container-low': '#f0f4f7',
+            'surface-container': '#e8eff3',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-highest': '#d9e4ea',
+            'on-surface': '#2a3439',
+            'on-surface-variant': '#566166',
+            outline: '#717c82',
+            'outline-variant': '#a9b4b9',
+            'on-primary-fixed': '#324054',
+            'primary-dim': '#455368',
+            'surface-variant': '#d9e4ea',
+            'surface-container-high': '#e1e9ee',
+            'primary-fixed': '#d5e3fd',
+            'primary-fixed-dim': '#c7d5ee',
+          },
+          borderRadius: {
+            none: '0px',
+            sm: '0px',
+            DEFAULT: '0px',
+            md: '0px',
+            lg: '0px',
+            xl: '0px',
+            '2xl': '0px',
+            '3xl': '0px',
+            full: '0px',
+          },
+          fontFamily: {
+            headline: ['Newsreader', 'serif'],
+            body: ['Public Sans', 'sans-serif'],
+            label: ['Public Sans', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    * { border-radius: 0px !important; }
+    body {
+      font-family: 'Public Sans', sans-serif;
+      background-color: #f7f9fb;
+      color: #2a3439;
+    }
+    .bg-grid {
+      background-image:
+        linear-gradient(rgba(81,95,116,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(81,95,116,0.05) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="bg-surface bg-grid antialiased">
+
+  <!-- Fixed Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="../" class="font-headline italic text-xl text-on-surface tracking-tight">Metricus</a>
+      <div class="flex items-center gap-8">
+        <a href="#" class="text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Methodology</a>
+        <a href="../" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
+        <a href="../blog/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Blog</a>
+        <a href="../request-access/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Request Access</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-32 pb-20 px-6 lg:px-8 max-w-7xl mx-auto">
+    <p class="uppercase tracking-widest text-xs font-label font-medium text-primary mb-6">Technical Framework 2026</p>
+    <h1 class="font-headline font-light text-6xl md:text-8xl text-on-surface leading-[0.95] mb-10">
+      The Architecture of<br><em>Certainty.</em>
+    </h1>
+    <div class="max-w-3xl md:w-6/12">
+      <p class="text-on-surface-variant text-lg leading-relaxed">
+        Our methodology transcends simple data aggregation. We employ a proprietary GEO analytics engine — built from academic research into how AI models form recommendations — that queries each platform hundreds of times to reveal the real patterns in any brand's AI visibility.
+      </p>
+    </div>
+  </section>
+
+  <!-- Methodology Split Screen -->
+  <section class="border-t border-outline-variant/40">
+    <div class="flex flex-col lg:flex-row">
+
+      <!-- Left Column (Sticky) -->
+      <div class="lg:w-5/12 bg-surface-container-low">
+        <div class="lg:sticky lg:top-16 lg:h-[calc(100vh-4rem)] flex flex-col justify-between p-8 lg:p-12">
+          <div>
+            <p class="uppercase tracking-widest text-xs font-label font-medium text-primary mb-4">Core Phase 01</p>
+            <h2 class="font-headline text-4xl lg:text-5xl text-on-surface leading-tight mb-6">Generative<br>Query Engine</h2>
+            <p class="text-on-surface-variant leading-relaxed max-w-md">
+              A systematic approach to understanding AI visibility. Each phase builds on the last, transforming raw query data into strategic competitive intelligence across all major AI platforms.
+            </p>
+          </div>
+          <div class="mt-12 flex items-center gap-3 text-on-surface-variant">
+            <div class="w-12 h-px bg-outline-variant"></div>
+            <p class="text-xs uppercase tracking-widest font-label">Scroll to explore technical stages</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column (Scrollable) -->
+      <div class="lg:w-7/12 bg-surface-container-lowest">
+
+        <!-- Step 01 - Query Generation -->
+        <div class="min-h-screen p-8 lg:p-12 flex flex-col justify-center border-b border-outline-variant/20">
+          <!-- Decorative Card -->
+          <div class="bg-surface-container-low p-6 mb-8 relative overflow-hidden">
+            <!-- Schematic overlay lines -->
+            <div class="absolute inset-0 opacity-[0.06]" style="background-image: linear-gradient(45deg, #515F74 1px, transparent 1px), linear-gradient(-45deg, #515F74 1px, transparent 1px); background-size: 24px 24px;"></div>
+            <div class="relative">
+              <div class="flex items-center justify-between mb-6">
+                <span class="material-symbols-outlined text-primary text-3xl">hub</span>
+                <p class="text-xs uppercase tracking-widest font-label text-on-surface-variant">Query Engine v3.2</p>
+              </div>
+              <div class="mb-4">
+                <p class="text-sm font-medium text-on-surface mb-1">99.8% Accuracy Index</p>
+                <div class="w-full h-1.5 bg-surface-container-highest">
+                  <div class="h-full bg-primary" style="width: 99.8%"></div>
+                </div>
+              </div>
+              <div class="space-y-3">
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <p class="text-xs uppercase tracking-widest font-label text-on-surface-variant">Query Diversity</p>
+                    <p class="text-xs text-on-surface-variant">94%</p>
+                  </div>
+                  <div class="w-full h-1 bg-surface-container-highest">
+                    <div class="h-full bg-primary/70" style="width: 94%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <p class="text-xs uppercase tracking-widest font-label text-on-surface-variant">Semantic Coverage</p>
+                    <p class="text-xs text-on-surface-variant">97%</p>
+                  </div>
+                  <div class="w-full h-1 bg-surface-container-highest">
+                    <div class="h-full bg-primary/70" style="width: 97%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Text content -->
+          <p class="font-headline text-[7rem] lg:text-[9rem] font-light text-on-surface/[0.04] leading-none select-none -mb-6">01</p>
+          <h3 class="font-headline text-3xl lg:text-4xl text-on-surface mb-4">Query Generation<br>& Normalization</h3>
+          <p class="text-on-surface-variant leading-relaxed max-w-lg">
+            Every AI platform is queried with 200+ variations of the target queries. We test ChatGPT, Claude, Perplexity, Gemini, AI Overviews, Grok, DeepSeek, and Copilot — because AI gives different answers every time, and asking once tells you nothing.
+          </p>
+        </div>
+
+        <!-- Step 02 - Pattern Analysis -->
+        <div class="min-h-screen p-8 lg:p-12 flex flex-col justify-center border-b border-outline-variant/20">
+          <!-- Dark Card -->
+          <div class="bg-on-primary-fixed p-6 mb-8 relative overflow-hidden">
+            <div class="flex items-center justify-between mb-5">
+              <p class="text-xs uppercase tracking-widest font-label text-on-primary/60">Process: Analyze_Patterns_v2</p>
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 bg-green-400 inline-block"></span>
+                <p class="text-xs font-label text-on-primary/60">Telemetry Active</p>
+              </div>
+            </div>
+            <!-- Bar chart visualization -->
+            <div class="flex items-end gap-2 h-32 mb-4">
+              <div class="flex-1 bg-primary/40 h-[45%]"></div>
+              <div class="flex-1 bg-primary/50 h-[62%]"></div>
+              <div class="flex-1 bg-primary/60 h-[38%]"></div>
+              <div class="flex-1 bg-primary-fixed-dim/70 h-[85%]"></div>
+              <div class="flex-1 bg-primary-fixed/80 h-[72%]"></div>
+              <div class="flex-1 bg-primary/50 h-[55%]"></div>
+              <div class="flex-1 bg-primary/40 h-[90%]"></div>
+              <div class="flex-1 bg-primary-fixed-dim/60 h-[68%]"></div>
+              <div class="flex-1 bg-primary/50 h-[48%]"></div>
+              <div class="flex-1 bg-primary-fixed/70 h-[78%]"></div>
+              <div class="flex-1 bg-primary/45 h-[58%]"></div>
+              <div class="flex-1 bg-primary-fixed-dim/50 h-[42%]"></div>
+            </div>
+            <div class="flex justify-between text-xs text-on-primary/40 font-label">
+              <span>ChatGPT</span>
+              <span>Claude</span>
+              <span>Perplexity</span>
+              <span>Gemini</span>
+            </div>
+          </div>
+          <!-- Text content -->
+          <p class="font-headline text-[7rem] lg:text-[9rem] font-light text-on-surface/[0.04] leading-none select-none -mb-6">02</p>
+          <h3 class="font-headline text-3xl lg:text-4xl text-on-surface mb-4">Pattern<br>Recognition</h3>
+          <p class="text-on-surface-variant leading-relaxed max-w-lg">
+            Identifying how often a brand appears, where it ranks against competitors, which sources AI pulls from, and what it gets wrong. Our algorithms detect visibility patterns across all 8 platforms.
+          </p>
+        </div>
+
+        <!-- Step 03 - Report Delivery -->
+        <div class="min-h-screen p-8 lg:p-12 flex flex-col justify-center">
+          <!-- 2x2 Grid -->
+          <div class="grid grid-cols-2 gap-3 mb-8">
+            <div class="bg-surface-container-low p-6 flex flex-col items-center justify-center aspect-square">
+              <span class="material-symbols-outlined text-primary text-5xl mb-3">verified_user</span>
+              <p class="text-xs uppercase tracking-widest font-label text-on-surface-variant">Verified Output</p>
+            </div>
+            <div class="bg-primary p-6 flex flex-col items-center justify-center aspect-square">
+              <p class="font-headline text-5xl font-light text-on-primary mb-1">99%</p>
+              <p class="text-xs uppercase tracking-widest font-label text-on-primary/70">Confidence Score</p>
+            </div>
+            <div class="bg-surface-container p-6 flex flex-col items-center justify-center aspect-square">
+              <span class="material-symbols-outlined text-primary text-4xl mb-2">analytics</span>
+              <p class="text-xs uppercase tracking-widest font-label text-on-surface-variant text-center">Actionable Insights</p>
+            </div>
+            <div class="bg-surface-container-low p-6 flex flex-col items-center justify-center aspect-square">
+              <span class="material-symbols-outlined text-primary text-4xl mb-2">assignment</span>
+              <p class="text-xs uppercase tracking-widest font-label text-on-surface-variant text-center">Priority Actions</p>
+            </div>
+          </div>
+          <!-- Text content -->
+          <p class="font-headline text-[7rem] lg:text-[9rem] font-light text-on-surface/[0.04] leading-none select-none -mb-6">03</p>
+          <h3 class="font-headline text-3xl lg:text-4xl text-on-surface mb-4">Strategic<br>Output</h3>
+          <p class="text-on-surface-variant leading-relaxed max-w-lg">
+            The final layer translates complex visibility data into a prioritized action plan. Every finding comes with specific, implementable fixes you can act on immediately — not generic advice.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Grid (Dark Section) -->
+  <section class="bg-on-primary-fixed text-on-primary relative overflow-hidden">
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
+      <p class="font-headline italic text-[18rem] lg:text-[24rem] font-light text-white/[0.03] leading-none">Authority</p>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-28 relative">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16">
+        <h2 class="font-headline italic text-4xl lg:text-5xl font-light leading-tight mb-4 lg:mb-0">Metricus by<br>the Numbers</h2>
+        <p class="text-xs uppercase tracking-widest font-label text-on-primary/60">Audit Report 2026</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <div class="border-l-2 border-primary-fixed-dim pl-6">
+          <p class="font-headline text-5xl lg:text-6xl font-light mb-2">500+</p>
+          <p class="text-xs uppercase tracking-widest font-label text-on-primary/70">Reports Delivered</p>
+        </div>
+        <div class="border-l-2 border-primary-fixed-dim pl-6">
+          <p class="font-headline text-5xl lg:text-6xl font-light mb-2">8</p>
+          <p class="text-xs uppercase tracking-widest font-label text-on-primary/70">AI Platforms Analyzed</p>
+        </div>
+        <div class="border-l-2 border-primary-fixed-dim pl-6">
+          <p class="font-headline text-5xl lg:text-6xl font-light mb-2">200+</p>
+          <p class="text-xs uppercase tracking-widest font-label text-on-primary/70">Queries Per Report</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 lg:py-32 px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-headline text-4xl lg:text-6xl font-light text-on-surface leading-tight mb-10">
+        See what a Metricus report <em class="italic">delivers</em>.
+      </h2>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="../request-access/" class="bg-primary text-on-primary text-sm font-medium px-8 py-3.5 hover:bg-primary-dim transition-colors">Request a Report</a>
+        <a href="../sample-report/" class="bg-surface-container-highest text-on-surface text-sm font-medium px-8 py-3.5 hover:bg-surface-variant transition-colors">View Sample Report</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="#" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a>
+        <a href="#" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a>
+        <a href="#" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Agency Partners</a>
+        <a href="#" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

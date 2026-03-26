@@ -1,583 +1,707 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="uc-meta-title">Metricus — AI Brand Visibility Reports</title>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <meta name="description" id="uc-meta-desc" content="Find out what ChatGPT, Claude, Perplexity and 5 other AI platforms say about your brand. Get a full visibility report with scores, quotes, errors, and an action plan.">
-    <link rel="canonical" href="https://metricusapp.com/">
-    <meta property="og:title" id="uc-og-title" content="Metricus — AI Brand Visibility Reports">
-    <meta property="og:description" id="uc-og-desc" content="AI is telling your customers to buy from someone else. Find out what every major AI says about your brand — and how to fix it.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://metricusapp.com/">
-    <meta property="og:site_name" content="Metricus">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" id="uc-tw-title" content="Metricus — AI Brand Visibility Reports">
-    <meta name="twitter:description" id="uc-tw-desc" content="AI is telling your customers to buy from someone else. Find out what every major AI says about your brand — and how to fix it.">
-    <!-- Google Tag Manager -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-    <script>function gtag_report_conversion(url){var callback=function(){if(typeof(url)!='undefined'){}};gtag('event','conversion',{'send_to':'AW-970082336/043PCI3MocwBEKCQyc4D','event_callback':callback});return false;}</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metricus | AI Visibility Intelligence</title>
+  <meta name="description" content="See exactly how ChatGPT, Claude, and 6 other AI platforms recommend any brand. One-time AI visibility reports from $49. No subscription.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://metricusapp.com/">
+  <meta property="og:title" content="Metricus — AI Visibility Intelligence">
+  <meta property="og:description" content="See exactly how ChatGPT, Claude, and 6 other AI platforms recommend any brand. One-time AI visibility reports from $49.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://metricusapp.com/">
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
 
-    <!-- JSON-LD: Organization -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com",
-      "email": "hello@metricusapp.com",
-      "logo": "https://metricusapp.com/img/og-default.svg",
-      "description": "Metricus provides one-time AI brand visibility reports for small businesses — our proprietary GEO analytics engine queries ChatGPT, Claude, Perplexity, and 5 other AI platforms to find out what they say about your brand, and delivers a prioritized action plan to fix it.",
-      "sameAs": []
-    }
-    </script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- JSON-LD: WebSite (enables sitelinks search + site hierarchy) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Metricus",
-      "url": "https://metricusapp.com",
-      "description": "AI brand visibility reports — find out what ChatGPT, Claude, Perplexity, and 5 other AI platforms say about your brand.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Metricus",
-        "url": "https://metricusapp.com"
-      }
-    }
-    </script>
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 
-    <!-- JSON-LD: Product with Offers -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "AI Brand Visibility Report",
-      "description": "One-time AI visibility report across 8 AI platforms (ChatGPT, Claude, Perplexity, Gemini, AI Overviews, Grok, DeepSeek, Copilot). Covers mention rate, positioning, citations, factual accuracy, and competitor comparisons.",
-      "image": "https://metricusapp.com/img/og-default.svg",
-      "brand": {
-        "@type": "Brand",
-        "name": "Metricus"
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#334155',
+            'primary-hover': '#1E293B',
+            'on-primary': '#f6f7ff',
+            'on-primary-fixed': '#324054',
+            'primary-dim': '#455368',
+            surface: '#f7f9fb',
+            'surface-container-low': '#f0f4f7',
+            'surface-container': '#e8eff3',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-highest': '#d9e4ea',
+            'surface-container-high': '#e1e9ee',
+            'surface-variant': '#d9e4ea',
+            'on-surface': '#2a3439',
+            'on-surface-variant': '#566166',
+            outline: '#717c82',
+            'outline-variant': '#a9b4b9',
+            'slate-text': '#0F172A',
+            'slate-muted': '#64748B',
+            'slate-accent': '#475569',
+          },
+          fontFamily: {
+            display: ['Newsreader', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            body: ['Public Sans', 'sans-serif'],
+            headline: ['Newsreader', 'serif'],
+          },
+          borderRadius: {
+            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
+            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
+            full: '0.75rem',
+          },
+          animation: {
+            'subtle-drift': 'drift 60s linear infinite',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            drift: {
+              '0%': { backgroundPosition: '0 0' },
+              '100%': { backgroundPosition: '100% 100%' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0) rotateX(10deg) rotateY(-10deg) rotateZ(-2deg)' },
+              '50%': { transform: 'translateY(-20px) rotateX(12deg) rotateY(-8deg) rotateZ(-1deg)' },
+            },
+          },
+        },
       },
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "Snapshot",
-          "price": "49",
-          "priceCurrency": "USD",
-          "description": "Quick read on where you stand — 3 AI platforms, 5 target queries, 2 competitor comparison, visibility score, top AI quotes, accuracy summary.",
-          "availability": "https://schema.org/InStock",
-          "url": "https://metricusapp.com/",
-          "hasMerchantReturnPolicy": {
-            "@type": "MerchantReturnPolicy",
-            "applicableCountry": "US",
-            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-            "merchantReturnDays": 30,
-            "returnMethod": "https://schema.org/ReturnByMail",
-            "returnFees": "https://schema.org/FreeReturn"
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Deep Dive",
-          "price": "149",
-          "priceCurrency": "USD",
-          "description": "Full audit with action plan — all 8 AI platforms, 20 target queries, 5 competitor comparison, full accuracy audit, citation tracking, top 5 prioritized actions.",
-          "availability": "https://schema.org/InStock",
-          "url": "https://metricusapp.com/",
-          "hasMerchantReturnPolicy": {
-            "@type": "MerchantReturnPolicy",
-            "applicableCountry": "US",
-            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-            "merchantReturnDays": 30,
-            "returnMethod": "https://schema.org/ReturnByMail",
-            "returnFees": "https://schema.org/FreeReturn"
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Full Arsenal",
-          "price": "349",
-          "priceCurrency": "USD",
-          "description": "Enterprise-grade with regional data — all 8 AI platforms, 50 target queries, 10 competitor comparison, unlimited prioritized actions, executive summary PDF, regional breakdown (US/EU/APAC).",
-          "availability": "https://schema.org/InStock",
-          "url": "https://metricusapp.com/",
-          "hasMerchantReturnPolicy": {
-            "@type": "MerchantReturnPolicy",
-            "applicableCountry": "US",
-            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-            "merchantReturnDays": 30,
-            "returnMethod": "https://schema.org/ReturnByMail",
-            "returnFees": "https://schema.org/FreeReturn"
-          }
-        }
-      ]
     }
-    </script>
+  </script>
 
-    <!-- JSON-LD: FAQPage -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is this a subscription?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. It's a one-time purchase. You pay once, get your report, done. No recurring charges, no dashboard to log into."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What AI platforms do you cover?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We cover 8 major AI platforms: ChatGPT, Claude, Perplexity, Gemini, Google AI Overviews, Grok, DeepSeek, and Copilot. These are the platforms people actually use to ask for recommendations."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Who is this for?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Small business owners, founders, marketing managers, and agency owners who want to know what AI says about their brand. If people in your category are asking AI for recommendations, this report tells you whether you're in those answers — and exactly what to fix if you're not."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do you generate the report?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Our proprietary GEO analytics engine — built from academic research into how AI models form recommendations — queries each platform hundreds of times with variations of your target queries. AI gives different answers every time — asking once tells you nothing. Running 200+ queries reveals the real patterns: how often you're mentioned, where you rank, which sources AI pulls from, and what it gets wrong."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What does the report look like?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We have a full sample report you can browse right now — a real AI visibility audit of a boutique hotel (anonymized). It shows exactly what you'd get: visibility scores, AI quotes, accuracy gaps, competitor comparison, and a prioritized action plan. View it at https://metricusapp.com/example-report/"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is this different from SEO tools?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "SEO tools track Google rankings. We track what AI chatbots say about you — a discipline sometimes called GEO (Generative Engine Optimization) or AEO (AI Engine Optimization). These are completely different systems — a #1 Google ranking doesn't mean AI mentions you at all. Most SEO tools don't cover AI search visibility."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long until I see results?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most clients see changes within 2–4 weeks of implementing the action plan. AI platforms update their knowledge at different rates — some within days, others within weeks. The quick wins (fixing third-party listings, adding structured data) often show results fastest."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What if AI changes its answers after I get the report?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "AI answers shift over time as models are updated. Your report captures the current state and tells you what to fix. The fixes — correcting third-party listings, updating your website so AI can read it properly — have lasting impact across model updates."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What's the money-back guarantee?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If your report doesn't surface at least 3 actionable insights you didn't already know, we refund 100% of your purchase. No questions asked. We've never had to issue a refund."
-          }
-        }
-      ]
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #0F172A;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-    </script>
+
+    .font-display { font-family: 'Newsreader', serif; }
+    .font-headline { font-family: 'Newsreader', serif; }
+    .font-body-sans { font-family: 'Public Sans', sans-serif; }
+
+    .editorial-input:focus {
+      border-color: #334155;
+      box-shadow: none;
+      outline: none;
+    }
+
+    .editorial-btn {
+      transition: background-color 150ms ease-in-out, transform 150ms ease;
+    }
+    .editorial-btn:hover {
+      background-color: #1E293B;
+    }
+
+    .data-viz-fade {
+      mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    }
+
+    .perspective-1000 { perspective: 1500px; }
+
+    .three-d-card {
+      transform-style: preserve-3d;
+      transform: rotateX(10deg) rotateY(-10deg) rotateZ(-2deg);
+    }
+
+    .bg-grid-motion {
+      background-image: radial-gradient(#F1F5F9 1.5px, transparent 1.5px);
+      background-size: 40px 40px;
+      will-change: transform;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    /* Background grid pattern for lower sections */
+    .bg-grid-dots {
+      background-image: radial-gradient(circle, #717c82 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+      opacity: 0.05;
+    }
+
+    /* Ghost text */
+    .ghost-text {
+      position: absolute;
+      font-size: clamp(6rem, 15vw, 14rem);
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.03);
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+      bottom: 0;
+      right: -2rem;
+      line-height: 1;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Metricus",
+    "url": "https://metricusapp.com",
+    "description": "AI visibility reports for brands — find out what ChatGPT, Claude, Perplexity, and 5 other AI platforms say about your brand, and how to fix it.",
+    "email": "hello@metricusapp.com"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Metricus",
+    "url": "https://metricusapp.com"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Metricus AI Visibility Report",
+    "description": "One-time AI visibility report across 8 AI platforms — ChatGPT, Claude, Perplexity, Gemini, AI Overviews, Grok, DeepSeek, and Copilot.",
+    "brand": { "@type": "Brand", "name": "Metricus" },
+    "offers": [
+      { "@type": "Offer", "name": "Snapshot", "price": "49", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Deep Dive", "price": "149", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+      { "@type": "Offer", "name": "Full Arsenal", "price": "349", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
 
-<header>
-    <div class="w-wide">
-        <div class="header-inner">
-            <a href="/" class="logo">
-                <div class="logo-icon">M</div>
-                metricus
+  <!-- ========== FIXED NAV ========== -->
+  <header class="h-16 flex items-center justify-between px-6 lg:px-12 border-b border-[#E2E8F0] bg-white/80 backdrop-blur-md sticky top-0 z-50">
+    <div class="flex items-center gap-2 text-slate-text">
+      <a class="flex items-center gap-2 group" href="/">
+        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+        </svg>
+        <span class="font-display italic font-bold text-xl tracking-tight group-hover:text-primary transition-colors">Metricus</span>
+      </a>
+    </div>
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="methodology/">Methodology</a>
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="#pricing">Pricing</a>
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="blog/">Blog</a>
+      <a class="text-[13px] uppercase tracking-wider font-semibold text-primary hover:text-slate-text transition-colors" href="request-access/">Request Access</a>
+    </nav>
+    <button class="md:hidden flex items-center text-slate-text">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </header>
+
+
+  <main class="flex-grow flex flex-col relative overflow-x-hidden">
+
+    <!-- Animated Background Layer -->
+    <div class="absolute inset-0 bg-grid-motion animate-subtle-drift -z-10 pointer-events-none"></div>
+
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pt-24 pb-16 md:pt-32 md:pb-32 flex flex-col items-center text-center relative z-10">
+      <h1 class="font-display font-bold text-[40px] leading-[1.1] md:text-[56px] lg:text-[72px] text-slate-text mb-6 tracking-tight max-w-[900px]">
+        Measure your clients' mindshare in the AI era.
+      </h1>
+      <p class="text-[16px] md:text-[18px] text-slate-muted font-normal max-w-[540px] mb-12 leading-relaxed">
+        Turn opaque AI outputs into actionable visibility data. See exactly how ChatGPT, Claude, and 6 other platforms recommend any brand — yours or your clients'.
+      </p>
+
+      <!-- Input Group -->
+      <form id="heroForm" class="w-full max-w-[540px] flex flex-col sm:flex-row shadow-xl shadow-slate-200/50 mb-20 relative z-20">
+        <div class="relative flex-grow flex items-center bg-white border-y border-l border-[#E2E8F0] sm:border-r-0">
+          <span class="material-symbols-outlined absolute left-4 text-slate-muted">search</span>
+          <input id="heroUrl" class="editorial-input w-full h-[64px] pl-12 pr-4 bg-transparent border-none text-[16px] text-slate-text placeholder:text-slate-muted focus:ring-0 rounded-none" placeholder="e.g., clientbrand.com" type="text" required>
+        </div>
+        <button type="submit" class="editorial-btn h-[64px] px-8 bg-primary text-white font-semibold text-[15px] whitespace-nowrap flex items-center justify-center gap-2 group border border-primary">
+          Analyze Visibility
+          <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </button>
+      </form>
+
+      <!-- Floating 3D Graphic Container -->
+      <div class="w-full max-w-[1000px] relative mt-8 perspective-1000">
+        <div class="three-d-card animate-float relative z-0">
+          <div class="bg-white border border-[#E2E8F0] shadow-2xl overflow-hidden p-8 text-left max-w-[600px] mx-auto bg-white/95 backdrop-blur-sm">
+            <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-100">
+              <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-slate-400">Recommendation Delta</span>
+              <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-slate-400">LLM Mindshare</span>
+            </div>
+            <div class="space-y-6">
+              <div class="flex items-center justify-between">
+                <span class="text-[14px] text-slate-text font-medium italic">"best running shoes for flat feet"</span>
+                <div class="flex items-center gap-4">
+                  <div class="h-1.5 w-32 bg-slate-100 overflow-hidden">
+                    <div class="h-full bg-primary w-[42%]"></div>
+                  </div>
+                  <span class="text-[14px] font-bold text-primary w-8 text-right">42%</span>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-[14px] text-slate-text font-medium italic">"sustainable activewear brands"</span>
+                <div class="flex items-center gap-4">
+                  <div class="h-1.5 w-32 bg-slate-100 overflow-hidden">
+                    <div class="h-full bg-primary w-[28%]"></div>
+                  </div>
+                  <span class="text-[14px] font-bold text-primary w-8 text-right">28%</span>
+                </div>
+              </div>
+              <!-- Sample Query Mapping -->
+              <div class="pt-8 mt-4 border-t border-slate-50 flex items-center justify-between gap-4">
+                <div class="flex items-center gap-2">
+                  <div class="size-8 border border-slate-200 flex items-center justify-center bg-white text-[10px] font-bold text-slate-400">GPT</div>
+                  <div class="w-8 h-px bg-slate-200"></div>
+                  <div class="size-12 border-2 border-primary bg-primary/5 flex items-center justify-center text-[11px] font-bold italic text-primary">Client</div>
+                  <div class="w-8 h-px bg-slate-200"></div>
+                  <div class="size-8 border border-slate-200 flex items-center justify-center bg-white text-[10px] font-bold text-slate-400">Claude</div>
+                </div>
+                <div class="text-[10px] uppercase tracking-widest font-semibold text-slate-400">Sample Query Mapping</div>
+              </div>
+            </div>
+          </div>
+          <!-- Depth Decorative Elements -->
+          <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/5 blur-3xl -z-10"></div>
+          <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-slate-200/20 blur-3xl -z-10"></div>
+        </div>
+      </div>
+
+      <p class="mt-20 text-[13px] text-slate-muted font-medium tracking-wide uppercase">
+        Used by data-driven agencies globally
+      </p>
+    </section>
+
+
+    <!-- ========== 3-COLUMN FEATURE GRID ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-32 relative z-20 bg-white/50 backdrop-blur-sm pt-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+        <div class="flex flex-col border-t border-[#E2E8F0] pt-8">
+          <span class="material-symbols-outlined text-primary mb-4 text-[28px]">troubleshoot</span>
+          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">Generative Engine Optimization</h3>
+          <p class="text-[15px] text-slate-muted leading-relaxed">
+            Understand exactly which keywords and contexts trigger LLMs to surface your client over competitors. Optimize for the new discovery paradigm.
+          </p>
+        </div>
+        <div class="flex flex-col border-t border-[#E2E8F0] pt-8">
+          <span class="material-symbols-outlined text-primary mb-4 text-[28px]">visibility</span>
+          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">AI Visibility Metrics</h3>
+          <p class="text-[15px] text-slate-muted leading-relaxed">
+            Move beyond simple search rankings. Quantify mindshare with robust visibility scores across major foundation models and conversational interfaces.
+          </p>
+        </div>
+        <div class="flex flex-col border-t border-[#E2E8F0] pt-8">
+          <span class="material-symbols-outlined text-primary mb-4 text-[28px]">monitoring</span>
+          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">Continuous Brand Monitoring</h3>
+          <p class="text-[15px] text-slate-muted leading-relaxed">
+            Track sentiment and mention frequency over time. Receive agency-ready reports that prove the value of your strategic interventions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== PRICING TIERS ========== -->
+    <section id="pricing" class="py-16 md:py-24 bg-surface relative">
+      <div class="absolute inset-0 bg-grid-dots pointer-events-none"></div>
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+
+        <!-- Pricing Header -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-end mb-16">
+          <div class="md:col-span-7">
+            <p class="text-xs uppercase tracking-widest text-slate-muted mb-4 font-semibold font-body-sans">Investment Infrastructure</p>
+            <h2 class="font-display text-5xl md:text-7xl leading-[0.95] text-on-surface">
+              Precision for every <em class="italic">scale</em>.
+            </h2>
+          </div>
+          <div class="md:col-span-5">
+            <p class="text-base text-on-surface-variant leading-relaxed font-body-sans">
+              Our proprietary GEO analytics engine queries 8 AI platforms with 200+ variations per query. One report, one-time fee — whether it's for your brand or a client's.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tier Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3">
+
+          <!-- Tier 1: Snapshot -->
+          <div class="bg-surface-container-lowest p-10 min-h-[500px] flex flex-col">
+            <div class="mb-8">
+              <h3 class="font-headline text-3xl text-on-surface mb-1">Snapshot</h3>
+              <p class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">Fundamental Intelligence</p>
+            </div>
+            <div class="mb-8">
+              <span class="font-headline text-5xl text-on-surface">$49</span>
+              <span class="text-sm text-on-surface-variant ml-2">per report</span>
+            </div>
+            <ul class="space-y-3 mb-auto text-sm text-on-surface-variant font-body-sans">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
+                3 AI Platforms Analysis
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
+                5 Target Queries
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
+                2 Competitor Comparison
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
+                Visibility Score &amp; AI Quotes
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
+                Accuracy Summary
+              </li>
+            </ul>
+            <a href="#" data-action="buy-tier" data-tier="snapshot" class="mt-10 block text-center border-2 border-primary text-primary text-xs font-semibold uppercase tracking-widest px-6 py-3 hover:bg-primary hover:text-on-primary transition-colors">
+              Run Audit
             </a>
-            <button class="nav-toggle" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-            </button>
-            <nav class="header-nav">
-                <a href="#how-it-works" class="header-link">How It Works</a>
-                <a href="example-report/" class="header-link">Sample Report</a>
-                <a href="blog/" class="header-link">Blog</a>
-                <a href="#pricing" class="btn btn-ghost header-cta">Get Your Report</a>
-            </nav>
+          </div>
+
+          <!-- Tier 2: Deep Dive (Recommended) -->
+          <div class="bg-surface-container-lowest p-10 min-h-[500px] flex flex-col relative border-x-4 border-primary shadow-xl">
+            <div class="absolute top-0 right-0 bg-primary text-on-primary text-[10px] font-semibold uppercase tracking-widest px-4 py-1.5">
+              Recommended
+            </div>
+            <div class="mb-8">
+              <h3 class="font-headline text-3xl text-on-surface mb-1">Deep Dive</h3>
+              <p class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">Strategic Dominance</p>
+            </div>
+            <div class="mb-8">
+              <span class="font-headline text-5xl text-on-surface">$149</span>
+              <span class="text-sm text-on-surface-variant ml-2">per report</span>
+            </div>
+            <ul class="space-y-3 mb-auto text-sm text-on-surface-variant font-body-sans">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
+                All 8 AI Platforms
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
+                20 Target Queries
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
+                5 Competitor Comparison
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
+                Full Accuracy Audit &amp; Citation Tracking
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
+                Top 5 Prioritized Actions
+              </li>
+            </ul>
+            <a href="#" data-action="buy-tier" data-tier="deep-dive" class="mt-10 block text-center bg-primary text-on-primary text-xs font-semibold uppercase tracking-widest px-6 py-3 hover:bg-primary-hover transition-colors">
+              Get Started
+            </a>
+          </div>
+
+          <!-- Tier 3: Full Arsenal -->
+          <div class="bg-surface-container-lowest p-10 min-h-[500px] flex flex-col">
+            <div class="mb-8">
+              <h3 class="font-headline text-3xl text-on-surface mb-1">Full Arsenal</h3>
+              <p class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">Total Intelligence</p>
+            </div>
+            <div class="mb-8">
+              <span class="font-headline text-5xl text-on-surface">$349</span>
+              <span class="text-sm text-on-surface-variant ml-2">per report</span>
+            </div>
+            <ul class="space-y-3 mb-auto text-sm text-on-surface-variant font-body-sans">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
+                All 8 AI Platforms
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
+                50 Target Queries
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
+                10 Competitor Comparison
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
+                Executive Summary PDF
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
+                Regional Breakdown (US/EU/APAC)
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
+                Unlimited Prioritized Actions
+              </li>
+            </ul>
+            <a href="#" data-action="buy-tier" data-tier="full-arsenal" class="mt-10 block text-center bg-surface-container-high text-on-surface text-xs font-semibold uppercase tracking-widest px-6 py-3 hover:bg-surface-container-highest transition-colors">
+              Run Audit
+            </a>
+          </div>
+
         </div>
+
+        <!-- Agency Volume CTA -->
+        <div class="mt-12 bg-surface-container-low p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <div>
+            <h3 class="font-headline text-xl text-on-surface mb-1">Running multiple audits?</h3>
+            <p class="text-sm text-on-surface-variant font-body-sans">Teams ordering 5+ reports per month get priority turnaround and volume pricing.</p>
+          </div>
+          <a href="mailto:hello@metricusapp.com?subject=Agency Volume Pricing" class="inline-block bg-on-primary-fixed text-on-primary text-xs font-semibold uppercase tracking-widest px-8 py-3.5 whitespace-nowrap hover:opacity-90 transition-opacity">
+            Get Agency Pricing
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== COMPARISON MATRIX ========== -->
+    <section class="py-16 md:py-20 bg-surface-container-low relative">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <h2 class="font-headline italic text-4xl text-on-surface mb-12">Comparison Matrix</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left">
+            <thead>
+              <tr>
+                <th class="pb-4 text-xs uppercase tracking-widest text-on-surface-variant font-semibold w-1/3">Feature</th>
+                <th class="pb-4 text-xs uppercase tracking-widest text-on-surface-variant font-semibold text-center">Snapshot</th>
+                <th class="pb-4 text-xs uppercase tracking-widest text-primary font-semibold text-center">Deep Dive</th>
+                <th class="pb-4 text-xs uppercase tracking-widest text-on-surface-variant font-semibold text-center">Full Arsenal</th>
+              </tr>
+            </thead>
+            <tbody class="text-sm font-body-sans">
+              <tr class="border-b border-outline-variant/10">
+                <td class="py-4 text-on-surface font-semibold">AI Platforms Covered</td>
+                <td class="py-4 text-center text-on-surface-variant">3</td>
+                <td class="py-4 text-center text-on-surface font-bold">8</td>
+                <td class="py-4 text-center text-on-surface">8</td>
+              </tr>
+              <tr class="border-b border-outline-variant/10">
+                <td class="py-4 text-on-surface font-semibold">Target Queries</td>
+                <td class="py-4 text-center text-on-surface-variant">5</td>
+                <td class="py-4 text-center text-on-surface font-bold">20</td>
+                <td class="py-4 text-center text-on-surface">50</td>
+              </tr>
+              <tr class="border-b border-outline-variant/10">
+                <td class="py-4 text-on-surface font-semibold">Competitor Comparison</td>
+                <td class="py-4 text-center text-on-surface-variant">2</td>
+                <td class="py-4 text-center text-on-surface font-bold">5</td>
+                <td class="py-4 text-center text-on-surface">10</td>
+              </tr>
+              <tr class="border-b border-outline-variant/10">
+                <td class="py-4 text-on-surface font-semibold">Citation Tracking</td>
+                <td class="py-4 text-center"><span class="material-symbols-outlined text-outline-variant text-lg">remove</span></td>
+                <td class="py-4 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
+                <td class="py-4 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
+              </tr>
+              <tr class="border-b border-outline-variant/10">
+                <td class="py-4 text-on-surface font-semibold">Executive Summary PDF</td>
+                <td class="py-4 text-center"><span class="material-symbols-outlined text-outline-variant text-lg">remove</span></td>
+                <td class="py-4 text-center"><span class="material-symbols-outlined text-outline-variant text-lg">remove</span></td>
+                <td class="py-4 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
+              </tr>
+              <tr>
+                <td class="py-4 text-on-surface font-semibold">Regional Breakdown</td>
+                <td class="py-4 text-center"><span class="material-symbols-outlined text-outline-variant text-lg">remove</span></td>
+                <td class="py-4 text-center"><span class="material-symbols-outlined text-outline-variant text-lg">remove</span></td>
+                <td class="py-4 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== WHO THIS IS FOR ========== -->
+    <section class="py-16 md:py-24 relative bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <h2 class="font-headline text-3xl md:text-4xl text-on-surface mb-14 max-w-3xl">
+          Built for anyone who needs to know what AI is saying.
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-surface p-10">
+            <span class="material-symbols-outlined text-primary text-3xl mb-6 block">campaign</span>
+            <h3 class="font-headline text-xl text-on-surface mb-3">Marketing Agencies</h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed font-body-sans">
+              Run AI visibility audits for every client. One report per engagement, institutional-grade output, agency-friendly pricing.
+            </p>
+          </div>
+          <div class="bg-surface p-10">
+            <span class="material-symbols-outlined text-primary text-3xl mb-6 block">person_search</span>
+            <h3 class="font-headline text-xl text-on-surface mb-3">GEO Consultants &amp; Freelancers</h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed font-body-sans">
+              Add AI visibility to your service offering. One report per client, ready to present under your own brand.
+            </p>
+          </div>
+          <div class="bg-surface p-10">
+            <span class="material-symbols-outlined text-primary text-3xl mb-6 block">storefront</span>
+            <h3 class="font-headline text-xl text-on-surface mb-3">Small Business Owners</h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed font-body-sans">
+              See what AI says about your brand and get a clear action plan to fix it. No subscription required.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== TRUST SECTION ========== -->
+    <section class="py-16 md:py-24 bg-on-primary-fixed text-on-primary relative overflow-hidden">
+      <div class="ghost-text">Authority</div>
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-16">
+          <h2 class="font-headline italic text-3xl md:text-5xl mb-4 md:mb-0">Metricus by the Numbers</h2>
+          <p class="text-xs uppercase tracking-widest text-on-primary/60 font-semibold">Audit Report 2026</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div class="border-l-2 border-on-primary/20 pl-8">
+            <p class="font-headline text-5xl md:text-6xl mb-2">500+</p>
+            <p class="text-xs uppercase tracking-widest text-on-primary/60 font-semibold">Reports Delivered</p>
+          </div>
+          <div class="border-l-2 border-on-primary/20 pl-8">
+            <p class="font-headline text-5xl md:text-6xl mb-2">8</p>
+            <p class="text-xs uppercase tracking-widest text-on-primary/60 font-semibold">AI Platforms Covered</p>
+          </div>
+          <div class="border-l-2 border-on-primary/20 pl-8">
+            <p class="font-headline text-5xl md:text-6xl mb-2">200+</p>
+            <p class="text-xs uppercase tracking-widest text-on-primary/60 font-semibold">Queries Per Report</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== MONEY-BACK GUARANTEE ========== -->
+    <section class="py-16 md:py-20 relative bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="bg-surface p-10 md:p-16 max-w-3xl mx-auto text-center">
+          <span class="material-symbols-outlined text-primary text-5xl mb-6 block">verified</span>
+          <h2 class="font-headline text-3xl md:text-4xl text-on-surface mb-4">Money-Back Guarantee</h2>
+          <p class="text-lg text-on-surface-variant leading-relaxed mb-6 font-body-sans">
+            3+ actionable insights or full refund. No questions asked.
+          </p>
+          <p class="text-sm text-on-surface-variant leading-relaxed max-w-lg mx-auto font-body-sans">
+            Every Metricus report is powered by our proprietary GEO analytics engine, querying across 8 AI platforms with 200+ queries per report. If any report doesn't deliver at least 3 actionable insights, we refund that report in full.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== FINAL CTA (BENTO GRID) ========== -->
+    <section class="py-16 md:py-20 bg-surface relative">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+          <div class="md:col-span-8 bg-surface-container-lowest p-10 md:p-14 flex flex-col justify-center">
+            <h2 class="font-headline text-3xl md:text-4xl text-on-surface mb-4">
+              Not sure which tier fits?
+            </h2>
+            <p class="text-base text-on-surface-variant leading-relaxed mb-8 max-w-xl font-body-sans">
+              Whether you're checking your own brand or running audits for clients, we can help you pick the right scope. Volume pricing available for 5+ reports/month.
+            </p>
+            <div>
+              <a href="request-access/" class="inline-block bg-primary text-on-primary text-xs font-semibold uppercase tracking-widest px-8 py-3.5 hover:bg-primary-hover transition-colors">
+                Schedule a Consultation
+              </a>
+            </div>
+          </div>
+          <div class="md:col-span-4 bg-primary text-on-primary p-10 md:p-14 flex flex-col justify-center">
+            <span class="material-symbols-outlined text-4xl mb-6 text-on-primary/80">architecture</span>
+            <h3 class="font-headline text-2xl mb-3">One-Time Purchase</h3>
+            <p class="text-sm text-on-primary/70 leading-relaxed font-body-sans">
+              No subscription, no platform fees. Pay once per report, get your results.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="py-12 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="blog/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Blog</a>
+          <a href="geo-knowledgebase/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Knowledge Base</a>
+          <a href="privacy-policy/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Privacy Policy</a>
+          <a href="terms-of-service/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Terms of Service</a>
+          <a href="support/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Support</a>
+          <a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Contact</a>
+        </div>
+        <p class="text-xs uppercase tracking-tighter text-slate-500">
+          &copy; 2026 Metricus. All rights reserved.
+        </p>
+      </div>
     </div>
-</header>
+  </footer>
 
-<!-- ===== HERO ===== -->
-<div class="hero-wrap">
-    <div class="w hero">
-        <div class="hero-eyebrow" id="uc-eyebrow">Your competitors already know this</div>
-        <h1 id="uc-hero-h1">Right now, AI is telling your customers to <em>buy from someone else.</em></h1>
-        <p class="subtitle" id="uc-hero-subtitle">Millions ask ChatGPT, Claude, and Perplexity for recommendations every day. <strong>Your AI visibility</strong> — whether you're mentioned, recommended, and accurately described — determines if those leads come to you or your competitors.</p>
-        <form class="hero-form">
-            <input type="text" id="heroUrl" placeholder="yourcompany.com" required>
-            <button type="submit" class="btn btn-primary" id="uc-hero-cta">Get your AI visibility report</button>
-        </form>
-        <div class="hero-note" id="uc-hero-note">One-time purchase. No subscription. 100% money-back guarantee.</div>
-        <div class="trust-bar" id="uc-trust-bar">
-            <div class="trust-stat"><div class="num">500+</div><div class="label">Reports delivered</div></div>
-            <div class="trust-stat"><div class="num">8</div><div class="label">AI platforms</div></div>
-            <div class="trust-stat"><div class="num">Fast</div><div class="label">Turnaround</div></div>
-            <div class="trust-stat"><div class="num">100%</div><div class="label">Money-back</div></div>
-        </div>
-    </div>
-</div>
+<script>
+  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlMZxJmAmm90HGKg6AJxEeB8xOP83Dyq4rUHnCD8aubV1NzPqb1ZlSbjzmBAnO63r2/exec';
 
-<!-- ===== TRUST BADGES ===== -->
-<div class="w">
-    <div class="trust-badges">
-        <p class="trust-badges-label">Trusted by 500+ small businesses across</p>
-        <div class="trust-badges-row">
-            <span class="trust-badge">Local services</span>
-            <span class="trust-badge">E-commerce</span>
-            <span class="trust-badge">SaaS</span>
-            <span class="trust-badge">Agencies</span>
-            <span class="trust-badge">Professional services</span>
-            <span class="trust-badge">Hospitality</span>
-        </div>
-    </div>
-</div>
+  // Log hero URL input (debounced — fires 800ms after user stops typing)
+  var _heroLogTimer = null;
+  var _heroLogged = {};
+  document.getElementById('heroUrl').addEventListener('input', function() {
+    clearTimeout(_heroLogTimer);
+    var val = this.value.trim();
+    if (!val || _heroLogged[val]) return;
+    _heroLogTimer = setTimeout(function() {
+      _heroLogged[val] = true;
+      try {
+        var data = new URLSearchParams({
+          action: 'hero_input',
+          website: val,
+          timestamp: new Date().toISOString()
+        });
+        fetch(SCRIPT_URL, { method: 'POST', body: data, mode: 'no-cors' });
+      } catch(e) {}
+    }, 800);
+  });
 
-<!-- ===== HOW IT WORKS ===== -->
-<div class="w" id="how-it-works">
-    <div class="how">
-        <div class="section-label" style="text-align:center;">How it works</div>
-        <h2 id="uc-how-h2">Three steps. One report. Done.</h2>
-        <p class="how-sub" id="uc-how-sub">No dashboard to learn. No subscription. Pay once, get your report delivered by email.</p>
-        <div class="steps" id="uc-steps">
-            <div class="step">
-                <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
-                <div class="step-n">1</div>
-                <div><h3>Tell us your brand &amp; competitors</h3><p>Brand, website, 3-5 competitors, target queries. Takes 5 minutes.</p></div>
-            </div>
-            <div class="step">
-                <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6"/><path d="M8 11h6"/></svg></div>
-                <div class="step-n">2</div>
-                <div><h3>Our proprietary GEO engine analyzes 8 AI platforms</h3><p>Built from academic research into how AI models form recommendations. We query ChatGPT, Claude, Perplexity, Gemini, AI Overviews, Grok, DeepSeek, and Copilot hundreds of times — because AI gives different answers every time, and only 200+ queries reveal the real patterns.</p></div>
-            </div>
-            <div class="step">
-                <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
-                <div class="step-n">3</div>
-                <div><h3>You get a clear report with what to fix</h3><p>Delivered to your inbox. Visibility scores, AI quotes, errors, and a prioritized action plan.</p></div>
-            </div>
-        </div>
-    </div>
-</div>
+  // Hero form: store website URL and scroll to pricing
+  document.getElementById('heroForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var url = document.getElementById('heroUrl').value.trim();
+    if (!url) return;
+    try { sessionStorage.setItem('metricus_website', url); } catch(e) {}
+    document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
+  });
 
-<!-- ===== SAMPLE REPORT PREVIEW ===== -->
-<div class="w-wide">
-    <a href="example-report/" class="report-preview-link">
-        <div class="report-preview">
-            <div class="report-preview-label">Sample Report</div>
-            <div class="report-preview-frame">
-                <div class="report-preview-header">
-                    <div class="rp-brand">
-                        <div class="rp-logo">M</div>
-                        <div>
-                            <div class="rp-title">AI Visibility Report</div>
-                            <div class="rp-subtitle">Boutique Hotel, London</div>
-                        </div>
-                    </div>
-                    <div class="rp-score-wrap">
-                        <div class="rp-score" style="color:var(--danger);">0%</div>
-                        <div class="rp-score-label">visibility</div>
-                    </div>
-                </div>
-                <div class="rp-grid">
-                    <div class="rp-card">
-                        <div class="rp-card-label">Platforms checked</div>
-                        <div class="rp-card-value">8 of 8</div>
-                        <div class="rp-card-detail" style="color:var(--danger);">Not mentioned on any</div>
-                    </div>
-                    <div class="rp-card">
-                        <div class="rp-card-label">Accuracy gaps</div>
-                        <div class="rp-card-value" style="color:var(--warning);">5 found</div>
-                        <div class="rp-card-detail">Wrong pricing, outdated info</div>
-                    </div>
-                    <div class="rp-card">
-                        <div class="rp-card-label">Competitors visible</div>
-                        <div class="rp-card-value">3 of 4</div>
-                        <div class="rp-card-detail">Mentioned where you're not</div>
-                    </div>
-                    <div class="rp-card">
-                        <div class="rp-card-label">Action items</div>
-                        <div class="rp-card-value" style="color:var(--primary);">5 prioritized</div>
-                        <div class="rp-card-detail">Fix schema, update listings...</div>
-                    </div>
-                </div>
-                <div class="rp-quotes">
-                    <div class="rp-quote"><span class="rp-quote-engine">ChatGPT</span> "For boutique hotels in London, I'd recommend <span class="rp-redacted"></span>, <span class="rp-redacted"></span>, and <span class="rp-redacted"></span>."</div>
-                    <div class="rp-quote"><span class="rp-quote-engine">Perplexity</span> "Top-rated options include <span class="rp-redacted"></span> and <span class="rp-redacted rp-redacted-short"></span>, both known for..."</div>
-                </div>
-                <div class="rp-cta">View full sample report &rarr;</div>
-            </div>
-        </div>
-    </a>
-</div>
-
-<!-- ===== WHO THIS IS FOR ===== -->
-<div class="w">
-    <div class="who-for">
-        <div class="section-label" style="text-align:center;">Who this is for</div>
-        <h2>Built for small business owners, not enterprise teams</h2>
-        <p class="who-for-sub">Enterprise brands have six-figure monitoring platforms. You need one clear report that tells you where you stand and what to fix — without a monthly bill.</p>
-        <div class="who-for-grid">
-            <div class="who-for-card">
-                <div class="who-for-icon">&#9679;</div>
-                <h3>Founders &amp; owners</h3>
-                <p>You heard AI might be sending customers to your competitor. You want to know if it's true — and what to do about it.</p>
-            </div>
-            <div class="who-for-card">
-                <div class="who-for-icon">&#9679;</div>
-                <h3>Marketing managers</h3>
-                <p>Your SEO is solid but you suspect AI search is a blind spot. You need data to make the case for action.</p>
-            </div>
-            <div class="who-for-card">
-                <div class="who-for-icon">&#9679;</div>
-                <h3>Agency owners</h3>
-                <p>Your clients are asking about AI visibility. You need a reliable report you can white-label or use in proposals.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="w"><div class="divider"></div></div>
-
-<!-- ===== TESTIMONIALS ===== -->
-<div class="w-wide">
-    <div class="testimonials">
-        <div class="section-label" style="text-align:center;">What our clients say</div>
-        <div class="testimonial-track-wrapper">
-            <div class="testimonial-track" id="uc-testimonials">
-                <div class="testimonial-card"><p>"We had no idea AI wasn't mentioning us. The report showed we were invisible on 6 of 8 platforms. Fixed our listings and added schema — now we show up on 5."</p><div class="testimonial-author">James R. <span>Owner, The Clermont Collection · Boutique hotels · London</span></div><div class="testimonial-result">Visibility: 0% → 62%</div></div>
-                <div class="testimonial-card"><p>"A client told me ChatGPT recommended our competitor instead of us. The report found 4 factual errors about our services and told us exactly what to fix."</p><div class="testimonial-author">Sarah K. <span>Founder, Apex Accounting · 12 employees</span></div><div class="testimonial-result">4 errors fixed in 1 week</div></div>
-                <div class="testimonial-card"><p>"AI was quoting our old pricing — $99 instead of $29. The report flagged the exact source. We fixed it in a day."</p><div class="testimonial-author">David L. <span>Marketing Manager, GearVault · E-commerce</span></div><div class="testimonial-result">Pricing error fixed in 24h</div></div>
-                <div class="testimonial-card"><p>"We spend $2K/month on Google Ads. Meanwhile AI was sending customers to a competitor across town. Now we know why and what to change."</p><div class="testimonial-author">Dr. Lisa M. <span>Owner, Bright Smile Dental · 2 locations</span></div><div class="testimonial-result">Found 3 competitor mentions to counter</div></div>
-                <div class="testimonial-card"><p>"Perplexity was recommending our competitor for every query. The report traced it to their comparison page. We published our own — now we're in 4 out of 5 results."</p><div class="testimonial-author">Tom H. <span>Founder, Stacklane · SaaS · 8 employees</span></div><div class="testimonial-result">Visibility: 12% → 80%</div></div>
-                <div class="testimonial-card"><p>"Our reviews were great but AI couldn't find us. Three weeks after fixing the structured data issues from the report, ChatGPT started recommending us."</p><div class="testimonial-author">Maria C. <span>Marketing Director, Fork & Vine · Restaurant group</span></div><div class="testimonial-result">Mentioned on 4 platforms in 3 weeks</div></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ===== WHY ONE-TIME ===== -->
-<div class="w">
-    <div class="why-onetime">
-        <div class="section-label" style="text-align:center;">Why one-time</div>
-        <h2>You don't need $200/month monitoring. You need one clear report.</h2>
-        <div class="why-onetime-compare">
-            <div class="compare-col compare-them">
-                <div class="compare-label">Monthly subscription tools</div>
-                <ul>
-                    <li>$89–$300/month recurring</li>
-                    <li>Dashboard you'll check twice, then forget</li>
-                    <li>Designed for enterprise teams with dedicated analysts</li>
-                    <li>Months of data before anything is actionable</li>
-                </ul>
-            </div>
-            <div class="compare-col compare-us">
-                <div class="compare-label">Metricus (one-time report)</div>
-                <ul>
-                    <li>$49–$349 once. Done.</li>
-                    <li>Clear PDF with exactly what to fix</li>
-                    <li>Built for small business owners who act fast</li>
-                    <li>Actionable insights from day one</li>
-                </ul>
-            </div>
-        </div>
-        <p class="why-onetime-bottom">Most small businesses don't need continuous AI monitoring — they need to know where they stand <em>right now</em> and what to fix first. That's what Metricus delivers.</p>
-    </div>
-</div>
-
-<div class="w"><div class="divider"></div></div>
-
-<!-- ===== PRICING ===== -->
-<div class="w-wide" id="pricing">
-    <div class="pricing">
-        <div class="section-label">Pricing</div>
-        <h2 id="uc-pricing-h2">Less than one lost deal.</h2>
-        <p class="pricing-sub" id="uc-pricing-sub">One-time purchase. No subscription. Pick a tier, tell us about your brand, and we'll get started right away.</p>
-        <div class="scarcity" id="uc-scarcity">
-            <div class="scarcity-dot"></div>
-            <span id="uc-scarcity-text">14 spots remaining at intro pricing</span>
-        </div>
-        <div class="pricing-intro-note" id="uc-pricing-intro-note" style="margin-top:12px;">Intro pricing — limited to the first 50 reports at these rates.</div>
-
-        <div class="pricing-grid" id="uc-pricing-grid">
-            <div class="tier">
-                <div class="tier-name">Snapshot</div>
-                <div class="tier-price">$49</div>
-                <div class="tier-desc">Quick read on where you stand</div>
-                <ul class="tier-features">
-                    <li>3 AI platforms (ChatGPT, Claude, Perplexity)</li>
-                    <li>5 target queries</li>
-                    <li>2 competitor comparison</li>
-                    <li>Visibility score</li>
-                    <li>Top AI quotes per platform</li>
-                    <li>Accuracy summary</li>
-                    <li class="no">Citation tracking</li>
-                    <li class="no">Prioritized action plan</li>
-                </ul>
-                <button class="btn btn-ghost" data-action="buy-tier" data-tier="snapshot">Get Snapshot — $49</button>
-            </div>
-            <div class="tier featured">
-                <div class="tier-badge">Most popular</div>
-                <div class="tier-name">Deep Dive</div>
-                <div class="tier-price">$149</div>
-                <div class="tier-desc">Full report with action plan</div>
-                <ul class="tier-features">
-                    <li>All 8 AI platforms</li>
-                    <li>20 target queries</li>
-                    <li>5 competitor comparison</li>
-                    <li>Visibility score</li>
-                    <li>All AI quotes captured</li>
-                    <li>Full accuracy check</li>
-                    <li>Citation tracking (where AI gets its info)</li>
-                    <li>Top 5 prioritized actions</li>
-                </ul>
-                <button class="btn btn-checkout" data-action="buy-tier" data-tier="deepdive">Get Deep Dive — $149</button>
-            </div>
-            <div class="tier">
-                <div class="tier-name">Full Arsenal</div>
-                <div class="tier-price">$349</div>
-                <div class="tier-desc">Enterprise-grade with regional data</div>
-                <ul class="tier-features">
-                    <li>All 8 AI platforms</li>
-                    <li>50 target queries</li>
-                    <li>10 competitor comparison</li>
-                    <li>Visibility score</li>
-                    <li>All AI quotes captured</li>
-                    <li>Full accuracy check</li>
-                    <li>Citation tracking (where AI gets its info)</li>
-                    <li>Unlimited prioritized actions</li>
-                    <li>Executive summary PDF</li>
-                    <li>Regional breakdown (US/EU/APAC)</li>
-                </ul>
-                <button class="btn btn-primary" data-action="buy-tier" data-tier="arsenal">Get Full Arsenal — $349</button>
-            </div>
-        </div>
-
-        <div class="pricing-after" id="uc-pricing-after">Tell us your brand &rarr; we query 8 AI platforms &rarr; report delivered to your inbox.</div>
-        <div class="pricing-guarantee" id="uc-pricing-guarantee"><strong>100% money-back guarantee:</strong> If your report doesn't surface at least 3 actionable insights, full refund. No questions asked.</div>
-
-        <p style="text-align:center;font-size:0.82rem;color:var(--text-dim);margin-top:16px;max-width:560px;margin-left:auto;margin-right:auto;">For small businesses wanting a one-time AI visibility report without ongoing subscription costs, the Deep Dive ($149) covers all 8 AI platforms with a full accuracy check and prioritized action plan. For a quick baseline check, the Snapshot ($49) covers the 3 most important platforms.</p>
-    </div>
-</div>
-
-<!-- ===== FAQ ===== -->
-<div class="w">
-    <div class="faq">
-        <h2>Frequently asked questions</h2>
-        <div id="uc-faq">
-            <div class="faq-item open">
-                <button class="faq-q">Is this a subscription?</button>
-                <div class="faq-a"><div class="faq-a-inner">No. It's a one-time purchase. You pay once, get your report, done. No recurring charges, no dashboard to log into.</div></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q">What AI platforms do you cover?</button>
-                <div class="faq-a"><div class="faq-a-inner">We cover 8 major AI platforms: ChatGPT, Claude, Perplexity, Gemini, Google AI Overviews, Grok, DeepSeek, and Copilot. These are the platforms people actually use to ask for recommendations.</div></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q">Who is this for?</button>
-                <div class="faq-a"><div class="faq-a-inner">Small business owners, founders, marketing managers, and agency owners who want to know what AI says about their brand. If people in your category are asking AI for recommendations, this report tells you whether you're in those answers — and exactly what to fix if you're not.</div></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q">How do you generate the report?</button>
-                <div class="faq-a"><div class="faq-a-inner">Our proprietary GEO analytics engine — built from academic research into how AI models form recommendations — queries each platform hundreds of times with variations of your target queries. AI gives different answers every time — asking once tells you nothing. Running 200+ queries reveals the real patterns: how often you're mentioned, where you rank, which sources AI pulls from, and what it gets wrong.</div></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q">What does the report look like?</button>
-                <div class="faq-a"><div class="faq-a-inner">We have a full sample report you can browse right now — a real AI visibility audit of a boutique hotel (anonymized). It shows exactly what you'd get: visibility scores, AI quotes, accuracy gaps, competitor comparison, and a prioritized action plan. <a href="example-report/" style="color:var(--primary)">View sample report →</a></div></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q">How is this different from SEO tools?</button>
-                <div class="faq-a"><div class="faq-a-inner">SEO tools track Google rankings. We track what AI chatbots say about you — a discipline sometimes called GEO (Generative Engine Optimization) or AEO (AI Engine Optimization). These are completely different systems — a #1 Google ranking doesn't mean AI mentions you at all. Most SEO tools don't cover AI search visibility.</div></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q">How long until I see results?</button>
-                <div class="faq-a"><div class="faq-a-inner">Most clients see changes within 2–4 weeks of implementing the action plan. AI platforms update their knowledge at different rates — some within days, others within weeks. The quick wins (fixing third-party listings, adding structured data) often show results fastest.</div></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q">What if AI changes its answers after I get the report?</button>
-                <div class="faq-a"><div class="faq-a-inner">AI answers shift over time as models are updated. Your report captures the current state and tells you what to fix. The fixes — correcting third-party listings, updating your website so AI can read it properly — have lasting impact across model updates.</div></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q">What's the money-back guarantee?</button>
-                <div class="faq-a"><div class="faq-a-inner">If your report doesn't surface at least 3 actionable insights you didn't already know, we refund 100% of your purchase. No questions asked. We've never had to issue a refund.</div></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="w"><div class="divider"></div></div>
-
-<!-- ===== BLOG TEASE ===== -->
-<div class="w-wide">
-    <div class="blog-tease">
-        <div class="section-label" style="text-align:center;">Research</div>
-        <h3>Latest research</h3>
-
-        <a href="blog/what-is-ai-visibility/" class="bt-featured">
-            <span class="bt-featured-tag">Guide</span>
-            <h4>What Is AI Visibility? A Complete Guide for 2026</h4>
-            <p>AI visibility is how often AI chatbots mention your brand. Covers GEO, AEO, how AI decides what to recommend, how to measure it, and how to improve.</p>
-            <span class="bt-featured-read">Read guide &rarr;</span>
-        </a>
-
-        <div class="blog-tease-grid" id="uc-blog-tease">
-            <a href="blog/ai-hallucinations-brand-fix/" class="blog-tease-card"><div class="bt-tag">Problem</div><h4>AI Is Getting Facts Wrong About Your Brand</h4><span class="bt-link">Read &rarr;</span></a>
-            <a href="blog/ai-visibility-tools-compared/" class="blog-tease-card"><div class="bt-tag">Buyer's Guide</div><h4>AI Visibility Tools Compared: $49 vs $300/Month</h4><span class="bt-link">Read &rarr;</span></a>
-            <a href="blog/ai-visibility-action-plan/" class="blog-tease-card"><div class="bt-tag">Playbook</div><h4>The 5-Step AI Visibility Action Plan</h4><span class="bt-link">Read &rarr;</span></a>
-        </div>
-        <div style="text-align:center;margin-top:16px;">
-            <a href="blog/" style="font-size:0.82rem;color:var(--primary);font-weight:600;text-decoration:none;">View all articles &rarr;</a>
-        </div>
-    </div>
-</div>
-
-<!-- ===== FINAL CTA ===== -->
-<div class="w">
-    <div class="final">
-        <h2 id="uc-final-h2">Know what AI says about you. Fix it before your competitors do.</h2>
-        <p id="uc-final-p">Right now, someone is asking ChatGPT "what's the best [your category]?" — and your name may not be in the answer.</p>
-        <a href="#pricing" class="btn btn-checkout" style="padding:14px 32px;font-size:0.95rem;text-decoration:none;display:inline-block;">Get your report — from $49</a>
-        <div class="hero-note" id="uc-final-note">One-time purchase. No subscription. 100% money-back guarantee.</div>
-    </div>
-</div>
-
-<!-- ===== STICKY CTA ===== -->
-<div class="sticky-cta" id="sticky-cta">
-    <span class="sticky-cta-text" id="uc-sticky-text">From $49 · One-time report</span>
-    <a href="#pricing" class="btn btn-checkout" style="text-decoration:none;" id="uc-sticky-btn">Get your report</a>
-</div>
-
-<div class="footer">
-    <div class="w">metricus &copy; 2026 &nbsp;&middot;&nbsp; <a href="mailto:hello@metricusapp.com">Contact</a> &nbsp;&middot;&nbsp; <a id="uc-footer-blog" href="blog/">Blog</a> &nbsp;&middot;&nbsp; <a href="privacy-policy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="terms-of-service/">Terms</a> &nbsp;&middot;&nbsp; <a href="support/">Support</a></div>
-</div>
-
-<script type="module" src="modules/app.js"></script>
+  // Pricing tier buttons: navigate to request-access with tier + website
+  document.addEventListener('click', function(e) {
+    var btn = e.target.closest('[data-action="buy-tier"]');
+    if (!btn) return;
+    e.preventDefault();
+    var tier = btn.getAttribute('data-tier');
+    var website = '';
+    try { website = sessionStorage.getItem('metricus_website') || ''; } catch(e) {}
+    var href = 'request-access/?tier=' + tier;
+    if (website) href += '&website=' + encodeURIComponent(website);
+    window.location.href = href;
+  });
+</script>
 </body>
 </html>
