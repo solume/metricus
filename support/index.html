@@ -1,73 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-    <title>Support — Metricus</title>
-    <meta name="description" content="Get help with your Metricus AI visibility report. FAQs, delivery info, and refund policy.">
-    <!-- Google Tag Manager -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <title>Support — Metricus</title>
+  <meta name="description" content="Get help with your Metricus AI visibility report. FAQs, delivery info, and refund policy.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500;1,6..72,600&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#515F74',
+            'on-primary': '#f6f7ff',
+            surface: '#f7f9fb',
+            'surface-container-low': '#f0f4f7',
+            'surface-container': '#e8eff3',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-highest': '#d9e4ea',
+            'on-surface': '#2a3439',
+            'on-surface-variant': '#566166',
+            outline: '#717c82',
+            'outline-variant': '#a9b4b9',
+            'on-primary-fixed': '#324054',
+            'primary-dim': '#455368',
+            'surface-variant': '#d9e4ea',
+            'surface-container-high': '#e1e9ee',
+            'primary-fixed': '#d5e3fd',
+            'primary-fixed-dim': '#c7d5ee',
+          },
+          borderRadius: {
+            none: '0px',
+            sm: '0px',
+            DEFAULT: '0px',
+            md: '0px',
+            lg: '0px',
+            xl: '0px',
+            '2xl': '0px',
+            '3xl': '0px',
+            full: '0px',
+          },
+          fontFamily: {
+            headline: ['Newsreader', 'serif'],
+            body: ['Public Sans', 'sans-serif'],
+            label: ['Public Sans', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    * { border-radius: 0px !important; }
+    body {
+      font-family: 'Public Sans', sans-serif;
+      background-color: #f7f9fb;
+      color: #2a3439;
+    }
+    .bg-grid {
+      background-image:
+        linear-gradient(rgba(81,95,116,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(81,95,116,0.05) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-surface bg-grid antialiased">
 
-<header>
-    <div class="w-wide">
-        <div class="header-inner">
-            <a href="../" class="logo">
-                <div class="logo-icon">M</div>
-                metricus
-            </a>
-            <button class="nav-toggle" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-            </button>
-            <nav class="header-nav">
-                <a href="../#how-it-works" class="header-link">How It Works</a>
-                <a href="../example-report/" class="header-link">Sample Report</a>
-                <a href="../blog/" class="header-link">Blog</a>
-                <a href="../#pricing" class="btn btn-ghost header-cta">Get Your Report</a>
-            </nav>
-        </div>
+  <!-- Fixed Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="../" class="font-headline italic text-xl text-on-surface tracking-tight">Metricus</a>
+      <div class="flex items-center gap-8">
+        <a href="../methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Methodology</a>
+        <a href="../" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
+        <a href="../blog/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Blog</a>
+        <a href="../request-access/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Request Access</a>
+      </div>
     </div>
-</header>
+  </nav>
 
-<div class="w">
-    <div style="max-width:640px;margin:0 auto;padding:48px 0;">
-        <h1 style="font-size:1.4rem;font-weight:800;color:var(--text-bright);margin-bottom:8px;">Support</h1>
-        <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:32px;">We're here to help. Reach out and we'll get back to you within 24 hours.</p>
+  <!-- Content -->
+  <article class="pt-32 pb-20 px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto">
+      <p class="uppercase tracking-widest text-xs font-label font-medium text-primary mb-6">Help Center</p>
+      <h1 class="font-headline font-light text-5xl md:text-6xl text-on-surface leading-tight mb-4">Support</h1>
+      <p class="text-on-surface-variant text-lg leading-relaxed mb-12">We're here to help. Reach out and we'll get back to you within 24 hours.</p>
 
-        <div style="font-size:0.85rem;color:var(--text-mid);line-height:1.7;">
-            <h3 style="color:var(--text-bright);font-size:0.9rem;margin:24px 0 8px;">Contact us</h3>
-            <p>Email: <a href="mailto:hello@metricusapp.com" style="color:var(--primary);">hello@metricusapp.com</a></p>
-            <p>We typically respond within a few hours during business days.</p>
+      <div class="text-on-surface-variant text-base leading-relaxed space-y-10">
 
-            <h3 style="color:var(--text-bright);font-size:0.9rem;margin:24px 0 8px;">Common questions</h3>
+        <!-- Contact -->
+        <section class="bg-surface-container-low p-8 border border-outline-variant/20">
+          <h2 class="font-headline text-2xl text-on-surface mb-3">Contact us</h2>
+          <p class="mb-2">Email: <a href="mailto:hello@metricusapp.com" class="text-primary hover:text-primary-dim underline font-medium">hello@metricusapp.com</a></p>
+          <p>We typically respond within a few hours during business days.</p>
+        </section>
 
-            <p><strong style="color:var(--text-bright);">How long does my report take?</strong><br>
-            Reports are delivered within 24 hours of completing the brand details form.</p>
+        <!-- FAQ -->
+        <section>
+          <h2 class="font-headline text-3xl text-on-surface mb-8">Common questions</h2>
 
-            <p><strong style="color:var(--text-bright);">How do I get my report?</strong><br>
-            Your report will be sent as a PDF to the email address you provided during checkout.</p>
+          <div class="space-y-8">
+            <div class="border-l-2 border-primary pl-6">
+              <h3 class="text-on-surface font-medium text-lg mb-2">How long does my report take?</h3>
+              <p>Reports are delivered within 24 hours of completing the brand details form.</p>
+            </div>
 
-            <p><strong style="color:var(--text-bright);">What if AI doesn't mention my brand at all?</strong><br>
-            That's actually the most common (and most valuable) finding. Your report will show exactly why you're missing and what to do about it.</p>
+            <div class="border-l-2 border-primary pl-6">
+              <h3 class="text-on-surface font-medium text-lg mb-2">How do I get my report?</h3>
+              <p>Your report will be sent as a PDF to the email address you provided during checkout.</p>
+            </div>
 
-            <p><strong style="color:var(--text-bright);">Can I get a refund?</strong><br>
-            Yes. If your report doesn't contain at least 3 actionable insights, we'll refund you in full — no questions asked. Email us within 14 days of delivery.</p>
+            <div class="border-l-2 border-primary pl-6">
+              <h3 class="text-on-surface font-medium text-lg mb-2">What if AI doesn't mention my brand at all?</h3>
+              <p>That's actually the most common (and most valuable) finding. Your report will show exactly why you're missing and what to do about it.</p>
+            </div>
 
-            <p><strong style="color:var(--text-bright);">I purchased but didn't fill out the brand details form.</strong><br>
-            No problem — <a href="../onboarding/" style="color:var(--primary);">fill it out here</a>, or reply to your confirmation email and we'll sort it out.</p>
-        </div>
+            <div class="border-l-2 border-primary pl-6">
+              <h3 class="text-on-surface font-medium text-lg mb-2">Can I get a refund?</h3>
+              <p>Yes. If your report doesn't contain at least 3 actionable insights, we'll refund you in full — no questions asked. Email us within 14 days of delivery.</p>
+            </div>
+
+            <div class="border-l-2 border-primary pl-6">
+              <h3 class="text-on-surface font-medium text-lg mb-2">I purchased but didn't fill out the brand details form.</h3>
+              <p>No problem — reply to your confirmation email and we'll sort it out, or contact us at <a href="mailto:hello@metricusapp.com" class="text-primary hover:text-primary-dim underline">hello@metricusapp.com</a>.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
     </div>
-</div>
+  </article>
 
-<div class="footer">
-    <div class="w">metricus &copy; 2026 &nbsp;&middot;&nbsp; <a href="mailto:hello@metricusapp.com">Contact</a> &nbsp;&middot;&nbsp; <a href="../blog/">Blog</a> &nbsp;&middot;&nbsp; <a href="../privacy-policy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="../terms-of-service/">Terms</a> &nbsp;&middot;&nbsp; <a href="../support/">Support</a></div>
-</div>
+  <!-- Footer -->
+  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="../privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a>
+        <a href="../terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a>
+        <a href="../support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
+        <a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
