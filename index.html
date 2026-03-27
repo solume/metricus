@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Metricus | AI Visibility Intelligence</title>
-  <meta name="description" content="See exactly how ChatGPT, Claude, and 6 other AI platforms recommend any brand. One-time AI visibility reports from $49. No subscription.">
+  <title>Metricus | AI Visibility Reports</title>
+  <meta name="description" content="See exactly how AI recommends any brand — and how to fix it. One-time AI visibility reports from $49. No subscription.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://metricusapp.com/">
-  <meta property="og:title" content="Metricus — AI Visibility Intelligence">
-  <meta property="og:description" content="See exactly how ChatGPT, Claude, and 6 other AI platforms recommend any brand. One-time AI visibility reports from $49.">
+  <meta property="og:title" content="Metricus — AI Visibility Reports">
+  <meta property="og:description" content="See exactly how AI recommends any brand — and how to fix it. One-time AI visibility reports from $49.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://metricusapp.com/">
   <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Metricus | AI Visibility Intelligence">
-  <meta name="twitter:description" content="See exactly how ChatGPT, Claude, and 6 other AI platforms recommend any brand. One-time AI visibility reports from $49. No subscription.">
+  <meta name="twitter:title" content="Metricus | AI Visibility Reports">
+  <meta name="twitter:description" content="See exactly how AI recommends any brand — and how to fix it. One-time AI visibility reports from $49. No subscription.">
   <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
   <!-- Google Tag Manager -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
@@ -164,7 +164,7 @@
     "@type": "Organization",
     "name": "Metricus",
     "url": "https://metricusapp.com",
-    "description": "AI visibility reports for brands — find out what ChatGPT, Claude, Perplexity, and 5 other AI platforms say about your brand, and how to fix it.",
+    "description": "AI visibility reports for brands — find out what AI says about your brand, and how to fix it.",
     "email": "hello@metricusapp.com"
   }
   </script>
@@ -181,7 +181,7 @@
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Metricus AI Visibility Report",
-    "description": "One-time AI visibility report across 8 AI platforms — ChatGPT, Claude, Perplexity, Gemini, AI Overviews, Grok, DeepSeek, and Copilot.",
+    "description": "One-time AI visibility report — find out what AI says about your brand, what it gets wrong, and how to fix it.",
     "image": "https://metricusapp.com/metricus-og-image.png",
     "brand": { "@type": "Brand", "name": "Metricus" },
     "hasMerchantReturnPolicy": {
@@ -216,12 +216,26 @@
       <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="methodology/">Methodology</a>
       <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="#pricing">Pricing</a>
       <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="blog/">Blog</a>
-      <a class="text-[13px] uppercase tracking-wider font-semibold text-primary hover:text-slate-text transition-colors" href="request-access/">Request Access</a>
+      <a class="text-[13px] uppercase tracking-wider font-semibold text-primary hover:text-slate-text transition-colors" href="request-access/">Get Your Report</a>
     </nav>
-    <button class="md:hidden flex items-center text-slate-text">
+    <button id="mobile-menu-btn" class="md:hidden flex items-center text-slate-text" aria-label="Open menu" aria-expanded="false">
       <span class="material-symbols-outlined">menu</span>
     </button>
   </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
+    <div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div>
+    <nav class="absolute top-0 right-0 w-72 h-full bg-white shadow-xl flex flex-col pt-6 px-6">
+      <button id="mobile-menu-close" class="self-end mb-8 text-slate-text" aria-label="Close menu">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <a class="py-3 text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors border-b border-slate-100" href="methodology/">Methodology</a>
+      <a class="py-3 text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors border-b border-slate-100" href="#pricing" id="mobile-pricing-link">Pricing</a>
+      <a class="py-3 text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors border-b border-slate-100" href="blog/">Blog</a>
+      <a class="py-3 text-[13px] uppercase tracking-wider font-semibold text-primary hover:text-slate-text transition-colors" href="request-access/">Get Your Report</a>
+    </nav>
+  </div>
 
 
   <main class="flex-grow flex flex-col relative overflow-x-hidden">
@@ -236,60 +250,99 @@
         Measure your clients' mindshare in the AI era.
       </h1>
       <p class="text-[16px] md:text-[18px] text-slate-muted font-normal max-w-[540px] mb-12 leading-relaxed">
-        Turn opaque AI outputs into actionable visibility data. See exactly how ChatGPT, Claude, and 6 other platforms recommend any brand — yours or your clients'.
+        Turn opaque AI outputs into actionable visibility data. See exactly how AI recommends any brand — yours or your clients' — and what to change.
       </p>
 
       <!-- Input Group -->
       <form id="heroForm" class="w-full max-w-[540px] flex flex-col sm:flex-row shadow-xl shadow-slate-200/50 mb-20 relative z-20">
         <div class="relative flex-grow flex items-center bg-white border-y border-l border-[#E2E8F0] sm:border-r-0">
           <span class="material-symbols-outlined absolute left-4 text-slate-muted">search</span>
-          <input id="heroUrl" class="editorial-input w-full h-[64px] pl-12 pr-4 bg-transparent border-none text-[16px] text-slate-text placeholder:text-slate-muted focus:ring-0 rounded-none" placeholder="e.g., clientbrand.com" type="text" required>
+          <input id="heroUrl" class="editorial-input w-full h-[64px] pl-12 pr-4 bg-transparent border-none text-[16px] text-slate-text placeholder:text-slate-muted focus:ring-0 rounded-none" placeholder="e.g., acme.com" type="text" required>
         </div>
         <button type="submit" class="editorial-btn h-[64px] px-8 bg-primary text-white font-semibold text-[15px] whitespace-nowrap flex items-center justify-center gap-2 group border border-primary">
-          Analyze Visibility
+          Start your report
           <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
         </button>
       </form>
 
       <!-- Floating 3D Graphic Container -->
-      <div class="w-full max-w-[1000px] relative mt-8 perspective-1000">
-        <div class="three-d-card animate-float relative z-0">
-          <div class="bg-white border border-[#E2E8F0] shadow-2xl overflow-hidden p-8 text-left max-w-[600px] mx-auto bg-white/95 backdrop-blur-sm">
-            <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-100">
-              <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-slate-400">Recommendation Delta</span>
-              <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-slate-400">LLM Mindshare</span>
+      <div class="w-full max-w-[1000px] relative mt-8 perspective-1000" style="isolation: isolate; contain: layout style paint;">
+        <div class="three-d-card animate-float relative z-0" style="will-change: transform; backface-visibility: hidden;">
+          <div class="bg-white border border-[#E2E8F0] shadow-2xl overflow-hidden text-left max-w-[640px] mx-auto bg-white/95 backdrop-blur-sm">
+
+            <!-- Header bar -->
+            <div class="flex items-center justify-between px-8 pt-6 pb-4 border-b border-slate-100">
+              <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-slate-400">AI Visibility Report</span>
+              <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-primary">Visibility: 22%</span>
             </div>
-            <div class="space-y-6">
-              <div class="flex items-center justify-between">
-                <span class="text-[14px] text-slate-text font-medium italic">"best running shoes for flat feet"</span>
-                <div class="flex items-center gap-4">
-                  <div class="h-1.5 w-32 bg-slate-100 overflow-hidden">
-                    <div class="h-full bg-primary w-[42%]"></div>
-                  </div>
-                  <span class="text-[14px] font-bold text-primary w-8 text-right">42%</span>
+
+            <!-- Vocabulary Gap Row -->
+            <div class="px-8 py-5 border-b border-slate-50">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="material-symbols-outlined text-[16px] text-amber-500">warning</span>
+                <span class="text-[10px] uppercase tracking-[0.15em] font-bold text-slate-400">Vocabulary Gap</span>
+              </div>
+              <div class="flex items-center justify-between text-[13px]">
+                <div>
+                  <span class="text-slate-muted">Buyers ask:</span>
+                  <span class="text-slate-text font-medium italic ml-1">"affordable CRM for small teams"</span>
                 </div>
               </div>
-              <div class="flex items-center justify-between">
-                <span class="text-[14px] text-slate-text font-medium italic">"sustainable activewear brands"</span>
-                <div class="flex items-center gap-4">
-                  <div class="h-1.5 w-32 bg-slate-100 overflow-hidden">
-                    <div class="h-full bg-primary w-[28%]"></div>
-                  </div>
-                  <span class="text-[14px] font-bold text-primary w-8 text-right">28%</span>
+              <div class="flex items-center justify-between text-[13px] mt-1.5">
+                <div>
+                  <span class="text-slate-muted">Your site says:</span>
+                  <span class="text-slate-text font-medium italic ml-1">"enterprise relationship management platform"</span>
                 </div>
-              </div>
-              <!-- Sample Query Mapping -->
-              <div class="pt-8 mt-4 border-t border-slate-50 flex items-center justify-between gap-4">
-                <div class="flex items-center gap-2">
-                  <div class="size-8 border border-slate-200 flex items-center justify-center bg-white text-[10px] font-bold text-slate-400">GPT</div>
-                  <div class="w-8 h-px bg-slate-200"></div>
-                  <div class="size-12 border-2 border-primary bg-primary/5 flex items-center justify-center text-[11px] font-bold italic text-primary">Client</div>
-                  <div class="w-8 h-px bg-slate-200"></div>
-                  <div class="size-8 border border-slate-200 flex items-center justify-center bg-white text-[10px] font-bold text-slate-400">Claude</div>
-                </div>
-                <div class="text-[10px] uppercase tracking-widest font-semibold text-slate-400">Sample Query Mapping</div>
               </div>
             </div>
+
+            <!-- Error + Citation Row -->
+            <div class="grid grid-cols-2 divide-x divide-slate-50">
+              <!-- Error Flag -->
+              <div class="px-8 py-5">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="material-symbols-outlined text-[16px] text-red-400">error</span>
+                  <span class="text-[10px] uppercase tracking-[0.15em] font-bold text-slate-400">Factual Error</span>
+                </div>
+                <p class="text-[13px] text-slate-text leading-snug">"Pricing starts at $99/mo"</p>
+                <p class="text-[11px] text-slate-muted mt-1">Actual: $29/mo. Source: outdated G2 listing</p>
+              </div>
+              <!-- Citation Trace -->
+              <div class="px-8 py-5">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="material-symbols-outlined text-[16px] text-primary">link</span>
+                  <span class="text-[10px] uppercase tracking-[0.15em] font-bold text-slate-400">Top Citation Sources</span>
+                </div>
+                <div class="space-y-1.5 text-[13px]">
+                  <div class="flex justify-between"><span class="text-slate-text">G2</span><span class="text-slate-muted">47%</span></div>
+                  <div class="flex justify-between"><span class="text-slate-text">Reddit</span><span class="text-slate-muted">28%</span></div>
+                  <div class="flex justify-between"><span class="text-slate-text">Company blog</span><span class="text-slate-muted">12%</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Competitor Bar -->
+            <div class="px-8 py-5 bg-slate-50/50 border-t border-slate-100">
+              <span class="text-[10px] uppercase tracking-[0.15em] font-bold text-slate-400 block mb-3">Competitor Visibility</span>
+              <div class="space-y-2">
+                <div class="flex items-center gap-3">
+                  <span class="text-[12px] text-primary font-semibold w-16">You</span>
+                  <div class="h-1.5 flex-1 bg-slate-100 overflow-hidden"><div class="h-full bg-primary" style="width:22%"></div></div>
+                  <span class="text-[12px] font-bold text-primary w-8 text-right">22%</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-[12px] text-slate-muted w-16">Comp. A</span>
+                  <div class="h-1.5 flex-1 bg-slate-100 overflow-hidden"><div class="h-full bg-slate-300" style="width:61%"></div></div>
+                  <span class="text-[12px] text-slate-muted w-8 text-right">61%</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-[12px] text-slate-muted w-16">Comp. B</span>
+                  <div class="h-1.5 flex-1 bg-slate-100 overflow-hidden"><div class="h-full bg-slate-300" style="width:45%"></div></div>
+                  <span class="text-[12px] text-slate-muted w-8 text-right">45%</span>
+                </div>
+              </div>
+            </div>
+
           </div>
           <!-- Depth Decorative Elements -->
           <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/5 blur-3xl -z-10"></div>
@@ -308,23 +361,23 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
         <div class="flex flex-col border-t border-[#E2E8F0] pt-8">
           <span class="material-symbols-outlined text-primary mb-4 text-[28px]">troubleshoot</span>
-          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">Generative Engine Optimization</h3>
+          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">Vocabulary Gap Analysis</h3>
           <p class="text-[15px] text-slate-muted leading-relaxed">
-            Understand exactly which keywords and contexts trigger LLMs to surface your client over competitors. Optimize for the new discovery paradigm.
+            AI recommends brands that match the language buyers use. We show you exactly where your messaging diverges from what AI expects — and what to change.
           </p>
         </div>
         <div class="flex flex-col border-t border-[#E2E8F0] pt-8">
           <span class="material-symbols-outlined text-primary mb-4 text-[28px]">visibility</span>
-          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">AI Visibility Metrics</h3>
+          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">Citation Blind Spots</h3>
           <p class="text-[15px] text-slate-muted leading-relaxed">
-            Move beyond simple search rankings. Quantify mindshare with robust visibility scores across major foundation models and conversational interfaces.
+            AI answers pull from specific sources — G2, Reddit, industry publications. We trace exactly which sources feed each recommendation, so you know where to invest.
           </p>
         </div>
         <div class="flex flex-col border-t border-[#E2E8F0] pt-8">
           <span class="material-symbols-outlined text-primary mb-4 text-[28px]">monitoring</span>
-          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">Continuous Brand Monitoring</h3>
+          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">Error &amp; Hallucination Audit</h3>
           <p class="text-[15px] text-slate-muted leading-relaxed">
-            Track sentiment and mention frequency over time. Receive agency-ready reports that prove the value of your strategic interventions.
+            In our audits, the majority of brands had at least one factual error in AI responses — wrong pricing, outdated features, or fabricated claims. We find them and trace the source.
           </p>
         </div>
       </div>
@@ -339,14 +392,14 @@
         <!-- Pricing Header -->
         <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-end mb-16">
           <div class="md:col-span-7">
-            <p class="text-xs uppercase tracking-widest text-slate-muted mb-4 font-semibold font-body-sans">Investment Infrastructure</p>
+            <p class="text-xs uppercase tracking-widest text-slate-muted mb-4 font-semibold font-body-sans">One-Time Reports</p>
             <h2 class="font-display text-5xl md:text-7xl leading-[0.95] text-on-surface">
-              Precision for every <em class="italic">scale</em>.
+              Pick the question keeping you up at <em class="italic">night</em>.
             </h2>
           </div>
           <div class="md:col-span-5">
             <p class="text-base text-on-surface-variant leading-relaxed font-body-sans">
-              Our proprietary GEO analytics engine queries 8 AI platforms with 200+ variations per query. One report, one-time fee — whether it's for your brand or a client's.
+              Each tier goes deeper into why AI recommends (or ignores) your brand. One report, one-time fee — whether it's for your brand or a client's.
             </p>
           </div>
         </div>
@@ -358,32 +411,31 @@
           <div class="bg-surface-container-lowest p-10 min-h-[500px] flex flex-col">
             <div class="mb-8">
               <h3 class="font-headline text-3xl text-on-surface mb-1">Snapshot</h3>
-              <p class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">Fundamental Intelligence</p>
+              <p class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">"Are we visible?"</p>
             </div>
             <div class="mb-8">
               <span class="font-headline text-5xl text-on-surface">$49</span>
               <span class="text-sm text-on-surface-variant ml-2">per report</span>
             </div>
+            <p class="text-sm text-on-surface-variant leading-relaxed mb-6 font-body-sans">
+              Find out whether AI mentions your brand at all — and what it gets wrong when it does.
+            </p>
             <ul class="space-y-3 mb-auto text-sm text-on-surface-variant font-body-sans">
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                3 AI Platforms Analysis
+                Visibility score across AI
               </li>
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                5 Target Queries
+                Exact AI quotes about your brand
               </li>
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                2 Competitor Comparison
+                Factual accuracy check
               </li>
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                Visibility Score &amp; AI Quotes
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                Accuracy Summary
+                2 competitor comparison
               </li>
             </ul>
             <a href="#" data-action="buy-tier" data-tier="snapshot" class="mt-10 block text-center border-2 border-primary text-primary text-xs font-semibold uppercase tracking-widest px-6 py-3 hover:bg-primary hover:text-on-primary transition-colors">
@@ -398,32 +450,35 @@
             </div>
             <div class="mb-8">
               <h3 class="font-headline text-3xl text-on-surface mb-1">Deep Dive</h3>
-              <p class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">Strategic Dominance</p>
+              <p class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">"Why aren't we winning?"</p>
             </div>
             <div class="mb-8">
               <span class="font-headline text-5xl text-on-surface">$149</span>
               <span class="text-sm text-on-surface-variant ml-2">per report</span>
             </div>
+            <p class="text-sm text-on-surface-variant leading-relaxed mb-6 font-body-sans">
+              Understand why competitors get recommended instead of you — vocabulary gaps, missing citations, and factual errors holding you back.
+            </p>
             <ul class="space-y-3 mb-auto text-sm text-on-surface-variant font-body-sans">
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                All 8 AI Platforms
+                All major AI platforms analyzed
               </li>
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                20 Target Queries
+                Vocabulary gap analysis
               </li>
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                5 Competitor Comparison
+                Citation source tracking
               </li>
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                Full Accuracy Audit &amp; Citation Tracking
+                Full accuracy audit with error tracing
               </li>
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                Top 5 Prioritized Actions
+                5 competitors &amp; top 5 prioritized actions
               </li>
             </ul>
             <a href="#" data-action="buy-tier" data-tier="deep-dive" class="mt-10 block text-center bg-primary text-on-primary text-xs font-semibold uppercase tracking-widest px-6 py-3 hover:bg-primary-hover transition-colors">
@@ -435,36 +490,35 @@
           <div class="bg-surface-container-lowest p-10 min-h-[500px] flex flex-col">
             <div class="mb-8">
               <h3 class="font-headline text-3xl text-on-surface mb-1">Full Arsenal</h3>
-              <p class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">Total Intelligence</p>
+              <p class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">"How do we dominate?"</p>
             </div>
             <div class="mb-8">
               <span class="font-headline text-5xl text-on-surface">$349</span>
               <span class="text-sm text-on-surface-variant ml-2">per report</span>
             </div>
+            <p class="text-sm text-on-surface-variant leading-relaxed mb-6 font-body-sans">
+              Full competitive intelligence — know exactly where you stand across regions, what every competitor does better, and the complete playbook to overtake them.
+            </p>
             <ul class="space-y-3 mb-auto text-sm text-on-surface-variant font-body-sans">
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                All 8 AI Platforms
+                Everything in Deep Dive
               </li>
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                50 Target Queries
+                10 competitors, expanded query coverage
               </li>
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                10 Competitor Comparison
+                Regional breakdown (US / EU / APAC)
               </li>
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                Executive Summary PDF
+                Executive summary PDF
               </li>
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                Regional Breakdown (US/EU/APAC)
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                Unlimited Prioritized Actions
+                Unlimited prioritized actions
               </li>
             </ul>
             <a href="#" data-action="buy-tier" data-tier="full-arsenal" class="mt-10 block text-center bg-surface-container-high text-on-surface text-xs font-semibold uppercase tracking-widest px-6 py-3 hover:bg-surface-container-highest transition-colors">
@@ -504,37 +558,55 @@
             </thead>
             <tbody class="text-sm font-body-sans">
               <tr class="border-b border-outline-variant/10">
-                <td class="py-4 text-on-surface font-semibold">AI Platforms Covered</td>
-                <td class="py-4 text-center text-on-surface-variant">3</td>
-                <td class="py-4 text-center text-on-surface font-bold">8</td>
-                <td class="py-4 text-center text-on-surface">8</td>
+                <td class="py-4 text-on-surface font-semibold">Visibility score &amp; AI quotes</td>
+                <td class="py-4 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
+                <td class="py-4 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
+                <td class="py-4 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
               </tr>
               <tr class="border-b border-outline-variant/10">
-                <td class="py-4 text-on-surface font-semibold">Target Queries</td>
-                <td class="py-4 text-center text-on-surface-variant">5</td>
-                <td class="py-4 text-center text-on-surface font-bold">20</td>
-                <td class="py-4 text-center text-on-surface">50</td>
+                <td class="py-4 text-on-surface font-semibold">Factual accuracy audit</td>
+                <td class="py-4 text-center text-on-surface-variant">Summary</td>
+                <td class="py-4 text-center text-on-surface font-bold">Full + error tracing</td>
+                <td class="py-4 text-center text-on-surface">Full + error tracing</td>
               </tr>
               <tr class="border-b border-outline-variant/10">
-                <td class="py-4 text-on-surface font-semibold">Competitor Comparison</td>
+                <td class="py-4 text-on-surface font-semibold">AI coverage</td>
+                <td class="py-4 text-center text-on-surface-variant">Core</td>
+                <td class="py-4 text-center text-on-surface font-bold">Comprehensive</td>
+                <td class="py-4 text-center text-on-surface">Comprehensive</td>
+              </tr>
+              <tr class="border-b border-outline-variant/10">
+                <td class="py-4 text-on-surface font-semibold">Vocabulary gap analysis</td>
+                <td class="py-4 text-center"><span class="material-symbols-outlined text-outline-variant text-lg">remove</span></td>
+                <td class="py-4 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
+                <td class="py-4 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
+              </tr>
+              <tr class="border-b border-outline-variant/10">
+                <td class="py-4 text-on-surface font-semibold">Citation source tracking</td>
+                <td class="py-4 text-center"><span class="material-symbols-outlined text-outline-variant text-lg">remove</span></td>
+                <td class="py-4 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
+                <td class="py-4 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
+              </tr>
+              <tr class="border-b border-outline-variant/10">
+                <td class="py-4 text-on-surface font-semibold">Competitors compared</td>
                 <td class="py-4 text-center text-on-surface-variant">2</td>
                 <td class="py-4 text-center text-on-surface font-bold">5</td>
                 <td class="py-4 text-center text-on-surface">10</td>
               </tr>
               <tr class="border-b border-outline-variant/10">
-                <td class="py-4 text-on-surface font-semibold">Citation Tracking</td>
+                <td class="py-4 text-on-surface font-semibold">Prioritized action plan</td>
                 <td class="py-4 text-center"><span class="material-symbols-outlined text-outline-variant text-lg">remove</span></td>
-                <td class="py-4 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-4 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
+                <td class="py-4 text-center text-on-surface font-bold">Top 5 actions</td>
+                <td class="py-4 text-center text-on-surface">Unlimited</td>
               </tr>
               <tr class="border-b border-outline-variant/10">
-                <td class="py-4 text-on-surface font-semibold">Executive Summary PDF</td>
+                <td class="py-4 text-on-surface font-semibold">Executive summary PDF</td>
                 <td class="py-4 text-center"><span class="material-symbols-outlined text-outline-variant text-lg">remove</span></td>
                 <td class="py-4 text-center"><span class="material-symbols-outlined text-outline-variant text-lg">remove</span></td>
                 <td class="py-4 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
               </tr>
               <tr>
-                <td class="py-4 text-on-surface font-semibold">Regional Breakdown</td>
+                <td class="py-4 text-on-surface font-semibold">Regional breakdown (US/EU/APAC)</td>
                 <td class="py-4 text-center"><span class="material-symbols-outlined text-outline-variant text-lg">remove</span></td>
                 <td class="py-4 text-center"><span class="material-symbols-outlined text-outline-variant text-lg">remove</span></td>
                 <td class="py-4 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
@@ -593,12 +665,12 @@
             <p class="text-xs uppercase tracking-widest text-on-primary/60 font-semibold">Reports Delivered</p>
           </div>
           <div class="border-l-2 border-on-primary/20 pl-8">
-            <p class="font-headline text-5xl md:text-6xl mb-2">8</p>
-            <p class="text-xs uppercase tracking-widest text-on-primary/60 font-semibold">AI Platforms Covered</p>
+            <p class="font-headline text-5xl md:text-6xl mb-2">100%</p>
+            <p class="text-xs uppercase tracking-widest text-on-primary/60 font-semibold">Money-Back Guarantee</p>
           </div>
           <div class="border-l-2 border-on-primary/20 pl-8">
-            <p class="font-headline text-5xl md:text-6xl mb-2">200+</p>
-            <p class="text-xs uppercase tracking-widest text-on-primary/60 font-semibold">Queries Per Report</p>
+            <p class="font-headline text-5xl md:text-6xl mb-2">$49</p>
+            <p class="text-xs uppercase tracking-widest text-on-primary/60 font-semibold">Starting Price</p>
           </div>
         </div>
       </div>
@@ -615,7 +687,7 @@
             3+ actionable insights or full refund. No questions asked.
           </p>
           <p class="text-sm text-on-surface-variant leading-relaxed max-w-lg mx-auto font-body-sans">
-            Every Metricus report is powered by our proprietary GEO analytics engine, querying across 8 AI platforms with 200+ queries per report. If any report doesn't deliver at least 3 actionable insights, we refund that report in full.
+            Every Metricus report queries AI hundreds of times to find the real patterns. If any report doesn't deliver at least 3 actionable insights, we refund that report in full.
           </p>
         </div>
       </div>
@@ -628,10 +700,10 @@
         <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
           <div class="md:col-span-8 bg-surface-container-lowest p-10 md:p-14 flex flex-col justify-center">
             <h2 class="font-headline text-3xl md:text-4xl text-on-surface mb-4">
-              Not sure which tier fits?
+              Not sure which question to start with?
             </h2>
             <p class="text-base text-on-surface-variant leading-relaxed mb-8 max-w-xl font-body-sans">
-              Whether you're checking your own brand or running audits for clients, we can help you pick the right scope. Volume pricing available for 5+ reports/month.
+              Most first-time buyers start with Deep Dive — it covers the vocabulary gaps and citation blind spots that drive the biggest visibility gains. Volume pricing available for 5+ reports/month.
             </p>
             <div>
               <a href="agency-inquiry/" class="inline-block bg-primary text-on-primary text-xs font-semibold uppercase tracking-widest px-8 py-3.5 hover:bg-primary-hover transition-colors">
@@ -699,6 +771,21 @@
     try { sessionStorage.setItem('metricus_website', url); } catch(e) {}
     document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
   });
+
+  // Mobile menu
+  (function() {
+    var btn = document.getElementById('mobile-menu-btn');
+    var menu = document.getElementById('mobile-menu');
+    var close = document.getElementById('mobile-menu-close');
+    var backdrop = document.getElementById('mobile-menu-backdrop');
+    var pricingLink = document.getElementById('mobile-pricing-link');
+    function open() { menu.classList.remove('hidden'); menu.setAttribute('aria-hidden', 'false'); btn.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; }
+    function shut() { menu.classList.add('hidden'); menu.setAttribute('aria-hidden', 'true'); btn.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; }
+    btn.addEventListener('click', open);
+    close.addEventListener('click', shut);
+    backdrop.addEventListener('click', shut);
+    pricingLink.addEventListener('click', shut);
+  })();
 
   // Pricing tier buttons: navigate to request-access with tier + website
   document.addEventListener('click', function(e) {
