@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Agency Inquiry — Metricus</title>
+  <title>Let's Talk — Metricus</title>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-  <meta name="description" content="Get volume pricing for AI visibility reports. Teams ordering 5+ reports per month get priority turnaround.">
+  <meta name="description" content="Have a question about AI visibility reports? Tell us what you're working on and we'll get back to you within 24 hours.">
   <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Agency Inquiry — Metricus">
-  <meta name="twitter:description" content="Get volume pricing for AI visibility reports. Teams ordering 5+ reports per month get priority turnaround.">
+  <meta name="twitter:title" content="Let's Talk — Metricus">
+  <meta name="twitter:description" content="Have a question about AI visibility reports? Tell us what you're working on and we'll get back to you within 24 hours.">
   <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
@@ -79,51 +79,37 @@
   <!-- Content -->
   <main class="flex-grow flex items-start justify-center pt-20 pb-24 px-6">
     <div class="w-full max-w-xl">
-      <p class="uppercase tracking-widest text-xs font-label font-medium text-primary mb-6">Agency &amp; Volume</p>
-      <h1 class="font-headline font-light text-4xl md:text-5xl text-on-surface leading-tight mb-4">Get Agency Pricing</h1>
-      <p class="text-on-surface-variant text-base leading-relaxed mb-12">Teams ordering 5+ reports per month get priority turnaround and volume pricing. Tell us what you're looking for and we'll get back to you within 24 hours.</p>
+      <p class="uppercase tracking-widest text-xs font-label font-medium text-primary mb-6">Get in Touch</p>
+      <h1 class="font-headline font-light text-4xl md:text-5xl text-on-surface leading-tight mb-4">Let's Talk</h1>
+      <p class="text-on-surface-variant text-base leading-relaxed mb-12">Tell us what you're working on and we'll get back to you within 24 hours.</p>
 
-      <form id="agencyForm" class="space-y-8">
+      <form id="contactForm" class="space-y-8">
         <!-- Email -->
         <div>
           <label for="email" class="block text-xs uppercase tracking-widest text-on-surface-variant font-semibold mb-2">Email Address</label>
-          <input type="email" id="email" name="email" required placeholder="you@agency.com"
-            class="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary px-4 py-3 text-on-surface text-sm outline-none transition-colors">
-        </div>
-
-        <!-- Company / Agency Name -->
-        <div>
-          <label for="company" class="block text-xs uppercase tracking-widest text-on-surface-variant font-semibold mb-2">Company / Agency Name</label>
-          <input type="text" id="company" name="company" placeholder="Acme Digital"
-            class="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary px-4 py-3 text-on-surface text-sm outline-none transition-colors">
-        </div>
-
-        <!-- Estimated Volume -->
-        <div>
-          <label for="volume" class="block text-xs uppercase tracking-widest text-on-surface-variant font-semibold mb-2">Estimated Reports Per Month</label>
-          <input type="text" id="volume" name="volume" placeholder="e.g., 10-20"
+          <input type="email" id="email" name="email" required placeholder="you@company.com"
             class="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary px-4 py-3 text-on-surface text-sm outline-none transition-colors">
         </div>
 
         <!-- Message -->
         <div>
-          <label for="message" class="block text-xs uppercase tracking-widest text-on-surface-variant font-semibold mb-2">What are you looking for?</label>
-          <textarea id="message" name="message" rows="4" placeholder="Tell us about your use case, client volume, or any specific needs..."
+          <label for="message" class="block text-xs uppercase tracking-widest text-on-surface-variant font-semibold mb-2">What's on your mind?</label>
+          <textarea id="message" name="message" rows="5" required placeholder="For example: which brands you'd like to audit, how many reports you're thinking about, questions about methodology, or anything else..."
             class="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary px-4 py-3 text-on-surface text-sm outline-none transition-colors resize-none"></textarea>
         </div>
 
         <!-- Submit -->
         <button type="submit" id="submitBtn"
           class="w-full bg-on-primary-fixed text-on-primary text-xs font-semibold uppercase tracking-widest px-8 py-4 hover:opacity-90 transition-opacity">
-          Submit Inquiry
+          Send Message
         </button>
       </form>
 
       <!-- Success message (hidden by default) -->
       <div id="successMsg" class="hidden mt-12 bg-surface-container-low border border-outline-variant/30 p-8 text-center">
         <span class="material-symbols-outlined text-primary text-4xl mb-4 block">check_circle</span>
-        <h2 class="font-headline text-2xl text-on-surface mb-2">Inquiry Received</h2>
-        <p class="text-on-surface-variant text-sm">We'll review your request and get back to you within 24 hours at the email you provided.</p>
+        <h2 class="font-headline text-2xl text-on-surface mb-2">Message Received</h2>
+        <p class="text-on-surface-variant text-sm">We'll get back to you within 24 hours at the email you provided.</p>
       </div>
     </div>
   </main>
@@ -143,25 +129,18 @@
   <script>
     var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlMZxJmAmm90HGKg6AJxEeB8xOP83Dyq4rUHnCD8aubV1NzPqb1ZlSbjzmBAnO63r2/exec';
 
-    document.getElementById('agencyForm').addEventListener('submit', function(e) {
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
       var email = document.getElementById('email').value.trim();
-      var company = document.getElementById('company').value.trim();
-      var volume = document.getElementById('volume').value.trim();
       var message = document.getElementById('message').value.trim();
 
-      var details = [
-        'AGENCY_INQUIRY',
-        company ? 'Company: ' + company : '',
-        volume ? 'Volume: ' + volume + '/mo' : '',
-        message ? 'Message: ' + message : ''
-      ].filter(Boolean).join(' // ');
+      var details = 'CONTACT // Message: ' + message;
 
       var p = new URLSearchParams({ contact: email, pricing: '[brand] ' + details });
       fetch(SCRIPT_URL + '?' + p.toString(), { mode: 'no-cors' }).catch(function() {});
 
       // Hide form, show success
-      document.getElementById('agencyForm').classList.add('hidden');
+      document.getElementById('contactForm').classList.add('hidden');
       document.getElementById('successMsg').classList.remove('hidden');
     });
   </script>
