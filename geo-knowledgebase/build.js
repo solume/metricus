@@ -202,7 +202,7 @@ const html = `<!DOCTYPE html>
       <a class="text-[13px] uppercase tracking-wider font-medium text-on-surface-variant hover:text-on-surface transition-colors" href="../methodology/">Methodology</a>
       <a class="text-[13px] uppercase tracking-wider font-medium text-on-surface-variant hover:text-on-surface transition-colors" href="../#pricing">Pricing</a>
       <a class="text-[13px] uppercase tracking-wider font-medium text-on-surface-variant hover:text-on-surface transition-colors" href="../blog/">Blog</a>
-      <a class="text-[13px] uppercase tracking-wider font-semibold text-primary hover:text-on-surface transition-colors" href="../request-access/">Request Access</a>
+      <a class="text-[13px] uppercase tracking-wider font-semibold text-primary hover:text-on-surface transition-colors" href="../request-access/">Get Your Report</a>
     </nav>
     <button id="mobileMenuBtn" class="md:hidden flex items-center text-on-surface">
       <span class="material-symbols-outlined">menu</span>
