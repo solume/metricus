@@ -293,15 +293,13 @@
 
         <h2 id="nondeterminism">The nondeterminism problem</h2>
 
-        <p>AI language models use a parameter called "temperature" that controls randomness. Even at low temperature settings, models vary their responses based on session context, conversation history, server-side A/B tests, and model version updates.</p>
-
-        <p>According to data from Search Engine Land (tracking 2,500 prompts monthly), <strong>AI source citations change 40&ndash;60% month over month</strong>. That means a brand visible today might be invisible next month &mdash; or vice versa.</p>
+        <p>According to data from Search Engine Land (tracking 2,500 prompts monthly), <strong>AI source citations change 40&ndash;60% month over month</strong>. Temperature settings, session context, server-side A/B tests, and model updates all contribute. A brand visible today might be invisible next month &mdash; or vice versa.</p>
 
         <p>This has three implications for scoring:</p>
         <ul>
           <li><strong>Volume matters more than precision.</strong> Running 200 queries gives you a distribution, not a point estimate. A "41% mention rate" from 200 queries is meaningful. A "mentioned" or "not mentioned" from 1 query is not.</li>
           <li><strong>Cross-platform comparison reveals real patterns.</strong> If you're mentioned on 6 of 8 platforms, that's signal. If you're mentioned on 1 of 8, that's a problem regardless of the exact percentage.</li>
-          <li><strong>Trends matter more than absolutes.</strong> A score of 35% that was 20% last month is excellent progress. A score of 60% that was 80% last month is a problem.</li>
+          <li><strong>Trends matter more than absolutes.</strong> A score of 35% that was 20% last month is excellent progress. A score of 60% that was 80% last month is a problem. (For a framework on tracking this over time, see the <a href="../ai-visibility-playbook/">90-day AI visibility playbook</a>.)</li>
         </ul>
 
         <h2 id="methodology">How a meaningful score is calculated</h2>
@@ -315,6 +313,13 @@
         <p><strong>3. Scoring.</strong> For each query-platform combination, we track: Was the brand mentioned? In what position? Was it recommended or just listed? Were the facts accurate? Was a source cited?</p>
 
         <p><strong>4. Aggregation.</strong> The overall visibility score is the percentage of query-platform combinations where your brand was mentioned. Sub-scores break this down by platform, by query type, and by mention quality (recommended vs. listed vs. compared unfavorably).</p>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-sm font-semibold text-slate-text mb-2">What to look for in any tool</p>
+          <p class="text-[15px] text-on-surface leading-relaxed">
+            Regardless of which tool you use, ask: how many queries per platform? If the answer is under 30, the data is noise. Do they disclose their methodology? If not, you can't validate the results. Do they differentiate between <a href="../../geo-knowledgebase/">RAG-based retrieval and parametric knowledge</a>? If not, they're conflating two fundamentally different visibility channels.
+          </p>
+        </div>
 
         <h2 id="metrics">The 5 metrics that matter</h2>
 
@@ -336,22 +341,22 @@
               <tr>
                 <td class="p-4 font-medium text-slate-text">Positioning</td>
                 <td class="p-4 text-slate-muted">Where you appear in the response (1st, 2nd, 3rd+)</td>
-                <td class="p-4 text-slate-muted">Being mentioned 5th in a list of 8 isn't the same as being recommended 1st</td>
+                <td class="p-4 text-slate-muted">AI responses have steep attention decay: the first-mentioned brand captures the majority of follow-up queries. Position 3+ is functionally invisible.</td>
               </tr>
               <tr>
                 <td class="p-4 font-medium text-slate-text">Recommendation rate</td>
                 <td class="p-4 text-slate-muted">% of mentions where AI actively recommends you</td>
-                <td class="p-4 text-slate-muted">The difference between "listed" and "recommended" is conversion</td>
+                <td class="p-4 text-slate-muted">AI chatbots often name 4&ndash;5 brands but only "recommend" 1&ndash;2. Users treat those recommendations like a trusted referral, not a search result.</td>
               </tr>
               <tr>
                 <td class="p-4 font-medium text-slate-text">Accuracy</td>
                 <td class="p-4 text-slate-muted">Number of factual errors across platforms</td>
-                <td class="p-4 text-slate-muted">Being visible with wrong information is worse than being invisible</td>
+                <td class="p-4 text-slate-muted">AI hallucinations about pricing or features spread across platforms. One wrong fact in ChatGPT often appears in Perplexity and Copilot too.</td>
               </tr>
               <tr>
                 <td class="p-4 font-medium text-slate-text">Sentiment</td>
                 <td class="p-4 text-slate-muted">The tone and framing when your brand is discussed</td>
-                <td class="p-4 text-slate-muted">Tells you whether AI positions you favorably or with caveats</td>
+                <td class="p-4 text-slate-muted">AI models often hedge with qualifiers like "but some users report..." &mdash; these caveats shape perception even when you're technically mentioned.</td>
               </tr>
             </tbody>
           </table>
@@ -359,7 +364,7 @@
 
         <h2 id="benchmarks">What's a "good" score?</h2>
 
-        <p>Based on 500+ audits across industries:</p>
+        <p>Based on 500+ audits across SaaS, e-commerce, and professional services:</p>
 
         <div class="border border-[#E2E8F0] my-8 overflow-x-auto">
           <table class="w-full text-sm">
@@ -374,7 +379,7 @@
               <tr>
                 <td class="p-4 font-medium text-slate-text">0&ndash;15%</td>
                 <td class="p-4 text-slate-muted">Invisible. AI doesn't know you exist.</td>
-                <td class="p-4 text-slate-muted">Start with structured data and third-party listings</td>
+                <td class="p-4 text-slate-muted">Start with <a href="../../geo-knowledgebase/">structured data</a> and third-party listings</td>
               </tr>
               <tr>
                 <td class="p-4 font-medium text-slate-text">15&ndash;35%</td>
@@ -384,7 +389,7 @@
               <tr>
                 <td class="p-4 font-medium text-slate-text">35&ndash;60%</td>
                 <td class="p-4 text-slate-muted">Visible. Mentioned in most relevant queries.</td>
-                <td class="p-4 text-slate-muted">Optimize positioning and recommendation rate</td>
+                <td class="p-4 text-slate-muted">Optimize positioning and recommendation rate (<a href="../ai-visibility-action-plan/">see the 5-step action plan</a>)</td>
               </tr>
               <tr>
                 <td class="p-4 font-medium text-slate-text">60&ndash;80%</td>
@@ -407,7 +412,7 @@
 
         <div class="bg-surface-container-low p-6 my-8">
           <p class="text-lg text-on-surface leading-relaxed">
-            <strong>For businesses and agencies that want a transparent, methodology-driven AI visibility score,</strong> Metricus runs 200+ queries across 8 AI platforms and provides mention rates, positioning, accuracy audits, and sentiment tracking &mdash; all in a single report.
+            <strong>The gap between perceived and actual AI visibility is roughly 2x.</strong> Brands that assume they're visible typically score far lower when measured. The first step isn't optimization &mdash; it's accurate measurement. If you haven't <a href="../ai-chatbot-recommendations/">audited your actual AI presence</a>, any optimization work is guesswork.
           </p>
         </div>
 
