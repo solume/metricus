@@ -202,6 +202,40 @@
     ]
   }
   </script>
+
+  <!-- JSON-LD FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why do different tools report different AI visibility scores?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Different tools use different measurement methods. API-based tools query AI models through developer interfaces that can return different results than what users see. Real-UI tools simulate actual user sessions. Different prompt sets, timing, and scoring methodologies all contribute to score variation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What metrics matter most when evaluating AI visibility?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The five key metrics are: mention rate (how often your brand appears), positioning (where you appear in the response), recommendation quality (listed vs actively recommended), factual accuracy (whether AI gets your details right), and citation sources (which URLs feed the answer)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good AI visibility score?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on your category. In our B2B SaaS audits, scores ranged from 50% to 83%. Above 60% is competitive in most categories. But the overall score hides what matters — you might score 90% on broad queries and 0% on industry-specific ones. The breakdown by query type matters more than the headline number."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
 
@@ -219,7 +253,7 @@
       <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="../../methodology/">Methodology</a>
       <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="../../#pricing">Pricing</a>
       <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="../">Blog</a>
-      <a class="text-[13px] uppercase tracking-wider font-semibold text-primary hover:text-slate-text transition-colors" href="../../request-access/">Get Your Report</a>
+      <a class="text-[13px] uppercase tracking-wider font-semibold text-primary hover:text-slate-text transition-colors" href="../../get-report/">Get Your Report</a>
     </nav>
     <button class="md:hidden flex items-center text-slate-text">
       <span class="material-symbols-outlined">menu</span>
@@ -291,6 +325,28 @@
           </p>
         </div>
 
+        <h2>Why Do Different Tools Report Different AI Visibility Scores?</h2>
+
+        <p>
+          If you have tested your brand's AI visibility with more than one tool, you have probably noticed something frustrating: the scores don't match. One tool says you have 45% visibility, another says 22%, and a third says 61%. This isn't a bug &mdash; it reflects fundamental differences in how these tools measure.
+        </p>
+
+        <p>
+          The biggest variable is <strong>API vs real UI measurement</strong>. Many tools query AI models through developer APIs, which can return different results than what a real user sees in the ChatGPT or Perplexity interface. API responses often lack the web-search grounding that real sessions include, producing a completely different set of recommendations. Tools that simulate actual user sessions &mdash; opening a browser, typing a query, reading the response &mdash; capture what buyers actually experience.
+        </p>
+
+        <p>
+          <strong>Timing differences</strong> compound the problem. AI chatbots are nondeterministic &mdash; they change answers between runs, sometimes within minutes. A tool that measured your visibility on Monday morning may report a different score than one that measured on Tuesday afternoon, even using identical queries.
+        </p>
+
+        <p>
+          Then there is the <strong>prompt set</strong>. Different tools use different queries. One might ask "best CRM for startups" while another asks "CRM software recommendations for small business." These are subtly different prompts that produce different AI responses. The choice of prompts shapes the score more than most users realize.
+        </p>
+
+        <p>
+          This is why methodology matters more than the headline number. When evaluating any AI visibility tool, ask: how do they query, how often do they run each query, and do they disclose their prompt set? <a href="../../methodology/">Learn about our measurement methodology &rarr;</a>
+        </p>
+
         <h2 id="nondeterminism">The nondeterminism problem</h2>
 
         <p>According to data from Search Engine Land (tracking 2,500 prompts monthly), <strong>AI source citations change 40&ndash;60% month over month</strong>. Temperature settings, session context, server-side A/B tests, and model updates all contribute. A brand visible today might be invisible next month &mdash; or vice versa.</p>
@@ -298,7 +354,7 @@
         <p>This has three implications for scoring:</p>
         <ul>
           <li><strong>Volume matters more than precision.</strong> Running 200 queries gives you a distribution, not a point estimate. A "41% mention rate" from 200 queries is meaningful. A "mentioned" or "not mentioned" from 1 query is not.</li>
-          <li><strong>Cross-platform comparison reveals real patterns.</strong> If you're mentioned on 6 of 8 platforms, that's signal. If you're mentioned on 1 of 8, that's a problem regardless of the exact percentage.</li>
+          <li><strong>Cross-platform comparison reveals real patterns.</strong> If you're mentioned on most platforms, that's signal. If you're mentioned on only one, that's a problem regardless of the exact percentage.</li>
           <li><strong>Trends matter more than absolutes.</strong> A score of 35% that was 20% last month is excellent progress. A score of 60% that was 80% last month is a problem. (For a framework on tracking this over time, see the <a href="../ai-visibility-playbook/">90-day AI visibility playbook</a>.)</li>
         </ul>
 
@@ -308,7 +364,7 @@
 
         <p><strong>1. Query design.</strong> We generate 20&ndash;50 target queries based on your category, brand name, and competitors. These mirror real buyer queries: "best [category]," "[brand] vs [competitor]," "[brand] pricing," "[brand] alternatives."</p>
 
-        <p><strong>2. Multi-run execution.</strong> Each query runs multiple times per platform to account for nondeterminism. For the Deep Dive tier, that's 200+ total queries across 8 platforms.</p>
+        <p><strong>2. Multi-run execution.</strong> Each query runs multiple times per platform to account for nondeterminism. For the Deep Dive tier, that means comprehensive coverage across AI.</p>
 
         <p><strong>3. Scoring.</strong> For each query-platform combination, we track: Was the brand mentioned? In what position? Was it recommended or just listed? Were the facts accurate? Was a source cited?</p>
 
@@ -424,14 +480,15 @@
 
       <!-- ========== ARTICLE CTA ========== -->
       <div class="bg-primary p-8 md:p-12 mt-16">
-        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">See where any brand stands in AI</h3>
+        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">See your actual AI visibility score</h3>
         <p class="text-on-primary/80 text-base max-w-lg mb-8">
-          Get a full AI visibility report across 8 platforms &mdash; for your own brand or a client's. One-time fee, no subscription.
+          Get a full AI visibility report across AI &mdash; for your own brand or a client's. One-time fee, no subscription.
         </p>
-        <a href="../../request-access/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
-          Get a Report
+        <a href="../../get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
+          Get your score
           <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
         </a>
+        <p class="mt-4"><a href="../../sample-report/" class="text-on-primary/70 hover:text-on-primary text-sm underline transition-colors">Or see what a report looks like &rarr;</a></p>
       </div>
 
     </article>
