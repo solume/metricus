@@ -193,9 +193,9 @@
       "returnFees": "https://schema.org/FreeReturn"
     },
     "offers": [
-      { "@type": "Offer", "name": "Snapshot", "price": "49", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://metricusapp.com/request-access/?tier=snapshot" },
-      { "@type": "Offer", "name": "Deep Dive", "price": "149", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://metricusapp.com/request-access/?tier=deep-dive" },
-      { "@type": "Offer", "name": "Full Arsenal", "price": "349", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://metricusapp.com/request-access/?tier=full-arsenal" }
+      { "@type": "Offer", "name": "Snapshot", "price": "49", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://metricusapp.com/get-report/?tier=snapshot" },
+      { "@type": "Offer", "name": "Deep Dive", "price": "149", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://metricusapp.com/get-report/?tier=deep-dive" },
+      { "@type": "Offer", "name": "Full Arsenal", "price": "349", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://metricusapp.com/get-report/?tier=full-arsenal" }
     ]
   }
   </script>
@@ -216,7 +216,7 @@
       <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="methodology/">Methodology</a>
       <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="#pricing">Pricing</a>
       <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="blog/">Blog</a>
-      <a class="text-[13px] uppercase tracking-wider font-semibold text-primary hover:text-slate-text transition-colors" href="request-access/">Get Your Report</a>
+      <a class="text-[13px] uppercase tracking-wider font-semibold text-primary hover:text-slate-text transition-colors" href="get-report/">Get Your Report</a>
     </nav>
     <button id="mobile-menu-btn" class="md:hidden flex items-center text-slate-text" aria-label="Open menu" aria-expanded="false">
       <span class="material-symbols-outlined">menu</span>
@@ -233,7 +233,7 @@
       <a class="py-3 text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors border-b border-slate-100" href="methodology/">Methodology</a>
       <a class="py-3 text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors border-b border-slate-100" href="#pricing" id="mobile-pricing-link">Pricing</a>
       <a class="py-3 text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors border-b border-slate-100" href="blog/">Blog</a>
-      <a class="py-3 text-[13px] uppercase tracking-wider font-semibold text-primary hover:text-slate-text transition-colors" href="request-access/">Get Your Report</a>
+      <a class="py-3 text-[13px] uppercase tracking-wider font-semibold text-primary hover:text-slate-text transition-colors" href="get-report/">Get Your Report</a>
     </nav>
   </div>
 
@@ -250,7 +250,7 @@
         Measure your clients' mindshare in the AI era.
       </h1>
       <p class="text-[16px] md:text-[18px] text-slate-muted font-normal max-w-[540px] mb-12 leading-relaxed">
-        Turn opaque AI outputs into actionable visibility data. See exactly how AI recommends any brand — yours or your clients' — and what to change.
+        See what your customers actually see in ChatGPT — and exactly which sources shape the answer. One report. Real data. No subscription.
       </p>
 
       <!-- Input Group -->
@@ -360,29 +360,37 @@
     <section class="w-full max-w-[1200px] mx-auto px-6 pb-32 relative z-20 bg-white/50 backdrop-blur-sm pt-16">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
         <div class="flex flex-col border-t border-[#E2E8F0] pt-8">
-          <span class="material-symbols-outlined text-primary mb-4 text-[28px]">troubleshoot</span>
-          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">Vocabulary Gap Analysis</h3>
+          <span class="material-symbols-outlined text-primary mb-4 text-[28px]">desktop_windows</span>
+          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">Real UI Results, Not API Data</h3>
           <p class="text-[15px] text-slate-muted leading-relaxed">
-            AI recommends brands that match the language buyers use. We show you exactly where your messaging diverges from what AI expects — and what to change.
+            Most tools query the API and call it a day. We simulate what your customers actually see when they type a prompt into ChatGPT, Perplexity, or Gemini. API results and real chat responses often differ — we show you the real one.
           </p>
         </div>
         <div class="flex flex-col border-t border-[#E2E8F0] pt-8">
-          <span class="material-symbols-outlined text-primary mb-4 text-[28px]">visibility</span>
-          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">Citation Blind Spots</h3>
+          <span class="material-symbols-outlined text-primary mb-4 text-[28px]">link</span>
+          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">Source Attribution</h3>
           <p class="text-[15px] text-slate-muted leading-relaxed">
-            AI answers pull from specific sources — G2, Reddit, industry publications. We trace exactly which sources feed each recommendation, so you know where to invest.
+            See exactly which URLs fed AI's answer about you. G2 reviews, Reddit threads, blog posts, competitor pages. Know why AI said what it said — not just whether it mentioned you.
           </p>
         </div>
         <div class="flex flex-col border-t border-[#E2E8F0] pt-8">
-          <span class="material-symbols-outlined text-primary mb-4 text-[28px]">monitoring</span>
-          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">Error &amp; Hallucination Audit</h3>
+          <span class="material-symbols-outlined text-primary mb-4 text-[28px]">checklist</span>
+          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">Action Steps, Not Just Scores</h3>
           <p class="text-[15px] text-slate-muted leading-relaxed">
-            In our audits, the majority of brands had at least one factual error in AI responses — wrong pricing, outdated features, or fabricated claims. We find them and trace the source.
+            Every report includes specific, prioritized actions tied to specific findings. Not a dashboard with a number — a diagnostic with a fix list.
           </p>
         </div>
       </div>
     </section>
 
+
+    <!-- ========== SAMPLE REPORT LINK ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-16 relative z-20 text-center">
+      <a href="sample-report/" class="inline-flex items-center gap-2 text-[16px] md:text-[18px] text-primary font-semibold hover:text-primary-hover transition-colors group">
+        See what a report looks like &rarr; Sample Report
+        <span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+      </a>
+    </section>
 
     <!-- ========== PRICING TIERS ========== -->
     <section id="pricing" class="py-16 md:py-24 bg-surface relative">
@@ -705,6 +713,9 @@
             <p class="text-base text-on-surface-variant leading-relaxed mb-8 max-w-xl font-body-sans">
               Most first-time buyers start with Deep Dive — it covers the vocabulary gaps and citation blind spots that drive the biggest visibility gains. Volume pricing available for 5+ reports/month.
             </p>
+            <p class="text-sm text-on-surface-variant font-body-sans mb-8">
+              Every report is one-time. No subscription. No recurring charges.
+            </p>
             <div>
               <a href="agency-inquiry/" class="inline-block bg-primary text-on-primary text-xs font-semibold uppercase tracking-widest px-8 py-3.5 hover:bg-primary-hover transition-colors">
                 Schedule a Consultation
@@ -795,7 +806,7 @@
     var tier = btn.getAttribute('data-tier');
     var website = '';
     try { website = sessionStorage.getItem('metricus_website') || ''; } catch(e) {}
-    var href = 'request-access/?tier=' + tier;
+    var href = 'get-report/?tier=' + tier;
     if (website) href += '&website=' + encodeURIComponent(website);
     window.location.href = href;
   });

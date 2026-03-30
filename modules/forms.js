@@ -15,7 +15,7 @@ function handleBuyTier(tier) {
   let website = '';
   try { website = sessionStorage.getItem('metricus_website') || ''; } catch (e) {}
   track(website, 'funnel:tier-click:' + tier);
-  let url = 'request-access/?tier=' + tier;
+  let url = 'get-report/?tier=' + tier;
   if (website) url += '&website=' + encodeURIComponent(website);
   window.location.href = url;
 }

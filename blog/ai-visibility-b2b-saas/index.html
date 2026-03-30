@@ -57,6 +57,40 @@
   }
   </script>
 
+  <!-- JSON-LD FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why is my B2B SaaS brand invisible in ChatGPT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your brand may rank well on Google but be invisible in ChatGPT because AI builds recommendations from different signals — training data, third-party reviews, Reddit threads, and web-crawled sources. If your content uses different terminology than buyers use in their prompts, AI has no reason to surface you. B2B SaaS brands are especially vulnerable because of niche terminology and rapid feature changes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I track if my B2B SaaS company is mentioned in ChatGPT responses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can manually test queries or use an AI visibility tool. Manual testing is unreliable because AI gives different answers each time. Tools like Metricus run dozens of queries — the way real buyers phrase their needs — and show you exactly when and where your brand appears, which sources feed the answer, and what to fix."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Google ranking help with AI visibility?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not directly. Google rankings and AI visibility are driven by different mechanisms. Google ranks pages based on links, relevance, and authority. AI chatbots pull from training data and real-time web searches of third-party sources. Ranking #1 on Google doesn't guarantee ChatGPT mentions you."
+        }
+      }
+    ]
+  }
+  </script>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -222,7 +256,7 @@
       <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="../../methodology/">Methodology</a>
       <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="../../#pricing">Pricing</a>
       <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="../">Blog</a>
-      <a class="text-[13px] uppercase tracking-wider font-semibold text-primary hover:text-slate-text transition-colors" href="../../request-access/">Get Your Report</a>
+      <a class="text-[13px] uppercase tracking-wider font-semibold text-primary hover:text-slate-text transition-colors" href="../../get-report/">Get Your Report</a>
     </nav>
     <button class="md:hidden flex items-center text-slate-text">
       <span class="material-symbols-outlined">menu</span>
@@ -303,6 +337,26 @@
         <blockquote>
           Unlike Google, where you can track impressions and clicks, AI recommendations generate zero analytics. You can't see the deals you're losing. The only way to know is to audit what AI actually says about you.
         </blockquote>
+
+
+        <!-- Section: Why Is Your B2B SaaS Brand Invisible in ChatGPT? -->
+        <h2>Why Is Your B2B SaaS Brand Invisible in ChatGPT?</h2>
+
+        <p>
+          Here is the moment that catches most SaaS founders off guard: you rank #1 on Google for your primary keyword, your G2 reviews are strong, your paid campaigns are converting &mdash; and then you ask ChatGPT to recommend a tool in your category. Your brand is nowhere in the answer. Not first, not last, not mentioned at all. It is a gut-punch realization, and it is happening to B2B SaaS companies across every vertical.
+        </p>
+
+        <p>
+          The disconnect exists because <strong>Google indexing and AI training data are fundamentally different systems</strong>. Google crawls your pages, evaluates links and relevance signals, and ranks you in a list. AI chatbots, on the other hand, build their recommendations from a blend of pre-training data (which may be months or years old), real-time retrieval from third-party sources like Reddit, G2, and comparison blogs, and internal reasoning about what qualifies as authoritative. Your perfectly optimized landing page may never enter that equation.
+        </p>
+
+        <p>
+          B2B SaaS is particularly vulnerable to this blind spot for two reasons. First, <strong>niche terminology</strong>: your product page might describe itself as an "AI-powered revenue intelligence platform," but buyers are asking ChatGPT for "a tool that tracks sales calls and shows deal risk." If the language doesn't match, AI has no reason to surface you. Second, <strong>rapid feature changes</strong>: SaaS products ship new capabilities constantly, but the third-party review sites and comparison articles that AI relies on may still describe your product as it existed a year ago. The result is a growing gap between what your product actually does and what AI thinks it does.
+        </p>
+
+        <p>
+          This is not a minor edge case. It is a structural problem with how AI discovers and recommends software &mdash; and it requires a different playbook than the one that got you to page one of Google.
+        </p>
 
 
         <!-- Section 2 -->
@@ -396,7 +450,7 @@
         <h2 id="why">Why some SaaS products dominate AI recommendations</h2>
 
         <p>
-          The brands that show up consistently across all 8 AI platforms share three traits:
+          The brands that show up consistently across AI share three traits:
         </p>
 
         <h3>1. They have comparison content that AI can extract from</h3>
@@ -422,7 +476,7 @@
           Whether you're a SaaS founder managing your own visibility or an agency advising clients, the playbook is the same:
         </p>
 
-        <p><strong>Week 1:</strong> Audit your current AI visibility across all 8 platforms. Identify errors, missing mentions, and competitor advantages.</p>
+        <p><strong>Week 1:</strong> Audit your current AI visibility across AI. Identify errors, missing mentions, and competitor advantages.</p>
         <p><strong>Week 2:</strong> Fix your own site &mdash; add <code>SoftwareApplication</code> schema with <code>offers</code>, <code>applicationCategory</code>, and <code>operatingSystem</code> properties. Add <code>FAQPage</code> schema to your pricing page with the five most common pricing questions. Make pricing visible in plain HTML.</p>
         <p><strong>Week 3:</strong> Update all third-party listings with current pricing, features, and screenshots.</p>
         <p><strong>Week 4:</strong> Publish comparison pages for your top 3 competitors and a "Best [your category]" roundup.</p>
@@ -438,14 +492,15 @@
 
       <!-- ========== ARTICLE CTA ========== -->
       <div class="bg-primary p-8 md:p-12 mt-16">
-        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">See where any brand stands in AI</h3>
+        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">Your Google rankings don&rsquo;t translate to ChatGPT</h3>
         <p class="text-on-primary/80 text-base max-w-lg mb-8">
-          Get a full AI visibility report across 8 platforms &mdash; for your own brand or a client's. One-time fee, no subscription.
+          Get a full AI visibility report across AI &mdash; for your own brand or a client's. One-time fee, no subscription.
         </p>
-        <a href="../../request-access/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
-          Get a Report
+        <a href="../../get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
+          Find out why &rarr; Get a report
           <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
         </a>
+        <p class="mt-4"><a href="../../sample-report/" class="text-on-primary/70 hover:text-on-primary text-sm underline transition-colors">Or see what a report looks like &rarr;</a></p>
       </div>
 
     </article>
