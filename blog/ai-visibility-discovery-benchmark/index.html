@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What 182 LLM Prompt Tests Reveal About How AI Recommends B2B SaaS | Metricus</title>
+  <meta name="description" content="We tested 182 prompts to see how AI platforms recommend B2B SaaS products. 79% of answers came from training data, not search.">
+  <meta property="og:title" content="What 182 LLM Prompt Tests Reveal About How AI Recommends B2B SaaS">
+  <meta property="og:description" content="We tested 182 prompts to see how AI platforms recommend B2B SaaS products. 79% of answers came from training data, not search.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metricusapp.com/blog/ai-visibility-discovery-benchmark/">
+  <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="What 182 LLM Prompt Tests Reveal About How AI Recommends B2B SaaS | Metricus">
+  <meta name="twitter:description" content="We tested 182 prompts to see how AI platforms recommend B2B SaaS products. 79% of answers came from training data, not search.">
+  <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
+  <link rel="canonical" href="https://metricusapp.com/blog/ai-visibility-discovery-benchmark/">
+
+  <!-- GTM -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "What 182 LLM Prompt Tests Reveal About How AI Recommends B2B SaaS",
+    "description": "We tested 182 prompts to see how AI platforms recommend B2B SaaS products. 79% of answers came from training data, not search.",
+    "author": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "datePublished": "2026-03-31",
+    "dateModified": "2026-03-31",
+    "mainEntityOfPage": "https://metricusapp.com/blog/ai-visibility-discovery-benchmark/",
+    "image": "https://metricusapp.com/metricus-og-image.png"
+  }
+  </script>
+
+  <!-- JSON-LD BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "What 182 LLM Prompt Tests Reveal About How AI Recommends B2B SaaS", "item": "https://metricusapp.com/blog/ai-visibility-discovery-benchmark/"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How were the 182 prompts selected for this study?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We designed prompts to reflect real user behavior when searching for B2B SaaS products. The set included 150 single-turn prompts (direct questions a buyer would ask) and 32 compound prompts (multi-step queries that mimic a real research workflow). Prompts covered problem-oriented questions, tool comparisons, feature-specific queries, and pricing questions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which AI platforms were tested?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We tested across major AI platforms including ChatGPT, Gemini, and Perplexity. Results were aggregated across platforms to identify patterns that hold regardless of which AI a buyer happens to use."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do these findings apply to industries outside B2B SaaS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The core dynamics we observed, particularly the dominance of training data over live search and the importance of multi-page web presence, are likely to hold across most categories where buyers use AI for product research. The specific ratios (79% training data, 21% web search) may vary by category."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why did 79% of prompts rely on training data instead of searching the web?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI models default to their training data whenever they estimate they already have a confident answer. Only queries that signal a need for current or comparative information, such as tool comparison prompts, reliably triggered web search. Problem-oriented and educational prompts almost never triggered search because the model treated them as general knowledge questions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should companies test their AI visibility?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI training data and retrieval behavior change with every model update. We recommend testing at least quarterly, or whenever a major model release occurs. Companies in competitive categories may benefit from monthly monitoring."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a new product improve its AI visibility quickly?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, but it depends on which discovery mechanism you are targeting. For the 21% of prompts that trigger web search, improving your multi-page web presence and third-party coverage can show results in weeks. For the 79% that rely on training data, you need to build presence in sources that AI training pipelines prioritize, which is a longer-term effort measured in months."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#334155',
+            'primary-hover': '#1E293B',
+            'on-primary': '#f6f7ff',
+            'on-primary-fixed': '#324054',
+            'primary-dim': '#455368',
+            surface: '#f7f9fb',
+            'surface-container-low': '#f0f4f7',
+            'surface-container': '#e8eff3',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-highest': '#d9e4ea',
+            'surface-container-high': '#e1e9ee',
+            'surface-variant': '#d9e4ea',
+            'on-surface': '#2a3439',
+            'on-surface-variant': '#566166',
+            outline: '#717c82',
+            'outline-variant': '#a9b4b9',
+            'slate-text': '#0F172A',
+            'slate-muted': '#64748B',
+            'slate-accent': '#475569',
+          },
+          fontFamily: {
+            display: ['Newsreader', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            body: ['Public Sans', 'sans-serif'],
+            headline: ['Newsreader', 'serif'],
+          },
+          borderRadius: {
+            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
+            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
+            full: '0.75rem',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #0F172A;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .font-display { font-family: 'Newsreader', serif; }
+    .font-headline { font-family: 'Newsreader', serif; }
+    .font-body-sans { font-family: 'Public Sans', sans-serif; }
+
+    .editorial-btn {
+      transition: background-color 150ms ease-in-out, transform 150ms ease;
+    }
+    .editorial-btn:hover {
+      background-color: #1E293B;
+    }
+
+    .bg-grid-dots {
+      background-image: radial-gradient(circle, #717c82 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+      opacity: 0.05;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .blog-card {
+      transition: transform 200ms ease, background-color 200ms ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+      background-color: #f7f9fb;
+    }
+
+    .article-body h2 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      line-height: 1.2;
+      color: #0F172A;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) {
+      .article-body h2 {
+        font-size: 2rem;
+      }
+    }
+    .article-body h3 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.3;
+      color: #0F172A;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .article-body p {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+    }
+    .article-body ul, .article-body ol {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+    }
+    .article-body ul { list-style-type: disc; }
+    .article-body ol { list-style-type: decimal; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body blockquote {
+      border-left: 2px solid #334155;
+      padding-left: 1.5rem;
+      font-style: italic;
+      color: #475569;
+      font-size: 1.125rem;
+      line-height: 1.75;
+      margin: 2rem 0;
+    }
+    .article-body a {
+      color: #334155;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .article-body a:hover {
+      color: #1E293B;
+    }
+
+    .stat-callout {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background-color: #E2E8F0;
+      border: 1px solid #E2E8F0;
+    }
+    @media (min-width: 768px) {
+      .stat-callout {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    .stat-callout-item {
+      background-color: #f0f4f7;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .stat-callout-number {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 2.5rem;
+      line-height: 1;
+      color: #0F172A;
+      margin-bottom: 0.5rem;
+    }
+    .stat-callout-label {
+      font-size: 0.8125rem;
+      color: #64748B;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
+
+  <!-- ========== FIXED NAV ========== -->
+  <header class="h-16 flex items-center justify-between px-6 lg:px-12 border-b border-[#E2E8F0] bg-white/80 backdrop-blur-md sticky top-0 z-50">
+    <div class="flex items-center gap-2 text-slate-text">
+      <a class="flex items-center gap-2 group" href="../../">
+        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+        </svg>
+        <span class="font-display italic font-bold text-xl tracking-tight group-hover:text-primary transition-colors">Metricus</span>
+      </a>
+    </div>
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="../../methodology/">Methodology</a>
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="../../#pricing">Pricing</a>
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="../">Blog</a>
+      <a class="text-[13px] uppercase tracking-wider font-semibold text-primary hover:text-slate-text transition-colors" href="../../get-report/">Get Your Report</a>
+    </nav>
+    <button class="md:hidden flex items-center text-slate-text">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </header>
+
+
+  <main class="flex-grow flex flex-col relative overflow-x-hidden">
+
+    <div class="absolute inset-0 bg-grid-dots -z-10 pointer-events-none"></div>
+
+    <!-- ========== ARTICLE ========== -->
+    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
+
+      <!-- Breadcrumb -->
+      <nav class="mb-8">
+        <ol class="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-muted">
+          <li><a href="../../" class="hover:text-slate-text transition-colors">Home</a></li>
+          <li class="select-none">/</li>
+          <li><a href="../" class="hover:text-slate-text transition-colors">Blog</a></li>
+          <li class="select-none">/</li>
+          <li class="text-slate-text">AI Visibility Discovery Benchmark</li>
+        </ol>
+      </nav>
+
+      <!-- Article Header -->
+      <header class="mb-12">
+        <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-4">Research</p>
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
+          What 182 LLM Prompt Tests Reveal About How AI Recommends B2B SaaS
+        </h1>
+        <p class="text-sm text-outline">Metricus Research &middot; March 31, 2026 &middot; 10 min read</p>
+      </header>
+
+
+      <!-- Key Finding Box -->
+      <div class="bg-surface-container-low p-8 mb-12">
+        <p class="text-lg leading-relaxed text-on-surface">
+          <strong>79% of AI answers about B2B SaaS products came from training data, not live web search.</strong> If your product is not already embedded in the data AI models were trained on, the majority of buyer queries will never surface you &mdash; regardless of how strong your website, SEO, or paid campaigns are.
+        </p>
+      </div>
+
+
+      <!-- Table of Contents -->
+      <div class="border border-[#E2E8F0] p-8 mb-12">
+        <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">In this article</p>
+        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
+          <li><a href="#why-study" class="hover:text-primary-hover underline underline-offset-2">Why we ran this study</a></li>
+          <li><a href="#key-findings" class="hover:text-primary-hover underline underline-offset-2">Key findings at a glance</a></li>
+          <li><a href="#training-data" class="hover:text-primary-hover underline underline-offset-2">Most AI answers come from training data, not live search</a></li>
+          <li><a href="#competitive-landscape" class="hover:text-primary-hover underline underline-offset-2">The competitive landscape according to AI</a></li>
+          <li><a href="#search-triggers" class="hover:text-primary-hover underline underline-offset-2">What triggers AI to actually search</a></li>
+          <li><a href="#multi-page" class="hover:text-primary-hover underline underline-offset-2">Multi-page presence beats single-page citation</a></li>
+          <li><a href="#pricing" class="hover:text-primary-hover underline underline-offset-2">Pricing model as a differentiator</a></li>
+          <li><a href="#strategy" class="hover:text-primary-hover underline underline-offset-2">What this means for your AI visibility strategy</a></li>
+          <li><a href="#faq" class="hover:text-primary-hover underline underline-offset-2">Frequently asked questions</a></li>
+        </ol>
+      </div>
+
+
+      <!-- Article Body -->
+      <div class="article-body">
+
+        <h2 id="why-study">Why We Ran This Study</h2>
+
+        <p>Our clients &mdash; B2B SaaS companies &mdash; kept asking the same question: <strong>how does AI decide which tools to recommend?</strong></p>
+
+        <p>It is a fair question. When a buyer asks ChatGPT, Gemini, or Perplexity to recommend software for their problem, the AI produces a confident answer with specific product names. But what governs which products appear? Is it the quality of the product? The company&rsquo;s marketing spend? Whether the AI searched the web in real time, or simply recalled what it learned during training?</p>
+
+        <p>We did not find satisfying answers in the existing literature. So we designed a study to find out. We tested 182 prompts across major AI platforms, covering the kinds of questions real buyers ask when researching B2B SaaS products. The prompt set included 150 single-turn prompts &mdash; direct questions like &ldquo;what is the best project management tool for a remote team&rdquo; &mdash; and 32 compound prompts that mimic a multi-step research workflow, such as asking a follow-up question about pricing after an initial recommendation.</p>
+
+        <p>For every response, we logged which products were recommended, whether the AI searched the web or answered from training data, what sources were cited, and how the product was framed &mdash; as a primary recommendation, a passing mention, or a comparison point.</p>
+
+        <p>The results changed how we advise our clients. We think they will change how you think about your own AI visibility, too.</p>
+
+
+        <h2 id="key-findings">Key Findings at a Glance</h2>
+
+        <div class="stat-callout my-8">
+          <div class="stat-callout-item">
+            <div class="stat-callout-number">182</div>
+            <div class="stat-callout-label">Prompts tested across major AI platforms</div>
+          </div>
+          <div class="stat-callout-item">
+            <div class="stat-callout-number">79%</div>
+            <div class="stat-callout-label">Relied on training data, not live search</div>
+          </div>
+          <div class="stat-callout-item">
+            <div class="stat-callout-number">21%</div>
+            <div class="stat-callout-label">Triggered real-time web search</div>
+          </div>
+          <div class="stat-callout-item">
+            <div class="stat-callout-number">100%</div>
+            <div class="stat-callout-label">Tool comparison prompts triggered search</div>
+          </div>
+        </div>
+
+        <p>These four numbers frame the rest of the study. The vast majority of AI responses about B2B SaaS come from what the model already knows &mdash; not from what it finds in real time. The exception is tool comparison prompts, which triggered web search every single time. The type of question a buyer asks determines whether AI can even find you.</p>
+
+
+        <h2 id="training-data">Finding 1 &mdash; Most AI Answers Come From Training Data, Not Live Search</h2>
+
+        <p>This was the most consequential finding: <strong>79% of the prompts we tested were answered entirely from the AI model&rsquo;s training data.</strong> No web search. No retrieval. No citations. The AI simply wrote an answer based on patterns it learned during training.</p>
+
+        <p>Problem-oriented prompts &mdash; the kind real buyers ask most often, such as &ldquo;how do I reduce churn in my SaaS product&rdquo; or &ldquo;what&rsquo;s the best way to manage a distributed engineering team&rdquo; &mdash; almost never triggered search. The AI treated these as general knowledge questions. It drew from whatever it had internalized during training and produced a fluent, confident answer. If your product was not in that training data, you were not in the answer.</p>
+
+        <p>Only 21% of prompts triggered real-time web search. Those tended to be explicit comparison queries (&ldquo;what are the best tools for X&rdquo;) or prompts that asked about recent developments.</p>
+
+        <p>The implication is stark: <strong>if your product is not represented in AI training data, you are invisible to the majority of buyer queries.</strong> Traditional SEO, content marketing, and paid acquisition do not address this. They optimize for the 21% of queries where AI actually searches the web. The other 79% is a different game entirely &mdash; one that depends on third-party coverage, reviews, and presence in the kinds of sources that AI training pipelines ingest.</p>
+
+
+        <h2 id="competitive-landscape">Finding 2 &mdash; The Competitive Landscape According to AI</h2>
+
+        <p>We tracked how often each product was mentioned across all 182 prompts. The distribution was dramatically uneven.</p>
+
+        <p>The most-mentioned product (Product A) appeared 101 times across our test set. Product B appeared 74 times. Products C and D appeared 37 and 27 times respectively. At the other end of the spectrum, a newer entrant (Product F) appeared only 5 times &mdash; but when it was found, it was recommended as a primary pick 57% of the time.</p>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg leading-relaxed text-on-surface">
+            <strong>The most-mentioned products are not necessarily the best. They are the ones with the deepest footprint in AI training data.</strong> Products with extensive third-party coverage, long histories of being discussed in blog posts and review sites, and broad web presence dominated the mention counts &mdash; regardless of current product quality or customer satisfaction.
+          </p>
+        </div>
+
+        <p>Subscription-based products with established market presence dominated generic queries. When a buyer asked a broad question (&ldquo;what&rsquo;s the best tool for X&rdquo;), AI defaulted to the products it had the most data on. Smaller or newer entrants, even those with strong user reviews and competitive features, were crowded out simply because they had less historical presence in the training corpus.</p>
+
+        <p>Product F is instructive. It barely appeared in raw mention counts, but its recommendation rate when it did appear was the highest in the study. This suggests that when AI does encounter a newer product &mdash; typically through web search &mdash; it evaluates it on merit. The problem is that AI rarely encounters it in the first place, because 79% of responses never trigger search.</p>
+
+
+        <h2 id="search-triggers">Finding 3 &mdash; What Triggers AI to Actually Search</h2>
+
+        <p>Not all queries are created equal. The type of prompt determines whether AI draws from memory or goes looking for current information.</p>
+
+        <p><strong>Tool comparison prompts triggered web search 100% of the time.</strong> Any prompt that asked AI to compare, list, or evaluate tools in a category &mdash; &ldquo;what are the best tools for X,&rdquo; &ldquo;compare A vs. B,&rdquo; &ldquo;top 5 tools for Y&rdquo; &mdash; reliably kicked the AI into retrieval mode. These prompts generated cited sources, pulled recent information, and produced answers that reflected the current web landscape rather than historical training data.</p>
+
+        <p>Problem-oriented and educational prompts, by contrast, triggered search near 0% of the time. When a buyer asked &ldquo;how do I solve problem X&rdquo; or &ldquo;what should I consider when choosing a tool for Y,&rdquo; the AI answered from training data. It offered general frameworks, listed common approaches, and mentioned products it already knew about. It did not search. It did not cite sources. It simply produced an answer.</p>
+
+        <p>The compound prompts in our set &mdash; multi-step conversations where a buyer starts with a broad question and narrows down &mdash; showed a mixed pattern. The initial broad question typically did not trigger search. But follow-up questions asking for specific tool recommendations or pricing comparisons often did. This means the entry point of a conversation is critical: <strong>the first question a buyer asks often determines whether AI uses training data or web search for the entire thread.</strong></p>
+
+        <p>For B2B SaaS companies, the implication is clear. Your content strategy needs to address both modes. For the 21% of queries where AI searches, you need strong web presence with the right content in the right places. For the 79% where it does not, you need to be embedded in the sources that AI trains on.</p>
+
+
+        <h2 id="multi-page">Finding 4 &mdash; Multi-Page Presence Beats Single-Page Citation</h2>
+
+        <p>When AI did search the web, we tracked the relationship between how many pages mentioned a product in search results and whether the AI recommended it as a primary pick or merely mentioned it in passing.</p>
+
+        <p>The pattern was consistent: <strong>brands appearing across 3 or more pages in search results were recommended as primary picks. Brands appearing on a single page were mentioned in passing, listed as alternatives, or cited with qualifications.</strong></p>
+
+        <p>This makes intuitive sense. When an AI model retrieves web results and finds a product mentioned on a single page &mdash; even a high-authority page &mdash; it treats that as a data point. When it finds the same product discussed across multiple independent pages (a review site, a comparison blog, the company&rsquo;s own content, a case study), it treats that as a pattern. Patterns become recommendations. Isolated mentions become footnotes.</p>
+
+        <p>One landing page, no matter how well-optimized, is not enough. A single G2 listing is not enough. A lone blog post is not enough. What matters is a distributed content footprint: multiple independent pages that discuss your product in different contexts, from different perspectives, with consistent information about what your product does and who it serves.</p>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg leading-relaxed text-on-surface">
+            <strong>A distributed content strategy matters more than one great landing page.</strong> The companies in our data that earned primary AI recommendations had coverage across review sites, industry blogs, their own content, and comparison pages. Single-source presence led to passing mentions at best.
+          </p>
+        </div>
+
+        <p>This finding also explains why newer products struggle. They often have strong product pages and a few early reviews, but lack the breadth of web coverage that established competitors have accumulated over years. Building that breadth is a deliberate, multi-channel effort &mdash; and it is now a prerequisite for AI visibility, not just traditional SEO.</p>
+
+
+        <h2 id="pricing">Finding 5 &mdash; Pricing Model as a Differentiator</h2>
+
+        <p>An unexpected finding: <strong>when a product&rsquo;s pricing model was distinctive and clearly stated on the web, AI actively surfaced it as a differentiating factor.</strong></p>
+
+        <p>Products with pay-per-report or one-time pricing stood out in our test results. When AI encountered these pricing structures during web search, it did not just note them &mdash; it cited them as a reason to consider the product. Responses included language like &ldquo;unlike most competitors which charge monthly subscriptions, this tool offers one-time pricing&rdquo; or &ldquo;a pay-per-use model that may be more cost-effective for occasional needs.&rdquo;</p>
+
+        <p>Pricing transparency is a trust signal that AI models actively surface. When a product&rsquo;s pricing is clearly documented, consistently described across multiple sources, and meaningfully different from the category default, AI treats it as a recommendation-worthy attribute.</p>
+
+        <p>The reverse is also true. Products with opaque pricing (&ldquo;contact us for a quote,&rdquo; &ldquo;custom pricing&rdquo;) received no pricing-related differentiation in AI responses. AI cannot cite what it cannot find. If your pricing is hidden behind a sales wall, AI will describe your product without one of the most important buying criteria &mdash; and competitors with visible pricing will look more trustworthy by comparison.</p>
+
+        <p>For B2B SaaS companies, this is a straightforward opportunity. If your pricing model is a genuine differentiator, make it explicit, consistent, and findable across your web presence. AI will do the rest.</p>
+
+
+        <h2 id="strategy">What This Means for Your AI Visibility Strategy</h2>
+
+        <p>The five findings above converge on a clear set of priorities for any B2B SaaS company that wants to show up in AI recommendations.</p>
+
+        <h3>1. Get into training data</h3>
+
+        <p>79% of buyer queries are answered from training data. If you are not in that data, you are invisible to the majority of potential buyers using AI. Training data comes from publicly available web content, and AI training pipelines prioritize authoritative, widely-cited sources.</p>
+
+        <p>This means investing in the sources that training pipelines ingest: third-party coverage from industry publications, presence on review platforms like G2 and Capterra, mentions in Wikipedia and other high-authority reference sources, and coverage from analysts and journalists. Your own blog content helps, but third-party validation carries disproportionate weight in training data.</p>
+
+        <h3>2. Build multi-page web presence</h3>
+
+        <p>When AI does search the web (21% of queries), it promotes products with distributed coverage across multiple independent sources. A single landing page is not enough. You need a content footprint that spans review sites, comparison articles, your own educational content, customer case studies, and industry-specific publications.</p>
+
+        <p>The goal is not just to be mentioned, but to be mentioned consistently across multiple contexts. AI synthesizes information from multiple sources, and consistency of messaging across those sources increases your likelihood of being recommended rather than merely cited.</p>
+
+        <h3>3. Make pricing and differentiators explicit and consistent</h3>
+
+        <p>AI actively surfaces distinctive pricing models and clear product differentiators. If your pricing is transparent and meaningfully different from competitors, ensure it is stated clearly and consistently across every page where your product is discussed. If your differentiators are buried in marketing jargon or hidden behind gated content, AI will not find them &mdash; and it will recommend competitors whose strengths are more visible.</p>
+
+        <p>Consistency is critical. If your website says one thing about pricing, your G2 listing says another, and a review blog says a third, AI will either pick the most authoritative source or hedge with caveats. Unified messaging across all touchpoints gives AI a clear signal to relay to buyers.</p>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg leading-relaxed text-on-surface">
+            <strong>The companies that win AI recommendations are not necessarily the best products.</strong> They are the ones with the deepest training data footprint, the broadest web presence, and the clearest, most consistent messaging about what they do and how they are different. These are all things you can influence &mdash; starting today.
+          </p>
+        </div>
+
+
+        <h2 id="faq">Frequently Asked Questions</h2>
+
+        <h3>How were the 182 prompts selected for this study?</h3>
+        <p>We designed prompts to reflect real user behavior when searching for B2B SaaS products. The set included 150 single-turn prompts (direct questions a buyer would ask) and 32 compound prompts (multi-step queries that mimic a real research workflow). Prompts covered problem-oriented questions, tool comparisons, feature-specific queries, and pricing questions.</p>
+
+        <h3>Which AI platforms were tested?</h3>
+        <p>We tested across major AI platforms including ChatGPT, Gemini, and Perplexity. Results were aggregated across platforms to identify patterns that hold regardless of which AI a buyer happens to use.</p>
+
+        <h3>Do these findings apply to industries outside B2B SaaS?</h3>
+        <p>The core dynamics we observed &mdash; particularly the dominance of training data over live search and the importance of multi-page web presence &mdash; are likely to hold across most categories where buyers use AI for product research. The specific ratios may vary by category, but the structural patterns should generalize.</p>
+
+        <h3>Why did 79% of prompts rely on training data instead of searching the web?</h3>
+        <p>AI models default to their training data whenever they estimate they already have a confident answer. Only queries that signal a need for current or comparative information &mdash; such as tool comparison prompts &mdash; reliably triggered web search. Problem-oriented and educational prompts almost never triggered search because the model treated them as general knowledge questions it could answer from memory.</p>
+
+        <h3>How often should companies test their AI visibility?</h3>
+        <p>AI training data and retrieval behavior change with every model update. We recommend testing at least quarterly, or whenever a major model release occurs. Companies in competitive categories may benefit from monthly monitoring to track shifts in which products AI surfaces.</p>
+
+        <h3>Can a new product improve its AI visibility quickly?</h3>
+        <p>It depends on which discovery mechanism you are targeting. For the 21% of prompts that trigger web search, improving your multi-page web presence and third-party coverage can show results in weeks. For the 79% that rely on training data, you need to build presence in sources that AI training pipelines prioritize &mdash; a longer-term effort measured in months rather than days.</p>
+
+        <p class="text-sm text-slate-muted mt-8"><strong>Methodology:</strong> We tested 182 prompts across major AI platforms including ChatGPT, Gemini, and Perplexity in March 2026. Prompts were designed to reflect real user behavior when searching for B2B SaaS products, including 150 single-turn and 32 compound prompts. For each response, we logged product mentions, recommendation framing, whether web search was triggered, and cited sources. All competitive data has been anonymized. Results are directional &mdash; they identify consistent patterns but should not be treated as statistically representative of all AI behavior.</p>
+
+      </div>
+      <!-- End Article Body -->
+
+      <p class="text-sm text-slate-muted mt-8 border-t border-[#E2E8F0] pt-6">Want to see how AI currently describes your brand? Read our <a href="../ai-chatbot-recommendations/" class="text-primary hover:underline">AI visibility audit of B2B SaaS companies</a> or explore <a href="../what-is-ai-visibility/" class="text-primary hover:underline">what AI visibility means for your business</a>.</p>
+
+      <!-- ========== ARTICLE CTA ========== -->
+      <div class="bg-primary p-8 md:p-12 mt-16">
+        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">See How AI Models Currently Describe Your Brand</h3>
+        <p class="text-on-primary/80 text-base max-w-lg mb-8">
+          Get a full AI visibility report for your product. Find out which queries surface you, which don&rsquo;t, and what to fix first.
+        </p>
+        <a href="../../get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
+          Get your report
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+        <p class="mt-4"><a href="../../sample-report/" class="text-on-primary/70 hover:text-on-primary text-sm underline transition-colors">Or see what a report looks like &rarr;</a></p>
+      </div>
+
+    </article>
+
+
+    <!-- ========== RELATED POSTS ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-8">Related articles</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <a href="../ai-chatbot-recommendations/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Research</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            We Audited AI Visibility for Top B2B SaaS Companies
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            We asked AI the questions real buyers ask about B2B SaaS companies. Visibility ranged from 50% to 83%. The biggest predictor: vocabulary alignment.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../ai-visibility-tools-compared/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Comparison</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            AI Visibility Tools Compared
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            A side-by-side comparison of the leading AI visibility tools. Features, pricing, and what each does differently.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../what-is-ai-visibility/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Guide</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            What Is AI Visibility?
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            AI visibility is whether your brand shows up when buyers ask AI for recommendations. Here&rsquo;s what it means and why it matters.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="py-12 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="../../privacy-policy/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Privacy Policy</a>
+          <a href="../../terms-of-service/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Terms of Service</a>
+          <a href="../../support/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Support</a>
+          <a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Contact</a>
+        </div>
+        <p class="text-xs uppercase tracking-tighter text-slate-500">
+          &copy; 2026 Metricus. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
