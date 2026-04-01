@@ -149,8 +149,8 @@
         <div class="space-y-8">
           <div>
             <div class="flex items-baseline justify-between mb-2">
-              <span class="font-headline italic text-lg text-on-surface">Platform A</span>
-              <span class="text-sm font-label text-on-surface-variant">78%</span>
+              <span class="font-headline italic text-lg text-on-surface">Highest platform</span>
+              <span class="text-sm font-label text-on-surface-variant">High 70s</span>
             </div>
             <div class="w-full h-1 bg-outline-variant/20">
               <div class="h-1 bg-primary" style="width: 78%"></div>
@@ -158,32 +158,14 @@
           </div>
           <div>
             <div class="flex items-baseline justify-between mb-2">
-              <span class="font-headline italic text-lg text-on-surface">Platform B</span>
-              <span class="text-sm font-label text-on-surface-variant">72%</span>
-            </div>
-            <div class="w-full h-1 bg-outline-variant/20">
-              <div class="h-1 bg-primary" style="width: 72%"></div>
-            </div>
-          </div>
-          <div>
-            <div class="flex items-baseline justify-between mb-2">
-              <span class="font-headline italic text-lg text-on-surface">Platform C</span>
-              <span class="text-sm font-label text-on-surface-variant">61%</span>
-            </div>
-            <div class="w-full h-1 bg-outline-variant/20">
-              <div class="h-1 bg-primary" style="width: 61%"></div>
-            </div>
-          </div>
-          <div>
-            <div class="flex items-baseline justify-between mb-2">
-              <span class="font-headline italic text-lg text-on-surface">Platform D</span>
-              <span class="text-sm font-label text-on-surface-variant">55%</span>
+              <span class="font-headline italic text-lg text-on-surface">Lowest platform</span>
+              <span class="text-sm font-label text-on-surface-variant">Mid 50s</span>
             </div>
             <div class="w-full h-1 bg-outline-variant/20">
               <div class="h-1 bg-primary" style="width: 55%"></div>
             </div>
           </div>
-          <p class="text-xs text-outline font-label pt-2">Up to 23-point spread across platforms for identical queries</p>
+          <p class="text-xs text-outline font-label pt-2">Significant spread across platforms for identical queries. Your report breaks down every platform individually.</p>
         </div>
       </div>
 
@@ -216,7 +198,7 @@
           <div class="bg-surface-container-lowest p-4 border-l-2 border-primary">
             <p class="text-xs text-outline font-label mb-1">Example query behavior</p>
             <p class="text-sm text-on-surface italic font-body">"What's the best project management tool for a growing team?"</p>
-            <p class="text-xs text-on-surface-variant font-label mt-2">AI recommended this brand first, cited G2 reviews and a Gartner comparison.</p>
+            <p class="text-xs text-on-surface-variant font-label mt-2">AI recommended this brand first, citing third-party review sites.</p>
           </div>
         </div>
 
@@ -301,30 +283,14 @@
       <div class="col-span-12 md:col-span-6 bg-surface-container-high p-10 md:p-14 flex flex-col justify-between">
         <div>
           <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-6">How AI decided</p>
-          <h2 class="font-headline italic text-3xl text-on-surface mb-6">RAG vs. training data</h2>
-          <p class="text-sm text-on-surface-variant font-body leading-relaxed mb-8">Some answers came from real-time web searches. Others came from patterns baked into AI's training data — no search, no citations, just recall. The split matters because they require different fixes.</p>
+          <h2 class="font-headline italic text-3xl text-on-surface mb-6">Not all answers come from the same place</h2>
+          <p class="text-sm text-on-surface-variant font-body leading-relaxed mb-8">Some AI answers came from real-time web searches. Others came from patterns baked into training data — no search, no citations, just recall. The mix matters because each requires a different fix strategy.</p>
         </div>
 
         <div class="space-y-6">
-          <div>
-            <div class="flex items-baseline justify-between mb-2">
-              <span class="text-sm text-on-surface font-body">Web search (RAG)</span>
-              <span class="font-headline italic text-lg text-on-surface">81%</span>
-            </div>
-            <div class="w-full h-2 bg-outline-variant/20">
-              <div class="h-2 bg-primary" style="width: 81%"></div>
-            </div>
-            <p class="text-xs text-on-surface-variant font-label mt-2">Fix timeline: weeks. Restructure content, update third-party listings.</p>
-          </div>
-          <div>
-            <div class="flex items-baseline justify-between mb-2">
-              <span class="text-sm text-on-surface font-body">Training data (parametric)</span>
-              <span class="font-headline italic text-lg text-on-surface">19%</span>
-            </div>
-            <div class="w-full h-2 bg-outline-variant/20">
-              <div class="h-2 bg-on-surface/30" style="width: 19%"></div>
-            </div>
-            <p class="text-xs text-on-surface-variant font-label mt-2">Fix timeline: months. Requires next model training cycle to update.</p>
+          <div class="bg-white/10 p-5">
+            <p class="text-sm text-on-surface font-body font-medium mb-2">Two distinct answer types detected</p>
+            <p class="text-sm text-on-surface-variant font-body leading-relaxed">Your full report breaks down exactly which answers came from which source type — and what that means for your fix priority and timeline.</p>
           </div>
         </div>
       </div>
@@ -352,7 +318,7 @@
           <div class="space-y-5">
             <div class="border-l-2 border-red-400/40 pl-4">
               <p class="text-sm text-on-surface font-body font-medium">"Pricing starts at $30/user/month"</p>
-              <p class="text-xs text-on-surface-variant font-label mt-1">Actual: $10/user. Source: outdated G2 listing from 2024.</p>
+              <p class="text-xs text-on-surface-variant font-label mt-1">Actual: $10/user. Source: outdated third-party listing.</p>
             </div>
             <div class="border-l-2 border-red-400/40 pl-4">
               <p class="text-sm text-on-surface font-body font-medium">"No free tier available"</p>
@@ -378,23 +344,23 @@
           <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-6">Where AI got its information</p>
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div>
-              <p class="font-headline italic text-2xl text-on-surface">G2</p>
-              <p class="text-xs text-on-surface-variant font-label mt-1">Cited in 68% of answers</p>
+              <p class="font-headline italic text-2xl text-on-surface">Review sites</p>
+              <p class="text-xs text-on-surface-variant font-label mt-1">Most frequently cited</p>
             </div>
             <div>
-              <p class="font-headline italic text-2xl text-on-surface">Gartner</p>
-              <p class="text-xs text-on-surface-variant font-label mt-1">Cited in 41% of answers</p>
+              <p class="font-headline italic text-2xl text-on-surface">Analyst reports</p>
+              <p class="text-xs text-on-surface-variant font-label mt-1">Heavily cited</p>
             </div>
             <div>
-              <p class="font-headline italic text-2xl text-on-surface">Reddit</p>
-              <p class="text-xs text-on-surface-variant font-label mt-1">Cited in 29% of answers</p>
+              <p class="font-headline italic text-2xl text-on-surface">Forums</p>
+              <p class="text-xs text-on-surface-variant font-label mt-1">Cited more than expected</p>
             </div>
             <div>
-              <p class="font-headline italic text-2xl text-on-surface">Own blog</p>
-              <p class="text-xs text-on-surface-variant font-label mt-1">Cited in 14% of answers</p>
+              <p class="font-headline italic text-2xl text-on-surface">Own site</p>
+              <p class="text-xs text-on-surface-variant font-label mt-1">Rarely cited</p>
             </div>
           </div>
-          <p class="text-xs text-on-surface-variant font-label mt-6">Third-party sources outweighed company-owned content 6:1 in AI's final recommendations — even when the brand's own pages appeared in search results.</p>
+          <p class="text-xs text-on-surface-variant font-label mt-6">Third-party sources dominated AI's recommendations — even when the brand's own pages appeared in search results. Your report includes exact citation rates per source.</p>
         </div>
 
         <!-- Competitor Table -->
@@ -417,31 +383,31 @@
                 <td class="py-4 pr-4"><span class="font-headline italic text-on-surface">Your Brand</span></td>
                 <td class="py-4 pr-4 font-label text-on-surface">67%</td>
                 <td class="py-4 pr-4 font-label text-red-600/80">4 found</td>
-                <td class="py-4 text-right font-label text-on-surface-variant">G2</td>
+                <td class="py-4 text-right font-label text-on-surface-variant">Review site</td>
               </tr>
               <tr class="border-t border-outline-variant/20">
                 <td class="py-4 pr-4"><span class="font-headline italic text-on-surface">Competitor A</span></td>
                 <td class="py-4 pr-4 font-label text-on-surface">83%</td>
                 <td class="py-4 pr-4 font-label text-on-surface-variant">1 found</td>
-                <td class="py-4 text-right font-label text-primary">Gartner</td>
+                <td class="py-4 text-right font-label text-primary">Analyst report</td>
               </tr>
               <tr class="border-t border-outline-variant/20">
                 <td class="py-4 pr-4"><span class="font-headline italic text-on-surface">Competitor B</span></td>
                 <td class="py-4 pr-4 font-label text-on-surface">71%</td>
                 <td class="py-4 pr-4 font-label text-on-surface-variant">2 found</td>
-                <td class="py-4 text-right font-label text-primary">G2</td>
+                <td class="py-4 text-right font-label text-primary">Review site</td>
               </tr>
               <tr class="border-t border-outline-variant/20">
                 <td class="py-4 pr-4"><span class="font-headline italic text-on-surface">Competitor C</span></td>
                 <td class="py-4 pr-4 font-label text-on-surface">58%</td>
                 <td class="py-4 pr-4 font-label text-on-surface-variant">3 found</td>
-                <td class="py-4 text-right font-label text-primary">Reddit</td>
+                <td class="py-4 text-right font-label text-primary">Forum</td>
               </tr>
               <tr class="border-t border-outline-variant/20">
                 <td class="py-4 pr-4"><span class="font-headline italic text-on-surface">Competitor D</span></td>
                 <td class="py-4 pr-4 font-label text-on-surface">44%</td>
                 <td class="py-4 pr-4 font-label text-on-surface-variant">5 found</td>
-                <td class="py-4 text-right font-label text-primary">Own blog</td>
+                <td class="py-4 text-right font-label text-primary">Own site</td>
               </tr>
             </tbody>
           </table>
@@ -501,7 +467,7 @@
           <span class="font-headline italic text-2xl text-primary w-8 flex-shrink-0">01</span>
           <div>
             <p class="text-on-surface font-body font-medium mb-1">Fix pricing on G2 and Capterra listings</p>
-            <p class="text-sm text-on-surface-variant font-body leading-relaxed">AI cites $30/user in 4 separate query paths. Your actual price is $10. This single error is actively steering budget-conscious buyers to competitors. Fix the third-party listings first — AI will pick up the change within weeks.</p>
+            <p class="text-sm text-on-surface-variant font-body leading-relaxed">AI cites $30/user in multiple query paths. Your actual price is $10. This single error is actively steering budget-conscious buyers to competitors.</p>
           </div>
         </div>
         <div class="flex items-start gap-6 py-6 border-t border-outline-variant/20">
@@ -515,21 +481,21 @@
           <span class="font-headline italic text-2xl text-primary w-8 flex-shrink-0">03</span>
           <div>
             <p class="text-on-surface font-body font-medium mb-1">Publish a comparison page against the top 3 alternatives</p>
-            <p class="text-sm text-on-surface-variant font-body leading-relaxed">AI heavily relies on comparison content when buyers ask switching questions. Your competitors have "vs." pages. You don't. This is the fastest way to reclaim the 25% of switching queries you're losing.</p>
+            <p class="text-sm text-on-surface-variant font-body leading-relaxed">AI heavily relies on comparison content when buyers ask switching questions. Your competitors have "vs." pages. You don't. Your report shows exactly which switching queries you're losing and to whom.</p>
           </div>
         </div>
         <div class="flex items-start gap-6 py-6 border-t border-outline-variant/20">
           <span class="font-headline italic text-2xl text-primary w-8 flex-shrink-0">04</span>
           <div>
             <p class="text-on-surface font-body font-medium mb-1">Update your Reddit presence</p>
-            <p class="text-sm text-on-surface-variant font-body leading-relaxed">Reddit is cited in 29% of AI answers in your category. The most-cited thread about your product is 14 months old and mentions features that have since changed. A single authentic reply with current information would propagate through RAG within days.</p>
+            <p class="text-sm text-on-surface-variant font-body leading-relaxed">Forum threads are cited more often than most brands expect. The most-cited thread about this product is over a year old and mentions features that have since changed.</p>
           </div>
         </div>
         <div class="flex items-start gap-6 py-6 border-t border-outline-variant/20">
           <span class="font-headline italic text-2xl text-primary w-8 flex-shrink-0">05</span>
           <div>
             <p class="text-on-surface font-body font-medium mb-1">Add structured data (Organization + Product schema)</p>
-            <p class="text-sm text-on-surface-variant font-body leading-relaxed">Your site has no JSON-LD markup. Brands with complete Organization schema were 2.3x more likely to appear in AI recommendations in our data. This is a one-time technical fix with outsized impact.</p>
+            <p class="text-sm text-on-surface-variant font-body leading-relaxed">Your site has no JSON-LD markup. In our data, brands with complete structured data appear in AI recommendations significantly more often. This is a one-time technical fix with outsized impact.</p>
           </div>
         </div>
       </div>
