@@ -9,17 +9,17 @@ export const STRIPE = {
 export const TIER_INFO = {
   snapshot: {
     name: 'Snapshot',
-    price: '$49',
+    price: '$99',
     features: ['3 AI Platforms Analysis', '5 Target Queries', '2 Competitor Comparison', 'Visibility Score & AI Quotes', 'Accuracy Summary']
   },
   deepdive: {
     name: 'Deep Dive',
-    price: '$149',
+    price: '$299',
     features: ['All 8 AI Platforms', '20 Target Queries', '5 Competitor Comparison', 'Full Accuracy Audit & Citation Tracking', 'Top 5 Prioritized Actions']
   },
   arsenal: {
     name: 'Full Arsenal',
-    price: '$349',
+    price: '$499',
     features: ['All 8 AI Platforms', '50 Target Queries', '10 Competitor Comparison', 'Executive Summary PDF', 'Regional Breakdown (US/EU/APAC)', 'Unlimited Prioritized Actions']
   },
 };
