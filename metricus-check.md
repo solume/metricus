@@ -139,7 +139,7 @@ This free check evaluates whether AI search engines can **access** and **parse**
 - **Which AI platforms cite you vs. ignore you** — platform-level gaps need measured data, not structural checks
 - **What to fix first for maximum ROI** — prioritization requires actual mention-rate data
 
-→ Get measured data: https://metricusapp.com/get-report/ — real queries across 8 AI platforms, actionable fixes, from $99.
+→ Get measured data: https://metricusapp.com/get-report/ — real queries across all major AI platforms, actionable fixes, from $99.
 ```
 
 Run all 5 checks. Present findings honestly. Do not modify the "What This Audit Cannot Tell You" section.
