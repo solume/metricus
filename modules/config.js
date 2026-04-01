@@ -15,11 +15,11 @@ export const TIER_INFO = {
   deepdive: {
     name: 'Deep Dive',
     price: '$299',
-    features: ['All 8 AI Platforms', '20 Target Queries', '5 Competitor Comparison', 'Full Accuracy Audit & Citation Tracking', 'Top 5 Prioritized Actions']
+    features: ['All Major AI Platforms', '20 Target Queries', '5 Competitor Comparison', 'Full Accuracy Audit & Citation Tracking', 'Top 5 Prioritized Actions']
   },
   arsenal: {
     name: 'Full Arsenal',
     price: '$499',
-    features: ['All 8 AI Platforms', '50 Target Queries', '10 Competitor Comparison', 'Executive Summary PDF', 'Regional Breakdown (US/EU/APAC)', 'Unlimited Prioritized Actions']
+    features: ['All Major AI Platforms', '50 Target Queries', '10 Competitor Comparison', 'Executive Summary PDF', 'Regional Breakdown (US/EU/APAC)', 'Unlimited Prioritized Actions']
   },
 };
