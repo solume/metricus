@@ -210,7 +210,7 @@
   <!-- ========== FIXED NAV ========== -->
   <header class="h-16 flex items-center justify-between px-6 lg:px-12 border-b border-[#E2E8F0] bg-white/80 backdrop-blur-md sticky top-0 z-50">
     <div class="flex items-center gap-2 text-slate-text">
-      <a class="flex items-center gap-2 group" href="../../">
+      <a class="flex items-center gap-2 group" href="/">
         <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
           <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
         </svg>
@@ -218,10 +218,11 @@
       </a>
     </div>
     <nav class="hidden md:flex items-center gap-8">
-      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="../../methodology/">Methodology</a>
-      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="../../#pricing">Pricing</a>
-      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="../">Blog</a>
-      <a class="text-[13px] uppercase tracking-wider font-semibold text-primary hover:text-slate-text transition-colors" href="../../get-report/">Get Your Report</a>
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="/methodology/">How It Works</a>
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="/#pricing">Pricing</a>
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="/blog/">Blog</a>
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="/blog/free-ai-visibility-audit/">Free Check</a>
+      <a class="text-[13px] uppercase tracking-wider font-semibold text-primary hover:text-slate-text transition-colors" href="/get-report/">Get Your Report</a>
     </nav>
     <button class="md:hidden flex items-center text-slate-text">
       <span class="material-symbols-outlined">menu</span>
@@ -239,9 +240,9 @@
       <!-- Breadcrumb -->
       <nav class="mb-8">
         <ol class="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-muted">
-          <li><a href="../../" class="hover:text-slate-text transition-colors">Home</a></li>
+          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
           <li class="select-none">/</li>
-          <li><a href="../" class="hover:text-slate-text transition-colors">Blog</a></li>
+          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
           <li class="select-none">/</li>
           <li class="text-slate-text">AI Visibility Audit: B2B SaaS Companies</li>
         </ol>
@@ -285,7 +286,7 @@
 
         <h2 id="method">What we tested and how</h2>
 
-        <p>We randomly sampled a subset of B2B SaaS companies from <a href="https://builtin.com/articles/top-b2b-saas-companies" target="_blank" rel="noopener">BuiltIn&rsquo;s list of top B2B SaaS companies</a>, selecting across different categories: process mining, project management, cybersecurity, payments, life sciences R&amp;D, and social media management. All are established, well-reviewed products with real market presence.</p>
+        <p>We randomly sampled a subset of B2B SaaS companies from <a href="https://builtin.com/articles/top-b2b-saas-companies" target="_blank" rel="noopener">BuiltIn&rsquo;s list of top B2B SaaS companies</a>, selecting across different categories: process mining, project management, cybersecurity, payments, life sciences R&amp;D, and social media management. All are established, well-reviewed products with real market presence. (If you&rsquo;re new to the concept, start with our <a href="../what-is-ai-visibility/">complete guide to AI visibility</a>.)</p>
 
         <p>For each company, we asked an AI model with web search access the kinds of questions real buyers in that category would ask. Across all audits, the AI generated over 150 search queries autonomously.</p>
 
@@ -349,7 +350,7 @@
           </table>
         </div>
 
-        <p>The spread is notable. A 33-percentage-point gap between the most visible and least visible company in our sample &mdash; all well-established, well-reviewed products. These are not obscure brands. They are not lacking in product quality. The gap is in how AI discovers and surfaces them depending on who is asking.</p>
+        <p>The spread is notable. A 33-percentage-point gap between the most visible and least visible company in our sample &mdash; all well-established, well-reviewed products. These are not obscure brands. They are not lacking in product quality. The gap is in how AI discovers and surfaces them depending on who is asking. For a deeper look at how these scores are calculated and what makes them meaningful, see <a href="../ai-visibility-scores-explained/">how AI visibility scores actually work</a>.</p>
 
         <p>The most consistent pattern across the table: <strong>every company had at least one type of buyer question where it was completely invisible.</strong> No company in our sample was visible across the board. A brand that dominates one kind of query can be entirely absent from another.</p>
 
@@ -421,7 +422,7 @@
           </table>
         </div>
 
-        <p>This is not a content quality problem. In multiple cases, the company had dedicated pages with relevant content &mdash; healthcare-specific pages, industry landing pages, templates for specific use cases. The content exists. It simply does not rank for the terms buyers actually use, which means AI never finds it during retrieval.</p>
+        <p>This is not a content quality problem. In multiple cases, the company had dedicated pages with relevant content &mdash; healthcare-specific pages, industry landing pages, templates for specific use cases. The content exists. It simply does not rank for the terms buyers actually use, which means AI never finds it during retrieval. This is the same disconnect between Google rankings and AI recommendations that we explore in <a href="../seo-ignoring-buyers/">why your SEO strategy is ignoring 37% of buyers</a>.</p>
 
 
         <h2 id="rag">RAG vs. parametric: which engine decides</h2>
@@ -500,7 +501,17 @@
       </div>
       <!-- End Article Body -->
 
-      <p class="text-sm text-slate-muted mt-8 border-t border-[#E2E8F0] pt-6">Want to run your own audit? Compare your options in our <a href="../ai-visibility-tools-compared/" class="text-primary hover:underline">buyer's guide to AI visibility tools</a>.</p>
+        <!-- Keep Reading -->
+        <div class="border-t border-[#E2E8F0] pt-8 mt-12">
+          <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">Keep reading</p>
+          <ul>
+            <li><a href="../what-is-ai-visibility/">What Is AI Visibility? A Complete Guide for 2026</a></li>
+            <li><a href="../seo-ignoring-buyers/">Your SEO Strategy Is Ignoring 37% of Buyers</a></li>
+            <li><a href="../ai-visibility-scores-explained/">How AI Visibility Scores Actually Work</a></li>
+            <li><a href="../ai-visibility-tools-compared/">AI Visibility Tools Compared: A Buyer's Guide</a></li>
+            <li><a href="../../sample-report/">See what a Metricus report looks like &rarr;</a></li>
+          </ul>
+        </div>
 
       <!-- ========== ARTICLE CTA ========== -->
       <div class="bg-primary p-8 md:p-12 mt-16">
@@ -576,9 +587,12 @@
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
         <div class="flex flex-wrap items-center gap-6">
-          <a href="../../privacy-policy/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Privacy Policy</a>
-          <a href="../../terms-of-service/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Terms of Service</a>
-          <a href="../../support/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Support</a>
+          <a href="/sample-report/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Sample Report</a>
+          <a href="/geo-knowledgebase/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Knowledge Base</a>
+          <a href="/blog/ai-visibility-for-agencies/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">For Agencies</a>
+          <a href="/support/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Support</a>
+          <a href="/privacy-policy/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Privacy Policy</a>
+          <a href="/terms-of-service/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Terms of Service</a>
           <a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Contact</a>
         </div>
         <p class="text-xs uppercase tracking-tighter text-slate-500">

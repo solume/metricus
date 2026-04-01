@@ -104,12 +104,13 @@
   <!-- Fixed Nav -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="../../" class="font-headline italic text-xl text-on-surface">Metricus</a>
+      <a href="/" class="font-headline italic text-xl text-on-surface">Metricus</a>
       <div class="hidden md:flex items-center gap-8">
-        <a href="../../methodology/" class="text-sm font-label text-on-surface-variant hover:text-on-surface transition-colors">Methodology</a>
-        <a href="../../" class="text-sm font-label text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
-        <a href="../../blog/" class="text-sm font-label text-on-surface-variant hover:text-on-surface transition-colors">Blog</a>
-        <a href="../../get-report/" class="bg-primary text-on-primary px-5 py-2.5 text-sm font-label uppercase tracking-widest hover:bg-primary-dim transition-colors">Get Your Report</a>
+        <a href="/methodology/" class="text-sm font-label text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
+        <a href="/#pricing" class="text-sm font-label text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
+        <a href="/blog/" class="text-sm font-label text-on-surface-variant hover:text-on-surface transition-colors">Blog</a>
+        <a href="/blog/free-ai-visibility-audit/" class="text-sm font-label text-on-surface-variant hover:text-on-surface transition-colors">Free Check</a>
+        <a href="/get-report/" class="bg-primary text-on-primary px-5 py-2.5 text-sm font-label uppercase tracking-widest hover:bg-primary-dim transition-colors">Get Your Report</a>
       </div>
       <button id="mobile-menu-btn" class="md:hidden text-on-surface" aria-label="Open menu">
         <span class="material-symbols-outlined">menu</span>
@@ -124,10 +125,11 @@
       <button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu">
         <span class="material-symbols-outlined">close</span>
       </button>
-      <a class="py-3 text-sm font-label text-on-surface-variant hover:text-on-surface border-b border-surface-container-low" href="../../methodology/">Methodology</a>
-      <a class="py-3 text-sm font-label text-on-surface-variant hover:text-on-surface border-b border-surface-container-low" href="../../">Pricing</a>
-      <a class="py-3 text-sm font-label text-on-surface-variant hover:text-on-surface border-b border-surface-container-low" href="../../blog/">Blog</a>
-      <a class="py-3 text-sm font-label text-primary hover:text-on-surface" href="../../get-report/">Get Your Report</a>
+      <a class="py-3 text-sm font-label text-on-surface-variant hover:text-on-surface border-b border-surface-container-low" href="/methodology/">How It Works</a>
+      <a class="py-3 text-sm font-label text-on-surface-variant hover:text-on-surface border-b border-surface-container-low" href="/#pricing">Pricing</a>
+      <a class="py-3 text-sm font-label text-on-surface-variant hover:text-on-surface border-b border-surface-container-low" href="/blog/">Blog</a>
+      <a class="py-3 text-sm font-label text-on-surface-variant hover:text-on-surface border-b border-surface-container-low" href="/blog/free-ai-visibility-audit/">Free Check</a>
+      <a class="py-3 text-sm font-label text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
     </nav>
   </div>
 
@@ -741,6 +743,31 @@
   </section>
 
 
+  <!-- ===== Related Resources ===== -->
+  <section class="max-w-7xl mx-auto px-6 pb-16">
+    <div class="border-t border-outline-variant/30 pt-10">
+      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-6">Related Resources</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <a href="/agency-resources/" class="block border border-outline-variant/30 p-5 hover:bg-surface-container-low transition-colors">
+          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Hub</p>
+          <p class="text-sm font-body text-on-surface font-medium">Agency Resources</p>
+          <p class="text-xs font-body text-on-surface-variant mt-1">All tools and templates for agency AI visibility work</p>
+        </a>
+        <a href="/agency-resources/margin-calculator/" class="block border border-outline-variant/30 p-5 hover:bg-surface-container-low transition-colors">
+          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Tool</p>
+          <p class="text-sm font-body text-on-surface font-medium">Agency Margin Calculator</p>
+          <p class="text-xs font-body text-on-surface-variant mt-1">Project your earnings reselling AI audits to clients</p>
+        </a>
+        <a href="/blog/ai-visibility-for-agencies/" class="block border border-outline-variant/30 p-5 hover:bg-surface-container-low transition-colors">
+          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Guide</p>
+          <p class="text-sm font-body text-on-surface font-medium">AI Visibility Reporting for Agencies</p>
+          <p class="text-xs font-body text-on-surface-variant mt-1">Full guide on using Metricus for agency audits</p>
+        </a>
+      </div>
+      <p class="text-sm font-body text-on-surface-variant mt-6">Looking for the right tool to fill this deck? See our <a href="/blog/ai-visibility-tools-compared/" class="text-primary hover:text-primary-dim underline underline-offset-2">comparison of AI visibility tools</a>.</p>
+    </div>
+  </section>
+
   <!-- ===== CTA Section ===== -->
   <section class="bg-on-surface text-surface">
     <div class="max-w-7xl mx-auto px-6 py-24 md:py-32">
@@ -764,9 +791,12 @@
   <footer class="bg-on-surface text-surface border-t border-outline/20">
     <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-8 text-sm font-label text-surface-variant">
-        <a href="../../privacy-policy/" class="hover:text-surface transition-colors">Privacy Policy</a>
-        <a href="../../terms-of-service/" class="hover:text-surface transition-colors">Terms of Service</a>
-        <a href="../../support/" class="hover:text-surface transition-colors">Support</a>
+        <a href="/sample-report/" class="hover:text-surface transition-colors">Sample Report</a>
+        <a href="/geo-knowledgebase/" class="hover:text-surface transition-colors">Knowledge Base</a>
+        <a href="/blog/ai-visibility-for-agencies/" class="hover:text-surface transition-colors">For Agencies</a>
+        <a href="/support/" class="hover:text-surface transition-colors">Support</a>
+        <a href="/privacy-policy/" class="hover:text-surface transition-colors">Privacy Policy</a>
+        <a href="/terms-of-service/" class="hover:text-surface transition-colors">Terms of Service</a>
         <a href="mailto:hello@metricusapp.com" class="hover:text-surface transition-colors">Contact</a>
       </div>
       <p class="text-xs font-label text-outline">&copy; 2026 Metricus. All rights reserved.</p>
