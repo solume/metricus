@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>90-Day AI Visibility Playbook: Week-by-Week Plan to Get Recommended by AI | Metricus</title>
+  <meta name="description" content="Your competitors appear in every AI answer. You don't. A 90-day execution framework: RAG optimization, entity resolution, passage restructuring.">
+  <meta property="og:title" content="90-Day AI Visibility Playbook: Week-by-Week Plan to Get Recommended by AI">
+  <meta property="og:description" content="Your competitors are in every AI answer. You're not. Here's the 90-day framework to fix that — no new budget, no new headcount.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metricusapp.com/blog/90-day-ai-visibility-plan/">
+  <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="90-Day AI Visibility Playbook: Week-by-Week Plan to Get Recommended by AI">
+  <meta name="twitter:description" content="Your competitors appear in every AI answer. You don't. A 90-day execution framework: RAG optimization, entity resolution, passage restructuring.">
+  <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
+  <link rel="canonical" href="https://metricusapp.com/blog/90-day-ai-visibility-plan/">
+
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#334155',
+            'primary-hover': '#1E293B',
+            'on-primary': '#f6f7ff',
+            'on-primary-fixed': '#324054',
+            'primary-dim': '#455368',
+            surface: '#f7f9fb',
+            'surface-container-low': '#f0f4f7',
+            'surface-container': '#e8eff3',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-highest': '#d9e4ea',
+            'surface-container-high': '#e1e9ee',
+            'surface-variant': '#d9e4ea',
+            'on-surface': '#2a3439',
+            'on-surface-variant': '#566166',
+            outline: '#717c82',
+            'outline-variant': '#a9b4b9',
+            'slate-text': '#0F172A',
+            'slate-muted': '#64748B',
+            'slate-accent': '#475569',
+          },
+          fontFamily: {
+            display: ['Newsreader', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            body: ['Public Sans', 'sans-serif'],
+            headline: ['Newsreader', 'serif'],
+          },
+          borderRadius: {
+            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
+            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
+            full: '0.75rem',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #0F172A;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .font-display { font-family: 'Newsreader', serif; }
+    .font-headline { font-family: 'Newsreader', serif; }
+    .font-body-sans { font-family: 'Public Sans', sans-serif; }
+
+    .editorial-btn {
+      transition: background-color 150ms ease-in-out, transform 150ms ease;
+    }
+    .editorial-btn:hover {
+      background-color: #1E293B;
+    }
+
+    .bg-grid-dots {
+      background-image: radial-gradient(circle, #717c82 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+      opacity: 0.05;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .blog-card {
+      transition: transform 200ms ease, background-color 200ms ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+      background-color: #f7f9fb;
+    }
+
+    .article-body h2 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      line-height: 1.2;
+      color: #0F172A;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) {
+      .article-body h2 {
+        font-size: 2rem;
+      }
+    }
+    .article-body h3 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.3;
+      color: #0F172A;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .article-body p {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+    }
+    .article-body ul, .article-body ol {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+    }
+    .article-body ul { list-style-type: disc; }
+    .article-body ol { list-style-type: decimal; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body blockquote {
+      border-left: 2px solid #334155;
+      padding-left: 1.5rem;
+      font-style: italic;
+      color: #475569;
+      font-size: 1.125rem;
+      line-height: 1.75;
+      margin: 2rem 0;
+    }
+    .article-body a {
+      color: #334155;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .article-body a:hover {
+      color: #1E293B;
+    }
+  </style>
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "90-Day AI Visibility Playbook: Week-by-Week Plan to Get Recommended by AI",
+    "description": "A 90-day execution framework for AI visibility covering RAG vs parametric optimization, entity resolution, passage restructuring, PR reallocation, and measurement.",
+    "author": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "datePublished": "2026-03-27",
+    "dateModified": "2026-03-27",
+    "mainEntityOfPage": "https://metricusapp.com/blog/90-day-ai-visibility-plan/",
+    "image": "https://metricusapp.com/metricus-og-image.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "90-Day AI Visibility Playbook", "item": "https://metricusapp.com/blog/90-day-ai-visibility-plan/"}
+    ]
+  }
+  </script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
+
+  <!-- ========== FIXED NAV ========== -->
+  <header class="h-16 flex items-center justify-between px-6 lg:px-12 border-b border-[#E2E8F0] bg-white/80 backdrop-blur-md sticky top-0 z-50">
+    <div class="flex items-center gap-2 text-slate-text">
+      <a class="flex items-center gap-2 group" href="/">
+        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+        </svg>
+        <span class="font-display italic font-bold text-xl tracking-tight group-hover:text-primary transition-colors">Metricus</span>
+      </a>
+    </div>
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="/methodology/">How It Works</a>
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="/#pricing">Pricing</a>
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="/blog/">Blog</a>
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="/blog/diy-ai-visibility-audit/">Free Check</a>
+      <a class="text-[13px] uppercase tracking-wider font-semibold text-primary hover:text-slate-text transition-colors" href="/get-report/">Get Your Report</a>
+    </nav>
+    <button class="md:hidden flex items-center text-slate-text">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </header>
+
+
+  <main class="flex-grow flex flex-col relative overflow-x-hidden">
+
+    <div class="absolute inset-0 bg-grid-dots -z-10 pointer-events-none"></div>
+
+    <!-- ========== ARTICLE ========== -->
+    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
+
+      <!-- Breadcrumb -->
+      <nav class="mb-8">
+        <ol class="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-muted">
+          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
+          <li class="select-none">/</li>
+          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
+          <li class="select-none">/</li>
+          <li class="text-slate-text">90-Day AI Visibility Plan</li>
+        </ol>
+      </nav>
+
+      <!-- Article Header -->
+      <header class="mb-12">
+        <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-4">Playbook</p>
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
+          90-Day AI Visibility Playbook: Week-by-Week Plan to Get Recommended by AI
+        </h1>
+        <p class="text-sm text-outline">Metricus Research &middot; March 27, 2026 &middot; 25 min read</p>
+      </header>
+
+
+      <!-- Definition Box -->
+      <div class="bg-surface-container-low p-8 mb-12">
+        <p class="text-lg leading-relaxed text-on-surface">
+          <strong>Generative engine optimization (GEO)</strong> is the discipline of ensuring your brand appears accurately and favorably when AI systems compose answers about your market. This playbook converts published research into a ninety-day execution framework &mdash; nine sections, each diagnostic or tactical, requiring no new budget, headcount, or faith in projections.
+        </p>
+      </div>
+
+
+      <!-- Table of Contents -->
+      <div class="border border-[#E2E8F0] p-8 mb-12">
+        <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">In this article</p>
+        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
+          <li><a href="#threat" class="hover:text-primary-hover underline underline-offset-2">The structural threat</a></li>
+          <li><a href="#two-engines" class="hover:text-primary-hover underline underline-offset-2">Two retrieval engines, two playbooks</a></li>
+          <li><a href="#audit" class="hover:text-primary-hover underline underline-offset-2">The ninety-minute audit</a></li>
+          <li><a href="#entity" class="hover:text-primary-hover underline underline-offset-2">Entity resolution</a></li>
+          <li><a href="#rag-pages" class="hover:text-primary-hover underline underline-offset-2">Making pages visible to RAG systems</a></li>
+          <li><a href="#pr" class="hover:text-primary-hover underline underline-offset-2">Retargeting your PR budget</a></li>
+          <li><a href="#metrics" class="hover:text-primary-hover underline underline-offset-2">Four metrics that replace the analytics gap</a></li>
+          <li><a href="#reporting" class="hover:text-primary-hover underline underline-offset-2">Reporting without getting the budget killed</a></li>
+          <li><a href="#deploy" class="hover:text-primary-hover underline underline-offset-2">Deploying without new budget or headcount</a></li>
+          <li><a href="#poc" class="hover:text-primary-hover underline underline-offset-2">The thirty-day proof of concept</a></li>
+        </ol>
+      </div>
+
+
+      <!-- Article Body -->
+      <div class="article-body">
+
+        <h2 id="threat">The structural threat</h2>
+
+        <p>Open your analytics right now. Filter to your top twenty revenue-generating keywords. Compare this quarter&rsquo;s click-through rates against the same period last year. If you see a fifteen to forty percent decline on informational and comparison queries while rankings remain stable, you are watching the effect of a channel you have no instrumentation to measure.</p>
+
+        <p>Google AI Overviews now trigger on approximately one-third of US informational queries according to BrightEdge research published in 2024. Semrush documented CTR erosion of twenty to forty percent on affected terms regardless of organic position. Your position-one ranking still exists. It simply sits beneath a synthesized answer that resolves the query before any click occurs.</p>
+
+        <p>The adoption curve eliminates the luxury of waiting. ChatGPT surpassed 200 million weekly active users by mid-2025. Perplexity processes hundreds of millions of monthly queries with heavy concentration among professionals conducting vendor evaluations. Microsoft Copilot ships embedded in Office 365, inserting AI-composed competitive comparisons into the application your B2B prospects already have open eight hours daily. These are not early-adopter novelties. They are mainstream research tools used by the people who sign your contracts.</p>
+
+        <p>When we audited AI visibility across B2B SaaS categories, brands appeared in only fifty to sixty percent of buyer-intent queries where their product was a genuine fit. Not queries where they lacked relevance &mdash; queries where they were objectively competitive and still invisible. Researchers at Princeton, Georgia Tech, and the Allen Institute for AI published findings in 2023 confirming the mechanism: targeted content modifications improved visibility in generative engine results by up to forty percent.</p>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>The structural threat is not ranking decline. It is total exclusion.</strong> When a language model answers a category question and names four solutions, position five does not exist. There is no scroll. There is no second page. There is zero data in your analytics because the buyer completed their evaluation without generating a single trackable event on your domain.
+          </p>
+        </div>
+
+        <p>Skepticism about labels is warranted. Skepticism about documented behavioral shifts is expensive. What follows converts published research into a ninety-day execution framework. Nine sections. Each one diagnostic or tactical. Nothing requires new budget approval, new headcount, or faith in projections. You verify every claim against your own data before acting on it.</p>
+
+
+        <h2 id="two-engines">Two retrieval engines, two optimization playbooks</h2>
+
+        <p>The most common GEO failure starts with a reasonable assumption: AI search is one channel requiring one optimization approach. It is not. Two fundamentally different retrieval mechanisms power AI responses, and each demands its own strategy, timeline, and success metric.</p>
+
+        <h3>Retrieval-augmented generation (RAG)</h3>
+
+        <p>This is the mechanism behind Perplexity, Google AI Overviews, and Bing Copilot. These systems query the live web in real time, extract relevant passages, and assemble cited responses. You can identify RAG at work whenever clickable source links appear beneath an answer. RAG optimization behaves like accelerated SEO &mdash; publish stronger content, wait for indexing, and results shift within days to weeks. Your content team can own this workstream because the feedback loop is fast enough to iterate against.</p>
+
+        <h3>Parametric knowledge</h3>
+
+        <p>This powers the other half. When ChatGPT or Claude discusses your company without linking to any external source, it draws from patterns compressed into model weights during training. That training consumed data months or years before your current query. Publishing a new blog post today does not update those weights. Only the next training cycle does. Influencing parametric knowledge requires sustained presence across the institutional sources training pipelines prioritize &mdash; Wikipedia, Wikidata, major journalistic outlets, regulatory filings, academic citations. This is a corporate communications workstream measured in quarters, not sprints.</p>
+
+        <h3>The five-minute diagnostic</h3>
+
+        <p>Take ten queries directly tied to closed revenue. Run each through Perplexity and note whether your brand appears with linked citations. Run each through ChatGPT and note whether your brand appears without any citations. The first set reveals your RAG exposure. The second reveals your parametric exposure. Most companies discover a mix, requiring parallel workstreams with different owners and different reporting cadences.</p>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>The expensive mistake</strong> is letting your content team optimize pages for queries governed by parametric knowledge, or letting your PR team chase placements for queries already well-served by RAG retrieval. Five minutes of mechanism mapping prevents months of effort directed at the wrong retrieval layer.
+          </p>
+        </div>
+
+
+        <h2 id="audit">The ninety-minute audit</h2>
+
+        <p>No tool in your current stack measures AI visibility. Google Search Console reports rankings. Your analytics platform reports sessions. Neither tells you whether Perplexity recommends your competitor when a buyer asks which solution to evaluate. You need a different instrument, and you can build it in ninety minutes with a browser and a spreadsheet.</p>
+
+        <p>Start with revenue, not keywords. Pull twenty-five queries from closed-won deal records, sales call transcripts, and procurement RFP language. These are the phrases your actual buyers use when evaluating solutions. Category comparisons, problem-statement searches, vendor shortlist queries. If a query cannot be traced to pipeline dollars, exclude it. This audit measures commercial exposure, not topical coverage.</p>
+
+        <p>Run each query across four platforms: ChatGPT, Perplexity, Gemini, and Microsoft Copilot. For every response, record whether your brand appears, whether the description is accurate, which competitors surface, which sources are cited, whether those citations are linked or unlinked, and whether the response frames your brand as a recommendation or a footnote.</p>
+
+        <p>Repeat each query five times per platform. Language models produce probabilistic outputs. A single run captures one sample from a distribution. Five runs reveal whether your visibility is consistent, intermittent, or absent. Intermittent presence is strategically significant &mdash; it means you sit at the retrieval threshold where modest improvements produce disproportionate gains.</p>
+
+        <p>Two outputs make this audit actionable:</p>
+        <ul>
+          <li><strong>Citation source frequency map</strong> &mdash; ranks every domain that appeared across all responses by how often AI systems actually cited it. This replaces your PR team&rsquo;s intuition-based media target list with empirical data.</li>
+          <li><strong>Entity accuracy scorecard</strong> &mdash; documents how each platform describes your company, products, and positioning. When three platforms reference a product line you retired two years ago, you have found the upstream bottleneck that no content tactic can route around.</li>
+        </ul>
+
+        <p>Every section that follows assumes these two documents exist. Teams that skip this step and proceed directly to optimization consistently spend months addressing problems they never confirmed. Build the map first. Navigate second.</p>
+
+
+        <h2 id="entity">Entity resolution &mdash; the identity layer that gates everything downstream</h2>
+
+        <p>Your audit probably surfaced something counterintuitive. Pages ranking on the first page of Google are invisible in AI responses. High-authority domains linking to you have not translated into AI mentions. The disconnect is not about content quality or domain authority. It is about whether AI systems can resolve what your company actually is.</p>
+
+        <p>Google built brand understanding over two decades through link graphs, click behavior, and crawl history. Language models lack all of that infrastructure. They reconstruct your identity from a narrow set of structured sources each time a relevant query fires: Wikipedia, Wikidata, Organization schema on your domain, your Google Knowledge Panel, Crunchbase, and LinkedIn. When these sources align, the model resolves your entity with confidence and your content becomes citation-eligible. When they conflict, the model does not rank you lower. It excludes you entirely. Entity resolution is a binary gate, not a scoring gradient.</p>
+
+        <p>Test this immediately. Ask ChatGPT to describe your company in two sentences. Ask Perplexity the same question. Ask Gemini. Compare the three responses to your current positioning statement. If you find references to sunset products, confusion with a similarly named entity, or generic descriptions indistinguishable from your competitors, entity resolution is broken and no downstream optimization will compensate.</p>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>The fix is mechanical and completable in under two weeks by a single person.</strong> Create a canonical fact sheet: legal entity name, founding year, headquarters, current leadership, active product names only, and a precise positioning statement. Then systematically reconcile every structured source against this document. Update Wikipedia, correct Wikidata properties, align Crunchbase, ensure your homepage Organization schema matches exactly.
+          </p>
+        </div>
+
+        <p>The return profile is unlike any other GEO intervention. Entity resolution does not improve one page. It unlocks your entire existing content library for AI citation simultaneously. Every article already published, every page already ranking, becomes eligible the moment the identity layer becomes consistent. One person. Two weeks. Every content asset you own gains a new distribution channel.</p>
+
+
+        <h2 id="rag-pages">Making your best pages visible to RAG systems</h2>
+
+        <p>Your highest-converting landing page ranks third organically and has never been cited by Perplexity. The content is strong. The domain authority is high. The page converts well. None of these qualities matter because RAG systems do not read pages &mdash; they extract passages, and your page&rsquo;s structure makes extraction fail.</p>
+
+        <p>RAG-powered engines decompose every candidate URL into individual text chunks, score each chunk independently against the user query, and assemble answers from top-scoring fragments across all indexed pages. Your page&rsquo;s persuasive arc gets segmented into isolated pieces. Any piece that requires surrounding context to make sense is discarded before scoring begins.</p>
+
+        <p>Three structural properties determine whether your passages survive extraction:</p>
+
+        <p><strong>Self-contained meaning</strong> is the threshold requirement. Pull any single sentence from your priority pages. Paste it into a blank document with zero surrounding context. Does it communicate a specific, complete claim? &ldquo;Our platform empowers teams to drive operational excellence&rdquo; communicates nothing when isolated. &ldquo;Reduces invoice processing time from twelve days to two through automated three-way matching&rdquo; communicates its full meaning anywhere it appears.</p>
+
+        <p><strong>Query-native vocabulary</strong> determines whether your passages even enter scoring. When we audited B2B SaaS categories, this was the single biggest predictor of AI invisibility: the gap between how a company describes itself and how buyers describe their pain. Your marketing copy says &ldquo;AI-powered revenue intelligence.&rdquo; Your buyer searches &ldquo;how to predict which deals will close this quarter.&rdquo; The solution: extract the exact phrasing buyers use from sales call recordings, support tickets, and chat transcripts.</p>
+
+        <p><strong>Third-party corroboration</strong> strengthens passage scoring. When multiple independent sources make overlapping claims using different language, models treat the information as established. When only your domain makes a claim, models classify it as promotional and suppress it during answer synthesis.</p>
+
+        <p>One experienced editor restructures ten priority pages in a single day. No new content. No developer resources. You are editing existing sentences on pages that already perform well organically.</p>
+
+
+        <h2 id="pr">Your PR budget already funds GEO &mdash; it is just targeting the wrong publications</h2>
+
+        <p>Take the citation source map from your audit and place it next to your current PR target list. Count how many publications your agency actively pitches that actually appeared as cited sources in AI responses on your revenue queries. Teams completing this exercise consistently find overlap below twenty percent.</p>
+
+        <p>Three source categories dominate AI citations in ways that break traditional PR logic:</p>
+
+        <p><strong>Government and institutional documents</strong> surface at frequencies that would shock any media relations professional. Patent filings, SEC disclosures, FDA submissions, standards body publications, and public procurement records carry extreme weight because their editorial independence is structurally guaranteed.</p>
+
+        <p><strong>Community platforms</strong> represent the second departure from conventional wisdom. Reddit comparison threads, Stack Overflow discussions referencing your API documentation, GitHub issues mentioning your integration capabilities, and specialized professional forums appear as cited sources with striking regularity.</p>
+
+        <p><strong>Niche analyst publications</strong> hold the third position. Not the marquee outlets consuming the largest share of your agency retainer, but the specialist analysts and trade publications your actual buyers read before shortlist decisions.</p>
+
+        <p>Reallocation requires no new spending. Score every prospective placement target on citation frequency from your audit data, competitive gap showing where rivals appear and you do not, and placement feasibility within your normal pitch cycle. Identical agency retainer. Identical pitch volume. Fundamentally different intelligence directing where each pitch lands.</p>
+
+
+        <h2 id="metrics">Four metrics that replace the analytics gap</h2>
+
+        <p>Your entire measurement stack rests on one assumption: meaningful buyer interactions produce trackable sessions. AI-synthesized answers break this assumption completely. A decision-maker asks Perplexity to compare vendors in your category, receives a detailed response that excludes your brand, and finalizes their shortlist without triggering a single event in any system you operate.</p>
+
+        <p>Four metrics close this gap:</p>
+
+        <p><strong>Brand presence rate</strong> tracks how reliably your brand appears across AI responses for your priority queries. Run every audit query five times per platform each measurement cycle. Track at the individual query level. Never average across your portfolio.</p>
+
+        <p><strong>Factual accuracy rate</strong> determines whether visibility helps or harms you. Score each mention as accurate, outdated, or damaging. Pricing is a particularly sharp edge &mdash; when a brand&rsquo;s pricing exceeded the buyer&rsquo;s implied budget, LLMs actively recommended cheaper alternatives even when the premium product was a better functional fit.</p>
+
+        <p><strong>Competitive share of voice</strong> positions your brand within the closed recommendation set these systems generate. Unlike search results pages, AI responses have no second page. If the synthesized answer names four vendors and excludes you, your brand does not exist for that query.</p>
+
+        <p><strong>Citation source diversity</strong> measures how fragile your presence is. If two publications account for all your AI mentions, one editorial decision or algorithm update eliminates your visibility overnight. Diversity improvements typically precede presence rate gains by two to four weeks, making this your earliest indicator.</p>
+
+        <p>Begin with manual tracking across three biweekly measurement cycles. Tools like Otterly, Profound, and Peec AI automate collection at two hundred to five hundred dollars monthly. Deploy them only after you have built interpretive fluency through manual measurement.</p>
+
+
+        <h2 id="reporting">Reporting GEO without getting the budget killed</h2>
+
+        <p>GEO programs die in quarterly business reviews. Not because the work fails &mdash; because three workstreams with fundamentally different maturation timelines get flattened into one blended number. Protect the program by never allowing the three tracks to share a single chart.</p>
+
+        <p><strong>Track one: infrastructure remediation.</strong> Entity reconciliation, schema corrections, Knowledge Panel updates, Wikidata alignment. Binary done or not done. Assign to technical SEO. This track closes permanently within three weeks.</p>
+
+        <p><strong>Track two: RAG-layer optimization.</strong> Passage restructuring on priority pages, citation source targeting through redirected PR outreach, buyer vocabulary alignment. Measurable presence rate changes appear within one to four weeks. Assign jointly to content and PR. Measure biweekly.</p>
+
+        <p><strong>Track three: parametric authority building.</strong> This governs what language models believe about your brand when answering from compressed training data with no live retrieval. Assign to corporate communications. Measure monthly using factual accuracy scores in responses that carry no source citations.</p>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>Every leadership update presents three separate reports with three separate timelines.</strong> Never blend them. Track one shows operational discipline and completes fast. Track two delivers early wins that sustain organizational patience. Track three builds the durable competitive moat that justifies long-term investment.
+          </p>
+        </div>
+
+
+        <h2 id="deploy">Deploying GEO without new budget, new headcount, or new approval cycles</h2>
+
+        <p>Every required intervention maps to work your team already performs under budgets already approved.</p>
+
+        <p>Your technical SEO analyst already audits structured data on a recurring schedule. Entity reconciliation adds six verification steps to that existing process. Incremental effort is roughly two hours per audit cycle.</p>
+
+        <p>Your PR team already pitches publications monthly under a retainer you already pay. Citation source targeting changes which publications receive pitches &mdash; not the volume, not the fee, not the people executing.</p>
+
+        <p>Your content team already reviews pages before publication. Passage-level optimization adds one quality gate: can each commercially important claim stand alone when extracted from all surrounding context?</p>
+
+        <p>The only net-new cost is monitoring. Otterly, Peec AI, and Profound charge two hundred to five hundred dollars monthly &mdash; typically within discretionary spending thresholds that bypass procurement entirely.</p>
+
+        <p>For agencies, this creates a packaging opportunity built on capabilities you already sell. Entity auditing becomes a premium addition to technical SEO engagements. Citation-informed media targeting becomes a differentiated PR tier. Passage optimization becomes a per-deliverable content upsell. Three new line items constructed from existing skills. No new hires. No new tooling.</p>
+
+
+        <h2 id="poc">The thirty-day proof of concept</h2>
+
+        <p>You do not need executive alignment on whether AI search matters. You need a bounded thirty-day experiment that either produces undeniable evidence or terminates cleanly with documented learning and negligible sunk cost.</p>
+
+        <p><strong>Days one through five:</strong> quantify the financial exposure. Pull two quarters of closed-won deals. Identify which query categories initiated those buying journeys. Cross-reference your audit results to determine which revenue-generating queries now trigger AI Overviews or produce Perplexity vendor comparisons where your competitors appear. Apply documented CTR erosion rates to the pipeline value those queries historically generated. Convert to annualized revenue at risk.</p>
+
+        <p><strong>Days six through ten:</strong> select three test queries. Each must meet all conditions simultaneously &mdash; your audit confirmed competitors appear, your CRM confirmed revenue attribution, and your mechanism map confirmed RAG-governed retrieval. Agree on success thresholds in writing before any work starts. Two queries improving triggers full funding. One query improving triggers a second iteration. Zero improvement triggers clean shutdown.</p>
+
+        <p><strong>Days eleven through twenty-five:</strong> execute three targeted interventions per query. Fix the highest-impact entity inconsistency your audit identified. Restructure one high-ranking page so its key commercial claims function as self-contained passages using buyer vocabulary. Secure one placement on a source your citation map ranked in the top five for that query cluster.</p>
+
+        <p><strong>Day thirty:</strong> remeasure using identical protocol &mdash; five runs per query per platform &mdash; and compare against the written thresholds your sponsor agreed to before work began.</p>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>Total downside:</strong> one person&rsquo;s partial attention for thirty days plus a monitoring subscription under five hundred dollars. <strong>Total upside:</strong> either a funded program with executive sponsorship built on observed evidence, or documented proof that your specific market does not respond to these interventions &mdash; saving your organization from a larger investment that would not have returned. Skeptics argue with forecasts. They do not argue with measurements they watched happen.
+          </p>
+        </div>
+
+        <p class="text-sm text-slate-muted mt-8"><strong>Sources:</strong> BrightEdge AI Overviews research (2024), Semrush CTR erosion study (2024), Princeton/Georgia Tech/Allen Institute GEO research (2023). Learn more about <a href="../ai-visibility-scores-explained/">how we measure AI visibility</a>.</p>
+
+        <div class="border border-[#E2E8F0] p-6 my-8">
+          <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">Related reading</p>
+          <ul class="space-y-2 text-[15px] text-primary">
+            <li><a href="../ai-visibility-action-plan/" class="hover:text-primary-hover underline underline-offset-2">The 5-step action plan</a> &mdash; the condensed version: what to fix first after your audit</li>
+            <li><a href="../ai-getting-pricing-wrong/" class="hover:text-primary-hover underline underline-offset-2">AI is getting your pricing wrong</a> &mdash; the #1 factual error type and how to correct it at the source</li>
+            <li><a href="../ai-hallucinations-brand-fix/" class="hover:text-primary-hover underline underline-offset-2">Fixing AI hallucinations about your brand</a> &mdash; a practical 4-step process for error correction</li>
+            <li><a href="../what-is-ai-visibility/" class="hover:text-primary-hover underline underline-offset-2">What is AI visibility?</a> &mdash; foundational guide for teams new to AI visibility</li>
+            <li><a href="../ai-visibility-tools-compared/" class="hover:text-primary-hover underline underline-offset-2">AI visibility tools compared</a> &mdash; find the right platform to run audits and track progress</li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- End Article Body -->
+
+
+      <!-- ========== ARTICLE CTA ========== -->
+      <div class="bg-primary p-8 md:p-12 mt-16">
+        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">Put this playbook into action</h3>
+        <p class="text-on-primary/80 text-base max-w-lg mb-8">
+          Get a Metricus report with your personalized action steps &mdash; real UI data, source attribution, and a prioritized fix list. One report, one price.
+        </p>
+        <a href="../../get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
+          Get your action plan
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+        <a href="../../sample-ai-visibility-report/" class="block text-on-primary/70 hover:text-on-primary text-sm mt-4 underline underline-offset-2 transition-colors">See an example report &rarr;</a>
+      </div>
+
+    </article>
+
+
+    
+    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-6">Go deeper</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <a href="/ai-brand-alignment-guide/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">Alignment Framework</p>
+          <p class="text-sm text-on-surface-variant mt-1">69 clusters on optimization tactics</p>
+        </a>
+        <a href="/ai-platform-comparison-brands/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">Platform Intelligence Guide</p>
+          <p class="text-sm text-on-surface-variant mt-1">Platform-specific strategies</p>
+        </a>
+      </div>
+    </section>
+
+<!-- ========== RELATED POSTS ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-8">Related articles</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <a href="../ai-visibility-action-plan/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Playbook</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            You Got Your Report. Now What? The 5-Step Action Plan
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            Your AI visibility report is only valuable if you act on it. Here are the five steps every brand should take.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../ai-hallucinations-brand-fix/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Research</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            AI Is Getting Facts Wrong About Your Brand
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            72% of brands have factual errors in AI responses. Here's a 4-step process to audit and fix them.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../ai-visibility-b2b-saas/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Strategy</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            AI Visibility for B2B SaaS
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            B2B buyers are increasingly asking AI for software recommendations. Here's how SaaS companies can show up.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="py-12 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Sample Report</a>
+          <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Knowledge Base</a>
+          <a href="/blog/agency-guide-ai-visibility-audits/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">For Agencies</a>
+          <a href="/press/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Press</a>
+          <a href="/support/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Support</a>
+          <a href="/privacy-policy/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Privacy Policy</a>
+          <a href="/terms-of-service/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Terms of Service</a>
+          <a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Contact</a>
+        </div>
+        <p class="text-xs uppercase tracking-tighter text-slate-500">
+          &copy; 2026 Metricus. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
