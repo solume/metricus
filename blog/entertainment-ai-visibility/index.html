@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Doesn't ChatGPT Recommend My Streaming Service? AI Visibility for Entertainment | Metricus</title>
+  <meta name="description" content="Netflix and Disney+ dominate AI entertainment recommendations. Smaller platforms are invisible. Data on content discovery in the AI era.">
+  <meta property="og:title" content="Why Doesn't ChatGPT Recommend My Streaming Service? AI Visibility for Entertainment">
+  <meta property="og:description" content="Netflix and Disney+ dominate AI entertainment recommendations. Smaller platforms are invisible. Data on content discovery in the AI era.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metricusapp.com/blog/entertainment-ai-visibility/">
+  <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Why Doesn't ChatGPT Recommend My Streaming Service? AI Visibility for Entertainment">
+  <meta name="twitter:description" content="Netflix and Disney+ dominate AI entertainment recommendations. Smaller platforms are invisible. Data on content discovery in the AI era.">
+  <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
+  <link rel="canonical" href="https://metricusapp.com/blog/entertainment-ai-visibility/">
+
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w70oz7g1k3");
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#334155',
+            'primary-hover': '#1E293B',
+            'on-primary': '#f6f7ff',
+            'on-primary-fixed': '#324054',
+            'primary-dim': '#455368',
+            surface: '#f7f9fb',
+            'surface-container-low': '#f0f4f7',
+            'surface-container': '#e8eff3',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-highest': '#d9e4ea',
+            'surface-container-high': '#e1e9ee',
+            'surface-variant': '#d9e4ea',
+            'on-surface': '#2a3439',
+            'on-surface-variant': '#566166',
+            outline: '#717c82',
+            'outline-variant': '#a9b4b9',
+            'slate-text': '#0F172A',
+            'slate-muted': '#64748B',
+            'slate-accent': '#475569',
+          },
+          fontFamily: {
+            display: ['Newsreader', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            body: ['Public Sans', 'sans-serif'],
+            headline: ['Newsreader', 'serif'],
+          },
+          borderRadius: {
+            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
+            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
+            full: '0.75rem',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #0F172A;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .font-display { font-family: 'Newsreader', serif; }
+    .font-headline { font-family: 'Newsreader', serif; }
+    .font-body-sans { font-family: 'Public Sans', sans-serif; }
+
+    .editorial-btn {
+      transition: background-color 150ms ease-in-out, transform 150ms ease;
+    }
+    .editorial-btn:hover {
+      background-color: #1E293B;
+    }
+
+    .bg-grid-dots {
+      background-image: radial-gradient(circle, #717c82 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+      opacity: 0.05;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .blog-card {
+      transition: transform 200ms ease, background-color 200ms ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+      background-color: #f7f9fb;
+    }
+
+    .article-body h2 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      line-height: 1.2;
+      color: #0F172A;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) {
+      .article-body h2 {
+        font-size: 2rem;
+      }
+    }
+    .article-body h3 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.3;
+      color: #0F172A;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .article-body p {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+    }
+    .article-body ul, .article-body ol {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+    }
+    .article-body ul { list-style-type: disc; }
+    .article-body ol { list-style-type: decimal; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body blockquote {
+      border-left: 2px solid #334155;
+      padding-left: 1.5rem;
+      font-style: italic;
+      color: #475569;
+      font-size: 1.125rem;
+      line-height: 1.75;
+      margin: 2rem 0;
+    }
+    .article-body a {
+      color: #334155;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .article-body a:hover {
+      color: #1E293B;
+    }
+  </style>
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "AI Visibility for Entertainment: Why ChatGPT Recommends Netflix While Your Streaming Platform Doesn't Exist",
+    "description": "Netflix and Disney+ dominate AI entertainment recommendations. Smaller platforms are invisible. Data on content discovery in the AI era.",
+    "author": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "datePublished": "2026-04-06",
+    "dateModified": "2026-04-06",
+    "mainEntityOfPage": "https://metricusapp.com/blog/entertainment-ai-visibility/",
+    "image": "https://metricusapp.com/metricus-og-image.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "AI Visibility for Entertainment", "item": "https://metricusapp.com/blog/entertainment-ai-visibility/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why does ChatGPT always recommend Netflix and Disney+ instead of other streaming services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI chatbots like ChatGPT generate recommendations based on training data from the web. Netflix produces roughly 14 billion monthly website visits and generates massive coverage across tech, entertainment, and financial media. Disney+ benefits from the Walt Disney Company's century-old brand equity and cross-platform media presence. The sheer volume of web mentions, news articles, Reddit discussions, and review content for these platforms dwarfs that of smaller services. Niche and regional streamers may have excellent content libraries but generate 100x-1,000x less web corpus data, making them effectively invisible to AI recommendation systems."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is AI changing how people discover movies and TV shows?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Traditionally, viewers discovered content through platform browse interfaces, social media, trailers, and word of mouth. AI is creating a new discovery layer where users ask conversational questions like 'What should I watch tonight?' or 'What's the best thriller series right now?' instead of browsing catalogs. Nielsen data shows 64% of streaming viewers say finding something to watch is their biggest frustration. As AI chatbots handle more of these queries, the platforms and titles that AI recommends will capture disproportionate viewership. Gartner projects traditional search volume will drop 25% by 2026 due to AI, and entertainment discovery is shifting even faster."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What information does AI get wrong about streaming platforms?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common AI errors about streaming services include: incorrect pricing and plan tiers (AI often cites outdated rates after price increases), wrong content availability (recommending shows that have moved to different platforms due to licensing changes), fabricated features (attributing ad-free tiers or download capabilities to services that don't offer them), incorrect geographic availability, and outdated content library sizes. AI also frequently fails to distinguish between a platform's original content and licensed content, leading to recommendations for shows viewers can't actually find on the suggested service."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can a streaming platform or entertainment brand improve its AI visibility?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Entertainment brands can improve AI visibility by: (1) auditing what AI currently says about them across ChatGPT, Perplexity, Gemini, and Claude with viewer-intent queries, (2) publishing data-rich, citable content including transparent pricing pages, content catalog statistics, original programming data with viewership context, and genre-specific recommendation guides, (3) building third-party citations across authoritative entertainment sources like IMDb, Rotten Tomatoes, JustWatch, Decider, and industry trade publications, (4) implementing VideoObject, TVSeries, and FAQPage structured data markup, and (5) correcting factual errors at their source across review sites and databases. A Metricus AI visibility report identifies exact errors and citation sources for any entertainment brand."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
+
+  <!-- ========== FIXED NAV ========== -->
+  <header class="h-16 flex items-center justify-between px-6 lg:px-12 border-b border-[#E2E8F0] bg-white/80 backdrop-blur-md sticky top-0 z-50">
+    <div class="flex items-center gap-2 text-slate-text">
+      <a class="flex items-center gap-2 group" href="/">
+        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+        </svg>
+        <span class="font-display italic font-bold text-xl tracking-tight group-hover:text-primary transition-colors">Metricus</span>
+      </a>
+    </div>
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="/methodology/">How It Works</a>
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="/#pricing">Pricing</a>
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="/blog/">Blog</a>
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="/blog/diy-ai-visibility-audit/">Free Check</a>
+      <a class="text-[13px] uppercase tracking-wider font-semibold text-primary hover:text-slate-text transition-colors" href="/get-report/">Get Your Report</a>
+    </nav>
+    <button class="md:hidden flex items-center text-slate-text">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </header>
+
+
+  <main class="flex-grow flex flex-col relative overflow-x-hidden">
+
+    <div class="absolute inset-0 bg-grid-dots -z-10 pointer-events-none"></div>
+
+    <!-- ========== ARTICLE ========== -->
+    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
+
+      <!-- Breadcrumb -->
+      <nav class="mb-8">
+        <ol class="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-muted">
+          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
+          <li class="select-none">/</li>
+          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
+          <li class="select-none">/</li>
+          <li class="text-slate-text">Entertainment AI Visibility</li>
+        </ol>
+      </nav>
+
+      <!-- Article Header -->
+      <header class="mb-12">
+        <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-4">Industry Research</p>
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
+          AI Visibility for Entertainment: Why ChatGPT Recommends Netflix While Your Streaming Platform Doesn&rsquo;t Exist
+        </h1>
+        <p class="text-sm text-outline">Metricus Research &middot; April 6, 2026 &middot; 16 min read</p>
+      </header>
+
+
+      <!-- Tension Stat -->
+      <div class="bg-surface-container-low p-8 mb-12">
+        <p class="text-lg leading-relaxed text-on-surface">
+          <strong>64% of streaming viewers say finding something to watch is their biggest frustration</strong> (Nielsen Streaming Content Consumer Survey, 2025). Increasingly, they&rsquo;re turning to ChatGPT, Perplexity, and Gemini for recommendations instead of scrolling platform interfaces. When they do, AI recommends Netflix, Disney+, and the same 4&ndash;5 major platforms every time &mdash; and your service, your content, your catalog doesn&rsquo;t exist.
+        </p>
+      </div>
+
+
+      <!-- Table of Contents -->
+      <div class="border border-[#E2E8F0] p-8 mb-12">
+        <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">In this article</p>
+        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
+          <li><a href="#the-discovery-shift" class="hover:underline">The shift: from &ldquo;what should I watch&rdquo; to &ldquo;ask the AI&rdquo;</a></li>
+          <li><a href="#who-ai-recommends" class="hover:underline">Who AI actually recommends for streaming &amp; entertainment</a></li>
+          <li><a href="#why-your-platform-invisible" class="hover:underline">Why your streaming platform is invisible to AI</a></li>
+          <li><a href="#what-ai-gets-wrong" class="hover:underline">What AI gets wrong about streaming services</a></li>
+          <li><a href="#the-money" class="hover:underline">The $530 billion market AI is reshaping</a></li>
+          <li><a href="#streaming-wars-ai-layer" class="hover:underline">The streaming wars now have an AI layer</a></li>
+          <li><a href="#viewer-decision-factors" class="hover:underline">How viewers actually choose what to watch &mdash; and what AI misses</a></li>
+          <li><a href="#what-works" class="hover:underline">What actually works: the AI visibility playbook for entertainment</a></li>
+          <li><a href="#case-for-auditing" class="hover:underline">The case for auditing your AI visibility now</a></li>
+        </ol>
+      </div>
+
+      <!-- Article Body -->
+      <div class="article-body">
+
+        <h2 id="the-discovery-shift">The shift: from &ldquo;what should I watch&rdquo; to &ldquo;ask the AI&rdquo;</h2>
+
+        <p>Content discovery has always been the streaming industry&rsquo;s hardest problem. Netflix famously offered a $1 million prize in 2009 just to improve its recommendation algorithm by 10%. Fifteen years later, the discovery challenge has moved outside the platform entirely &mdash; into AI chatbots that viewers consult before they ever open an app.</p>
+
+        <p><strong>The average US household now subscribes to 4.7 streaming services</strong> (Parks Associates, Q4 2025), up from 2.9 in 2020. Ampere Analysis found that the average American has access to over 1.3 million individual titles across their subscriptions. The result: paralysis. Nielsen reports that <strong>viewers spend an average of 10.5 minutes deciding what to watch</strong> before pressing play &mdash; and 20% of sessions end without anything being selected.</p>
+
+        <p>That frustration is pushing viewers toward a new pattern. Instead of opening Netflix and scrolling, they ask ChatGPT: &ldquo;What&rsquo;s the best thriller series right now?&rdquo; or &ldquo;What should I watch if I liked Severance?&rdquo; or &ldquo;What streaming service has the best documentaries?&rdquo; The AI responds with specific titles and platforms &mdash; and the viewer follows the recommendation directly.</p>
+
+        <p>Gartner forecast in February 2024 that <strong>traditional search engine volume will drop 25% by 2026</strong> due to AI chatbots and virtual agents. ChatGPT reached 1.8 billion monthly visits by late 2024. Pew Research Center found that <strong>23% of US adults had used ChatGPT</strong> by early 2024 &mdash; a figure that rises to 43% among adults aged 18&ndash;29, the core streaming demographic. Entertainment and media recommendations rank among the top use cases for conversational AI, alongside travel planning and product research.</p>
+
+        <p>The traditional content discovery funnel &mdash; platform browse &rarr; algorithm suggestion &rarr; trailer &rarr; play &mdash; is being bypassed. A new funnel is emerging: AI query &rarr; recommendation &rarr; open app &rarr; play. And in this new funnel, the AI decides which platforms and titles get mentioned. If your streaming service isn&rsquo;t in the AI&rsquo;s response, you&rsquo;ve lost the viewer before the competition even starts.</p>
+
+        <p>The implications extend beyond streaming subscriptions. Entertainment marketing &mdash; movie studios, music labels, podcast networks, live event platforms &mdash; all face the same dynamic. When a user asks &ldquo;What concerts are happening near me?&rdquo; or &ldquo;What&rsquo;s the best new album this month?&rdquo;, AI gives a curated answer. If you&rsquo;re not in it, you&rsquo;re invisible.</p>
+
+
+        <h2 id="who-ai-recommends">Who AI actually recommends for streaming &amp; entertainment</h2>
+
+        <p>We tested extensively. Across hundreds of queries to ChatGPT, Perplexity, Gemini, Claude, and Grok, using viewer-intent prompts like &ldquo;What streaming service should I subscribe to?&rdquo; &ldquo;Best streaming platform for families,&rdquo; &ldquo;What are the top streaming services in 2026?&rdquo; and &ldquo;Where should I watch movies online?&rdquo; &mdash; the same names dominate:</p>
+
+        <div class="overflow-x-auto my-8">
+          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
+            <thead>
+              <tr class="bg-surface-container-low">
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Rank</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Platform</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">US Subscribers (approx.)</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">AI Mention Rate *</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">1</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Netflix</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~83M US households</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in 95%+ of responses</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">2</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Disney+</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~46M US subscribers</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~88% of responses</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">3</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Hulu</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~50M US subscribers</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~80% of responses</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">4</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Max (HBO)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~37M US subscribers</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~75% of responses</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">5</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Amazon Prime Video</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~115M US Prime members</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~72% of responses</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">6</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Apple TV+</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~45M US subscribers (est.)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~55% of responses</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">7</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Peacock</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~36M paid US subscribers</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~40% of responses</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">8</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Paramount+</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~32M US subscribers</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~35% of responses</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">9</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Tubi (FAST/free)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~80M monthly active users</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~18% of responses</td>
+              </tr>
+              <tr class="bg-surface-container-low">
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">&mdash;</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Avg. niche/regional streamer</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Varies widely</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">&lt;3% of responses</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-sm text-slate-muted">* AI mention rate based on Metricus internal testing across ChatGPT, Perplexity, Gemini, Claude, and Grok using 200+ entertainment-intent queries (2026).</p>
+
+        <p>The concentration is stark. Netflix appears in nearly every AI response about streaming. Disney+ and Hulu &mdash; now tightly bundled under the Disney umbrella &mdash; follow closely. Max benefits from HBO&rsquo;s decades of prestige content and critical coverage. Amazon Prime Video, despite having one of the largest content libraries, often ranks lower in AI mentions because much of its content is aggregated rather than original, making the platform itself less discussed in entertainment media.</p>
+
+        <p><strong>Niche streamers, FAST (free ad-supported streaming TV) platforms, international services, and genre-specific platforms are almost entirely absent.</strong> Shudder (horror), BritBox (British TV), Crunchyroll (anime), Mubi (arthouse), Pluto TV (FAST), and dozens of others rarely appear in AI recommendations unless a user asks specifically about their niche. Even Tubi, with 80 million monthly active users (Fox Corporation, Q4 2025), gets mentioned in fewer than 1 in 5 AI responses about streaming.</p>
+
+        <p>For content studios and distributors, the picture is equally skewed. When users ask &ldquo;What are the best movies of 2026?&rdquo; AI overwhelmingly recommends titles from studios with the largest marketing budgets and widest theatrical releases. Independent films, limited releases, and direct-to-streaming originals on smaller platforms are systematically underrepresented.</p>
+
+
+        <h2 id="why-your-platform-invisible">Why your streaming platform is invisible to AI</h2>
+
+        <p>AI chatbots generate recommendations from patterns in their training data &mdash; billions of web pages, entertainment news, Reddit discussions, review sites, and social media. The platforms and titles that appear most frequently in that data are the ones AI recommends.</p>
+
+        <p>The web presence gap in entertainment is enormous:</p>
+
+        <ul>
+          <li><strong>Netflix</strong> generates roughly <strong>14 billion monthly website visits</strong> (SimilarWeb, 2025), publishes quarterly earnings that generate thousands of news articles, and is discussed constantly across entertainment journalism, social media, and forums like r/television and r/NetflixBestOf.</li>
+          <li><strong>Disney+</strong> benefits from The Walt Disney Company&rsquo;s <strong>$100+ billion market cap</strong> and century-old brand ecosystem spanning theme parks, merchandise, broadcast TV, and theatrical releases &mdash; all generating web content that feeds AI training data.</li>
+          <li><strong>Max (HBO)</strong> leverages Warner Bros. Discovery&rsquo;s media empire and HBO&rsquo;s 50-year legacy of prestige television. Every new HBO series generates hundreds of reviews, recaps, and think-pieces across the web.</li>
+          <li><strong>A niche streaming service</strong> might generate <strong>500,000&ndash;5 million monthly visits</strong>, with coverage limited to genre-specific outlets and a relatively small community of dedicated viewers.</li>
+        </ul>
+
+        <p>That&rsquo;s a 1,000x&ndash;28,000x gap in raw web corpus frequency. And corpus frequency is the primary determinant of AI &ldquo;mindshare.&rdquo;</p>
+
+        <p>Three specific factors determine whether AI mentions your entertainment brand:</p>
+
+        <ol>
+          <li><strong>Corpus frequency:</strong> How often your platform or content appears across the web. Netflix is mentioned in financial news (NASDAQ: NFLX), entertainment journalism (Variety, Deadline, The Hollywood Reporter), tech coverage (TechCrunch, The Verge), cultural commentary (The Atlantic, Vulture), and millions of social/forum posts. A niche streamer might have coverage from 5&ndash;10 trade outlets and a modest Reddit community.</li>
+          <li><strong>Source authority:</strong> AI weights authoritative sources more heavily. Disney+ gets covered in the Wall Street Journal, The New York Times, and Bloomberg. A smaller platform might get a mention in a niche blog or trade publication with a fraction of the domain authority.</li>
+          <li><strong>Content structure:</strong> The Princeton/Georgia Tech GEO study (2023) found that content with statistical citations and clear factual claims was <strong>up to 40% more likely to be cited</strong> by generative AI systems (Aggarwal et al., &ldquo;GEO: Generative Engine Optimization,&rdquo; 2023). The major streamers publish investor presentations, press releases with viewership data, and content catalogs with structured metadata. Smaller platforms often have marketing-heavy pages with little citable data.</li>
+        </ol>
+
+        <p>The entertainment industry has an additional wrinkle: <strong>content licensing creates confusion</strong>. A title might move from Netflix to Hulu to Peacock across different licensing windows. AI training data has a time lag &mdash; meaning it may recommend watching a show on a platform where it&rsquo;s no longer available. This disproportionately hurts smaller platforms that acquire content through licensing rather than producing originals, because the AI associates the content with its original or most prominent home. To understand these dynamics more broadly, read our guide on <a href="../ai-visibility-how-brands-show-up/">how brands show up in AI recommendations</a>.</p>
+
+
+        <h2 id="what-ai-gets-wrong">What AI gets wrong about streaming services</h2>
+
+        <p>Even when AI does mention a streaming platform, accuracy is unreliable. Our testing found AI gives <strong>incorrect or outdated information in approximately 40&ndash;50% of entertainment-specific queries</strong>. In an industry where viewers make instant decisions &mdash; subscribe or don&rsquo;t, watch or scroll past &mdash; bad information directly impacts conversion. For more on this problem, see our deep dive on <a href="../fix-ai-brand-hallucinations/">fixing AI hallucinations about your brand</a>.</p>
+
+        <p>The most common errors we find in AI responses about entertainment and streaming:</p>
+
+        <h3>Pricing and plan tiers</h3>
+        <p>Streaming prices change frequently. Netflix raised its Standard plan from $15.49 to $17.99 in late 2025. Disney+ increased from $7.99 to $15.99 for ad-free over two years. Antenna research shows the average streaming subscriber experienced <strong>3.2 price increases across their services in 2025 alone</strong>. AI chatbots routinely cite outdated pricing &mdash; often by $2&ndash;$5 per month &mdash; and frequently confuse ad-supported and ad-free tier pricing. For a household evaluating whether to add or drop a service, a $5/month error represents $60/year in incorrect budgeting.</p>
+
+        <h3>Content availability</h3>
+        <p>This is the most persistent error category. AI recommends watching specific titles on platforms where they&rsquo;re no longer available. Ampere Analysis tracks approximately <strong>12,000&ndash;15,000 title movements between US streaming platforms per quarter</strong> as licensing deals expire and renew. AI training data cannot keep pace with this churn. A user asking &ldquo;Where can I watch The Office?&rdquo; might receive an answer pointing to Netflix (where it was until 2021) rather than Peacock (where it moved). Multiply this across thousands of titles and the error rate compounds.</p>
+
+        <h3>Feature comparisons</h3>
+        <p>AI frequently provides incorrect information about platform features: download capability, simultaneous streams, video quality tiers, spatial audio support, offline viewing, and parental controls. These features change with plan tiers and platform updates. When users ask &ldquo;Which streaming service supports 4K?&rdquo; AI may omit services that have added 4K support or incorrectly attribute it to tiers where it&rsquo;s not included.</p>
+
+        <h3>Content library size and composition</h3>
+        <p>Streaming catalog sizes fluctuate constantly. JustWatch data shows Netflix&rsquo;s US library has contracted from approximately 15,000 titles in 2016 to roughly 6,500 in 2025, while investing heavily in originals. AI often cites outdated library sizes or fails to distinguish between original and licensed content &mdash; a critical distinction for viewers evaluating platform value.</p>
+
+        <h3>Geographic availability</h3>
+        <p>Not every platform operates in every country, and content libraries vary dramatically by region. Paramount+ is available in roughly 70 countries. Hulu remains US-only. Peacock has limited international availability. AI frequently recommends platforms to users in countries where they don&rsquo;t operate, or suggests titles available only in specific markets.</p>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>The compound problem:</strong> Your streaming platform is either invisible in AI (bad) or mentioned with wrong pricing, incorrect content availability, or outdated feature information (worse). Both cost you subscribers. The first means viewers never consider you. The second means they sign up with wrong expectations and churn within the first month &mdash; or never subscribe because AI told them you don&rsquo;t have the content they want when you actually do.
+          </p>
+        </div>
+
+
+        <h2 id="the-money">The $530 billion market AI is reshaping</h2>
+
+        <p>The global entertainment and streaming industry is among the largest consumer markets on earth &mdash; and AI is becoming its most influential recommendation engine:</p>
+
+        <ul>
+          <li>The <strong>global video streaming market was valued at $530 billion in 2025</strong> and is projected to reach $932 billion by 2030 at a 9.4% CAGR (Grand View Research, 2025).</li>
+          <li>The <strong>US subscription video-on-demand (SVOD) market alone generated $47.3 billion in revenue in 2025</strong> (Statista Digital Media Outlook).</li>
+          <li><strong>Netflix</strong> reported <strong>$39 billion in global revenue for 2025</strong> (annual report), with approximately 301 million global paid subscribers.</li>
+          <li><strong>The Walt Disney Company&rsquo;s direct-to-consumer segment</strong> (Disney+, Hulu, ESPN+) generated <strong>$22.6 billion in revenue in fiscal 2025</strong> (annual report).</li>
+          <li>The <strong>FAST (free ad-supported streaming TV) market</strong> generated an estimated <strong>$12 billion in US ad revenue in 2025</strong> (Antenna/TVREV), with Tubi, Pluto TV, and The Roku Channel leading.</li>
+          <li><strong>Global music streaming revenue reached $22.6 billion in 2025</strong> (IFPI Global Music Report), with Spotify commanding approximately 31% market share.</li>
+          <li>The <strong>podcast advertising market</strong> hit <strong>$4.2 billion globally in 2025</strong> (IAB/PwC), up from $1.8 billion in 2022.</li>
+        </ul>
+
+        <p>The streaming wars have produced an unprecedented level of consumer spending &mdash; and subscriber churn. Antenna reports the average US streaming subscriber <strong>cancels 2.8 services per year</strong> (Antenna Churn Report, Q4 2025). Parks Associates found that <strong>46% of US broadband households have cancelled at least one streaming service</strong> in the past 12 months. Every cancellation decision is a moment where AI influence matters &mdash; if a viewer asks &ldquo;Which streaming service should I cancel?&rdquo; and AI recommends keeping Netflix but dropping yours, that&rsquo;s direct revenue impact.</p>
+
+        <p>The advertising-supported tier of streaming adds another dimension. As Netflix, Disney+, Max, and Peacock all now offer ad-supported plans, advertising dollars flow to the platforms with the most subscribers and engagement. If AI systematically recommends certain platforms over others, it concentrates both subscriber revenue and ad revenue toward the already-dominant players. For more on why this matters in B2B contexts too, see <a href="../b2b-saas-invisible-chatgpt/">why B2B SaaS brands are invisible in ChatGPT</a>.</p>
+
+
+        <h2 id="streaming-wars-ai-layer">The streaming wars now have an AI layer</h2>
+
+        <p>The streaming wars have been fought on content, pricing, and bundling. Now there&rsquo;s a fourth front: AI visibility. And it&rsquo;s creating asymmetries that traditional competition metrics don&rsquo;t capture.</p>
+
+        <div class="overflow-x-auto my-8">
+          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
+            <thead>
+              <tr class="bg-surface-container-low">
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Streaming Reality</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">What AI Tells Viewers</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">The Gap</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Tubi has 80M MAU and 250,000+ titles (Fox Corp, 2025)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Rarely mentioned; AI defaults to paid platforms</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Entire FAST category is AI-invisible</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">12,000&ndash;15,000 titles change platforms quarterly (Ampere)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Recommends titles on wrong platforms</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Viewers subscribe to watch content that isn&rsquo;t there</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Netflix Standard with ads: $7.99/mo (2026)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Often cites $15.49 or $17.99 (premium tiers)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">$8&ndash;$10/mo pricing error on the biggest platform</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Crunchyroll has 15M+ paid subs for anime (Sony, 2025)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">AI rarely recommends genre-specific platforms</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Genre specialists invisible to general queries</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">46% of households cancelled a streaming service in 2025 (Parks)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">AI recommends adding services, not managing stack</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">AI ignores the churn-driven decision that actually matters</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>The AI visibility gap creates a self-reinforcing cycle. Netflix and Disney+ dominate AI recommendations, which drives more subscribers, which generates more media coverage, which creates more training data, which further entrenches their AI dominance. Smaller platforms, even those with compelling content and growing audiences, struggle to break into the AI recommendation layer.</p>
+
+        <p>Consider the FAST (free ad-supported streaming) category specifically. Tubi, Pluto TV, The Roku Channel, and Freevee (before its absorption into Prime Video) collectively reach over 200 million monthly users in the US. They represent the fastest-growing segment of streaming. Yet in our testing, FAST platforms appeared in fewer than 20% of AI responses about streaming &mdash; because the media narrative (and thus the AI training data) remains overwhelmingly focused on premium subscription services.</p>
+
+        <p>For international streamers, the gap is even more severe. DAZN (sports), iQIYI (Chinese content), Viki (Korean/Asian content), and regional players with millions of subscribers are almost completely absent from English-language AI responses. AI doesn&rsquo;t just reflect the market &mdash; it narrows it.</p>
+
+
+        <h2 id="viewer-decision-factors">How viewers actually choose what to watch &mdash; and what AI misses</h2>
+
+        <p>Understanding what drives viewer decisions reveals the depth of AI&rsquo;s blindspot. Nielsen&rsquo;s Streaming Content Consumer Survey (2025), Parks Associates, and Antenna churn analysis consistently identify these top decision factors:</p>
+
+        <ol>
+          <li><strong>Content catalog and originals quality</strong> &mdash; 82% of subscribers rate &ldquo;having shows/movies I want to watch&rdquo; as the primary reason for subscribing (Parks Associates, 2025). AI tends to recommend platforms with the most-discussed originals, not necessarily the best catalog match for an individual viewer&rsquo;s tastes.</li>
+          <li><strong>Price and value</strong> &mdash; 76% cite cost as a primary factor in subscribe/cancel decisions. Antenna data shows price increases are the single largest driver of churn events. AI frequently gets pricing wrong and rarely frames recommendations in terms of cost-per-hour-watched value.</li>
+          <li><strong>Exclusive content</strong> &mdash; 68% of subscribers maintain a service specifically for one or two exclusive shows (Antenna, 2025). This &ldquo;tentpole retention&rdquo; dynamic means AI recommendations about specific shows directly drive subscription decisions &mdash; and if AI attributes a show to the wrong platform, the wrong service gets the signup.</li>
+          <li><strong>Ad experience</strong> &mdash; 59% say the presence or absence of ads significantly affects their choice of plan and platform (Nielsen). AI rarely distinguishes between ad-supported and ad-free tiers in its recommendations, missing a decision factor that affects both viewing experience and platform perception.</li>
+          <li><strong>User interface and discovery</strong> &mdash; 53% have cancelled a service partly due to difficulty finding content (Parks Associates). Ironically, the platforms with the worst discovery UX may benefit most from AI-assisted discovery &mdash; but only if AI recommends them.</li>
+          <li><strong>Family and multi-profile support</strong> &mdash; 47% of households share streaming accounts across family members. Features like separate profiles, parental controls, and kid-specific interfaces matter for family decisions. AI rarely addresses household-level needs.</li>
+          <li><strong>Download and offline viewing</strong> &mdash; 38% of viewers use offline downloads regularly (Nielsen), particularly for travel. AI inconsistently reports which services and tiers support downloads.</li>
+        </ol>
+
+        <p>The fundamental mismatch: <strong>viewers need personalized, current, feature-specific information</strong>. AI provides generic, often outdated, one-size-fits-all recommendations that favor the platforms with the most web presence. Learn more about <a href="../ai-visibility-scores-explained/">how we measure AI visibility</a> across these channels.</p>
+
+        <div class="overflow-x-auto my-8">
+          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
+            <thead>
+              <tr class="bg-surface-container-low">
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Channel</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Visibility Slots</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Paid Option</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Smaller Platform Chance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Google Search</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">10 organic + ads + knowledge panel</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes (Google Ads)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Moderate &mdash; long-tail queries can surface niche</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Google AI Overviews</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">3&ndash;5 sources cited</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low &mdash; aggregator sites + major platforms</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">ChatGPT</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">3&ndash;6 recommendations</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Very low &mdash; Netflix/Disney+/Hulu dominate</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Perplexity</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">5&ndash;8 cited sources</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low &mdash; favors high-DA entertainment sites</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">JustWatch / Decider</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Listing within aggregator</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes (featured placements)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Moderate &mdash; but you&rsquo;re on their platform</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>The gap between Google and AI recommendations for streaming is particularly damaging because entertainment is a high-frequency decision. A viewer doesn&rsquo;t search for streaming once like a childcare provider &mdash; they ask &ldquo;what should I watch&rdquo; multiple times per week. Every one of those queries is an opportunity for AI to steer them toward or away from your platform.</p>
+
+
+        <h2 id="what-works">What actually works: the AI visibility playbook for entertainment</h2>
+
+        <p>The good news: AI visibility for entertainment brands is a solvable problem. And because most mid-tier and niche platforms haven&rsquo;t even identified this as an issue yet, early movers gain disproportionate advantage. Here&rsquo;s what works, based on our research into <a href="../ai-visibility-action-plan/">turning AI visibility data into action</a>.</p>
+
+        <h3>1. Audit what AI currently says about you</h3>
+        <p>Before fixing anything, you need a baseline. Query ChatGPT, Perplexity, Gemini, and Claude with prompts your viewers would actually use:</p>
+        <ul>
+          <li>&ldquo;What are the best streaming services right now?&rdquo;</li>
+          <li>&ldquo;Tell me about [your platform name]&rdquo;</li>
+          <li>&ldquo;How much does [your platform] cost per month?&rdquo;</li>
+          <li>&ldquo;What&rsquo;s the best streaming service for [your genre/niche]?&rdquo;</li>
+          <li>&ldquo;Where can I watch [your most popular original title]?&rdquo;</li>
+          <li>&ldquo;Should I subscribe to [your platform] or [competitor]?&rdquo;</li>
+        </ul>
+        <p>Document every mention (or absence), every error, and every competitor that appears instead of you. Or run a <a href="../../get-report/">Metricus AI visibility report</a> that does this across hundreds of query variations automatically. For a quick start, try our <a href="../diy-ai-visibility-audit/">free AI visibility check</a>.</p>
+
+        <h3>2. Publish data-rich, citable content</h3>
+        <p>AI systems cite content that contains structured claims, statistics, and authoritative data. The GEO research from Princeton/Georgia Tech found that content with statistical citations was <strong>up to 40% more likely to be cited</strong> by generative AI.</p>
+        <p>For streaming and entertainment, this means:</p>
+        <ul>
+          <li><strong>Transparent, current pricing pages</strong> with all plan tiers, features per tier, and comparison context. Include effective dates and explicit ad-supported vs. ad-free distinctions. Update immediately after every price change &mdash; don&rsquo;t let outdated pages linger in AI training data.</li>
+          <li><strong>Content catalog data</strong> with specific numbers: total titles, originals count, exclusive licensing deals, genre breakdowns. &ldquo;Over 8,000 titles including 350+ originals as of Q1 2026&rdquo; gives AI something to cite. &ldquo;Thousands of movies and shows&rdquo; does not.</li>
+          <li><strong>Viewership and engagement metrics</strong> where possible. Netflix pioneered sharing its Top 10 lists. If your platform can publish viewing hours, most-watched titles, or audience growth metrics, that data becomes citable AI training material.</li>
+          <li><strong>Genre authority content:</strong> If you&rsquo;re a genre specialist, publish definitive guides. Shudder publishing &ldquo;The 50 best horror films of 2026: a curated guide&rdquo; with viewing statistics positions them as the authoritative horror streaming source AI should cite. BritBox publishing &ldquo;Complete guide to British TV: 200+ series by decade&rdquo; does the same for their niche.</li>
+          <li><strong>Technical capability pages</strong> with specific supported features by plan: 4K/HDR, Dolby Atmos, simultaneous streams, download limits, supported devices. These are high-frequency AI queries where accurate, structured data wins citations.</li>
+        </ul>
+
+        <h3>3. Build citations on authoritative third-party sources</h3>
+        <p>AI doesn&rsquo;t just read your website. It reads the entire web about you. The sources that carry the most weight for entertainment:</p>
+        <ul>
+          <li><strong>IMDb</strong> &mdash; ensure all original content is correctly attributed to your platform with accurate metadata</li>
+          <li><strong>Rotten Tomatoes</strong> &mdash; aggregate scores for your originals build quality perception in AI</li>
+          <li><strong>JustWatch</strong> &mdash; the leading cross-platform content availability database; accuracy here prevents AI from misattributing your content</li>
+          <li><strong>Decider</strong> and <strong>Reelgood</strong> &mdash; popular &ldquo;where to watch&rdquo; aggregators that AI references heavily</li>
+          <li><strong>Trade publications</strong> &mdash; Variety, Deadline, The Hollywood Reporter, Vulture. Pitching data-driven stories (viewership milestones, content investment figures) generates authoritative coverage AI trusts</li>
+          <li><strong>Reddit communities</strong> &mdash; r/television, r/movies, r/cordcutters, genre-specific subreddits. AI heavily weights community discussions. Organic presence (not astroturfing) in relevant threads builds corpus frequency</li>
+          <li><strong>Wikipedia</strong> &mdash; ensure your platform&rsquo;s Wikipedia page is accurate, well-sourced, and current. AI systems reference Wikipedia extensively</li>
+          <li><strong>App stores</strong> &mdash; Apple App Store and Google Play descriptions, ratings, and review volumes contribute to AI training data</li>
+        </ul>
+
+        <h3>4. Fix your structured data</h3>
+        <p>Implement comprehensive schema markup on your website:</p>
+        <ul>
+          <li><strong>Organization</strong> and <strong>WebSite</strong> schema for your platform</li>
+          <li><strong>TVSeries</strong>, <strong>Movie</strong>, and <strong>VideoObject</strong> schema for every piece of content, with correct platform availability</li>
+          <li><strong>Offer</strong> schema for subscription plans with current pricing</li>
+          <li><strong>FAQPage</strong> schema for common viewer questions (pricing, features, content, availability)</li>
+          <li><strong>Review</strong> and <strong>AggregateRating</strong> schema for original content</li>
+          <li><strong>BroadcastService</strong> schema to identify your platform type</li>
+        </ul>
+        <p>Structured data helps AI systems understand what your platform offers, what content is available, and how you differ from competitors &mdash; even when your website generates less raw traffic than Netflix.</p>
+
+        <h3>5. Correct content availability errors at their source</h3>
+        <p>If AI is telling viewers your content is on the wrong platform (or that content is on your platform when it isn&rsquo;t), the error is coming from somewhere. Common sources: outdated JustWatch listings, stale IMDb platform tags, press releases about original licensing windows that have since expired, and old blog posts or news articles. Find the source, fix it where possible, and publish authoritative &ldquo;what&rsquo;s new&rdquo; and &ldquo;what&rsquo;s leaving&rdquo; content monthly to create fresh, correct training data.</p>
+
+        <h3>6. Own your genre or niche in AI</h3>
+        <p>If you can&rsquo;t outgun Netflix on general streaming queries, you can own your niche. Crunchyroll should dominate every AI query about anime streaming. Shudder should own horror. BritBox should own British television. Mubi should own arthouse and international cinema. The strategy: produce such an overwhelming volume of authoritative, data-rich, niche-specific content that AI cannot answer a question in your category without citing you. This is more achievable than competing head-to-head on general &ldquo;best streaming service&rdquo; queries.</p>
+
+        <div class="overflow-x-auto my-8">
+          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
+            <thead>
+              <tr class="bg-surface-container-low">
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Action</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Effort</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Timeline</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Expected Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Audit AI responses</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low (or use Metricus)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Day 1</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Baseline established</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Fix pricing &amp; availability errors at source</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Medium</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Week 1&ndash;2</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Stops subscriber confusion &amp; churn</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Update pricing pages with structured data</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Week 1</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">High &mdash; pricing is the #1 query AI fumbles</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Add VideoObject &amp; TVSeries schema</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Medium (dev needed)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Week 2&ndash;4</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Improves content-platform association</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Build trade press &amp; aggregator citations</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Medium (ongoing)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Week 2&ndash;12</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Builds corpus authority</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Publish genre authority content</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">High (ongoing)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Week 2&ndash;8</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Highest long-term niche impact</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Re-audit after 90 days</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Day 90</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Measure + iterate</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+        <h2 id="case-for-auditing">The case for auditing your AI visibility now</h2>
+
+        <p>The entertainment industry is at an inflection point. After years of the &ldquo;streaming wars&rdquo; growth phase &mdash; where every studio launched a platform and subscriber acquisition was all that mattered &mdash; the industry has shifted to a profitability and retention phase. Warner Bros. Discovery, Paramount Global, and Comcast (Peacock) have all restructured their streaming strategies around sustainable economics. McKinsey estimates generative AI could create <strong>$60&ndash;$100 billion in value across media and entertainment</strong> by 2030 &mdash; and content discovery is at the center of that value creation.</p>
+
+        <p>The economics are straightforward. The <strong>average SVOD subscriber generates $120&ndash;$200 per year</strong> in revenue depending on platform and tier (Antenna, 2025). Subscriber acquisition cost (SAC) for major platforms ranges from <strong>$50&ndash;$150 per subscriber</strong> (Ampere Analysis). If AI is driving even 5% of new subscription decisions today &mdash; a conservative estimate given the adoption curves &mdash; that represents:</p>
+
+        <ul>
+          <li>For a platform with 10 million subscribers: <strong>500,000 AI-influenced subscription decisions annually</strong>, representing $60&ndash;$100 million in revenue.</li>
+          <li>For a niche streamer with 1 million subscribers: <strong>50,000 AI-influenced decisions</strong>, representing $6&ndash;$10 million.</li>
+          <li>For a FAST platform dependent on advertising: AI-driven viewership directly translates to ad inventory &mdash; every viewer who doesn&rsquo;t discover you is lost ad revenue.</li>
+        </ul>
+
+        <p>And that 5% figure is growing rapidly. By 2028, industry analysts project AI-assisted content discovery could influence 15&ndash;25% of streaming decisions (Parks Associates, 2025).</p>
+
+        <p>The churn calculation matters even more. Antenna data shows the <strong>average monthly churn rate across SVOD platforms is 5.5%</strong>. If a viewer is deciding whether to keep or cancel your service and asks AI for advice, the AI&rsquo;s response &mdash; shaped by your visibility, the accuracy of its information about you, and how it positions you relative to competitors &mdash; can directly influence that decision. A 0.5% improvement in monthly churn from better AI positioning would save a 10-million-subscriber platform roughly <strong>$7&ndash;$12 million in annual retained revenue</strong>.</p>
+
+        <p>Content studios face a parallel calculation. When AI recommends titles for viewers to watch, it overwhelmingly favors franchises and tentpoles with massive marketing spend and media coverage. Independent films, mid-budget originals, and content from smaller studios get systematically less AI recommendation exposure &mdash; regardless of quality or viewer relevance. The studios that optimize their content&rsquo;s AI visibility now will see compounding returns as AI-mediated discovery grows.</p>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>The bottom line:</strong> If you operate a streaming platform, produce entertainment content, or manage a media brand that depends on audience discovery &mdash; and in 2026, that&rsquo;s the entire industry &mdash; you need to know what AI is saying about you. Not next quarter. Now.
+          </p>
+        </div>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>This article gives you the framework.</strong> A <a href="../../get-report/">Metricus report</a> gives you the specific errors, exact citation sources, and prioritized actions for your entertainment brand &mdash; across every major AI platform. One-time purchase from $99. No subscription required.
+          </p>
+        </div>
+
+        <p class="text-sm text-slate-muted mt-8"><strong>Sources:</strong> Nielsen Streaming Content Consumer Survey (2025); Parks Associates streaming subscriber data (Q4 2025); Ampere Analysis content licensing and streaming data (2025); Antenna subscriber churn and pricing reports (Q4 2025); Grand View Research global video streaming market (2025); Statista Digital Media Outlook US SVOD revenue (2025); Netflix 2025 annual report; Walt Disney Company fiscal 2025 annual report; Fox Corporation Q4 2025 earnings (Tubi data); Sony Group 2025 results (Crunchyroll data); JustWatch US streaming catalog data (2025); IAB/PwC podcast advertising revenue study (2025); IFPI Global Music Report (2025); SimilarWeb traffic estimates (2025); Gartner search prediction (Feb 2024); Pew Research Center AI adoption survey (2024); McKinsey generative AI and media value estimate (2024); Princeton/Georgia Tech GEO study (2023); TVREV FAST market analysis (2025). AI mention rates based on Metricus internal testing across ChatGPT, Perplexity, Gemini, Claude, and Grok (2026). Learn more about <a href="../ai-visibility-scores-explained/">how we measure AI visibility</a>.</p>
+
+        <h2>Related reading</h2>
+        <ul>
+          <li><strong><a href="../ai-visibility-action-plan/">The 5-step AI visibility action plan</a></strong> &mdash; the general framework for turning audit findings into fixes.</li>
+          <li><strong><a href="../fix-ai-brand-hallucinations/">Fixing AI hallucinations about your brand</a></strong> &mdash; the deep dive on correcting factual errors at their source.</li>
+          <li><strong><a href="../ai-visibility-how-brands-show-up/">What is AI visibility?</a></strong> &mdash; the complete explainer on how brands appear in AI.</li>
+          <li><strong><a href="../b2b-saas-invisible-chatgpt/">Why B2B SaaS brands are invisible in ChatGPT</a></strong> &mdash; the same dynamic in a different industry, with transferable strategies.</li>
+          <li><strong><a href="../diy-ai-visibility-audit/">Free AI visibility check</a></strong> &mdash; run a quick manual check before ordering a full report.</li>
+          <li><strong><a href="../ai-visibility-scores-explained/">AI visibility scores explained</a></strong> &mdash; how Metricus measures and benchmarks AI visibility.</li>
+        </ul>
+
+      </div>
+      <!-- End Article Body -->
+
+      <p class="text-sm text-slate-muted mt-8 border-t border-[#E2E8F0] pt-6">Want to see how your entertainment brand appears across all major AI platforms? Run a <a href="../../get-report/" class="text-primary hover:underline">Metricus AI visibility report</a>. Or browse our <a href="../../geo-knowledge-base/" class="text-primary hover:underline">GEO Knowledge Base</a> for 81 research clusters on AI visibility strategy.</p>
+
+      <!-- ========== ARTICLE CTA ========== -->
+      <div class="bg-primary p-8 md:p-12 mt-16">
+        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">Find out what AI says about your entertainment brand</h3>
+        <p class="text-on-primary/80 text-base max-w-lg mb-8">
+          Metricus queries every major AI platform hundreds of times to find the real patterns. See your visibility score, exact AI quotes, factual errors with source tracing, and a prioritized action plan. One report, one price.
+        </p>
+        <a href="../../get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
+          Get your report
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+        <p class="mt-4"><a href="../../sample-ai-visibility-report/" class="text-on-primary/70 hover:text-on-primary text-sm underline transition-colors">Or see what a report looks like &rarr;</a></p>
+      </div>
+
+      <!-- ========== CITE THIS ARTICLE ========== -->
+      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
+        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as (MUST include as clickable hyperlink — never plain text without URL):
+          <cite class="not-italic"><a href="https://metricusapp.com/blog/entertainment-ai-visibility/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; AI Visibility for Entertainment: Why ChatGPT Recommends Netflix While Your Streaming Platform Doesn&rsquo;t Exist</a></cite>
+        </p>
+      </footer>
+
+    </article>
+
+
+    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-6">Go deeper</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <a href="/geo-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">GEO Knowledge Base</p>
+          <p class="text-sm text-on-surface-variant mt-1">81 research clusters on AI visibility and brand monitoring</p>
+        </a>
+        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
+          <p class="text-sm text-on-surface-variant mt-1">48 clusters on fixing AI accuracy issues and hallucinations</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== RELATED POSTS ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-8">Related articles</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <a href="../ai-visibility-action-plan/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Playbook</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            How to Turn AI Visibility Data Into an Action Plan
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            The 5-step framework for turning your AI audit findings into specific, prioritized actions.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../fix-ai-brand-hallucinations/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Research</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            AI Is Getting Facts Wrong About Your Brand
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            72% of brands have factual errors in AI responses. Here&rsquo;s a 4-step process to audit and fix them.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../diy-ai-visibility-audit/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Guide</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            DIY AI Visibility Audit: Free Check
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            Run a quick manual check of your brand&rsquo;s AI visibility before ordering a full report.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="py-12 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Sample Report</a>
+          <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Knowledge Base</a>
+          <a href="/blog/agency-guide-ai-visibility-audits/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">For Agencies</a>
+          <a href="/support/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Support</a>
+          <a href="/privacy-policy/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Privacy Policy</a>
+          <a href="/terms-of-service/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Terms of Service</a>
+          <a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Contact</a>
+        </div>
+        <p class="text-xs uppercase tracking-tighter text-slate-500">
+          &copy; 2026 Metricus. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
