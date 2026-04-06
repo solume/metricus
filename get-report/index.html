@@ -166,6 +166,25 @@
 
           <!-- Form Header -->
           <h1 class="font-headline text-5xl text-on-surface mb-4 leading-[1.05]">Buy Your AI Visibility Audit Report</h1>
+
+          <!-- Mode B: Compact picker (when no ?tier= param) — sits above subtitle -->
+          <div id="tier-picker" class="hidden mb-5">
+            <div class="grid grid-cols-3 gap-2">
+              <button type="button" data-pick-tier="snapshot" class="tier-btn border-2 border-transparent bg-surface-container-low hover:bg-surface-container px-3 py-3 text-center transition-colors cursor-pointer">
+                <span class="block font-body text-sm font-semibold text-on-surface">Snapshot</span>
+                <span class="block text-on-surface-variant text-sm">$99</span>
+              </button>
+              <button type="button" data-pick-tier="deep-dive" class="tier-btn border-2 border-primary-dim bg-surface-container-low hover:bg-surface-container px-3 py-3 text-center transition-colors cursor-pointer">
+                <span class="block font-body text-sm font-semibold text-on-surface">Deep Dive</span>
+                <span class="block text-on-surface-variant text-sm">$299</span>
+              </button>
+              <button type="button" data-pick-tier="full-arsenal" class="tier-btn border-2 border-transparent bg-surface-container-low hover:bg-surface-container px-3 py-3 text-center transition-colors cursor-pointer">
+                <span class="block font-body text-sm font-semibold text-on-surface">Full Arsenal</span>
+                <span class="block text-on-surface-variant text-sm">$499</span>
+              </button>
+            </div>
+          </div>
+
           <p id="form-subtitle" class="font-body text-on-surface-variant text-base mb-4">Pay per report. Enter the brand details, select your tier, and we'll deliver the audit to your inbox.</p>
           <ul id="tier-bullets" class="font-body text-on-surface-variant text-sm space-y-1 mb-12">
             <li>&#10003; AI mention rate across ChatGPT, Gemini, Perplexity and more</li>
@@ -219,25 +238,6 @@
 
             <!-- Report Tier -->
             <input type="hidden" name="tier" id="tier-input" value="">
-
-            <!-- Mode B: Compact picker (when no ?tier= param) -->
-            <div id="tier-picker" class="hidden">
-              <p class="text-[10px] uppercase tracking-[0.2em] font-label font-semibold text-on-surface-variant mb-4">Select Report Tier</p>
-              <div class="grid grid-cols-3 gap-2">
-                <button type="button" data-pick-tier="snapshot" class="tier-btn border-2 border-transparent bg-surface-container-low hover:bg-surface-container px-3 py-3 text-center transition-colors cursor-pointer">
-                  <span class="block font-body text-sm font-semibold text-on-surface">Snapshot</span>
-                  <span class="block text-on-surface-variant text-sm">$99</span>
-                </button>
-                <button type="button" data-pick-tier="deep-dive" class="tier-btn border-2 border-primary-dim bg-surface-container-low hover:bg-surface-container px-3 py-3 text-center transition-colors cursor-pointer">
-                  <span class="block font-body text-sm font-semibold text-on-surface">Deep Dive</span>
-                  <span class="block text-on-surface-variant text-sm">$299</span>
-                </button>
-                <button type="button" data-pick-tier="full-arsenal" class="tier-btn border-2 border-transparent bg-surface-container-low hover:bg-surface-container px-3 py-3 text-center transition-colors cursor-pointer">
-                  <span class="block font-body text-sm font-semibold text-on-surface">Full Arsenal</span>
-                  <span class="block text-on-surface-variant text-sm">$499</span>
-                </button>
-              </div>
-            </div>
 
             <script>
             (function() {
