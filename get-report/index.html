@@ -237,7 +237,7 @@
                   </div>
                 </label>
                 <label class="radio-card block cursor-pointer">
-                  <input type="radio" name="tier" value="deep-dive" class="sr-only" checked>
+                  <input type="radio" name="tier" value="deep-dive" class="sr-only">
                   <div class="flex items-center justify-between bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-5 py-4 transition-colors">
                     <div class="flex items-center gap-4">
                       <span class="radio-dot w-5 h-5 border-2 border-outline-variant rounded-full flex-shrink-0 transition-all"></span>
@@ -417,14 +417,12 @@
       } catch(e) {}
     }
 
-    // Pre-select tier from URL parameter (e.g. ?tier=snapshot)
+    // Pre-select tier from URL parameter, default to deep-dive
     (function() {
       var params = new URLSearchParams(window.location.search);
-      var tier = params.get('tier');
-      if (tier) {
-        var radio = document.querySelector('input[name="tier"][value="' + tier + '"]');
-        if (radio) radio.checked = true;
-      }
+      var tier = params.get('tier') || 'deep-dive';
+      var radio = document.querySelector('input[name="tier"][value="' + tier + '"]');
+      if (radio) radio.checked = true;
     })();
 
     // Auto-prepend https:// if user types a URL without protocol
