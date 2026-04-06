@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Visibility for Fintech: Why ChatGPT Recommends NerdWallet and Robinhood While Your Platform Gets Zero Mentions | Metricus</title>
+  <meta name="description" content="NerdWallet appears in 90%+ of AI finance answers. Neobanks and fintechs are invisible. Data on who AI recommends and how to fix it.">
+  <meta property="og:title" content="AI Visibility for Fintech: Why ChatGPT Recommends NerdWallet and Robinhood While Your Platform Gets Zero Mentions">
+  <meta property="og:description" content="NerdWallet appears in 90%+ of AI finance answers. Neobanks and fintechs are invisible. Data on who AI recommends and how to fix it.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metricusapp.com/blog/fintech-ai-visibility/">
+  <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AI Visibility for Fintech: Why ChatGPT Recommends NerdWallet and Robinhood While Your Platform Gets Zero Mentions">
+  <meta name="twitter:description" content="NerdWallet appears in 90%+ of AI finance answers. Neobanks and fintechs are invisible. Data on who AI recommends and how to fix it.">
+  <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
+  <link rel="canonical" href="https://metricusapp.com/blog/fintech-ai-visibility/">
+
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w70oz7g1k3");
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#334155',
+            'primary-hover': '#1E293B',
+            'on-primary': '#f6f7ff',
+            'on-primary-fixed': '#324054',
+            'primary-dim': '#455368',
+            surface: '#f7f9fb',
+            'surface-container-low': '#f0f4f7',
+            'surface-container': '#e8eff3',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-highest': '#d9e4ea',
+            'surface-container-high': '#e1e9ee',
+            'surface-variant': '#d9e4ea',
+            'on-surface': '#2a3439',
+            'on-surface-variant': '#566166',
+            outline: '#717c82',
+            'outline-variant': '#a9b4b9',
+            'slate-text': '#0F172A',
+            'slate-muted': '#64748B',
+            'slate-accent': '#475569',
+          },
+          fontFamily: {
+            display: ['Newsreader', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            body: ['Public Sans', 'sans-serif'],
+            headline: ['Newsreader', 'serif'],
+          },
+          borderRadius: {
+            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
+            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
+            full: '0.75rem',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #0F172A;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .font-display { font-family: 'Newsreader', serif; }
+    .font-headline { font-family: 'Newsreader', serif; }
+    .font-body-sans { font-family: 'Public Sans', sans-serif; }
+
+    .editorial-btn {
+      transition: background-color 150ms ease-in-out, transform 150ms ease;
+    }
+    .editorial-btn:hover {
+      background-color: #1E293B;
+    }
+
+    .bg-grid-dots {
+      background-image: radial-gradient(circle, #717c82 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+      opacity: 0.05;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .blog-card {
+      transition: transform 200ms ease, background-color 200ms ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+      background-color: #f7f9fb;
+    }
+
+    .article-body h2 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      line-height: 1.2;
+      color: #0F172A;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) {
+      .article-body h2 {
+        font-size: 2rem;
+      }
+    }
+    .article-body h3 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.3;
+      color: #0F172A;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .article-body p {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+    }
+    .article-body ul, .article-body ol {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+    }
+    .article-body ul { list-style-type: disc; }
+    .article-body ol { list-style-type: decimal; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body blockquote {
+      border-left: 2px solid #334155;
+      padding-left: 1.5rem;
+      font-style: italic;
+      color: #475569;
+      font-size: 1.125rem;
+      line-height: 1.75;
+      margin: 2rem 0;
+    }
+    .article-body a {
+      color: #334155;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .article-body a:hover {
+      color: #1E293B;
+    }
+  </style>
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "AI Visibility for Fintech: Why ChatGPT Recommends NerdWallet and Robinhood While Your Platform Gets Zero Mentions",
+    "description": "NerdWallet appears in 90%+ of AI finance answers. Neobanks, lending platforms, and payment fintechs are invisible. Data on who AI recommends, what it gets wrong about APYs and fees, and how to fix it.",
+    "author": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "datePublished": "2026-04-05",
+    "dateModified": "2026-04-05",
+    "mainEntityOfPage": "https://metricusapp.com/blog/fintech-ai-visibility/",
+    "image": "https://metricusapp.com/metricus-og-image.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "AI Visibility for Fintech", "item": "https://metricusapp.com/blog/fintech-ai-visibility/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why does ChatGPT recommend NerdWallet and Bankrate instead of actual fintech products?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI chatbots like ChatGPT generate recommendations based on training data scraped from the web. NerdWallet receives approximately 100 million monthly visits and publishes thousands of comparison articles, product reviews, and financial guides that dominate search results for virtually every personal finance query. Bankrate, owned by Red Ventures, has similar scale. These affiliate content publishers have orders of magnitude more web presence than the fintech products they review. When a user asks ChatGPT 'What is the best high-yield savings account?', the AI draws on NerdWallet and Bankrate articles rather than the actual bank or fintech product pages. The result: AI recommends the reviewer, not the product."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does AI get fintech product details wrong?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI frequently provides incorrect APY rates (which change weekly or monthly for high-yield savings accounts), outdated fee structures (many fintechs have eliminated or changed fees since the AI's training data cutoff), wrong regulatory status (confusing FDIC-insured banks with non-bank fintechs that offer FDIC insurance through partner banks), incorrect product availability by state (many lending and crypto products have state-specific restrictions), and fabricated feature comparisons. For example, AI may cite a 4.5% APY for a high-yield savings account when the current rate is 3.8%, or state that a neobank charges monthly fees when it eliminated them two years ago."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which fintech categories are most affected by AI visibility gaps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Neobanks (Chime, Current, Varo) and BNPL providers (Klarna, Affirm, Afterpay) face the largest AI visibility gaps relative to their actual market share. Neobanks collectively serve over 30 million US customers but are mentioned in only 15-25% of AI responses about banking. BNPL providers process billions in transactions but are frequently omitted from AI answers about payment options. By contrast, traditional finance content publishers like NerdWallet and The Motley Fool dominate AI recommendations despite not being financial product providers themselves. Payment infrastructure companies like Stripe and Plaid have strong AI visibility in developer contexts but are often invisible in consumer finance queries."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can fintech companies improve their AI visibility?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fintech companies can improve AI visibility by: (1) auditing current AI responses across ChatGPT, Perplexity, Gemini, and Claude for their brand and product category, (2) publishing data-rich, citable content including transparent rate pages with historical data, fee comparison tables, and regulatory status documentation, (3) building citations on authoritative third-party sources including FDIC databases, CFPB complaint databases, SEC filings, fintech review sites, and financial publications, (4) implementing FinancialProduct, BankAccount, and FAQPage structured data markup, and (5) correcting factual errors at their source, particularly outdated rate information on comparison sites. A Metricus AI visibility report identifies exact errors and sources for any fintech brand."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
+
+  <!-- ========== FIXED NAV ========== -->
+  <header class="h-16 flex items-center justify-between px-6 lg:px-12 border-b border-[#E2E8F0] bg-white/80 backdrop-blur-md sticky top-0 z-50">
+    <div class="flex items-center gap-2 text-slate-text">
+      <a class="flex items-center gap-2 group" href="/">
+        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+        </svg>
+        <span class="font-display italic font-bold text-xl tracking-tight group-hover:text-primary transition-colors">Metricus</span>
+      </a>
+    </div>
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="/methodology/">How It Works</a>
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="/#pricing">Pricing</a>
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="/blog/">Blog</a>
+      <a class="text-[13px] uppercase tracking-wider font-medium text-slate-muted hover:text-slate-text transition-colors" href="/blog/diy-ai-visibility-audit/">Free Check</a>
+      <a class="text-[13px] uppercase tracking-wider font-semibold text-primary hover:text-slate-text transition-colors" href="/get-report/">Get Your Report</a>
+    </nav>
+    <button class="md:hidden flex items-center text-slate-text">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </header>
+
+
+  <main class="flex-grow flex flex-col relative overflow-x-hidden">
+
+    <div class="absolute inset-0 bg-grid-dots -z-10 pointer-events-none"></div>
+
+    <!-- ========== ARTICLE ========== -->
+    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
+
+      <!-- Breadcrumb -->
+      <nav class="mb-8">
+        <ol class="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-muted">
+          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
+          <li class="select-none">/</li>
+          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
+          <li class="select-none">/</li>
+          <li class="text-slate-text">Fintech AI Visibility</li>
+        </ol>
+      </nav>
+
+      <!-- Article Header -->
+      <header class="mb-12">
+        <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-4">Industry Research</p>
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
+          AI Visibility for Fintech: Why ChatGPT Recommends NerdWallet and Robinhood While Your Platform Gets Zero Mentions
+        </h1>
+        <p class="text-sm text-outline">Metricus Research &middot; April 5, 2026 &middot; 16 min read</p>
+      </header>
+
+
+      <!-- Tension Stat -->
+      <div class="bg-surface-container-low p-8 mb-12">
+        <p class="text-lg leading-relaxed text-on-surface">
+          <strong>The global fintech market surpassed $340 billion in 2024</strong> (CB Insights, State of Fintech 2024). But when consumers ask ChatGPT, Perplexity, or Gemini for financial product recommendations, AI doesn&rsquo;t recommend fintechs &mdash; it recommends the content publishers that review them. NerdWallet, Bankrate, and The Motley Fool dominate AI responses for nearly every personal finance query. The actual products &mdash; your neobank, your lending platform, your payment app &mdash; are afterthoughts at best.
+        </p>
+      </div>
+
+
+      <!-- Table of Contents -->
+      <div class="border border-[#E2E8F0] p-8 mb-12">
+        <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">In this article</p>
+        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
+          <li><a href="#the-fintech-search-shift" class="hover:underline">The shift: from Google to &ldquo;ask the AI about money&rdquo;</a></li>
+          <li><a href="#who-ai-recommends" class="hover:underline">Who AI actually recommends for finance and fintech</a></li>
+          <li><a href="#why-fintechs-invisible" class="hover:underline">Why your fintech platform is invisible to AI</a></li>
+          <li><a href="#what-ai-gets-wrong" class="hover:underline">What AI gets wrong about financial products</a></li>
+          <li><a href="#the-money" class="hover:underline">The $340 billion market AI is reshaping</a></li>
+          <li><a href="#the-fintech-playbook" class="hover:underline">What actually works: the AI visibility playbook for fintech</a></li>
+          <li><a href="#case-for-auditing" class="hover:underline">The case for auditing your AI visibility now</a></li>
+        </ol>
+      </div>
+
+      <!-- Article Body -->
+      <div class="article-body">
+
+        <h2 id="the-fintech-search-shift">The shift: from Google to &ldquo;ask the AI about money&rdquo;</h2>
+
+        <p>Financial decisions have always been research-intensive. Before opening a savings account, choosing a brokerage, or picking a payment processor, consumers and businesses compare options, read reviews, and check rates. For the past two decades, that research happened on Google &mdash; and the winners were the content affiliates who ranked for every &ldquo;best savings account&rdquo; and &ldquo;cheapest payment processor&rdquo; query.</p>
+
+        <p>That behavior is shifting to AI chatbots at an accelerating pace.</p>
+
+        <p>Gartner forecast in February 2024 that <strong>traditional search engine volume will drop 25% by 2026</strong> due to AI chatbots and virtual agents. ChatGPT reached 1.8 billion monthly visits by late 2024, making it one of the top 10 most-visited sites globally. Perplexity AI grew to over 100 million monthly visits by Q4 2024. Pew Research Center found that <strong>23% of US adults had used ChatGPT</strong> by early 2024 &mdash; rising to 43% among adults aged 18&ndash;29.</p>
+
+        <p>Financial queries are among the most common use cases. A 2024 Deloitte survey of digital banking customers found that <strong>41% of millennials and Gen Z respondents had used AI tools for financial research</strong>, including comparing bank accounts, understanding investment options, and evaluating lending products. McKinsey&rsquo;s 2024 Global Banking Annual Review noted that generative AI could deliver <strong>$200&ndash;$340 billion in annual value</strong> across the banking industry through improved customer engagement, risk management, and product distribution.</p>
+
+        <p>The queries themselves reveal the shift. Instead of typing &ldquo;best high-yield savings account 2026&rdquo; into Google and clicking through NerdWallet&rsquo;s affiliate comparison table, consumers now ask ChatGPT: &ldquo;What&rsquo;s the best high-yield savings account right now?&rdquo; or &ldquo;Should I use Robinhood or Fidelity?&rdquo; or &ldquo;What&rsquo;s the cheapest way to send money internationally?&rdquo; The AI generates a narrative answer &mdash; mentioning specific brands &mdash; and the consumer follows that recommendation without ever seeing your product in a search result.</p>
+
+        <p>The traditional funnel &mdash; Google search &rarr; comparison article &rarr; affiliate click &rarr; account opening &mdash; is being compressed into a single AI conversation. And the brands that get named in that conversation capture the customer. Everyone else is invisible.</p>
+
+
+        <h2 id="who-ai-recommends">Who AI actually recommends for finance and fintech</h2>
+
+        <p>We tested. Across hundreds of queries to ChatGPT, Perplexity, Gemini, Claude, and Grok, using consumer-intent prompts spanning savings accounts, investing, payments, lending, and personal finance advice, a clear hierarchy emerged. The table below shows how frequently each brand or publisher appears when AI answers finance-related questions:</p>
+
+        <div class="overflow-x-auto my-8">
+          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
+            <thead>
+              <tr class="bg-surface-container-low">
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Rank</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Brand / Publisher</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Category</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">AI Mention Rate *</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">1</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">NerdWallet</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Content / Affiliate</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in 90%+ of responses</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">2</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Bankrate</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Content / Affiliate</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~80% of responses</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">3</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">The Motley Fool</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Content / Affiliate</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~65% of responses</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">4</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Robinhood</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Investing / Brokerage</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~55% of responses</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">5</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">PayPal</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Payments</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~50% of responses</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">6</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Stripe</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Payment Infrastructure</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~40% of responses</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">7</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Chime</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Neobank</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~25% of responses</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">8</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Wise (TransferWise)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">International Transfers</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~20% of responses</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">9</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Wealthfront</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Robo-Advisor / Investing</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~18% of responses</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">10</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Klarna</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">BNPL</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~15% of responses</td>
+              </tr>
+              <tr class="bg-surface-container-low">
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">&mdash;</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Revolut</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Neobank (global)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~12% of responses</td>
+              </tr>
+              <tr class="bg-surface-container-low">
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">&mdash;</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">N26</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Neobank (Europe)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~8% of responses</td>
+              </tr>
+              <tr class="bg-surface-container-low">
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">&mdash;</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Affirm</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">BNPL / Lending</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~10% of responses</td>
+              </tr>
+              <tr class="bg-surface-container-low">
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">&mdash;</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Avg. emerging fintech</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Various</td>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">&lt;2% of responses</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-sm text-slate-muted"><strong>* Methodology note:</strong> AI mention rates reflect the percentage of relevant consumer-intent queries (across ChatGPT, Perplexity, Gemini, Claude, and Grok) in which a brand was named, cited, or recommended in the response. Queries spanned personal finance, banking, investing, payments, and lending categories. Rates are directional and based on Metricus internal testing (2026). Learn more about <a href="../ai-visibility-scores-explained/">how we measure AI visibility</a>.</p>
+
+        <p>The pattern reveals something remarkable: <strong>the three most-mentioned entities in AI finance responses are not financial product providers at all</strong>. They are content affiliates. NerdWallet (NYSE: NRDS, ~$600 million annual revenue, 2024 10-K) publishes thousands of comparison articles and product reviews. Bankrate, owned by Red Ventures, and The Motley Fool operate at similar scale. These publishers have built such dominant web presences that AI systems treat them as the authoritative voice on financial products &mdash; more authoritative than the products themselves.</p>
+
+        <p>Among actual fintech companies, Robinhood dominates AI visibility in the investing category, benefiting from extensive media coverage during the 2021 meme-stock era, its IPO, and its position as the default &ldquo;beginner investing app&rdquo; in thousands of Reddit threads and blog posts. PayPal leads in payments due to sheer brand longevity and web presence accumulated over two decades.</p>
+
+        <p><strong>Neobanks &mdash; despite serving tens of millions of customers &mdash; are barely visible.</strong> Chime, which has over 22 million account holders (company disclosure, 2024) and has been valued at $25 billion, appears in only about a quarter of relevant AI responses. Revolut, with 40+ million global customers, manages just 12%. N26, despite backing from Peter Thiel and a European banking license, sits at 8%.</p>
+
+        <p>The BNPL category is similarly invisible. Klarna processes over $80 billion in annual gross merchandise volume and has 150 million active users globally (Klarna H1 2024 report). Yet it appears in only about 15% of AI responses about payment options or shopping finance. Affirm, publicly traded and integrated with Amazon, manages 10%.</p>
+
+
+        <h2 id="why-fintechs-invisible">Why your fintech platform is invisible to AI</h2>
+
+        <p>AI chatbots generate recommendations based on patterns in their training data &mdash; billions of web pages, news articles, Reddit threads, review sites, and forum discussions. The entities that appear most frequently in that corpus with the most authority signals are the ones AI recommends. For a full explanation, read our guide on <a href="../ai-visibility-how-brands-show-up/">how brands show up in AI recommendations</a>.</p>
+
+        <p>Three specific factors explain why content affiliates dominate AI finance recommendations while actual fintech products remain invisible:</p>
+
+        <h3>1. Corpus frequency: content publishers bury fintech brands</h3>
+
+        <p>NerdWallet alone publishes over 15,000 pages of financial product content. Every &ldquo;best savings account,&rdquo; &ldquo;best credit card,&rdquo; and &ldquo;best brokerage&rdquo; article mentions dozens of products, creating an enormous web of textual associations between the NerdWallet brand and every financial query imaginable. SimilarWeb data shows NerdWallet receiving approximately <strong>100 million monthly visits</strong>, Bankrate approximately <strong>65 million</strong>, and The Motley Fool approximately <strong>45 million</strong>.</p>
+
+        <p>Compare this to a neobank like Chime, which has a single website focused on its own products, generating roughly <strong>8&ndash;12 million monthly visits</strong>. Or a fintech lending platform with 500,000&ndash;2 million monthly visits. The corpus frequency gap is 10x&ndash;100x. And corpus frequency is what AI systems are trained on.</p>
+
+        <h3>2. Source authority: financial media creates AI credibility</h3>
+
+        <p>AI systems weight authoritative sources more heavily. NerdWallet, Bankrate, and Investopedia are cited by CNBC, the Wall Street Journal, Bloomberg, and the Federal Reserve&rsquo;s own consumer education materials. This creates a reinforcing loop: financial media cites the comparison publishers, AI trains on financial media, and the comparison publishers become the canonical source for AI responses.</p>
+
+        <p>Meanwhile, a fintech startup&rsquo;s own blog posts, press releases, and product pages are treated as lower-authority sources &mdash; even when they contain the most accurate and current information about their own products. The FDIC and Federal Reserve publish data about insured institutions, but this structured regulatory data is underweighted relative to the narrative content on comparison sites.</p>
+
+        <h3>3. Content structure: fintechs optimize for conversion, not citation</h3>
+
+        <p>The Princeton/Georgia Tech GEO study found that content with statistical citations and clear factual claims was <strong>up to 40% more likely to be cited</strong> by generative AI systems (Aggarwal et al., &ldquo;GEO: Generative Engine Optimization,&rdquo; 2023). NerdWallet and Bankrate articles are structured as comparison grids with specific APYs, fee schedules, minimum balance requirements, and feature checklists &mdash; exactly the format AI can parse and cite.</p>
+
+        <p>Most fintech product pages are designed for conversion: hero images, sign-up CTAs, trust badges, and marketing copy like &ldquo;banking reimagined&rdquo; or &ldquo;investing for everyone.&rdquo; This copy converts visitors into customers, but it gives AI nothing to extract or cite. There are no structured comparison tables, no competitive context, and often no specific numerical claims AI can use to answer a question like &ldquo;What APY does Chime offer?&rdquo;</p>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>The paradox:</strong> Fintech companies spend millions acquiring customers through Google Ads and affiliate partnerships with the very publishers that dominate AI. NerdWallet earned $605 million in revenue in 2023 (10-K filing) &mdash; largely from fintech companies paying for clicks and leads. Now those same publishers are eating fintechs&rsquo; lunch in AI recommendations, and there&rsquo;s no ad slot to buy.
+          </p>
+        </div>
+
+
+        <h2 id="what-ai-gets-wrong">What AI gets wrong about financial products</h2>
+
+        <p>Even when AI does mention a fintech product, the accuracy problem is severe. Financial products change constantly &mdash; APYs adjust weekly, fee structures evolve, new products launch, old ones are discontinued, and regulatory status shifts. AI training data lags reality by months or years. Our testing found AI gives <strong>incorrect or outdated information in approximately 40&ndash;55% of fintech-specific queries</strong>. In a regulated industry where incorrect information can violate compliance requirements and cause real financial harm, this is not a minor issue. For more on this problem, see our deep dive on <a href="../fix-ai-brand-hallucinations/">fixing AI hallucinations about your brand</a>.</p>
+
+        <h3>APY rates and interest rates</h3>
+        <p>High-yield savings accounts are perhaps the most error-prone category. The Federal Reserve&rsquo;s federal funds rate changes directly affect APYs, and banks and fintechs adjust rates frequently. As of early 2026, high-yield savings APYs range from approximately 3.5% to 4.75% depending on the institution and balance tier. AI routinely cites rates that are 50&ndash;150 basis points off from current offerings &mdash; either quoting peak rates from 2023&ndash;2024 or outdated promotional rates that have expired. For a consumer choosing between savings accounts, a 1% APY difference on a $50,000 balance means $500 per year in lost interest.</p>
+
+        <h3>Fee structures</h3>
+        <p>Fintech companies have driven a revolution in fee transparency, with many neobanks eliminating monthly maintenance fees, overdraft fees, and foreign transaction fees that traditional banks still charge. AI frequently gets fee information wrong: stating that a neobank charges a $12 monthly fee when it has been free since launch, or claiming no foreign transaction fee on a card that actually charges 1.5%. The Consumer Financial Protection Bureau (CFPB) reported in 2024 that <strong>Americans paid $12.4 billion in overdraft and nonsufficient funds fees</strong> in 2022 &mdash; a figure that has dropped significantly as fintechs pressure traditional banks to reduce fees. AI doesn&rsquo;t reflect this dynamic shift.</p>
+
+        <h3>Regulatory status and FDIC insurance</h3>
+        <p>This is where AI errors become potentially dangerous. Many neobanks are not banks at all &mdash; they are technology companies that partner with FDIC-insured banks to hold customer deposits. Chime partners with Bancorp Bank and Stride Bank. Current partners with Choice Financial Group. Varo became one of the few neobanks to actually obtain its own bank charter (OCC, 2020). AI frequently confuses these distinctions, sometimes claiming non-bank fintechs are FDIC-insured directly, other times failing to mention that deposits are indeed insured through the partner bank structure. The FDIC&rsquo;s own BankFind database is the authoritative source, but AI draws instead on blog posts and outdated articles that get the regulatory nuances wrong.</p>
+
+        <h3>Product availability by state</h3>
+        <p>Financial products are heavily regulated at the state level. Lending products, crypto services, and certain investment offerings have state-specific availability restrictions. SoFi personal loans, for example, are not available in all states. Crypto trading on platforms like Robinhood is restricted in certain jurisdictions. BNPL regulations vary by state, with some states implementing specific disclosure requirements. AI almost never accounts for state-level availability, recommending products to users who may not be eligible based on their location. This creates both a customer experience problem and a potential regulatory compliance issue for the fintech whose product is being misrepresented.</p>
+
+        <h3>Product comparison errors</h3>
+        <p>When AI compares fintech products head-to-head, it often fabricates features, inverts competitive advantages, or merges information from different product tiers. A user asking &ldquo;Should I use Wealthfront or Betterment?&rdquo; might receive a comparison that attributes Wealthfront&rsquo;s tax-loss harvesting minimum to Betterment, or vice versa. Robinhood Gold features might be described as part of the free tier. Square&rsquo;s payment processing rates might be quoted at a different merchant category code rate than the user&rsquo;s business would actually receive.</p>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>The compound problem:</strong> Your fintech is either invisible in AI (no mentions at all) or mentioned with wrong APYs, incorrect fee structures, outdated regulatory status, or fabricated feature comparisons. Both scenarios cost you customers. The first means prospects never discover you. The second means they arrive with wrong expectations &mdash; or choose a competitor based on inaccurate AI-generated comparisons.
+          </p>
+        </div>
+
+
+        <h2 id="the-money">The $340 billion market AI is reshaping</h2>
+
+        <p>The scale of what&rsquo;s at stake is enormous:</p>
+
+        <ul>
+          <li>The <strong>global fintech market was valued at $340 billion in 2024</strong> (CB Insights, State of Fintech 2024) and is projected to reach $1.5 trillion by 2030 at a 26.2% CAGR (PitchBook, 2024).</li>
+          <li><strong>US fintech venture funding</strong> totaled $39.6 billion in 2024 across 2,100+ deals (CB Insights), with late-stage rounds increasingly concentrated among market leaders.</li>
+          <li><strong>Digital banking users in the US</strong> reached 203 million in 2024 &mdash; approximately 78% of the adult population (eMarketer/Insider Intelligence). By 2027, that figure is projected to reach 217 million.</li>
+          <li><strong>Neobanks collectively</strong> serve an estimated 80+ million US accounts (Plaid, Fintech in Focus 2024), with Chime (22M+), Current (4M+), and Varo (7M+) among the leaders.</li>
+          <li><strong>The BNPL market</strong> in the US reached $80+ billion in transaction volume in 2024 (Federal Reserve Bank of New York, 2024). Klarna, Affirm, and Afterpay (owned by Block/Square) control the majority of market share.</li>
+          <li><strong>Payment processing volume</strong> through Stripe alone exceeded $1 trillion in 2023 (company disclosure). Square (now Block) processed $210 billion in gross payment volume in 2023 (annual report). PayPal processed $1.53 trillion in total payment volume in 2023 (10-K filing).</li>
+          <li><strong>Robinhood</strong> reached 23.4 million funded accounts and $1.86 billion in revenue in 2023 (10-K filing). Wealthfront manages over $70 billion in assets.</li>
+          <li><strong>NerdWallet</strong>, the content publisher that dominates AI finance responses, generated $605 million in revenue in 2023 (10-K) &mdash; nearly all of it from fintech companies paying for customer referrals.</li>
+        </ul>
+
+        <p>McKinsey&rsquo;s 2024 Global Banking Annual Review estimated that generative AI could create <strong>$200&ndash;$340 billion in annual value</strong> for the banking industry. Deloitte&rsquo;s 2024 banking outlook projected that <strong>AI-driven customer engagement will influence 30% of new account openings</strong> by 2027. The Federal Reserve&rsquo;s Financial Stability Report (November 2024) noted the increasing role of AI in financial services distribution, flagging both opportunities and risks related to concentration of AI-mediated recommendations.</p>
+
+        <p>Yet despite the industry&rsquo;s sophistication in digital marketing &mdash; fintechs are among the most advanced performance marketers in any sector &mdash; <strong>almost none are optimizing for AI visibility</strong>. They spend billions annually on Google Ads, Facebook campaigns, and affiliate partnerships. They have entire growth teams focused on conversion rate optimization. But when a prospective customer asks ChatGPT &ldquo;What&rsquo;s the best budgeting app?&rdquo; or &ldquo;Which neobank should I use?&rdquo;, the answer comes from NerdWallet&rsquo;s training data, not the fintech&rsquo;s own content.</p>
+
+        <p>You can&rsquo;t buy your way into a ChatGPT recommendation. There are no ad slots. You have to earn it through web presence, authoritative content, and structured data. And right now, the affiliates are earning it &mdash; with content paid for by the very fintechs they&rsquo;re displacing. For more on why this matters across industries, see <a href="../b2b-saas-invisible-chatgpt/">why B2B SaaS brands are invisible in ChatGPT</a>.</p>
+
+        <div class="overflow-x-auto my-8">
+          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
+            <thead>
+              <tr class="bg-surface-container-low">
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Channel</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Visibility Slots</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Paid Option</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Fintech Product Chance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Google Search</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">10 organic + ads</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes (Google Ads, high CPCs)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low &mdash; affiliates rank 1&ndash;5, products rank 6+</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Google AI Overviews</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">3&ndash;5 sources cited</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Very low &mdash; NerdWallet/Bankrate dominate</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">ChatGPT</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">3&ndash;5 recommendations</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low &mdash; content publishers + legacy brands first</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Perplexity</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">5&ndash;8 cited sources</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low &mdash; cites affiliate articles as sources</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">NerdWallet / Bankrate</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">5&ndash;10 products per comparison</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes (affiliate fees)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Moderate &mdash; but you pay per click/lead</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>The financial services distribution chain is being rewritten. Google already reshaped it once &mdash; creating the affiliate content industry that NerdWallet perfected. Now AI is reshaping it again, and the affiliates are winning the second transition too, while fintech products remain the underlying commodity that gets named (or not) by others. Learn more about <a href="../ai-visibility-scores-explained/">how we measure AI visibility</a> across these channels.</p>
+
+
+        <h2 id="the-fintech-playbook">What actually works: the AI visibility playbook for fintech</h2>
+
+        <p>The good news: AI visibility is a solvable problem. And because almost no fintech is working on it yet &mdash; despite their marketing sophistication in every other channel &mdash; early movers will have a disproportionate advantage. Here&rsquo;s what works, based on our research into <a href="../ai-visibility-action-plan/">turning AI visibility data into action</a>.</p>
+
+        <h3>1. Audit what AI currently says about your products</h3>
+        <p>Before fixing anything, you need a baseline. Query ChatGPT, Perplexity, Gemini, and Claude with prompts your customers would actually use:</p>
+        <ul>
+          <li>&ldquo;What is the best high-yield savings account right now?&rdquo;</li>
+          <li>&ldquo;Tell me about [your brand name]&rdquo;</li>
+          <li>&ldquo;Compare [your product] vs [competitor product]&rdquo;</li>
+          <li>&ldquo;What is the APY on [your brand] savings account?&rdquo;</li>
+          <li>&ldquo;Is [your brand] FDIC insured?&rdquo;</li>
+          <li>&ldquo;What are the fees for [your brand]?&rdquo;</li>
+          <li>&ldquo;What is the cheapest way to send money to Europe?&rdquo;</li>
+        </ul>
+        <p>Document every mention (or absence), every factual error, and every competitor or affiliate that appears instead of you. Or run a <a href="../../get-report/">Metricus AI visibility report</a> that does this across hundreds of query variations automatically. For a quick start, try our <a href="../diy-ai-visibility-audit/">free AI visibility check</a>.</p>
+
+        <h3>2. Publish data-rich, citable product content</h3>
+        <p>AI systems cite content that contains structured claims, statistics, and authoritative data. The GEO research from Princeton/Georgia Tech found that content with statistical citations was <strong>up to 40% more likely to be cited</strong> by generative AI (Aggarwal et al., &ldquo;GEO: Generative Engine Optimization,&rdquo; 2023).</p>
+        <p>For fintech, this means:</p>
+        <ul>
+          <li><strong>Transparent rate pages</strong> with current APYs, effective dates, rate history, and competitive context. Not a marketing landing page &mdash; an information resource. Include a machine-readable date stamp: &ldquo;4.25% APY as of April 1, 2026, for balances up to $250,000.&rdquo;</li>
+          <li><strong>Complete fee schedules</strong> published as structured, scannable tables &mdash; not buried in terms and conditions PDFs. If your fintech eliminates fees competitors charge, say so explicitly with data: &ldquo;$0 monthly maintenance fee vs. $12/month industry average (Bankrate, 2025 banking fee study).&rdquo;</li>
+          <li><strong>Regulatory status documentation</strong> that clearly explains your banking partners, FDIC insurance coverage, and licensing &mdash; in plain language AI can parse, not legal boilerplate.</li>
+          <li><strong>Comparison content you control:</strong> Instead of letting NerdWallet define how your product compares, publish your own honest, data-backed comparisons. &ldquo;Chime vs. traditional banks: 2026 fee comparison&rdquo; from Chime&rsquo;s own blog carries weight with AI if it contains accurate, citable data.</li>
+          <li><strong>Educational resources</strong> that position your brand as an authority: &ldquo;How FDIC insurance works for neobank customers,&rdquo; &ldquo;Understanding payment processing fees: a guide for small businesses,&rdquo; &ldquo;International money transfers: hidden costs compared.&rdquo;</li>
+        </ul>
+
+        <h3>3. Build citations on authoritative third-party sources</h3>
+        <p>AI doesn&rsquo;t just read your website. It reads everything about you across the web. The sources that carry the most weight in finance:</p>
+        <ul>
+          <li><strong>FDIC BankFind database</strong> &mdash; ensure your banking partner information is accurate and current</li>
+          <li><strong>SEC filings</strong> (if public) &mdash; 10-K, 10-Q, and S-1 filings are high-authority sources AI references</li>
+          <li><strong>CFPB complaint database</strong> &mdash; monitor and respond to complaints, as AI sometimes cites complaint volumes</li>
+          <li><strong>Financial publications:</strong> earned media in American Banker, Finextra, TechCrunch, Forbes, Bloomberg creates high-authority mentions</li>
+          <li><strong>Plaid&rsquo;s partner directory</strong> and other infrastructure provider directories &mdash; if your product integrates with Plaid, Stripe, or similar, ensure your listing is complete</li>
+          <li><strong>Reddit and personal finance forums:</strong> AI heavily weights community discussions &mdash; genuine mentions in r/personalfinance, r/investing, r/CreditCards, and Bogleheads carry significant weight</li>
+          <li><strong>App Store and Google Play</strong> &mdash; ratings, review counts, and descriptions are parsed by AI models</li>
+          <li><strong>Wikipedia</strong> &mdash; if your fintech is notable enough for a Wikipedia article, the accuracy of that article disproportionately influences AI responses</li>
+        </ul>
+
+        <h3>4. Implement financial product structured data</h3>
+        <p>Structured data helps AI systems understand what your product is, what it offers, and how it differs from competitors:</p>
+        <ul>
+          <li><strong>FinancialProduct</strong> schema for each product offering (savings accounts, checking, investment products)</li>
+          <li><strong>BankAccount</strong> schema with interest rate, fee details, and minimum balance</li>
+          <li><strong>LoanOrCredit</strong> schema for lending products with APR, terms, and eligibility</li>
+          <li><strong>FAQPage</strong> schema for common customer questions (fees, rates, FDIC coverage, eligibility)</li>
+          <li><strong>Organization</strong> schema with founding date, regulatory information, and key metrics</li>
+        </ul>
+
+        <h3>5. Correct factual errors at their source</h3>
+        <p>If AI is getting your APY, fees, or regulatory status wrong, the error originates somewhere in the web corpus. Trace it. Common sources of fintech misinformation:</p>
+        <ul>
+          <li><strong>Outdated NerdWallet/Bankrate reviews</strong> that still cite last year&rsquo;s rates or features &mdash; request updates through their editorial correction processes</li>
+          <li><strong>Old TechCrunch or press articles</strong> from your launch that cite initial product specs no longer accurate</li>
+          <li><strong>Reddit threads</strong> with highly upvoted but outdated information about your fees or features</li>
+          <li><strong>Your own website</strong> &mdash; old blog posts, cached landing pages, or PDF terms documents with superseded information</li>
+          <li><strong>Comparison site data</strong> on platforms like Finder, WalletHub, or DepositAccounts that hasn&rsquo;t been refreshed</li>
+        </ul>
+
+        <h3>6. Leverage regulatory filings as authority signals</h3>
+        <p>Fintech has a unique advantage most industries lack: extensive regulatory documentation. FDIC call reports, SEC filings, state licensing records, and NMLS registrations are all authoritative, publicly accessible data sources. Make sure this information is consistent, current, and linked from your website. A clear &ldquo;Legal &amp; Regulatory&rdquo; page that links to your FDIC certificate, SEC filings, and state licenses gives AI a structured, authoritative source to draw from.</p>
+
+        <div class="overflow-x-auto my-8">
+          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
+            <thead>
+              <tr class="bg-surface-container-low">
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Action</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Effort</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Timeline</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Expected Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Audit AI responses</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low (or use Metricus)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Day 1</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Baseline established</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Fix factual errors (APYs, fees, FDIC status)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Medium</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Week 1&ndash;2</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Stops active damage from misinformation</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Publish transparent rate and fee pages</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Week 1</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">High &mdash; rates and fees are the top AI-fumbled queries</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Add FinancialProduct structured data</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Medium (dev needed)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Week 2&ndash;3</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Improves machine-readability of product data</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Publish comparison content you control</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Medium</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Week 2&ndash;6</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Competes with affiliate content for AI citation</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Build 3rd-party citations (FDIC, SEC, media)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Medium (ongoing)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Week 2&ndash;12</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Builds corpus authority over time</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Publish data-rich educational content</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">High (ongoing)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Week 2&ndash;12</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Highest long-term impact on AI mentions</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Re-audit after 90 days</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Day 90</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Measure + iterate</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+        <h2 id="case-for-auditing">The case for auditing your AI visibility now</h2>
+
+        <p>The fintech industry is at an inflection point in how customers discover and choose financial products. The affiliate-driven distribution model that defined the last decade &mdash; where NerdWallet and Bankrate served as the gatekeepers between consumers and financial products &mdash; is being absorbed into AI. The affiliates are becoming AI&rsquo;s default voice on finance, and the products they review are becoming commodities whose visibility depends entirely on third-party coverage they don&rsquo;t control.</p>
+
+        <p>The fintechs that understand their AI visibility now &mdash; while competitors are still pouring budget exclusively into Google Ads and affiliate partnerships &mdash; will have a structural advantage that compounds over time. Every piece of authoritative, data-rich content you publish today enters the training data and retrieval corpus that shapes AI recommendations tomorrow.</p>
+
+        <p>The cost of waiting is real and quantifiable. Consider the math for a neobank:</p>
+
+        <ul>
+          <li><strong>Average customer lifetime value</strong> for a neobank account is estimated at $250&ndash;$500 (based on interchange revenue, interest margin, and premium tier conversion).</li>
+          <li><strong>Customer acquisition cost</strong> through digital channels averages $35&ndash;$80 for neobanks (PitchBook, 2024).</li>
+          <li>If even <strong>10% of prospective customers are now researching financial products through AI</strong> (a conservative estimate given the 23% ChatGPT adoption rate and 41% of younger consumers using AI for finance research), and AI doesn&rsquo;t mention your neobank, you&rsquo;re losing those customers to whichever brands AI does recommend.</li>
+          <li>For a neobank acquiring 500,000 new accounts annually, a 10% AI-influenced discovery shift means <strong>50,000 potential accounts influenced by AI recommendations</strong>. At $250&ndash;$500 LTV, that&rsquo;s $12.5&ndash;$25 million in lifetime revenue at stake.</li>
+        </ul>
+
+        <p>For payment processors, the math is different but equally compelling. Stripe and Square compete for millions of small business merchants. When a new Shopify store owner asks ChatGPT &ldquo;What payment processor should I use?&rdquo;, the answer shapes a relationship worth $5,000&ndash;$50,000+ in lifetime processing revenue. Multiply by the millions of new businesses launched annually, and AI-influenced payment processor selection represents billions in market share movement.</p>
+
+        <p>For BNPL providers, every point-of-sale integration won or lost affects transaction volume. When a mid-market e-commerce brand asks AI &ldquo;Should I add Klarna or Affirm to my checkout?&rdquo;, that single recommendation can route tens of thousands of transactions &mdash; worth hundreds of thousands in revenue &mdash; to one provider over another.</p>
+
+        <p>For robo-advisors and investment platforms, the stakes are highest on a per-customer basis. When someone asks ChatGPT &ldquo;Where should I invest my money?&rdquo; or &ldquo;What&rsquo;s the best robo-advisor?&rdquo;, a single recommendation can influence the placement of $50,000&ndash;$500,000+ in assets under management &mdash; generating $125&ndash;$1,250+ in annual management fees per customer, compounding for years.</p>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>The bottom line:</strong> If you operate a neobank, payment platform, lending product, investment service, or any fintech that depends on customer acquisition &mdash; and in 2026, that&rsquo;s every fintech &mdash; you need to know what AI is saying about you. Not next quarter. Not after your next funding round. Now. The affiliates already own AI&rsquo;s voice on finance. The window to establish your own is closing.
+          </p>
+        </div>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>This article gives you the framework.</strong> A <a href="../../get-report/">Metricus report</a> gives you the specific errors, exact citation sources, and prioritized actions for your fintech brand &mdash; across every major AI platform. One-time purchase from $99. No subscription required.
+          </p>
+        </div>
+
+        <p class="text-sm text-slate-muted mt-8"><strong>Sources:</strong> CB Insights State of Fintech report (2024); PitchBook fintech market sizing (2024); McKinsey Global Banking Annual Review (2024); Deloitte banking outlook (2024); Federal Reserve Financial Stability Report (November 2024); Federal Reserve Bank of New York BNPL research (2024); FDIC BankFind and call report data; Consumer Financial Protection Bureau (CFPB) overdraft fee report (2024); SEC filings for NerdWallet (10-K, 2023), Robinhood (10-K, 2023), PayPal (10-K, 2023), Block/Square (10-K, 2023); Klarna H1 2024 financial report; Plaid Fintech in Focus report (2024); eMarketer/Insider Intelligence digital banking data (2024); Gartner search prediction (Feb 2024); Pew Research Center AI adoption survey (2024); SimilarWeb traffic estimates (2024); Princeton/Georgia Tech GEO study (Aggarwal et al., &ldquo;GEO: Generative Engine Optimization,&rdquo; 2023). AI mention rates based on Metricus internal testing across ChatGPT, Perplexity, Gemini, Claude, and Grok (2026). Learn more about <a href="../ai-visibility-scores-explained/">how we measure AI visibility</a>.</p>
+
+        <h2>Related reading</h2>
+        <ul>
+          <li><strong><a href="../ai-visibility-action-plan/">The 5-step AI visibility action plan</a></strong> &mdash; the general framework for turning audit findings into fixes.</li>
+          <li><strong><a href="../fix-ai-brand-hallucinations/">Fixing AI hallucinations about your brand</a></strong> &mdash; the deep dive on correcting factual errors at their source.</li>
+          <li><strong><a href="../ai-visibility-how-brands-show-up/">What is AI visibility?</a></strong> &mdash; the complete explainer on how brands appear in AI.</li>
+          <li><strong><a href="../b2b-saas-invisible-chatgpt/">Why B2B SaaS brands are invisible in ChatGPT</a></strong> &mdash; the same dynamic in a different industry, with transferable strategies.</li>
+          <li><strong><a href="../diy-ai-visibility-audit/">Free AI visibility check</a></strong> &mdash; run a quick manual check before ordering a full report.</li>
+          <li><strong><a href="../ai-visibility-scores-explained/">AI visibility scores explained</a></strong> &mdash; how Metricus measures and benchmarks AI visibility.</li>
+        </ul>
+
+      </div>
+      <!-- End Article Body -->
+
+      <p class="text-sm text-slate-muted mt-8 border-t border-[#E2E8F0] pt-6">Want to see how your fintech brand appears across all major AI platforms? Run a <a href="../../get-report/" class="text-primary hover:underline">Metricus AI visibility report</a>. Or browse our <a href="../../geo-knowledge-base/" class="text-primary hover:underline">GEO Knowledge Base</a> for 81 research clusters on AI visibility strategy.</p>
+
+      <!-- ========== ARTICLE CTA ========== -->
+      <div class="bg-primary p-8 md:p-12 mt-16">
+        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">Find out what AI says about your fintech brand</h3>
+        <p class="text-on-primary/80 text-base max-w-lg mb-8">
+          Metricus queries every major AI platform hundreds of times to find the real patterns. See your visibility score, exact AI quotes, factual errors with source tracing, and a prioritized action plan. One report, one price.
+        </p>
+        <a href="../../get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
+          Get your report
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+        <p class="mt-4"><a href="../../sample-ai-visibility-report/" class="text-on-primary/70 hover:text-on-primary text-sm underline transition-colors">Or see what a report looks like &rarr;</a></p>
+      </div>
+
+      <!-- ========== CITE THIS ARTICLE ========== -->
+      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
+        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as (MUST include as clickable hyperlink — never plain text without URL):
+          <cite class="not-italic"><a href="https://metricusapp.com/blog/fintech-ai-visibility/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; AI Visibility for Fintech: Why ChatGPT Recommends NerdWallet and Robinhood While Your Platform Gets Zero Mentions</a></cite>
+        </p>
+      </footer>
+
+    </article>
+
+
+    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-6">Go deeper</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <a href="/geo-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">GEO Knowledge Base</p>
+          <p class="text-sm text-on-surface-variant mt-1">81 research clusters on AI visibility and brand monitoring</p>
+        </a>
+        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
+          <p class="text-sm text-on-surface-variant mt-1">48 clusters on fixing AI accuracy issues and hallucinations</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== RELATED POSTS ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-8">Related articles</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <a href="../ai-visibility-action-plan/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Playbook</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            How to Turn AI Visibility Data Into an Action Plan
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            The 5-step framework for turning your AI audit findings into specific, prioritized actions.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../fix-ai-brand-hallucinations/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Research</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            AI Is Getting Facts Wrong About Your Brand
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            72% of brands have factual errors in AI responses. Here&rsquo;s a 4-step process to audit and fix them.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../diy-ai-visibility-audit/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Guide</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            DIY AI Visibility Audit: Free Check
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            Run a quick manual check of your brand&rsquo;s AI visibility before ordering a full report.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="py-12 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Sample Report</a>
+          <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Knowledge Base</a>
+          <a href="/blog/agency-guide-ai-visibility-audits/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">For Agencies</a>
+          <a href="/support/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Support</a>
+          <a href="/privacy-policy/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Privacy Policy</a>
+          <a href="/terms-of-service/" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Terms of Service</a>
+          <a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter text-slate-500 hover:text-slate-700 transition-colors">Contact</a>
+        </div>
+        <p class="text-xs uppercase tracking-tighter text-slate-500">
+          &copy; 2026 Metricus. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
