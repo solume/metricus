@@ -266,6 +266,9 @@
                 </label>
               </div>
             </fieldset>
+            <script>
+              (function(){var t=new URLSearchParams(window.location.search).get('tier')||'deep-dive';var r=document.querySelector('input[name="tier"][value="'+t+'"]');if(r)r.checked=true;})();
+            </script>
 
             <!-- Primary Role -->
             <fieldset>
@@ -416,14 +419,6 @@
         fetch(SCRIPT_URL + '?' + p.toString(), { mode: 'no-cors' }).catch(function() {});
       } catch(e) {}
     }
-
-    // Pre-select tier from URL parameter, default to deep-dive
-    (function() {
-      var params = new URLSearchParams(window.location.search);
-      var tier = params.get('tier') || 'deep-dive';
-      var radio = document.querySelector('input[name="tier"][value="' + tier + '"]');
-      if (radio) radio.checked = true;
-    })();
 
     // Auto-prepend https:// if user types a URL without protocol
     document.getElementById('website').addEventListener('blur', function() {
