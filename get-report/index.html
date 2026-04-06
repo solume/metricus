@@ -166,14 +166,14 @@
 
           <!-- Form Header -->
           <h1 class="font-headline text-5xl text-on-surface mb-4 leading-[1.05]">Buy Your AI Visibility Audit Report</h1>
-          <p class="font-body text-on-surface-variant text-base mb-6">Pay per report. Enter the brand details, select your tier, and we'll deliver the audit to your inbox.</p>
-          <ul class="font-body text-on-surface-variant text-sm space-y-1.5 mb-16">
+          <p id="form-subtitle" class="font-body text-on-surface-variant text-base mb-4">Pay per report. Enter the brand details, select your tier, and we'll deliver the audit to your inbox.</p>
+          <ul id="tier-bullets" class="font-body text-on-surface-variant text-sm space-y-1 mb-12">
             <li>&#10003; AI mention rate across ChatGPT, Gemini, Perplexity and more</li>
             <li>&#10003; Source URLs that shape what AI says about your brand</li>
             <li>&#10003; Prioritized action steps specific to your findings</li>
           </ul>
 
-          <form class="space-y-12" id="accessForm">
+          <form class="space-y-8" id="accessForm">
 
             <!-- Client Website URL -->
             <div class="float-field relative">
@@ -183,7 +183,7 @@
                 name="website"
                 placeholder=" "
                 required
-                class="peer w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary px-4 pt-6 pb-3 text-on-surface font-body text-sm outline-none transition-colors"
+                class="peer w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary px-4 pt-5 pb-2 text-on-surface font-body text-sm outline-none transition-colors"
               >
               <label for="website" class="absolute left-4 top-[1.15rem] text-on-surface-variant font-label text-sm pointer-events-none">Brand Website URL</label>
               <span class="block mt-1 ml-4 text-xs text-outline font-label">The website you want us to audit</span>
@@ -197,7 +197,7 @@
                 name="client-name"
                 placeholder=" "
                 required
-                class="peer w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary px-4 pt-6 pb-3 text-on-surface font-body text-sm outline-none transition-colors"
+                class="peer w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary px-4 pt-5 pb-2 text-on-surface font-body text-sm outline-none transition-colors"
               >
               <label for="client-name" class="absolute left-4 top-[1.15rem] text-on-surface-variant font-label text-sm pointer-events-none">Brand Name</label>
               <span class="block mt-1 ml-4 text-xs text-outline font-label">e.g., Acme Corp</span>
@@ -211,7 +211,7 @@
                 name="email"
                 placeholder=" "
                 required
-                class="peer w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary px-4 pt-6 pb-3 text-on-surface font-body text-sm outline-none transition-colors"
+                class="peer w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary px-4 pt-5 pb-2 text-on-surface font-body text-sm outline-none transition-colors"
               >
               <label for="email" class="absolute left-4 top-[1.15rem] text-on-surface-variant font-label text-sm pointer-events-none">Email Address</label>
               <span class="block mt-1 ml-4 text-xs text-outline font-label">We'll deliver the report here</span>
@@ -220,34 +220,19 @@
             <!-- Report Tier -->
             <input type="hidden" name="tier" id="tier-input" value="">
 
-            <!-- Mode A: Read-only summary (when ?tier= param exists) -->
-            <div id="tier-locked" class="hidden">
-              <p class="text-[10px] uppercase tracking-[0.2em] font-label font-semibold text-on-surface-variant mb-4">Your Report</p>
-              <div class="bg-surface-container-low border-2 border-primary-dim px-5 py-4">
-                <div class="flex items-center justify-between">
-                  <div>
-                    <span id="tier-locked-name" class="font-body text-sm font-semibold text-on-surface"></span>
-                    <span id="tier-locked-price" class="text-on-surface-variant text-sm"></span>
-                    <span id="tier-locked-desc" class="block text-xs text-outline mt-0.5"></span>
-                  </div>
-                  <span class="text-[10px] uppercase tracking-[0.15em] font-label text-on-surface-variant">one-time</span>
-                </div>
-              </div>
-            </div>
-
             <!-- Mode B: Compact picker (when no ?tier= param) -->
             <div id="tier-picker" class="hidden">
               <p class="text-[10px] uppercase tracking-[0.2em] font-label font-semibold text-on-surface-variant mb-4">Select Report Tier</p>
               <div class="grid grid-cols-3 gap-2">
-                <button type="button" data-pick-tier="snapshot" class="tier-btn border-2 border-transparent bg-surface-container-low hover:bg-surface-container px-3 py-4 text-center transition-colors cursor-pointer">
+                <button type="button" data-pick-tier="snapshot" class="tier-btn border-2 border-transparent bg-surface-container-low hover:bg-surface-container px-3 py-3 text-center transition-colors cursor-pointer">
                   <span class="block font-body text-sm font-semibold text-on-surface">Snapshot</span>
                   <span class="block text-on-surface-variant text-sm">$99</span>
                 </button>
-                <button type="button" data-pick-tier="deep-dive" class="tier-btn border-2 border-primary-dim bg-surface-container-low hover:bg-surface-container px-3 py-4 text-center transition-colors cursor-pointer">
+                <button type="button" data-pick-tier="deep-dive" class="tier-btn border-2 border-primary-dim bg-surface-container-low hover:bg-surface-container px-3 py-3 text-center transition-colors cursor-pointer">
                   <span class="block font-body text-sm font-semibold text-on-surface">Deep Dive</span>
                   <span class="block text-on-surface-variant text-sm">$299</span>
                 </button>
-                <button type="button" data-pick-tier="full-arsenal" class="tier-btn border-2 border-transparent bg-surface-container-low hover:bg-surface-container px-3 py-4 text-center transition-colors cursor-pointer">
+                <button type="button" data-pick-tier="full-arsenal" class="tier-btn border-2 border-transparent bg-surface-container-low hover:bg-surface-container px-3 py-3 text-center transition-colors cursor-pointer">
                   <span class="block font-body text-sm font-semibold text-on-surface">Full Arsenal</span>
                   <span class="block text-on-surface-variant text-sm">$499</span>
                 </button>
@@ -257,29 +242,57 @@
             <script>
             (function() {
               var tiers = {
-                'snapshot':     { name: 'Snapshot',     price: ' \u2014 $99',  desc: 'Core AI coverage, accuracy check' },
-                'deep-dive':    { name: 'Deep Dive',    price: ' \u2014 $299', desc: 'Comprehensive AI coverage, vocabulary gaps, citations' },
-                'full-arsenal': { name: 'Full Arsenal', price: ' \u2014 $499', desc: 'Regional breakdown, 10 competitors, full playbook' }
+                'snapshot': {
+                  name: 'Snapshot', price: '$99',
+                  bullets: [
+                    'AI mention rate across ChatGPT, Gemini, Perplexity and more',
+                    'Accuracy check \u2014 what AI gets wrong about your brand',
+                    'Top-level action steps to improve visibility'
+                  ]
+                },
+                'deep-dive': {
+                  name: 'Deep Dive', price: '$299',
+                  bullets: [
+                    'Full AI coverage across 6+ platforms with competitive benchmarks',
+                    'Source URLs and citations shaping what AI says about you',
+                    'Vocabulary gap analysis + prioritized action playbook'
+                  ]
+                },
+                'full-arsenal': {
+                  name: 'Full Arsenal', price: '$499',
+                  bullets: [
+                    'Regional breakdown across markets + 10 competitor profiles',
+                    'Complete source map \u2014 every URL feeding AI answers about you',
+                    'Full optimization playbook with prioritized action steps'
+                  ]
+                }
               };
               var param = new URLSearchParams(window.location.search).get('tier');
               var input = document.getElementById('tier-input');
+              var subtitle = document.getElementById('form-subtitle');
+              var bulletsList = document.getElementById('tier-bullets');
+
+              function setBullets(key) {
+                var t = tiers[key];
+                subtitle.innerHTML = '<strong>' + t.name + ' Report \u2014 ' + t.price + '</strong>, one-time. Enter the brand details and we\u2019ll deliver the audit to your inbox.';
+                bulletsList.innerHTML = t.bullets.map(function(b) { return '<li>&#10003; ' + b + '</li>'; }).join('');
+              }
 
               if (param && tiers[param]) {
-                // Mode A: locked display
+                // Mode A: tier locked from URL param — no picker shown
                 input.value = param;
-                document.getElementById('tier-locked-name').textContent = tiers[param].name;
-                document.getElementById('tier-locked-price').textContent = tiers[param].price;
-                document.getElementById('tier-locked-desc').textContent = tiers[param].desc;
-                document.getElementById('tier-locked').classList.remove('hidden');
+                setBullets(param);
               } else {
                 // Mode B: compact picker, default Deep Dive
                 input.value = 'deep-dive';
+                setBullets('deep-dive');
                 document.getElementById('tier-picker').classList.remove('hidden');
                 var btns = document.querySelectorAll('.tier-btn');
                 btns.forEach(function(btn) {
                   btn.addEventListener('click', function() {
                     var v = this.getAttribute('data-pick-tier');
                     input.value = v;
+                    setBullets(v);
                     btns.forEach(function(b) { b.classList.remove('border-primary-dim'); b.classList.add('border-transparent'); });
                     this.classList.remove('border-transparent');
                     this.classList.add('border-primary-dim');
@@ -291,39 +304,39 @@
 
             <!-- Primary Role -->
             <fieldset>
-              <legend class="text-[10px] uppercase tracking-[0.2em] font-label font-semibold text-on-surface-variant mb-4">Primary Role</legend>
-              <div class="space-y-3">
+              <legend class="text-[10px] uppercase tracking-[0.2em] font-label font-semibold text-on-surface-variant mb-2">Primary Role</legend>
+              <div class="space-y-1.5">
                 <label class="radio-card block cursor-pointer">
                   <input type="radio" name="role" value="agency-owner" class="sr-only">
-                  <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-5 py-4 transition-colors gap-4">
+                  <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-4 py-2.5 transition-colors gap-3">
                     <span class="radio-dot w-5 h-5 border-2 border-outline-variant rounded-full flex-shrink-0 transition-all"></span>
                     <span class="font-body text-sm text-on-surface">Agency Owner / Partner</span>
                   </div>
                 </label>
                 <label class="radio-card block cursor-pointer">
                   <input type="radio" name="role" value="geo-seo-consultant" class="sr-only">
-                  <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-5 py-4 transition-colors gap-4">
+                  <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-4 py-2.5 transition-colors gap-3">
                     <span class="radio-dot w-5 h-5 border-2 border-outline-variant rounded-full flex-shrink-0 transition-all"></span>
                     <span class="font-body text-sm text-on-surface">GEO / SEO Consultant</span>
                   </div>
                 </label>
                 <label class="radio-card block cursor-pointer">
                   <input type="radio" name="role" value="marketing-manager" class="sr-only">
-                  <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-5 py-4 transition-colors gap-4">
+                  <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-4 py-2.5 transition-colors gap-3">
                     <span class="radio-dot w-5 h-5 border-2 border-outline-variant rounded-full flex-shrink-0 transition-all"></span>
                     <span class="font-body text-sm text-on-surface">Marketing Manager</span>
                   </div>
                 </label>
                 <label class="radio-card block cursor-pointer">
                   <input type="radio" name="role" value="freelancer" class="sr-only">
-                  <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-5 py-4 transition-colors gap-4">
+                  <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-4 py-2.5 transition-colors gap-3">
                     <span class="radio-dot w-5 h-5 border-2 border-outline-variant rounded-full flex-shrink-0 transition-all"></span>
                     <span class="font-body text-sm text-on-surface">Freelancer</span>
                   </div>
                 </label>
                 <label class="radio-card block cursor-pointer">
                   <input type="radio" name="role" value="business-owner" class="sr-only">
-                  <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-5 py-4 transition-colors gap-4">
+                  <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-4 py-2.5 transition-colors gap-3">
                     <span class="radio-dot w-5 h-5 border-2 border-outline-variant rounded-full flex-shrink-0 transition-all"></span>
                     <span class="font-body text-sm text-on-surface">Business Owner</span>
                   </div>
@@ -333,39 +346,39 @@
 
             <!-- What Brought You Here -->
             <fieldset>
-              <legend class="text-[10px] uppercase tracking-[0.2em] font-label font-semibold text-on-surface-variant mb-4">What Brought You Here</legend>
-              <div class="space-y-3">
+              <legend class="text-[10px] uppercase tracking-[0.2em] font-label font-semibold text-on-surface-variant mb-2">What Brought You Here</legend>
+              <div class="space-y-1.5">
                 <label class="radio-card block cursor-pointer">
                   <input type="radio" name="trigger" value="adding-geo-audits" class="sr-only">
-                  <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-5 py-4 transition-colors gap-4">
+                  <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-4 py-2.5 transition-colors gap-3">
                     <span class="radio-dot w-5 h-5 border-2 border-outline-variant rounded-full flex-shrink-0 transition-all"></span>
                     <span class="font-body text-sm text-on-surface">Adding AI visibility to my services</span>
                   </div>
                 </label>
                 <label class="radio-card block cursor-pointer">
                   <input type="radio" name="trigger" value="client-asked" class="sr-only">
-                  <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-5 py-4 transition-colors gap-4">
+                  <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-4 py-2.5 transition-colors gap-3">
                     <span class="radio-dot w-5 h-5 border-2 border-outline-variant rounded-full flex-shrink-0 transition-all"></span>
                     <span class="font-body text-sm text-on-surface">A client or stakeholder asked about AI visibility</span>
                   </div>
                 </label>
                 <label class="radio-card block cursor-pointer">
                   <input type="radio" name="trigger" value="competitor-agency" class="sr-only">
-                  <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-5 py-4 transition-colors gap-4">
+                  <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-4 py-2.5 transition-colors gap-3">
                     <span class="radio-dot w-5 h-5 border-2 border-outline-variant rounded-full flex-shrink-0 transition-all"></span>
                     <span class="font-body text-sm text-on-surface">Competitors are showing up in AI results</span>
                   </div>
                 </label>
                 <label class="radio-card block cursor-pointer">
                   <input type="radio" name="trigger" value="own-brand" class="sr-only">
-                  <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-5 py-4 transition-colors gap-4">
+                  <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-4 py-2.5 transition-colors gap-3">
                     <span class="radio-dot w-5 h-5 border-2 border-outline-variant rounded-full flex-shrink-0 transition-all"></span>
                     <span class="font-body text-sm text-on-surface">Checking AI visibility for a specific brand</span>
                   </div>
                 </label>
                 <label class="radio-card block cursor-pointer">
                   <input type="radio" name="trigger" value="evaluating-tools" class="sr-only">
-                  <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-5 py-4 transition-colors gap-4">
+                  <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-4 py-2.5 transition-colors gap-3">
                     <span class="radio-dot w-5 h-5 border-2 border-outline-variant rounded-full flex-shrink-0 transition-all"></span>
                     <span class="font-body text-sm text-on-surface">Just exploring the space</span>
                   </div>
@@ -382,8 +395,9 @@
             <!-- Submit Button -->
             <button
               type="submit"
-              class="w-full bg-primary text-on-primary py-6 flex items-center justify-center gap-3 hover:bg-primary-dim transition-colors"
+              class="w-full bg-primary text-on-primary py-5 flex items-center justify-center gap-3 hover:bg-primary-dim transition-colors"
             >
+              <span class="material-symbols-outlined text-base">lock</span>
               <span class="text-[10px] uppercase tracking-[0.25em] font-label font-semibold">Submit &amp; Proceed to Payment</span>
               <span class="material-symbols-outlined text-base">arrow_forward</span>
             </button>
