@@ -30,7 +30,7 @@
       theme: {
         extend: {
           colors: {
-            primary: '#334155',
+            primary: '#515F74',
             'primary-hover': '#1E293B',
             'on-primary': '#f6f7ff',
             'on-primary-fixed': '#324054',
@@ -102,10 +102,15 @@
 </head>
 <body class="min-h-screen bg-dot-grid">
 
-  <!-- Minimal Nav -->
+  <!-- Minimal Nav (post-conversion: logo only) -->
   <nav class="w-full border-b border-outline-variant bg-surface-container-lowest">
     <div class="max-w-lg mx-auto px-6 py-4">
-      <a href="/" class="font-display italic text-xl text-primary font-bold tracking-tight">Metricus</a>
+      <a href="/" class="flex items-center gap-2 group" aria-label="Metricus home">
+        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+        </svg>
+        <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
+      </a>
     </div>
   </nav>
 

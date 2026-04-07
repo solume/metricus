@@ -125,9 +125,14 @@
 </head>
 <body class="bg-surface text-on-surface">
 
-  <!-- Navigation -->
+  <!-- Navigation (checkout: logo only, no exit ramps) -->
   <nav class="fixed top-0 left-0 right-0 z-50 flex items-center px-8 py-6 mix-blend-difference">
-    <a href="/" class="font-headline italic text-xl text-surface-container-lowest">Metricus</a>
+    <a href="/" class="flex items-center gap-2 group" aria-label="Metricus home">
+      <svg class="size-5 text-surface-container-lowest" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+        <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+      </svg>
+      <span class="font-headline italic text-xl text-surface-container-lowest tracking-tight">Metricus</span>
+    </a>
   </nav>
 
   <!-- Split Screen Layout -->
