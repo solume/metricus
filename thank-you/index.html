@@ -126,6 +126,31 @@
   <!-- Main Content -->
   <main class="max-w-lg mx-auto px-6 py-16">
 
+    <!-- Stripe Payment Confirmation — only shown when ?session_id=... is present
+         and the Stripe session status === 'complete'. JS only sets the values
+         (tier, amount, email) inside the pre-rendered structure via textContent.
+         No marketing copy is JS-injected. -->
+    <section id="payment-confirmation" class="hidden bg-surface-container-low border-l-4 border-primary p-6 mb-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+        <h2 class="font-headline text-xl text-on-surface">Payment confirmed</h2>
+      </div>
+      <dl class="text-sm space-y-1.5">
+        <div class="flex">
+          <dt class="text-outline w-20 shrink-0">Tier</dt>
+          <dd id="pc-tier" class="text-on-surface font-medium">&mdash;</dd>
+        </div>
+        <div class="flex">
+          <dt class="text-outline w-20 shrink-0">Amount</dt>
+          <dd id="pc-amount" class="text-on-surface font-medium">&mdash;</dd>
+        </div>
+        <div class="flex">
+          <dt class="text-outline w-20 shrink-0">Email</dt>
+          <dd id="pc-email" class="text-on-surface font-medium">&mdash;</dd>
+        </div>
+      </dl>
+    </section>
+
     <!-- Confirmation Header -->
     <div class="text-center mb-12">
       <span class="material-symbols-outlined text-primary mb-4 block" style="font-size: 64px; font-variation-settings: 'FILL' 1;">check_circle</span>
@@ -465,6 +490,54 @@
     if (typeof gtag_report_conversion === 'function') {
       gtag_report_conversion();
     }
+  </script>
+
+  <!-- Stripe payment confirmation — fetches PaymentIntent status from worker if ?payment_intent=pi_xxx is in the URL.
+       Sets pre-rendered DOM nodes via textContent only. No content injection. -->
+  <script>
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var intentId = params.get('payment_intent');
+      if (!intentId) return;
+
+      var workerUrl = 'https://metricus.red-hill-a87d.workers.dev/payment-intent-status?payment_intent=' + encodeURIComponent(intentId);
+
+      fetch(workerUrl)
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          if (!data || data.status !== 'succeeded') return;
+
+          var conf = document.getElementById('payment-confirmation');
+          if (!conf) return;
+
+          // Tier label (canonical mapping)
+          var tierMap = { 'snapshot': 'Snapshot', 'deep-dive': 'Deep Dive', 'full-arsenal': 'Full Arsenal' };
+          var rawTier = (data.metadata && data.metadata.tier) || '';
+          var tierLabel = tierMap[rawTier] || rawTier || '\u2014';
+          document.getElementById('pc-tier').textContent = tierLabel;
+
+          // Amount (Stripe returns smallest currency unit; USD = cents)
+          var amount = '\u2014';
+          if (typeof data.amount === 'number') {
+            amount = '$' + (data.amount / 100).toFixed(0) + ' ' + (data.currency || 'usd').toUpperCase();
+          }
+          document.getElementById('pc-amount').textContent = amount;
+
+          // Email
+          document.getElementById('pc-email').textContent = data.customer_email || '\u2014';
+
+          // Reveal the confirmation block
+          conf.classList.remove('hidden');
+
+          // Also persist tier into sessionStorage so the existing tier-aware content
+          // (deliverables list + Step 4) shows the right block on first load.
+          try {
+            if (rawTier) sessionStorage.setItem('metricus_tier', rawTier);
+            if (data.customer_email) sessionStorage.setItem('metricus_email', data.customer_email);
+          } catch(e) {}
+        })
+        .catch(function() { /* silent — confirmation block stays hidden */ });
+    })();
   </script>
 
   <!-- Tier-aware show/hide — selects which pre-rendered HTML block to display based on sessionStorage.metricus_tier. Never renders content. -->
