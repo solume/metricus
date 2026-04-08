@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DIY AI Visibility Audit: Free Method vs Professional Report Compared | Metricus</title>
+  <script>
+    try {
+      if (localStorage.getItem('metricus_email')) {
+        document.documentElement.classList.add('unlocked');
+      }
+    } catch(e) {}
+  </script>
   <meta name="description" content="Run a free AI visibility audit with this Claude Code skill. Checks robots.txt, schema, llms.txt, citability. Plus: what free tools miss.">
   <meta property="og:title" content="DIY AI Visibility Audit: Free Method vs Professional Report Compared">
   <meta property="og:description" content="Run a free AI visibility audit with this Claude Code skill. Checks robots.txt, schema, llms.txt, citability. Plus: what free tools miss.">
@@ -234,6 +241,12 @@
       border-left: 3px solid #ef4444;
       padding-left: 1rem;
     }
+
+    /* Soft email gate: gated content is in the HTML source for crawlers but hidden by default until the email is captured. */
+    [data-gated] { display: none; }
+    html.unlocked [data-gated] { display: revert; }
+    [data-gate-form] { display: block; }
+    html.unlocked [data-gate-form] { display: none; }
   </style>
 </head>
 
@@ -331,8 +344,22 @@
     </section>
 
 
+    <!-- ===== EMAIL GATE — sits between the intro paragraph and the skill code block ===== -->
+    <section data-gate-form class="w-full max-w-[760px] mx-auto px-6 my-12">
+      <div class="bg-surface-container-lowest border-l-4 border-primary p-8 md:p-12 max-w-3xl">
+        <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-3">Get the skill</p>
+        <h3 class="font-display text-2xl md:text-3xl font-bold text-slate-text tracking-tight mb-4">Get the free AI visibility check skill for Claude Code.</h3>
+        <p class="text-sm text-slate-muted leading-relaxed mb-6 max-w-xl">Drop your work email and we'll show the skill text and install command. One-time, no follow-up sequence.</p>
+        <form data-gate-source="diy" class="flex flex-col sm:flex-row gap-3 max-w-xl">
+          <input type="email" name="email" placeholder="Work email" required inputmode="email" autocomplete="email" autocapitalize="none" spellcheck="false" class="flex-1 bg-white border border-[#E2E8F0] focus:border-primary px-4 py-3 text-slate-text font-body text-sm outline-none transition-colors">
+          <button type="submit" class="bg-primary text-white text-sm font-semibold tracking-tight px-6 py-3 hover:bg-primary-dim transition-colors whitespace-nowrap">Show the skill &rarr;</button>
+        </form>
+      </div>
+    </section>
+
+
     <!-- ========== THE SKILL ========== -->
-    <section class="w-full max-w-[760px] mx-auto px-6 pb-16">
+    <section data-gated class="w-full max-w-[760px] mx-auto px-6 pb-16">
       <h2 class="font-display text-2xl font-bold text-slate-text tracking-tight mb-2">The <code class="text-lg">/metricus-check</code> skill</h2>
       <p class="text-sm text-slate-muted mb-6">Copy the skill below or install with the one-liner underneath.</p>
 
@@ -463,6 +490,15 @@ content &mdash; the technical foundation of AI visibility.
 
     <!-- ========== WHAT THE AUDIT FINDS ========== -->
     <section class="w-full max-w-[760px] mx-auto px-6 pb-16">
+        <!-- METRICUS_MID_CTA -->
+        <aside class="metricus-mid-cta my-12 bg-surface border-l-4 border-primary p-8 md:p-10" style="background-color:#f7f9fb;border-left:4px solid #515F74;">
+          <p class="font-display italic text-2xl md:text-3xl text-slate-text leading-tight mb-3" style="color:#0F172A;font-family:'Newsreader',serif;">What does AI say about your brand? Why? What should you change first?</p>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6" style="color:#64748B;">One-time report. No subscription. From $99.</p>
+          <a href="/get-report/" class="metricus-mid-cta-btn inline-flex items-center gap-2 bg-primary text-on-primary text-sm font-semibold tracking-tight px-6 py-3 hover:bg-primary-dim transition-colors" style="background-color:#515F74;color:#f6f7ff;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;font-size:14px;font-weight:600;">
+            Get your report <span aria-hidden="true">&rarr;</span>
+          </a>
+        </aside>
+
       <h2 class="font-display text-2xl font-bold text-slate-text tracking-tight mb-2">What the free audit finds</h2>
       <p class="text-base text-slate-muted leading-relaxed mb-6">
         We ran <code>/metricus-check</code> on a B2B SaaS company in the analytics space. Here&rsquo;s the output, anonymized.
@@ -802,6 +838,45 @@ content &mdash; the technical foundation of AI visibility.
         setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
       });
     }
+  </script>
+
+  <!-- Email gate submit handler — fires sendBeacon to Sheets, saves to localStorage, unlocks content -->
+  <script>
+    (function() {
+      var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlMZxJmAmm90HGKg6AJxEeB8xOP83Dyq4rUHnCD8aubV1NzPqb1ZlSbjzmBAnO63r2/exec';
+
+      function logAndUnlock(email, source) {
+        try {
+          var ts = new Date().toISOString();
+          var url = SCRIPT_URL + '?' + new URLSearchParams({
+            contact: email,
+            pricing: source + '|' + ts
+          });
+          if (navigator.sendBeacon) navigator.sendBeacon(url);
+          else fetch(url, { mode: 'no-cors' }).catch(function() {});
+        } catch(e) {}
+
+        try { localStorage.setItem('metricus_email', email); } catch(e) {}
+
+        document.documentElement.classList.add('unlocked');
+
+        setTimeout(function() {
+          var target = document.querySelector('[data-gated]');
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 50);
+      }
+
+      document.querySelectorAll('form[data-gate-source]').forEach(function(form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var emailInput = form.querySelector('input[type="email"]');
+          var email = emailInput ? emailInput.value.trim() : '';
+          if (!email) return;
+          var source = form.getAttribute('data-gate-source');
+          logAndUnlock(email, source);
+        });
+      });
+    })();
   </script>
 
 </body>

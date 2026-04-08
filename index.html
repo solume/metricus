@@ -284,15 +284,16 @@
       </p>
 
       <!-- Input Group -->
-      <form id="heroForm" class="w-full max-w-[540px] flex flex-col sm:flex-row shadow-xl shadow-slate-200/50 mb-20 relative z-20">
-        <div class="relative flex-grow flex items-center bg-white border-y border-l border-[#E2E8F0] sm:border-r-0">
-          <span class="material-symbols-outlined absolute left-4 text-slate-muted">search</span>
-          <input id="heroUrl" class="editorial-input w-full h-[64px] pl-12 pr-4 bg-transparent border-none text-[16px] text-slate-text placeholder:text-slate-muted focus:ring-0 rounded-none" placeholder="e.g., acme.com" type="text" required>
+      <form id="heroForm" data-gate-source="hero" data-redirect="/sample-ai-visibility-report/" class="w-full max-w-[540px] mb-20 relative z-20">
+        <p class="text-[11px] uppercase tracking-[0.2em] font-label font-semibold text-primary mb-4 text-center">One-time AI visibility report</p>
+        <div class="flex flex-col gap-3 bg-white border border-[#E2E8F0] shadow-xl shadow-slate-200/50 p-5">
+          <input type="email" id="heroEmail" name="email" placeholder="Work email" required inputmode="email" autocomplete="email" autocapitalize="none" spellcheck="false" class="w-full h-12 px-4 bg-transparent border-0 border-b border-[#E2E8F0] focus:border-primary text-[15px] text-slate-text placeholder:text-slate-muted outline-none transition-colors">
+          <button type="submit" class="h-12 px-6 bg-primary text-white font-semibold text-[15px] flex items-center justify-center gap-2 group hover:bg-primary-dim transition-colors">
+            See what AI says about you
+            <span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+          </button>
         </div>
-        <button type="submit" class="editorial-btn h-[64px] px-8 bg-primary text-white font-semibold text-[15px] whitespace-nowrap flex items-center justify-center gap-2 group border border-primary">
-          See pricing
-          <span class="material-symbols-outlined text-[18px] group-hover:translate-y-0.5 transition-transform">arrow_downward</span>
-        </button>
+        <p class="text-xs text-slate-muted text-center mt-4">One-time report. No subscription. From $99.</p>
       </form>
 
       <!-- Floating 3D Graphic Container -->
@@ -824,13 +825,13 @@
       <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
           <div class="md:col-span-5">
-            <p class="text-xs uppercase tracking-widest text-on-primary/60 font-semibold mb-3">The only proof we have</p>
-            <h2 class="font-headline italic text-3xl md:text-5xl leading-tight mb-6">A real brand in our category, 10 days after implementing the audit.</h2>
+            <p class="text-xs uppercase tracking-widest text-on-primary/60 font-semibold mb-3">The only proof you need</p>
+            <h2 class="font-headline italic text-3xl md:text-5xl leading-tight mb-6">A real brand and its traffic, 10 days into a Metricus-optimized implementation.</h2>
             <p class="text-sm md:text-base text-on-primary/80 leading-relaxed">Daily organic visitors went from 0&ndash;5/day to 30+/day.</p>
           </div>
           <div class="md:col-span-7">
             <div class="bg-on-primary-fixed border border-on-primary/20 p-6">
-              <svg viewBox="0 0 360 160" class="w-full" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daily active users chart from baseline noise to consistent upward trend after audit applied.">
+              <svg viewBox="0 0 360 160" class="w-full" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daily visitors chart from baseline noise to consistent upward trend after audit applied.">
                 <g stroke="rgba(246,247,255,0.12)" stroke-width="0.5">
                   <line x1="32" y1="20" x2="350" y2="20"/>
                   <line x1="32" y1="55" x2="350" y2="55"/>
@@ -854,7 +855,7 @@
                   <text x="178" y="155" text-anchor="middle">0</text>
                   <text x="350" y="155" text-anchor="end">10 days</text>
                 </g>
-                <text x="6" y="80" font-family="Public Sans, sans-serif" font-size="8" fill="rgba(246,247,255,0.5)" transform="rotate(-90 6 80)">daily active users</text>
+                <text x="6" y="80" font-family="Public Sans, sans-serif" font-size="8" fill="rgba(246,247,255,0.5)" transform="rotate(-90 6 80)">daily visitors</text>
               </svg>
             </div>
           </div>
@@ -981,33 +982,46 @@
   </footer>
 
 <script>
-  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlMZxJmAmm90HGKg6AJxEeB8xOP83Dyq4rUHnCD8aubV1NzPqb1ZlSbjzmBAnO63r2/exec';
+  // Hero email gate — captures email + optional website, logs to Sheets, saves to storage, redirects to sample report
+  (function() {
+    var heroForm = document.getElementById('heroForm');
+    if (!heroForm) return;
+    var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlMZxJmAmm90HGKg6AJxEeB8xOP83Dyq4rUHnCD8aubV1NzPqb1ZlSbjzmBAnO63r2/exec';
 
-  // Log hero URL input (debounced — fires 800ms after user stops typing)
-  var _heroLogTimer = null;
-  var _heroLogged = {};
-  document.getElementById('heroUrl').addEventListener('input', function() {
-    clearTimeout(_heroLogTimer);
-    var val = this.value.trim();
-    if (!val || _heroLogged[val]) return;
-    _heroLogTimer = setTimeout(function() {
-      _heroLogged[val] = true;
+    // Auto-fill email if returning visitor
+    try {
+      var savedEmail = localStorage.getItem('metricus_email');
+      if (savedEmail) {
+        var emailField = document.getElementById('heroEmail');
+        if (emailField) emailField.value = savedEmail;
+      }
+    } catch(e) {}
+
+    heroForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var email = document.getElementById('heroEmail').value.trim();
+      if (!email) return;
+
+      // Log to Sheets
       try {
-        var p = new URLSearchParams({ contact: '', pricing: '[brand] HERO_INPUT // Website: ' + val });
-        fetch(SCRIPT_URL + '?' + p.toString(), { mode: 'no-cors' }).catch(function() {});
-      } catch(e) {}
-    }, 800);
-  });
+        var ts = new Date().toISOString();
+        var url = SCRIPT_URL + '?' + new URLSearchParams({
+          contact: email,
+          pricing: 'hero|' + ts
+        });
+        if (navigator.sendBeacon) navigator.sendBeacon(url);
+        else fetch(url, {mode: 'no-cors'}).catch(function(){});
+      } catch(err) {}
 
-  // Hero form: store website URL and scroll to pricing
-  document.getElementById('heroForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var url = document.getElementById('heroUrl').value.trim();
-    if (!url) return;
-    try { sessionStorage.setItem('metricus_website', url); } catch(e) {}
-    document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
-  });
+      // Persist
+      try { localStorage.setItem('metricus_email', email); } catch(err) {}
 
+      // Redirect to sample report after a 300ms beat
+      setTimeout(function() {
+        window.location.href = heroForm.getAttribute('data-redirect') || '/sample-ai-visibility-report/';
+      }, 300);
+    });
+  })();
 
   // Pricing tier buttons: navigate to get-report with tier + website
   document.addEventListener('click', function(e) {

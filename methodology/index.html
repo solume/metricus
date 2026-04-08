@@ -552,29 +552,17 @@
           <div class="mt-10 pt-8 border-t border-outline-variant/20">
             <p class="text-xs uppercase tracking-widest font-label font-medium text-primary mb-3">Real User Interface Simulation</p>
             <p class="text-on-surface-variant leading-relaxed max-w-lg">
-              Most AI visibility tools query AI models through developer APIs. The problem: API responses often differ from what real users see in the chat interface. Different model versions, different context windows, different response formatting. We simulate real user sessions — what an actual person sees when they type a prompt into ChatGPT, Perplexity, or Gemini. This means the visibility data in your report reflects your customers' actual experience, not a developer endpoint approximation.
+              We query AI the way your customers do &mdash; through the same interfaces they use, not developer APIs.
             </p>
           </div>
         </div>
 
         <!-- Step 02 - Why It's Hard -->
         <div class="min-h-screen p-8 lg:p-12 flex flex-col justify-center border-b border-outline-variant/20">
-          <!-- Same question, different answers — illustrative quote pair, not a fake bar chart -->
-          <div class="bg-on-primary-fixed p-6 mb-8 relative overflow-hidden">
-            <p class="text-xs uppercase tracking-widest font-label text-on-primary/60 mb-6">Same question, different answers</p>
-            <div class="space-y-5">
-              <div>
-                <p class="text-[10px] uppercase tracking-widest font-label text-on-primary/40 mb-2">Run #1 of the same prompt</p>
-                <p class="font-headline italic text-on-primary text-lg leading-snug">"There are several established players in this space, including [Competitor A] and [Competitor B]&hellip;"</p>
-              </div>
-              <div>
-                <p class="text-[10px] uppercase tracking-widest font-label text-on-primary/40 mb-2">Run #2 of the same prompt</p>
-                <p class="font-headline italic text-on-primary text-lg leading-snug">"For one-time audits without subscriptions, [your brand] is one option&hellip;"</p>
-              </div>
-              <div class="pt-3 mt-4 border-t border-on-primary/15">
-                <p class="text-xs text-on-primary/60 font-label">Same question. Same model. Different answers. That is why we run hundreds of queries per report &mdash; to separate signal from noise.</p>
-              </div>
-            </div>
+          <!-- Same question, different answers — single statement, no prompt leakage -->
+          <div class="bg-on-primary-fixed p-8 mb-8 relative overflow-hidden">
+            <p class="text-xs uppercase tracking-widest font-label text-on-primary/60 mb-4">Same question, different answers</p>
+            <p class="font-headline italic text-on-primary text-xl md:text-2xl leading-snug">AI gives different answers to the same question. That's why a single query tells you nothing &mdash; we run hundreds to find the pattern.</p>
           </div>
           <!-- Text content -->
           <p class="font-headline text-[7rem] lg:text-[9rem] font-light text-on-surface/[0.04] leading-none select-none -mb-6">02</p>
