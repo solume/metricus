@@ -843,17 +843,17 @@ content &mdash; the technical foundation of AI visibility.
   <!-- Email gate submit handler — fires sendBeacon to Sheets, saves to localStorage, unlocks content -->
   <script>
     (function() {
-      var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlMZxJmAmm90HGKg6AJxEeB8xOP83Dyq4rUHnCD8aubV1NzPqb1ZlSbjzmBAnO63r2/exec';
+      var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyshiN4lvzd5cj5C_XMhKF2tMLsDSJerp1Cp1Dd9g8oMJJ922asHXxyca-5wmhMGGKC/exec';
 
       function logAndUnlock(email, source) {
         try {
           var ts = new Date().toISOString();
-          var url = SCRIPT_URL + '?' + new URLSearchParams({
+          var data = new URLSearchParams({
             contact: email,
             pricing: source + '|' + ts
           });
-          if (navigator.sendBeacon) navigator.sendBeacon(url);
-          else fetch(url, { mode: 'no-cors' }).catch(function() {});
+          if (navigator.sendBeacon) navigator.sendBeacon(SCRIPT_URL, data);
+          else fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: data }).catch(function() {});
         } catch(e) {}
 
         try { localStorage.setItem('metricus_email', email); } catch(e) {}

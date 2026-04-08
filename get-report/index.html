@@ -931,14 +931,13 @@
        NO content rendering.
        ==================================================================== -->
   <script>
-    var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlMZxJmAmm90HGKg6AJxEeB8xOP83Dyq4rUHnCD8aubV1NzPqb1ZlSbjzmBAnO63r2/exec';
+    var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyshiN4lvzd5cj5C_XMhKF2tMLsDSJerp1Cp1Dd9g8oMJJ922asHXxyca-5wmhMGGKC/exec';
 
     function logToSheet(contact, pricing) {
       try {
-        var p = new URLSearchParams({ contact: contact, pricing: '[brand] ' + pricing });
-        var url = SCRIPT_URL + '?' + p.toString();
-        if (navigator.sendBeacon) navigator.sendBeacon(url);
-        else fetch(url, { mode: 'no-cors' }).catch(function() {});
+        var data = new URLSearchParams({ contact: contact, pricing: '[brand] ' + pricing });
+        if (navigator.sendBeacon) navigator.sendBeacon(SCRIPT_URL, data);
+        else fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: data }).catch(function() {});
       } catch(e) {}
     }
 
