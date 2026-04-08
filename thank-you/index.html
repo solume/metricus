@@ -54,7 +54,7 @@
           borderRadius: {
             none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
             lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
-            full: '0.75rem',
+            full: '0px',
           },
         },
       },
@@ -97,6 +97,15 @@
     .bg-dot-grid {
       background-image: radial-gradient(#d9e4ea 1px, transparent 1px);
       background-size: 32px 32px;
+    }
+    /* Radio card styling — moved from /get-report/ */
+    .radio-card input:checked + div {
+      background-color: #e8eff3;
+      border-color: #515F74;
+    }
+    .radio-card input:checked + div .radio-dot {
+      background-color: #515F74;
+      box-shadow: inset 0 0 0 3px #f7f9fb;
     }
   </style>
 </head>
@@ -166,7 +175,7 @@
           </div>
           <div class="pb-6">
             <p class="text-sm font-semibold text-on-surface">We're querying AI platforms now</p>
-            <p class="text-sm text-on-surface-variant mt-0.5">Running hundreds of queries across AI to build your AI visibility assessment.</p>
+            <p class="text-sm text-on-surface-variant mt-0.5">Running hundreds of queries across major AI platforms to build your AI visibility assessment.</p>
           </div>
         </div>
 
@@ -178,41 +187,258 @@
             </div>
           </div>
           <div>
-            <p class="text-sm font-semibold text-on-surface">Report delivered to your inbox</p>
-            <p class="text-sm text-on-surface-variant mt-0.5">You'll receive a comprehensive PDF with your AI visibility assessment, AI quotes, wrong facts traced to source, source map, and a prioritized action plan.</p>
+            <!-- Snapshot variant -->
+            <div data-step4-tier="snapshot" class="hidden">
+              <p class="text-sm font-semibold text-on-surface">Your Snapshot report lands in your inbox</p>
+              <p class="text-sm text-on-surface-variant mt-0.5">Answers "What does AI say about my brand right now?" — with everything in the list below, specific to your brand.</p>
+              <p class="text-xs text-outline mt-1">Within 24 hours of order.</p>
+            </div>
+            <!-- Deep Dive variant (also the default fallback) -->
+            <div data-step4-tier="deep-dive" class="hidden">
+              <p class="text-sm font-semibold text-on-surface">Your Deep Dive report lands in your inbox</p>
+              <p class="text-sm text-on-surface-variant mt-0.5">Answers "Why does AI prefer my competitors — and what do I change to flip that?" — with everything in the list below, specific to your brand.</p>
+              <p class="text-xs text-outline mt-1">Within 24 hours of order.</p>
+            </div>
+            <!-- Full Arsenal variant -->
+            <div data-step4-tier="full-arsenal" class="hidden">
+              <p class="text-sm font-semibold text-on-surface">Your Full Arsenal report lands in your inbox</p>
+              <p class="text-sm text-on-surface-variant mt-0.5">Answers "What needs to change — on my site, in my content, in how I position myself — to fix this for every type of buyer?" — with everything in the list below, specific to your brand.</p>
+              <p class="text-xs text-outline mt-1">Within 24 hours of order.</p>
+            </div>
           </div>
         </div>
 
       </div>
     </div>
 
-    <!-- What's In Your Report -->
-    <div class="bg-surface-container-lowest border border-outline-variant p-8 mb-8">
-      <h2 class="font-display text-xl text-on-surface font-bold mb-4">What's in Your Report</h2>
+    <!-- Quick survey (moved here from /get-report/ checkout) -->
+    <div class="bg-surface-container-lowest border border-outline-variant p-8 mb-8" id="survey-section">
+      <h2 class="font-display text-xl text-on-surface font-bold mb-2">Two quick questions</h2>
+      <p class="text-sm text-on-surface-variant mb-6">Helps us send the right kind of follow-ups. Click an option in each — saves automatically.</p>
+
+      <form id="survey-form" class="space-y-6">
+        <!-- Primary Role -->
+        <fieldset>
+          <legend class="text-[10px] uppercase tracking-[0.2em] font-semibold text-on-surface-variant mb-2">Primary Role</legend>
+          <div class="space-y-1.5">
+            <label class="radio-card block cursor-pointer">
+              <input type="radio" name="role" value="agency-owner" class="sr-only">
+              <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-4 py-3.5 transition-colors gap-3">
+                <span class="radio-dot w-5 h-5 border-2 border-outline-variant rounded-full flex-shrink-0 transition-all"></span>
+                <span class="font-body text-sm text-on-surface">Agency Owner / Partner</span>
+              </div>
+            </label>
+            <label class="radio-card block cursor-pointer">
+              <input type="radio" name="role" value="geo-seo-consultant" class="sr-only">
+              <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-4 py-3.5 transition-colors gap-3">
+                <span class="radio-dot w-5 h-5 border-2 border-outline-variant rounded-full flex-shrink-0 transition-all"></span>
+                <span class="font-body text-sm text-on-surface">GEO / SEO Consultant</span>
+              </div>
+            </label>
+            <label class="radio-card block cursor-pointer">
+              <input type="radio" name="role" value="marketing-manager" class="sr-only">
+              <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-4 py-3.5 transition-colors gap-3">
+                <span class="radio-dot w-5 h-5 border-2 border-outline-variant rounded-full flex-shrink-0 transition-all"></span>
+                <span class="font-body text-sm text-on-surface">Marketing Manager</span>
+              </div>
+            </label>
+            <label class="radio-card block cursor-pointer">
+              <input type="radio" name="role" value="freelancer" class="sr-only">
+              <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-4 py-3.5 transition-colors gap-3">
+                <span class="radio-dot w-5 h-5 border-2 border-outline-variant rounded-full flex-shrink-0 transition-all"></span>
+                <span class="font-body text-sm text-on-surface">Freelancer</span>
+              </div>
+            </label>
+            <label class="radio-card block cursor-pointer">
+              <input type="radio" name="role" value="business-owner" class="sr-only">
+              <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-4 py-3.5 transition-colors gap-3">
+                <span class="radio-dot w-5 h-5 border-2 border-outline-variant rounded-full flex-shrink-0 transition-all"></span>
+                <span class="font-body text-sm text-on-surface">Business Owner</span>
+              </div>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- What Brought You Here -->
+        <fieldset>
+          <legend class="text-[10px] uppercase tracking-[0.2em] font-semibold text-on-surface-variant mb-2">What Brought You Here</legend>
+          <div class="space-y-1.5">
+            <label class="radio-card block cursor-pointer">
+              <input type="radio" name="trigger" value="adding-geo-audits" class="sr-only">
+              <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-4 py-3.5 transition-colors gap-3">
+                <span class="radio-dot w-5 h-5 border-2 border-outline-variant rounded-full flex-shrink-0 transition-all"></span>
+                <span class="font-body text-sm text-on-surface">Adding AI visibility to my services</span>
+              </div>
+            </label>
+            <label class="radio-card block cursor-pointer">
+              <input type="radio" name="trigger" value="client-asked" class="sr-only">
+              <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-4 py-3.5 transition-colors gap-3">
+                <span class="radio-dot w-5 h-5 border-2 border-outline-variant rounded-full flex-shrink-0 transition-all"></span>
+                <span class="font-body text-sm text-on-surface">A client or stakeholder asked about AI visibility</span>
+              </div>
+            </label>
+            <label class="radio-card block cursor-pointer">
+              <input type="radio" name="trigger" value="competitor-agency" class="sr-only">
+              <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-4 py-3.5 transition-colors gap-3">
+                <span class="radio-dot w-5 h-5 border-2 border-outline-variant rounded-full flex-shrink-0 transition-all"></span>
+                <span class="font-body text-sm text-on-surface">Competitors are showing up in AI results</span>
+              </div>
+            </label>
+            <label class="radio-card block cursor-pointer">
+              <input type="radio" name="trigger" value="own-brand" class="sr-only">
+              <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-4 py-3.5 transition-colors gap-3">
+                <span class="radio-dot w-5 h-5 border-2 border-outline-variant rounded-full flex-shrink-0 transition-all"></span>
+                <span class="font-body text-sm text-on-surface">Checking AI visibility for a specific brand</span>
+              </div>
+            </label>
+            <label class="radio-card block cursor-pointer">
+              <input type="radio" name="trigger" value="evaluating-tools" class="sr-only">
+              <div class="flex items-center bg-surface-container-low hover:bg-surface-container border-2 border-transparent px-4 py-3.5 transition-colors gap-3">
+                <span class="radio-dot w-5 h-5 border-2 border-outline-variant rounded-full flex-shrink-0 transition-all"></span>
+                <span class="font-body text-sm text-on-surface">Just exploring the space</span>
+              </div>
+            </label>
+          </div>
+        </fieldset>
+
+        <p id="survey-status" class="hidden text-xs text-primary font-medium" aria-live="polite">Saved — thank you.</p>
+      </form>
+    </div>
+
+    <!-- What's In Your Report — three hardcoded tier-specific blocks. JS at the bottom of this page removes the `hidden` class from the matching one based on sessionStorage.metricus_tier. If no valid tier is set, the Deep Dive block (fallback) is shown. All copy must stay in sync with /get-report/ tier picker and the canonical tier definitions. -->
+
+    <!-- SNAPSHOT block -->
+    <div data-tier-block="snapshot" class="tier-block hidden bg-surface-container-lowest border border-outline-variant p-8 mb-8">
+      <p class="text-[10px] uppercase tracking-[0.2em] font-semibold text-on-surface-variant mb-2">Your purchase — Snapshot $99</p>
+      <h2 class="font-display text-xl text-on-surface font-bold mb-4">What's in your Snapshot report</h2>
       <ul class="space-y-3">
-        <li class="flex items-start gap-3 text-sm text-on-surface-variant">
-          <span class="material-symbols-outlined text-primary text-base mt-0.5" style="font-size:18px;">analytics</span>
-          AI visibility assessment across all platforms
+        <li class="flex items-start gap-3 text-sm">
+          <span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0" style="font-size:18px;">check</span>
+          <div>
+            <p class="font-semibold text-on-surface leading-snug">Exact AI quotes about your brand</p>
+            <p class="text-on-surface-variant mt-0.5 leading-relaxed">Word-for-word from real buyer queries run across major AI platforms. Every mention, every miss, with the prompt that generated it.</p>
+          </div>
         </li>
-        <li class="flex items-start gap-3 text-sm text-on-surface-variant">
-          <span class="material-symbols-outlined text-primary text-base mt-0.5" style="font-size:18px;">format_quote</span>
-          AI quotes and mentions
+        <li class="flex items-start gap-3 text-sm">
+          <span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0" style="font-size:18px;">check</span>
+          <div>
+            <p class="font-semibold text-on-surface leading-snug">Every wrong fact AI repeats about you</p>
+            <p class="text-on-surface-variant mt-0.5 leading-relaxed">Hallucinations, outdated pricing, misattributed features — each flagged with the source page where AI read the wrong information from, so you can correct it at the root.</p>
+          </div>
         </li>
-        <li class="flex items-start gap-3 text-sm text-on-surface-variant">
-          <span class="material-symbols-outlined text-primary text-base mt-0.5" style="font-size:18px;">fact_check</span>
-          Wrong facts and hallucination check
+        <li class="flex items-start gap-3 text-sm">
+          <span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0" style="font-size:18px;">check</span>
+          <div>
+            <p class="font-semibold text-on-surface leading-snug">How often AI mentions you vs how often it actually recommends you</p>
+            <p class="text-on-surface-variant mt-0.5 leading-relaxed">The two real numbers from your audit — not a fabricated 0–100 score.</p>
+          </div>
         </li>
-        <li class="flex items-start gap-3 text-sm text-on-surface-variant">
-          <span class="material-symbols-outlined text-primary text-base mt-0.5" style="font-size:18px;">link</span>
-          Source map — which URLs feed AI's answer
+        <li class="flex items-start gap-3 text-sm">
+          <span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0" style="font-size:18px;">check</span>
+          <div>
+            <p class="font-semibold text-on-surface leading-snug">The pages on your site AI actually reads</p>
+            <p class="text-on-surface-variant mt-0.5 leading-relaxed">The specific URLs on your domain that AI fetches when answering about your category, ranked by frequency. Tells you which of your existing pages are doing the work.</p>
+          </div>
         </li>
-        <li class="flex items-start gap-3 text-sm text-on-surface-variant">
-          <span class="material-symbols-outlined text-primary text-base mt-0.5" style="font-size:18px;">compare_arrows</span>
-          Competitor comparison
+        <li class="flex items-start gap-3 text-sm">
+          <span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0" style="font-size:18px;">check</span>
+          <div>
+            <p class="font-semibold text-on-surface leading-snug">Your top 2 competitors</p>
+            <p class="text-on-surface-variant mt-0.5 leading-relaxed">Who AI is comparing you to, and the context AI uses to describe each one.</p>
+          </div>
         </li>
-        <li class="flex items-start gap-3 text-sm text-on-surface-variant">
-          <span class="material-symbols-outlined text-primary text-base mt-0.5" style="font-size:18px;">checklist</span>
-          Prioritized action plan
+      </ul>
+    </div>
+
+    <!-- DEEP DIVE block (also the fallback when sessionStorage has no valid tier) -->
+    <div data-tier-block="deep-dive" class="tier-block hidden bg-surface-container-lowest border border-outline-variant p-8 mb-8">
+      <p class="text-[10px] uppercase tracking-[0.2em] font-semibold text-on-surface-variant mb-2">Your purchase — Deep Dive $299</p>
+      <h2 class="font-display text-xl text-on-surface font-bold mb-4">What's in your Deep Dive report</h2>
+      <ul class="space-y-3">
+        <li class="flex items-start gap-3 text-sm">
+          <span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0" style="font-size:18px;">check</span>
+          <div>
+            <p class="font-semibold text-on-surface leading-snug">Why each of your top 5 competitors wins</p>
+            <p class="text-on-surface-variant mt-0.5 leading-relaxed">For each one, the specific reasoning AI uses when picking them over you. Grounded in the actual AI quote, not paraphrased. (Example from a real audit: 4 distinct reasons AI preferred competitors, including a 20× mention gap versus the top one.)</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3 text-sm">
+          <span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0" style="font-size:18px;">check</span>
+          <div>
+            <p class="font-semibold text-on-surface leading-snug">The exact AI searches that find you — and the ones that should but don't</p>
+            <p class="text-on-surface-variant mt-0.5 leading-relaxed">The literal search strings AI generates when looking up your category, in two columns: where your brand surfaced, where it was missing. The "missing" column is what your next page needs to target.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3 text-sm">
+          <span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0" style="font-size:18px;">check</span>
+          <div>
+            <p class="font-semibold text-on-surface leading-snug">Where your wording doesn't match what buyers ask</p>
+            <p class="text-on-surface-variant mt-0.5 leading-relaxed">The words AI uses to describe your category that don't appear anywhere on your pages — exactly which terms to add to which pages, without rewriting your voice.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3 text-sm">
+          <span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0" style="font-size:18px;">check</span>
+          <div>
+            <p class="font-semibold text-on-surface leading-snug">What proof AI looks for when recommending in your category</p>
+            <p class="text-on-surface-variant mt-0.5 leading-relaxed">Frequency-ranked. The 7–8 evidence types AI cites — pricing transparency, supported platforms, agency fit, third-party reviews, and so on. Tells you which evidence to put on your pages and which to deprioritize.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3 text-sm">
+          <span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0" style="font-size:18px;">check</span>
+          <div>
+            <p class="font-semibold text-on-surface leading-snug">What makes AI recommend you — not just mention you</p>
+            <p class="text-on-surface-variant mt-0.5 leading-relaxed">The specific pattern in your audit that predicts when AI flips from citing you to actually picking you. (Example from a real audit: multi-page presence was the single strongest predictor — recommended cases averaged 3.5 pages of the brand in AI's results vs 1.0 for mention-only.)</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- FULL ARSENAL block -->
+    <div data-tier-block="full-arsenal" class="tier-block hidden bg-surface-container-lowest border border-outline-variant p-8 mb-8">
+      <p class="text-[10px] uppercase tracking-[0.2em] font-semibold text-on-surface-variant mb-2">Your purchase — Full Arsenal $499</p>
+      <h2 class="font-display text-xl text-on-surface font-bold mb-4">What's in your Full Arsenal report</h2>
+      <ul class="space-y-3">
+        <li class="flex items-start gap-3 text-sm">
+          <span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0" style="font-size:18px;">check</span>
+          <div>
+            <p class="font-semibold text-on-surface leading-snug">Which buyer types find you and which don't</p>
+            <p class="text-on-surface-variant mt-0.5 leading-relaxed">Decision-makers, comparison-shoppers, technical evaluators, agency owners, end users. For each type: the questions they ask AI, how AI responds, and which fixes matter most. Different buyers need different fixes; the report maps each type to specific actions.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3 text-sm">
+          <span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0" style="font-size:18px;">check</span>
+          <div>
+            <p class="font-semibold text-on-surface leading-snug">10+ competitors mapped</p>
+            <p class="text-on-surface-variant mt-0.5 leading-relaxed">Every brand AI surfaced in your category during the audit — not just your top 5 — with each one's positioning angle, the queries they win, and where they're vulnerable.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3 text-sm">
+          <span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0" style="font-size:18px;">check</span>
+          <div>
+            <p class="font-semibold text-on-surface leading-snug">The vocabulary that loses you</p>
+            <p class="text-on-surface-variant mt-0.5 leading-relaxed">The specific words in your category vocabulary that, when removed from buyer prompts, cause AI to stop finding you entirely. Tells you where your discoverability is fragile.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3 text-sm">
+          <span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0" style="font-size:18px;">check</span>
+          <div>
+            <p class="font-semibold text-on-surface leading-snug">Categories where you should show up but don't</p>
+            <p class="text-on-surface-variant mt-0.5 leading-relaxed">Other category spaces AI is recommending in that you're not being considered for, with specific content angles to get in.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3 text-sm">
+          <span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0" style="font-size:18px;">check</span>
+          <div>
+            <p class="font-semibold text-on-surface leading-snug">How AI decides who to recommend in your category</p>
+            <p class="text-on-surface-variant mt-0.5 leading-relaxed">Named patterns — e.g. "picks the cheapest option", "defaults to the brand with the most reviews", "matches a feature checklist", "recommends what agencies would resell." Tells you which decision patterns your brand fits and which you're fighting.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3 text-sm">
+          <span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0" style="font-size:18px;">check</span>
+          <div>
+            <p class="font-semibold text-on-surface leading-snug">How complete the audit is</p>
+            <p class="text-on-surface-variant mt-0.5 leading-relaxed">"We mapped X% of how AI reasons about your category." Tells you where the audit boundary sits.</p>
+          </div>
         </li>
       </ul>
     </div>
@@ -239,6 +465,86 @@
     if (typeof gtag_report_conversion === 'function') {
       gtag_report_conversion();
     }
+  </script>
+
+  <!-- Tier-aware show/hide — selects which pre-rendered HTML block to display based on sessionStorage.metricus_tier. Never renders content. -->
+  <script>
+    (function() {
+      var tierKey = '';
+      try { tierKey = sessionStorage.getItem('metricus_tier') || ''; } catch(e) {}
+      var validTiers = ['snapshot', 'deep-dive', 'full-arsenal'];
+      if (validTiers.indexOf(tierKey) === -1) tierKey = 'deep-dive'; // fallback
+      // Hide all tier blocks, show the matching one
+      document.querySelectorAll('[data-tier-block]').forEach(function(el) {
+        el.classList.toggle('hidden', el.getAttribute('data-tier-block') !== tierKey);
+      });
+      document.querySelectorAll('[data-step4-tier]').forEach(function(el) {
+        el.classList.toggle('hidden', el.getAttribute('data-step4-tier') !== tierKey);
+      });
+    })();
+  </script>
+
+  <!-- Survey logging — same Apps Script endpoint used by /get-report/ -->
+  <script>
+    (function() {
+      var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlMZxJmAmm90HGKg6AJxEeB8xOP83Dyq4rUHnCD8aubV1NzPqb1ZlSbjzmBAnO63r2/exec';
+
+      // Recover buyer context from sessionStorage (set on /get-report/ submit)
+      var email = '';
+      var brand = '';
+      var tier  = '';
+      try {
+        email = sessionStorage.getItem('metricus_email') || '';
+        brand = sessionStorage.getItem('metricus_brand') || '';
+        tier  = sessionStorage.getItem('metricus_tier')  || '';
+      } catch(e) {}
+
+      function logToSheet(label, value) {
+        try {
+          var detailParts = ['POST_PURCHASE_SURVEY'];
+          if (tier)  detailParts.push('Tier: ' + tier);
+          if (brand) detailParts.push('Brand: ' + brand);
+          detailParts.push(label + ': ' + value);
+          var p = new URLSearchParams({
+            contact: email,
+            pricing: '[brand] ' + detailParts.join(' // ')
+          });
+          // sendBeacon is more reliable than fetch on page-unload paths
+          var url = SCRIPT_URL + '?' + p.toString();
+          if (navigator.sendBeacon) {
+            navigator.sendBeacon(url);
+          } else {
+            fetch(url, { mode: 'no-cors' }).catch(function() {});
+          }
+        } catch(e) {}
+      }
+
+      var status = document.getElementById('survey-status');
+      var roleAnswered = false;
+      var triggerAnswered = false;
+
+      function maybeShowStatus() {
+        if (roleAnswered && triggerAnswered && status) {
+          status.classList.remove('hidden');
+        }
+      }
+
+      document.querySelectorAll('#survey-form input[name="role"]').forEach(function(el) {
+        el.addEventListener('change', function() {
+          logToSheet('Role', this.value);
+          roleAnswered = true;
+          maybeShowStatus();
+        });
+      });
+
+      document.querySelectorAll('#survey-form input[name="trigger"]').forEach(function(el) {
+        el.addEventListener('change', function() {
+          logToSheet('Trigger', this.value);
+          triggerAnswered = true;
+          maybeShowStatus();
+        });
+      });
+    })();
   </script>
 
 </body>
