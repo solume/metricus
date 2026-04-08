@@ -134,6 +134,9 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "w70oz7g1k3");
   </script>
+
+  <!-- Stripe.js — for Embedded Checkout -->
+  <script src="https://js.stripe.com/v3/"></script>
 </head>
 
 <body class="bg-surface text-on-surface">
@@ -150,6 +153,7 @@
       </a>
     </div>
   </nav>
+
 
   <!-- ====================================================================
        MODE A — SNAPSHOT. All copy hardcoded.
@@ -282,6 +286,10 @@
                 <label for="email-s" class="font-label">Email Address</label>
                 <span class="block mt-1 ml-4 text-xs text-outline font-label">We'll deliver the report here</span>
               </div>
+
+              <!-- Stripe Payment Element mount — accordion layout, all enabled methods, compact -->
+              <div id="payment-element-s"></div>
+              <div id="payment-element-error-s" class="text-xs text-red-600 mt-2 hidden" role="alert"></div>
 
               <p class="text-xs text-on-surface-variant text-center pt-2"><strong class="text-on-surface">3+ actionable insights or full refund.</strong> One-time purchase.</p>
 
@@ -429,6 +437,10 @@
                 <span class="block mt-1 ml-4 text-xs text-outline font-label">We'll deliver the report here</span>
               </div>
 
+              <!-- Stripe Payment Element mount — accordion layout, all enabled methods, compact -->
+              <div id="payment-element-d"></div>
+              <div id="payment-element-error-d" class="text-xs text-red-600 mt-2 hidden" role="alert"></div>
+
               <p class="text-xs text-on-surface-variant text-center pt-2"><strong class="text-on-surface">3+ actionable insights or full refund.</strong> One-time purchase.</p>
 
               <button type="submit" class="w-full bg-primary text-on-primary py-5 flex items-center justify-center gap-3 hover:bg-primary-dim transition-colors">
@@ -574,6 +586,10 @@
                 <label for="email-f" class="font-label">Email Address</label>
                 <span class="block mt-1 ml-4 text-xs text-outline font-label">We'll deliver the report here</span>
               </div>
+
+              <!-- Stripe Payment Element mount — accordion layout, all enabled methods, compact -->
+              <div id="payment-element-f"></div>
+              <div id="payment-element-error-f" class="text-xs text-red-600 mt-2 hidden" role="alert"></div>
 
               <p class="text-xs text-on-surface-variant text-center pt-2"><strong class="text-on-surface">3+ actionable insights or full refund.</strong> One-time purchase.</p>
 
@@ -908,6 +924,10 @@
               <span class="block mt-1 ml-4 text-xs text-outline font-label">We'll deliver the report here</span>
             </div>
 
+            <!-- Stripe Payment Element mount — accordion layout, all enabled methods, compact -->
+            <div id="payment-element-b"></div>
+            <div id="payment-element-error-b" class="text-xs text-red-600 mt-2 hidden" role="alert"></div>
+
             <p class="text-xs text-on-surface-variant text-center"><strong class="text-on-surface">3+ actionable insights or full refund.</strong></p>
 
             <button type="submit" class="w-full bg-primary text-on-primary py-5 flex items-center justify-center gap-3 hover:bg-primary-dim transition-colors">
@@ -920,6 +940,7 @@
             <p class="text-center text-[10px] uppercase tracking-[0.18em] font-label text-on-surface-variant">Secure checkout via Stripe</p>
           </div>
         </form>
+
       </div>
 
     </div>
@@ -941,20 +962,115 @@
       } catch(e) {}
     }
 
-    var stripeLinks = {
-      'snapshot':     'https://buy.stripe.com/4gMeVe6IOfSjauBgma7g400',
-      'deep-dive':    'https://buy.stripe.com/9B614ogjobC346dd9Y7g401',
-      'full-arsenal': 'https://buy.stripe.com/8x2cN63wC5dF7ipd9Y7g402'
+    // Stripe — publishable key (safe to commit) + tier amounts (cents)
+    var STRIPE_PUBLISHABLE_KEY = 'pk_live_WKv81e8l4JbhiVi90rDrvVgk00718DlwgG';
+    var STRIPE_PAYMENT_INTENT_URL = 'https://metricus.red-hill-a87d.workers.dev/payment-intent';
+    var TIER_AMOUNTS = {
+      'snapshot':     9900,   // $99.00
+      'deep-dive':    29900,  // $299.00
+      'full-arsenal': 49900   // $499.00
     };
 
     /* ----- Mode detection: reveal one pre-rendered div ----- */
     var validTiers = ['snapshot', 'deep-dive', 'full-arsenal'];
     var urlParam = new URLSearchParams(window.location.search).get('tier');
+    var initialTier;
     if (urlParam && validTiers.indexOf(urlParam) !== -1) {
       document.getElementById('mode-a-' + urlParam).classList.remove('hidden');
+      initialTier = urlParam;
     } else {
       document.getElementById('mode-b').classList.remove('hidden');
+      initialTier = 'snapshot'; // Mode B default
     }
+
+    /* ----- Stripe Payment Element setup —————————————————————————————————
+       Initialize Stripe Elements once, mount Payment Element into the visible
+       form's payment-element-X div. Uses deferred PaymentIntent creation
+       (mode/amount, no clientSecret yet) so the user sees the full payment
+       form on page load and only one round trip happens on submit.
+       ——————————————————————————————————————————————————————————————— */
+    var stripe = Stripe(STRIPE_PUBLISHABLE_KEY);
+    var elements;
+    var paymentElement;
+
+    function initElements(tier) {
+      elements = stripe.elements({
+        mode: 'payment',
+        amount: TIER_AMOUNTS[tier],
+        currency: 'usd',
+        paymentMethodCreation: 'manual',
+        // Bind to the dashboard's "Default" Payment Method Configuration so the
+        // Payment Element only shows Cards / Apple Pay / Google Pay — must match
+        // the worker's payment_method_configuration on the PaymentIntent.
+        paymentMethodConfiguration: 'pmc_1RcMdnK6zduidqONUf2JLw2C',
+        appearance: {
+          theme: 'stripe',
+          variables: {
+            colorPrimary: '#515F74',
+            colorBackground: '#f7f9fb',
+            colorText: '#2a3439',
+            colorDanger: '#df1b41',
+            fontFamily: '"Public Sans", system-ui, sans-serif',
+            spacingUnit: '4px',
+            borderRadius: '0px',
+            fontSizeBase: '14px',
+          },
+          rules: {
+            '.AccordionItem': {
+              padding: '10px 12px',
+              boxShadow: 'none',
+              border: '1px solid #e8eff3',
+            },
+            '.AccordionItem--selected': {
+              borderColor: '#515F74',
+            },
+            '.Input': {
+              padding: '10px 12px',
+              border: '1px solid #e8eff3',
+              boxShadow: 'none',
+            },
+            '.Input:focus': {
+              borderColor: '#515F74',
+              boxShadow: 'none',
+            },
+            '.Label': {
+              fontSize: '12px',
+              fontWeight: '500',
+            },
+          },
+        },
+      });
+      paymentElement = elements.create('payment', {
+        layout: {
+          type: 'accordion',
+          defaultCollapsed: false,
+          radios: true,
+          spacedAccordionItems: false,
+        },
+        wallets: {
+          applePay: 'auto',
+          googlePay: 'auto',
+        },
+      });
+    }
+
+    function mountElementsForVisibleForm() {
+      var mountId;
+      if (initialTier === 'snapshot') mountId = 'payment-element-s';
+      else if (initialTier === 'deep-dive') mountId = 'payment-element-d';
+      else if (initialTier === 'full-arsenal') mountId = 'payment-element-f';
+      else mountId = 'payment-element-b';
+      // Mode B always uses payment-element-b regardless of selected tier
+      if (urlParam && validTiers.indexOf(urlParam) !== -1) {
+        // Mode A — locked tier
+      } else {
+        mountId = 'payment-element-b';
+      }
+      paymentElement.mount('#' + mountId);
+    }
+
+    initElements(initialTier);
+    mountElementsForVisibleForm();
 
     /* ----- Mode B picker: visual state + hidden input + submit text toggle ----- */
     function updatePickerState(key) {
@@ -980,6 +1096,10 @@
       el.addEventListener('change', function() {
         updatePickerState(this.value);
         logToSheet('', 'FIELD_INPUT // Tier picked: ' + this.value);
+        // Update the Payment Element's amount when the tier changes (Mode B only)
+        if (elements && TIER_AMOUNTS[this.value]) {
+          elements.update({ amount: TIER_AMOUNTS[this.value] });
+        }
       });
     });
 
@@ -1032,16 +1152,50 @@
       attachLogging(document.getElementById(id));
     });
 
-    /* ----- Form submission: reads hidden tier input, redirects to Stripe ----- */
+    /* ----- Form submission: validate, create PaymentIntent, confirmPayment ----- */
+    function showStripeError(formEl, message) {
+      var formId = formEl.id || '';
+      var errorId;
+      if (formId === 'accessFormB') errorId = 'payment-element-error-b';
+      else errorId = 'payment-element-error-' + formId.slice(-1);
+      var errEl = document.getElementById(errorId);
+      if (errEl) {
+        errEl.textContent = message || 'Payment failed. Please try again.';
+        errEl.classList.remove('hidden');
+      }
+    }
+    function clearStripeError(formEl) {
+      var formId = formEl.id || '';
+      var errorId;
+      if (formId === 'accessFormB') errorId = 'payment-element-error-b';
+      else errorId = 'payment-element-error-' + formId.slice(-1);
+      var errEl = document.getElementById(errorId);
+      if (errEl) {
+        errEl.textContent = '';
+        errEl.classList.add('hidden');
+      }
+    }
+
     function handleSubmit(formEl) {
       if (!formEl) return;
       formEl.addEventListener('submit', function(e) {
         e.preventDefault();
+        clearStripeError(formEl);
+
         var tierInput = formEl.querySelector('input[name="tier"]');
         var tier = tierInput ? tierInput.value : '';
         var website = formEl.querySelector('input[name="website"]').value.trim();
         var email = formEl.querySelector('input[name="email"]').value.trim();
         var brand = formEl.querySelector('input[name="client-name"]').value.trim();
+
+        if (!tier || !TIER_AMOUNTS[tier]) {
+          showStripeError(formEl, 'Please pick a tier.');
+          return;
+        }
+        if (!website || !brand || !email) {
+          showStripeError(formEl, 'Please fill in all fields.');
+          return;
+        }
 
         var details = [tier.toUpperCase(), 'Website: ' + website, 'Brand: ' + brand].filter(Boolean).join(' // ');
         logToSheet(email, details);
@@ -1053,12 +1207,49 @@
           sessionStorage.setItem('metricus_brand', brand);
         } catch(err) {}
 
-        var url = stripeLinks[tier];
-        if (url) {
-          setTimeout(function() {
-            window.location.href = url + '?prefilled_email=' + encodeURIComponent(email);
-          }, 400);
-        }
+        var submitBtn = formEl.querySelector('button[type="submit"]');
+        if (submitBtn) submitBtn.disabled = true;
+
+        // 1. Validate the Payment Element (collect card data, validate)
+        elements.submit().then(function(result) {
+          if (result.error) {
+            throw result.error;
+          }
+          // 2. Create PaymentIntent on the worker (with all metadata)
+          return fetch(STRIPE_PAYMENT_INTENT_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              tier: tier,
+              customerEmail: email,
+              website: website,
+              brand: brand,
+            }),
+          });
+        }).then(function(r) {
+          return r.json();
+        }).then(function(data) {
+          if (!data || !data.clientSecret) {
+            throw new Error((data && data.error) || 'Failed to create payment intent');
+          }
+          // 3. Confirm the payment with Stripe.js — Stripe handles 3DS, redirects, etc.
+          return stripe.confirmPayment({
+            elements: elements,
+            clientSecret: data.clientSecret,
+            confirmParams: {
+              return_url: window.location.origin + '/thank-you/',
+              receipt_email: email,
+            },
+          });
+        }).then(function(result) {
+          // If we reach here, confirmPayment did not redirect (failure)
+          if (result && result.error) {
+            throw result.error;
+          }
+        }).catch(function(err) {
+          if (submitBtn) submitBtn.disabled = false;
+          showStripeError(formEl, (err && err.message) || 'Payment could not be processed. Please try again.');
+        });
       });
     }
     ['accessForm-s', 'accessForm-d', 'accessForm-f', 'accessFormB'].forEach(function(id) {
