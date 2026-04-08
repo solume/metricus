@@ -198,7 +198,7 @@
   </footer>
 
   <script>
-    var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlMZxJmAmm90HGKg6AJxEeB8xOP83Dyq4rUHnCD8aubV1NzPqb1ZlSbjzmBAnO63r2/exec';
+    var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyshiN4lvzd5cj5C_XMhKF2tMLsDSJerp1Cp1Dd9g8oMJJ922asHXxyca-5wmhMGGKC/exec';
 
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
@@ -207,8 +207,10 @@
 
       var details = 'CONTACT // Message: ' + message;
 
-      var p = new URLSearchParams({ contact: email, pricing: '[brand] ' + details });
-      fetch(SCRIPT_URL + '?' + p.toString(), { mode: 'no-cors' }).catch(function() {});
+      // POST with body so Apps Script doPost reads e.parameter
+      var data = new URLSearchParams({ contact: email, pricing: '[brand] ' + details });
+      if (navigator.sendBeacon) navigator.sendBeacon(SCRIPT_URL, data);
+      else fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: data }).catch(function() {});
 
       // Hide form, show success
       document.getElementById('contactForm').classList.add('hidden');

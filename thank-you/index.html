@@ -487,7 +487,7 @@
   <!-- Survey logging — same Apps Script endpoint used by /get-report/ -->
   <script>
     (function() {
-      var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlMZxJmAmm90HGKg6AJxEeB8xOP83Dyq4rUHnCD8aubV1NzPqb1ZlSbjzmBAnO63r2/exec';
+      var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyshiN4lvzd5cj5C_XMhKF2tMLsDSJerp1Cp1Dd9g8oMJJ922asHXxyca-5wmhMGGKC/exec';
 
       // Recover buyer context from sessionStorage (set on /get-report/ submit)
       var email = '';
@@ -505,16 +505,15 @@
           if (tier)  detailParts.push('Tier: ' + tier);
           if (brand) detailParts.push('Brand: ' + brand);
           detailParts.push(label + ': ' + value);
-          var p = new URLSearchParams({
+          var data = new URLSearchParams({
             contact: email,
             pricing: '[brand] ' + detailParts.join(' // ')
           });
-          // sendBeacon is more reliable than fetch on page-unload paths
-          var url = SCRIPT_URL + '?' + p.toString();
+          // POST with body so Apps Script doPost reads e.parameter
           if (navigator.sendBeacon) {
-            navigator.sendBeacon(url);
+            navigator.sendBeacon(SCRIPT_URL, data);
           } else {
-            fetch(url, { mode: 'no-cors' }).catch(function() {});
+            fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: data }).catch(function() {});
           }
         } catch(e) {}
       }

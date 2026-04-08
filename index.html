@@ -986,7 +986,7 @@
   (function() {
     var heroForm = document.getElementById('heroForm');
     if (!heroForm) return;
-    var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlMZxJmAmm90HGKg6AJxEeB8xOP83Dyq4rUHnCD8aubV1NzPqb1ZlSbjzmBAnO63r2/exec';
+    var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyshiN4lvzd5cj5C_XMhKF2tMLsDSJerp1Cp1Dd9g8oMJJ922asHXxyca-5wmhMGGKC/exec';
 
     // Auto-fill email if returning visitor
     try {
@@ -1002,15 +1002,15 @@
       var email = document.getElementById('heroEmail').value.trim();
       if (!email) return;
 
-      // Log to Sheets
+      // Log to Sheets — POST with body so Apps Script doPost reads e.parameter
       try {
         var ts = new Date().toISOString();
-        var url = SCRIPT_URL + '?' + new URLSearchParams({
+        var data = new URLSearchParams({
           contact: email,
           pricing: 'hero|' + ts
         });
-        if (navigator.sendBeacon) navigator.sendBeacon(url);
-        else fetch(url, {mode: 'no-cors'}).catch(function(){});
+        if (navigator.sendBeacon) navigator.sendBeacon(SCRIPT_URL, data);
+        else fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: data }).catch(function(){});
       } catch(err) {}
 
       // Persist
