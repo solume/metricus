@@ -124,6 +124,11 @@
     while (root.firstChild) root.removeChild(root.firstChild);
 
     // --- Stage 1: Multiple choice ---
+    var choices = DEFAULT_CHOICES.slice();
+    for (var ci = choices.length - 1; ci > 0; ci--) {
+      var ri = Math.floor(Math.random() * (ci + 1));
+      var tmp = choices[ci]; choices[ci] = choices[ri]; choices[ri] = tmp;
+    }
     var selected = null;
     var choiceEls = [];
     var otherInput = el('input', {
@@ -140,7 +145,7 @@
     function getAnswerByIdx(idx){
       if (idx === null) return '';
       if (idx === otherIdx) return 'Other: ' + (otherInput.value || '').trim();
-      return DEFAULT_CHOICES[idx];
+      return choices[idx];
     }
 
     function select(idx){
@@ -153,11 +158,11 @@
       postLog('anonymous', buildPricing('READER_PULSE_B_CLICK', source, { Answer: getAnswerByIdx(idx) }));
     }
 
-    for (var i = 0; i < DEFAULT_CHOICES.length; i++) {
+    for (var i = 0; i < choices.length; i++) {
       (function(idx){
         var li = el('li', { class: 'm-rpb__choice', role: 'option' }, [
           el('span', { class: 'm-rpb__radio' }),
-          document.createTextNode(DEFAULT_CHOICES[idx])
+          document.createTextNode(choices[idx])
         ]);
         li.addEventListener('click', function(){ select(idx); });
         choiceEls.push(li);
@@ -173,7 +178,7 @@
         otherInput
       ])
     ]);
-    var otherIdx = DEFAULT_CHOICES.length;
+    var otherIdx = choices.length;
     otherLi.addEventListener('click', function(){
       select(otherIdx);
       try { otherInput.focus(); } catch (e) {}
