@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Check What ChatGPT, Perplexity, and Google AI Overviews Say About Your Shopify Brand (2026 Non-Technical Guide) | Metricus</title>
+  <meta name="description" content="A no-code workflow for Shopify founders to audit their brand across ChatGPT, Perplexity, Claude, and Google AI Overviews &mdash; with the exact prompts to use.">
+  <meta property="og:title" content="How to Check What ChatGPT, Perplexity, and Google AI Overviews Say About Your Shopify Brand (2026 Non-Technical Guide)">
+  <meta property="og:description" content="A no-code workflow for Shopify founders to audit their brand across ChatGPT, Perplexity, Claude, and Google AI Overviews &mdash; with the exact prompts to use.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metricusapp.com/blog/check-what-ai-says-about-shopify-brand/">
+  <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How to Check What ChatGPT, Perplexity, and Google AI Overviews Say About Your Shopify Brand (2026 Non-Technical Guide)">
+  <meta name="twitter:description" content="A no-code workflow for Shopify founders to audit their brand across ChatGPT, Perplexity, Claude, and Google AI Overviews &mdash; with the exact prompts to use.">
+  <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
+  <link rel="canonical" href="https://metricusapp.com/blog/check-what-ai-says-about-shopify-brand/">
+
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w70oz7g1k3");
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#515F74',
+            'primary-hover': '#1E293B',
+            'on-primary': '#f6f7ff',
+            'on-primary-fixed': '#324054',
+            'primary-dim': '#455368',
+            surface: '#f7f9fb',
+            'surface-container-low': '#f0f4f7',
+            'surface-container': '#e8eff3',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-highest': '#d9e4ea',
+            'surface-container-high': '#e1e9ee',
+            'surface-variant': '#d9e4ea',
+            'on-surface': '#2a3439',
+            'on-surface-variant': '#566166',
+            outline: '#717c82',
+            'outline-variant': '#a9b4b9',
+            'slate-text': '#0F172A',
+            'slate-muted': '#64748B',
+            'slate-accent': '#475569',
+          },
+          fontFamily: {
+            display: ['Newsreader', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            body: ['Public Sans', 'sans-serif'],
+            headline: ['Newsreader', 'serif'],
+          },
+          borderRadius: {
+            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
+            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
+            full: '0.75rem',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #0F172A;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .font-display { font-family: 'Newsreader', serif; }
+    .font-headline { font-family: 'Newsreader', serif; }
+    .font-body-sans { font-family: 'Public Sans', sans-serif; }
+
+    .editorial-btn {
+      transition: background-color 150ms ease-in-out, transform 150ms ease;
+    }
+    .editorial-btn:hover {
+      background-color: #1E293B;
+    }
+
+    .bg-grid-dots {
+      background-image: radial-gradient(circle, #717c82 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+      opacity: 0.05;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .blog-card {
+      transition: transform 200ms ease, background-color 200ms ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+      background-color: #f7f9fb;
+    }
+
+    .article-body h2 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      line-height: 1.2;
+      color: #0F172A;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) {
+      .article-body h2 {
+        font-size: 2rem;
+      }
+    }
+    .article-body h3 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.3;
+      color: #0F172A;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .article-body p {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+    }
+    .article-body ul, .article-body ol {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+    }
+    .article-body ul { list-style-type: disc; }
+    .article-body ol { list-style-type: decimal; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body blockquote {
+      border-left: 2px solid #334155;
+      padding-left: 1.5rem;
+      font-style: italic;
+      color: #475569;
+      font-size: 1.125rem;
+      line-height: 1.75;
+      margin: 2rem 0;
+    }
+    .article-body a {
+      color: #334155;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .article-body a:hover {
+      color: #1E293B;
+    }
+
+    .prompt-box {
+      background-color: #f0f4f7;
+      border-left: 3px solid #515F74;
+      padding: 1rem 1.25rem;
+      margin: 0.75rem 0;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      color: #0F172A;
+      line-height: 1.6;
+    }
+  </style>
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to Check What ChatGPT, Perplexity, and Google AI Overviews Say About Your Shopify Brand (2026 Non-Technical Guide)",
+    "description": "A no-code workflow for Shopify founders to audit their brand across ChatGPT, Perplexity, Claude, and Google AI Overviews — with the exact prompts to use.",
+    "author": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "datePublished": "2026-04-09",
+    "dateModified": "2026-04-09",
+    "mainEntityOfPage": "https://metricusapp.com/blog/check-what-ai-says-about-shopify-brand/",
+    "image": "https://metricusapp.com/metricus-og-image.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Check What AI Says About Your Shopify Brand", "item": "https://metricusapp.com/blog/check-what-ai-says-about-shopify-brand/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I check what ChatGPT says about my Shopify brand?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Open chat.openai.com, start a new conversation, and type: 'Tell me everything you know about [Your Brand Name]. Include what products you sell, who your customers are, your price range, and any reviews or reputation signals you have seen.' Then follow up with: 'If someone asks you to recommend a [your product category] brand, would you mention [Your Brand Name]? Why or why not?' Screenshot both responses. This gives you a baseline of what ChatGPT's training data contains about your brand and whether it surfaces you in recommendation queries."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the ChatGPT knowledge cutoff in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As of April 2026, ChatGPT's flagship model GPT-5.4 has a knowledge cutoff of August 31, 2025. This means anything that happened to your brand after that date — new product launches, press coverage, rebrands, price changes — is not in ChatGPT's training data unless you are using the web-browsing version. Claude 4.6 Sonnet has a reliable knowledge cutoff of August 2025. Perplexity AI has no fixed cutoff because it performs live web searches for every query."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Perplexity AI search the web in real time when someone asks about my brand?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Unlike ChatGPT or Claude, Perplexity AI performs a real-time web search for every query rather than relying on a static training dataset. It selects sources based on relevance, authority, and freshness, and displays numbered citations linking to those sources. This means Perplexity's answer about your brand reflects what your current web presence looks like today — recent reviews, press mentions, your website content. It also means Perplexity sends trackable referral traffic, visible in Google Analytics as 'perplexity.ai' under Acquisition."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a Shopify app that monitors what AI says about my brand?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No Shopify app currently provides end-to-end AI mention monitoring across ChatGPT, Claude, Perplexity, and Google AI Overviews. Some apps like StoreRank and IndexGPT help with AI discoverability and schema optimization, but they do not run systematic queries across all platforms and report back what AI is saying about your specific brand. Dedicated AI monitoring tools like Otterly ($29/month), OpenLens (free), or HubSpot's AEO Grader (free) fill this gap, as does a Metricus one-time report."
+        }
+      }
+    ]
+  }
+  </script>
+  <script src="/js/reader-pulse.js" defer></script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
+
+  <!-- Site Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="/" class="flex items-center gap-2 group" aria-label="Metricus home">
+        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+        </svg>
+        <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/methodology/" class="nav-link-howitworks text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
+        <a href="/#pricing" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
+        <a href="/blog/" class="nav-link-blog text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Blog</a>
+        <a href="/blog/diy-ai-visibility-audit/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Free Check</a>
+        <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
+    <div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div>
+    <nav class="absolute top-0 right-0 w-72 h-full bg-surface-container-lowest shadow-xl flex flex-col pt-6 px-6">
+      <button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">How It Works</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/#pricing" id="mobile-pricing-link">Pricing</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Blog</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/diy-ai-visibility-audit/">Free Check</a>
+      <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    (function(){
+      var btn=document.getElementById('mobile-menu-btn');
+      var menu=document.getElementById('mobile-menu');
+      var close=document.getElementById('mobile-menu-close');
+      var backdrop=document.getElementById('mobile-menu-backdrop');
+      var pricingLink=document.getElementById('mobile-pricing-link');
+      if(!btn||!menu)return;
+      function open(){menu.classList.remove('hidden');menu.setAttribute('aria-hidden','false');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+      function shut(){menu.classList.add('hidden');menu.setAttribute('aria-hidden','true');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+      btn.addEventListener('click',open);
+      if(close)close.addEventListener('click',shut);
+      if(backdrop)backdrop.addEventListener('click',shut);
+      if(pricingLink)pricingLink.addEventListener('click',shut);
+    })();
+  </script>
+
+
+  <main class="flex-grow flex flex-col relative overflow-x-hidden">
+
+    <div class="absolute inset-0 bg-grid-dots -z-10 pointer-events-none"></div>
+
+    <!-- ========== ARTICLE ========== -->
+    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
+
+      <!-- Breadcrumb -->
+      <nav class="mb-8">
+        <ol class="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-muted">
+          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
+          <li class="select-none">/</li>
+          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
+          <li class="select-none">/</li>
+          <li class="text-slate-text">Check What AI Says About Your Shopify Brand</li>
+        </ol>
+      </nav>
+
+      <!-- Article Header -->
+      <header class="mb-12">
+        <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-4">Ecommerce Playbook</p>
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
+          How to Check What ChatGPT, Perplexity, and Google AI Overviews Say About Your Shopify Brand
+        </h1>
+        <p class="text-sm text-outline">Metricus Research &middot; April 9, 2026 &middot; 18 min read</p>
+      </header>
+
+      <!-- Lede Block -->
+      <div class="bg-surface-container-low p-8 mb-12">
+        <p class="text-lg leading-relaxed text-on-surface">
+          You run a Shopify store doing $10K&ndash;$30K/month in fashion, beauty, or home. You use ChatGPT every day to write emails and product descriptions &mdash; but you&rsquo;ve never once asked it about your own brand. Here is the non-technical workflow to see what every major AI platform currently says about you, in under 20 minutes. <strong>Adobe Analytics measured a 1,300% increase in AI-referred retail traffic during the 2025 holiday season</strong> compared to the prior year. The customers landing on your competitors&rsquo; stores from AI are real, and they started their journey with a prompt, not a Google search.
+        </p>
+      </div>
+
+      <!-- Table of Contents -->
+      <div class="border border-[#E2E8F0] p-8 mb-12">
+        <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">In this article</p>
+        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
+          <li><a href="#the-shift" class="hover:underline">The shift: your brand lives in AI whether you&rsquo;ve looked or not</a></li>
+          <li><a href="#which-platforms" class="hover:underline">Which AI platforms actually talk about Shopify DTC brands</a></li>
+          <li><a href="#why-founders-havent-audited" class="hover:underline">Why most Shopify founders have never audited their AI visibility</a></li>
+          <li><a href="#what-ai-gets-wrong" class="hover:underline">What AI gets wrong about DTC brands</a></li>
+          <li><a href="#the-free-audit" class="hover:underline">The free 20-minute audit workflow</a></li>
+          <li><a href="#tools-that-automate" class="hover:underline">The disruptors: tools and apps that automate the audit</a></li>
+          <li><a href="#turning-audit-into-fixes" class="hover:underline">What actually works: turning the audit into fixes</a></li>
+          <li><a href="#case-for-auditing" class="hover:underline">The case for auditing your AI visibility now</a></li>
+        </ol>
+      </div>
+
+      <!-- Article Body -->
+      <div class="article-body">
+
+        <h2 id="the-shift">The shift: your brand lives in AI whether you&rsquo;ve looked or not</h2>
+
+        <p>A potential customer is looking for a new moisturizer. Six months ago, she opened Google and typed &ldquo;best moisturizer for sensitive skin.&rdquo; Today, she opens ChatGPT and types the exact same question. The answers she gets come from AI training data and live web search &mdash; not from your Google ranking. Your paid ads don&rsquo;t show. Your SEO doesn&rsquo;t show. What shows is whatever AI has learned about the brands in your category.</p>
+
+        <p>This is the shift. And for most Shopify DTC founders, it is happening entirely out of view.</p>
+
+        <p>The numbers are stark. AI-driven traffic to retail sites grew <strong>302% year-over-year</strong> through 2025 (Salesforce Shopping Index, Q4 2025). ChatGPT surpassed 5.8 billion monthly visits by mid-2025. Perplexity AI processes approximately 780 million queries per month as of 2026. Google AI Overviews now appear on roughly <strong>14% of all shopping queries</strong> &mdash; a 5.6x increase in four months (BrightEdge / ALM Corp, Q1 2026).</p>
+
+        <p>Your brand already exists in this ecosystem &mdash; either accurately, inaccurately, or not at all. The only question is whether you know which.</p>
+
+        <h2 id="which-platforms">Which AI platforms actually talk about Shopify DTC brands</h2>
+
+        <p>Not every AI platform handles brand information the same way. Here is how the six major platforms work, what each one knows, and how to check your brand in each one.</p>
+
+        <div class="overflow-x-auto my-8">
+          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
+            <thead>
+              <tr class="bg-surface-container-low">
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Platform</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Knowledge Cutoff</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Has Live Search</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">How to Check Your Brand</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Cost to Check</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">ChatGPT (GPT-5.4)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">August 31, 2025</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes (optional, must enable)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">chat.openai.com &mdash; free account</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Free</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Claude (4.6 Sonnet)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">August 2025 (reliable)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No (training data only)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">claude.ai &mdash; free account</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Free</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Perplexity AI</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No cutoff &mdash; live search every query</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes (always on)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">perplexity.ai &mdash; no account needed</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Free</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Google AI Overviews</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Live search + index</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes (always on)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">google.com (US) &mdash; search your category</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Free</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Gemini (Google)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Varies by model; live search available</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes (optional)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">gemini.google.com &mdash; free account</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Free</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Microsoft Copilot</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Live Bing search index</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes (always on)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">copilot.microsoft.com &mdash; free</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Free</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>Key distinction for Shopify founders:</strong> ChatGPT and Claude draw primarily from training data frozen at a cutoff date. Perplexity, Google AI Overviews, and Copilot search the live web on every query. For your audit, you need both: training-data responses tell you what AI &ldquo;learned&rdquo; about your brand in its formative knowledge base; live-search responses tell you what your current web presence produces.</p>
+
+        <div data-reader-pulse data-source="check-what-ai-says-about-shopify-brand"></div>
+
+        <h2 id="why-founders-havent-audited">Why most Shopify founders have never audited their AI visibility</h2>
+
+        <p>If AI mentions are this important, why haven&rsquo;t more Shopify founders checked? Four reasons, and none of them reflect well on the status quo.</p>
+
+        <h3>1. The awareness gap</h3>
+        <p>The term &ldquo;AI visibility&rdquo; didn&rsquo;t exist in most founders&rsquo; vocabulary until late 2025. SEO agencies are still running the same playbooks from 2022. The tooling &mdash; dedicated AI monitoring platforms &mdash; only reached maturity in 2025. Most founders simply don&rsquo;t know this is a thing they need to check, because no one in their ecosystem has told them yet.</p>
+
+        <h3>2. It doesn&rsquo;t feel like a founder job</h3>
+        <p>Shopify founders doing $10K&ndash;$30K/month are typically running every function simultaneously: product, fulfillment, customer service, paid ads, email marketing, and social. &ldquo;Check what ChatGPT says about us&rdquo; doesn&rsquo;t appear on any Shopify help doc, any DTC newsletter, or any agency checklist. It feels vaguely technical, or someone else&rsquo;s problem.</p>
+
+        <h3>3. No Shopify app does this end-to-end</h3>
+        <p>If there were a Shopify app that automatically monitored ChatGPT, Claude, Perplexity, and Google AI Overviews for your brand name and sent you a weekly report, more founders would use it. That app does not exist as of April 2026. Some apps &mdash; <a href="https://apps.shopify.com/storerank-ai" target="_blank" rel="noopener">StoreRank</a> and <a href="https://apps.shopify.com/index-gpt" target="_blank" rel="noopener">IndexGPT</a> &mdash; help with AI discoverability and schema optimization. But systematic brand-mention monitoring across all major AI platforms requires dedicated tools outside the Shopify App Store.</p>
+
+        <h3>4. There&rsquo;s no urgent visible pain yet</h3>
+        <p>Unlike a Google algorithm update that tanks your traffic overnight, the damage from AI invisibility is slow and invisible. You don&rsquo;t get an alert when ChatGPT recommends your competitor instead of you. You don&rsquo;t see the customer who asked Perplexity for &ldquo;the best clean beauty serums under $50&rdquo; and got four brands back &mdash; none of which was yours. The leads that never arrive don&rsquo;t show up in your analytics. They just don&rsquo;t exist.</p>
+
+        <h2 id="what-ai-gets-wrong">What AI gets wrong about DTC brands</h2>
+
+        <p>When AI does surface your brand, there is a meaningful chance it gets something wrong. Here are the four most common error patterns we find in AI responses about Shopify DTC brands.</p>
+
+        <h3>Stale knowledge cutoff</h3>
+        <p>ChatGPT&rsquo;s GPT-5.4 model has a hard knowledge cutoff of August 31, 2025. Claude 4.6 Sonnet&rsquo;s reliable knowledge extends to August 2025. That means if you launched a new product line in September 2025, rebranded in October, raised prices in January 2026, or received a wave of press coverage from a viral TikTok in March 2026 &mdash; none of it exists in ChatGPT&rsquo;s or Claude&rsquo;s training data. They will describe a version of your brand that is six to eighteen months out of date, stated with full confidence.</p>
+
+        <h3>Hallucinated product specs</h3>
+        <p>AI will sometimes generate specific product details &mdash; ingredients, materials, dimensions, SKU names &mdash; that sound plausible but are fabricated or borrowed from similar brands. A beauty founder who asked ChatGPT about her serum formulation received a confident answer that listed two ingredients not in her actual formula. A customer reading that response would have incorrect information before they even reached her product page.</p>
+
+        <h3>Mixing up similar brand names</h3>
+        <p>Shopify is home to thousands of DTC brands with similar names, overlapping categories, and adjacent positioning. AI frequently merges information from multiple brands &mdash; or attributes a competitor&rsquo;s story, product range, or customer profile to your brand. If your brand name is common or shares a word with a larger brand, this is a particular risk.</p>
+
+        <h3>Wrong pricing</h3>
+        <p>Pricing is one of the fastest-moving signals in DTC, and AI training data is always behind. If ChatGPT knows your average order value was $45 in 2024 and you&rsquo;ve since repositioned upmarket with a $90 AOV, AI is actively misrepresenting your price tier to every customer who asks. In a category where price signaling shapes brand perception, this matters.</p>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>The compounding problem:</strong> Your Shopify brand is either invisible in AI (bad) or visible with incorrect information (worse). Invisible means customers never discover you through AI. Incorrect means they discover you with wrong specs, prices, or positioning &mdash; eroding trust before the first page load.
+          </p>
+        </div>
+
+        <!-- METRICUS_MID_CTA -->
+        <aside class="metricus-mid-cta my-12 bg-surface border-l-4 border-primary p-8 md:p-10" style="background-color:#f7f9fb;border-left:4px solid #515F74;">
+          <p class="font-display italic text-2xl md:text-3xl text-slate-text leading-tight mb-3" style="color:#0F172A;font-family:'Newsreader',serif;">What does AI say about your Shopify brand? Why? What should you fix first?</p>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6" style="color:#64748B;">One-time report. No subscription. From $99.</p>
+          <a href="/get-report/" class="metricus-mid-cta-btn inline-flex items-center gap-2 bg-primary text-on-primary text-sm font-semibold tracking-tight px-6 py-3 hover:bg-primary-dim transition-colors" style="background-color:#515F74;color:#f6f7ff;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;font-size:14px;font-weight:600;">
+            Get your report <span aria-hidden="true">&rarr;</span>
+          </a>
+        </aside>
+
+        <h2 id="the-free-audit">The free 20-minute audit workflow</h2>
+
+        <p>You need four browser tabs: ChatGPT, Claude, Perplexity, and Google. Open them now. You will spend roughly five minutes in each. Here are the exact prompts to type.</p>
+
+        <h3>Step 1: ChatGPT (chat.openai.com)</h3>
+
+        <p>Create a free account if you don&rsquo;t have one. Start a <strong>new conversation</strong>. Type each of these prompts in sequence, pressing enter after each one:</p>
+
+        <div class="prompt-box">Tell me everything you know about [Your Brand Name]. Include what products you sell, who your customers are, your price range, and any reviews or reputation signals you have seen.</div>
+
+        <div class="prompt-box">If someone asks you to recommend a [your product category &mdash; e.g., "clean beauty serum" or "minimalist home decor"] brand, would you mention [Your Brand Name]? Why or why not?</div>
+
+        <div class="prompt-box">What are the best [your product category] brands for [your target customer &mdash; e.g., "women in their 30s with sensitive skin" or "first-time apartment renters"]?</div>
+
+        <p><strong>What to record:</strong> Does ChatGPT know your brand exists? What does it say about you? Is the information accurate? Do you appear in the category recommendation? Screenshot all three responses.</p>
+
+        <p><strong>Note on web browsing:</strong> By default, ChatGPT in a new conversation uses its training data only. If you see a globe icon near the message input, browsing is enabled &mdash; test both modes so you see the training-data baseline and the live-web result separately.</p>
+
+        <h3>Step 2: Claude (claude.ai)</h3>
+
+        <p>Create a free account at <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>. Start a new conversation. Type:</p>
+
+        <div class="prompt-box">What do you know about [Your Brand Name]? I am the founder. Tell me what you have in your training data about our products, positioning, and any mentions you have seen.</div>
+
+        <div class="prompt-box">Pretend a customer asks you: "I want to buy [your flagship product type]. Which brands should I consider?" Give me your honest answer and tell me if [Your Brand Name] appears in it.</div>
+
+        <p><strong>Why Claude specifically:</strong> Claude uses a different training corpus than ChatGPT, so what Claude knows vs. what ChatGPT knows can differ meaningfully. A brand might be well-represented in one and completely absent from the other. Testing both gives you a fuller picture of the training-data landscape.</p>
+
+        <h3>Step 3: Perplexity AI (perplexity.ai)</h3>
+
+        <p>Go to <a href="https://perplexity.ai" target="_blank" rel="noopener">perplexity.ai</a>. No account needed. Type:</p>
+
+        <div class="prompt-box">[Your Brand Name] &mdash; what is this brand, what do they sell, and what do customers say about them?</div>
+
+        <div class="prompt-box">Best [your product category] brands in 2026 &mdash; which ones are recommended and why?</div>
+
+        <div class="prompt-box">Is [Your Brand Name] a reputable brand? What can you find about their products and reviews?</div>
+
+        <p><strong>What to record:</strong> Perplexity shows numbered source citations on the right side of the screen. Screenshot those citations. They tell you exactly which web sources Perplexity is using to form its answer about your brand &mdash; your website, specific review sites, press mentions, or Reddit threads. This is your real-time web presence map.</p>
+
+        <p><strong>Perplexity&rsquo;s unique value:</strong> Unlike ChatGPT or Claude, Perplexity performs a live web search on every query. Its answer about your brand reflects your current digital footprint today &mdash; including recent reviews, press, and your own website content. If Perplexity gets your brand wrong, you can often trace it to a specific bad source in the citations.</p>
+
+        <h3>Step 4: Google AI Overviews (google.com)</h3>
+
+        <p>Open Google in a regular browser window (not incognito, logged in to a Google account). Search for:</p>
+
+        <div class="prompt-box">[Your Brand Name] reviews</div>
+
+        <div class="prompt-box">best [your product category] 2026</div>
+
+        <div class="prompt-box">[your product category] brands under $[your typical price point]</div>
+
+        <p><strong>What to look for:</strong> Google AI Overviews appear as a large boxed section at the very top of results, above the organic links, labeled &ldquo;AI Overview.&rdquo; Note: AI Overviews do not appear on every query &mdash; they appear on roughly 14% of shopping queries as of early 2026. If you see one, screenshot it. Note whether your brand is cited, which brands appear instead of you, and what sources Google pulls from.</p>
+
+        <p><strong>What to record in your tracker:</strong> After running all four platforms, fill in this simple table in a Google Doc or Notion page.</p>
+
+        <div class="overflow-x-auto my-8">
+          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
+            <thead>
+              <tr class="bg-surface-container-low">
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Platform</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Knows brand exists?</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Mentions in category recs?</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Factual errors found</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Sources cited</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">ChatGPT (no browsing)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Y / N / Partial</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Y / N</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">List them</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">N/A (training data)</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Claude</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Y / N / Partial</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Y / N</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">List them</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">N/A (training data)</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Perplexity</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Y / N / Partial</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Y / N</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">List them</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">List cited URLs</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Google AI Overviews</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Y / N / No AIO triggered</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Y / N</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">List them</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">List cited URLs</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>When you are done, you have a simple, honest snapshot of your brand&rsquo;s AI presence &mdash; like a screenshot with notes on what&rsquo;s wrong and what to fix. That is your audit baseline.</p>
+
+        <h2 id="tools-that-automate">The disruptors: tools and apps that automate the audit</h2>
+
+        <p>Running the manual workflow above takes 20 minutes once. But AI responses change as models retrain, as new data enters the index, and as your web presence evolves. If you want ongoing monitoring &mdash; or want a more systematic first pass across hundreds of query variations &mdash; here are the tools that exist as of April 2026.</p>
+
+        <div class="overflow-x-auto my-8">
+          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
+            <thead>
+              <tr class="bg-surface-container-low">
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Tool</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Starting Price</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Platforms Covered</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Free Tier</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Best For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]"><a href="https://www.hubspot.com/aeo-grader" target="_blank" rel="noopener">HubSpot AEO Grader</a></td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Free</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">ChatGPT, Perplexity, Gemini</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes &mdash; fully free, no credit card</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Quick first look, sentiment &amp; share-of-voice score</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]"><a href="https://tryopenlens.com" target="_blank" rel="noopener">OpenLens</a></td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Free</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">ChatGPT, Claude, Google AI, Perplexity, DeepSeek</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes &mdash; fully free, launched March 2026</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Brand mentions, sentiment, source citations, competitive comparison</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]"><a href="https://www.amivisibleonai.com" target="_blank" rel="noopener">AmIVisibleOnAI</a></td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Free</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">ChatGPT, Claude, Perplexity, Gemini</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes &mdash; no signup required</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Quick technical check (robots.txt, schema, crawlability)</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]"><a href="https://otterly.ai" target="_blank" rel="noopener">Otterly</a></td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">$29/month (Lite, 15 prompts)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">ChatGPT, Perplexity, Google AI Overviews, AI Mode</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">14-day free trial</td>
+                <td class="p-4 text-slate-muted border border-[#E2U8F0]">Ongoing monitoring, share-of-AI-voice vs. competitors</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]"><a href="https://peec.ai" target="_blank" rel="noopener">Peec AI</a></td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">$89/month (25 prompts)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">ChatGPT, Perplexity, Google AI Overviews (+ others at add-on cost)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Daily tracking, competitive landscape, DTC-friendly UI</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]"><a href="https://www.tryprofound.com" target="_blank" rel="noopener">Profound</a></td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">$399/month (Growth, 3 platforms)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">ChatGPT, Gemini, Claude, Perplexity + bot crawler analytics</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Enterprise brands, AI bot crawler tracking, content optimization agents</td>
+              </tr>
+              <tr class="bg-surface-container-low">
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]"><a href="/get-report/" class="underline">Metricus</a></td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">From $99 (one-time)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">ChatGPT, Claude, Perplexity, Google AI Overviews, Gemini</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No subscription required</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Shopify founders who want one complete report with errors, source map, and action plan</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>The honest Shopify app reality:</strong> If you search the Shopify App Store for &ldquo;AI brand monitoring&rdquo; or &ldquo;ChatGPT mentions,&rdquo; you will find apps that help with AI discoverability &mdash; StoreRank and IndexGPT add AI-optimized schema and structured data to your store, which helps AI systems find and understand your products. That is useful. But none of these apps monitor what AI is currently saying about your brand across ChatGPT, Perplexity, Claude, and Google AI Overviews and report back to you. That capability lives outside the Shopify ecosystem for now.</p>
+
+        <h2 id="turning-audit-into-fixes">What actually works: turning the audit into fixes</h2>
+
+        <p>Running the audit gives you a diagnosis. Here is what to do with what you find.</p>
+
+        <h3>1. Fix factual errors at the source</h3>
+        <p>Every wrong fact AI states about your brand comes from somewhere: an old review, an outdated press mention, a stale profile on a third-party site. When Perplexity cites a source, it shows you the URL. Visit it. If the information is wrong, update it. For ChatGPT and Claude (training-data models), the fix is slower &mdash; you need to create correct information that will enter future training runs via authoritative sources.</p>
+
+        <h3>2. Build your presence on sources AI trusts</h3>
+        <p>AI systems weight content from authoritative sources heavily. For DTC brands, the highest-value sources to build or improve are: Google Business Profile (complete and accurate), product reviews on widely-indexed review platforms (Trustpilot, Google Reviews, Yotpo), press mentions in beauty, fashion, or home publications with strong domain authority, and Reddit and community forum mentions in relevant subreddits. Perplexity in particular prioritizes freshness &mdash; content updated within days or weeks ranks above stale content from the same domain.</p>
+
+        <h3>3. Add Product and FAQ schema to your Shopify store</h3>
+        <p>Only 12% of Shopify merchants have implemented comprehensive Product schema markup &mdash; and merchants who have it see a 34% higher rate of inclusion in AI shopping features (Searchable / Fuel Online, 2026). Schema markup tells AI systems exactly what your products are, their specifications, price, and availability in a structured format they can read without interpretation. You can add basic Product schema through Shopify&rsquo;s theme editor or apps like StoreRank &mdash; no coding required.</p>
+
+        <h3>4. Publish citable content on your own site</h3>
+        <p>AI systems extract and cite content that contains specific, factual, structured claims. A blog post that says &ldquo;our serum is loved by thousands of customers&rdquo; is invisible to AI. A blog post that says &ldquo;our retinol serum contains 0.3% encapsulated retinol, 2% niacinamide, and hyaluronic acid in a fragrance-free base, priced at $52 for 30ml&rdquo; gives AI something to extract and cite. Write for the AI reader, not just the human reader.</p>
+
+        <h3>5. Update your brand information across all channels before the next training cutoff</h3>
+        <p>ChatGPT and Claude periodically retrain on updated web data. The window between now and the next cutoff is your opportunity to flood the web with accurate, current information about your brand &mdash; press mentions, updated listings, new review content, refreshed product descriptions &mdash; so it enters the next training corpus. Brands that do this consistently compound their AI visibility over time.</p>
+
+        <h3>6. Re-audit every 90 days</h3>
+        <p>AI responses change. Models update. Your web presence evolves. Run the same manual audit quarterly, or set up an automated monitoring tool so you have a baseline to compare against. The goal is to catch errors before your customers do.</p>
+
+        <div class="overflow-x-auto my-8">
+          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
+            <thead>
+              <tr class="bg-surface-container-low">
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Action</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Effort</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Timeline</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Expected Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Run the 20-minute manual audit</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Today</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Baseline established</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Fix factual errors at their source</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Medium</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Week 1</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Stops active misinformation</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Add Product &amp; FAQ schema to Shopify</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low (app-based)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Week 1&ndash;2</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">34% higher AI shopping inclusion rate</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Build authoritative third-party mentions</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Medium (ongoing)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Weeks 2&ndash;8</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Improves training-data corpus</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Publish citable, spec-rich product content</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Medium (ongoing)</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Weeks 2&ndash;10</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Highest long-term impact on AI citations</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Re-audit every 90 days</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Quarterly</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Ongoing error detection</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="case-for-auditing">The case for auditing your AI visibility now</h2>
+
+        <p>AI-influenced commerce is projected to grow from approximately $31 billion in 2025 to <strong>$194 billion by 2030</strong> (industry projections). Adobe Analytics measured a 1,300% increase in AI-referred retail traffic during the 2025 holiday season. ChatGPT Shopify integration, announced in March 2026, now makes Shopify merchants&rsquo; products directly shoppable within ChatGPT conversations &mdash; meaning AI is no longer just a discovery layer but a direct sales channel.</p>
+
+        <p>The founders who run this audit today will discover something most of their competitors haven&rsquo;t looked at yet. Some will find that AI describes their brand accurately and mentions them in category recommendations &mdash; free, compounding visibility with zero ad spend. Some will find their brand is invisible. Some will find it&rsquo;s wrong. All three outcomes are useful, because all three are actionable.</p>
+
+        <p>The founders who do not run this audit will continue operating without knowing whether AI is helping them or hurting them, while AI-driven retail traffic keeps growing at triple-digit rates.</p>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>The bottom line:</strong> You have spent years building a brand. AI already has an opinion about it. Spend 20 minutes today finding out what that opinion is.
+          </p>
+        </div>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>This article gives you the workflow.</strong> A <a href="../../get-report/">Metricus report</a> gives you the specific errors, exact source map, and prioritized action plan for your Shopify brand &mdash; across every major AI platform. One-time purchase from $99. No subscription required.
+          </p>
+        </div>
+
+        <!-- Hub crosslinks -->
+        <h2>Related reading</h2>
+        <ul>
+          <li><strong><a href="../beauty-brand-ai-visibility/">AI visibility for beauty brands</a></strong> &mdash; how ChatGPT and Perplexity treat skincare and cosmetics brands, with category-specific data.</li>
+          <li><strong><a href="../fashion-brand-ai-visibility/">AI visibility for fashion brands</a></strong> &mdash; why AI systematically favors large fashion retailers and how DTC apparel brands can compete.</li>
+          <li><strong><a href="../fix-ai-brand-hallucinations/">Fixing AI hallucinations about your brand</a></strong> &mdash; the step-by-step process for identifying and correcting errors at their source.</li>
+          <li><strong><a href="../ai-visibility-how-brands-show-up/">What is AI visibility?</a></strong> &mdash; the complete explainer on how brands appear (or don&rsquo;t) in AI-generated answers.</li>
+          <li><strong><a href="../diy-ai-visibility-audit/">Free AI visibility check</a></strong> &mdash; the quick self-serve diagnostic before ordering a full report.</li>
+          <li><strong><a href="../shopify-organic-traffic-dropping-diagnosis/">Shopify organic traffic dropping</a></strong> &mdash; diagnosing the gap between Google decline and AI channel growth for Shopify stores.</li>
+        </ul>
+
+        <p class="text-sm text-slate-muted mt-8"><strong>Sources:</strong> Adobe Analytics 2025 Holiday Shopping Season report (AI-referred traffic data); Salesforce Shopping Index Q4 2025 (AI-driven traffic growth); BrightEdge AI Overviews research (2026); ALM Corp / Google AI Overviews shopping query data (Q1 2026); OpenAI Academy &mdash; GPT-5.4 knowledge cutoff (August 31, 2025); Anthropic Claude help center (Claude 4.6 knowledge cutoff); Perplexity AI Help Center (real-time search behavior); HubSpot AEO Grader product pages (hubspot.com/aeo-grader); OpenLens launch announcement (March 23, 2026); Otterly pricing page (otterly.ai/pricing); Peec AI pricing (peec.ai/pricing); Profound pricing (tryprofound.com/pricing); Searchable / Fuel Online &mdash; Shopify schema markup data (2026); Shopify Agentic Commerce announcements (March 2026). AI platform behaviors based on Metricus internal testing across ChatGPT, Perplexity, Claude, Google AI Overviews, and Gemini (April 2026). Learn more about <a href="../ai-visibility-scores-explained/">how we measure AI visibility</a>.</p>
+
+      </div>
+      <!-- End Article Body -->
+
+      <p class="text-sm text-slate-muted mt-8 border-t border-[#E2E8F0] pt-6">Want to see how your Shopify brand appears across all major AI platforms? Run a <a href="../../get-report/" class="text-primary hover:underline">Metricus AI visibility report</a>. Or browse our <a href="../../geo-knowledge-base/" class="text-primary hover:underline">GEO Knowledge Base</a> for research clusters on AI visibility strategy.</p>
+
+      <!-- ========== ARTICLE CTA ========== -->
+      <div class="bg-primary p-8 md:p-12 mt-16">
+        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">Find out what AI says about your Shopify brand</h3>
+        <p class="text-on-primary/80 text-base max-w-lg mb-8">
+          Metricus queries every major AI platform hundreds of times to find the real patterns. See your AI visibility assessment, exact AI quotes, factual errors with source map, and a prioritized action plan. One report, one price.
+        </p>
+        <a href="../../get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
+          Get your report
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+        <p class="mt-4"><a href="../../sample-ai-visibility-report/" class="text-on-primary/70 hover:text-on-primary text-sm underline transition-colors">Or see what a report looks like &rarr;</a></p>
+      </div>
+
+      <!-- ========== CITE THIS ARTICLE ========== -->
+      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
+        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
+          <cite class="not-italic"><a href="https://metricusapp.com/blog/check-what-ai-says-about-shopify-brand/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; How to Check What ChatGPT, Perplexity, and Google AI Overviews Say About Your Shopify Brand (2026 Non-Technical Guide)</a></cite>
+        </p>
+      </footer>
+
+    </article>
+
+    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-6">Go deeper</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <a href="/geo-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">GEO Knowledge Base</p>
+          <p class="text-sm text-on-surface-variant mt-1">81 research clusters on AI visibility and brand monitoring</p>
+        </a>
+        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
+          <p class="text-sm text-on-surface-variant mt-1">48 clusters on fixing AI accuracy issues and hallucinations</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== RELATED POSTS ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-8">Related articles</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <a href="../beauty-brand-ai-visibility/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Industry Research</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            AI Visibility for Beauty Brands: Who ChatGPT Recommends and Why
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            How AI treats skincare and cosmetics brands, what signals drive category recommendations, and the gap between DTC founders and the brands AI favors.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>April 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../fix-ai-brand-hallucinations/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Playbook</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            AI Is Getting Facts Wrong About Your Brand
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            72% of brands have factual errors in AI responses. Here&rsquo;s a 4-step process to audit and fix them before customers see them.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../shopify-organic-traffic-dropping-diagnosis/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Diagnosis</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            Shopify Organic Traffic Dropping? Here&rsquo;s the Real Diagnosis
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            Why Shopify stores are losing Google traffic and what the AI channel shift means for DTC brand discovery in 2026.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <!-- Site Footer -->
+  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+        <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
+        <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
+        <a href="/blog/agency-guide-ai-visibility-audits/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
+        <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
+        <a href="/privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a>
+        <a href="/terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a>
+        <a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopify Structured Data and JSON-LD Schema in Plain English: What&rsquo;s Missing and How to Add It Without a Developer (2026) | Metricus</title>
+  <meta name="description" content="Shopify founders: what 'structured data' and 'JSON-LD schema' actually mean, why AI needs them, and the no-code 2026 workflow to add them.">
+  <meta property="og:title" content="Shopify Structured Data and JSON-LD Schema in Plain English: What&rsquo;s Missing and How to Add It Without a Developer (2026)">
+  <meta property="og:description" content="Shopify founders: what 'structured data' and 'JSON-LD schema' actually mean, why AI needs them, and the no-code 2026 workflow to add them.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metricusapp.com/blog/shopify-structured-data-json-ld-plain-english/">
+  <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Shopify Structured Data and JSON-LD Schema in Plain English: What&rsquo;s Missing and How to Add It Without a Developer (2026)">
+  <meta name="twitter:description" content="Shopify founders: what 'structured data' and 'JSON-LD schema' actually mean, why AI needs them, and the no-code 2026 workflow to add them.">
+  <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
+  <link rel="canonical" href="https://metricusapp.com/blog/shopify-structured-data-json-ld-plain-english/">
+
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w70oz7g1k3");
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#515F74',
+            'primary-hover': '#1E293B',
+            'on-primary': '#f6f7ff',
+            'on-primary-fixed': '#324054',
+            'primary-dim': '#455368',
+            surface: '#f7f9fb',
+            'surface-container-low': '#f0f4f7',
+            'surface-container': '#e8eff3',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-highest': '#d9e4ea',
+            'surface-container-high': '#e1e9ee',
+            'surface-variant': '#d9e4ea',
+            'on-surface': '#2a3439',
+            'on-surface-variant': '#566166',
+            outline: '#717c82',
+            'outline-variant': '#a9b4b9',
+            'slate-text': '#0F172A',
+            'slate-muted': '#64748B',
+            'slate-accent': '#475569',
+          },
+          fontFamily: {
+            display: ['Newsreader', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            body: ['Public Sans', 'sans-serif'],
+            headline: ['Newsreader', 'serif'],
+          },
+          borderRadius: {
+            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
+            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
+            full: '0.75rem',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #0F172A;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .font-display { font-family: 'Newsreader', serif; }
+    .font-headline { font-family: 'Newsreader', serif; }
+    .font-body-sans { font-family: 'Public Sans', sans-serif; }
+
+    .editorial-btn {
+      transition: background-color 150ms ease-in-out, transform 150ms ease;
+    }
+    .editorial-btn:hover {
+      background-color: #1E293B;
+    }
+
+    .bg-grid-dots {
+      background-image: radial-gradient(circle, #717c82 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+      opacity: 0.05;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .blog-card {
+      transition: transform 200ms ease, background-color 200ms ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+      background-color: #f7f9fb;
+    }
+
+    .article-body h2 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      line-height: 1.2;
+      color: #0F172A;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) {
+      .article-body h2 {
+        font-size: 2rem;
+      }
+    }
+    .article-body h3 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.3;
+      color: #0F172A;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .article-body p {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+    }
+    .article-body ul, .article-body ol {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+    }
+    .article-body ul { list-style-type: disc; }
+    .article-body ol { list-style-type: decimal; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body blockquote {
+      border-left: 2px solid #334155;
+      padding-left: 1.5rem;
+      font-style: italic;
+      color: #475569;
+      font-size: 1.125rem;
+      line-height: 1.75;
+      margin: 2rem 0;
+    }
+    .article-body a {
+      color: #334155;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .article-body a:hover {
+      color: #1E293B;
+    }
+    .code-block {
+      background-color: #0F172A;
+      color: #e2e8f0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      padding: 1.5rem;
+      overflow-x: auto;
+      margin: 1.5rem 0 1.5rem 0;
+      border-left: 3px solid #515F74;
+    }
+    .code-block .key { color: #93c5fd; }
+    .code-block .val { color: #86efac; }
+    .code-block .str { color: #fde68a; }
+    .code-block .punc { color: #94a3b8; }
+  </style>
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Shopify Structured Data and JSON-LD Schema in Plain English: What's Missing and How to Add It Without a Developer (2026)",
+    "description": "Shopify founders: what 'structured data' and 'JSON-LD schema' actually mean, why AI needs them, and the no-code 2026 workflow to add them.",
+    "author": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "datePublished": "2026-04-09",
+    "dateModified": "2026-04-09",
+    "mainEntityOfPage": "https://metricusapp.com/blog/shopify-structured-data-json-ld-plain-english/",
+    "image": "https://metricusapp.com/metricus-og-image.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Shopify Structured Data and JSON-LD Schema in Plain English", "item": "https://metricusapp.com/blog/shopify-structured-data-json-ld-plain-english/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is structured data on a Shopify store?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Structured data is a standardised set of labels you add to your product pages so that search engines and AI chatbots can understand exactly what your page contains — the product name, price, availability, brand, reviews, and more. Without these labels, a machine reading your page sees raw text and has to guess what everything means. Structured data eliminates the guesswork, which is why pages with complete product schema are significantly more likely to appear in Google Rich Results, Google Shopping, and AI-generated answers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is JSON-LD and how is it different from structured data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "JSON-LD (JavaScript Object Notation for Linked Data) is the technical format used to write structured data. Think of structured data as the concept (labelling your product information for machines) and JSON-LD as the language you write it in. JSON-LD sits inside a script tag in your page's HTML head — it never appears visibly to shoppers but is read by every search engine and AI crawler that visits your store. Google officially recommends JSON-LD over older formats like Microdata because it is easier to implement, easier to maintain, and does not interfere with your page design."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Shopify automatically add structured data to my store?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Shopify's flagship free theme, Dawn, includes a basic Product schema that covers the product name, description, price, currency, and availability. However, Dawn does not include AggregateRating or Review schema (so star ratings never appear in search results), FAQPage schema, Organization schema, or complete BreadcrumbList schema across all page types. For most self-built Shopify stores, especially those on free or low-cost third-party themes, the structured data gaps are significant enough that Google's Rich Results Test will show errors or missing fields."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which Shopify app should I install to add structured data without a developer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For most self-built Shopify stores, the best no-code options in 2026 are: Webrex AI SEO Schema (free plan available, paid from $3.49/month) for stores that want a generous free tier; GroPulse GP JSON-LD Schema (free to install, with paid tiers) for stores wanting AI-SEO features alongside schema; Schema Ninja (free tier available, paid tiers with AI-generated FAQ schemas) for stores wanting automatic FAQ generation; Schema Plus for SEO ($14.99/month, 7-day trial, no free tier) for stores wanting a single simple paid plan; and Ilana's JSON-LD for SEO ($399/year, billed annually) for stores that want deep audit support alongside schema installation. All of these apps install and activate without touching any code."
+        }
+      }
+    ]
+  }
+  </script>
+  <script src="/js/reader-pulse.js" defer></script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
+
+  <!-- Site Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="/" class="flex items-center gap-2 group" aria-label="Metricus home">
+        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+        </svg>
+        <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/methodology/" class="nav-link-howitworks text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
+        <a href="/#pricing" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
+        <a href="/blog/" class="nav-link-blog text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Blog</a>
+        <a href="/blog/diy-ai-visibility-audit/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Free Check</a>
+        <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
+    <div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div>
+    <nav class="absolute top-0 right-0 w-72 h-full bg-surface-container-lowest shadow-xl flex flex-col pt-6 px-6">
+      <button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">How It Works</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/#pricing" id="mobile-pricing-link">Pricing</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Blog</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/diy-ai-visibility-audit/">Free Check</a>
+      <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    (function(){
+      var btn=document.getElementById('mobile-menu-btn');
+      var menu=document.getElementById('mobile-menu');
+      var close=document.getElementById('mobile-menu-close');
+      var backdrop=document.getElementById('mobile-menu-backdrop');
+      var pricingLink=document.getElementById('mobile-pricing-link');
+      if(!btn||!menu)return;
+      function open(){menu.classList.remove('hidden');menu.setAttribute('aria-hidden','false');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+      function shut(){menu.classList.add('hidden');menu.setAttribute('aria-hidden','true');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+      btn.addEventListener('click',open);
+      if(close)close.addEventListener('click',shut);
+      if(backdrop)backdrop.addEventListener('click',shut);
+      if(pricingLink)pricingLink.addEventListener('click',shut);
+    })();
+  </script>
+
+
+  <main class="flex-grow flex flex-col relative overflow-x-hidden">
+
+    <div class="absolute inset-0 bg-grid-dots -z-10 pointer-events-none"></div>
+
+    <!-- ========== ARTICLE ========== -->
+    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
+
+      <!-- Breadcrumb -->
+      <nav class="mb-8">
+        <ol class="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-muted">
+          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
+          <li class="select-none">/</li>
+          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
+          <li class="select-none">/</li>
+          <li class="text-slate-text">Shopify Structured Data</li>
+        </ol>
+      </nav>
+
+      <!-- Article Header -->
+      <header class="mb-12">
+        <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-4">Ecommerce Playbook</p>
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
+          Shopify Structured Data and JSON-LD Schema in Plain English
+        </h1>
+        <p class="text-sm text-outline">Metricus Research &middot; April 9, 2026 &middot; 20 min read</p>
+      </header>
+
+
+      <!-- Persona callout / lede -->
+      <div class="bg-surface-container-low p-8 mb-12">
+        <p class="text-lg leading-relaxed text-on-surface">
+          You built your Shopify store yourself on a free or cheap theme. You write your own product copy. People keep telling you your store needs &ldquo;structured data&rdquo; or &ldquo;JSON-LD schema&rdquo; for AI search. This article is the plain-English answer: what it is, whether Shopify already has it, and exactly which no-code app to install today. <strong>Pages with complete product schema are 2.5&times; more likely to be cited in Google AI Overviews</strong> (BrightEdge / Alhena.ai ecommerce analysis, 2025). Most self-built Shopify stores do not have complete schema.
+        </p>
+      </div>
+
+
+      <!-- Table of Contents -->
+      <div class="border border-[#E2E8F0] p-8 mb-12">
+        <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">In this article</p>
+        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
+          <li><a href="#the-shift" class="hover:underline">The shift: why AI chatbots need labels on your page, not just words</a></li>
+          <li><a href="#what-shopify-gives-you" class="hover:underline">What Shopify actually gives you out of the box in 2026</a></li>
+          <li><a href="#why-invisible" class="hover:underline">Why most self-built Shopify stores are invisible to AI crawlers</a></li>
+          <li><a href="#what-ai-gets-wrong" class="hover:underline">What AI gets wrong without structured data</a></li>
+          <li><a href="#the-pipeline" class="hover:underline">The 2026 schema-to-AI-citation pipeline: what the data shows</a></li>
+          <li><a href="#the-apps" class="hover:underline">The apps: Shopify tools that add structured data for you (no code)</a></li>
+          <li><a href="#what-actually-works" class="hover:underline">What actually works: the 60-minute plain-English setup</a></li>
+          <li><a href="#case-for-auditing" class="hover:underline">The case for auditing your AI visibility now</a></li>
+        </ol>
+      </div>
+
+      <!-- Article Body -->
+      <div class="article-body">
+
+        <h2 id="the-shift">The shift: why AI chatbots need labels on your page, not just words</h2>
+
+        <p>Think about the last time you moved into a new apartment. When the movers carried boxes in, unlabelled boxes caused chaos. Is that &ldquo;kitchen&rdquo; or &ldquo;bedroom&rdquo;? What&rsquo;s fragile? What goes in the basement? Without labels, everyone guessed &mdash; and things ended up in the wrong place.</p>
+
+        <p>Your product pages have the same problem. Your words say &ldquo;$34.99&rdquo; and &ldquo;In stock&rdquo; &mdash; but that&rsquo;s written for human shoppers, not machines. When a Google crawler or a ChatGPT AI visits your page, it sees a wall of text. It can probably figure out the price. But it can&rsquo;t be sure if that number is the current price, a sale price, a wholesale price, or a shipping estimate. It can&rsquo;t reliably tell whether your product has 4.8-star reviews unless those reviews are explicitly labelled.</p>
+
+        <p><strong>Structured data is the label system.</strong> You add a small block of code to your page that says, in a standardised language machines understand: &ldquo;This page is a Product. Its name is X. Its price is $34.99 USD. It is currently InStock. It has 47 reviews averaging 4.8 stars.&rdquo; No guessing required.</p>
+
+        <p>The standardised vocabulary is called <a href="https://schema.org/Product" target="_blank" rel="noopener">Schema.org</a> &mdash; a shared dictionary for the web, maintained by Google, Microsoft, Yahoo, and Yandex. The format used to write it is called <strong>JSON-LD</strong> (JavaScript Object Notation for Linked Data). JSON-LD lives in a &lt;script&gt; tag in your page&rsquo;s HTML &mdash; invisible to shoppers, but fully readable by every search engine and AI crawler.</p>
+
+        <h3>A plain-English JSON-LD example</h3>
+
+        <p>Here is what a complete Product schema looks like for a hypothetical bar of artisan soap. This is the actual code format &mdash; you don&rsquo;t need to write it by hand (apps do it for you), but seeing it demystifies the whole concept:</p>
+
+        <div class="code-block" aria-label="Example JSON-LD Product schema for an artisan soap bar">
+<span class="punc">&lt;script type="application/ld+json"&gt;</span>
+<span class="punc">{</span>
+  <span class="key">"@context"</span><span class="punc">:</span> <span class="str">"https://schema.org"</span><span class="punc">,</span>
+  <span class="key">"@type"</span><span class="punc">:</span> <span class="str">"Product"</span><span class="punc">,</span>
+  <span class="key">"name"</span><span class="punc">:</span> <span class="str">"Lavender &amp; Oat Artisan Soap Bar"</span><span class="punc">,</span>
+  <span class="key">"image"</span><span class="punc">:</span> <span class="str">"https://example.myshopify.com/products/lavender-soap.jpg"</span><span class="punc">,</span>
+  <span class="key">"description"</span><span class="punc">:</span> <span class="str">"Cold-process artisan soap with lavender essential oil and colloidal oats. 4 oz bar."</span><span class="punc">,</span>
+  <span class="key">"brand"</span><span class="punc">:</span> <span class="punc">{</span>
+    <span class="key">"@type"</span><span class="punc">:</span> <span class="str">"Brand"</span><span class="punc">,</span>
+    <span class="key">"name"</span><span class="punc">:</span> <span class="str">"Meadow & Co."</span>
+  <span class="punc">},</span>
+  <span class="key">"sku"</span><span class="punc">:</span> <span class="str">"SOAP-LAV-OAT-4OZ"</span><span class="punc">,</span>
+  <span class="key">"offers"</span><span class="punc">:</span> <span class="punc">{</span>
+    <span class="key">"@type"</span><span class="punc">:</span> <span class="str">"Offer"</span><span class="punc">,</span>
+    <span class="key">"price"</span><span class="punc">:</span> <span class="str">"12.99"</span><span class="punc">,</span>
+    <span class="key">"priceCurrency"</span><span class="punc">:</span> <span class="str">"USD"</span><span class="punc">,</span>
+    <span class="key">"availability"</span><span class="punc">:</span> <span class="str">"https://schema.org/InStock"</span><span class="punc">,</span>
+    <span class="key">"url"</span><span class="punc">:</span> <span class="str">"https://example.myshopify.com/products/lavender-soap"</span>
+  <span class="punc">},</span>
+  <span class="key">"aggregateRating"</span><span class="punc">:</span> <span class="punc">{</span>
+    <span class="key">"@type"</span><span class="punc">:</span> <span class="str">"AggregateRating"</span><span class="punc">,</span>
+    <span class="key">"ratingValue"</span><span class="punc">:</span> <span class="str">"4.8"</span><span class="punc">,</span>
+    <span class="key">"reviewCount"</span><span class="punc">:</span> <span class="str">"47"</span>
+  <span class="punc">}</span>
+<span class="punc">}</span>
+<span class="punc">&lt;/script&gt;</span>
+        </div>
+
+        <p>What this tells Google and AI crawlers: the product name, an image URL, a text description, the brand, a SKU, the exact price in USD, that it is currently in stock at that URL, and that it has 47 customer reviews averaging 4.8 out of 5. That&rsquo;s the difference between a machine guessing and a machine knowing.</p>
+
+        <p>When Google has this data, your product becomes eligible for <strong>Rich Results</strong> &mdash; the search listings that show star ratings, price, and availability directly in the search results. When AI systems have this data, they can cite your product accurately in shopping recommendations, price comparisons, and &ldquo;best of&rdquo; answers. Without it, you&rsquo;re invisible in both channels.</p>
+
+
+        <h2 id="what-shopify-gives-you">What Shopify actually gives you out of the box in 2026</h2>
+
+        <p>Here is the honest picture of what Shopify&rsquo;s free Dawn theme includes &mdash; and what it does not. If you are on a third-party paid theme, the gaps are typically larger.</p>
+
+        <div class="overflow-x-auto my-8">
+          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
+            <thead>
+              <tr class="bg-surface-container-low">
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Schema Type</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Included in Dawn by Default?</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">What&rsquo;s Missing</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Why It Matters</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Product</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Partial &mdash; yes</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">GTIN / barcode field often blank; brand field missing for self-branded products; condition field absent</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Google requires GTIN for manufactured products; missing fields reduce Rich Results eligibility</td>
+              </tr>
+              <tr class="bg-surface-container-low/40">
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Offer</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Partial &mdash; yes</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Sale price validity dates, shipping info, return policy often absent</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Google Shopping and AI price-comparison answers need accurate, complete Offer data</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">AggregateRating</td>
+                <td class="p-4 font-semibold text-red-600 border border-[#E2E8F0]">No &mdash; not included</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No star rating schema by default; requires a reviews app + schema integration</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Without this, your store will never show star ratings in Google search results</td>
+              </tr>
+              <tr class="bg-surface-container-low/40">
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Review</td>
+                <td class="p-4 font-semibold text-red-600 border border-[#E2E8F0]">No &mdash; not included</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Individual review markup requires a schema app or custom code</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">AI shopping answers rely on review signals to rank and recommend products</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">BreadcrumbList</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Partial &mdash; product pages only in some versions</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Collection and blog pages typically missing breadcrumb schema</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Helps AI understand site structure; improves click-through rates in search</td>
+              </tr>
+              <tr class="bg-surface-container-low/40">
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Organization</td>
+                <td class="p-4 font-semibold text-red-600 border border-[#E2E8F0]">No &mdash; not included</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Store name, URL, logo, social profiles, contact info not structured</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">AI needs Organisation schema to describe your brand accurately in brand-level answers</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">FAQPage</td>
+                <td class="p-4 font-semibold text-red-600 border border-[#E2E8F0]">No &mdash; not included</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Requires manual addition via theme editor or a schema app</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">FAQ schema feeds AI &ldquo;People Also Ask&rdquo; results and chatbot Q&amp;A answers directly</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>The short version: <strong>Dawn gives you a rough sketch; AI needs the full picture.</strong> If you are on a free or low-cost third-party theme (Brooklyn, Debut, Minimal, Venture, or many paid themes under $180), the schema coverage is usually even thinner than Dawn.</p>
+
+        <p>To see exactly what your store currently has, paste any product page URL into the <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener">Google Rich Results Test</a> (free, no account required). It shows you exactly which schema types are present, what fields are missing, and whether your page is eligible for rich results in search.</p>
+
+
+        <!-- Reader pulse -->
+        <div data-reader-pulse data-source="shopify-structured-data-json-ld-plain-english"></div>
+
+
+        <h2 id="why-invisible">Why most self-built Shopify stores are invisible to AI crawlers</h2>
+
+        <p>There are six specific reasons why a self-built Shopify store on a free or cheap theme ends up invisible to AI:</p>
+
+        <h3>1. JS-rendered content that AI crawlers skip</h3>
+        <p>Some Shopify themes and apps inject product details &mdash; price, availability, descriptions &mdash; via JavaScript after the page loads. AI crawlers like the ones used by ChatGPT, Perplexity, and many AI shopping tools <strong>do not run JavaScript</strong>. They read the raw HTML. If your price or product name only appears after a JavaScript render, the AI crawler sees a blank where the information should be. This is one of the most common and invisible problems in Shopify stores.</p>
+
+        <h3>2. Missing GTIN / barcode</h3>
+        <p>Google requires a GTIN (barcode) for all manufactured products that have one assigned. In Shopify, the barcode field is in the product&rsquo;s Inventory section &mdash; and most self-built stores leave it blank, especially stores that buy from suppliers or import products via apps. Without a GTIN, Google can&rsquo;t match your product to its universal product catalogue, which reduces Shopping eligibility and AI citation accuracy.</p>
+
+        <h3>3. Incomplete Product schema fields</h3>
+        <p>Google&rsquo;s Product schema spec (<a href="https://schema.org/Product" target="_blank" rel="noopener">schema.org/Product</a>) requires, at minimum, <code>name</code>, <code>image</code>, and either <code>offers</code>, <code>review</code>, or <code>aggregateRating</code> for basic eligibility. But for Shopping rich results &mdash; the kind that include star ratings and price &mdash; you also need <code>offers.price</code>, <code>offers.priceCurrency</code>, and <code>offers.availability</code>. Dawn&rsquo;s default schema includes most of these, but <strong>product schema without <code>offers.availability</code> or <code>image</code> generates no Rich Results</strong> (Google documentation). The bar is easy to miss.</p>
+
+        <h3>4. No FAQ schema</h3>
+        <p>FAQ schema (FAQPage type) is absent from every standard Shopify theme. It is the schema type that feeds Google&rsquo;s &ldquo;People Also Ask&rdquo; boxes and directly feeds chatbot Q&amp;A answers. A store selling supplements with no FAQ schema misses every AI answer about &ldquo;Does [product] contain X?&rdquo; and &ldquo;How do I use [product]?&rdquo;</p>
+
+        <h3>5. No Review / AggregateRating schema</h3>
+        <p>Star ratings in Google search results require <code>AggregateRating</code> schema. This is absent in Dawn by default. Review apps like Judge.me, Yotpo, and Okendo generate on-page review widgets &mdash; but the widget does not automatically produce JSON-LD schema unless you also have a schema app that bridges the two. Many Shopify stores have 200 customer reviews that are invisible to AI and Google because the schema bridge is missing.</p>
+
+        <h3>6. Default theme limitations</h3>
+        <p>The Shopify theme ecosystem was built for visual customisation, not structured data completeness. Most paid themes under $300 do not include Organization, FAQPage, or Article schema. Many do not include BreadcrumbList on collection or blog pages. The theme developer&rsquo;s incentive is a beautiful storefront &mdash; not schema coverage that non-technical founders would never notice.</p>
+
+
+        <h2 id="what-ai-gets-wrong">What AI gets wrong without structured data</h2>
+
+        <p>When structured data is absent or incomplete, AI systems have to infer product details from raw page text. This creates predictable errors that cost you sales:</p>
+
+        <h3>Wrong price or stale price</h3>
+        <p>If your product page runs a sale and the price changes via JavaScript (a common Shopify pattern), AI crawlers reading only the HTML may show the original price. A shopper asking ChatGPT &ldquo;How much does [Product X] cost?&rdquo; gets a wrong number. That wrong number is now attached to your brand in an AI response &mdash; and you have no way to correct it in real time.</p>
+
+        <h3>Wrong availability</h3>
+        <p>Without an explicit <code>availability</code> field in your schema, AI systems infer availability from page text. &ldquo;Ships in 2&ndash;3 weeks&rdquo; might be read as out of stock. &ldquo;Pre-order&rdquo; might be read as unavailable. AI shopping recommendations actively filter for in-stock products &mdash; an availability error can remove you from the recommendation pool entirely.</p>
+
+        <h3>Missing product attributes</h3>
+        <p>A shopper asking &ldquo;What are the best fragrance-free moisturisers under $30?&rdquo; requires AI to know your product is fragrance-free. That detail lives in your product description &mdash; but without structured data marking it as a defined attribute, AI may not surface it. Attributes that are not structured are attributes that are not searchable by AI.</p>
+
+        <h3>Confusing similar products</h3>
+        <p>If you sell multiple variants of a product (sizes, colours, scents), incomplete schema means AI can&rsquo;t reliably distinguish between them. It may cite the wrong variant&rsquo;s price. It may cite a discontinued variant. SKU, GTIN, and variant-level schema fields exist precisely to prevent this &mdash; but they require either manual entry or an app to populate.</p>
+
+
+        <!-- Mid-article dark CTA -->
+        <aside class="metricus-mid-cta my-12 bg-surface border-l-4 border-primary p-8 md:p-10" style="background-color:#f7f9fb;border-left:4px solid #515F74;">
+          <p class="font-display italic text-2xl md:text-3xl text-slate-text leading-tight mb-3" style="color:#0F172A;font-family:'Newsreader',serif;">What does AI say about your Shopify brand? What is it getting wrong?</p>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6" style="color:#64748B;">Metricus audits how your products appear across ChatGPT, Perplexity, Google AI Overviews, and more. One-time report. No subscription. From $99.</p>
+          <a href="/get-report/" class="metricus-mid-cta-btn inline-flex items-center gap-2 bg-primary text-on-primary text-sm font-semibold tracking-tight px-6 py-3 hover:bg-primary-dim transition-colors" style="background-color:#515F74;color:#f6f7ff;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;font-size:14px;font-weight:600;">
+            Get your report <span aria-hidden="true">&rarr;</span>
+          </a>
+        </aside>
+
+
+        <h2 id="the-pipeline">The 2026 schema-to-AI-citation pipeline: what the data shows</h2>
+
+        <p>The evidence that structured data improves AI citation rates is substantial and growing:</p>
+
+        <p><strong>71% of pages cited by ChatGPT include structured data</strong> (Alhena.ai ecommerce schema analysis, 2025). This means that if your product page lacks schema, it is already in the minority among the pages AI actually references when generating shopping answers.</p>
+
+        <p>The Princeton/Georgia Tech GEO study (Aggarwal et al., &ldquo;GEO: Generative Engine Optimization,&rdquo; arxiv.org/abs/2311.09735, November 2023) remains the most rigorous academic examination of what makes content more likely to be cited by generative AI systems. Their controlled experiment across 10 AI search engines and 10,000 queries found that <strong>adding statistical content improved AI citation visibility by up to 41%</strong>. Structured data, which makes statistical claims explicitly machine-readable, compounds this effect.</p>
+
+        <p>For ecommerce specifically, <strong>AI platforms need GTIN, brand, availability, price, priceCurrency, and AggregateRating to include products in comparison answers</strong> (schema.org/Product specification, Google Search documentation, 2026). Without these fields, your product cannot be compared, ranked, or recommended in AI-generated shopping responses &mdash; regardless of how good your product is.</p>
+
+        <p>There is also a direct Google search benefit. Product schema without <code>offers.availability</code> or <code>image</code> generates no Rich Results at all (Google Merchant Center documentation). Stores that have added complete product schema via apps report seeing star ratings appear in search results within days of installation &mdash; a measurable improvement in click-through rate before AI citation benefits even materialise.</p>
+
+        <p>The practical implication: <strong>schema is the lowest-cost, highest-return technical SEO change available to a self-built Shopify store in 2026.</strong> It requires no code, takes under an hour to set up with an app, and the upside is both immediate (Google Rich Results) and compounding (AI citation eligibility).</p>
+
+
+        <h2 id="the-apps">The disruptors: Shopify apps that add structured data for you (no code)</h2>
+
+        <p>You do not need to write or edit any code to add complete structured data to your Shopify store. The following apps install from the Shopify App Store, activate with a toggle, and handle all the JSON-LD generation automatically. All pricing is as listed in April 2026.</p>
+
+        <div class="overflow-x-auto my-8">
+          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
+            <thead>
+              <tr class="bg-surface-container-low">
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">App</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Price</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Free Tier</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Key Schema Types Added</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Best For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-4 border border-[#E2E8F0]">
+                  <a href="https://apps.shopify.com/webrex-seo-schema" target="_blank" rel="noopener" class="font-medium text-slate-text hover:underline">Webrex AI SEO Schema, JSON-LD</a>
+                </td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Free; Explorer $3.49/mo; Premium $14.99/mo</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes &mdash; generous free plan</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Product, Review, FAQ, Organization, Local Business, Video, Article; integrates with 30+ review apps</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Stores that want to start free; AI-search-aware product data</td>
+              </tr>
+              <tr class="bg-surface-container-low/40">
+                <td class="p-4 border border-[#E2E8F0]">
+                  <a href="https://apps.shopify.com/gropulse-rich-snippets-for-seo" target="_blank" rel="noopener" class="font-medium text-slate-text hover:underline">GroPulse GP JSON-LD Schema &amp; AI SEO</a>
+                </td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Free to install; paid tiers with 7-day trial</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes &mdash; free core schema plan</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Product, FAQ, Breadcrumb, Recipe, Video, Local Business; AI-powered alt text and meta</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Stores wanting schema + AI SEO tools in one app</td>
+              </tr>
+              <tr>
+                <td class="p-4 border border-[#E2E8F0]">
+                  <a href="https://apps.shopify.com/schema-ninja-json-ld" target="_blank" rel="noopener" class="font-medium text-slate-text hover:underline">Schema Ninja &mdash; JSON-LD SEO</a>
+                </td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Free tier available; Pro (300 FAQ gen/mo) and Business (5,000 FAQ gen/mo) with 3-day trial</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes &mdash; free tier for core schema</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Product, FAQ (AI-generated), Breadcrumb, Collection, Local Business, Organization</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Stores that want AI to auto-generate FAQ schema for every product</td>
+              </tr>
+              <tr class="bg-surface-container-low/40">
+                <td class="p-4 border border-[#E2E8F0]">
+                  <a href="https://apps.shopify.com/schema-plus" target="_blank" rel="noopener" class="font-medium text-slate-text hover:underline">Schema Plus for SEO &amp; JSON-LD</a>
+                </td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">$14.99/month; 7-day free trial</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No &mdash; 7-day trial only</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Product, Review, FAQ, Breadcrumb, Organization; full schema suite at a single price</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Stores that prefer one flat monthly fee with no feature limits</td>
+              </tr>
+              <tr>
+                <td class="p-4 border border-[#E2E8F0]">
+                  <a href="https://apps.shopify.com/json-ld-for-seo" target="_blank" rel="noopener" class="font-medium text-slate-text hover:underline">Ilana&rsquo;s JSON-LD for SEO</a>
+                </td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">$399/year (~$33.25/mo); 7-day free trial; 4.9 stars, 414+ reviews</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No &mdash; paid only</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Product, Review, AggregateRating, FAQ, Organization, Breadcrumb; includes data audit + 6 months monitoring</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Stores doing $15K+/mo wanting expert support + audit included</td>
+              </tr>
+              <tr class="bg-surface-container-low/40">
+                <td class="p-4 border border-[#E2E8F0]">
+                  <a href="https://apps.shopify.com/json-express-for-seo" target="_blank" rel="noopener" class="font-medium text-slate-text hover:underline">JSON-LD Express for SEO Schema</a>
+                </td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Paid monthly (see App Store for current rate); all charges billed in USD</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Check App Store listing</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Product with images, prices, availability, ratings; complete JSON-LD schema support</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Stores wanting straightforward automatic Rich Snippets setup</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>For most self-built Shopify stores doing $8K&ndash;$25K/month, the recommended starting point is <strong>Webrex AI SEO Schema</strong> (free plan, no credit card) or <strong>GroPulse GP JSON-LD Schema</strong> (also free to install). Both give you immediate Product, Review, FAQ, and Organization schema with zero code. If you want the deepest coverage and can allocate $33/month, <strong>Ilana&rsquo;s JSON-LD for SEO</strong> includes a data audit and ongoing monitoring that the other apps do not.</p>
+
+        <p>All of these apps generate clean JSON-LD, handle duplicate schema detection (so you do not end up with conflicting schema from your theme and the app), and integrate with the major Shopify review apps (Judge.me, Yotpo, Okendo, Stamped, Loox) to pull review data into AggregateRating schema automatically.</p>
+
+
+        <h2 id="what-actually-works">What actually works: the 60-minute plain-English setup</h2>
+
+        <p>Here is the exact workflow for a self-taught Shopify founder who has never touched structured data before:</p>
+
+        <h3>Step 1: Check what you currently have (5 minutes)</h3>
+        <p>Go to <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener">search.google.com/test/rich-results</a>. Paste in the URL of your best-selling product page. Click &ldquo;Test URL.&rdquo; Wait about 30 seconds. You will see a list of detected schema types (if any) and any errors or missing fields. Screenshot this. It is your before state. Common results for a self-built Shopify store: Product schema detected with errors, no AggregateRating, no FAQPage.</p>
+
+        <h3>Step 2: Install one app (10 minutes)</h3>
+        <p>Based on the table above, choose one app. Do not install more than one &mdash; duplicate schema causes errors that hurt rather than help. For most stores starting out: go to <a href="https://apps.shopify.com/webrex-seo-schema" target="_blank" rel="noopener">Webrex AI SEO Schema</a> on the Shopify App Store, click Install, approve the permissions, and open the app dashboard. On the main dashboard, you will see toggles for each schema type. Turn on: Product, AggregateRating / Review, Organization, Breadcrumb. If you have a reviews app installed (Judge.me, Yotpo, etc.), connect it in the app&rsquo;s integrations tab &mdash; this pulls your review data into AggregateRating schema automatically.</p>
+
+        <h3>Step 3: Add FAQ blocks to your product pages (20 minutes)</h3>
+        <p>FAQPage schema requires actual FAQ content on your page. Most Shopify product pages have none. Here is how to fix that without code: In your Shopify admin, go to Online Store &rarr; Themes &rarr; Customise. Open one of your product page templates. Many themes (including Dawn) include a &ldquo;Collapsible content&rdquo; or &ldquo;Accordion&rdquo; section you can add. Add 3&ndash;5 Q&amp;A pairs to each product page: things like &ldquo;What are the ingredients?&rdquo;, &ldquo;How long does shipping take?&rdquo;, &ldquo;Is this product suitable for sensitive skin?&rdquo; Once the visible FAQ content is on the page, the schema app will automatically generate FAQPage JSON-LD to match it.</p>
+
+        <h3>Step 4: Fill in missing product data (10 minutes)</h3>
+        <p>In your Shopify admin, go to Products and open your top 10 selling products. For each one, check: (a) Is the Barcode / GTIN field filled in? If you have a barcode on your packaging, enter it here. If you make the product yourself and it has no barcode, leave it blank. (b) Is the Vendor field filled in? This becomes the &ldquo;brand&rdquo; in your schema. Fill it in with your brand name. (c) Is the product type set? These small fields significantly improve the completeness of your auto-generated schema.</p>
+
+        <h3>Step 5: Validate your new schema (5 minutes)</h3>
+        <p>Go back to <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener">search.google.com/test/rich-results</a> and paste the same product URL you tested in Step 1. You should now see additional schema types detected (AggregateRating, FAQPage, Organization), and the errors from before should be reduced or eliminated. If you still see errors, check your review app connection and make sure your FAQ content is visible in the page HTML (not JavaScript-rendered).</p>
+
+        <h3>Step 6: Monitor and re-test (ongoing &mdash; 10 minutes/month)</h3>
+        <p>Schema can break after theme updates, app installs, or Shopify platform changes. Set a calendar reminder to re-run the Rich Results Test on your top 3 product pages once a month. The test is free and takes 2 minutes. Also check Google Search Console (free, under Search Appearance &rarr; Rich Results) for any schema errors flagged by Google across your whole store.</p>
+
+        <div class="overflow-x-auto my-8">
+          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
+            <thead>
+              <tr class="bg-surface-container-low">
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Action</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Effort</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Timeline</th>
+                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Expected Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Run Rich Results Test baseline</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">5 min, free</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Day 1</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Know your current schema gaps</td>
+              </tr>
+              <tr class="bg-surface-container-low/40">
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Install schema app + connect review app</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">10 min, free&ndash;$3.49/mo</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Day 1</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Product + AggregateRating schema live immediately</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Add FAQ blocks to product pages</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">20 min, no cost</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Day 1</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">FAQPage schema + &ldquo;People Also Ask&rdquo; eligibility</td>
+              </tr>
+              <tr class="bg-surface-container-low/40">
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Fill in Barcode / Vendor fields</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">10 min per 10 products</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Day 1</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Improves GTIN coverage + brand field in schema</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Validate with Rich Results Test</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">5 min, free</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Day 1</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Confirm all schema types live and error-free</td>
+              </tr>
+              <tr class="bg-surface-container-low/40">
+                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Monitor via Search Console monthly</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">10 min/month, free</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Ongoing</td>
+                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Catch schema breakage from theme updates</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>The total first-day investment is about 50 minutes and the cost ranges from free to $3.49/month depending on which app you choose. The upside is immediate Google Rich Results eligibility, star ratings in search, and AI citation eligibility across ChatGPT, Perplexity, Google AI Overviews, and every AI-powered shopping comparison tool.</p>
+
+
+        <h2 id="case-for-auditing">The case for auditing your AI visibility now</h2>
+
+        <p>Adding schema to your Shopify store solves one half of the AI visibility problem: it makes your pages machine-readable. But it does not tell you what AI systems are currently saying about your products &mdash; or what they are getting wrong.</p>
+
+        <p>Common AI errors on Shopify brand product pages include: incorrect pricing (especially if AI is citing an old page version or a competitor&rsquo;s price), wrong availability status (&ldquo;out of stock&rdquo; for products that are in stock), fabricated product attributes (especially for beauty, wellness, and food products where AI generates plausible-sounding but wrong ingredient lists), and misattributed reviews (mixing up your store&rsquo;s reviews with similar-sounding competitors).</p>
+
+        <p>These errors compound the schema problem: even a store with perfect schema can be misrepresented by AI systems that have cached wrong information from earlier crawls, third-party reviews sites, or training data that predates your current product line.</p>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>The compound opportunity:</strong> Schema makes your pages readable. Auditing AI tells you what it is reading &mdash; correctly and incorrectly. Fixing errors at their source (outdated product pages, wrong third-party listings, stale review data) is what turns schema investment into sustained AI citation. Both steps matter. Most Shopify founders do neither.
+          </p>
+        </div>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>This article gives you the schema half.</strong> A <a href="../../get-report/">Metricus report</a> gives you the AI-citation half: exactly which AI platforms mention your products, what they get right, what they get wrong, and where the errors are coming from. One-time purchase from $99. No subscription required.
+          </p>
+        </div>
+
+
+        <!-- Hub crosslinks -->
+        <h2>Related reading</h2>
+        <ul>
+          <li><strong><a href="../shopify-chatgpt-product-recommendations/">How to get your Shopify products recommended by ChatGPT</a></strong> &mdash; the AI visibility playbook for Shopify stores, beyond schema.</li>
+          <li><strong><a href="../shopify-organic-traffic-dropping-diagnosis/">Why your Shopify organic traffic is dropping</a></strong> &mdash; the broader SEO picture for self-built stores.</li>
+          <li><strong><a href="../fix-ai-brand-hallucinations/">Fixing AI hallucinations about your brand</a></strong> &mdash; what to do when AI is actively getting your products wrong.</li>
+          <li><strong><a href="../diy-ai-visibility-audit/">Free AI visibility check</a></strong> &mdash; run a quick manual check of what ChatGPT says about your store before ordering a full report.</li>
+          <li><strong><a href="../ai-getting-pricing-wrong/">AI is getting your pricing wrong &mdash; here&rsquo;s why</a></strong> &mdash; deep dive on pricing errors in AI responses and how to fix them.</li>
+          <li><strong><a href="../what-is-ai-visibility/">What is AI visibility?</a></strong> &mdash; the complete explainer on how brands appear (and disappear) in AI systems.</li>
+        </ul>
+
+
+        <p class="text-sm text-slate-muted mt-8"><strong>Sources:</strong> Shopify Dawn theme GitHub repository and Shopify Community forums (structured data coverage, 2025&ndash;2026); schema.org/Product specification (<a href="https://schema.org/Product" target="_blank" rel="noopener">schema.org/Product</a>); Google Rich Results Test (<a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener">search.google.com/test/rich-results</a>); Google Merchant Center GTIN documentation (<a href="https://support.google.com/merchants/answer/6324461" target="_blank" rel="noopener">support.google.com/merchants</a>); Aggarwal et al., &ldquo;GEO: Generative Engine Optimization,&rdquo; Princeton/Georgia Tech, arxiv.org/abs/2311.09735 (November 2023) &mdash; statistics addition improved AI visibility by 41%; Alhena.ai ecommerce schema analysis (2025) &mdash; 71% of ChatGPT-cited pages include structured data; BrightEdge AI Overviews research (2025) &mdash; complete product schema 2.5&times; more likely to appear in AI Overviews; Shopify App Store listings for <a href="https://apps.shopify.com/webrex-seo-schema" target="_blank" rel="noopener">Webrex AI SEO Schema</a>, <a href="https://apps.shopify.com/gropulse-rich-snippets-for-seo" target="_blank" rel="noopener">GroPulse GP JSON-LD Schema</a>, <a href="https://apps.shopify.com/schema-ninja-json-ld" target="_blank" rel="noopener">Schema Ninja</a>, <a href="https://apps.shopify.com/schema-plus" target="_blank" rel="noopener">Schema Plus for SEO</a>, <a href="https://apps.shopify.com/json-ld-for-seo" target="_blank" rel="noopener">Ilana&rsquo;s JSON-LD for SEO</a>, <a href="https://apps.shopify.com/json-express-for-seo" target="_blank" rel="noopener">JSON-LD Express for SEO</a> (all accessed April 2026). Pricing verified from App Store listings; verify current prices before installing.</p>
+
+      </div>
+      <!-- End Article Body -->
+
+      <p class="text-sm text-slate-muted mt-8 border-t border-[#E2E8F0] pt-6">Want to see how your Shopify brand appears across all major AI platforms? Run a <a href="../../get-report/" class="text-primary hover:underline">Metricus AI visibility report</a>. Or browse our <a href="../../geo-knowledge-base/" class="text-primary hover:underline">GEO Knowledge Base</a> for research clusters on AI visibility strategy.</p>
+
+      <!-- ========== ARTICLE CTA ========== -->
+      <div class="bg-primary p-8 md:p-12 mt-16">
+        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">Find out what AI says about your Shopify store</h3>
+        <p class="text-on-primary/80 text-base max-w-lg mb-8">
+          Metricus queries every major AI platform hundreds of times to find the real patterns. See your AI visibility assessment, exact AI quotes, factual errors with source map, and a prioritised action plan. One report, one price.
+        </p>
+        <a href="../../get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
+          Get your report
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+        <p class="mt-4"><a href="../../sample-ai-visibility-report/" class="text-on-primary/70 hover:text-on-primary text-sm underline transition-colors">Or see what a report looks like &rarr;</a></p>
+      </div>
+
+      <!-- ========== CITE THIS ARTICLE ========== -->
+      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
+        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
+          <cite class="not-italic"><a href="https://metricusapp.com/blog/shopify-structured-data-json-ld-plain-english/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; Shopify Structured Data and JSON-LD Schema in Plain English: What&rsquo;s Missing and How to Add It Without a Developer (2026)</a></cite>
+        </p>
+      </footer>
+
+    </article>
+
+
+    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-6">Go deeper</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <a href="/geo-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">GEO Knowledge Base</p>
+          <p class="text-sm text-on-surface-variant mt-1">81 research clusters on AI visibility and brand monitoring</p>
+        </a>
+        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
+          <p class="text-sm text-on-surface-variant mt-1">48 clusters on fixing AI accuracy issues and hallucinations</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== RELATED POSTS ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-8">Related articles</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <a href="../shopify-chatgpt-product-recommendations/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Ecommerce Playbook</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            How to Get Your Shopify Products Recommended by ChatGPT
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            Schema is the foundation. Here is the full AI visibility playbook for Shopify stores in 2026.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>April 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../fix-ai-brand-hallucinations/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Research</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            AI Is Getting Facts Wrong About Your Brand
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            72% of brands have factual errors in AI responses. Here&rsquo;s a 4-step process to audit and fix them.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../shopify-organic-traffic-dropping-diagnosis/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Ecommerce Playbook</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            Why Your Shopify Organic Traffic Is Dropping
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            Schema gaps are one reason. Here is the full diagnostic for falling Shopify search traffic in 2026.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>April 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <!-- Site Footer -->
+  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+        <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
+        <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
+        <a href="/blog/agency-guide-ai-visibility-audits/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
+        <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
+        <a href="/privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a>
+        <a href="/terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a>
+        <a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
