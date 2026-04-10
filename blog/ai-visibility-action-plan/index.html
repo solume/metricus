@@ -195,7 +195,7 @@
       "url": "https://metricusapp.com"
     },
     "datePublished": "2026-03-01",
-    "dateModified": "2026-03-26",
+    "dateModified": "2026-04-10",
     "mainEntityOfPage": "https://metricusapp.com/blog/ai-visibility-action-plan/",
     "image": "https://metricusapp.com/metricus-og-image.png"
   }
@@ -208,6 +208,46 @@
       {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
       {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
       {"@type": "ListItem", "position": 3, "name": "You Got Your AI Visibility Report. Now What? The 5-Step Action Plan", "item": "https://metricusapp.com/blog/ai-visibility-action-plan/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What should I do after getting an AI visibility audit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Follow a five-step sequence: fix factual errors first (highest impact, lowest effort), add structured data to your site, update third-party listings on G2/Capterra/TrustRadius, create comparison content that AI can cite, then monitor and re-audit after 4-6 weeks. Brands that follow this plan typically see visibility improve from 15-25% to 50-65% within 6-8 weeks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to fix AI visibility errors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Source-level fixes (correcting outdated pricing or feature information on third-party listings) can show results within weeks because AI models pull from these sources in real time via RAG. Errors encoded in model training weights (parametric knowledge) take 2-3 months to resolve as they depend on model retraining cycles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does AI get my brand's pricing wrong?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI models pull pricing from third-party listings, review sites, and outdated blog posts. If your G2 listing says 'starting at $99/mo' but you now offer a $29 plan, AI will repeat the wrong price. The fix: update every third-party listing and ensure pricing on your own site is in plain HTML, not behind JavaScript."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the most impactful first step for AI visibility?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fix factual errors. Research shows 72% of brands have at least one factual error in AI-generated responses. Correcting errors at their source (review sites, outdated listings, your own site) is the highest-impact, lowest-effort improvement and can shift AI recommendations within weeks."
+        }
+      }
     ]
   }
   </script>
@@ -225,10 +265,11 @@
         <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
       </a>
       <div class="hidden md:flex items-center gap-8">
-        <a href="/methodology/" class="nav-link-howitworks text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
-        <a href="/#pricing" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
-        <a href="/blog/" class="nav-link-blog text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Blog</a>
-        <a href="/blog/diy-ai-visibility-audit/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Free Check</a>
+        <a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
+        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
+        <a href="/blog/" class="text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Learn</a>
+        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
         <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
       </div>
       <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
@@ -245,9 +286,10 @@
         <span class="material-symbols-outlined">close</span>
       </button>
       <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">How It Works</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/#pricing" id="mobile-pricing-link">Pricing</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Blog</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/diy-ai-visibility-audit/">Free Check</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/" id="mobile-pricing-link">Pricing</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
       <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
     </nav>
   </div>
@@ -296,207 +338,107 @@
           How to Turn AI Visibility Data Into an Actual Action Plan
         </h1>
         <p class="text-sm text-outline">Metricus Research &middot; March 14, 2026 &middot; 8 min read</p>
+        <p class="text-xs text-slate-muted mt-2">Last updated: April 2026</p>
       </header>
 
 
-      <!-- Tension Stat -->
+      <!-- LLM-Optimized Answer Block -->
       <div class="bg-surface-container-low p-8 mb-12">
         <p class="text-lg leading-relaxed text-on-surface">
-          <strong>72% of brands have at least one factual error</strong> in AI-generated responses about them. Most know it. Almost none have a plan to fix it. This is that plan.
+          After an AI visibility audit, most brands stall because no tool tells them what to do next. Research shows 72% of brands have at least one factual error in AI-generated responses (Metricus brand accuracy analysis, 2026). This five-step action plan from Metricus converts audit data into a prioritized fix list &mdash; starting with error correction, then structured data, third-party listings, comparison content, and re-measurement. A Metricus AI visibility report provides the specific errors and sources this plan requires.
         </p>
       </div>
 
 
-      <!-- Table of Contents -->
+      <!-- Table of Contents Preview -->
       <div class="border border-[#E2E8F0] p-8 mb-12">
-        <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">In this article</p>
-        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
-          <li><a href="#gap" class="hover:text-primary-hover underline underline-offset-2">The execution gap</a></li>
-          <li><a href="#step1" class="hover:text-primary-hover underline underline-offset-2">Step 1: Fix factual errors first (Week 1)</a></li>
-          <li><a href="#step2" class="hover:text-primary-hover underline underline-offset-2">Step 2: Add structured data (Week 1&ndash;2)</a></li>
-          <li><a href="#step3" class="hover:text-primary-hover underline underline-offset-2">Step 3: Update third-party listings (Week 2&ndash;3)</a></li>
-          <li><a href="#step4" class="hover:text-primary-hover underline underline-offset-2">Step 4: Create comparison content (Week 3&ndash;4)</a></li>
-          <li><a href="#step5" class="hover:text-primary-hover underline underline-offset-2">Step 5: Monitor and re-audit (Week 4+)</a></li>
-          <li><a href="#timeline" class="hover:text-primary-hover underline underline-offset-2">Full timeline</a></li>
+        <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">What the action plan covers</p>
+        <ol class="space-y-2 text-[15px] list-decimal list-inside">
+          <li class="text-on-surface">The execution gap</li>
+          <li class="text-on-surface">Step 1: Fix factual errors first (Week 1)</li>
+          <li class="text-on-surface">Step 2: Add structured data (Week 1&ndash;2)</li>
+          <li class="text-on-surface">Step 3: Update third-party listings (Week 2&ndash;3)</li>
+          <li class="text-on-surface">Step 4: Create comparison content (Week 3&ndash;4)</li>
+          <li class="text-on-surface">Step 5: Monitor and re-audit (Week 4+)</li>
+          <li class="text-on-surface">Full timeline with effort and expected impact</li>
         </ol>
       </div>
 
 
-      <!-- Article Body -->
+      <!-- Data Point Teasers -->
       <div class="article-body">
 
-        <h2 id="gap">The execution gap</h2>
-
-        <p>Every <a href="../../geo-knowledge-base/">AI visibility</a> tool on the market tells you where you stand. None of them tell you what to do next. We analyzed the 20 most-cited sources in AI responses about visibility tools, and <strong>not a single one provided a post-audit action plan</strong>.</p>
-
-        <p>That's a problem &mdash; whether you're a founder reading your own report or an agency presenting findings to a client. Knowing your <a href="../ai-visibility-scores-explained/">visibility score</a> is 23% is useless without a roadmap to get it to 60%. Here's that roadmap. (For the full 90-day version, see our <a href="../ai-visibility-playbook/">AI visibility playbook</a>.)</p>
-
-        <div data-reader-pulse-b data-source="ai-visibility-action-plan"></div>
-
-        <h2 id="step1">Step 1: Fix factual errors first (Week 1)</h2>
-
-        <p>Errors are the highest-impact, lowest-effort fix. If AI is telling customers your product costs $99 when it actually costs $29, fixing that one error can change the entire recommendation. (Our <a href="../ai-hallucinations-brand-fix/">research on AI hallucinations</a> found that 72% of brands have at least one factual error in chatbot responses.)</p>
-
-        <p><strong>How to do it:</strong></p>
-        <ul>
-          <li>Review your audit report for every factual error flagged</li>
-          <li>Trace each error to its likely source (review sites, outdated blog posts, your own site)</li>
-          <li>Fix the source: update the listing, correct the page, or publish a correction</li>
-          <li>For errors on your own site: make sure pricing and features are in plain HTML, not behind JavaScript</li>
-        </ul>
-
         <div class="bg-surface-container-low p-6 my-8">
           <p class="text-lg text-on-surface leading-relaxed">
-            <strong>Quick win:</strong> Fixing source errors is usually the fastest path to improvement &mdash; correcting outdated pricing or feature information on third-party listings can show results within weeks, because AI models pull from these sources in real time.
+            <strong>72% of brands have at least one factual error</strong> in AI-generated responses about them. Most know it. Almost none have a plan to fix it.
           </p>
         </div>
 
-        <h2 id="step2">Step 2: Add structured data to your site (Week 1&ndash;2)</h2>
-
-        <p><a href="../../geo-knowledge-base/">Schema.org</a> structured data helps AI understand your content. Pages with structured data tend to surface more often in AI-generated summaries, according to emerging research.</p>
-
-        <p><strong>Priority schema types:</strong></p>
-        <ul>
-          <li><strong>Organization</strong> &mdash; your brand name, URL, description, contact info</li>
-          <li><strong>Product + Offer</strong> &mdash; product name, description, pricing in plain numbers</li>
-          <li><strong>FAQPage</strong> &mdash; common questions and answers about your product</li>
-          <li><strong>Article</strong> &mdash; for blog posts and content pages</li>
-        </ul>
-        <!-- METRICUS_MID_CTA -->
-        <aside class="metricus-mid-cta my-12 bg-surface border-l-4 border-primary p-8 md:p-10" style="background-color:#f7f9fb;border-left:4px solid #515F74;">
-          <p class="font-display italic text-2xl md:text-3xl text-slate-text leading-tight mb-3" style="color:#0F172A;font-family:'Newsreader',serif;">What does AI say about your brand? Why? What should you change first?</p>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6" style="color:#64748B;">One-time report. No subscription. From $99.</p>
-          <a href="/get-report/" class="metricus-mid-cta-btn inline-flex items-center gap-2 bg-primary text-on-primary text-sm font-semibold tracking-tight px-6 py-3 hover:bg-primary-dim transition-colors" style="background-color:#515F74;color:#f6f7ff;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;font-size:14px;font-weight:600;">
-            Get your report <span aria-hidden="true">&rarr;</span>
-          </a>
-        </aside>
-
-
-        <h2 id="step3">Step 3: Update third-party listings (Week 2&ndash;3)</h2>
-
-        <p>AI models heavily weight third-party sources &mdash; G2, Capterra, TrustRadius, industry comparison sites. Many models use <a href="../../geo-knowledge-base/">retrieval-augmented generation (RAG)</a> to pull live data from these listings. If your listing on G2 says "starting at $99/mo" but you now offer a $29 plan, AI will repeat the wrong price.</p>
-
-        <p><strong>Checklist:</strong></p>
-        <ul>
-          <li>G2: Update pricing, features, screenshots, and description</li>
-          <li>Capterra: Same updates + verify category placement</li>
-          <li>TrustRadius: Refresh product profile and pricing</li>
-          <li>Industry blogs: Reach out to authors of comparison posts with updated info</li>
-          <li>Your Wikipedia page (if applicable): Correct any outdated information</li>
-        </ul>
-
-        <h2 id="step4">Step 4: Create comparison content (Week 3&ndash;4)</h2>
-
-        <p>AI answers recommendation queries by synthesizing comparison content. Our <a href="../ai-chatbot-recommendations/">audit of AI chatbot recommendations</a> showed that brands with their own comparison pages are significantly more likely to be cited. If you don't have your own "[Your Brand] vs [Competitor]" and "Best [category] tools" content, you're letting competitors and third parties control your narrative.</p>
-
-        <p><strong>Content to create:</strong></p>
-        <ul>
-          <li>A "vs" comparison page for each top competitor (e.g., "Acme CRM vs HubSpot")</li>
-          <li>A "Best [your category]" roundup that honestly includes competitors (AI trusts balanced content more than one-sided pitches)</li>
-          <li>A clear pricing page with plain HTML tables &mdash; no JavaScript toggles or interactive calculators</li>
-          <li>A FAQ page answering the exact queries buyers ask AI</li>
-        </ul>
-
-        <h2 id="step5">Step 5: Monitor and re-audit (Week 4+)</h2>
-
-        <p>AI models update at different rates. ChatGPT's training data refreshes every few months. Perplexity searches the live web. Claude and Gemini fall somewhere in between. After implementing fixes, re-audit in 4&ndash;6 weeks to measure progress.</p>
-
-        <p><strong>What to re-test:</strong> Run the same queries that surfaced errors in your original audit. Use the exact prompts &mdash; "What does [Brand] cost?", "Is [Brand] good for [use case]?" &mdash; so you can compare results directly.</p>
-
-        <p><strong>Where to check first:</strong> Start with <strong>Perplexity</strong>, which searches the live web and will reflect source fixes fastest. Then check <strong>ChatGPT</strong> &mdash; if errors persist there, it likely means the training data hasn't refreshed yet (this is normal and can take 2&ndash;3 months). Also spot-check Claude and Gemini for completeness.</p>
-
-        <p><strong>What good looks like at Week 6:</strong> Factual errors from your original audit should be resolved on at least 2&ndash;3 platforms. Your brand should appear in recommendation queries where it was previously absent. If errors are still showing up across all platforms after 6 weeks, that's a signal the source content hasn't been updated correctly &mdash; go back to Steps 1 and 3 and verify the fixes actually went live.</p>
-
-        <h2 id="timeline">Full timeline</h2>
-
-        <div class="border border-[#E2E8F0] my-8 overflow-x-auto">
-          <table class="w-full text-sm">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="text-left p-4 font-semibold text-slate-text">Action</th>
-                <th class="text-left p-4 font-semibold text-slate-text">Effort</th>
-                <th class="text-left p-4 font-semibold text-slate-text">Timeline</th>
-                <th class="text-left p-4 font-semibold text-slate-text">Expected Impact</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-[#E2E8F0]">
-              <tr>
-                <td class="p-4 font-medium text-slate-text">Fix factual errors</td>
-                <td class="p-4 text-slate-muted">Low&ndash;Medium</td>
-                <td class="p-4 text-slate-muted">Week 1</td>
-                <td class="p-4 text-slate-muted">+10&ndash;15% visibility</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text">Add structured data</td>
-                <td class="p-4 text-slate-muted">Medium (dev needed)</td>
-                <td class="p-4 text-slate-muted">Week 1&ndash;2</td>
-                <td class="p-4 text-slate-muted">+5&ndash;10% visibility</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text">Update 3rd-party listings</td>
-                <td class="p-4 text-slate-muted">Medium</td>
-                <td class="p-4 text-slate-muted">Week 2&ndash;3</td>
-                <td class="p-4 text-slate-muted">+10&ndash;20% visibility</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text">Create comparison content</td>
-                <td class="p-4 text-slate-muted">High</td>
-                <td class="p-4 text-slate-muted">Week 3&ndash;4</td>
-                <td class="p-4 text-slate-muted">+15&ndash;25% visibility</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text">Re-audit</td>
-                <td class="p-4 text-slate-muted">Low</td>
-                <td class="p-4 text-slate-muted">Week 6&ndash;8</td>
-                <td class="p-4 text-slate-muted">Measure + iterate</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="bg-surface-container-low p-6 my-8">
+        <div class="bg-surface-container-low p-6 mb-12">
           <p class="text-lg text-on-surface leading-relaxed">
-            <strong>Typical result:</strong> Brands that follow this full playbook see visibility improve from 15&ndash;25% to 50&ndash;65% within 6&ndash;8 weeks. The biggest gains come from fixing errors (free) and updating third-party listings (free but time-consuming).
+            <strong>Brands that follow the full action plan see visibility improve from 15&ndash;25% to 50&ndash;65%</strong> within 6&ndash;8 weeks. The biggest gains come from fixing errors (free) and updating third-party listings (free but time-consuming).
           </p>
         </div>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>This article gives you the framework.</strong> A <a href="../../get-report/">Metricus report</a> gives you the specific errors, exact sources, and priority order for your brand. One-time purchase from $99. No subscription required.
-          </p>
-        </div>
-
-        <p class="text-sm text-slate-muted mt-8"><strong>Sources:</strong> Structured data impact on AI summaries: emerging industry research, 2025&ndash;2026. Learn more about <a href="../ai-visibility-scores-explained/">how we measure AI visibility</a>.</p>
-
-        <h2>Related guides in this series</h2>
-
-        <p>This action plan is the starting point. Each step has a deeper companion guide:</p>
-        <ul>
-          <li><strong><a href="../ai-hallucinations-brand-fix/">Fixing AI hallucinations about your brand</a></strong> &mdash; the full 4-step process for auditing and correcting factual errors (Step 1 in depth).</li>
-          <li><strong><a href="../ai-getting-pricing-wrong/">AI is getting your pricing wrong</a></strong> &mdash; why wrong pricing is the #1 error and how to fix it at the source.</li>
-          <li><strong><a href="../ai-visibility-playbook/">The 90-day AI visibility playbook</a></strong> &mdash; the extended version of this framework covering RAG vs parametric optimization, entity resolution, and measurement.</li>
-          <li><strong><a href="../ai-visibility-b2b-saas/">AI visibility for B2B SaaS</a></strong> &mdash; category-specific benchmarks and a tailored playbook for software companies.</li>
-        </ul>
-
-        <p>For background on how AI decides what to recommend, start with our <a href="../what-is-ai-visibility/">complete guide to AI visibility</a>. If you want to run a quick technical check before ordering a full report, try our <a href="../free-ai-visibility-audit/">free AI visibility audit</a>.</p>
 
       </div>
-      <!-- End Article Body -->
 
-      <p class="text-sm text-slate-muted mt-8 border-t border-[#E2E8F0] pt-6">Looking for the right tool to generate your AI visibility data? See our <a href="../ai-visibility-tools-compared/" class="text-primary hover:underline">comparison of AI visibility tools</a>. Or browse our <a href="../../geo-knowledge-base/" class="text-primary hover:underline">GEO Knowledge Base</a> for 81 research clusters on AI visibility strategy.</p>
 
-      <!-- ========== ARTICLE CTA ========== -->
-      <div class="bg-primary p-8 md:p-12 mt-16">
-        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">Get a report with your personalized action steps</h3>
+      <!-- ========== EMAIL CAPTURE FORM ========== -->
+      <div class="bg-primary p-8 md:p-12 mb-12">
+        <h2 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">Get the full action plan &mdash; free PDF</h2>
         <p class="text-on-primary/80 text-base max-w-lg mb-8">
-          This article gives you the framework. A Metricus report gives you the specific errors, exact sources, and priority order for your brand &mdash; across AI. One-time fee, no subscription.
+          The complete five-step guide with checklists, timeline table, and priority schema types, delivered to your inbox. No spam. Unsubscribe anytime.
         </p>
-        <a href="../../get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
-          Get your action plan
-          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-        </a>
-        <p class="mt-4"><a href="../../sample-ai-visibility-report/" class="text-on-primary/70 hover:text-on-primary text-sm underline transition-colors">Or see what a report looks like &rarr;</a></p>
+        <form class="email-gate-form flex flex-col sm:flex-row gap-3 max-w-lg" data-lead-magnet="action-plan" data-thank-you-url="/thank-you/action-plan/">
+          <input type="email" name="email" required placeholder="you@company.com" class="flex-1 px-4 py-3 bg-white text-slate-text text-[15px] border border-white placeholder:text-slate-muted focus:outline-none focus:border-slate-text">
+          <button type="submit" class="whitespace-nowrap bg-white text-primary font-semibold text-[15px] px-6 py-3 border border-white hover:bg-slate-100 transition-colors">
+            Send Me the Action Plan
+          </button>
+        </form>
       </div>
+
+
+      <!-- What You'll Get -->
+      <div class="article-body">
+        <h2>What you'll get</h2>
+        <ul>
+          <li><strong>Five-step prioritized fix sequence</strong> &mdash; from highest-impact/lowest-effort (error correction) through comparison content creation, with specific checklists for each step.</li>
+          <li><strong>Full timeline table</strong> &mdash; action, effort level, timeline, and expected visibility impact for every step, so you can set realistic expectations with stakeholders.</li>
+          <li><strong>Schema implementation guide</strong> &mdash; the four priority schema types (Organization, Product + Offer, FAQPage, Article) with details on what each should contain.</li>
+          <li><strong>Third-party listing audit checklist</strong> &mdash; G2, Capterra, TrustRadius, Wikipedia, and industry comparison sites, with verification steps for each platform.</li>
+        </ul>
+      </div>
+
+
+      <!-- Bridge to Paid Report -->
+      <div class="border-l-4 border-primary bg-surface p-8 my-12">
+        <p class="text-lg text-on-surface leading-relaxed mb-4">
+          This action plan shows <strong>what</strong> to do. A Metricus report shows what AI <strong>actually says</strong> about your brand and what to fix. That's the part no action plan can cover &mdash; the specific errors, competitor mentions, and source gaps unique to your business.
+        </p>
+        <a href="/get-report/" class="inline-flex items-center gap-2 bg-primary text-on-primary text-sm font-semibold px-6 py-3 hover:bg-primary-dim transition-colors">
+          Get your AI visibility report <span aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="text-sm text-slate-muted mt-3">One-time report. No subscription. From $99.</p>
+      </div>
+
+
+      <!-- ========== FAQ SECTION ========== -->
+      <div class="article-body">
+        <h2>Frequently asked questions</h2>
+
+        <h3>What should I do after getting an AI visibility audit?</h3>
+        <p>Follow a five-step sequence: fix factual errors first (highest impact, lowest effort), add structured data to your site, update third-party listings on G2/Capterra/TrustRadius, create comparison content that AI can cite, then monitor and re-audit after 4&ndash;6 weeks. Brands that follow this plan typically see visibility improve from 15&ndash;25% to 50&ndash;65% within 6&ndash;8 weeks.</p>
+
+        <h3>How long does it take to fix AI visibility errors?</h3>
+        <p>Source-level fixes (correcting outdated pricing or feature information on third-party listings) can show results within weeks because AI models pull from these sources in real time via RAG. Errors encoded in model training weights (parametric knowledge) take 2&ndash;3 months to resolve as they depend on model retraining cycles.</p>
+
+        <h3>Why does AI get my brand's pricing wrong?</h3>
+        <p>AI models pull pricing from third-party listings, review sites, and outdated blog posts. If your G2 listing says &ldquo;starting at $99/mo&rdquo; but you now offer a $29 plan, AI will repeat the wrong price. The fix: update every third-party listing and ensure pricing on your own site is in plain HTML, not behind JavaScript.</p>
+
+        <h3>What is the most impactful first step for AI visibility?</h3>
+        <p>Fix factual errors. Research shows 72% of brands have at least one factual error in AI-generated responses. Correcting errors at their source (review sites, outdated listings, your own site) is the highest-impact, lowest-effort improvement and can shift AI recommendations within weeks.</p>
+      </div>
+
 
       <!-- ========== CITE THIS ARTICLE ========== -->
       <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
@@ -508,7 +450,7 @@
     </article>
 
 
-    
+
     <!-- ========== RELATED KNOWLEDGE BASES ========== -->
     <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
       <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-6">Go deeper</p>
@@ -587,7 +529,7 @@
       <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
         <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
         <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
-        <a href="/blog/agency-guide-ai-visibility-audits/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
         <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
         <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
         <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>

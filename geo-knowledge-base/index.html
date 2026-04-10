@@ -165,7 +165,9 @@
     .query-tags-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
     .query-tag { display: inline-block; font-size: 12px; color: #566166; background: #f0f4f7; border: 1px solid #d9e4ea; padding: 3px 10px; white-space: nowrap; cursor: default; }
     .query-tag:hover { background: #e8eff3; color: #2a3439; }
-  </style>
+      .kb-gated-content section > *:not(h2) { filter: blur(5px); }
+    .kb-gated-content section > h2 { filter: none; }
+</style>
 </head>
 <body class="min-h-screen bg-dot-grid">
 
@@ -181,12 +183,13 @@
         <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
       </a>
       <div class="hidden md:flex items-center gap-8">
-        <a href="/methodology/" class="nav-link-howitworks text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
-        <a href="/#pricing" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
-        <a href="/blog/" class="nav-link-blog text-sm text-on-surface-variant hover:text-on-surface transition-colors">Blog</a>
-        <a href="/blog/diy-ai-visibility-audit/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Free Check</a>
+        <a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
+        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
+        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Learn</a>
+        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
         <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
-      </div>
+            </div>
       <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
         <span class="material-symbols-outlined">menu</span>
       </button>
@@ -201,11 +204,12 @@
         <span class="material-symbols-outlined">close</span>
       </button>
       <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">How It Works</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/#pricing" id="mobile-pricing-link">Pricing</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Blog</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/diy-ai-visibility-audit/">Free Check</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/" id="mobile-pricing-link">Pricing</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
       <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
-    </nav>
+        </nav>
   </div>
 
   <!-- Mobile Menu Script -->
@@ -229,6 +233,7 @@
   <div class="bg-white border-b border-outline-variant">
     <div class="max-w-5xl mx-auto px-6 py-16 text-center">
       <h1 class="font-display text-4xl md:text-5xl text-on-surface font-bold leading-tight mb-4">GEO Knowledge Base: Complete Guide to Generative Engine Optimization</h1>
+      <p class="text-sm text-outline mt-2">Last updated: April 2026</p>
       <p class="text-[15px] text-on-surface-variant leading-relaxed max-w-2xl mx-auto">81 research clusters covering everything from <a href="../blog/ai-visibility-how-brands-show-up/" class="text-primary hover:underline">what AI visibility is</a> to <a href="../blog/ai-visibility-action-plan/" class="text-primary hover:underline">how to fix it</a>. For a hands-on audit of your brand, see the <a href="../sample-ai-visibility-report/" class="text-primary hover:underline">sample report</a> or <a href="../blog/diy-ai-visibility-audit/" class="text-primary hover:underline">run a free check</a>.</p>
     </div>
   </div>
@@ -687,7 +692,22 @@
       <hr class="mt-12 border-outline-variant">
     </section>
 
-    <section id="cluster-15" data-cluster="15" class="mb-16">
+    
+    <!-- ===== EMAIL GATE: clusters 15+ ===== -->
+    <div style="position:relative;">
+      <div class="kb-gate-overlay" style="position:sticky;top:5rem;z-index:30;margin-bottom:-4rem;">
+        <div class="bg-white/90 dark:bg-gray-900/90 p-8 text-center border border-outline-variant shadow-lg max-w-xl mx-auto">
+          <h3 class="font-display text-2xl text-on-surface font-bold mb-3">Unlock all 81 research clusters</h3>
+          <p class="text-on-surface-variant mb-6">You&#39;ve seen 15 clusters. Enter your email to access the full GEO Knowledge Base.</p>
+          <form class="email-gate-form flex flex-col sm:flex-row gap-3 justify-center items-center" data-lead-magnet="kb-geo" data-thank-you-url="/thank-you/knowledge-base/">
+            <input type="email" name="email" required placeholder="you@company.com" class="px-4 py-2.5 border border-outline-variant text-sm w-full sm:w-64 focus:outline-none focus:border-primary">
+            <button type="submit" class="bg-primary text-on-primary text-sm font-medium px-6 py-2.5 hover:bg-primary-hover transition-colors whitespace-nowrap">Unlock All Clusters</button>
+          </form>
+        </div>
+      </div>
+      <div class="kb-gated-content" style="pointer-events:none;user-select:none;">
+
+<section id="cluster-15" data-cluster="15" class="mb-16">
       <h2 class="font-display text-2xl text-on-surface font-bold mb-4">Content types that rank in AI search</h2>
       <div data-type="search-queries" class="query-tags-wrap mb-6">
         <span class="query-tag" title="what content to create to rank in AI search 2026" data-full="what content to create to rank in AI search 2026">what content to create to rank in A&hellip;</span>
@@ -1668,7 +1688,7 @@
         <span class="query-tag" title="professional AI visibility audit what does it include" data-full="professional AI visibility audit what does it include">professional AI visibility audit wh&hellip;</span>
       </div>
       <div class="max-w-none">
-        <p class="text-[15px] text-on-surface-variant leading-relaxed">A professional AI visibility audit runs 50 to 100 industry-specific prompts across ChatGPT, Perplexity, Gemini, and Claude, executing each prompt at least three times to account for response variability, then scores results on three metrics: mention rate (how often the brand appears), citation position (first recommendation vs. buried in a list), and sentiment. Agencies use tools like Otterly.ai starting at $29/month for basic tracking, Peec AI at €89/month for mid-market analytics, or Profound at $499/month for source-selection mechanics. The standard deliverable package includes a baseline visibility report with screenshots and prompt-by-prompt citation tracking, a competitor benchmark showing share-of-voice across each AI engine, a scored checklist covering four audit pillars — crawl accessibility (can AI reach the content), entity consistency (is the brand described identically across the web), content citation-readiness (are answers structured for quoting), and E-E-A-T authority sources — plus a prioritized fix plan and 30/60/90-day roadmap. Most agencies run prompt monitoring monthly and repeat the full technical-plus-content audit quarterly, packaging the ongoing service at $1,500 to $5,000 per month depending on prompt volume and engine coverage.</p>
+        <p class="text-[15px] text-on-surface-variant leading-relaxed">A professional AI visibility audit runs 50 to 100 industry-specific prompts across the major AI platforms, executing each prompt at least three times to account for response variability, then scores results on three metrics: mention rate (how often the brand appears), citation position (first recommendation vs. buried in a list), and sentiment. Agencies use tools like Otterly.ai starting at $29/month for basic tracking, Peec AI at €89/month for mid-market analytics, or Profound at $499/month for source-selection mechanics. The standard deliverable package includes a baseline visibility report with screenshots and prompt-by-prompt citation tracking, a competitor benchmark showing share-of-voice across each AI engine, a scored checklist covering four audit pillars — crawl accessibility (can AI reach the content), entity consistency (is the brand described identically across the web), content citation-readiness (are answers structured for quoting), and E-E-A-T authority sources — plus a prioritized fix plan and 30/60/90-day roadmap. Most agencies run prompt monitoring monthly and repeat the full technical-plus-content audit quarterly, packaging the ongoing service at $1,500 to $5,000 per month depending on prompt volume and engine coverage.</p>
       </div>
       <hr class="mt-12 border-outline-variant">
     </section>
@@ -1807,7 +1827,11 @@
     </section>
 
 
-      <div class="mt-16 p-6 bg-white border border-outline-variant">
+      
+      </div><!-- /.kb-gated-content -->
+    </div><!-- /.gate-wrapper -->
+
+<div class="mt-16 p-6 bg-white border border-outline-variant">
         <p class="text-xs uppercase tracking-widest text-outline font-semibold mb-2">Cite This Resource</p>
         <p class="text-sm text-on-surface-variant">Metricus Research (2026). <em>AI Visibility &amp; GEO Knowledge Base</em>. metricusapp.com/geo-knowledge-base/</p>
       </div>
@@ -1878,7 +1902,7 @@
       <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
         <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
         <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
-        <a href="/blog/agency-guide-ai-visibility-audits/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
         <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
         <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
         <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
@@ -1935,6 +1959,33 @@
             tocSidebar.classList.add('hidden');
             tocChevron.textContent = 'expand_more';
           }
+        }
+      });
+    });
+  </script>
+
+  <!-- Email Gate Unlock Script -->
+  <script>
+    if (localStorage.getItem('metricus_email')) {
+      document.querySelectorAll('.kb-gated-content').forEach(function(el) {
+        el.style.filter = 'none';
+        el.style.pointerEvents = 'auto';
+        el.style.userSelect = 'auto';
+      });
+      document.querySelectorAll('.kb-gate-overlay').forEach(function(el) { el.remove(); });
+    }
+    document.querySelectorAll('.email-gate-form').forEach(function(form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var email = this.querySelector('input[name="email"]').value;
+        if (email) {
+          localStorage.setItem('metricus_email', email);
+          document.querySelectorAll('.kb-gated-content').forEach(function(el) {
+            el.style.filter = 'none';
+            el.style.pointerEvents = 'auto';
+            el.style.userSelect = 'auto';
+          });
+          document.querySelectorAll('.kb-gate-overlay').forEach(function(el) { el.remove(); });
         }
       });
     });

@@ -4,13 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sample Deep Dive Report: A Real B2B SaaS AI Visibility Audit | Metricus</title>
-  <script>
-    try {
-      if (localStorage.getItem('metricus_email')) {
-        document.documentElement.classList.add('unlocked');
-      }
-    } catch(e) {}
-  </script>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://metricusapp.com/sample-ai-visibility-report/">
   <meta name="description" content="A redacted sample of an actual Metricus Deep Dive report run on a real B2B SaaS brand. 182 buyer questions tested, 10 pages AI actually reads, 20x mention gap vs the top competitor.">
@@ -21,10 +14,59 @@
   <meta name="twitter:title" content="Sample AI Visibility Report | Metricus">
   <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","dateModified":"2026-04-07","itemListElement":[
+  {"@context":"https://schema.org","@type":"BreadcrumbList","dateModified":"2026-04-10","itemListElement":[
     {"@type":"ListItem","position":1,"name":"Home","item":"https://metricusapp.com/"},
     {"@type":"ListItem","position":2,"name":"Sample Report","item":"https://metricusapp.com/sample-ai-visibility-report/"}
   ]}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "dateModified": "2026-04-10",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does a Metricus AI visibility report include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every report includes your brand's mention rate and recommendation rate across real buyer questions, exact AI quotes about your brand, factual errors AI repeats (traced to the source page), a competitor comparison showing why AI prefers them, a wording-gap analysis, and a prioritized fix list with effort and impact labels."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is the sample report different from a real report?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The sample is a real report run on a real B2B SaaS brand, with brand-specific identifiers redacted. Your report would contain the same depth of analysis but be entirely specific to your brand, your competitors, and your category."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many buyer questions does a Metricus audit test?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Deep Dive tier tests buyer-intent questions across multiple major AI platforms. Each question is a real prompt a potential customer might ask when researching your category."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to get a report?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Reports are delivered within 24 hours of ordering. No subscription required — it is a one-time purchase."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I see the full sample before buying?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Enter your email on the sample report page and we will send you the complete sample PDF — free, no obligation. It includes the full action plan, all competitor comparisons, the source map, and the wording analysis."
+        }
+      }
+    ]
+  }
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
@@ -92,11 +134,24 @@
       padding: 0 0.35em;
       user-select: none;
     }
-    /* Soft email gate: gated content is in the HTML source for crawlers but hidden by default until the email is captured. */
-    [data-gated] { display: none; }
-    html.unlocked [data-gated] { display: revert; }
-    [data-gate-form] { display: block; }
-    html.unlocked [data-gate-form] { display: none; }
+    .blurred-preview {
+      position: relative;
+      overflow: hidden;
+    }
+    .blurred-preview .blur-content {
+      filter: blur(4px);
+      user-select: none;
+      pointer-events: none;
+    }
+    .blurred-preview .blur-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(247,249,251,0) 0%, rgba(247,249,251,0.6) 40%, rgba(247,249,251,0.95) 80%);
+      pointer-events: none;
+    }
   </style>
 </head>
 <body class="bg-surface text-on-surface bg-grid antialiased">
@@ -112,9 +167,10 @@
       </a>
       <div class="hidden md:flex items-center gap-8">
         <a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
-        <a href="/#pricing" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
-        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Blog</a>
-        <a href="/blog/diy-ai-visibility-audit/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Free Check</a>
+        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
+        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Learn</a>
+        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
         <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
       </div>
       <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
@@ -131,9 +187,10 @@
         <span class="material-symbols-outlined">close</span>
       </button>
       <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">How It Works</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/#pricing" id="mobile-pricing-link">Pricing</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Blog</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/diy-ai-visibility-audit/">Free Check</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/">Pricing</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
       <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
     </nav>
   </div>
@@ -144,14 +201,12 @@
       var menu=document.getElementById('mobile-menu');
       var close=document.getElementById('mobile-menu-close');
       var backdrop=document.getElementById('mobile-menu-backdrop');
-      var pricingLink=document.getElementById('mobile-pricing-link');
       if(!btn||!menu)return;
       function open(){menu.classList.remove('hidden');menu.setAttribute('aria-hidden','false');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
       function shut(){menu.classList.add('hidden');menu.setAttribute('aria-hidden','true');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
       btn.addEventListener('click',open);
       if(close)close.addEventListener('click',shut);
       if(backdrop)backdrop.addEventListener('click',shut);
-      if(pricingLink)pricingLink.addEventListener('click',shut);
     })();
   </script>
 
@@ -163,7 +218,7 @@
         <h1 class="text-5xl md:text-7xl font-headline italic leading-[0.95] text-on-surface">Why AI prefers<br/>your competitors.</h1>
       </div>
       <div class="col-span-12 md:col-span-4 border-l border-outline-variant pl-8 pb-2">
-        <p class="text-base font-body text-on-surface-variant leading-relaxed mb-8">A real Deep Dive report on a real B2B SaaS brand. 182 buyer questions tested. 10 pages on the site AI actually reads. A 20&times; mention gap to the top competitor &mdash; and the exact reasons why.</p>
+        <p class="text-base font-body text-on-surface-variant leading-relaxed mb-8">See exactly what a Metricus AI visibility report delivers. This is a real Deep Dive report run on a real B2B SaaS brand &mdash; 182 buyer questions tested, the exact AI quotes, errors traced to the source page, and a prioritized fix list. Last updated: April 2026.</p>
         <a href="../get-report/?tier=deep-dive" class="bg-primary text-on-primary px-6 py-3 text-xs font-label uppercase tracking-widest hover:bg-primary-dim transition-colors inline-flex items-center gap-2">
           Get this report for your brand
           <span class="material-symbols-outlined text-sm">arrow_forward</span>
@@ -173,602 +228,224 @@
     <p class="mt-8 text-xs uppercase tracking-[0.2em] text-outline font-label">Sample report &middot; Real B2B SaaS company (anonymized) &middot; ~20 pages &middot; Covers: what AI says, why, what to fix first</p>
   </header>
 
-  <!-- ===== Section 0: Category context ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-6">
-    <div class="bg-surface-container-lowest border-l-4 border-outline p-8 md:p-10">
-      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-3">Section 0 &mdash; Category context</p>
-      <p class="text-sm md:text-base text-on-surface font-body leading-relaxed max-w-4xl mb-4">Without knowing roughly what kind of brand this is, a 3.8% mention rate is impossible to calibrate. Here is the minimum context needed to read the rest of the report.</p>
-      <dl class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 max-w-4xl">
-        <div>
-          <dt class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-1">Category</dt>
-          <dd class="text-sm text-on-surface font-body leading-relaxed">AI visibility / generative engine optimization (GEO) tools</dd>
-        </div>
-        <div>
-          <dt class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-1">Company stage</dt>
-          <dd class="text-sm text-on-surface font-body leading-relaxed">Early-stage, newly launched</dd>
-        </div>
-        <div>
-          <dt class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-1">Active competitors AI surfaces in this category</dt>
-          <dd class="text-sm text-on-surface font-body leading-relaxed">Approximately 10</dd>
-        </div>
-        <div>
-          <dt class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-1">Why we anonymize</dt>
-          <dd class="text-sm text-on-surface font-body leading-relaxed">We redact brand-specific identifiers because your report would be similarly specific to your brand.</dd>
-        </div>
-      </dl>
-    </div>
-  </section>
 
-  <!-- ===== Audit at a glance (ALL tiers) ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-6">
-    <div class="grid grid-cols-12 gap-px bg-outline-variant/10">
-
-      <div class="col-span-12 md:col-span-6 bg-surface-container-lowest p-10 md:p-12">
-        <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-6">The audit at a glance</p>
-        <dl class="grid grid-cols-2 gap-y-8 gap-x-6">
-          <div>
-            <dt class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Buyer questions tested</dt>
-            <dd class="font-headline text-5xl text-on-surface">182</dd>
-          </div>
-          <div>
-            <dt class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Times the brand was mentioned</dt>
-            <dd class="font-headline text-5xl text-on-surface">7</dd>
-          </div>
-          <div>
-            <dt class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Times AI actively recommended it</dt>
-            <dd class="font-headline text-5xl text-on-surface">4</dd>
-          </div>
-          <div>
-            <dt class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Pages on the site AI actually reads</dt>
-            <dd class="font-headline text-5xl text-on-surface">10</dd>
-          </div>
-        </dl>
-      </div>
-
-      <div class="col-span-12 md:col-span-6 bg-surface-container-low p-10 md:p-12">
-        <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-6">The headline finding</p>
-        <p class="font-headline italic text-3xl md:text-4xl text-on-surface leading-tight mb-6">A 20&times; mention gap to the top competitor &mdash; and it isn't a product problem.</p>
-        <p class="text-sm text-on-surface-variant font-body leading-relaxed mb-4">The brand has the right product for the buyers AI was answering. Every time AI did surface it, the recommendation language was strong: "the strongest fit", "the best option for one-time work", "ranked #1". The problem is that the brand only surfaces when the buyer's question is phrased very specifically. Loosen the wording one notch and AI never finds it.</p>
-        <p class="text-sm text-on-surface-variant font-body leading-relaxed">Every tier of this audit maps a different layer of <em>why</em> &mdash; and a different scope of fixes to close the gap.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== SECTION 1: Mention rate vs recommendation rate (ALL tiers) ===== -->
+  <!-- ===== TEASER FINDING 1: An actual AI quote ===== -->
   <section class="max-w-7xl mx-auto px-6 pb-6">
     <div class="bg-surface-container-lowest p-10 md:p-14">
-      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-2">Section 1</p>
-      <h2 class="font-headline italic text-3xl md:text-4xl text-on-surface mb-6">How often AI mentions the brand vs how often it actually recommends it.</h2>
-      <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl mb-10">These are the two real numbers from the audit. Not a fabricated 0&ndash;100 score &mdash; the actual rates produced by 182 prompts.</p>
+      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-2">From the report &mdash; What AI actually said</p>
+      <h2 class="font-headline italic text-3xl md:text-4xl text-on-surface mb-6">An exact AI quote about this brand.</h2>
+      <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl mb-10">Every Metricus AI visibility report captures the exact words AI platforms use when they mention your brand to potential buyers. Here is one from this sample audit.</p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/10">
-        <div class="bg-surface-container-low p-10">
-          <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-4">Mention rate</p>
-          <p class="font-headline text-7xl md:text-8xl text-on-surface leading-none mb-4">3.8<span class="text-3xl text-on-surface-variant align-top">%</span></p>
-          <p class="text-sm text-on-surface-variant font-body leading-relaxed">7 mentions across 182 buyer questions. AI cites the brand by name when it answers about its category.</p>
+      <article class="bg-surface-container-low p-8 border-l-4 border-primary">
+        <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Quote &mdash; recommended (primary)</p>
+        <p class="text-xs text-on-surface-variant font-label mb-4">Buyer prompt: "I'm an agency owner trying to buy a one-time AI visibility audit. What are the best tools or services available for this in 2026? I care most about trust signals."</p>
+        <blockquote class="font-headline italic text-xl md:text-2xl text-on-surface leading-snug mb-4">"For a one-time client deliverable: start with <span class="redacted">[BRAND]</span> for the structured report, then validate findings with a spot-check from another tool. White-label ready for agencies."</blockquote>
+        <p class="text-xs text-on-surface-variant font-label">Source pages AI read before answering: <code class="text-on-surface">/blog/buyers-guide/</code>, <code class="text-on-surface">/blog/for-agencies/</code></p>
+      </article>
+
+      <div class="mt-8 bg-surface-container-low p-8 border-l-4 border-primary">
+        <p class="text-sm text-on-surface font-body leading-relaxed"><strong class="text-on-surface">Why this matters:</strong> This is how buyers encounter your brand for the first time in 2026 &mdash; not through a Google ad, but through a direct AI recommendation. The full report includes all 7 mentions, the prompts that triggered them, and the source pages AI read.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== TEASER FINDING 2: A factual error AI repeats ===== -->
+  <section class="max-w-7xl mx-auto px-6 pb-6">
+    <div class="bg-surface-container-lowest p-10 md:p-14">
+      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-2">From the report &mdash; A wrong fact AI repeats</p>
+      <h2 class="font-headline italic text-3xl md:text-4xl text-on-surface mb-6">AI told buyers this brand charges "$30/user" on a monthly plan. The truth: it is a flat one-time price.</h2>
+      <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl mb-10">Every Metricus report traces wrong facts back to the exact page where AI learned them. This error came from an 18-month-old comparison post that still listed a pricing model the brand abandoned.</p>
+
+      <div class="bg-surface-container-low p-8 grid grid-cols-12 gap-6">
+        <div class="col-span-12 md:col-span-4">
+          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-3">What AI said</p>
+          <p class="font-headline italic text-lg text-on-surface">"Pricing starts at $30/user."</p>
         </div>
-        <div class="bg-surface-container-low p-10">
-          <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-4">Recommendation rate</p>
-          <p class="font-headline text-7xl md:text-8xl text-on-surface leading-none mb-4">2.2<span class="text-3xl text-on-surface-variant align-top">%</span></p>
-          <p class="text-sm text-on-surface-variant font-body leading-relaxed">4 active recommendations. When AI mentioned the brand, it picked it as the primary answer 57% of the time.</p>
+        <div class="col-span-12 md:col-span-4">
+          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-3">The reality</p>
+          <p class="text-sm text-on-surface font-body leading-relaxed">The entry tier is a flat one-time price. No subscription, no per-user pricing.</p>
+        </div>
+        <div class="col-span-12 md:col-span-4">
+          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-3">Traced to</p>
+          <p class="text-sm text-on-surface font-body leading-relaxed"><code class="text-on-surface">/blog/tools-comparison/</code> &mdash; an outdated paragraph AI still reads.</p>
         </div>
       </div>
 
       <div class="mt-8 bg-surface-container-low p-8 border-l-4 border-primary">
-        <p class="text-sm text-on-surface font-body leading-relaxed"><strong class="text-on-surface">What this tells you:</strong> The brand has a retrieval problem, not a persuasion problem. When AI finds it, AI likes it. The fix is making AI find it more often &mdash; not changing what AI says about it.</p>
+        <p class="text-sm text-on-surface font-body leading-relaxed"><strong class="text-on-surface">Why this matters:</strong> Wrong facts don't just confuse buyers &mdash; they actively disqualify your brand. The full report found 3 wrong facts in this audit and traced each one to the exact paragraph to fix.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== EMAIL GATE — sits between Section 1 (numbers) and Section 2 (actual AI quotes) ===== -->
-  <section data-gate-form class="max-w-7xl mx-auto px-6 pb-6">
-    <div class="bg-surface-container-lowest border-l-4 border-primary p-10 md:p-14 max-w-3xl">
-      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-3">See the rest of the sample</p>
-      <h2 class="font-headline italic text-3xl md:text-4xl text-on-surface mb-5 leading-tight">See the actual AI quotes about this brand &mdash; plus the wrong facts, the competitor analysis, the wording gap, and the full site-level fix list.</h2>
-      <p class="text-sm text-on-surface-variant font-body leading-relaxed mb-8 max-w-xl">Drop your work email. We'll show the rest of the sample immediately. No subscription, no follow-up sequence &mdash; one report, one email.</p>
-      <form data-gate-source="sample" class="flex flex-col sm:flex-row gap-3 max-w-xl">
-        <input type="email" name="email" placeholder="Work email" required inputmode="email" autocomplete="email" autocapitalize="none" spellcheck="false" class="flex-1 bg-surface-container-low border border-outline-variant focus:border-primary px-4 py-3 text-on-surface font-body text-sm outline-none transition-colors">
-        <button type="submit" class="bg-primary text-on-primary text-sm font-semibold tracking-tight px-6 py-3 hover:bg-primary-dim transition-colors whitespace-nowrap">Show full sample &rarr;</button>
+
+  <!-- ===== TEASER FINDING 3: The competitor gap ===== -->
+  <section class="max-w-7xl mx-auto px-6 pb-6">
+    <div class="bg-surface-container-lowest p-10 md:p-14">
+      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-2">From the report &mdash; Competitor comparison</p>
+      <h2 class="font-headline italic text-3xl md:text-4xl text-on-surface mb-6">The top competitor was mentioned 101 times. This brand: 7.</h2>
+      <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl mb-10">Every report maps the exact mention gap between your brand and the competitors AI prefers &mdash; and the specific reasons AI picks them over you.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/10">
+        <div class="bg-surface-container-low p-10">
+          <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-4">Top competitor</p>
+          <p class="font-headline text-7xl md:text-8xl text-on-surface leading-none mb-4">101</p>
+          <p class="text-sm text-on-surface-variant font-body leading-relaxed">Mentions across 182 buyer questions. AI cited them in third-party roundups, review sites, and "best of" lists the brand doesn't appear in.</p>
+        </div>
+        <div class="bg-surface-container-low p-10">
+          <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-4">This brand</p>
+          <p class="font-headline text-7xl md:text-8xl text-on-surface leading-none mb-4">7</p>
+          <p class="text-sm text-on-surface-variant font-body leading-relaxed">A 14x mention gap. But when AI did surface this brand, it recommended it 57% of the time. The problem is retrieval, not persuasion.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 bg-surface-container-low p-8 border-l-4 border-primary">
+        <p class="text-sm text-on-surface font-body leading-relaxed"><strong class="text-on-surface">Why this matters:</strong> The full report breaks down all 5 top competitors, with exact AI quotes explaining why each one wins. It names specific pages to create and wording to add so AI starts picking your brand instead.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== BLURRED PREVIEW: What the full sample contains ===== -->
+  <section class="max-w-7xl mx-auto px-6 pb-6">
+    <div class="blurred-preview bg-surface-container-lowest p-10 md:p-14">
+      <div class="blur-content" aria-hidden="true">
+        <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-2">Section 6 &mdash; Search query map</p>
+        <h2 class="font-headline italic text-3xl md:text-4xl text-on-surface mb-6">The exact AI searches that find the brand and the ones that don't.</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          <div class="bg-surface-container-low p-8">
+            <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-4">8 working queries that surface the brand</p>
+            <p class="text-sm text-on-surface font-body leading-relaxed mb-2">01 &mdash; "one-time AI visibility audit report buy no subscription 2026"</p>
+            <p class="text-sm text-on-surface font-body leading-relaxed mb-2">02 &mdash; "one-time AI visibility audit report single purchase agency 2026"</p>
+            <p class="text-sm text-on-surface font-body leading-relaxed mb-2">03 &mdash; "best AI visibility tools 2026 comparison accuracy"</p>
+            <p class="text-sm text-on-surface font-body leading-relaxed mb-2">04 &mdash; "AI visibility tool accuracy brand information correctness"</p>
+          </div>
+          <div class="bg-surface-container-low p-8">
+            <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-4">Queries that should find the brand but don't</p>
+            <p class="text-sm text-on-surface font-body leading-relaxed mb-2">01 &mdash; "best AI visibility monitoring tools for businesses 2026"</p>
+            <p class="text-sm text-on-surface font-body leading-relaxed mb-2">02 &mdash; "AI brand monitoring tool ChatGPT Gemini Perplexity"</p>
+            <p class="text-sm text-on-surface font-body leading-relaxed mb-2">03 &mdash; "best tools fix AI misinformation about my business"</p>
+            <p class="text-sm text-on-surface font-body leading-relaxed mb-2">04 &mdash; "AI visibility monitoring tools e-commerce 2026"</p>
+          </div>
+        </div>
+        <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-2">Section 7 &mdash; Wording mismatch analysis</p>
+        <h2 class="font-headline italic text-3xl text-on-surface mb-6">Where the brand's wording doesn't match what buyers ask.</h2>
+        <div class="bg-surface-container-low p-8">
+          <p class="text-sm text-on-surface font-body mb-2">"client-ready deliverable" &mdash; AI used 11 times, appears on site 0 times</p>
+          <p class="text-sm text-on-surface font-body mb-2">"white-label" &mdash; AI used 9 times, appears on site 2 times</p>
+          <p class="text-sm text-on-surface font-body mb-2">"diagnostic" &mdash; AI used 7 times, appears on site 0 times</p>
+          <p class="text-sm text-on-surface font-body mb-2">"pay-per-report" &mdash; AI used 5 times, appears on site 0 times</p>
+        </div>
+      </div>
+      <div class="blur-overlay"></div>
+    </div>
+    <div class="bg-surface-container-lowest border-t border-outline-variant/30 px-10 md:px-14 py-8">
+      <p class="text-sm text-on-surface-variant font-body leading-relaxed text-center max-w-2xl mx-auto">The full sample includes the complete action plan, all competitor comparisons, the source map, the wording analysis, the cost-of-invisibility model, and the 25-item prioritized fix list.</p>
+    </div>
+  </section>
+
+
+  <!-- ===== EMAIL GATE ===== -->
+  <section class="max-w-7xl mx-auto px-6 pb-6">
+    <div class="bg-surface-container-lowest border-l-4 border-primary p-10 md:p-14">
+      <h2 class="font-headline italic text-3xl md:text-4xl text-on-surface mb-5 leading-tight">Get the full sample report &mdash; free PDF</h2>
+      <p class="text-sm text-on-surface-variant font-body leading-relaxed mb-8 max-w-xl">See the complete analysis, findings, and action plan. Delivered to your inbox.</p>
+      <form class="email-gate-form flex flex-col sm:flex-row gap-3 max-w-xl" data-lead-magnet="sample-report" data-thank-you-url="/thank-you/sample-report/">
+        <input type="email" name="email" required placeholder="you@company.com" inputmode="email" autocomplete="email" autocapitalize="none" spellcheck="false" class="flex-1 bg-surface-container-low border border-outline-variant focus:border-primary px-4 py-3 text-on-surface font-body text-sm outline-none transition-colors">
+        <button type="submit" class="bg-primary text-on-primary text-sm font-semibold tracking-tight px-6 py-3 hover:bg-primary-dim transition-colors whitespace-nowrap">Send Me the Sample Report</button>
       </form>
-      <p class="text-xs text-outline mt-4">We'll email you the report you ordered &mdash; nothing else.</p>
+      <p class="text-xs text-outline mt-4">One email with the PDF. No subscription, no follow-up sequence.</p>
     </div>
   </section>
 
-  <!-- ===== SECTION 2: Exact AI quotes (ALL tiers) ===== -->
-  <section data-gated class="max-w-7xl mx-auto px-6 pb-6">
-    <div class="bg-surface-container-lowest p-10 md:p-14">
-      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-2">Section 2</p>
-      <h2 class="font-headline italic text-3xl md:text-4xl text-on-surface mb-6">Exact AI quotes about the brand.</h2>
-      <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl mb-10">Word for word from real buyer queries. Every quote is paired with the prompt that generated it. The full report includes all 7 mentions; three are shown here.</p>
 
-      <div class="space-y-6">
-
-        <article class="bg-surface-container-low p-8 border-l-4 border-primary">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Quote 1 &mdash; recommended (primary)</p>
-          <p class="text-xs text-on-surface-variant font-label mb-4">Buyer prompt: "I'm an agency owner trying to buy a one-time AI visibility audit. What are the best tools or services available for this in 2026? I care most about trust signals."</p>
-          <blockquote class="font-headline italic text-xl md:text-2xl text-on-surface leading-snug mb-4">"For a one-time client deliverable: start with <span class="redacted">[BRAND]</span> for the structured report, then validate findings with a spot-check from another tool. White-label ready for agencies."</blockquote>
-          <p class="text-xs text-on-surface-variant font-label">Source pages AI read before answering: <code class="text-on-surface">/blog/buyers-guide/</code>, <code class="text-on-surface">/blog/for-agencies/</code></p>
-        </article>
-
-        <article class="bg-surface-container-low p-8 border-l-4 border-primary">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Quote 2 &mdash; recommended (paid tier)</p>
-          <p class="text-xs text-on-surface-variant font-label mb-4">Buyer prompt: "I'm an e-commerce brand manager trying to buy a one-time audit. I care most about competitor displacement."</p>
-          <blockquote class="font-headline italic text-xl md:text-2xl text-on-surface leading-snug mb-4">"<span class="redacted">[BRAND]</span> &mdash; starting around the entry tier, no subscription required. Includes competitor comparison and an action plan. Delivered within 24 hours. This is probably the best fit for a one-time buy."</blockquote>
-          <p class="text-xs text-on-surface-variant font-label">Source pages: <code class="text-on-surface">/blog/for-agencies/</code>, <code class="text-on-surface">/blog/no-subscription-required/</code></p>
-        </article>
-
-        <article class="bg-surface-container-low p-8 border-l-4 border-outline-variant">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Quote 3 &mdash; cited only, not recommended</p>
-          <p class="text-xs text-on-surface-variant font-label mb-4">Buyer prompt: "I'm a B2B SaaS marketer trying to compare AI visibility tools. I care most about accuracy of brand information."</p>
-          <blockquote class="font-headline italic text-xl md:text-2xl text-on-surface leading-snug mb-4">[Brand appears only in source citations at the bottom; the response body recommends a competitor.]</blockquote>
-          <p class="text-xs text-on-surface-variant font-label">Source pages: <code class="text-on-surface">/blog/buyers-guide/</code> only &mdash; one page, not enough evidence for AI to elevate the brand from "source" to "recommendation".</p>
-        </article>
-
-      </div>
+  <!-- ===== Bridge ===== -->
+  <section class="max-w-7xl mx-auto px-6 pb-6">
+    <div class="bg-surface-container-low p-10 md:p-14 text-center">
+      <p class="font-headline italic text-3xl md:text-4xl text-on-surface leading-tight max-w-3xl mx-auto">This is what we found for one brand. What would yours reveal?</p>
     </div>
   </section>
 
-  <!-- ===== SECTION 3: Wrong facts (ALL tiers) ===== -->
-  <section data-gated class="max-w-7xl mx-auto px-6 pb-6">
-    <div class="bg-surface-container-lowest p-10 md:p-14">
-      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-2">Section 3</p>
-      <h2 class="font-headline italic text-3xl md:text-4xl text-on-surface mb-6">Wrong facts AI repeats &mdash; traced to the source page.</h2>
-      <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl mb-10">Each wrong fact is paired with the page on the site where AI read it. Fix it at the source and AI stops repeating it across every platform.</p>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline-variant/10">
-
-        <div class="bg-surface-container-low p-8">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-3">Wrong fact #1</p>
-          <p class="font-headline italic text-lg text-on-surface mb-4">"Pricing starts at $30/user."</p>
-          <p class="text-xs text-on-surface-variant font-label mb-2"><strong class="text-on-surface">Reality:</strong> the entry tier is a flat one-time price.</p>
-          <p class="text-xs text-on-surface-variant font-label mb-3"><strong class="text-on-surface">Read from:</strong> <code class="text-on-surface">/blog/tools-comparison/</code> &mdash; an 18-month-old comparison post that still lists an old subscription model the brand abandoned.</p>
-          <p class="text-xs text-on-surface-variant font-label"><strong class="text-on-surface">Fix:</strong> rewrite the pricing paragraph on that page; add a consistent fact block with current pricing to the four pages AI reads most.</p>
-        </div>
-
-        <div class="bg-surface-container-low p-8">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-3">Wrong fact #2</p>
-          <p class="font-headline italic text-lg text-on-surface mb-4">"Reports take 7&ndash;10 business days."</p>
-          <p class="text-xs text-on-surface-variant font-label mb-2"><strong class="text-on-surface">Reality:</strong> 24 hours.</p>
-          <p class="text-xs text-on-surface-variant font-label mb-3"><strong class="text-on-surface">Read from:</strong> <code class="text-on-surface">/about/</code> &mdash; a stale paragraph from launch that was never updated.</p>
-          <p class="text-xs text-on-surface-variant font-label"><strong class="text-on-surface">Fix:</strong> single-line edit; the report names the exact paragraph.</p>
-        </div>
-
-        <div class="bg-surface-container-low p-8">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-3">Wrong fact #3</p>
-          <p class="font-headline italic text-lg text-on-surface mb-4">"Only available on a monthly plan."</p>
-          <p class="text-xs text-on-surface-variant font-label mb-2"><strong class="text-on-surface">Reality:</strong> the brand explicitly does <em>not</em> sell subscriptions &mdash; it's a one-time report. This is the exact opposite of the truth.</p>
-          <p class="text-xs text-on-surface-variant font-label mb-3"><strong class="text-on-surface">Read from:</strong> a third-party directory page the brand doesn't control, plus an old FAQ on <code class="text-on-surface">/pricing/</code> that mentions a "Pro plan" the brand discontinued.</p>
-          <p class="text-xs text-on-surface-variant font-label"><strong class="text-on-surface">Fix:</strong> rewrite the FAQ; submit a correction to the third-party directory.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SECTION 4: Pages AI actually reads (ALL tiers) ===== -->
-  <section data-gated class="max-w-7xl mx-auto px-6 pb-6">
-    <div class="bg-surface-container-lowest p-10 md:p-14">
-      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-2">Section 4</p>
-      <h2 class="font-headline italic text-3xl md:text-4xl text-on-surface mb-6">The pages on the site AI actually reads.</h2>
-      <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl mb-10">10 pages did all the work. Every time AI mentioned the brand, it was because AI fetched one of these. The other ~120 pages on the site are not in the picture &mdash; AI never reads them.</p>
-
-      <div class="overflow-x-auto">
-        <table class="w-full text-sm font-body">
-          <thead>
-            <tr class="border-b border-outline-variant text-left">
-              <th class="py-3 pr-4 text-xs uppercase tracking-[0.15em] text-outline font-label">#</th>
-              <th class="py-3 pr-4 text-xs uppercase tracking-[0.15em] text-outline font-label">Page</th>
-              <th class="py-3 pr-4 text-xs uppercase tracking-[0.15em] text-outline font-label">Times read</th>
-              <th class="py-3 pr-4 text-xs uppercase tracking-[0.15em] text-outline font-label">Role in discovery</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-outline-variant/30">
-            <tr><td class="py-3 pr-4 text-on-surface-variant">1</td><td class="py-3 pr-4 text-on-surface"><code>/blog/buyers-guide/</code></td><td class="py-3 pr-4 text-on-surface">6</td><td class="py-3 pr-4 text-on-surface-variant">Primary gateway. The buyer's guide post.</td></tr>
-            <tr><td class="py-3 pr-4 text-on-surface-variant">2</td><td class="py-3 pr-4 text-on-surface"><code>/blog/for-agencies/</code></td><td class="py-3 pr-4 text-on-surface">4</td><td class="py-3 pr-4 text-on-surface-variant">Triggers agency-persona matches.</td></tr>
-            <tr><td class="py-3 pr-4 text-on-surface-variant">3</td><td class="py-3 pr-4 text-on-surface"><code>/blog/no-subscription-required/</code></td><td class="py-3 pr-4 text-on-surface">4</td><td class="py-3 pr-4 text-on-surface-variant">Pricing differentiator page.</td></tr>
-            <tr><td class="py-3 pr-4 text-on-surface-variant">4</td><td class="py-3 pr-4 text-on-surface"><code>/blog/<span class="redacted">[competitor-1-alternative]</span>/</code></td><td class="py-3 pr-4 text-on-surface">2</td><td class="py-3 pr-4 text-on-surface-variant">Surfaces in competitor comparison queries.</td></tr>
-            <tr><td class="py-3 pr-4 text-on-surface-variant">5</td><td class="py-3 pr-4 text-on-surface"><code>/blog/<span class="redacted">[competitor-2-alternative]</span>/</code></td><td class="py-3 pr-4 text-on-surface">1</td><td class="py-3 pr-4 text-on-surface-variant">Competitor comparison content.</td></tr>
-            <tr><td class="py-3 pr-4 text-on-surface-variant">6</td><td class="py-3 pr-4 text-on-surface"><code>/blog/what-is-ai-visibility/</code></td><td class="py-3 pr-4 text-on-surface">1</td><td class="py-3 pr-4 text-on-surface-variant">Definitional content for the category.</td></tr>
-            <tr><td class="py-3 pr-4 text-on-surface-variant">7</td><td class="py-3 pr-4 text-on-surface"><code>/blog/action-plan/</code></td><td class="py-3 pr-4 text-on-surface">1</td><td class="py-3 pr-4 text-on-surface-variant">Downstream content; rarely surfaces.</td></tr>
-            <tr><td class="py-3 pr-4 text-on-surface-variant">8</td><td class="py-3 pr-4 text-on-surface"><code>/blog/scores-explained/</code></td><td class="py-3 pr-4 text-on-surface">1</td><td class="py-3 pr-4 text-on-surface-variant">Downstream content.</td></tr>
-            <tr><td class="py-3 pr-4 text-on-surface-variant">9</td><td class="py-3 pr-4 text-on-surface"><code>/checkout/</code></td><td class="py-3 pr-4 text-on-surface">1</td><td class="py-3 pr-4 text-on-surface-variant">Transactional. Only when AI already knew the brand.</td></tr>
-            <tr><td class="py-3 pr-4 text-on-surface-variant">10</td><td class="py-3 pr-4 text-on-surface"><code>/ (homepage)</code></td><td class="py-3 pr-4 text-on-surface">1</td><td class="py-3 pr-4 text-on-surface-variant">Only when AI searched the brand by name. Effectively dead for cold discovery.</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="mt-8 bg-surface-container-low p-8 border-l-4 border-primary">
-        <p class="text-sm text-on-surface font-body leading-relaxed"><strong class="text-on-surface">What this tells you:</strong> One blog post is doing 60% of the work. The homepage and the checkout page are invisible to AI for cold discovery &mdash; AI only fetches them after it already knows the brand. Optimize the 10 pages that work; ignore the 120 that don't until those 10 are airtight.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SECTION 5 (DEEP DIVE + FULL ARSENAL VARIANT): Why each top 5 competitor wins ===== -->
-  <section data-gated class="max-w-7xl mx-auto px-6 pb-6">
-    <div class="bg-surface-container-lowest p-10 md:p-14">
-      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-2">Section 5</p>
-      <h2 class="font-headline italic text-3xl md:text-4xl text-on-surface mb-6">Why each of your top 5 competitors wins.</h2>
-      <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl mb-10">For each competitor, the specific reasoning AI used when picking them over the brand. Quoted from the actual responses, not paraphrased.</p>
-
-      <div class="space-y-px bg-outline-variant/10">
-
-        <div class="bg-surface-container-low p-8 grid grid-cols-12 gap-6">
-          <div class="col-span-12 md:col-span-3">
-            <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Competitor 1</p>
-            <p class="font-headline italic text-2xl text-on-surface"><span class="redacted">[Competitor A]</span></p>
-            <p class="text-xs text-on-surface-variant font-label mt-2">101 mentions vs the brand's 7 &mdash; a 14&times; gap.</p>
-          </div>
-          <div class="col-span-12 md:col-span-9">
-            <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Why AI picks them</p>
-            <p class="text-sm text-on-surface font-body leading-relaxed mb-3">Sheer volume of third-party coverage. AI has read dozens of roundups, review-site listings, and "best tools for X" articles that name this competitor. The brand doesn't appear in any of those lists.</p>
-            <p class="text-xs text-on-surface-variant font-label italic">AI quote: "For ongoing visibility tracking, <span class="redacted">[Competitor A]</span> is the most established name in the category &mdash; cited across most major review sites and roundups."</p>
-          </div>
-        </div>
-
-        <div class="bg-surface-container-low p-8 grid grid-cols-12 gap-6">
-          <div class="col-span-12 md:col-span-3">
-            <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Competitor 2</p>
-            <p class="font-headline italic text-2xl text-on-surface"><span class="redacted">[Competitor B]</span></p>
-            <p class="text-xs text-on-surface-variant font-label mt-2">95 mentions. Recommended only once &mdash; high visibility, weak pickup.</p>
-          </div>
-          <div class="col-span-12 md:col-span-9">
-            <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Why AI picks them</p>
-            <p class="text-sm text-on-surface font-body leading-relaxed mb-3">Enterprise framing. AI defaults to this competitor when buyers mention scale, governance, or "for our team of 200+". The brand has no equivalent enterprise-language page.</p>
-            <p class="text-xs text-on-surface-variant font-label italic">AI quote: "If you need something with enterprise reporting and SSO out of the box, <span class="redacted">[Competitor B]</span> is built for that scale."</p>
-          </div>
-        </div>
-
-        <div class="bg-surface-container-low p-8 grid grid-cols-12 gap-6">
-          <div class="col-span-12 md:col-span-3">
-            <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Competitor 3</p>
-            <p class="font-headline italic text-2xl text-on-surface"><span class="redacted">[Competitor C]</span></p>
-            <p class="text-xs text-on-surface-variant font-label mt-2">80 mentions. Niche but consistent.</p>
-          </div>
-          <div class="col-span-12 md:col-span-9">
-            <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Why AI picks them</p>
-            <p class="text-sm text-on-surface font-body leading-relaxed mb-3">Owns the "monitoring" frame. Anytime a buyer says "track" or "monitor", AI defaults here. The brand could compete here but doesn't have a page that uses the word "monitoring" in a title.</p>
-            <p class="text-xs text-on-surface-variant font-label italic">AI quote: "For ongoing brand monitoring across AI platforms, <span class="redacted">[Competitor C]</span> offers the most comprehensive tracking."</p>
-          </div>
-        </div>
-
-        <div class="bg-surface-container-low p-8 grid grid-cols-12 gap-6">
-          <div class="col-span-12 md:col-span-3">
-            <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Competitor 4</p>
-            <p class="font-headline italic text-2xl text-on-surface"><span class="redacted">[Competitor D]</span></p>
-            <p class="text-xs text-on-surface-variant font-label mt-2">64 mentions. The "trusted brand" default.</p>
-          </div>
-          <div class="col-span-12 md:col-span-9">
-            <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Why AI picks them</p>
-            <p class="text-sm text-on-surface font-body leading-relaxed mb-3">Brand recognition outside the category. AI surfaces this competitor whenever the buyer's question is even slightly broad &mdash; it's recognizable enough that AI plays it safe.</p>
-            <p class="text-xs text-on-surface-variant font-label italic">AI quote: "<span class="redacted">[Competitor D]</span> is a trusted, well-known platform you've likely already heard of."</p>
-          </div>
-        </div>
-
-        <div class="bg-surface-container-low p-8 grid grid-cols-12 gap-6">
-          <div class="col-span-12 md:col-span-3">
-            <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Competitor 5</p>
-            <p class="font-headline italic text-2xl text-on-surface"><span class="redacted">[Competitor E]</span></p>
-            <p class="text-xs text-on-surface-variant font-label mt-2">31 mentions. The cheaper alternative.</p>
-          </div>
-          <div class="col-span-12 md:col-span-9">
-            <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Why AI picks them</p>
-            <p class="text-sm text-on-surface font-body leading-relaxed mb-3">Price-sensitive recommendations. Whenever the buyer mentions "small team", "startup", or "budget", AI surfaces this competitor &mdash; even though the brand's entry tier is comparable. AI doesn't know that, because the brand's price isn't repeated across enough pages.</p>
-            <p class="text-xs text-on-surface-variant font-label italic">AI quote: "For a small team on a tight budget, <span class="redacted">[Competitor E]</span> offers the most affordable starting point."</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SECTION 6: Searches that find / don't find (DD + FA) ===== -->
-  <section data-gated class="max-w-7xl mx-auto px-6 pb-6">
-    <div class="bg-surface-container-lowest p-10 md:p-14">
-      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-2">Section 6</p>
-      <h2 class="font-headline italic text-3xl md:text-4xl text-on-surface mb-6">The exact AI searches that find the brand &mdash; and the ones that don't.</h2>
-      <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl mb-10">When AI is asked a buyer question, it generates its own internal search query before answering. These are the literal strings it generated, in two columns.</p>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/10">
-
-        <div class="bg-surface-container-low p-8">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-4">8 working queries that surface the brand</p>
-          <ol class="space-y-3 text-sm text-on-surface font-body leading-relaxed">
-            <li><span class="text-outline mr-2">01</span>"one-time AI visibility audit report buy no subscription 2026"</li>
-            <li><span class="text-outline mr-2">02</span>"one-time AI visibility audit report single purchase agency 2026"</li>
-            <li><span class="text-outline mr-2">03</span>"best AI visibility tools 2026 comparison accuracy"</li>
-            <li><span class="text-outline mr-2">04</span>"AI visibility tool accuracy brand information correctness"</li>
-            <li><span class="text-outline mr-2">05</span>"one-time audit report competitor analysis 2026 pricing"</li>
-            <li><span class="text-outline mr-2">06</span>"best AI visibility audit tools for agencies 2026"</li>
-            <li><span class="text-outline mr-2">07</span>"audit tools one-time report no subscription agency 2026"</li>
-            <li><span class="text-outline mr-2">08</span>"<span class="redacted">[brand name]</span> AI visibility one-time report pricing features 2026"</li>
-          </ol>
-          <p class="text-xs text-on-surface-variant font-label mt-6">Pattern: "AI visibility" + ("one-time" OR "audit" OR "comparison" OR "no subscription") + "2026". Drop any one of those terms and the brand disappears.</p>
-        </div>
-
-        <div class="bg-surface-container-low p-8">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-4">Queries that should find the brand &mdash; but don't</p>
-          <ol class="space-y-3 text-sm text-on-surface font-body leading-relaxed">
-            <li><span class="text-outline mr-2">01</span>"best AI visibility monitoring tools for businesses 2026" <span class="text-xs text-outline-variant block ml-6">"Monitoring" routes AI to subscription competitors.</span></li>
-            <li><span class="text-outline mr-2">02</span>"AI brand monitoring tool ChatGPT Gemini Perplexity" <span class="text-xs text-outline-variant block ml-6">Same problem &mdash; "monitoring" frame.</span></li>
-            <li><span class="text-outline mr-2">03</span>"best tools fix AI misinformation about my business" <span class="text-xs text-outline-variant block ml-6">"Fix" framing &mdash; the brand has no page that owns this verb.</span></li>
-            <li><span class="text-outline mr-2">04</span>"AI visibility monitoring tools e-commerce 2026" <span class="text-xs text-outline-variant block ml-6">"Monitoring" again &mdash; whole category lost.</span></li>
-            <li><span class="text-outline mr-2">05</span>"GEO AEO diagnostic assessment tools multi-channel" <span class="text-xs text-outline-variant block ml-6">Abstract phrasing &mdash; the brand never used these words on any page.</span></li>
-            <li><span class="text-outline mr-2">06</span>"how to check what AI says about my brand" <span class="text-xs text-outline-variant block ml-6">Problem language &mdash; AI answers from training data, never searches.</span></li>
-          </ol>
-          <p class="text-xs text-on-surface-variant font-label mt-6">The "missing" column is what the next page on the site needs to target.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SECTION 7: Wording mismatch (DD + FA) ===== -->
-  <section data-gated class="max-w-7xl mx-auto px-6 pb-6">
-    <div class="bg-surface-container-lowest p-10 md:p-14">
-      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-2">Section 7</p>
-      <h2 class="font-headline italic text-3xl md:text-4xl text-on-surface mb-6">Where the brand's wording doesn't match what buyers ask.</h2>
-      <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl mb-10">The words AI uses to describe the brand's category that don't appear anywhere on the brand's pages. Each one is a term to add to a specific page &mdash; without rewriting the brand's voice.</p>
-
-      <div class="overflow-x-auto">
-        <table class="w-full text-sm font-body">
-          <thead>
-            <tr class="border-b border-outline-variant text-left">
-              <th class="py-3 pr-4 text-xs uppercase tracking-[0.15em] text-outline font-label">Word AI uses</th>
-              <th class="py-3 pr-4 text-xs uppercase tracking-[0.15em] text-outline font-label">Times AI used it</th>
-              <th class="py-3 pr-4 text-xs uppercase tracking-[0.15em] text-outline font-label">Times it appears on the site</th>
-              <th class="py-3 pr-4 text-xs uppercase tracking-[0.15em] text-outline font-label">Where to add it</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-outline-variant/30">
-            <tr><td class="py-3 pr-4 text-on-surface">"client-ready deliverable"</td><td class="py-3 pr-4 text-on-surface">11</td><td class="py-3 pr-4 text-on-surface">0</td><td class="py-3 pr-4 text-on-surface-variant">Agency page H2; checkout page subhead.</td></tr>
-            <tr><td class="py-3 pr-4 text-on-surface">"white-label"</td><td class="py-3 pr-4 text-on-surface">9</td><td class="py-3 pr-4 text-on-surface">2</td><td class="py-3 pr-4 text-on-surface-variant">Repeat in homepage hero and pricing FAQ.</td></tr>
-            <tr><td class="py-3 pr-4 text-on-surface">"diagnostic"</td><td class="py-3 pr-4 text-on-surface">7</td><td class="py-3 pr-4 text-on-surface">0</td><td class="py-3 pr-4 text-on-surface-variant">Add as alt phrasing in the buyer's guide intro.</td></tr>
-            <tr><td class="py-3 pr-4 text-on-surface">"baseline"</td><td class="py-3 pr-4 text-on-surface">6</td><td class="py-3 pr-4 text-on-surface">1</td><td class="py-3 pr-4 text-on-surface-variant">Use in the homepage subhead and the agency page.</td></tr>
-            <tr><td class="py-3 pr-4 text-on-surface">"prospecting"</td><td class="py-3 pr-4 text-on-surface">5</td><td class="py-3 pr-4 text-on-surface">0</td><td class="py-3 pr-4 text-on-surface-variant">Add a "use cases" block on the agency page.</td></tr>
-            <tr><td class="py-3 pr-4 text-on-surface">"pay-per-report"</td><td class="py-3 pr-4 text-on-surface">5</td><td class="py-3 pr-4 text-on-surface">0</td><td class="py-3 pr-4 text-on-surface-variant">Pricing page; the no-subscription post.</td></tr>
-            <tr><td class="py-3 pr-4 text-on-surface">"audit layer"</td><td class="py-3 pr-4 text-on-surface">4</td><td class="py-3 pr-4 text-on-surface">0</td><td class="py-3 pr-4 text-on-surface-variant">Add to the comparison page intro.</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SECTION 8: What proof AI looks for (DD + FA) ===== -->
-  <section data-gated class="max-w-7xl mx-auto px-6 pb-6">
-    <div class="bg-surface-container-lowest p-10 md:p-14">
-      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-2">Section 8</p>
-      <h2 class="font-headline italic text-3xl md:text-4xl text-on-surface mb-6">What proof AI looks for when recommending in this category.</h2>
-      <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl mb-10">Frequency-ranked from the audit. The evidence types AI cited when picking any tool in the category &mdash; the brand or competitors. Tells you which proof to put on the brand's pages and which to deprioritize.</p>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/10">
-        <div class="bg-surface-container-low p-8">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-4">Cited heavily &mdash; the brand has it</p>
-          <ul class="space-y-3 text-sm text-on-surface font-body">
-            <li class="flex justify-between"><span>Pricing transparency</span><span class="text-on-surface-variant">28 times</span></li>
-            <li class="flex justify-between"><span>Multi-platform AI coverage</span><span class="text-on-surface-variant">21 times</span></li>
-            <li class="flex justify-between"><span>Turnaround time stated</span><span class="text-on-surface-variant">17 times</span></li>
-            <li class="flex justify-between"><span>Money-back guarantee</span><span class="text-on-surface-variant">12 times</span></li>
-          </ul>
-          <p class="text-xs text-on-surface-variant font-label mt-6">Action: repeat these facts as a consistent fact block on every page AI reads, not just one.</p>
-        </div>
-        <div class="bg-surface-container-low p-8">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-4">Cited heavily &mdash; the brand is missing it</p>
-          <ul class="space-y-3 text-sm text-on-surface font-body">
-            <li class="flex justify-between"><span>Third-party reviews / G2 / Capterra</span><span class="text-on-surface-variant">34 times</span></li>
-            <li class="flex justify-between"><span>Named customer logos</span><span class="text-on-surface-variant">19 times</span></li>
-            <li class="flex justify-between"><span>Sample report visible without signup</span><span class="text-on-surface-variant">14 times</span></li>
-            <li class="flex justify-between"><span>Free trial / free tier</span><span class="text-on-surface-variant">11 times</span></li>
-          </ul>
-          <p class="text-xs text-on-surface-variant font-label mt-6">Action: this column is the work the fix list sequences.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SECTION 9: What makes AI recommend, not just mention (DD + FA) ===== -->
-  <section data-gated class="max-w-7xl mx-auto px-6 pb-6">
-    <div class="bg-surface-container-lowest p-10 md:p-14">
-      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-2">Section 9</p>
-      <h2 class="font-headline italic text-3xl md:text-4xl text-on-surface mb-6">What makes AI recommend the brand &mdash; not just mention it.</h2>
-
-      <div class="grid grid-cols-12 gap-8">
-        <div class="col-span-12 md:col-span-6">
-          <p class="text-sm text-on-surface-variant font-body leading-relaxed mb-6">Across the 7 mentions in the audit, the strongest predictor of "recommended" vs "merely cited" was the number of pages AI fetched before answering. When AI read multiple pages from the brand's site, it had enough evidence to elevate from citation to recommendation.</p>
-          <p class="text-sm text-on-surface-variant font-body leading-relaxed">This is the single highest-leverage finding in the report. It says: don't write more pages on more topics. Make the 4 pages AI already reads link to each other with the same exact anchor text, repeat the same fact block on each, and AI will start recommending instead of just citing.</p>
-        </div>
-        <div class="col-span-12 md:col-span-6 bg-surface-container-low p-10">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-6">Pages-per-answer pattern</p>
-          <div class="space-y-6">
-            <div>
-              <div class="flex justify-between items-baseline mb-2">
-                <span class="text-sm text-on-surface">When AI recommended the brand</span>
-                <span class="font-headline text-3xl text-on-surface">3.5</span>
-              </div>
-              <div class="w-full h-1 bg-outline-variant/20"><div class="h-1 bg-primary" style="width: 88%"></div></div>
-              <p class="text-xs text-outline mt-1">Avg pages from the brand's site that AI fetched.</p>
-            </div>
-            <div>
-              <div class="flex justify-between items-baseline mb-2">
-                <span class="text-sm text-on-surface">When AI only mentioned the brand</span>
-                <span class="font-headline text-3xl text-on-surface">1.0</span>
-              </div>
-              <div class="w-full h-1 bg-outline-variant/20"><div class="h-1 bg-primary/40" style="width: 25%"></div></div>
-              <p class="text-xs text-outline mt-1">A single page is enough to be cited, not enough to be recommended.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SECTION 10 (DEEP DIVE VARIANT): Site-level fix list with effort/impact ===== -->
-  <section data-gated class="max-w-7xl mx-auto px-6 pb-6">
-    <div class="bg-surface-container-lowest p-10 md:p-14">
-      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-2">Section 10</p>
-      <h2 class="font-headline italic text-3xl md:text-4xl text-on-surface mb-6">The fix list &mdash; site-level, with effort and impact.</h2>
-      <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl mb-10">Every fix names what to change, the audit finding that motivated it, an effort label (S/M/L), and an impact label (High/Med/Low). The Deep Dive ships ~25 fixes; 8 are shown here, picked across the full effort/impact range.</p>
-
-      <div class="space-y-px bg-outline-variant/10">
-
-        <div class="bg-surface-container-low p-6 md:p-8 grid grid-cols-12 gap-4 items-start">
-          <div class="col-span-12 md:col-span-1 text-outline font-label text-sm">01</div>
-          <div class="col-span-12 md:col-span-7">
-            <p class="font-headline italic text-xl text-on-surface mb-2">Rebuild the buyer's guide post as the comparison hub.</p>
-            <p class="text-sm text-on-surface-variant font-body leading-relaxed">Above-the-fold table: pricing model, best-for, supported AI platforms, deliverable type, white-label, turnaround. Give the brand its own "best one-time paid report" callout instead of letting it sit as a citation source.</p>
-            <p class="text-xs text-outline font-label mt-2">Why: this page is in 6 of 7 mentions. It's already the gateway &mdash; tighten it.</p>
-          </div>
-          <div class="col-span-6 md:col-span-2"><p class="text-xs uppercase tracking-[0.15em] text-outline font-label">Effort</p><p class="font-headline text-2xl text-on-surface">M</p></div>
-          <div class="col-span-6 md:col-span-2"><p class="text-xs uppercase tracking-[0.15em] text-outline font-label">Impact</p><p class="font-headline text-2xl text-on-surface">High</p></div>
-        </div>
-
-        <div class="bg-surface-container-low p-6 md:p-8 grid grid-cols-12 gap-4 items-start">
-          <div class="col-span-12 md:col-span-1 text-outline font-label text-sm">02</div>
-          <div class="col-span-12 md:col-span-7">
-            <p class="font-headline italic text-xl text-on-surface mb-2">Wire the 4 working pages into a coordinated group.</p>
-            <p class="text-sm text-on-surface-variant font-body leading-relaxed">Buyer's guide, agency page, no-subscription page, and checkout. Each one links to the other three with the exact anchor text from Section 7. Goal: when AI fetches one, it has reason to fetch the others.</p>
-            <p class="text-xs text-outline font-label mt-2">Why: avg 3.5 pages predicts recommendation; avg 1.0 predicts citation only.</p>
-          </div>
-          <div class="col-span-6 md:col-span-2"><p class="text-xs uppercase tracking-[0.15em] text-outline font-label">Effort</p><p class="font-headline text-2xl text-on-surface">S</p></div>
-          <div class="col-span-6 md:col-span-2"><p class="text-xs uppercase tracking-[0.15em] text-outline font-label">Impact</p><p class="font-headline text-2xl text-on-surface">High</p></div>
-        </div>
-
-        <div class="bg-surface-container-low p-6 md:p-8 grid grid-cols-12 gap-4 items-start">
-          <div class="col-span-12 md:col-span-1 text-outline font-label text-sm">03</div>
-          <div class="col-span-12 md:col-span-7">
-            <p class="font-headline italic text-xl text-on-surface mb-2">Add the same consistent fact block to those 4 pages.</p>
-            <p class="text-sm text-on-surface-variant font-body leading-relaxed">Pricing range, turnaround time, supported AI platforms, what the report includes, agency fit, guarantee. Same block, same wording, repeated across 4 pages. AI rewards repetition.</p>
-            <p class="text-xs text-outline font-label mt-2">Why: pricing transparency, turnaround, and platform list are the top 4 things AI cited as proof in this category.</p>
-          </div>
-          <div class="col-span-6 md:col-span-2"><p class="text-xs uppercase tracking-[0.15em] text-outline font-label">Effort</p><p class="font-headline text-2xl text-on-surface">S</p></div>
-          <div class="col-span-6 md:col-span-2"><p class="text-xs uppercase tracking-[0.15em] text-outline font-label">Impact</p><p class="font-headline text-2xl text-on-surface">High</p></div>
-        </div>
-
-        <div class="bg-surface-container-low p-6 md:p-8 grid grid-cols-12 gap-4 items-start">
-          <div class="col-span-12 md:col-span-1 text-outline font-label text-sm">04</div>
-          <div class="col-span-12 md:col-span-7">
-            <p class="font-headline italic text-xl text-on-surface mb-2">Fix the 3 wrong facts at the source pages.</p>
-            <p class="text-sm text-on-surface-variant font-body leading-relaxed">Outdated pricing on the old comparison post. Stale turnaround on /about. The "monthly plan" FAQ on /pricing. The Deep Dive names the exact paragraph to edit on each page.</p>
-            <p class="text-xs text-outline font-label mt-2">Why: every wrong fact AI repeats is currently traceable to one specific paragraph.</p>
-          </div>
-          <div class="col-span-6 md:col-span-2"><p class="text-xs uppercase tracking-[0.15em] text-outline font-label">Effort</p><p class="font-headline text-2xl text-on-surface">S</p></div>
-          <div class="col-span-6 md:col-span-2"><p class="text-xs uppercase tracking-[0.15em] text-outline font-label">Impact</p><p class="font-headline text-2xl text-on-surface">High</p></div>
-        </div>
-
-        <div class="bg-surface-container-low p-6 md:p-8 grid grid-cols-12 gap-4 items-start">
-          <div class="col-span-12 md:col-span-1 text-outline font-label text-sm">05</div>
-          <div class="col-span-12 md:col-span-7">
-            <p class="font-headline italic text-xl text-on-surface mb-2">Publish a "monitoring vs one-time audits" bridge page.</p>
-            <p class="text-sm text-on-surface-variant font-body leading-relaxed">Title: "AI Visibility Monitoring vs One-Time Audits: Which Should You Buy?" Owns the "monitoring" verb without conceding the category.</p>
-            <p class="text-xs text-outline font-label mt-2">Why: 4 of the 6 missing-column queries from Section 6 use the word "monitoring".</p>
-          </div>
-          <div class="col-span-6 md:col-span-2"><p class="text-xs uppercase tracking-[0.15em] text-outline font-label">Effort</p><p class="font-headline text-2xl text-on-surface">M</p></div>
-          <div class="col-span-6 md:col-span-2"><p class="text-xs uppercase tracking-[0.15em] text-outline font-label">Impact</p><p class="font-headline text-2xl text-on-surface">High</p></div>
-        </div>
-
-        <div class="bg-surface-container-low p-6 md:p-8 grid grid-cols-12 gap-4 items-start">
-          <div class="col-span-12 md:col-span-1 text-outline font-label text-sm">06</div>
-          <div class="col-span-12 md:col-span-7">
-            <p class="font-headline italic text-xl text-on-surface mb-2">Publish a "you vs Competitor A" comparison page.</p>
-            <p class="text-sm text-on-surface-variant font-body leading-relaxed">The brand has alternative pages for two competitors already &mdash; both are in the 10-page set AI reads. Add one for the largest competitor (the one with the 14&times; mention gap). Same template, same fact block.</p>
-            <p class="text-xs text-outline font-label mt-2">Why: the existing alternative pages already convert to mentions; adding one for the dominant competitor extends a proven format.</p>
-          </div>
-          <div class="col-span-6 md:col-span-2"><p class="text-xs uppercase tracking-[0.15em] text-outline font-label">Effort</p><p class="font-headline text-2xl text-on-surface">M</p></div>
-          <div class="col-span-6 md:col-span-2"><p class="text-xs uppercase tracking-[0.15em] text-outline font-label">Impact</p><p class="font-headline text-2xl text-on-surface">Med</p></div>
-        </div>
-
-        <div class="bg-surface-container-low p-6 md:p-8 grid grid-cols-12 gap-4 items-start">
-          <div class="col-span-12 md:col-span-1 text-outline font-label text-sm">07</div>
-          <div class="col-span-12 md:col-span-7">
-            <p class="font-headline italic text-xl text-on-surface mb-2">Rewrite how the brand describes itself on the homepage.</p>
-            <p class="text-sm text-on-surface-variant font-body leading-relaxed">The current homepage hero uses generic language. The audit shows AI rewards repeated, concrete claims: one-time, no subscription, agency-ready, client-deliverable, 24 hours. The new H1 and subhead use those exact phrases.</p>
-            <p class="text-xs text-outline font-label mt-2">Why: the homepage was fetched by AI exactly once across 182 prompts &mdash; only after AI already knew the brand. Cold discovery never reaches it.</p>
-          </div>
-          <div class="col-span-6 md:col-span-2"><p class="text-xs uppercase tracking-[0.15em] text-outline font-label">Effort</p><p class="font-headline text-2xl text-on-surface">S</p></div>
-          <div class="col-span-6 md:col-span-2"><p class="text-xs uppercase tracking-[0.15em] text-outline font-label">Impact</p><p class="font-headline text-2xl text-on-surface">High</p></div>
-        </div>
-
-        <div class="bg-surface-container-low p-6 md:p-8 grid grid-cols-12 gap-4 items-start">
-          <div class="col-span-12 md:col-span-1 text-outline font-label text-sm">08</div>
-          <div class="col-span-12 md:col-span-7">
-            <p class="font-headline italic text-xl text-on-surface mb-2">Add structured data so AI can parse the brand's facts.</p>
-            <p class="text-sm text-on-surface-variant font-body leading-relaxed">Product schema on the checkout page with current price, FAQ schema on the pricing page, Article schema on the buyer's guide post. The Deep Dive ships the JSON ready to paste.</p>
-            <p class="text-xs text-outline font-label mt-2">Why: AI parses structured data more reliably than prose &mdash; especially for the wrong-pricing fact that keeps reappearing.</p>
-          </div>
-          <div class="col-span-6 md:col-span-2"><p class="text-xs uppercase tracking-[0.15em] text-outline font-label">Effort</p><p class="font-headline text-2xl text-on-surface">M</p></div>
-          <div class="col-span-6 md:col-span-2"><p class="text-xs uppercase tracking-[0.15em] text-outline font-label">Impact</p><p class="font-headline text-2xl text-on-surface">Med</p></div>
-        </div>
-
-      </div>
-
-      <p class="text-xs text-outline font-label mt-8">Shown above: 8 of the 25 fixes in the actual Deep Dive, picked across the full effort/impact range so you can see the shape of the recommendations &mdash; not a "preview" of the high-value ones. The complete report sequences all 25, plus the llms.txt draft.</p>
-    </div>
-  </section>
-
-  <!-- ===== SECTION 11: What invisibility costs (DD + FA) ===== -->
-  <section data-gated class="max-w-7xl mx-auto px-6 pb-6">
-    <div class="bg-surface-container-lowest p-10 md:p-14">
-      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-2">Section 11</p>
-      <h2 class="font-headline italic text-3xl md:text-4xl text-on-surface mb-6">What invisibility is costing the brand.</h2>
-
-      <div class="grid grid-cols-12 gap-8">
-        <div class="col-span-12 md:col-span-7">
-          <p class="text-sm text-on-surface-variant font-body leading-relaxed mb-4">The brand's category sees an estimated 8,000&ndash;15,000 monthly buyer-intent prompts where AI could surface its product. At a 3.8% mention rate (from this audit), the brand surfaces in approximately 300&ndash;570 of those prompts and is actively recommended in approximately 130&ndash;250.</p>
-          <p class="text-sm text-on-surface-variant font-body leading-relaxed mb-4">Closing the visibility gap to the top competitor in this category would put the brand in front of an additional 2,000&ndash;3,000 buyer-intent prompts per month. That's the same 5.5&times; gap measured on the 182 audit questions, projected onto real category query volume.</p>
-          <p class="text-sm text-on-surface-variant font-body leading-relaxed mb-6">The full report translates this into actual dollar terms using the brand's stated ACV <span class="redacted">[REDACTED]</span> and conversion rate <span class="redacted">[REDACTED]</span>. The report does the work; only the input variables are hidden in this sample.</p>
-          <div class="border-l-4 border-primary bg-surface-container-low p-6 md:p-8">
-            <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-4">Example calculation with placeholder inputs</p>
-            <p class="text-sm text-on-surface font-body leading-relaxed mb-3">Two example assumptions plugged into the model:</p>
-            <ul class="text-sm text-on-surface font-body leading-relaxed space-y-1.5 mb-4 list-disc pl-5">
-              <li><strong>Prompt &rarr; lead</strong> conversion: <strong>2%</strong> (cold AI exposure to qualified inbound)</li>
-              <li><strong>Lead &rarr; customer</strong> conversion: <strong>2%</strong> (typical B2B SaaS sales funnel)</li>
-              <li><strong>Average annual contract value:</strong> <strong>$6,000</strong></li>
-            </ul>
-            <p class="text-sm text-on-surface font-body leading-relaxed mb-3">Plugged into the +2,000&ndash;3,000 additional monthly buyer-intent prompts from closing the visibility gap:</p>
-            <ul class="text-sm text-on-surface font-body leading-relaxed space-y-1.5 mb-4 list-disc pl-5">
-              <li>2,000&ndash;3,000 prompts &times; 2% prompt&rarr;lead &rarr; <strong>40&ndash;60 additional inbound leads / month</strong></li>
-              <li>40&ndash;60 leads &times; 2% lead&rarr;customer &rarr; <strong>0.8&ndash;1.2 additional new customers / month</strong></li>
-              <li>(0.8&ndash;1.2 / month &times; 12) &times; $6,000 ACV &rarr; <strong>~$58,000&ndash;$86,000 additional ARR</strong></li>
-            </ul>
-            <p class="text-xs text-on-surface-variant font-body leading-relaxed italic">The full report runs this math with the brand's actual ACV and actual conversion rates. The version above uses two example rates to show the calculation explicitly &mdash; substitute your own to gut-check whether the audit is worth it to your business.</p>
-          </div>
-        </div>
-        <div class="col-span-12 md:col-span-5 bg-surface-container-low p-10">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-6">Recommendation gap on the same questions</p>
-          <div class="space-y-5">
-            <div>
-              <div class="flex justify-between items-baseline mb-2"><span class="text-sm text-on-surface">Top competitor</span><span class="font-headline text-2xl text-on-surface">22</span></div>
-              <div class="w-full h-1 bg-outline-variant/20"><div class="h-1 bg-primary" style="width: 100%"></div></div>
-            </div>
-            <div>
-              <div class="flex justify-between items-baseline mb-2"><span class="text-sm text-on-surface">The brand</span><span class="font-headline text-2xl text-on-surface">4</span></div>
-              <div class="w-full h-1 bg-outline-variant/20"><div class="h-1 bg-primary" style="width: 18%"></div></div>
-            </div>
-            <div>
-              <div class="flex justify-between items-baseline mb-2"><span class="text-sm text-on-surface">Realistic target after fix list</span><span class="font-headline text-2xl text-on-surface">11</span></div>
-              <div class="w-full h-1 bg-outline-variant/20"><div class="h-1 bg-primary/60" style="width: 50%"></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Final CTA ===== -->
-  <section data-gated class="bg-on-surface text-surface">
+  <!-- ===== CTA: Get your personalized report ===== -->
+  <section class="bg-on-surface text-surface">
     <div class="max-w-7xl mx-auto px-6 py-24 md:py-32">
       <div class="grid grid-cols-12 items-center gap-8">
         <div class="col-span-12 md:col-span-8">
           <p class="text-xs uppercase tracking-[0.2em] text-outline-variant mb-6 font-label">Deep Dive &mdash; $299 &mdash; delivered within 24 hours</p>
-          <h2 class="font-headline italic text-5xl md:text-7xl leading-[0.95] mb-6">Get this report<br />for your brand.</h2>
-          <p class="text-surface-variant font-body text-base leading-relaxed max-w-xl mb-6">Every result is hyper personalized specific for your brand.</p>
+          <h2 class="font-headline italic text-5xl md:text-7xl leading-[0.95] mb-6">Get your personalized report.</h2>
+          <p class="text-surface-variant font-body text-base leading-relaxed max-w-xl">Every finding is specific to your brand, your competitors, and your category. One-time purchase, no subscription.</p>
         </div>
         <div class="col-span-12 md:col-span-4 flex md:justify-end">
-          <a href="../get-report/?tier=deep-dive" class="inline-block bg-surface text-on-surface px-8 py-4 text-sm font-label uppercase tracking-widest hover:bg-surface-container-high transition-colors">Get Your Deep Dive &mdash; $299</a>
+          <a href="/get-report/" class="inline-flex items-center gap-2 bg-surface text-on-surface px-8 py-4 text-sm font-label uppercase tracking-widest hover:bg-surface-container-high transition-colors">
+            Get your personalized report
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
         </div>
       </div>
     </div>
   </section>
+
+
+  <!-- ===== FAQ Section ===== -->
+  <section class="max-w-7xl mx-auto px-6 py-16">
+    <h2 class="font-headline italic text-3xl md:text-4xl text-on-surface mb-10">Frequently asked questions</h2>
+
+    <div class="space-y-px bg-outline-variant/10">
+
+      <details class="bg-surface-container-lowest group" open>
+        <summary class="p-6 md:p-8 cursor-pointer flex items-start justify-between gap-4 text-on-surface font-body text-sm font-medium leading-relaxed list-none [&::-webkit-details-marker]:hidden">
+          What does a Metricus AI visibility report include?
+          <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+        </summary>
+        <div class="px-6 md:px-8 pb-6 md:pb-8">
+          <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl">Every report includes your brand's mention rate and recommendation rate across real buyer questions, exact AI quotes about your brand, factual errors AI repeats (traced to the source page), a competitor comparison showing why AI prefers them, a wording-gap analysis, and a prioritized fix list with effort and impact labels.</p>
+        </div>
+      </details>
+
+      <details class="bg-surface-container-lowest group">
+        <summary class="p-6 md:p-8 cursor-pointer flex items-start justify-between gap-4 text-on-surface font-body text-sm font-medium leading-relaxed list-none [&::-webkit-details-marker]:hidden">
+          How is the sample report different from a real report?
+          <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+        </summary>
+        <div class="px-6 md:px-8 pb-6 md:pb-8">
+          <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl">The sample is a real report run on a real B2B SaaS brand, with brand-specific identifiers redacted. Your report would contain the same depth of analysis but be entirely specific to your brand, your competitors, and your category.</p>
+        </div>
+      </details>
+
+      <details class="bg-surface-container-lowest group">
+        <summary class="p-6 md:p-8 cursor-pointer flex items-start justify-between gap-4 text-on-surface font-body text-sm font-medium leading-relaxed list-none [&::-webkit-details-marker]:hidden">
+          How many buyer questions does a Metricus audit test?
+          <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+        </summary>
+        <div class="px-6 md:px-8 pb-6 md:pb-8">
+          <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl">The Deep Dive tier tests buyer-intent questions across the major AI platforms your buyers use. Each question is a real prompt a potential customer might ask when researching your category.</p>
+        </div>
+      </details>
+
+      <details class="bg-surface-container-lowest group">
+        <summary class="p-6 md:p-8 cursor-pointer flex items-start justify-between gap-4 text-on-surface font-body text-sm font-medium leading-relaxed list-none [&::-webkit-details-marker]:hidden">
+          How long does it take to get a report?
+          <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+        </summary>
+        <div class="px-6 md:px-8 pb-6 md:pb-8">
+          <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl">Reports are delivered within 24 hours of ordering. No subscription required &mdash; it is a one-time purchase.</p>
+        </div>
+      </details>
+
+      <details class="bg-surface-container-lowest group">
+        <summary class="p-6 md:p-8 cursor-pointer flex items-start justify-between gap-4 text-on-surface font-body text-sm font-medium leading-relaxed list-none [&::-webkit-details-marker]:hidden">
+          Can I see the full sample before buying?
+          <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform shrink-0">expand_more</span>
+        </summary>
+        <div class="px-6 md:px-8 pb-6 md:pb-8">
+          <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl">Yes. Enter your email on this page and we will send you the complete sample PDF &mdash; free, no obligation. It includes the full action plan, all competitor comparisons, the source map, and the wording analysis.</p>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
 
   <!-- Cite this article -->
   <div class="w-full px-6 py-4">
@@ -786,7 +463,7 @@
       <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
         <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
         <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
-        <a href="/blog/agency-guide-ai-visibility-audits/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
         <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
         <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
         <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
@@ -797,44 +474,44 @@
     </div>
   </footer>
 
-  <!-- Email gate submit handler — fires sendBeacon to Sheets, saves to localStorage, unlocks content -->
+  <!-- Email gate submit handler -->
   <script>
     (function() {
       var SCRIPT_URL = 'https://metricus.red-hill-a87d.workers.dev/';
 
-      function logAndUnlock(email, source) {
-        // Log to Sheets — POST with body so Apps Script doPost reads e.parameter
-        try {
-          var ts = new Date().toISOString();
-          var data = new URLSearchParams({
-            contact: email,
-            pricing: source + '|' + ts
-          });
-          if (navigator.sendBeacon) navigator.sendBeacon(SCRIPT_URL, data);
-          else fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: data }).catch(function() {});
-        } catch(e) {}
-
-        // Save email
-        try { localStorage.setItem('metricus_email', email); } catch(e) {}
-
-        // Unlock
-        document.documentElement.classList.add('unlocked');
-
-        // Smooth scroll to first revealed gated section after a tick (so display:revert lays out first)
-        setTimeout(function() {
-          var target = document.querySelector('[data-gated]');
-          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 50);
-      }
-
-      document.querySelectorAll('form[data-gate-source]').forEach(function(form) {
+      document.querySelectorAll('.email-gate-form').forEach(function(form) {
         form.addEventListener('submit', function(e) {
           e.preventDefault();
           var emailInput = form.querySelector('input[type="email"]');
           var email = emailInput ? emailInput.value.trim() : '';
           if (!email) return;
-          var source = form.getAttribute('data-gate-source');
-          logAndUnlock(email, source);
+
+          var leadMagnet = form.getAttribute('data-lead-magnet') || 'sample-report';
+          var thankYouUrl = form.getAttribute('data-thank-you-url');
+
+          // Log to backend
+          try {
+            var ts = new Date().toISOString();
+            var data = new URLSearchParams({
+              contact: email,
+              pricing: leadMagnet + '|' + ts
+            });
+            if (navigator.sendBeacon) navigator.sendBeacon(SCRIPT_URL, data);
+            else fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: data }).catch(function() {});
+          } catch(e) {}
+
+          // Save email
+          try { localStorage.setItem('metricus_email', email); } catch(e) {}
+
+          // Track conversion
+          try { gtag('event', 'generate_lead', { event_category: 'lead_magnet', event_label: leadMagnet, value: email }); } catch(e) {}
+
+          // Redirect to thank-you page or show confirmation
+          if (thankYouUrl) {
+            window.location.href = thankYouUrl;
+          } else {
+            form.innerHTML = '<p class="text-sm text-on-surface font-body font-medium py-3">Check your inbox &mdash; the full sample is on its way.</p>';
+          }
         });
       });
     })();

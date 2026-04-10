@@ -47,7 +47,7 @@
       "url": "https://metricusapp.com"
     },
     "datePublished": "2026-03-27",
-    "dateModified": "2026-03-27",
+    "dateModified": "2026-04-10",
     "mainEntityOfPage": "https://metricusapp.com/blog/ai-chatbot-recommendations/",
     "image": "https://metricusapp.com/metricus-og-image.png"
   }
@@ -213,6 +213,46 @@
       color: #1E293B;
     }
   </style>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an AI visibility audit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An AI visibility audit tests how AI chatbots like ChatGPT, Perplexity, and Gemini describe and recommend a brand when users ask category-relevant questions. It measures mention rate, accuracy, sentiment, and competitive positioning across platforms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do well-known brands still score low on AI visibility?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Brand recognition does not guarantee AI visibility. AI models surface brands based on vocabulary match, third-party citations, and content structure rather than market share or product quality. A strong brand can be invisible if its messaging does not match buyer language."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between RAG and parametric AI responses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "RAG (retrieval-augmented generation) means the AI searches the web in real time to assemble an answer. Parametric means it answers from training data alone. About 80% of B2B SaaS queries in our testing were RAG-driven, meaning content changes can influence results within weeks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should companies check their AI visibility?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At minimum quarterly, or after any major model release, rebrand, or content push. AI responses are nondeterministic and change with each model update, so a single snapshot provides only a point-in-time picture."
+        }
+      }
+    ]
+  }
+  </script>
   <script src="/js/reader-pulse-b.js" defer></script>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
@@ -227,10 +267,11 @@
         <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
       </a>
       <div class="hidden md:flex items-center gap-8">
-        <a href="/methodology/" class="nav-link-howitworks text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
-        <a href="/#pricing" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
-        <a href="/blog/" class="nav-link-blog text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Blog</a>
-        <a href="/blog/diy-ai-visibility-audit/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Free Check</a>
+        <a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
+        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
+        <a href="/blog/" class="text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Learn</a>
+        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
         <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
       </div>
       <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
@@ -247,9 +288,10 @@
         <span class="material-symbols-outlined">close</span>
       </button>
       <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">How It Works</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/#pricing" id="mobile-pricing-link">Pricing</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Blog</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/diy-ai-visibility-audit/">Free Check</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/" id="mobile-pricing-link">Pricing</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
       <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
     </nav>
   </div>
@@ -324,20 +366,14 @@
       </div>
 
 
-      <!-- Article Body -->
+<!-- Article Body -->
       <div class="article-body">
 
         <h2 id="method">What we tested and how</h2>
 
-        <p>We randomly sampled a subset of B2B SaaS companies from <a href="https://builtin.com/articles/top-b2b-saas-companies" target="_blank" rel="noopener">BuiltIn&rsquo;s list of top B2B SaaS companies</a>, selecting across different categories: process mining, project management, cybersecurity, payments, life sciences R&amp;D, and social media management. All are established, well-reviewed products with real market presence. (If you&rsquo;re new to the concept, start with our <a href="../what-is-ai-visibility/">complete guide to AI visibility</a>.)</p>
+        <p>When buyers ask AI chatbots for software recommendations, the answers they receive determine which vendors enter the consideration set. Metricus conducted an AI visibility report across a random sample of B2B SaaS companies from BuiltIn's top companies list, spanning process mining, project management, cybersecurity, payments, life sciences R&amp;D, and social media management. All were established, well-reviewed products with real market presence.</p>
 
-        <p>For each company, we asked an AI model with web search access the kinds of questions real buyers in that category would ask. Across all audits, the AI generated over 150 search queries autonomously.</p>
-
-        <p>For every question, we logged: whether the brand appeared, how it was mentioned (recommended, listed, compared, or absent), the sentiment, whether the AI used web search (RAG) or answered from training data (parametric), and which competing brands surfaced instead.</p>
-
-        <p>We anonymized the results below. The companies themselves are not the point &mdash; the patterns are.</p>
-
-        <p>The methodology is designed to answer one question: <strong>if a real buyer in your category asks AI for help, does your brand show up?</strong></p>
+        <p>For each company, we tested over 150 search queries that reflect how real buyers in each category actually ask questions. We logged whether the brand appeared, how it was mentioned, the sentiment, whether the AI used web search (RAG) or training data (parametric), and which competitors surfaced instead.</p>
 
 
         <h2 id="scores">The visibility scores</h2>
@@ -353,77 +389,22 @@
               </tr>
             </thead>
             <tbody class="divide-y divide-[#E2E8F0]">
-              <tr>
-                <td class="p-4 font-medium text-slate-text">SaaS 1</td>
-                <td class="p-4 text-slate-muted">Process Mining</td>
-                <td class="p-4 font-semibold text-slate-text">83%</td>
-                <td class="p-4 text-slate-muted">Appeared in most queries; missed in broader questions</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text">SaaS 2</td>
-                <td class="p-4 text-slate-muted">Lab Software</td>
-                <td class="p-4 font-semibold text-slate-text">75%</td>
-                <td class="p-4 text-slate-muted">Strong when buyer used technical language; weak otherwise</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text">SaaS 3</td>
-                <td class="p-4 text-slate-muted">Project Management</td>
-                <td class="p-4 font-semibold text-slate-text">67%</td>
-                <td class="p-4 text-slate-muted">Dominant in &ldquo;which tool is best&rdquo; queries; invisible in industry-specific ones</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text">SaaS 4</td>
-                <td class="p-4 text-slate-muted">Payments</td>
-                <td class="p-4 font-semibold text-slate-text">67%</td>
-                <td class="p-4 text-slate-muted">Appeared for large-company questions; absent for startup/SMB questions</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text">SaaS 5</td>
-                <td class="p-4 text-slate-muted">Social Media Mgmt</td>
-                <td class="p-4 font-semibold text-slate-text">67%</td>
-                <td class="p-4 text-slate-muted">Visible for mid-market and up; invisible for solo/small-business questions</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text">SaaS 6</td>
-                <td class="p-4 text-slate-muted">Cybersecurity</td>
-                <td class="p-4 font-semibold text-slate-text">50%</td>
-                <td class="p-4 text-slate-muted">Top pick for one niche question; invisible for most others</td>
-              </tr>
+              <tr><td class="p-4 font-medium">SaaS 1</td><td class="p-4 text-slate-muted">Process Mining</td><td class="p-4 font-semibold">83%</td><td class="p-4 text-slate-muted">Appeared in most queries; missed in broader questions</td></tr>
+              <tr><td class="p-4 font-medium">SaaS 2</td><td class="p-4 text-slate-muted">Lab Software</td><td class="p-4 font-semibold">75%</td><td class="p-4 text-slate-muted">Strong when buyer used technical language; weak otherwise</td></tr>
+              <tr><td class="p-4 font-medium">SaaS 3</td><td class="p-4 text-slate-muted">Project Management</td><td class="p-4 font-semibold">67%</td><td class="p-4 text-slate-muted">Dominant in "which tool is best" queries; invisible in industry-specific ones</td></tr>
+              <tr><td class="p-4 font-medium">SaaS 4</td><td class="p-4 text-slate-muted">Payments</td><td class="p-4 font-semibold">67%</td><td class="p-4 text-slate-muted">Appeared for large-company questions; absent for startup/SMB questions</td></tr>
+              <tr><td class="p-4 font-medium">SaaS 5</td><td class="p-4 text-slate-muted">Social Media Mgmt</td><td class="p-4 font-semibold">67%</td><td class="p-4 text-slate-muted">Visible for mid-market; invisible for solo/small-business</td></tr>
+              <tr><td class="p-4 font-medium">SaaS 6</td><td class="p-4 text-slate-muted">Cybersecurity</td><td class="p-4 font-semibold">50%</td><td class="p-4 text-slate-muted">Top pick for one niche question; invisible for most others</td></tr>
             </tbody>
           </table>
         </div>
 
-        <p>The spread is notable. A 33-percentage-point gap between the most visible and least visible company in our sample &mdash; all well-established, well-reviewed products. These are not obscure brands. They are not lacking in product quality. The gap is in how AI discovers and surfaces them depending on who is asking. For a deeper look at how these scores are calculated and what makes them meaningful, see <a href="../ai-visibility-scores-explained/">how AI visibility scores actually work</a>.</p>
-
-        <p>The most consistent pattern across the table: <strong>every company had at least one type of buyer question where it was completely invisible.</strong> No company in our sample was visible across the board. A brand that dominates one kind of query can be entirely absent from another.</p>
-        <!-- METRICUS_MID_CTA -->
-        <aside class="metricus-mid-cta my-12 bg-surface border-l-4 border-primary p-8 md:p-10" style="background-color:#f7f9fb;border-left:4px solid #515F74;">
-          <p class="font-display italic text-2xl md:text-3xl text-slate-text leading-tight mb-3" style="color:#0F172A;font-family:'Newsreader',serif;">What does AI say about your brand? Why? What should you change first?</p>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6" style="color:#64748B;">One-time report. No subscription. From $99.</p>
-          <a href="/get-report/" class="metricus-mid-cta-btn inline-flex items-center gap-2 bg-primary text-on-primary text-sm font-semibold tracking-tight px-6 py-3 hover:bg-primary-dim transition-colors" style="background-color:#515F74;color:#f6f7ff;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;font-size:14px;font-weight:600;">
-            Get your report <span aria-hidden="true">&rarr;</span>
-          </a>
-        </aside>
+        <p>A 33-percentage-point gap between the most visible and least visible company &mdash; all well-established, well-reviewed products. The most consistent pattern: <strong>every company had at least one type of buyer question where it was completely invisible.</strong></p>
 
 
+        <h2 id="vocabulary">The wording mismatch: the single biggest predictor</h2>
 
-        <div data-reader-pulse-b data-source="ai-chatbot-recommendations"></div>
-
-        <h2 id="vocabulary">The wording mismatch: the single biggest predictor of invisibility</h2>
-
-        <p>Across all audits, one pattern explained more visibility failures than any other: <strong>the gap between how a company describes itself and how buyers describe their problem.</strong></p>
-
-        <p>SaaS 6 (cybersecurity) positions itself using category-specific terminology &mdash; &ldquo;managed EDR platform,&rdquo; &ldquo;managed security platform.&rdquo; Its ideal customers, mid-size companies without security teams, ask about &ldquo;cybersecurity tools,&rdquo; &ldquo;ransomware protection,&rdquo; and &ldquo;protect my company.&rdquo; When AI generates search queries from a buyer&rsquo;s question, it searches for the buyer&rsquo;s language, not the vendor&rsquo;s category terminology. The result: better-known competitors appear. SaaS 6 does not.</p>
-
-        <p>The one question where SaaS 6 dominated? One where the buyer&rsquo;s vocabulary exactly matched the company&rsquo;s positioning. The AI searched for those niche-specific terms, found SaaS 6 everywhere, and recommended it first.</p>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg leading-relaxed text-on-surface">
-            <strong>The pattern held across every company we tested.</strong> SaaS 3 (project management) dominates broad &ldquo;which tool is best&rdquo; queries but is invisible when a buyer asks about their specific industry. SaaS 4 (payments) is the top pick for large-company questions but absent when a founder asks about payment processing for a new online store. In every case, the brand&rsquo;s strongest visibility was on questions where buyer language and company language aligned.
-          </p>
-        </div>
-
-        <p>Here are the wording mismatch patterns we documented:</p>
+        <p>What we found across all audits was that one pattern explained more visibility failures than any other: the gap between how a company describes itself and how buyers describe their problem. SaaS 6 (cybersecurity) positions itself as a &ldquo;managed EDR platform.&rdquo; Its ideal customers ask about &ldquo;ransomware protection&rdquo; and &ldquo;cybersecurity tools.&rdquo; When AI generates search queries from a buyer&rsquo;s question, it uses the buyer&rsquo;s language. Better-known competitors appear. SaaS 6 does not.</p>
 
         <div class="border border-[#E2E8F0] my-8 overflow-x-auto">
           <table class="w-full text-sm">
@@ -436,151 +417,49 @@
               </tr>
             </thead>
             <tbody class="divide-y divide-[#E2E8F0]">
-              <tr>
-                <td class="p-4 font-medium text-slate-text">SaaS 6</td>
-                <td class="p-4 text-slate-muted">&ldquo;ransomware protection tools&rdquo;</td>
-                <td class="p-4 text-slate-muted">&ldquo;managed EDR platform&rdquo;</td>
-                <td class="p-4 text-slate-muted">Invisible</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text">SaaS 6</td>
-                <td class="p-4 text-slate-muted">&ldquo;HIPAA compliant security&rdquo;</td>
-                <td class="p-4 text-slate-muted">&ldquo;healthcare cybersecurity&rdquo;</td>
-                <td class="p-4 text-slate-muted">Invisible</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text">SaaS 3</td>
-                <td class="p-4 text-slate-muted">&ldquo;construction project management&rdquo;</td>
-                <td class="p-4 text-slate-muted">&ldquo;work management platform&rdquo;</td>
-                <td class="p-4 text-slate-muted">Invisible (industry specialists win)</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text">SaaS 3</td>
-                <td class="p-4 text-slate-muted">&ldquo;replace legacy PPM tool&rdquo;</td>
-                <td class="p-4 text-slate-muted">&ldquo;work management platform&rdquo;</td>
-                <td class="p-4 text-slate-muted">Weak (enterprise PPM vendors win)</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text">SaaS 4</td>
-                <td class="p-4 text-slate-muted">&ldquo;payment processor for online store&rdquo;</td>
-                <td class="p-4 text-slate-muted">&ldquo;unified commerce platform&rdquo;</td>
-                <td class="p-4 text-slate-muted">Listed with caveat (&ldquo;not for beginners&rdquo;)</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text">SaaS 5</td>
-                <td class="p-4 text-slate-muted">&ldquo;social media tools for small business&rdquo;</td>
-                <td class="p-4 text-slate-muted">&ldquo;comprehensive social management&rdquo;</td>
-                <td class="p-4 text-slate-muted">Invisible (SMB-focused tools win)</td>
-              </tr>
+              <tr><td class="p-4 font-medium">SaaS 6</td><td class="p-4 text-slate-muted">&ldquo;ransomware protection tools&rdquo;</td><td class="p-4 text-slate-muted">&ldquo;managed EDR platform&rdquo;</td><td class="p-4 text-slate-muted">Invisible</td></tr>
+              <tr><td class="p-4 font-medium">SaaS 3</td><td class="p-4 text-slate-muted">&ldquo;construction project management&rdquo;</td><td class="p-4 text-slate-muted">&ldquo;work management platform&rdquo;</td><td class="p-4 text-slate-muted">Invisible</td></tr>
+              <tr><td class="p-4 font-medium">SaaS 4</td><td class="p-4 text-slate-muted">&ldquo;payment processor for online store&rdquo;</td><td class="p-4 text-slate-muted">&ldquo;unified commerce platform&rdquo;</td><td class="p-4 text-slate-muted">Listed with caveat</td></tr>
+              <tr><td class="p-4 font-medium">SaaS 5</td><td class="p-4 text-slate-muted">&ldquo;social media tools for small business&rdquo;</td><td class="p-4 text-slate-muted">&ldquo;comprehensive social management&rdquo;</td><td class="p-4 text-slate-muted">Invisible</td></tr>
             </tbody>
           </table>
         </div>
 
-        <p>This is not a content quality problem. In multiple cases, the company had dedicated pages with relevant content &mdash; healthcare-specific pages, industry landing pages, templates for specific use cases. The content exists. It simply does not rank for the terms buyers actually use, which means AI never finds it during retrieval. This is the same disconnect between Google rankings and AI recommendations that we explore in <a href="../seo-ignoring-buyers/">why your SEO strategy is ignoring 37% of buyers</a>.</p>
-
 
         <h2 id="rag">RAG vs. parametric: which engine decides</h2>
 
-        <p>Every AI response comes through one of two mechanisms. Understanding which one governs your category changes your entire optimization strategy.</p>
-
-        <p><strong>RAG (retrieval-augmented generation)</strong> is when the AI searches the web in real time, pulls relevant passages, and assembles an answer with citations. This powered the vast majority of questions in our audit &mdash; roughly 80% of all responses were RAG-driven. When you see linked sources beneath an AI answer, that is RAG.</p>
-
-        <p><strong>Parametric knowledge</strong> is when the AI answers from patterns compressed into its training data, with no web search. This is rarer but significant. For one company (SaaS 1, process mining), one question triggered zero web searches &mdash; the AI recommended the company entirely from training data. No search queries. No citations. Pure parametric recall.</p>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg leading-relaxed text-on-surface">
-            <strong>The practical implication:</strong> if your visibility depends on RAG, you can improve it in weeks by restructuring content and earning citations. If it depends on parametric knowledge, you are waiting for the next model training cycle &mdash; a timeline measured in months. Most companies need both, but the ratio determines which team owns the work.
-          </p>
-        </div>
-
-        <p>In our data, SaaS 1 was the only brand with confirmed parametric presence. The remaining five companies&rsquo; visibility was almost entirely RAG-driven &mdash; meaning their appearance in AI answers depends on whether their web content ranks for the terms the AI searches for. That is both the opportunity (restructure content, see results in weeks) and the current gap (content may exist but not rank for buyer vocabulary).</p>
+        <p>What we found is that roughly 80% of AI responses in our audit were RAG-driven &mdash; the AI searched the web in real time, pulled passages, and assembled an answer with citations. Only one company (SaaS 1, process mining) had confirmed parametric presence, where the AI answered from training data with no web search. The practical implication is significant: if your visibility is RAG-driven, content restructuring can show results in weeks. If it depends on parametric knowledge, you are waiting for the next model training cycle &mdash; a timeline measured in months.</p>
 
 
         <h2 id="sources">What AI actually cites</h2>
 
-        <p>Across 150+ search queries generated during these audits, clear patterns emerged in which sources AI models cited most often when assembling recommendations:</p>
-
-        <ul>
-          <li><strong>G2</strong> appeared as a cited source in the majority of audits. AI models treat G2 reviews as high-trust third-party validation. If your G2 listing has outdated pricing or a stale product description, that stale information becomes AI&rsquo;s &ldquo;fact.&rdquo;</li>
-          <li><strong>Gartner</strong> dominated when buyers asked about enterprise-grade solutions. In one audit, Gartner Magic Quadrant data appeared in most answers. A Gartner leadership position was a primary factor in AI&rsquo;s recommendation for enterprise questions.</li>
-          <li><strong>Company-owned blog content</strong> ranked surprisingly well in raw search results. Multiple companies&rsquo; own blog posts appeared as search hits for category queries. But AI summaries still favored competitors when third-party editorial sources carried more weight in the final synthesis.</li>
-          <li><strong>Industry-specific publications</strong> dominated when buyers asked about their specific industry. Industry searches surfaced ecosystem content from specialist publications. General B2B outlets had almost no influence on those questions.</li>
-        </ul>
-
-        <p>The finding that matters: <strong>AI models treat third-party citations as more authoritative than company-owned content during answer synthesis, even when the company&rsquo;s own content appears in the underlying search results.</strong> In one audit, the company&rsquo;s own cybersecurity guide appeared in raw search results, but AI still recommended better-known competitors because independent review sites recommended them more prominently.</p>
+        <p>Across 150+ queries, we found that <strong>G2</strong> appeared as a cited source in the majority of audits. <strong>Gartner</strong> dominated enterprise questions. Company-owned blog content ranked well in raw search results, but AI summaries still favored competitors when third-party editorial sources carried more weight. The finding that matters: AI models treat third-party citations as more authoritative than company-owned content during answer synthesis, even when the company&rsquo;s own content appears in the underlying search results.</p>
 
 
-        <h2 id="limitations">Limitations and caveats</h2>
+        <h2 id="implications">What this means for brands</h2>
 
-        <p>This is a small sample. That is enough to identify patterns but not enough to draw statistical conclusions. A few things to keep in mind:</p>
+        <p>The core finding across every audit: AI does not recommend the best product. It recommends the product it can find using the buyer&rsquo;s language, from sources it trusts. Market share, funding, even product quality &mdash; none of these guarantee visibility. Wording match, third-party citations, and content structure do. Understanding where your brand stands in this new landscape is the first step to changing the outcome.</p>
 
-        <ul>
-          <li><strong>Small sample sizes produce extreme scores.</strong> Change one result and a score swings by double digits. We would not read too much into the precise percentages &mdash; the patterns across companies are more informative than any individual score.</li>
-          <li><strong>AI responses are non-deterministic.</strong> Running the same question twice can produce different results, different search queries, and different cited sources. Our results represent one snapshot, not a stable measurement. A production monitoring system would need to test repeatedly over time.</li>
-          <li><strong>One model, one day.</strong> These audits used a single AI model on a single day. Different models (GPT-4, Gemini, Perplexity) may surface different brands, different sources, and different rankings. Cross-platform audits would likely reveal a more nuanced picture.</li>
-          <li><strong>We selected from a curated list.</strong> The companies were randomly sampled from BuiltIn&rsquo;s top B2B SaaS list, which skews toward well-funded, US-based companies. Results for smaller or international brands might look very different.</li>
-        </ul>
+        <p class="text-sm text-slate-muted mt-8"><strong>Methodology:</strong> Structured AI visibility audits conducted March 2026 using AI models with web search augmentation. Companies randomly sampled from BuiltIn&rsquo;s top B2B SaaS list. Over 150 queries generated autonomously. Results anonymized.</p>
 
-        <p>We publish this data because the <em>patterns</em> are consistent and actionable even in a small sample. The wording mismatch, the RAG/parametric split, and the third-party citation hierarchy appeared across every audit. But treat the specific scores as directional, not definitive.</p>
-
-
-        <h2 id="implications">What this means for your brand</h2>
-
-        <p>Even with the caveats above, these audits surface three specific, testable problems. Each one has a corresponding fix that does not require new budget or new headcount.</p>
-
-        <h3>1. Test your wording match today</h3>
-
-        <p>Think about five different buyers in your market. For each one, write the question they would actually ask an AI chatbot &mdash; in their language, not yours. Run those queries. If you do not appear, check whether the AI&rsquo;s search queries use your category terms or the buyer&rsquo;s problem terms. The gap between those two vocabularies is the gap you need to close.</p>
-
-        <p>In our data, wording match was the single strongest predictor of whether a brand appeared. SaaS 6 went from invisible to the top recommendation when the query used its niche vocabulary. SaaS 3 went from top-3 to invisible when the query used industry-specific terminology. The product did not change. The words did.</p>
-
-        <h3>2. Audit your third-party listings</h3>
-
-        <p>G2 appeared in the majority of audits as a cited source. Gartner dominated enterprise questions. If your G2 listing still describes your 2024 product, AI is recommending your 2024 product. If you are not in the Gartner conversation for your category, AI is not recommending you to enterprise buyers. These are not SEO concerns. They are AI citation sources.</p>
-
-        <h3>3. Determine your RAG/parametric split</h3>
-
-        <p>Ask an AI to recommend a product in your category. If the response includes linked citations, your visibility is RAG-driven and improvable through web content changes. If it answers confidently with no citations, you are dealing with parametric knowledge &mdash; a longer timeline requiring presence in the sources that training pipelines prioritize (Wikipedia, Gartner, major news outlets).</p>
-
-        <p>In our sample, only one company had confirmed parametric presence. The rest were entirely RAG-dependent. Knowing which one you are determines whether your content team or your PR team should lead the response.</p>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg leading-relaxed text-on-surface">
-            <strong>The core finding across every audit:</strong> AI does not recommend the best product. It recommends the product it can find using the buyer&rsquo;s language, from sources it trusts. Market share, funding, even product quality &mdash; none of these guarantee visibility. Wording match, third-party citations, and content structure do.
-          </p>
-        </div>
-
-        <p class="text-sm text-slate-muted mt-8"><strong>Methodology:</strong> Structured AI visibility audits conducted March 2026, using an AI model with web search augmentation. Companies randomly sampled from <a href="https://builtin.com/articles/top-b2b-saas-companies" target="_blank" rel="noopener">BuiltIn&rsquo;s top B2B SaaS companies list</a> across multiple categories. For each company, we asked the types of questions real buyers in that category would ask. Over 150 search queries were generated autonomously by the AI model during audits. Results anonymized. Scores are directional &mdash; small sample sizes mean individual percentages should be treated as indicative, not definitive.</p>
+        <p class="text-sm text-slate-muted mt-4">Last updated: April 2026</p>
 
       </div>
       <!-- End Article Body -->
 
-        <!-- Keep Reading -->
-        <div class="border-t border-[#E2E8F0] pt-8 mt-12">
-          <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">Keep reading</p>
-          <ul>
-            <li><a href="../what-is-ai-visibility/">What Is AI Visibility? A Complete Guide for 2026</a></li>
-            <li><a href="../seo-ignoring-buyers/">Your SEO Strategy Is Ignoring 37% of Buyers</a></li>
-            <li><a href="../ai-visibility-scores-explained/">How AI Visibility Scores Actually Work</a></li>
-            <li><a href="../ai-visibility-tools-compared/">AI Visibility Tools Compared: A Buyer's Guide</a></li>
-            <li><a href="../../sample-ai-visibility-report/">See what a Metricus report looks like &rarr;</a></li>
-          </ul>
-        </div>
-
       <!-- ========== ARTICLE CTA ========== -->
       <div class="bg-primary p-8 md:p-12 mt-16">
-        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">See how your brand scores</h3>
+        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">Find out what AI is getting wrong about your brand</h3>
         <p class="text-on-primary/80 text-base max-w-lg mb-8">
-          Get a full AI visibility audit for your own brand or a client&rsquo;s. One-time fee, no subscription.
+          Get your AI visibility report. One-time fee, no subscription.
         </p>
-        <a href="../../get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
-          Get your audit
+        <a href="/get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
+          Get your report
           <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
         </a>
-        <p class="mt-4"><a href="../../sample-ai-visibility-report/" class="text-on-primary/70 hover:text-on-primary text-sm underline transition-colors">Or see what a report looks like &rarr;</a></p>
       </div>
 
-          <!-- ========== CITE THIS ARTICLE ========== -->
+      <!-- ========== CITE THIS ARTICLE ========== -->
       <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
         <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
           <cite class="not-italic"><a href="https://metricusapp.com/blog/ai-chatbot-recommendations/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; We Audited AI Visibility for Top B2B SaaS Companies. The Results Surprised Us.</a></cite>
@@ -669,7 +548,7 @@
       <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
         <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
         <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
-        <a href="/blog/agency-guide-ai-visibility-audits/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
         <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
         <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
         <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>

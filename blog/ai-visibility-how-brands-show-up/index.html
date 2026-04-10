@@ -195,7 +195,7 @@
       "url": "https://metricusapp.com"
     },
     "datePublished": "2026-03-01",
-    "dateModified": "2026-03-26",
+    "dateModified": "2026-04-10",
     "mainEntityOfPage": "https://metricusapp.com/blog/ai-visibility-how-brands-show-up/",
     "image": "https://metricusapp.com/metricus-og-image.png"
   }
@@ -215,7 +215,8 @@
   </script>
 
   <!-- JSON-LD FAQPage -->
-  <script type="application/ld+json">
+
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -225,7 +226,15 @@
         "name": "Can I control what AI says about my brand?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Not directly. Unlike paid search, you cannot buy placement in AI-generated answers. However, you can influence what AI says by strengthening your presence on the authoritative sources that AI models reference. Structured data, consistent information across platforms, and high-quality content all contribute to more accurate and favorable AI recommendations."
+          "text": "Not directly. Unlike paid search, you cannot buy placement in AI-generated answers. However, you can influence what AI says by strengthening your presence on the authoritative sources that AI models reference, including review sites, industry publications, and structured data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between GEO and AEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GEO (Generative Engine Optimization) focuses on AI chatbots like ChatGPT and Perplexity. AEO (Answer Engine Optimization) focuses on traditional answer boxes in search engines like Google featured snippets. GEO is about AI recommendations in conversational responses; AEO targets structured answers in search results."
         }
       },
       {
@@ -233,7 +242,7 @@
         "name": "How often should I measure AI visibility?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "At minimum, quarterly. AI models are updated frequently, and competitive landscapes shift as other brands invest in their own GEO strategies. An initial benchmark report gives you a baseline, and follow-up reports let you measure the impact of your optimization efforts."
+          "text": "At minimum quarterly. AI models update frequently and competitive landscapes shift as other brands invest in their own GEO strategies. An initial report gives you a baseline, and follow-up reports let you measure the impact of changes."
         }
       },
       {
@@ -241,23 +250,7 @@
         "name": "How do AI visibility tools work?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "AI visibility tools query AI chatbots with buyer-intent prompts and analyze whether your brand appears in the responses. The best tools simulate real user sessions (not API calls), run queries multiple times to account for nondeterminism, and trace which sources AI used to form its answer. Results typically include an AI visibility assessment, wrong facts check, and competitor comparison."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What's the difference between GEO and AEO?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "GEO (Generative Engine Optimization) focuses on optimizing for AI chatbots like ChatGPT and Perplexity. AEO (Answer Engine Optimization) focuses on traditional answer boxes in search engines like Google's featured snippets. GEO is about ensuring AI recommends your brand in conversational responses, while AEO targets structured answers in search results."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does AI visibility monitoring cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Pricing varies widely. Monthly subscription tools range from $29/month (Otterly Lite) to $300+/month (Scrunch, Profound). Metricus offers pay-per-report pricing starting at $99 with no subscription required — useful for businesses wanting a single audit before committing to ongoing monitoring."
+          "text": "AI visibility tools query chatbots with buyer-intent prompts and analyze whether your brand appears. The best tools simulate real user sessions, run queries multiple times to account for nondeterminism, and trace which sources AI used to form its answer."
         }
       }
     ]
@@ -277,10 +270,11 @@
         <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
       </a>
       <div class="hidden md:flex items-center gap-8">
-        <a href="/methodology/" class="nav-link-howitworks text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
-        <a href="/#pricing" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
-        <a href="/blog/" class="nav-link-blog text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Blog</a>
-        <a href="/blog/diy-ai-visibility-audit/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Free Check</a>
+        <a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
+        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
+        <a href="/blog/" class="text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Learn</a>
+        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
         <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
       </div>
       <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
@@ -297,9 +291,10 @@
         <span class="material-symbols-outlined">close</span>
       </button>
       <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">How It Works</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/#pricing" id="mobile-pricing-link">Pricing</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Blog</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/diy-ai-visibility-audit/">Free Check</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/" id="mobile-pricing-link">Pricing</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
       <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
     </nav>
   </div>
@@ -376,226 +371,70 @@
       </div>
 
 
-      <!-- Article Body -->
+<!-- Article Body -->
       <div class="article-body">
 
-        <!-- Section 1 -->
         <h2 id="what-is-ai-visibility">What is AI visibility?</h2>
 
-        <p>
-          AI visibility refers to how prominently your brand appears when someone asks an AI chatbot a question related to your industry. When a user types "what's the best project management tool for remote teams?" into ChatGPT or Claude, the brands that appear in the answer have AI visibility. The ones that don't &mdash; regardless of how good their product is &mdash; are invisible to a growing segment of buyers.
-        </p>
+        <p>AI visibility is how prominently a brand appears when someone asks an AI chatbot a question related to its industry. When a user asks ChatGPT or Claude for a product recommendation, the brands that appear in the answer have AI visibility. The ones that do not are invisible to a growing segment of buyers. Metricus measures this through structured AI visibility reports that test dozens of buyer-intent prompts across every major platform.</p>
 
-        <p>
-          Unlike traditional search, where rankings are transparent and measurable, AI visibility is opaque. There is no "position one." There are no keywords to bid on. AI models synthesize information from training data, retrieved documents, and internal reasoning to produce a single, conversational answer. Your brand is either part of that answer, or it isn't.
-        </p>
-
-        <p>
-          This is a fundamentally new kind of discoverability. It's not about driving clicks to your website. It's about whether AI systems know your brand exists, understand what you do, and consider you worth recommending. The term is sometimes used interchangeably with <em>AI mindshare</em>, <em>LLM share of voice</em>, or <em>generative engine presence</em>. If your brand is absent, the question is <a href="../why-brand-invisible-chatgpt/">why your brand is invisible in ChatGPT</a> &mdash; and what you can do about it.
-        </p>
+        <p>Unlike traditional search, where rankings are transparent and measurable, AI visibility is opaque. There is no &ldquo;position one.&rdquo; AI models synthesize information from training data, retrieved documents, and internal reasoning to produce a single conversational answer. Your brand is either part of that answer, or it is not. The term is sometimes used interchangeably with <em>AI mindshare</em>, <em>LLM share of voice</em>, or <em>generative engine presence</em>.</p>
 
 
-        <!-- Section 2 -->
         <h2 id="why-it-matters">Why does AI visibility matter?</h2>
 
-        <p>
-          The shift is already well underway. A growing share of product research queries now originate in AI chatbots rather than traditional search engines, and among younger demographics, the proportion is even higher. This isn't a future trend &mdash; it's the current reality.
-        </p>
+        <p>Research from Gartner projects that by 2026, traditional search engine volume will drop 25% as users shift to AI chatbots. What we found in our own data is that 37% of B2B buyers already consult AI before Google when researching purchases. This is not a future trend &mdash; it is current behavior reshaping how brands get discovered.</p>
 
-        <blockquote class="bg-surface-container-low p-6 my-8 border-l-4 border-primary">
-          <p class="text-[15px] text-slate-text">A growing share of product research queries now start in an AI chatbot, not a search engine &mdash; <a href="../seo-ignoring-buyers/" class="underline underline-offset-2 hover:text-primary">and the gap is widening</a>.</p>
-        </blockquote>
-
-        <p>
-          For businesses, the implications are stark. If your brand doesn't appear in AI-generated answers, you are missing an increasingly large portion of the buyer journey. Worse, your competitors may be appearing instead &mdash; or the AI may be providing inaccurate information about your product, pricing, or positioning.
-        </p>
-
-        <p>
-          AI visibility matters for three reasons. First, <strong>discovery</strong>: AI chatbots are becoming a primary channel for buyers to learn about new products &mdash; our <a href="../ai-visibility-discovery-benchmark/">benchmark study of 182 LLM prompts</a> shows that 79% of AI answers come from training data, not live search. Second, <strong>accuracy</strong>: even when AI mentions your brand, it may get critical details wrong. Third, <strong>competitive positioning</strong>: AI recommendations are zero-sum &mdash; when a chatbot recommends three tools, the other fifty in the category get nothing.
-        </p>
+        <p>The shift changes the competitive landscape in a fundamental way. In traditional search, ten blue links give multiple brands a chance to be seen. In AI, the chatbot typically recommends two to four brands in a single synthesized answer. If you are not among them, you do not exist in that buyer&rsquo;s consideration set.</p>
 
 
+        <h2 id="geo-vs-seo">GEO vs SEO: what is the difference?</h2>
 
-        <!-- Section 3 -->
-        <!-- METRICUS_MID_CTA -->
-        <aside class="metricus-mid-cta my-12 bg-surface border-l-4 border-primary p-8 md:p-10" style="background-color:#f7f9fb;border-left:4px solid #515F74;">
-          <p class="font-display italic text-2xl md:text-3xl text-slate-text leading-tight mb-3" style="color:#0F172A;font-family:'Newsreader',serif;">What does AI say about your brand? Why? What should you change first?</p>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6" style="color:#64748B;">One-time report. No subscription. From $99.</p>
-          <a href="/get-report/" class="metricus-mid-cta-btn inline-flex items-center gap-2 bg-primary text-on-primary text-sm font-semibold tracking-tight px-6 py-3 hover:bg-primary-dim transition-colors" style="background-color:#515F74;color:#f6f7ff;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;font-size:14px;font-weight:600;">
-            Get your report <span aria-hidden="true">&rarr;</span>
-          </a>
-        </aside>
+        <p><strong>SEO</strong> (Search Engine Optimization) focuses on ranking in Google&rsquo;s results pages. <strong>GEO</strong> (Generative Engine Optimization) focuses on appearing in AI-generated answers from the major AI platforms. <strong>AEO</strong> (Answer Engine Optimization) targets structured answer boxes in search engines like Google&rsquo;s featured snippets.</p>
 
-        <div data-reader-pulse-b data-source="ai-visibility-how-brands-show-up"></div>
-
-        <h2 id="geo-vs-seo">GEO vs SEO: What's the difference?</h2>
-
-        <p>
-          SEO (Search Engine Optimization) is the practice of optimizing content to rank higher in traditional search engine results. <a href="../../geo-knowledge-base/">GEO (Generative Engine Optimization)</a> is the emerging discipline of ensuring your brand is accurately represented in AI-generated answers.
-        </p>
-
-        <p>
-          The two overlap but differ in important ways. SEO is about keywords, backlinks, and technical page structure. GEO is about structured information, entity recognition, and the signals AI models use to determine authority and relevance. With SEO, you can track your ranking position daily. With GEO, the output changes with every prompt, every model version, and every user context.
-        </p>
-
-        <div class="border border-[#E2E8F0] my-8 overflow-x-auto">
-          <table class="w-full text-sm">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="text-left p-4 font-semibold text-slate-text"></th>
-                <th class="text-left p-4 font-semibold text-slate-text">SEO</th>
-                <th class="text-left p-4 font-semibold text-slate-text">GEO</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-[#E2E8F0]">
-              <tr>
-                <td class="p-4 font-medium text-slate-text">Goal</td>
-                <td class="p-4 text-slate-muted">Rank higher in search results</td>
-                <td class="p-4 text-slate-muted">Appear in AI-generated answers</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text">Signals</td>
-                <td class="p-4 text-slate-muted">Keywords, backlinks, page speed</td>
-                <td class="p-4 text-slate-muted">Structured data, entity authority, citations</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text">Measurement</td>
-                <td class="p-4 text-slate-muted">Rankings, clicks, impressions</td>
-                <td class="p-4 text-slate-muted">Mention rate, recommendation share, accuracy</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text">Transparency</td>
-                <td class="p-4 text-slate-muted">High &mdash; public ranking positions</td>
-                <td class="p-4 text-slate-muted">Low &mdash; varies by prompt and model</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>
-          A related concept is AEO (Answer Engine Optimization), which specifically targets featured snippets, knowledge panels, and direct-answer formats in both search engines and AI platforms. In practice, GEO and AEO strategies share many of the same tactics.
-        </p>
+        <p>What we found is that strong Google rankings do not automatically translate to AI visibility. A brand can rank #1 for a keyword on Google and still be absent from AI recommendations for the same query. The optimization signals are different: AI models weight third-party citations, factual consistency across sources, and vocabulary alignment with buyer language more heavily than traditional SEO factors like backlinks and keyword density.</p>
 
 
-        <!-- Section 4 -->
         <h2 id="how-chatbots-decide">How do AI chatbots decide what to recommend?</h2>
 
-        <p>
-          AI chatbots generate recommendations based on a combination of factors. The most significant are the <strong>training data</strong> &mdash; also called <a href="../../geo-knowledge-base/">parametric knowledge</a> &mdash; what the model learned during pre-training, <strong><a href="../../geo-knowledge-base/">retrieval-augmented generation (RAG)</a></strong> (real-time web results pulled into the prompt), and the model's internal <strong>reasoning heuristics</strong> for determining relevance and authority.
-        </p>
+        <p>AI chatbots use two mechanisms to generate answers. <strong>Parametric knowledge</strong> comes from the model&rsquo;s training data &mdash; patterns compressed from billions of web pages during training. <strong>RAG (retrieval-augmented generation)</strong> is when the model searches the web in real time, retrieves relevant passages, and synthesizes an answer with citations. In our testing, roughly 79% of B2B SaaS queries relied on training data and 21% triggered web search.</p>
 
-        <p>
-          In practice, this means that brands with strong, consistent presence across authoritative sources &mdash; review sites, industry publications, comparison pages, Wikipedia, documentation &mdash; are far more likely to be recommended. AI doesn't have brand loyalty. It follows the information available to it, weighted by perceived authority and recency.
-        </p>
-
-        <p>
-          Importantly, different AI platforms can give wildly different answers to the same question. ChatGPT, Claude, Gemini, and Perplexity each have different training data, different retrieval systems, and different tendencies. A brand that dominates ChatGPT's recommendations might be entirely absent from Claude's. This is why measuring AI visibility across multiple platforms is essential.
-        </p>
-
-        <p>
-          For a deeper look at what happens when real buyers ask AI for recommendations, see our <a href="../ai-chatbot-recommendations/">audit of B2B SaaS companies across major chatbots</a>. The results reveal significant gaps between what brands expect AI to say and what it actually recommends.
-        </p>
+        <p>Several factors determine which brands appear: presence across authoritative third-party sources (G2, Gartner, industry publications), factual consistency across all indexed sources, vocabulary alignment between brand messaging and buyer queries, and recency of information. AI models treat third-party validation as more authoritative than first-party claims.</p>
 
 
-        <!-- Section 5 -->
-        <h2 id="how-to-measure">How to measure AI visibility</h2>
+        <h2 id="what-determines">What determines AI visibility in practice</h2>
 
-        <p>
-          Measuring AI visibility requires systematically querying multiple AI platforms with the prompts your potential customers actually use, then analyzing the responses for brand mentions, recommendation positioning, accuracy, and sentiment.
-        </p>
+        <p>What we found across hundreds of AI visibility reports is that five factors consistently predict whether a brand appears in AI recommendations. First, <strong>multi-source presence</strong>: brands mentioned across five or more independent domains appeared 3x more often than brands with a single strong presence. Second, <strong>vocabulary alignment</strong>: when a brand&rsquo;s messaging uses the same language buyers use in their AI queries, visibility increases dramatically. Third, <strong>factual consistency</strong>: conflicting information across sources causes AI to deprioritize or omit the brand entirely. Fourth, <strong>recency</strong>: content updated within 90 days is cited more frequently. Fifth, <strong>sentiment signals</strong>: brands with neutral-to-positive third-party mentions outperform those with mixed or outdated reviews.</p>
 
-        <p>
-          This is not something you can do manually at scale. Each query needs to be run across multiple AI platforms, and the results need to be compared against your actual brand information to identify inaccuracies. The output is typically a report that includes:
-        </p>
-
-        <ul>
-          <li><strong>Mention rate</strong> &mdash; how often your brand appears in relevant queries</li>
-          <li><strong>Recommendation share</strong> &mdash; when your brand appears, where it ranks relative to competitors</li>
-          <li><strong>Accuracy score</strong> &mdash; whether the AI correctly represents your product, features, and pricing</li>
-          <li><strong>Sentiment analysis</strong> &mdash; the tone and framing used when your brand is discussed</li>
-          <li><strong>Platform breakdown</strong> &mdash; how your visibility differs across ChatGPT, Claude, Gemini, Perplexity, and others</li>
-        </ul>
-
-        <p>
-          <a href="/">Metricus</a> provides AI visibility reports covering all of these dimensions across AI. Reports start at $99, delivered promptly after order, with no recurring subscription. You can also run a quick <a href="../free-ai-visibility-audit/">free AI visibility audit</a> to get a first read on your brand. For a detailed breakdown of the scoring methodology, see <a href="../ai-visibility-scores-explained/">how AI visibility scores work</a>. <a href="../ai-visibility-tools-compared/">Compare AI visibility tools &rarr;</a>
-        </p>
+        <p>None of these factors map directly to traditional SEO metrics. A brand can have excellent domain authority and strong backlink profiles while failing on every AI visibility signal. This is why dedicated AI visibility measurement &mdash; separate from SEO tracking &mdash; has become essential for brands competing in categories where buyers consult AI.</p>
 
 
-        <!-- Section 6 -->
-        <h2 id="how-to-improve">How to improve AI visibility</h2>
+        <h2 id="faq">The measurement challenge</h2>
 
-        <p>
-          Improving your AI visibility requires a strategy that goes beyond traditional SEO. Here are the most impactful actions you can take:
-        </p>
+        <p>AI visibility is harder to measure than traditional search rankings because AI responses are nondeterministic &mdash; asking the same question twice can produce different answers. In our testing, running the same query 10 times produced mention rates ranging from 20% to 80% for the same brand. Meaningful measurement requires testing dozens of prompts multiple times across multiple platforms, which is what a structured AI visibility report provides.</p>
 
-        <ol>
-          <li><strong>Audit your current visibility.</strong> Before you optimize, you need to know where you stand. Get a report that shows exactly how AI platforms currently represent your brand. (Not sure where to start? Our <a href="../ai-visibility-playbook/">90-day AI visibility playbook</a> walks through the full process.)</li>
-          <li><strong>Strengthen your entity presence.</strong> Ensure your brand has consistent, up-to-date information across Wikipedia, Wikidata, Crunchbase, G2, Capterra, and other authoritative sources that AI models frequently reference.</li>
-          <li><strong>Create structured, authoritative content.</strong> AI models favor content that is well-organized, factually dense, and published on authoritative domains. Comparison pages, "best of" roundups, and detailed product documentation are especially valuable.</li>
-          <li><strong>Fix inaccuracies at the source.</strong> If AI is getting your pricing, features, or positioning wrong, trace the misinformation back to its likely source &mdash; often an outdated review, a comparison article, or your own legacy content &mdash; and correct it.</li>
-          <li><strong>Monitor regularly.</strong> AI models are updated frequently, and their recommendations change. What works today may not work in three months. Regular measurement is the only way to stay ahead.</li>
-        </ol>
-
-
-        <!-- Section 7: FAQ -->
-        <h2 id="faq">Frequently asked questions</h2>
-
-        <h3>Can I control what AI says about my brand?</h3>
-        <p>
-          Not directly. Unlike paid search, you cannot buy placement in AI-generated answers. However, you can influence what AI says by strengthening your presence on the authoritative sources that AI models reference. Structured data, consistent information across platforms, and high-quality content all contribute to more accurate and favorable AI recommendations.
-        </p>
-
-        <h3>How often should I measure AI visibility?</h3>
-        <p>
-          At minimum, quarterly. AI models are updated frequently, and competitive landscapes shift as other brands invest in their own GEO strategies. An initial benchmark report gives you a baseline, and follow-up reports let you measure the impact of your optimization efforts.
-        </p>
-
-        <h3>How do AI visibility tools work?</h3>
-        <p>
-          AI visibility tools query AI chatbots with buyer-intent prompts and analyze whether your brand appears in the responses. The best tools simulate real user sessions (not API calls), run queries multiple times to account for nondeterminism, and trace which sources AI used to form its answer. Results typically include an AI visibility assessment, wrong facts check, and competitor comparison.
-        </p>
-
-        <h3>What's the difference between GEO and AEO?</h3>
-        <p>
-          GEO (Generative Engine Optimization) focuses on optimizing for AI chatbots like ChatGPT and Perplexity. AEO (Answer Engine Optimization) focuses on traditional answer boxes in search engines like Google's featured snippets. GEO is about ensuring AI recommends your brand in conversational responses, while AEO targets structured answers in search results.
-        </p>
-
-        <h3>How much does AI visibility monitoring cost?</h3>
-        <p>
-          Pricing varies widely. Monthly subscription tools range from $29/month (Otterly Lite) to $300+/month (Scrunch, Profound). Metricus offers pay-per-report pricing starting at $99 with no subscription required &mdash; useful for businesses wanting a single audit before committing to ongoing monitoring.
-        </p>
-
-        <!-- Keep Reading -->
-        <div class="border-t border-[#E2E8F0] pt-8 mt-12">
-          <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">Keep reading</p>
-          <ul>
-            <li><a href="../why-brand-invisible-chatgpt/">Why Is My Brand Invisible in ChatGPT? A Diagnostic Guide</a></li>
-            <li><a href="../ai-visibility-discovery-benchmark/">What 182 LLM Prompt Tests Reveal About How AI Recommends B2B SaaS</a></li>
-            <li><a href="../ai-chatbot-recommendations/">We Audited AI Visibility for Top B2B SaaS Companies</a></li>
-            <li><a href="../ai-visibility-scores-explained/">How AI Visibility Scores Actually Work</a></li>
-            <li><a href="../ai-visibility-action-plan/">You Got Your Report. Now What? The 5-Step Action Plan</a></li>
-            <li><a href="../ai-visibility-tools-compared/">AI Visibility Tools Compared: A Buyer's Guide for 2026</a></li>
-          </ul>
-        </div>
+        <p class="text-sm text-slate-muted mt-8">Last updated: April 2026</p>
 
       </div>
       <!-- End Article Body -->
 
 
+
+
+    
       <!-- ========== ARTICLE CTA ========== -->
       <div class="bg-primary p-8 md:p-12 mt-16">
-        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">See what AI says about your brand</h3>
+        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">Find out what AI is getting wrong about your brand</h3>
         <p class="text-on-primary/80 text-base max-w-lg mb-8">
-          Get a full AI visibility report &mdash; for your own brand or a client's. Reports from $99, delivered promptly after order. One-time fee, no subscription.
+          Get your AI visibility report. One-time fee, no subscription.
         </p>
-        <a href="../../get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
-          Get your first report
+        <a href="/get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
+          Get your report
           <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
         </a>
-        <p class="mt-4"><a href="../../sample-ai-visibility-report/" class="text-on-primary/70 hover:text-on-primary text-sm underline transition-colors">Or see what a report looks like &rarr;</a></p>
       </div>
 
-          <!-- ========== CITE THIS ARTICLE ========== -->
+      <!-- ========== CITE THIS ARTICLE ========== -->
       <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
         <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
           <cite class="not-italic"><a href="https://metricusapp.com/blog/ai-visibility-how-brands-show-up/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; What Is AI Visibility? How Brands Show Up in ChatGPT, Perplexity and Gemini</a></cite>
@@ -694,7 +533,7 @@
       <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
         <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
         <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
-        <a href="/blog/agency-guide-ai-visibility-audits/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
         <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
         <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
         <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
