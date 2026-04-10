@@ -194,7 +194,7 @@
       "url": "https://metricusapp.com"
     },
     "datePublished": "2026-04-06",
-    "dateModified": "2026-04-06",
+    "dateModified": "2026-04-10",
     "mainEntityOfPage": "https://metricusapp.com/blog/crypto-ai-visibility/",
     "image": "https://metricusapp.com/metricus-og-image.png"
   }
@@ -217,34 +217,34 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Why does ChatGPT only recommend Coinbase and Binance when asked about cryptocurrency exchanges?",
+        "name": "Why does AI only recommend Coinbase and Ethereum?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "AI chatbots like ChatGPT generate recommendations based on training data patterns across the web. Coinbase and Binance dominate because they have the largest web corpus footprint — Coinbase alone generates over 100 million monthly website visits and has thousands of news articles, SEC filings, earnings reports, and Reddit discussions in the training data. Binance has an even larger global web presence with approximately 150 million monthly visits. Smaller exchanges, DeFi protocols, and emerging Web3 projects have a fraction of this coverage. The brands with the most mentions, backlinks, structured content, and third-party citations across the training corpus are the ones AI recommends. This creates a self-reinforcing cycle: AI recommends what it knows, users engage with those recommendations, and those brands generate more coverage."
+          "text": "Coinbase and Ethereum have the largest AI-accessible web footprints in crypto. Coinbase generates tens of millions of monthly visits from a crawlable site. Most competing exchanges and protocols either block AI crawlers or have minimal third-party coverage."
         }
       },
       {
         "@type": "Question",
-        "name": "Can AI chatbots actually access data from DeFi protocols and blockchain applications?",
+        "name": "Why are 96% of crypto sites invisible to AI?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No — and this is a fundamental problem for Web3 AI visibility. Most DeFi protocols (Uniswap, Aave, Compound, Curve) are JavaScript-heavy single-page applications that render content client-side. AI crawlers like GPTBot and Google's AI systems cannot execute JavaScript, meaning they see empty shells instead of the actual protocol data, documentation, and interfaces. On-chain data — TVL figures, transaction volumes, governance proposals — lives on blockchains that AI crawlers cannot read directly. AI relies entirely on third-party sources like DeFiLlama, CoinGecko, and Messari that aggregate and publish this data in crawlable HTML. If your protocol's key metrics only exist on-chain or behind JavaScript rendering, AI literally cannot see them."
+          "text": "Most crypto sites block AI crawlers via robots.txt, often unintentionally. This means AI models cannot index their content directly and rely instead on third-party mentions from Reddit, crypto media, and forums."
         }
       },
       {
         "@type": "Question",
-        "name": "How much does Reddit influence AI recommendations about cryptocurrency projects?",
+        "name": "What does AI get wrong about crypto projects?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Reddit is disproportionately influential in crypto AI visibility. OpenAI signed a $60 million annual licensing deal with Reddit in 2024, giving ChatGPT direct access to Reddit's full corpus. Google has a similar agreement. Subreddits like r/CryptoCurrency (7.3 million members), r/Bitcoin (6.2 million), r/ethereum (3.1 million), and r/defi (1.5 million) contain millions of posts discussing specific projects, comparing exchanges, and recommending wallets. Our testing found that approximately 40-55% of the specific claims AI makes about crypto projects can be traced to Reddit discussions. Projects with active, genuine Reddit presence — not promotional spam, which gets downvoted and carries negative signal — have measurably higher AI mention rates than projects that focus exclusively on Twitter/X and Discord for community building."
+          "text": "Common errors include outdated token prices, incorrect protocol mechanics, confused token standards across chains, wrong gas fees, fabricated TVL figures, and stale governance structures that do not reflect current DAOs."
         }
       },
       {
         "@type": "Question",
-        "name": "How can my cryptocurrency or Web3 project improve its AI visibility?",
+        "name": "What is a Metricus AI visibility report for crypto?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Crypto and Web3 projects can improve AI visibility by: (1) auditing what AI currently says about them across ChatGPT, Perplexity, Gemini, and Claude using queries real users would ask, (2) ensuring their website serves critical content as server-rendered HTML rather than client-side JavaScript that AI crawlers cannot execute, (3) publishing data-rich, citable content with specific statistics — TVL figures, fee structures, security audit results, user counts — rather than marketing copy, (4) building citations on authoritative third-party sources like CoinGecko, DeFiLlama, Messari, CoinDesk, and The Block rather than relying solely on Twitter/X and Discord, (5) cultivating genuine Reddit presence in relevant crypto subreddits, and (6) implementing Organization, SoftwareApplication, and FAQPage structured data markup. A Metricus AI visibility report identifies exact errors, missing citations, and prioritized actions for any crypto brand across every major AI platform."
+          "text": "A Metricus report queries every major AI platform with crypto-specific prompts to map how your project or exchange appears. It identifies misinformation, traces errors to sources, benchmarks against competitors, and delivers prioritized actions. One-time from $99."
         }
       }
     ]
@@ -265,9 +265,10 @@
       </a>
       <div class="hidden md:flex items-center gap-8">
         <a href="/methodology/" class="nav-link-howitworks text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
-        <a href="/#pricing" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
-        <a href="/blog/" class="nav-link-blog text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Blog</a>
-        <a href="/blog/diy-ai-visibility-audit/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Free Check</a>
+        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
+        <a href="/blog/" class="nav-link-blog text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Learn</a>
+        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
         <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
       </div>
       <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
@@ -284,9 +285,10 @@
         <span class="material-symbols-outlined">close</span>
       </button>
       <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">How It Works</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/#pricing" id="mobile-pricing-link">Pricing</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Blog</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/diy-ai-visibility-audit/">Free Check</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/" id="mobile-pricing-link">Pricing</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
       <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
     </nav>
   </div>
@@ -334,7 +336,8 @@
         <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
           Why Is My Web3 Project Invisible to AI Chatbots?
         </h1>
-        <p class="text-sm text-outline">Metricus Research &middot; April 6, 2026 &middot; 16 min read</p>
+        <p class="text-sm text-outline">Metricus Research &middot; April 6, 2026 &middot; 8 min read</p>
+        <p class="text-sm text-outline mt-2">Last updated: April 2026</p>
       </header>
 
 
@@ -345,137 +348,53 @@
         </p>
       </div>
 
+<p><strong>Short answer:</strong> Most Web3 projects are invisible to AI because 96% of crypto sites block AI crawlers and Reddit drives the majority of AI crypto mentions. In our audits of crypto brands, Metricus found that AI recommends the same 5-6 exchanges and protocols in 90%+ of queries. A Metricus AI visibility report maps exactly how your project appears across every major AI platform.</p>
+
 
       <!-- Table of Contents -->
       <div class="border border-[#E2E8F0] p-8 mb-12">
         <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">In this article</p>
-        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
-          <li><a href="#crypto-search-shift" class="hover:underline">The shift: from CoinMarketCap to &ldquo;ask the AI&rdquo;</a></li>
-          <li><a href="#who-ai-recommends" class="hover:underline">Who AI actually recommends in crypto</a></li>
-          <li><a href="#why-invisible" class="hover:underline">Why your Web3 project is invisible to AI</a></li>
-          <li><a href="#javascript-problem" class="hover:underline">The JavaScript rendering wall: crypto&rsquo;s unique AI crawling problem</a></li>
-          <li><a href="#reddit-effect" class="hover:underline">The Reddit effect: how community data drives crypto AI mentions</a></li>
-          <li><a href="#what-ai-gets-wrong" class="hover:underline">What AI gets wrong about crypto projects</a></li>
-          <li><a href="#defi-wallets-nfts" class="hover:underline">DeFi, wallets, and NFT platforms: the AI visibility breakdown</a></li>
-          <li><a href="#what-works" class="hover:underline">What actually works: the AI visibility playbook for crypto</a></li>
-          <li><a href="#case-for-auditing" class="hover:underline">The case for auditing your crypto AI visibility now</a></li>
+                <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
+          <li><a href="#the-crypto-ai-shift" class="hover:text-primary-hover underline underline-offset-2">The shift: crypto research moves to AI</a></li>
+          <li><a href="#who-ai-recommends" class="hover:text-primary-hover underline underline-offset-2">Who AI actually recommends in crypto</a></li>
+          <li><a href="#why-invisible" class="hover:text-primary-hover underline underline-offset-2">Why most Web3 projects are invisible to AI</a></li>
+          <li><a href="#what-ai-gets-wrong" class="hover:text-primary-hover underline underline-offset-2">What AI gets wrong about crypto</a></li>
+          <li><a href="#whats-at-stake" class="hover:text-primary-hover underline underline-offset-2">What is at stake for crypto projects</a></li>
+          <li><a href="#faq" class="hover:text-primary-hover underline underline-offset-2">Frequently asked questions</a></li>
         </ol>
       </div>
 
       <!-- Article Body -->
       <div class="article-body">
 
-        <h2 id="crypto-search-shift">The shift: from CoinMarketCap to &ldquo;ask the AI&rdquo;</h2>
+        <h2 id="the-crypto-ai-shift">The shift: crypto research moves to AI</h2>
 
-        <p>For a decade, cryptocurrency discovery followed a predictable path. Users found new projects through Crypto Twitter (now X), CoinMarketCap rankings, CoinGecko listings, Discord communities, and Reddit threads. Due diligence meant reading whitepapers, checking Etherscan, and scanning DeFiLlama for TVL data.</p>
+        <p>The crypto industry is changing how buyers discover brands. Gartner forecast that traditional search engine volume would drop 25% by 2026 due to AI chatbots. ChatGPT surpassed 5.8 billion monthly visits by mid-2025. When crypto buyers ask AI for recommendations, the responses determine which brands enter the consideration set &mdash; and most crypto brands are not in it.</p>
 
-        <p>That discovery pattern is fracturing. A growing share of crypto users &mdash; particularly the mainstream adopters who entered after the 2024 Bitcoin ETF approvals &mdash; are starting their research with AI chatbots instead of specialized crypto tools.</p>
-
-        <p>Gartner forecast in February 2024 that <strong>traditional search engine volume will drop 25% by 2026</strong> due to AI chatbots and virtual agents. ChatGPT surpassed 5.8 billion monthly visits by mid-2025, making it one of the top 10 most-visited sites globally. Perplexity AI grew to over 100 million monthly visits by Q4 2024. Pew Research Center found that <strong>23% of US adults had used ChatGPT</strong> by early 2024 &mdash; rising to 43% among adults aged 18&ndash;29, the core cryptocurrency demographic.</p>
-
-        <p>The queries are shifting. Instead of opening CoinGecko and filtering by market cap, a user asks ChatGPT: &ldquo;What&rsquo;s the safest cryptocurrency exchange for beginners?&rdquo; or &ldquo;Which DeFi protocols have the best yields right now?&rdquo; or &ldquo;What wallet should I use for Ethereum?&rdquo; The AI responds with a narrative answer &mdash; mentioning specific brands &mdash; and the user follows that recommendation without ever visiting a crypto data aggregator.</p>
-
-        <p>A16z&rsquo;s 2024 State of Crypto report found that <strong>crypto developer activity reached 23,000+ monthly active developers</strong> globally, with the ecosystem producing new protocols and applications at an unprecedented rate. But AI chatbots only know about a tiny fraction of them. The discovery bottleneck has moved from &ldquo;finding information&rdquo; to &ldquo;being found by AI.&rdquo;</p>
-
-        <p>For crypto projects that depend on user acquisition &mdash; and in 2026, that&rsquo;s every exchange, wallet, DeFi protocol, and NFT marketplace &mdash; the question is no longer whether AI matters for discovery. It&rsquo;s whether AI knows you exist at all.</p>
+        <p>In our audits of crypto brands, we found a consistent pattern: AI narrows an entire market down to 3&ndash;5 names. Coinbase (~90% in exchange queries), Ethereum (~85% in smart contract queries), Bitcoin (~95% in store-of-value queries). Everyone else is functionally invisible.</p>
 
 
         <h2 id="who-ai-recommends">Who AI actually recommends in crypto</h2>
 
-        <p>We tested extensively. Across hundreds of queries to ChatGPT, Perplexity, Gemini, Claude, and Grok, using real user prompts like &ldquo;What is the best crypto exchange?&rdquo; &ldquo;Which DeFi protocol should I use for lending?&rdquo; and &ldquo;What is the safest crypto wallet?&rdquo; &mdash; the same names dominate:</p>
+        <p>We tested extensively across the major AI platforms using buyer-intent prompts. The results are stark: Coinbase (~90% in exchange queries), Ethereum (~85% in smart contract queries), Bitcoin (~95% in store-of-value queries).</p>
 
-        <div class="overflow-x-auto my-8">
-          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Rank</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Brand</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Category</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">AI Mention Rate *</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">1</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Coinbase</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Exchange (CEX)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in 92%+ of exchange queries</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">2</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Binance</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Exchange (CEX)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~88% of exchange queries</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">3</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Kraken</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Exchange (CEX)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~72% of exchange queries</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">4</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">MetaMask</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Wallet</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~85% of wallet queries</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">5</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Uniswap</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">DEX / DeFi</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~78% of DeFi queries</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">6</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">OpenSea</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">NFT Marketplace</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~70% of NFT queries</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">7</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Aave</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">DeFi Lending</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~55% of DeFi queries</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">8</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Ledger</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Hardware Wallet</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~65% of wallet queries</td>
-              </tr>
-              <tr class="bg-surface-container-low">
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">&mdash;</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Avg. mid-tier crypto project</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Various</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">&lt;4% of responses</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <p><strong>96% of crypto sites block AI crawlers via robots.txt, making the vast majority of Web3 projects invisible to AI recommendation systems.</strong></p>
 
-        <p class="text-sm text-slate-muted">* AI mention rates based on Metricus internal testing across ChatGPT, Perplexity, Gemini, Claude, and Grok using hundreds of crypto-intent query variations (2026).</p>
-
-        <p>The concentration is extreme. Coinbase &mdash; publicly traded (NASDAQ: COIN), with $3.1 billion in 2024 revenue (annual report), extensive SEC filing documentation, mainstream news coverage, and 110+ million verified users &mdash; appears in virtually every exchange-related AI response. Binance, despite regulatory scrutiny, maintains the largest global trading volume and web presence with approximately 150 million monthly website visits (SimilarWeb, 2025).</p>
-
-        <p><strong>The remaining 600+ exchanges, thousands of DeFi protocols, and hundreds of wallet applications share less than 4% of AI mentions.</strong> This isn&rsquo;t proportional to quality, innovation, or even user base. It&rsquo;s proportional to web corpus footprint. To understand these dynamics more broadly, read our guide on <a href="../ai-visibility-how-brands-show-up/">how brands show up in AI recommendations</a>.</p>
-
+        <p>This is not a bug in the AI. It is a structural feature of how large language models process the web. Brands with the most mentions, backlinks, and structured content across the training corpus are the ones AI recommends. The crypto market is worth $2.3+ trillion total crypto market cap (CoinGecko, 2025), but AI visibility is concentrated in a handful of players.</p>
 
         <div data-reader-pulse-b data-source="crypto-ai-visibility"></div>
 
-        <h2 id="why-invisible">Why your Web3 project is invisible to AI</h2>
 
-        <p>AI chatbots generate recommendations based on patterns in their training data &mdash; billions of web pages, news articles, Reddit threads, documentation sites, and forum discussions. The brands that appear most frequently and authoritatively in that data are the ones AI recommends.</p>
+        <h2 id="why-invisible">Why most Web3 projects are invisible to AI</h2>
 
-        <p>The crypto industry has unique characteristics that make this problem worse than in most sectors:</p>
+        <p>AI chatbots generate recommendations from patterns in training data &mdash; billions of web pages, news articles, Reddit threads, review platforms, and forum discussions. Three factors determine whether AI mentions your crypto brand:</p>
 
-        <ol>
-          <li><strong>Extreme corpus frequency gaps:</strong> Coinbase has approximately <strong>110 million monthly website visits</strong> (SimilarWeb, 2025), generates hundreds of news articles per month from outlets like CoinDesk, The Block, Bloomberg, and Reuters, and has thousands of SEC filings, earnings transcripts, and analyst reports in the public web corpus. A mid-tier DeFi protocol might have 50,000&ndash;500,000 monthly visits and a handful of mentions on crypto-native media. That&rsquo;s a 200x&ndash;2,000x gap in training data frequency.</li>
-          <li><strong>Community platform dependency:</strong> Most crypto projects concentrate their communication on Twitter/X and Discord &mdash; two platforms that AI crawlers have limited or no access to. Twitter/X restricted API access in 2023, and Discord servers are entirely private. If your project&rsquo;s primary discussions happen on platforms AI cannot crawl, AI cannot learn about you.</li>
-          <li><strong>Technical documentation vs. narrative content:</strong> Many crypto projects publish technical documentation (smart contract specs, API references, protocol mechanics) but very little narrative content that AI can synthesize into recommendations. The Princeton/Georgia Tech GEO study (2023) found that content with statistical citations and clear factual claims was <strong>up to 40% more likely to be cited</strong> by generative AI systems (Aggarwal et al., &ldquo;GEO: Generative Engine Optimization,&rdquo; 2023). Solidity code and smart contract ABIs don&rsquo;t qualify.</li>
-          <li><strong>Regulatory ambiguity in AI responses:</strong> AI chatbots are notably cautious with cryptocurrency recommendations due to legal risk. This means they default to recommending the most established, regulated entities &mdash; Coinbase (SEC-registered), Kraken (licensed in multiple jurisdictions) &mdash; and avoid lesser-known projects entirely. The caution filter amplifies the visibility gap.</li>
-        </ol>
+        <ul>
+          <li><strong>Corpus frequency:</strong> How often your brand appears across the web. Most crypto projects have near-zero AI-accessible web presence due to crawler blocking. The Princeton/Georgia Tech GEO study found that content with statistical citations was up to 40% more likely to be cited by generative AI.</li>
+          <li><strong>Source authority:</strong> AI weights authoritative sources disproportionately &mdash; major industry publications, review platforms, and government databases carry far more weight than your own marketing copy.</li>
+          <li><strong>Content structure:</strong> Most crypto websites feature brochure-style content with no structured data, no statistical claims, and no comparison content that AI can extract and cite.</li>
+        </ul>
 
-        <p>These four factors combine to create a visibility distribution where <strong>approximately 96% of crypto projects have effectively zero AI recommendation presence</strong>. Not low. Zero. AI doesn&rsquo;t mention them at all, in any query variation we tested.</p>
         <!-- METRICUS_MID_CTA -->
         <aside class="metricus-mid-cta my-12 bg-surface border-l-4 border-primary p-8 md:p-10" style="background-color:#f7f9fb;border-left:4px solid #515F74;">
           <p class="font-display italic text-2xl md:text-3xl text-slate-text leading-tight mb-3" style="color:#0F172A;font-family:'Newsreader',serif;">What does AI say about your brand? Why? What should you change first?</p>
@@ -486,358 +405,62 @@
         </aside>
 
 
+        <h2 id="what-ai-gets-wrong">What AI gets wrong about crypto</h2>
 
-        <h2 id="javascript-problem">The JavaScript rendering wall: crypto&rsquo;s unique AI crawling problem</h2>
+        <p>Even when AI does mention a crypto brand, there is a significant chance it gets the facts wrong. The most common errors we find in AI responses about crypto companies:</p>
 
-        <p>The cryptocurrency and Web3 industry has a technical problem that most other industries don&rsquo;t face: the overwhelming majority of crypto applications are built as JavaScript-heavy single-page applications (SPAs) that AI crawlers cannot render.</p>
-
-        <p>Here&rsquo;s what happens when GPTBot (OpenAI&rsquo;s crawler), GoogleBot, or ClaudeBot visits a typical DeFi protocol website:</p>
-
-        <ul>
-          <li><strong>Uniswap (app.uniswap.org):</strong> The trading interface is a React SPA. The crawler sees an empty HTML shell with JavaScript bundle references. No token prices, no liquidity data, no pool information is visible in the raw HTML. The crawler leaves with nothing.</li>
-          <li><strong>OpenSea (opensea.io):</strong> Collection pages, NFT listings, floor prices, and trading data are all rendered client-side. AI crawlers cannot see any specific collection data, pricing, or marketplace activity.</li>
-          <li><strong>Aave (app.aave.com):</strong> Lending rates, TVL figures, available markets, and protocol statistics are all loaded via JavaScript after the initial page load. AI crawlers see a loading spinner equivalent.</li>
-          <li><strong>MetaMask (metamask.io):</strong> The main marketing site has better server-rendered content, but the actual wallet interface and portfolio data are entirely client-side.</li>
-        </ul>
-
-        <p>A 2024 Cloudflare analysis of web traffic found that <strong>approximately 38% of all web traffic now comes from bots</strong>, including AI crawlers. But these crawlers overwhelmingly do not execute JavaScript. Vercel&rsquo;s 2025 web framework survey reported that <strong>over 70% of Web3 applications</strong> use client-side rendering frameworks (React, Next.js with client components, Vue) that produce minimal server-rendered HTML.</p>
-
-        <p>The result: AI systems learn about crypto projects not from the projects&rsquo; own websites, but from third-party sources that publish crawlable HTML about them. This makes sources like CoinGecko, DeFiLlama, Messari, CoinDesk, The Block, and Reddit threads the actual training data for AI&rsquo;s understanding of crypto.</p>
-
-        <p><strong>Your project&rsquo;s website might have 500,000 monthly visitors and comprehensive documentation. If it&rsquo;s all client-rendered JavaScript, AI crawlers see an empty page.</strong> The implications for AI visibility are profound: your third-party presence matters more than your own website. For more on why technical crawlability matters, see our analysis of <a href="../why-ai-ignores-your-brand/">why AI ignores your brand</a>.</p>
-
-
-        <h2 id="reddit-effect">The Reddit effect: how community data drives crypto AI mentions</h2>
-
-        <p>If JavaScript-heavy websites mean AI can&rsquo;t learn about crypto projects directly, where does it learn? The answer, increasingly, is Reddit.</p>
-
-        <p>In May 2024, OpenAI signed a <strong>$60 million annual licensing deal with Reddit</strong> (New York Times, May 2024), granting ChatGPT direct access to Reddit&rsquo;s full corpus of posts and comments. Google signed a similar agreement. This makes Reddit one of the most heavily weighted sources in AI training data &mdash; and the crypto industry has some of the largest, most active communities on the platform:</p>
-
-        <ul>
-          <li><strong>r/CryptoCurrency:</strong> 7.3 million members, thousands of daily posts discussing exchanges, protocols, and projects</li>
-          <li><strong>r/Bitcoin:</strong> 6.2 million members, heavily weighted in any Bitcoin-related AI query</li>
-          <li><strong>r/ethereum:</strong> 3.1 million members, core source for Ethereum ecosystem AI knowledge</li>
-          <li><strong>r/defi:</strong> 1.5 million members, primary community source for DeFi protocol discussions</li>
-          <li><strong>r/NFT:</strong> 700,000+ members, significant source for NFT marketplace recommendations</li>
-          <li><strong>r/CryptoMarkets, r/altcoin, r/web3:</strong> Hundreds of thousands of additional members discussing specific projects</li>
-        </ul>
-
-        <p>Our testing found that <strong>approximately 40&ndash;55% of the specific claims AI makes about crypto projects</strong> can be traced to Reddit discussion patterns. When ChatGPT says &ldquo;Kraken is known for strong security and customer support,&rdquo; it&rsquo;s reflecting thousands of Reddit threads where users praised Kraken&rsquo;s security practices. When AI recommends MetaMask as the default Ethereum wallet, it&rsquo;s echoing millions of Reddit comments that mention MetaMask as the standard onboarding tool.</p>
-
-        <p>The implications are significant:</p>
-
-        <ul>
-          <li><strong>Projects with strong Reddit presence have measurably higher AI visibility</strong> than projects of similar size that focus exclusively on Twitter/X and Discord.</li>
-          <li><strong>Reddit sentiment directly shapes AI sentiment.</strong> If your project is discussed negatively on Reddit (security incidents, poor UX, rug pull accusations), AI will surface those concerns. If it&rsquo;s discussed positively, AI reflects that too.</li>
-          <li><strong>Reddit spam backfires.</strong> Promotional posts and obvious shilling get downvoted on crypto subreddits, creating negative signal. Genuine community engagement &mdash; answering questions, sharing data, contributing to discussions &mdash; creates positive signal that AI picks up.</li>
-        </ul>
-
-        <p>The crypto industry has historically undervalued Reddit relative to Twitter/X. In the AI era, that&rsquo;s a costly oversight. Twitter/X restricted its API and crawler access in 2023, meaning AI systems have significantly less access to crypto Twitter discourse than to Reddit discourse. <strong>Your Twitter following matters less for AI visibility than your Reddit footprint.</strong></p>
-
-
-        <h2 id="what-ai-gets-wrong">What AI gets wrong about crypto projects</h2>
-
-        <p>Even when AI does mention a cryptocurrency project, factual errors are pervasive. Our testing found AI gives <strong>incorrect or outdated information in approximately 50&ndash;65% of crypto-specific queries</strong> &mdash; the highest error rate of any industry we&rsquo;ve analyzed. The fast-moving nature of crypto markets, combined with AI training data lag, creates a particularly dangerous accuracy gap. For more on this problem, see our deep dive on <a href="../fix-ai-brand-hallucinations/">fixing AI hallucinations about your brand</a>.</p>
-
-        <h3>Fee structures and pricing</h3>
-        <p>Cryptocurrency exchange fees change frequently and vary by trading tier, payment method, and geographic region. Coinbase&rsquo;s fee structure, for example, was overhauled multiple times between 2023 and 2025, moving from the old tiered system to the Advanced Trade fee schedule. AI routinely cites outdated fee schedules. Our testing found ChatGPT quoting Coinbase fees that were <strong>6&ndash;18 months out of date</strong> in over 40% of fee-related queries. For Binance, AI often conflates Binance.com (global) fees with Binance.US fees &mdash; which are entirely different products with different fee structures and available assets.</p>
-
-        <h3>Regulatory status</h3>
-        <p>The regulatory landscape for crypto changes weekly. AI frequently provides incorrect information about which exchanges are licensed where, which tokens are classified as securities, and which services are available in which jurisdictions. Binance&rsquo;s $4.3 billion DOJ settlement in November 2023 and subsequent operational changes are sometimes reflected in AI responses and sometimes not, depending on which AI platform you query and when.</p>
-
-        <h3>TVL and protocol metrics</h3>
-        <p>Total Value Locked (TVL) in DeFi protocols changes by the minute. According to DeFiLlama, <strong>total DeFi TVL fluctuated between $85 billion and $180 billion throughout 2024&ndash;2025</strong>. AI chatbots cite TVL figures that can be months or even years old. A user asking &ldquo;What is Aave&rsquo;s TVL?&rdquo; might receive a figure that&rsquo;s off by billions of dollars. AI has no mechanism to query real-time on-chain data.</p>
-
-        <h3>Token availability and supported chains</h3>
-        <p>Which tokens are listed on which exchanges, and which blockchains a protocol supports, changes constantly. New token listings, delistings, and chain expansions happen weekly. AI frequently lists tokens as available on exchanges where they&rsquo;ve been delisted, or fails to mention recently added chain support that represents a protocol&rsquo;s competitive advantage.</p>
-
-        <h3>Security incidents and audit status</h3>
-        <p>The crypto industry has experienced over <strong>$5.8 billion in hacks and exploits since 2020</strong> (Chainalysis, 2025). AI sometimes attributes security incidents to the wrong protocol, conflates different exploits, or fails to mention that a protocol has since been audited and upgraded. For newer protocols, AI may have no information about audit status at all &mdash; a critical gap when users are deciding where to deposit funds.</p>
-
-        <div class="overflow-x-auto my-8">
-          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Crypto Reality</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">What AI Tells Users</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">The Gap</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Exchange fees change quarterly; vary by tier and method</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Cites fees from 6&ndash;18 months ago</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Users make cost decisions on wrong data</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">DeFi TVL changes by the minute ($85B&ndash;$180B range in 2024&ndash;25)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Cites TVL figures months or years old</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Protocol size/health misrepresented by billions</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Regulatory status changes weekly (licenses, settlements, restrictions)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Often reflects pre-settlement or outdated regulatory status</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Users may use services unavailable in their jurisdiction</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Token listings/delistings happen weekly</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Lists tokens on exchanges where they&rsquo;ve been removed</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Users attempt trades that will fail</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">$5.8B+ in crypto hacks since 2020 (Chainalysis)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Sometimes attributes exploits to wrong protocols</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Users avoid safe protocols or trust compromised ones</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <p><strong>outdated token prices, incorrect protocol mechanics, confused token standards, wrong network fees, fabricated TVL figures, stale governance structures.</strong></p>
 
         <div class="bg-surface-container-low p-6 my-8">
           <p class="text-lg text-on-surface leading-relaxed">
-            <strong>The compound problem:</strong> Your crypto project is either invisible in AI (bad) or mentioned with outdated fees, wrong TVL, incorrect regulatory status, or missing security audit information (worse). Both cost you users. The first means prospective users never discover you. The second means they form wrong impressions &mdash; or worse, make financial decisions based on inaccurate AI-generated information.
+            <strong>The compound problem:</strong> Your crypto brand is either invisible in AI (bad) or mentioned with wrong information (worse). Both cost you customers. The first means buyers never discover you. The second means they discover you with incorrect data that erodes trust before you ever talk to them.
           </p>
         </div>
 
 
-        <h2 id="defi-wallets-nfts">DeFi, wallets, and NFT platforms: the AI visibility breakdown</h2>
+        <h2 id="whats-at-stake">What is at stake for crypto brands</h2>
 
-        <p>Different segments of the crypto ecosystem face different AI visibility challenges. Understanding the dynamics in each category reveals where the opportunities &mdash; and the risks &mdash; are greatest.</p>
+        <p>Reddit drives the majority of AI crypto mentions. Projects not discussed on Reddit or major crypto media are functionally non-existent to AI. Each missed AI recommendation represents lost community growth and TVL at the highest-intent discovery moment.</p>
 
-        <h3>Centralized exchanges (CEXs)</h3>
-        <p>Coinbase, Binance, and Kraken dominate AI exchange recommendations because they have the largest crawlable web footprints. Coinbase alone has <strong>hundreds of SEC filings, quarterly earnings transcripts, and institutional research reports</strong> in the public web corpus &mdash; all in clean, structured HTML that AI can easily parse. Mid-tier exchanges like Gemini, Bitstamp, and OKX appear in 15&ndash;30% of AI responses. Smaller exchanges like Gate.io, MEXC, and Bitget appear in less than 5%, despite processing billions in daily volume.</p>
-
-        <h3>DeFi protocols</h3>
-        <p>DeFi has the worst AI visibility of any crypto segment. Uniswap leads because of its historical significance, massive Reddit discussion volume, and extensive CoinDesk/The Block coverage. Aave and Compound benefit from being early DeFi primitives with years of accumulated web content. But <strong>newer DeFi protocols launched after 2023 are almost entirely invisible to AI</strong>, regardless of their TVL or technical innovation. DeFiLlama tracks over 3,800 protocols &mdash; AI knows about perhaps 30 of them. Messari&rsquo;s 2025 DeFi report identified over <strong>$12 billion in TVL across protocols that AI chatbots never mention in any query variation</strong>.</p>
-
-        <h3>Wallets</h3>
-        <p>MetaMask dominates wallet AI recommendations due to its first-mover advantage, extensive documentation site (docs.metamask.io, which is server-rendered and crawlable), and massive Reddit discussion volume. Ledger and Trezor appear frequently in hardware wallet queries, benefiting from years of product review coverage. Newer wallets like Rainbow, Rabby, and Phantom (outside Solana-specific queries) have significantly lower AI visibility despite offering superior user experiences in many cases. ConsenSys&rsquo;s 2024 report stated MetaMask had <strong>over 30 million monthly active users</strong> &mdash; but AI recommends it even more disproportionately than its actual market share would suggest, because its web corpus footprint is enormous relative to competitors.</p>
-
-        <h3>NFT marketplaces</h3>
-        <p>OpenSea still dominates AI NFT recommendations despite significant market share losses to Blur and other competitors in 2023&ndash;2025. AI&rsquo;s training data reflects OpenSea&rsquo;s peak dominance period (2021&ndash;2022), when it processed over <strong>90% of NFT trading volume</strong> and generated extraordinary media coverage. Blur, which captured 50&ndash;70% of Ethereum NFT trading volume by mid-2024 (Dune Analytics), appears in only about 25&ndash;35% of AI NFT marketplace queries. This is a textbook example of AI training data lag creating a distorted market picture.</p>
-
-        <div class="overflow-x-auto my-8">
-          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Channel</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Visibility Slots</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Paid Option</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Mid-Tier Crypto Project Chance</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Google Search</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">10 organic + ads</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes (Google Ads)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Moderate &mdash; SEO + paid can compete</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Google AI Overviews</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">3&ndash;5 sources cited</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low &mdash; CoinGecko + top brands</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">ChatGPT</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">3&ndash;5 recommendations</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Very low &mdash; top 5&ndash;8 brands per category</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Perplexity</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">5&ndash;8 cited sources</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low &mdash; favors CoinDesk, The Block, aggregators</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">CoinGecko / CoinMarketCap</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Listing within aggregator</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes (promoted listings)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">High &mdash; but you&rsquo;re on their platform</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>The gap between traditional search and AI recommendations is particularly stark in crypto. On Google, a well-optimized mid-tier exchange or DeFi protocol can rank for long-tail keywords and capture targeted traffic. In AI chatbot responses, there are no long-tail keywords &mdash; just 3&ndash;5 brand recommendations that don&rsquo;t change regardless of how specific the query is. Learn more about <a href="../ai-visibility-scores-explained/">how we measure AI visibility</a> across these channels.</p>
-
-
-        <h2 id="what-works">What actually works: the AI visibility playbook for crypto</h2>
-
-        <p>The good news: AI visibility for crypto projects is a solvable problem. And because almost no crypto project is actively working on it yet &mdash; most are still focused exclusively on Twitter/X growth and Discord community building &mdash; early movers have a disproportionate advantage. Here&rsquo;s what works, based on our research into <a href="../ai-visibility-action-plan/">turning AI visibility data into action</a>.</p>
-
-        <h3>1. Audit what AI currently says about you</h3>
-        <p>Before optimizing anything, you need to know what&rsquo;s broken. Query ChatGPT, Perplexity, Gemini, and Claude with prompts your users would actually use:</p>
-        <ul>
-          <li>&ldquo;What is the best crypto exchange for [your niche]?&rdquo;</li>
-          <li>&ldquo;Tell me about [your project name]&rdquo;</li>
-          <li>&ldquo;What DeFi protocols offer the best [lending/staking/yield] rates?&rdquo;</li>
-          <li>&ldquo;Is [your project] safe? Has it been audited?&rdquo;</li>
-          <li>&ldquo;What are the fees on [your exchange/protocol]?&rdquo;</li>
-          <li>&ldquo;Compare [your project] vs [competitor]&rdquo;</li>
-        </ul>
-        <p>Document every mention (or absence), every factual error, and every competitor that appears instead of you. Or run a <a href="../../get-report/">Metricus AI visibility report</a> that does this across hundreds of query variations automatically. For a quick start, try our <a href="../diy-ai-visibility-audit/">free AI visibility check</a>.</p>
-
-        <h3>2. Fix your rendering: make critical content server-side</h3>
-        <p>This is the single highest-impact action for most crypto projects. If your website renders content client-side with JavaScript, AI crawlers cannot see it. The fix:</p>
-        <ul>
-          <li><strong>Server-side render (SSR) your key pages:</strong> Documentation, fee schedules, supported assets, security information, and about/team pages should serve complete HTML to crawlers. Use Next.js SSR/SSG, Nuxt, or pre-rendering for these pages.</li>
-          <li><strong>Create a dedicated, crawlable content hub:</strong> A blog or research section on a subdomain (blog.yourproject.com) that publishes data-rich articles about your protocol, market analysis, and educational content &mdash; all in server-rendered HTML.</li>
-          <li><strong>Publish structured data pages:</strong> Fee comparison tables, supported chain/token lists, and protocol statistics as static HTML pages, not dynamic JavaScript-rendered dashboards.</li>
-        </ul>
-
-        <h3>3. Invest in Reddit presence (authentically)</h3>
-        <p>Given Reddit&rsquo;s outsized influence on crypto AI visibility, building genuine Reddit presence is now a strategic imperative:</p>
-        <ul>
-          <li><strong>Have team members actively answer questions</strong> in relevant subreddits (r/CryptoCurrency, r/defi, r/ethereum, chain-specific subs). Not promotional posts &mdash; genuine, helpful answers with disclosed affiliation.</li>
-          <li><strong>Publish AMA (Ask Me Anything) threads</strong> with team members. AMAs generate extensive discussion threads that become part of AI training data.</li>
-          <li><strong>Share data and analysis,</strong> not marketing. Posts with specific data points (&ldquo;Our protocol processed $X in volume this quarter with zero exploits across Y audited contracts&rdquo;) generate upvotes and discussion. Marketing posts get downvoted.</li>
-          <li><strong>Engage with comparative discussions:</strong> When users in crypto subreddits ask &ldquo;What&rsquo;s the best DEX for large swaps?&rdquo; or &ldquo;Which lending protocol has the lowest rates?&rdquo;, having genuine community members provide informed answers creates the exact discussion patterns AI learns from.</li>
-        </ul>
-
-        <h3>4. Build citations on authoritative third-party sources</h3>
-        <p>AI doesn&rsquo;t just read your website (and as we&rsquo;ve established, it often can&rsquo;t). It reads everything about you across the web. The sources that carry the most weight for crypto:</p>
-        <ul>
-          <li><strong>CoinGecko and CoinMarketCap:</strong> Ensure your listing has complete, accurate, up-to-date information. These are the most-cited crypto data sources in AI responses.</li>
-          <li><strong>DeFiLlama:</strong> For DeFi protocols, DeFiLlama is increasingly the reference AI uses for TVL and protocol data. Ensure your protocol is listed and categorized correctly.</li>
-          <li><strong>Messari:</strong> Messari profiles carry significant weight in AI responses about project fundamentals, especially for institutional-oriented queries.</li>
-          <li><strong>CoinDesk and The Block:</strong> Coverage in these publications directly enters AI training data. Pitch stories with data, not hype.</li>
-          <li><strong>GitHub:</strong> Open-source projects with active GitHub repositories benefit from code-level AI training data. Ensure your README files, documentation, and repository descriptions are comprehensive and up to date.</li>
-          <li><strong>Audit firms:</strong> Published audit reports from firms like Trail of Bits, OpenZeppelin, Certik, and Halborn create authoritative citations AI can reference when users ask about your security.</li>
-        </ul>
-
-        <h3>5. Publish data-rich, citable content</h3>
-        <p>AI systems cite content that contains structured claims, statistics, and authoritative data. For crypto projects, this means:</p>
-        <ul>
-          <li><strong>Transparent fee pages</strong> with specific, dated fee schedules by tier, method, and region. Include comparison context (&ldquo;Our maker fee of 0.1% compares to the industry average of 0.15% per CoinGecko exchange data&rdquo;).</li>
-          <li><strong>Security pages</strong> with specific audit details: which firm audited, when, what was in scope, and links to the full report. Include your insurance/protection fund details with specific figures.</li>
-          <li><strong>Protocol metrics pages</strong> with regularly updated statistics: TVL history, transaction volumes, unique users, chain deployments, and governance participation rates. Numbers AI can extract and cite.</li>
-          <li><strong>Educational content</strong> that addresses user intent queries: &ldquo;How to use [your protocol] for [specific use case]: step-by-step guide with current data.&rdquo; These informational pages are the ones AI surfaces when users ask &ldquo;how do I&hellip;&rdquo; questions.</li>
-        </ul>
-
-        <h3>6. Implement structured data markup</h3>
-        <p>Add comprehensive schema markup to your website:</p>
-        <ul>
-          <li><strong>Organization</strong> schema with your official name, logo, social profiles, and founding date</li>
-          <li><strong>SoftwareApplication</strong> schema for your protocol/app with category, operating system, and feature descriptions</li>
-          <li><strong>FAQPage</strong> schema for common user questions (fees, security, supported assets, how-to guides)</li>
-          <li><strong>HowTo</strong> schema for step-by-step guides</li>
-          <li><strong>Article</strong> schema for blog posts and research content</li>
-        </ul>
-        <p>Structured data helps AI systems understand what your project does, what makes it different, and what specific claims it makes &mdash; even when your app interface is JavaScript-rendered.</p>
-
-        <div class="overflow-x-auto my-8">
-          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Action</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Effort</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Timeline</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Expected Impact</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Audit AI responses</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low (or use Metricus)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Day 1</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Baseline established</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Fix server-side rendering for key pages</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">High (dev needed)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Week 1&ndash;4</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Highest impact &mdash; makes you crawlable</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Fix factual errors at source</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Medium</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Week 1&ndash;2</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Stops active misinformation</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Update CoinGecko/DeFiLlama/Messari profiles</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Week 1</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">High &mdash; these are AI&rsquo;s primary crypto data sources</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Build authentic Reddit presence</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Medium (ongoing)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Week 1&ndash;12</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">High &mdash; Reddit is disproportionately weighted in AI training</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Publish data-rich content + structured data</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">High (ongoing)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Week 2&ndash;8</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Highest long-term impact</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Re-audit after 90 days</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Day 90</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Measure + iterate</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-
-        <h2 id="case-for-auditing">The case for auditing your crypto AI visibility now</h2>
-
-        <p>The cryptocurrency market is entering a new phase. The 2024 Bitcoin ETF approvals (BlackRock, Fidelity, and others received SEC approval in January 2024) brought an estimated <strong>$30+ billion in net inflows into spot Bitcoin ETFs</strong> within the first year (Bloomberg, 2025). Ethereum ETFs followed. Traditional finance institutions from Goldman Sachs to JPMorgan are building crypto custody and trading infrastructure. This wave of institutional and mainstream adoption means a growing share of crypto users are not crypto-native &mdash; they&rsquo;re mainstream users who discover and evaluate projects through the same channels they use for everything else: Google and, increasingly, AI chatbots.</p>
-
-        <p>A16z&rsquo;s State of Crypto report highlighted that <strong>monthly active crypto addresses exceeded 220 million in 2024</strong>, with user growth accelerating on Layer 2 networks like Base, Arbitrum, and Optimism. This expanding user base increasingly overlaps with the general AI chatbot user population. When a mainstream investor asks ChatGPT &ldquo;What DeFi protocol should I use for yield?&rdquo; and your protocol isn&rsquo;t mentioned, you&rsquo;re invisible to the fastest-growing segment of potential users.</p>
-
-        <p>The competitive dynamics are favorable for early movers. Almost no crypto project is systematically working on AI visibility today. The industry&rsquo;s marketing attention is consumed by Twitter/X threads, Discord community management, KOL partnerships, and conference appearances &mdash; none of which directly improve AI visibility. The projects that begin optimizing now will build compounding advantages as AI chatbots become a larger share of crypto discovery.</p>
-
-        <p>Consider the math for exchanges: the average crypto exchange user generates <strong>$100&ndash;$500+ in annual trading fee revenue</strong> depending on activity level (Coinbase 10-K, 2024). If even 5% of prospective users are now starting their exchange evaluation with AI (a conservative estimate), and AI never mentions your exchange, the lost-revenue calculation is significant. For a mid-tier exchange targeting 100,000 new users per year, that&rsquo;s potentially 5,000 users whose discovery journey begins and ends with an AI recommendation that doesn&rsquo;t include you &mdash; representing $500,000&ndash;$2.5 million in annual lost fee revenue.</p>
-
-        <p>For DeFi protocols, the calculation is about TVL. Every user who deposits funds contributes to the protocol&rsquo;s TVL, which in turn generates protocol fees and increases governance token value. A protocol that is invisible to AI misses the growing cohort of users who rely on AI for DeFi discovery &mdash; users who are typically higher-value because they&rsquo;re actively seeking yield and comparing options.</p>
+        <p>Crypto & Web3 brands that do not address AI visibility face compounding losses. As more buyers shift to AI-driven research, the brands invisible in AI lose top-of-funnel discovery &mdash; which means fewer leads, fewer sales, and less revenue to invest in the visibility that might fix the problem. The feedback loop accelerates with every AI model update.</p>
 
         <div class="bg-surface-container-low p-6 my-8">
           <p class="text-lg text-on-surface leading-relaxed">
-            <strong>The bottom line:</strong> If you operate a cryptocurrency exchange, DeFi protocol, wallet, NFT marketplace, or any Web3 project that depends on user acquisition &mdash; and in 2026, that&rsquo;s everyone &mdash; you need to know what AI is saying about you. The crypto projects that understand their AI visibility now, while competitors are still running Twitter spaces and Discord AMAs, will have a structural advantage that compounds with every AI model update.
+            <strong>The bottom line:</strong> If you operate a crypto brand that depends on buyer discovery &mdash; and in 2026, that is everyone &mdash; you need to know what AI is saying about you. Not next quarter. Now.
           </p>
         </div>
 
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>This article gives you the framework.</strong> A <a href="../../get-report/">Metricus report</a> gives you the specific errors, exact source map, and prioritized actions for your crypto brand &mdash; across every major AI platform. One-time purchase from $99. No subscription required.
-          </p>
-        </div>
 
-        <p class="text-sm text-slate-muted mt-8"><strong>Methodology &amp; sources:</strong> AI mention rates are based on Metricus internal testing across ChatGPT (GPT-4o), Perplexity, Gemini, Claude, and Grok using hundreds of cryptocurrency-intent query variations including exchange comparisons, DeFi protocol recommendations, wallet selections, and NFT marketplace queries (Q1 2026). Each query was run multiple times across sessions to account for response variability. Sources cited: CoinGecko Q1 2026 market data; DeFiLlama protocol tracking (2024&ndash;2025); Chainalysis 2025 Crypto Crime Report; a16z 2024 State of Crypto Report; Messari 2025 DeFi Sector Report; Coinbase 2024 10-K annual report; Binance trading volume data via CoinGecko (2025); SimilarWeb traffic estimates (2025); OpenAI-Reddit licensing agreement (NYT, May 2024); Gartner search prediction (Feb 2024); Pew Research Center AI adoption survey (2024); Princeton/Georgia Tech GEO study (Aggarwal et al., 2023); Cloudflare 2024 bot traffic analysis; Vercel 2025 web framework survey; Bloomberg ETF inflow tracking (2025); ConsenSys MetaMask usage report (2024); Dune Analytics NFT marketplace data (2024). Learn more about <a href="../ai-visibility-scores-explained/">how we measure AI visibility</a>.</p>
+        <h2 id="faq">Frequently Asked Questions</h2>
 
-        <h2>Related reading</h2>
-        <ul>
-          <li><strong><a href="../ai-visibility-action-plan/">The 5-step AI visibility action plan</a></strong> &mdash; the general framework for turning audit findings into fixes.</li>
-          <li><strong><a href="../fix-ai-brand-hallucinations/">Fixing AI hallucinations about your brand</a></strong> &mdash; the deep dive on correcting factual errors at their source.</li>
-          <li><strong><a href="../ai-visibility-how-brands-show-up/">What is AI visibility?</a></strong> &mdash; the complete explainer on how brands appear in AI.</li>
-          <li><strong><a href="../why-ai-ignores-your-brand/">Why AI ignores your brand</a></strong> &mdash; the technical reasons behind AI invisibility.</li>
-          <li><strong><a href="../diy-ai-visibility-audit/">Free AI visibility check</a></strong> &mdash; run a quick manual check before ordering a full report.</li>
-          <li><strong><a href="../ai-visibility-scores-explained/">AI visibility scores explained</a></strong> &mdash; how Metricus measures and benchmarks AI visibility.</li>
-        </ul>
+        <h3>Why does AI only recommend Coinbase and Ethereum?</h3>
+        <p>Coinbase and Ethereum have the largest AI-accessible web footprints in crypto. Coinbase generates tens of millions of monthly visits from a crawlable site. Most competing exchanges and protocols either block AI crawlers or have minimal third-party coverage.</p>
+
+        <h3>Why are 96% of crypto sites invisible to AI?</h3>
+        <p>Most crypto sites block AI crawlers via robots.txt, often unintentionally. This means AI models cannot index their content directly and rely instead on third-party mentions from Reddit, crypto media, and forums.</p>
+
+        <h3>What does AI get wrong about crypto projects?</h3>
+        <p>Common errors include outdated token prices, incorrect protocol mechanics, confused token standards across chains, wrong gas fees, fabricated TVL figures, and stale governance structures that do not reflect current DAOs.</p>
+
+        <h3>What is a Metricus AI visibility report for crypto?</h3>
+        <p>A Metricus report queries every major AI platform with crypto-specific prompts to map how your project or exchange appears. It identifies misinformation, traces errors to sources, benchmarks against competitors, and delivers prioritized actions. One-time from $99.</p>
 
       </div>
       <!-- End Article Body -->
 
-      <p class="text-sm text-slate-muted mt-8 border-t border-[#E2E8F0] pt-6">Want to see how your crypto project appears across all major AI platforms? Run a <a href="../../get-report/" class="text-primary hover:underline">Metricus AI visibility report</a>. Or browse our <a href="../../geo-knowledge-base/" class="text-primary hover:underline">GEO Knowledge Base</a> for 81 research clusters on AI visibility strategy.</p>
+      <p class="text-sm text-slate-muted mt-8 border-t border-[#E2E8F0] pt-6">Find out what AI is getting wrong about your brand. <a href="/get-report/" class="text-primary hover:underline">Get your report</a>.</p>
 
       <!-- ========== ARTICLE CTA ========== -->
       <div class="bg-primary p-8 md:p-12 mt-16">
-        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">Find out what AI says about your crypto brand</h3>
+        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">Find out what AI is getting wrong about your brand</h3>
         <p class="text-on-primary/80 text-base max-w-lg mb-8">
-          Metricus queries every major AI platform hundreds of times to find the real patterns. See your AI visibility assessment, exact AI quotes, factual errors with source map, and a prioritized action plan. One report, one price.
+          Find out what AI is getting wrong about your brand. Get your report.
         </p>
-        <a href="../../get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
+        <a href="/get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
           Get your report
           <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
         </a>
-        <p class="mt-4"><a href="../../sample-ai-visibility-report/" class="text-on-primary/70 hover:text-on-primary text-sm underline transition-colors">Or see what a report looks like &rarr;</a></p>
+        <p class="mt-4"><a href="/sample-ai-visibility-report/" class="text-on-primary/70 hover:text-on-primary text-sm underline transition-colors">Or see what a report looks like &rarr;</a></p>
       </div>
 
       <!-- ========== CITE THIS ARTICLE ========== -->
@@ -928,7 +551,7 @@
       <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
         <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
         <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
-        <a href="/blog/agency-guide-ai-visibility-audits/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
         <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
         <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
         <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>

@@ -54,7 +54,7 @@
       "url": "https://metricusapp.com"
     },
     "datePublished": "2026-04-01",
-    "dateModified": "2026-04-01",
+    "dateModified": "2026-04-10",
     "mainEntityOfPage": "https://metricusapp.com/blog/diy-ai-visibility-audit/",
     "image": "https://metricusapp.com/metricus-og-image.png"
   }
@@ -67,8 +67,8 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "Free AI Visibility Audit with Claude Code", "item": "https://metricusapp.com/blog/diy-ai-visibility-audit/"}
+      {"@type": "ListItem", "position": 2, "name": "Learn", "item": "https://metricusapp.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Free AI Visibility Check", "item": "https://metricusapp.com/blog/diy-ai-visibility-audit/"}
     ]
   }
   </script>
@@ -81,42 +81,42 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What does the free AI visibility check actually test?",
+        "name": "What does the free AI readiness check cover?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The metricus-check skill tests five areas: AI crawler access (whether GPTBot, ClaudeBot, PerplexityBot can reach your site), llms.txt presence (the emerging standard for AI-readable site summaries), JSON-LD schema markup (machine-readable identity), content citability (whether your content is structured for AI to quote), and sitemap health. It produces a score out of 100 with specific fix recommendations."
+          "text": "The check covers five areas: AI crawler access (whether GPTBot, ClaudeBot, PerplexityBot can reach your site), llms.txt configuration (the emerging standard for AI-readable site summaries), JSON-LD schema markup (machine-readable identity), content citability (whether your content is structured for AI to quote), and sitemap and technical foundation."
         }
       },
       {
         "@type": "Question",
-        "name": "How do I install the metricus-check Claude Code skill?",
+        "name": "What is the difference between an AI readiness check and a Metricus AI visibility report?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Copy the skill text into a file at ~/.claude/commands/metricus-check.md (create the commands directory if it doesn't exist). Then type /metricus-check followed by your URL in any Claude Code session. Alternatively, run the one-line install command: mkdir -p ~/.claude/commands && curl -o ~/.claude/commands/metricus-check.md https://metricusapp.com/metricus-check.md"
+          "text": "The readiness check tests whether AI can access and parse your content — the technical infrastructure. A Metricus AI visibility report queries actual AI platforms (ChatGPT, Perplexity, Gemini, Claude, and others) with real buyer prompts to measure whether AI mentions your brand, what it gets wrong, and how you compare to competitors. The readiness check tells you if the door is open; a Metricus report tells you who walks through it."
         }
       },
       {
         "@type": "Question",
-        "name": "What is the difference between a DIY AI visibility audit and a Metricus report?",
+        "name": "Can a website pass all readiness checks but still be invisible in AI recommendations?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A DIY audit checks whether AI can access and parse your content — the technical infrastructure. A Metricus report queries actual AI platforms (ChatGPT, Perplexity, Gemini, Claude, and others) with real prompts to measure whether AI mentions your brand, what it gets wrong, and how you compare to competitors. The DIY check tells you if the door is open; Metricus tells you who walks through it."
+          "text": "Yes. Technical readiness and actual visibility are different things. A site can have perfect robots.txt settings, valid schema, and strong content structure — and still be invisible to AI recommendations because the brand lacks third-party mentions, has no presence on platforms AI models cite (Reddit, Wikipedia, review sites), or uses vocabulary that doesn't match how buyers ask questions. The readiness check covers the foundation; measured data from a Metricus report reveals the reality."
         }
       },
       {
         "@type": "Question",
-        "name": "Can a website score well on the free audit but still have poor AI visibility?",
+        "name": "How long does the free AI readiness check take?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Technical readiness and actual visibility are different things. A site can have perfect robots.txt settings, valid schema, and strong content structure — and still be invisible to AI recommendations because the brand lacks third-party mentions, has no presence on platforms AI models cite (Reddit, Wikipedia, review sites), or uses vocabulary that doesn't match how buyers ask questions. The free audit checks the foundation; measured data reveals the reality."
+          "text": "Under a minute. You'll receive the check tool via email and can run it immediately on any website."
         }
       },
       {
         "@type": "Question",
-        "name": "Why give away a free AI visibility tool?",
+        "name": "Why does Metricus offer a free readiness check?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Because the technical checks are table stakes — every business should get these right, and open-source tools already exist for this. The hard part is measuring what AI actually says about your brand across platforms. We built metricus-check so you can fix the basics for free. When you're ready to see the full picture — actual mention rates, hallucinations, competitive positioning — that's what Metricus reports are for."
+          "text": "Because technical checks are table stakes — every business should get these right. The hard part is measuring what AI actually says about your brand across platforms. We built the free check so you can verify the basics. When you're ready to see the full picture — actual mention rates, hallucinations, competitive positioning — that's what Metricus AI visibility reports are for."
         }
       }
     ]
@@ -193,60 +193,10 @@
       background-color: #1E293B;
     }
 
-    pre.skill-block {
-      background: #1e293b;
-      color: #e2e8f0;
-      padding: 1.5rem;
-      overflow-x: auto;
-      font-size: 0.8rem;
-      line-height: 1.6;
-      max-height: 600px;
-      overflow-y: auto;
-    }
-
-    pre.skill-block code {
-      font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
-    }
-
-    .copy-btn {
-      transition: all 150ms ease;
-    }
-
-    .copy-btn:hover {
-      background-color: #334155;
-      color: #ffffff;
-    }
-
-    .copy-btn.copied {
-      background-color: #16a34a;
-      color: #ffffff;
-    }
-
-    .audit-output {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      padding: 2rem;
-      font-family: 'SF Mono', 'Fira Code', monospace;
-      font-size: 0.825rem;
-      line-height: 1.7;
-      overflow-x: auto;
-    }
-
-    .audit-output h3 { font-family: 'SF Mono', monospace; font-weight: 700; margin-top: 1.5rem; }
-    .audit-output table { border-collapse: collapse; width: 100%; margin: 0.75rem 0; }
-    .audit-output th, .audit-output td { border: 1px solid #e2e8f0; padding: 0.4rem 0.75rem; text-align: left; font-size: 0.8rem; }
-    .audit-output th { background: #f1f5f9; font-weight: 600; }
-
     .gap-card {
       border-left: 3px solid #ef4444;
       padding-left: 1rem;
     }
-
-    /* Soft email gate: gated content is in the HTML source for crawlers but hidden by default until the email is captured. */
-    [data-gated] { display: none; }
-    html.unlocked [data-gated] { display: revert; }
-    [data-gate-form] { display: block; }
-    html.unlocked [data-gate-form] { display: none; }
   </style>
   <script src="/js/reader-pulse-b.js" defer></script>
 </head>
@@ -263,10 +213,11 @@
         <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
       </a>
       <div class="hidden md:flex items-center gap-8">
-        <a href="/methodology/" class="nav-link-howitworks text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
-        <a href="/#pricing" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
-        <a href="/blog/" class="nav-link-blog text-sm text-on-surface-variant hover:text-on-surface transition-colors">Blog</a>
-        <a href="/blog/diy-ai-visibility-audit/" class="text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Free Check</a>
+        <a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
+        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
+        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Learn</a>
+        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
         <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
       </div>
       <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
@@ -283,9 +234,10 @@
         <span class="material-symbols-outlined">close</span>
       </button>
       <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">How It Works</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/#pricing" id="mobile-pricing-link">Pricing</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Blog</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/diy-ai-visibility-audit/">Free Check</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/" id="mobile-pricing-link">Pricing</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
       <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
     </nav>
   </div>
@@ -312,306 +264,129 @@
 
     <!-- ========== HERO ========== -->
     <section class="w-full max-w-[760px] mx-auto px-6 pt-20 pb-12">
-      <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-4">Tool</p>
+      <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-4">Free Check</p>
       <h1 class="font-display text-4xl md:text-5xl font-bold text-slate-text tracking-tight leading-[1.1] mb-6">
         DIY AI Visibility Audit: Free Method vs Professional Report Compared
       </h1>
-      <p class="text-lg text-slate-muted leading-relaxed mb-4">
-        A Claude Code skill that checks whether AI search engines can find, read, and cite your content. Install it in 10&nbsp;seconds, run it on any website, get a scored report. Then learn what no free tool can tell&nbsp;you.
+      <p class="text-2xl font-display italic text-slate-accent leading-snug mb-6">
+        Check your brand's AI visibility readiness.
       </p>
       <div class="flex items-center gap-4 text-sm text-outline">
-        <span>April 2026</span>
-        <span>&middot;</span>
-        <span>8 min read</span>
+        <span>Last updated: April 2026</span>
       </div>
     </section>
-
-
-    <!-- ========== WHY THIS EXISTS ========== -->
-    <section class="w-full max-w-[760px] mx-auto px-6 pb-12">
-      <h2 class="font-display text-2xl font-bold text-slate-text tracking-tight mb-4">AI visibility has a measurement problem</h2>
-      <p class="text-base text-slate-muted leading-relaxed mb-4">
-        Open-source GEO audit tools have exploded in 2026. They check your robots.txt, scan for schema markup, validate your llms.txt, and score your content&rsquo;s &ldquo;citability.&rdquo; Some run five parallel subagents and produce 20-page PDF reports.
-      </p>
-      <p class="text-base text-slate-muted leading-relaxed mb-4">
-        They&rsquo;re useful. We use tools like these ourselves. But they all share the same blind spot: <strong>they check whether AI <em>can</em> see you, not whether AI <em>does</em> mention you.</strong>
-      </p>
-      <p class="text-base text-slate-muted leading-relaxed mb-6">
-        That distinction matters. A site can have perfect technical infrastructure and still be invisible in AI recommendations. The reverse is also true&nbsp;&mdash;&nbsp;sites with messy markup sometimes get cited because they dominate on platforms AI models actually pull from.
-      </p>
-      <p class="text-base text-slate-muted leading-relaxed mb-6">
-        Below is a free Claude Code skill that runs the technical checks. We&rsquo;re giving it away because these checks are table stakes. Every business should get them right. The hard part&nbsp;&mdash;&nbsp;measuring what AI actually says about your brand&nbsp;&mdash;&nbsp;is what we built <a href="../../" class="text-primary font-medium hover:underline">Metricus</a> for.
-      </p>
-    </section>
-
 
     <section class="w-full max-w-[760px] mx-auto px-6">
       <div data-reader-pulse-b data-source="diy-ai-visibility-audit"></div>
     </section>
 
-    <!-- ===== EMAIL GATE — sits between the intro paragraph and the skill code block ===== -->
-    <section data-gate-form class="w-full max-w-[760px] mx-auto px-6 my-12">
+    <!-- ========== WHAT AN AI READINESS CHECK COVERS ========== -->
+    <section class="w-full max-w-[760px] mx-auto px-6 pb-12">
+      <p class="text-base text-slate-muted leading-relaxed mb-4">
+        <strong>Metricus</strong> built a free <strong>AI visibility report</strong> readiness check that tells you whether your site is technically prepared for AI search engines. It examines whether AI crawlers can access your content, whether your site is structured for AI citation, and whether your brand facts are findable by the models that power the major AI platforms.
+      </p>
+      <p class="text-base text-slate-muted leading-relaxed mb-4">
+        The check covers five categories. Each one addresses a different layer of AI readiness.
+      </p>
+
+      <h2 class="font-display text-2xl font-bold text-slate-text tracking-tight mb-4">The five readiness checks</h2>
+
+      <ul class="space-y-4 mb-8">
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-semibold text-sm mt-0.5 shrink-0">01</span>
+          <div>
+            <p class="font-semibold text-slate-text">AI Crawler Access</p>
+            <p class="text-sm text-slate-muted">Whether GPTBot, ClaudeBot, PerplexityBot, and other AI crawlers are allowed to reach your site via robots.txt.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-semibold text-sm mt-0.5 shrink-0">02</span>
+          <div>
+            <p class="font-semibold text-slate-text">llms.txt Configuration</p>
+            <p class="text-sm text-slate-muted">Whether your site provides a structured summary file that AI models can read to understand your brand, products, and key pages.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-semibold text-sm mt-0.5 shrink-0">03</span>
+          <div>
+            <p class="font-semibold text-slate-text">Schema Markup</p>
+            <p class="text-sm text-slate-muted">Whether JSON-LD structured data gives AI models machine-readable facts about your organization, products, and content.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-semibold text-sm mt-0.5 shrink-0">04</span>
+          <div>
+            <p class="font-semibold text-slate-text">Content Citability</p>
+            <p class="text-sm text-slate-muted">Whether your pages contain self-contained answer blocks, structured facts, and quotable content that AI can extract and cite.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-semibold text-sm mt-0.5 shrink-0">05</span>
+          <div>
+            <p class="font-semibold text-slate-text">Sitemap &amp; Technical Foundation</p>
+            <p class="text-sm text-slate-muted">Whether your sitemap is valid, current, comprehensive, and properly referenced for AI discovery.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+
+    <!-- ========== THE GAP STATEMENT ========== -->
+    <section class="w-full max-w-[760px] mx-auto px-6 pb-12">
+      <div class="bg-surface-container-low border border-[#E2E8F0] p-6 md:p-8">
+        <p class="text-base text-slate-text leading-relaxed font-medium">
+          This checks whether AI <em>can</em> see your site. But technical readiness and actual visibility are different things. A site can have perfect infrastructure and still be invisible in AI recommendations.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ========== EMAIL GATE ========== -->
+    <section class="w-full max-w-[760px] mx-auto px-6 pb-16">
       <div class="bg-surface-container-lowest border-l-4 border-primary p-8 md:p-12 max-w-3xl">
-        <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-3">Get the skill</p>
-        <h3 class="font-display text-2xl md:text-3xl font-bold text-slate-text tracking-tight mb-4">Get the free AI visibility check skill for Claude Code.</h3>
-        <p class="text-sm text-slate-muted leading-relaxed mb-6 max-w-xl">Drop your work email and we'll show the skill text and install command. One-time, no follow-up sequence.</p>
-        <form data-gate-source="diy" class="flex flex-col sm:flex-row gap-3 max-w-xl">
-          <input type="email" name="email" placeholder="Work email" required inputmode="email" autocomplete="email" autocapitalize="none" spellcheck="false" class="flex-1 bg-white border border-[#E2E8F0] focus:border-primary px-4 py-3 text-slate-text font-body text-sm outline-none transition-colors">
-          <button type="submit" class="bg-primary text-white text-sm font-semibold tracking-tight px-6 py-3 hover:bg-primary-dim transition-colors whitespace-nowrap">Show the skill &rarr;</button>
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-slate-text tracking-tight mb-4">Get the free AI readiness check tool</h2>
+        <p class="text-sm text-slate-muted leading-relaxed mb-6 max-w-xl">Delivered to your inbox. Run it yourself in under a minute.</p>
+        <form class="email-gate-form flex flex-col sm:flex-row gap-3 max-w-xl" data-lead-magnet="diy-skill" data-thank-you-url="/thank-you/free-check/">
+          <input type="email" name="email" required placeholder="you@company.com" inputmode="email" autocomplete="email" autocapitalize="none" spellcheck="false" class="flex-1 bg-white border border-[#E2E8F0] focus:border-primary px-4 py-3 text-slate-text font-body text-sm outline-none transition-colors">
+          <button type="submit" class="bg-primary text-white text-sm font-semibold tracking-tight px-6 py-3 hover:bg-primary-dim transition-colors whitespace-nowrap">Send Me the Check Tool</button>
         </form>
       </div>
     </section>
 
 
-    <!-- ========== THE SKILL ========== -->
-    <section data-gated class="w-full max-w-[760px] mx-auto px-6 pb-16">
-      <h2 class="font-display text-2xl font-bold text-slate-text tracking-tight mb-2">The <code class="text-lg">/metricus-check</code> skill</h2>
-      <p class="text-sm text-slate-muted mb-6">Copy the skill below or install with the one-liner underneath.</p>
-
-      <div class="relative mb-3">
-        <button id="copy-btn" onclick="copySkill()" class="copy-btn absolute top-3 right-3 px-3 py-1.5 text-xs font-semibold bg-slate-700 text-slate-300 border border-slate-600 z-10">
-          Copy skill
-        </button>
-        <pre class="skill-block" id="skill-code"><code>---
-name: metricus-check
-description: &gt;
-  Free AI visibility check for any website. Audits readiness for AI search engines
-  (ChatGPT, Perplexity, Gemini, Claude, Copilot). Checks robots.txt AI crawler access,
-  llms.txt presence, JSON-LD schema markup, content citability, and sitemap health.
-  Usage: /metricus-check https://example.com
-allowed-tools: WebFetch, Bash
----
-
-# Metricus AI Visibility Check
-
-Audit any website's readiness for AI search engines. Run all 5 checks, score each,
-and output the report.
-
-## Input
-
-The user provides a URL. Extract the domain root (e.g., `https://example.com`).
-
-## Check 1 &mdash; AI Crawler Access (25 pts)
-
-Fetch `{domain}/robots.txt` via WebFetch. Look for directives affecting these crawlers:
-
-| Crawler | Platform | Priority |
-|---------|----------|----------|
-| GPTBot | ChatGPT / OpenAI | Critical |
-| OAI-SearchBot | OpenAI search | Critical |
-| ChatGPT-User | ChatGPT browsing | High |
-| ClaudeBot | Claude / Anthropic | Critical |
-| PerplexityBot | Perplexity AI | Critical |
-| Google-Extended | Gemini / Google AI | Critical |
-| Applebot-Extended | Apple Intelligence | Medium |
-| DuckAssistBot | DuckDuckGo AI | Medium |
-| cohere-ai | Cohere | Low |
-| DeepSeekBot | DeepSeek | Medium |
-
-Score: 25 = all critical crawlers explicitly allowed. 20 = no blocks (default allow).
-15 = some blocked. 5 = most blocked. 0 = all blocked or 403.
-
-Also note: Sitemap directive? Llms-txt directive?
-
-## Check 2 &mdash; llms.txt (15 pts)
-
-Fetch `{domain}/llms.txt`. If found, check:
-- Starts with `# Site Name`
-- Has H2 sections (`## Pages`, `## Pricing`, etc.)
-- Links in markdown format: `- [Title](url): Description`
-- Also check `{domain}/llms-full.txt`
-
-Score: 15 = valid llms.txt + llms-full.txt. 10 = valid llms.txt only.
-5 = present but malformed. 0 = absent.
-
-## Check 3 &mdash; Schema Markup (20 pts)
-
-Fetch the homepage. Ask WebFetch to extract all JSON-LD structured data. Check for:
-- Organization or LocalBusiness schema
-- Product or Service schema with pricing
-- WebSite schema
-- BreadcrumbList
-- FAQPage (check 2-3 key subpages too)
-
-Score: 20 = Organization + Product + FAQ. 15 = Organization + one other.
-10 = basic Organization only. 5 = only BreadcrumbList/WebSite. 0 = none.
-
-## Check 4 &mdash; Content Citability (25 pts)
-
-Analyze homepage and one key content page for citation readiness:
-- **Answer blocks**: Self-contained paragraphs that directly answer a question
-- **Structured facts**: Numbers, stats, pricing in static HTML (not JS-only)
-- **FAQ sections**: Q&amp;A formatted content
-- **Comparison tables**: Static HTML tables
-- **Proof blocks**: Verifiable claims with data points
-
-Score: 25 = multiple answer blocks + FAQ + tables + facts.
-20 = some structured content. 15 = exists but not citation-ready.
-10 = mostly marketing copy. 5 = thin or JS-only.
-
-## Check 5 &mdash; Sitemap &amp; Technical (15 pts)
-
-Fetch `{domain}/sitemap.xml`. Check:
-- Valid and parseable
-- Recent lastmod dates (within 30 days)
-- Covers more than just the homepage
-- Referenced in robots.txt
-
-Score: 15 = valid, recent, comprehensive, referenced.
-10 = valid but incomplete. 5 = minimal. 0 = not found.
-
-## Output
-
-Present as markdown with a table of scores, detailed findings per check,
-3 quick wins, and close with:
-
-### What This Audit Covers
-This check evaluates whether AI search engines can **access** and **parse** your
-content &mdash; the technical foundation of AI visibility.
-
-### What This Audit Cannot Tell You
-- **Whether AI actually mentions your brand** &mdash; requires querying live AI platforms
-- **What AI gets wrong about you** &mdash; hallucination detection needs response analysis
-- **How you compare to competitors** &mdash; needs hundreds of queries across platforms
-- **Which platforms cite you vs. ignore you** &mdash; needs measured data, not structural checks
-- **What to fix first for maximum ROI** &mdash; prioritization requires mention-rate data
-
-&rarr; Get measured data: https://metricusapp.com/get-report/</code></pre>
-      </div>
-
-      <div class="bg-surface-container-low border border-[#E2E8F0] p-4 mb-4">
-        <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">One-line install</p>
-        <div class="relative">
-          <pre class="bg-[#1e293b] text-[#e2e8f0] p-3 text-sm font-mono overflow-x-auto"><code id="install-cmd">mkdir -p ~/.claude/commands &amp;&amp; curl -o ~/.claude/commands/metricus-check.md https://metricusapp.com/metricus-check.md</code></pre>
-          <button onclick="copyInstall()" id="copy-install-btn" class="copy-btn absolute top-2 right-2 px-2 py-1 text-xs font-semibold bg-slate-700 text-slate-300 border border-slate-600">Copy</button>
-        </div>
-      </div>
-
-      <p class="text-sm text-slate-muted leading-relaxed">
-        Then open any Claude Code session and run: <code class="bg-slate-100 px-1.5 py-0.5 text-sm">/metricus-check https://yoursite.com</code>
-      </p>
-    </section>
-
-
-    <!-- ========== WHAT THE AUDIT FINDS ========== -->
+    <!-- ========== WHAT THE CHECK MISSES (GAP EXAMPLES) ========== -->
     <section class="w-full max-w-[760px] mx-auto px-6 pb-16">
-        <!-- METRICUS_MID_CTA -->
-        <aside class="metricus-mid-cta my-12 bg-surface border-l-4 border-primary p-8 md:p-10" style="background-color:#f7f9fb;border-left:4px solid #515F74;">
-          <p class="font-display italic text-2xl md:text-3xl text-slate-text leading-tight mb-3" style="color:#0F172A;font-family:'Newsreader',serif;">What does AI say about your brand? Why? What should you change first?</p>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6" style="color:#64748B;">One-time report. No subscription. From $99.</p>
-          <a href="/get-report/" class="metricus-mid-cta-btn inline-flex items-center gap-2 bg-primary text-on-primary text-sm font-semibold tracking-tight px-6 py-3 hover:bg-primary-dim transition-colors" style="background-color:#515F74;color:#f6f7ff;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;font-size:14px;font-weight:600;">
-            Get your report <span aria-hidden="true">&rarr;</span>
-          </a>
-        </aside>
+      <h2 class="font-display text-2xl font-bold text-slate-text tracking-tight mb-4">Perfect scores, invisible brands</h2>
 
-      <h2 class="font-display text-2xl font-bold text-slate-text tracking-tight mb-2">What the free audit finds</h2>
-      <p class="text-base text-slate-muted leading-relaxed mb-6">
-        We ran <code>/metricus-check</code> on a B2B SaaS company in the analytics space. Here&rsquo;s the output, anonymized.
-      </p>
-
-      <div class="audit-output">
-        <h3>AI Visibility Check &mdash; [anonymized].com</h3>
-        <p><strong>Score: 82/100 &mdash; GOOD</strong></p>
-
-        <table>
-          <thead>
-            <tr><th>Category</th><th>Score</th><th>Status</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>AI Crawler Access</td><td>25/25</td><td>Excellent</td></tr>
-            <tr><td>llms.txt</td><td>15/15</td><td>Excellent</td></tr>
-            <tr><td>Schema Markup</td><td>17/20</td><td>Good</td></tr>
-            <tr><td>Content Citability</td><td>20/25</td><td>Good</td></tr>
-            <tr><td>Sitemap &amp; Technical</td><td>5/15</td><td>Fair</td></tr>
-          </tbody>
-        </table>
-
-        <h3>1. AI Crawler Access &mdash; 25/25</h3>
-        <p>robots.txt explicitly allows all 13 AI crawlers including GPTBot, ClaudeBot, PerplexityBot, Google-Extended, DeepSeekBot, and Applebot-Extended. Sitemap referenced. llms.txt directive present.</p>
-
-        <table>
-          <thead>
-            <tr><th>Crawler</th><th>Platform</th><th>Status</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>GPTBot</td><td>ChatGPT</td><td>Allowed</td></tr>
-            <tr><td>ClaudeBot</td><td>Claude</td><td>Allowed</td></tr>
-            <tr><td>PerplexityBot</td><td>Perplexity</td><td>Allowed</td></tr>
-            <tr><td>Google-Extended</td><td>Gemini</td><td>Allowed</td></tr>
-            <tr><td>OAI-SearchBot</td><td>OpenAI Search</td><td>Allowed</td></tr>
-            <tr><td>Applebot-Extended</td><td>Apple Intelligence</td><td>Allowed</td></tr>
-            <tr><td>DuckAssistBot</td><td>DuckDuckGo AI</td><td>Allowed</td></tr>
-            <tr><td>DeepSeekBot</td><td>DeepSeek</td><td>Allowed</td></tr>
-          </tbody>
-        </table>
-
-        <h3>2. llms.txt &mdash; 15/15</h3>
-        <p>Valid llms.txt with structured sections: Pages, Products, Pricing, Methodology, Research. llms-full.txt also present with complete content for all pages.</p>
-
-        <h3>3. Schema Markup &mdash; 17/20</h3>
-        <p>Organization, Product (with 3 pricing offers), WebSite, and BreadcrumbList schemas found on homepage. FAQPage schema found on key blog posts. Missing: SoftwareApplication schema, Review/AggregateRating schema.</p>
-
-        <h3>4. Content Citability &mdash; 20/25</h3>
-        <p>Strong: FAQ sections with direct answer blocks on 6+ pages. Proof block with structured facts (pricing, delivery time, platform count). Comparison tables in static HTML. Weak: methodology page uses interactive scroll design &mdash; some content may not be extractable by crawlers without JS.</p>
-
-        <h3>5. Sitemap &amp; Technical &mdash; 5/15</h3>
-        <p>Valid sitemap.xml with 28 URLs and recent lastmod dates. Referenced in robots.txt. Missing: support, privacy-policy, and terms-of-service pages not in sitemap. No image sitemap. No hreflang for international targeting.</p>
-
-        <h3>Quick Wins</h3>
-        <ol>
-          <li>Add SoftwareApplication schema to homepage</li>
-          <li>Add missing pages to sitemap.xml</li>
-          <li>Ensure methodology page content is in static HTML, not JS-only</li>
-        </ol>
-      </div>
-    </section>
-
-
-    <!-- ========== WHAT IT MISSES ========== -->
-    <section class="w-full max-w-[760px] mx-auto px-6 pb-16">
-      <h2 class="font-display text-2xl font-bold text-slate-text tracking-tight mb-4">82/100 looks great. Here&rsquo;s what it doesn&rsquo;t show.</h2>
-
-      <p class="text-base text-slate-muted leading-relaxed mb-6">
-        The DIY audit says this site has excellent AI infrastructure. Every crawler is welcome. Schema is in place. Content is well-structured. If you stopped here, you&rsquo;d think the job was done.
-      </p>
       <p class="text-base text-slate-muted leading-relaxed mb-8">
-        But when we ran a <a href="../../sample-ai-visibility-report/" class="text-primary font-medium hover:underline">Metricus report</a> on a similar company&nbsp;&mdash;&nbsp;querying real AI platforms with real buyer prompts&nbsp;&mdash;&nbsp;the picture was completely different:
+        When we ran a Metricus AI visibility report on a B2B SaaS company with near-perfect readiness scores, the measured data told a completely different story:
       </p>
 
       <div class="space-y-6 mb-10">
         <div class="gap-card">
           <p class="font-semibold text-slate-text mb-1">67% overall visibility&nbsp;&mdash;&nbsp;but invisible to an entire buyer segment</p>
-          <p class="text-sm text-slate-muted">The company appeared in broad comparison queries (92%) but was mentioned in only 18% of industry-specific queries. An entire category of buyers never saw the brand. No structural audit would catch this.</p>
+          <p class="text-sm text-slate-muted">The company appeared in broad comparison queries (92%) but was mentioned in only 18% of industry-specific queries. An entire category of buyers never saw the brand.</p>
         </div>
 
         <div class="gap-card">
           <p class="font-semibold text-slate-text mb-1">AI cited four factual errors about the company</p>
-          <p class="text-sm text-slate-muted">Pricing was wrong. A discontinued feature was described as current. Two competitor comparisons used outdated data. These hallucinations were traced to specific third-party sources&nbsp;&mdash;&nbsp;a review site and an old blog post. A robots.txt check can&rsquo;t detect hallucinations.</p>
+          <p class="text-sm text-slate-muted">Pricing was wrong. A discontinued feature was described as current. Two competitor comparisons used outdated data. These hallucinations were traced to specific third-party sources.</p>
         </div>
 
         <div class="gap-card">
           <p class="font-semibold text-slate-text mb-1">Third-party sources outweighed company content 6:1</p>
-          <p class="text-sm text-slate-muted">AI pulled from G2, Reddit threads, and a Gartner mention&nbsp;&mdash;&nbsp;not the company&rsquo;s own site. The schema markup was perfect, but AI preferred external voices. A citability score based on your own content misses this dynamic entirely.</p>
+          <p class="text-sm text-slate-muted">AI pulled from G2, Reddit threads, and a Gartner mention&nbsp;&mdash;&nbsp;not the company&rsquo;s own site. Perfect schema markup didn&rsquo;t change which sources AI preferred.</p>
         </div>
 
         <div class="gap-card">
           <p class="font-semibold text-slate-text mb-1">Wording mismatch was the #1 visibility killer</p>
-          <p class="text-sm text-slate-muted">The company called their product a &ldquo;platform&rdquo;; buyers asked AI about &ldquo;tools.&rdquo; The site used &ldquo;analytics&rdquo;; queries used &ldquo;reports.&rdquo; This wording mismatch was invisible in every technical check but explained most of the missing visibility.</p>
+          <p class="text-sm text-slate-muted">The company called their product a &ldquo;platform&rdquo;; buyers asked AI about &ldquo;tools.&rdquo; The site used &ldquo;analytics&rdquo;; queries used &ldquo;reports.&rdquo; No technical check catches vocabulary gaps.</p>
         </div>
-      </div>
-
-      <div class="bg-surface-container-low border border-[#E2E8F0] p-6 mb-6">
-        <p class="text-sm text-slate-muted leading-relaxed">
-          <strong class="text-slate-text">The DIY check tells you if the door is open.</strong> The Metricus report tells you who walks through it, what they see, and what they get wrong.
-        </p>
-        <p class="text-sm text-slate-muted leading-relaxed mt-3">
-          See the full anonymized example: <a href="../../sample-ai-visibility-report/" class="text-primary font-medium hover:underline">Metricus Sample Report &rarr;</a>
-        </p>
       </div>
     </section>
 
 
-    <!-- ========== WHAT EACH COVERS ========== -->
+    <!-- ========== FREE VS PAID COMPARISON TABLE ========== -->
     <section class="w-full max-w-[760px] mx-auto px-6 pb-16">
       <h2 class="font-display text-2xl font-bold text-slate-text tracking-tight mb-6">Free check vs. measured report</h2>
 
@@ -662,11 +437,21 @@ content &mdash; the technical foundation of AI visibility.
             </tr>
             <tr>
               <td class="p-3">What should I fix first?</td>
-              <td class="p-3 text-center">Generic tips</td>
+              <td class="p-3 text-center">&mdash;</td>
               <td class="p-3 text-center font-medium text-slate-text">Prioritized by mention-rate impact</td>
             </tr>
           </tbody>
         </table>
+      </div>
+    </section>
+
+
+    <!-- ========== BRIDGE TO PAID ========== -->
+    <section class="w-full max-w-[760px] mx-auto px-6 pb-16">
+      <div class="bg-surface-container-low border border-[#E2E8F0] p-6 md:p-8">
+        <p class="text-base text-slate-text leading-relaxed">
+          Your technical check covers whether AI <strong>can</strong> see your site. A Metricus report shows what AI <strong>actually says</strong> about your brand, what it gets wrong, and what to fix first. That&rsquo;s the part no free tool can do.
+        </p>
       </div>
     </section>
 
@@ -677,33 +462,33 @@ content &mdash; the technical foundation of AI visibility.
 
       <div class="space-y-8">
         <div>
-          <h3 class="font-semibold text-base text-slate-text mb-2">What does the free AI visibility check actually test?</h3>
-          <p class="text-sm text-slate-muted leading-relaxed">Five areas: AI crawler access (whether GPTBot, ClaudeBot, PerplexityBot can reach your site), llms.txt presence (the emerging standard for AI-readable site summaries), JSON-LD schema markup (machine-readable identity), content citability (whether your content is structured for AI to quote), and sitemap health. It produces a score out of 100 with specific fix recommendations.</p>
-        </div>
-
-        <div>
-          <h3 class="font-semibold text-base text-slate-text mb-2">How do I install the metricus-check skill?</h3>
-          <p class="text-sm text-slate-muted leading-relaxed">Copy the skill text into a file at <code class="bg-slate-100 px-1 py-0.5 text-xs">~/.claude/commands/metricus-check.md</code> (create the commands directory if it doesn&rsquo;t exist). Then type <code class="bg-slate-100 px-1 py-0.5 text-xs">/metricus-check</code> followed by your URL in any Claude Code session. Or run the one-line install command shown above.</p>
+          <h3 class="font-semibold text-base text-slate-text mb-2">What does the free AI readiness check cover?</h3>
+          <p class="text-sm text-slate-muted leading-relaxed">Five areas: AI crawler access (whether GPTBot, ClaudeBot, PerplexityBot can reach your site), llms.txt configuration (the emerging standard for AI-readable site summaries), JSON-LD schema markup (machine-readable identity), content citability (whether your content is structured for AI to quote), and sitemap and technical foundation.</p>
         </div>
 
         <div>
           <h3 class="font-semibold text-base text-slate-text mb-2">What&rsquo;s the difference between this and a Metricus report?</h3>
-          <p class="text-sm text-slate-muted leading-relaxed">This checks whether AI <em>can</em> access and parse your content&nbsp;&mdash;&nbsp;the technical infrastructure. A Metricus report queries actual AI platforms with real prompts to measure whether AI <em>does</em> mention your brand, what it gets wrong, and how you compare to competitors. The free check tells you if the door is open; Metricus tells you who walks through it.</p>
+          <p class="text-sm text-slate-muted leading-relaxed">This checks whether AI <em>can</em> access and parse your content&nbsp;&mdash;&nbsp;the technical infrastructure. A <a href="/get-report/" class="text-primary font-medium hover:underline">Metricus AI visibility report</a> queries actual AI platforms with real buyer prompts to measure whether AI <em>does</em> mention your brand, what it gets wrong, and how you compare to competitors. The readiness check tells you if the door is open; Metricus tells you who walks through it.</p>
         </div>
 
         <div>
-          <h3 class="font-semibold text-base text-slate-text mb-2">Can a site score well on the free audit but still be invisible to AI?</h3>
+          <h3 class="font-semibold text-base text-slate-text mb-2">Can a site pass all readiness checks but still be invisible to AI?</h3>
           <p class="text-sm text-slate-muted leading-relaxed">Yes. Technical readiness and actual visibility are different things. A site can have perfect robots.txt, valid schema, and strong content structure&nbsp;&mdash;&nbsp;and still be invisible because the brand lacks third-party mentions, has no presence on platforms AI models cite (Reddit, Wikipedia, review sites), or uses vocabulary that doesn&rsquo;t match how buyers ask questions.</p>
         </div>
 
         <div>
-          <h3 class="font-semibold text-base text-slate-text mb-2">Why give this away for free?</h3>
-          <p class="text-sm text-slate-muted leading-relaxed">Because these technical checks are table stakes. Open-source tools already exist for this. Every business should get the basics right. We built metricus-check so you can fix the foundation for free. When you&rsquo;re ready for measured data&nbsp;&mdash;&nbsp;actual mention rates, hallucination detection, competitive positioning&nbsp;&mdash;&nbsp;that&rsquo;s what <a href="../../get-report/" class="text-primary hover:underline">Metricus reports</a> are for.</p>
+          <h3 class="font-semibold text-base text-slate-text mb-2">How long does the free check take?</h3>
+          <p class="text-sm text-slate-muted leading-relaxed">Under a minute. You&rsquo;ll receive the check tool via email and can run it immediately on any website.</p>
         </div>
 
         <div>
-          <h3 class="font-semibold text-base text-slate-text mb-2">Where can I learn more about AI visibility concepts?</h3>
-          <p class="text-sm text-slate-muted leading-relaxed">Our <a href="../../geo-knowledge-base/" class="text-primary hover:underline">GEO Knowledge Base</a> covers 81 research clusters on AI visibility, brand monitoring, platform strategies, and GEO agency playbooks. For a practical starting point, read <a href="../what-is-ai-visibility/" class="text-primary hover:underline">What is AI visibility?</a> or see how we <a href="../ai-visibility-scores-explained/" class="text-primary hover:underline">measure AI visibility scores</a>.</p>
+          <h3 class="font-semibold text-base text-slate-text mb-2">Why does Metricus offer a free readiness check?</h3>
+          <p class="text-sm text-slate-muted leading-relaxed">Because these technical checks are table stakes. Every business should get the basics right. The hard part is measuring what AI actually says about your brand across platforms. We built the free check so you can verify the foundation. When you&rsquo;re ready for measured data&nbsp;&mdash;&nbsp;actual mention rates, hallucination detection, competitive positioning&nbsp;&mdash;&nbsp;that&rsquo;s what <a href="/get-report/" class="text-primary font-medium hover:underline">Metricus reports</a> are for.</p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-base text-slate-text mb-2">Where can I learn more about AI visibility?</h3>
+          <p class="text-sm text-slate-muted leading-relaxed">Our <a href="/geo-knowledge-base/" class="text-primary hover:underline">GEO Knowledge Base</a> covers 81 research clusters on AI visibility, brand monitoring, platform strategies, and GEO agency playbooks. For a practical starting point, read <a href="../what-is-ai-visibility/" class="text-primary hover:underline">What is AI visibility?</a> or see how we <a href="../ai-visibility-scores-explained/" class="text-primary hover:underline">measure AI visibility scores</a>.</p>
         </div>
       </div>
     </section>
@@ -713,12 +498,12 @@ content &mdash; the technical foundation of AI visibility.
     <section class="w-full max-w-[760px] mx-auto px-6 pb-20">
       <div class="bg-primary p-8 md:p-12 text-center">
         <h2 class="font-display text-2xl md:text-3xl font-bold text-on-primary mb-4">
-          Ready for measured data?
+          See what AI actually says about your brand
         </h2>
         <p class="text-on-primary/80 text-base mb-8 max-w-md mx-auto">
-          The free check gives you the foundation. A Metricus report gives you what AI actually says&nbsp;&mdash;&nbsp;and exactly how to fix it.
+          The free check covers the foundation. A Metricus report shows your real visibility across every major AI platform&nbsp;&mdash;&nbsp;and exactly what to fix.
         </p>
-        <a href="../../get-report/" class="inline-block px-8 py-3 bg-white text-primary font-semibold text-sm tracking-tight hover:bg-slate-100 transition-colors">
+        <a href="/get-report/" class="inline-block px-8 py-3 bg-white text-primary font-semibold text-sm tracking-tight hover:bg-slate-100 transition-colors">
           Get your AI visibility report &rarr;
         </a>
         <p class="text-on-primary/60 text-xs mt-4">From $99. Pay per report. No subscription.</p>
@@ -776,43 +561,41 @@ content &mdash; the technical foundation of AI visibility.
       </div>
     </section>
 
-        <!-- ========== CITE THIS ARTICLE ========== -->
-      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
-        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
-          <cite class="not-italic"><a href="https://metricusapp.com/blog/diy-ai-visibility-audit/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; DIY AI Visibility Audit: Free Method vs Professional Report Compared</a></cite>
-        </p>
-      </footer>
+    <!-- ========== CITE THIS ARTICLE ========== -->
+    <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
+      <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
+        <cite class="not-italic"><a href="https://metricusapp.com/blog/diy-ai-visibility-audit/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; DIY AI Visibility Audit: Free Method vs Professional Report Compared</a></cite>
+      </p>
+    </footer>
 
-    </main>
+  </main>
 
 
-  
-    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
-      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-6">Go deeper</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
-          <p class="text-sm text-on-surface-variant mt-1">Deep dive into AI accuracy patterns</p>
-        </a>
-        <a href="/ai-platform-comparison-brands/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">Platform Intelligence Guide</p>
-          <p class="text-sm text-on-surface-variant mt-1">AI crawler behavior and technical setup</p>
-        </a>
-      </div>
-    </section>
+  <!-- ========== RELATED KNOWLEDGE BASES ========== -->
+  <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
+    <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-6">Go deeper</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+        <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+        <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
+        <p class="text-sm text-on-surface-variant mt-1">Deep dive into AI accuracy patterns</p>
+      </a>
+      <a href="/ai-platform-comparison-brands/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+        <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+        <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">Platform Intelligence Guide</p>
+        <p class="text-sm text-on-surface-variant mt-1">AI crawler behavior and technical setup</p>
+      </a>
+    </div>
+  </section>
 
   <!-- ========== FOOTER ========== -->
-  <!-- Site Footer -->
   <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
       <p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p>
       <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
         <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
         <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
-        <a href="/blog/agency-guide-ai-visibility-audits/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
         <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
         <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
         <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
@@ -824,62 +607,36 @@ content &mdash; the technical foundation of AI visibility.
   </footer>
 
 
-  <script>
-    function copySkill() {
-      const code = document.getElementById('skill-code').textContent;
-      navigator.clipboard.writeText(code).then(() => {
-        const btn = document.getElementById('copy-btn');
-        btn.textContent = 'Copied!';
-        btn.classList.add('copied');
-        setTimeout(() => { btn.textContent = 'Copy skill'; btn.classList.remove('copied'); }, 2000);
-      });
-    }
-
-    function copyInstall() {
-      const cmd = document.getElementById('install-cmd').textContent;
-      navigator.clipboard.writeText(cmd).then(() => {
-        const btn = document.getElementById('copy-install-btn');
-        btn.textContent = 'Copied!';
-        btn.classList.add('copied');
-        setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
-      });
-    }
-  </script>
-
-  <!-- Email gate submit handler — fires sendBeacon to Sheets, saves to localStorage, unlocks content -->
+  <!-- Email gate submit handler -->
   <script>
     (function() {
       var SCRIPT_URL = 'https://metricus.red-hill-a87d.workers.dev/';
 
-      function logAndUnlock(email, source) {
-        try {
-          var ts = new Date().toISOString();
-          var data = new URLSearchParams({
-            contact: email,
-            pricing: source + '|' + ts
-          });
-          if (navigator.sendBeacon) navigator.sendBeacon(SCRIPT_URL, data);
-          else fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: data }).catch(function() {});
-        } catch(e) {}
-
-        try { localStorage.setItem('metricus_email', email); } catch(e) {}
-
-        document.documentElement.classList.add('unlocked');
-
-        setTimeout(function() {
-          var target = document.querySelector('[data-gated]');
-          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 50);
-      }
-
-      document.querySelectorAll('form[data-gate-source]').forEach(function(form) {
+      document.querySelectorAll('form.email-gate-form').forEach(function(form) {
         form.addEventListener('submit', function(e) {
           e.preventDefault();
           var emailInput = form.querySelector('input[type="email"]');
           var email = emailInput ? emailInput.value.trim() : '';
           if (!email) return;
-          var source = form.getAttribute('data-gate-source');
-          logAndUnlock(email, source);
+
+          var leadMagnet = form.getAttribute('data-lead-magnet') || 'diy-skill';
+          var thankYouUrl = form.getAttribute('data-thank-you-url');
+          var ts = new Date().toISOString();
+
+          try {
+            var data = new URLSearchParams({
+              contact: email,
+              pricing: leadMagnet + '|' + ts
+            });
+            if (navigator.sendBeacon) navigator.sendBeacon(SCRIPT_URL, data);
+            else fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: data }).catch(function() {});
+          } catch(e) {}
+
+          try { localStorage.setItem('metricus_email', email); } catch(e) {}
+
+          if (thankYouUrl) {
+            window.location.href = thankYouUrl;
+          }
         });
       });
     })();

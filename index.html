@@ -175,7 +175,7 @@
     "url": "https://metricusapp.com",
     "description": "AI visibility reports for brands — find out what AI says about your brand, and how to fix it.",
     "email": "hello@metricusapp.com",
-    "dateModified": "2026-04-03"
+    "dateModified": "2026-04-10"
   }
   </script>
   <script type="application/ld+json">
@@ -223,9 +223,10 @@
       </a>
       <div class="hidden md:flex items-center gap-8">
         <a href="/methodology/" class="nav-link-howitworks text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
-        <a href="/#pricing" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
-        <a href="/blog/" class="nav-link-blog text-sm text-on-surface-variant hover:text-on-surface transition-colors">Blog</a>
-        <a href="/blog/diy-ai-visibility-audit/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Free Check</a>
+        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
+        <a href="/blog/" class="nav-link-blog text-sm text-on-surface-variant hover:text-on-surface transition-colors">Learn</a>
+        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
         <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
       </div>
       <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
@@ -242,9 +243,10 @@
         <span class="material-symbols-outlined">close</span>
       </button>
       <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">How It Works</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/#pricing" id="mobile-pricing-link">Pricing</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Blog</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/diy-ai-visibility-audit/">Free Check</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/">Pricing</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
       <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
     </nav>
   </div>
@@ -256,14 +258,12 @@
       var menu=document.getElementById('mobile-menu');
       var close=document.getElementById('mobile-menu-close');
       var backdrop=document.getElementById('mobile-menu-backdrop');
-      var pricingLink=document.getElementById('mobile-pricing-link');
       if(!btn||!menu)return;
       function open(){menu.classList.remove('hidden');menu.setAttribute('aria-hidden','false');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
       function shut(){menu.classList.add('hidden');menu.setAttribute('aria-hidden','true');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
       btn.addEventListener('click',open);
       if(close)close.addEventListener('click',shut);
       if(backdrop)backdrop.addEventListener('click',shut);
-      if(pricingLink)pricingLink.addEventListener('click',shut);
     })();
   </script>
 
@@ -280,21 +280,17 @@
         See what AI says about your brand, why it says it, and what to fix first
       </h1>
       <p class="text-[16px] md:text-[18px] text-slate-muted font-normal max-w-[580px] mb-12 leading-relaxed">
-        The AI visibility audit you run before committing to ongoing monitoring. One report, every major AI platform, a prioritized fix list. No subscription. From $99.
+        Your report covers how your brand appears across the major AI platforms your buyers use. One report, a prioritized fix list. No subscription. From $99.
       </p>
 
-      <!-- Input Group -->
-      <form id="heroForm" data-gate-source="hero" data-redirect="/sample-ai-visibility-report/" class="w-full max-w-[540px] mb-20 relative z-20">
-        <p class="text-[11px] uppercase tracking-[0.2em] font-label font-semibold text-primary mb-4 text-center">One-time AI visibility report</p>
-        <div class="flex flex-col gap-3 bg-white border border-[#E2E8F0] shadow-xl shadow-slate-200/50 p-5">
-          <input type="email" id="heroEmail" name="email" placeholder="Work email" required inputmode="email" autocomplete="email" autocapitalize="none" spellcheck="false" class="w-full h-12 px-4 bg-transparent border-0 border-b border-[#E2E8F0] focus:border-primary text-[15px] text-slate-text placeholder:text-slate-muted outline-none transition-colors">
-          <button type="submit" class="h-12 px-6 bg-primary text-white font-semibold text-[15px] flex items-center justify-center gap-2 group hover:bg-primary-dim transition-colors">
-            See what AI says about you
-            <span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
-          </button>
-        </div>
+      <!-- Primary CTA -->
+      <div class="w-full max-w-[540px] mb-20 relative z-20 text-center">
+        <a href="/get-report/" class="inline-flex items-center justify-center gap-2 h-14 px-10 bg-primary text-white font-semibold text-[16px] hover:bg-primary-dim transition-colors group">
+          Get Your AI Visibility Report
+          <span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+        </a>
         <p class="text-xs text-slate-muted text-center mt-4">One-time report. No subscription. From $99.</p>
-      </form>
+      </div>
 
       <!-- Floating 3D Graphic Container -->
       <div class="w-full max-w-[1000px] relative mt-8 perspective-1000" style="isolation: isolate; contain: layout style paint;">
@@ -342,7 +338,7 @@
               </div>
             </div>
 
-            <!-- Mentions vs recommendations — real algorithm output, not a score -->
+            <!-- Mentions vs recommendations -->
             <div class="px-8 py-5 bg-slate-50/50 border-t border-slate-100">
               <span class="text-[10px] uppercase tracking-[0.15em] font-bold text-slate-400 block mb-3">Mentions vs recommendations</span>
               <div class="space-y-2 text-[12px]">
@@ -367,19 +363,6 @@
           <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-slate-200/20 blur-3xl -z-10"></div>
         </div>
       </div>
-
-      <p class="mt-20 text-[13px] text-slate-muted font-medium tracking-wide uppercase">
-        Audit first, monitor later. Used by agencies, consultants, and brands.
-      </p>
-    </section>
-
-    <!-- ========== LLM-EXTRACTABLE PRODUCT DEFINITION ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-16 relative z-20">
-      <div class="bg-surface border border-[#E2E8F0] p-8 md:p-12 max-w-[800px] mx-auto">
-        <p class="text-[15px] text-slate-muted leading-relaxed font-body-sans">
-          Metricus audits how your brand appears across ChatGPT, Perplexity, Gemini, Claude, Grok, DeepSeek, Copilot, and Google AI Overviews. Every report answers three questions: what does AI say about you, why does it say that, and what should you change first. We trace which sources feed AI's answers, identify wrong facts and wording mismatches, and deliver a prioritized fix list. One report, one price. Audit first, then decide if you need ongoing monitoring.
-        </p>
-      </div>
     </section>
 
 
@@ -388,23 +371,23 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
         <div class="flex flex-col border-t border-[#E2E8F0] pt-8">
           <span class="material-symbols-outlined text-primary mb-4 text-[28px]">visibility</span>
-          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">What AI Says About Your Brand</h3>
+          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">What AI Says</h3>
           <p class="text-[15px] text-slate-muted leading-relaxed">
-            Exact quotes, mention rates, wrong facts, and competitor comparisons — across every major AI platform. See what your prospects see when they ask AI instead of Google.
+            Exact quotes, mention rates, wrong facts, and competitor comparisons. See what your prospects see when they ask AI instead of Google.
           </p>
         </div>
         <div class="flex flex-col border-t border-[#E2E8F0] pt-8">
           <span class="material-symbols-outlined text-primary mb-4 text-[28px]">account_tree</span>
-          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">Why AI Chose Your Competitors</h3>
+          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">Why It Says It</h3>
           <p class="text-[15px] text-slate-muted leading-relaxed">
-            Which sources feed the AI's answer — G2 reviews, Reddit threads, competitor pages. Where your wording doesn't match what buyers ask. Why AI prefers a competitor and what reasoning it uses.
+            Which sources feed the answer. Where your wording doesn't match what buyers ask. Why AI prefers a competitor and what reasoning it uses.
           </p>
         </div>
         <div class="flex flex-col border-t border-[#E2E8F0] pt-8">
           <span class="material-symbols-outlined text-primary mb-4 text-[28px]">checklist</span>
-          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">What to Fix and Where to Start</h3>
+          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">What to Fix First</h3>
           <p class="text-[15px] text-slate-muted leading-relaxed">
-            A prioritized fix list tied to specific findings. Which pages to update, which platforms to get listed on, which wording to adopt. Not a score — a playbook.
+            A prioritized fix list tied to specific findings. Which pages to update, which wording to adopt. Not a score — a playbook.
           </p>
         </div>
       </div>
@@ -419,189 +402,70 @@
       </a>
     </section>
 
-    <!-- ========== PRICING TIERS ========== -->
+
+    <!-- ========== PRICING SUMMARY ========== -->
     <section id="pricing" class="py-16 md:py-24 bg-surface relative">
       <div class="absolute inset-0 bg-grid-dots pointer-events-none"></div>
       <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
 
-        <!-- Pricing Header -->
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-end mb-16">
-          <div class="md:col-span-7">
-            <p class="text-xs uppercase tracking-widest text-slate-muted mb-4 font-semibold font-body-sans">Pay-Per-Report Pricing</p>
-            <h2 class="font-display text-5xl md:text-7xl leading-[0.95] text-on-surface">
-              Pick the question keeping you up at <em class="italic">night</em>.
-            </h2>
-          </div>
-          <div class="md:col-span-5">
-            <p class="text-base text-on-surface-variant leading-relaxed font-body-sans">
-              Each tier goes deeper into why AI recommends (or ignores) your brand. One report, one-time fee — whether it's for your brand or a client's.
-            </p>
-            <p class="text-sm text-on-surface-variant mt-3 font-body-sans"><strong class="text-on-surface">Delivered within 24 hours.</strong> 3+ actionable insights or full refund.</p>
-          </div>
+        <div class="mb-12">
+          <p class="text-xs uppercase tracking-widest text-slate-muted mb-4 font-semibold font-body-sans">Pay-Per-Report Pricing</p>
+          <h2 class="font-display text-4xl md:text-5xl leading-[0.95] text-on-surface mb-4">
+            Three tiers. One question each.
+          </h2>
+          <p class="text-base text-on-surface-variant leading-relaxed font-body-sans max-w-2xl">
+            Each tier goes deeper into why AI recommends (or ignores) your brand. One report, one-time fee. Delivered within 24 hours. 3+ actionable insights or full refund.
+          </p>
         </div>
 
-        <!-- Every-tier-includes callout — visible block, not buried in paragraph copy -->
-        <div class="mb-8 p-5 bg-surface-container-low border-l-4 border-primary flex items-start gap-3">
-          <span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0">code</span>
-          <div>
-            <p class="text-sm text-on-surface font-body-sans"><strong class="text-on-surface">Every tier includes a draft <code class="text-xs bg-surface-container px-1.5 py-0.5">llms.txt</code> for your domain root.</strong> It's the canonical brand-facts file AI assistants now read &mdash; we write the first version for you so AI gets your facts right from day one.</p>
-          </div>
-        </div>
-
-        <!-- Tier Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3">
-
-          <!-- Tier 1: Snapshot -->
-          <div class="bg-surface-container-lowest p-10 min-h-[500px] flex flex-col">
-            <div class="mb-8">
-              <h3 class="font-headline text-3xl text-on-surface mb-1">Snapshot</h3>
-              <p class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">"What does AI say about my brand?"</p>
-            </div>
-            <div class="mb-8">
-              <span class="font-headline text-5xl text-on-surface">$99</span>
-              <span class="text-sm text-on-surface-variant ml-2">per report</span>
-            </div>
-            <p class="text-sm text-on-surface-variant leading-relaxed mb-6 font-body-sans">
-              The first audit of how major AI assistants describe your brand. Page-level fixes you can ship this week.
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Snapshot -->
+          <div class="bg-surface-container-lowest p-8 flex flex-col">
+            <h3 class="font-headline text-2xl text-on-surface mb-1">Snapshot</h3>
+            <p class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold mb-4">"What does AI say about my brand?"</p>
+            <span class="font-headline text-4xl text-on-surface mb-3">$99</span>
+            <p class="text-sm text-on-surface-variant leading-relaxed font-body-sans">
+              The first audit of how AI describes your brand. Exact quotes, wrong facts, mention rates, and a page-level fix list.
             </p>
-            <ul class="space-y-3 mb-auto text-sm text-on-surface-variant font-body-sans">
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                Exact AI quotes about your brand
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                Every wrong fact AI repeats about you
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                How often AI mentions you vs recommends you
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                The pages on your site AI actually reads
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                Your top 2 competitors and how AI describes them
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                Page-level fix list you can ship this week
-              </li>
-            </ul>
-            <a href="#" data-action="buy-tier" data-tier="snapshot" class="mt-10 block text-center border-2 border-primary text-primary text-xs font-semibold uppercase tracking-widest px-6 py-3 hover:bg-primary hover:text-on-primary transition-colors">
-              Get this report
-            </a>
           </div>
 
-          <!-- Tier 2: Deep Dive (Most popular) -->
-          <div class="bg-surface-container-lowest p-10 min-h-[500px] flex flex-col relative border-x-4 border-primary shadow-xl">
+          <!-- Deep Dive -->
+          <div class="bg-surface-container-lowest p-8 flex flex-col relative border-x-4 border-primary shadow-xl">
             <div class="absolute top-0 right-0 bg-primary text-on-primary text-[10px] font-semibold uppercase tracking-widest px-4 py-1.5">
               Most popular
             </div>
-            <div class="mb-8">
-              <h3 class="font-headline text-3xl text-on-surface mb-1">Deep Dive</h3>
-              <p class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">"Why does AI prefer my competitors?"</p>
-            </div>
-            <div class="mb-8">
-              <span class="font-headline text-5xl text-on-surface">$299</span>
-              <span class="text-sm text-on-surface-variant ml-2">per report</span>
-            </div>
-            <p class="text-sm text-on-surface-variant leading-relaxed mb-6 font-body-sans">
-              Everything in Snapshot, plus the causal layer. Site-level fixes you can ship this month, each with the "why."
+            <h3 class="font-headline text-2xl text-on-surface mb-1">Deep Dive</h3>
+            <p class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold mb-4">"Why does AI prefer my competitors?"</p>
+            <span class="font-headline text-4xl text-on-surface mb-3">$299</span>
+            <p class="text-sm text-on-surface-variant leading-relaxed font-body-sans">
+              Everything in Snapshot, plus the causal layer. Why each competitor wins, where your wording mismatches, and a site-level fix list with effort and impact labels.
             </p>
-            <ul class="space-y-3 mb-auto text-sm text-on-surface-variant font-body-sans">
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                Everything in Snapshot
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                Why each of your top 5 competitors wins
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                The exact AI searches that find you (and the ones that should but don't)
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                Where your wording doesn't match what buyers ask
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                What proof AI looks for when recommending
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                What makes AI recommend you, not just mention you
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                Site-level fix list with effort + impact labels
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                What invisibility is costing you
-              </li>
-            </ul>
-            <a href="#" data-action="buy-tier" data-tier="deep-dive" class="mt-10 block text-center bg-primary text-on-primary text-xs font-semibold uppercase tracking-widest px-6 py-3 hover:bg-primary-dim transition-colors">
-              Get this report
-            </a>
           </div>
 
-          <!-- Tier 3: Full Arsenal -->
-          <div class="bg-surface-container-lowest p-10 min-h-[500px] flex flex-col">
-            <div class="mb-8">
-              <h3 class="font-headline text-3xl text-on-surface mb-1">Full Arsenal</h3>
-              <p class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">"What do I fix first — for every type of buyer?"</p>
-            </div>
-            <div class="mb-8">
-              <span class="font-headline text-5xl text-on-surface">$499</span>
-              <span class="text-sm text-on-surface-variant ml-2">per report</span>
-            </div>
-            <p class="text-sm text-on-surface-variant leading-relaxed mb-6 font-body-sans">
-              Everything in Deep Dive, plus segment depth and a sequenced 90-day plan covering page, content, and positioning.
+          <!-- Full Arsenal -->
+          <div class="bg-surface-container-lowest p-8 flex flex-col">
+            <h3 class="font-headline text-2xl text-on-surface mb-1">Full Arsenal</h3>
+            <p class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold mb-4">"What do I fix first — for every type of buyer?"</p>
+            <span class="font-headline text-4xl text-on-surface mb-3">$499</span>
+            <p class="text-sm text-on-surface-variant leading-relaxed font-body-sans">
+              Everything in Deep Dive, plus segment depth, 10+ competitors mapped, and a sequenced plan covering page, content, and positioning.
             </p>
-            <ul class="space-y-3 mb-auto text-sm text-on-surface-variant font-body-sans">
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                Everything in Deep Dive
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                Which buyer types find you and which don't
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                10+ competitors mapped, not just 5
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                The words that make you invisible
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                Categories where you should show up but don't
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                How AI decides who to recommend in your category
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                Week 1 sprint + where to compete vs reposition
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-lg mt-0.5">check</span>
-                How complete the audit is (coverage %)
-              </li>
-            </ul>
-            <a href="#" data-action="buy-tier" data-tier="full-arsenal" class="mt-10 block text-center bg-surface-container-high text-on-surface text-xs font-semibold uppercase tracking-widest px-6 py-3 hover:bg-surface-container-highest transition-colors">
-              Get this report
-            </a>
           </div>
+        </div>
 
+        <!-- Every-tier-includes callout -->
+        <div class="mt-8 p-5 bg-surface-container-low border-l-4 border-primary flex items-start gap-3">
+          <span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0">code</span>
+          <div>
+            <p class="text-sm text-on-surface font-body-sans"><strong class="text-on-surface">Every tier includes a draft <code class="text-xs bg-surface-container px-1.5 py-0.5">llms.txt</code> for your domain root.</strong> The canonical brand-facts file AI assistants now read &mdash; we write the first version for you so AI gets your facts right from day one.</p>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center">
+          <a href="/pricing/" class="inline-flex items-center gap-2 text-[16px] text-primary font-semibold hover:text-primary-hover transition-colors group">
+            See all plans and full comparison
+            <span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
         </div>
 
         <!-- Agency Volume CTA -->
@@ -610,161 +474,9 @@
             <h3 class="font-headline text-xl text-on-surface mb-1">Running multiple audits?</h3>
             <p class="text-sm text-on-surface-variant font-body-sans">Teams ordering 5+ reports per month get priority turnaround and volume pricing.</p>
           </div>
-          <a href="agency-inquiry/" class="inline-block bg-on-primary-fixed text-on-primary text-xs font-semibold uppercase tracking-widest px-8 py-3.5 whitespace-nowrap hover:opacity-90 transition-opacity">
+          <a href="/for-agencies/" class="inline-block bg-on-primary-fixed text-on-primary text-xs font-semibold uppercase tracking-widest px-8 py-3.5 whitespace-nowrap hover:opacity-90 transition-opacity">
             Get Volume Pricing
           </a>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ========== COMPARISON MATRIX ========== -->
-    <!-- Tier comparison matrix — hardcoded plain HTML, canonical source lives in the tier data module -->
-    <section class="py-16 md:py-20 bg-surface-container-low relative">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <h2 class="font-headline italic text-4xl text-on-surface mb-12">Compare our plans</h2>
-        <div class="overflow-x-auto">
-          <table id="landing-matrix" class="w-full text-left">
-            <thead>
-              <tr>
-                <th class="pb-4 text-xs uppercase tracking-widest text-on-surface-variant font-semibold w-1/2"></th>
-                <th class="pb-4 text-xs uppercase tracking-widest text-on-surface-variant font-semibold text-center min-w-[120px]">
-                  <span class="block font-headline text-lg text-on-surface">Snapshot</span>
-                  <span class="block text-xs text-on-surface-variant">$99</span>
-                </th>
-                <th class="pb-4 text-xs uppercase tracking-widest text-primary font-semibold text-center min-w-[120px] bg-surface-container-lowest">
-                  <span class="block font-headline text-lg text-on-surface">Deep Dive</span>
-                  <span class="block text-xs text-on-surface-variant">$299</span>
-                </th>
-                <th class="pb-4 text-xs uppercase tracking-widest text-on-surface-variant font-semibold text-center min-w-[120px]">
-                  <span class="block font-headline text-lg text-on-surface">Full Arsenal</span>
-                  <span class="block text-xs text-on-surface-variant">$499</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody class="text-sm font-body-sans" id="landing-matrix-body">
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">Exact AI quotes about your brand</td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">Wrong facts &amp; hallucinations traced to source</td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">How often AI mentions you vs recommends you</td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">Which pages on your site AI actually reads</td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">llms.txt drafted for you</td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">Competitors compared</td>
-                <td class="py-3 text-center text-sm text-on-surface">2</td>
-                <td class="py-3 text-center text-sm text-on-surface bg-surface-container-lowest">5</td>
-                <td class="py-3 text-center text-sm text-on-surface">10+</td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">Why AI picks each competitor over you</td>
-                <td class="py-3 text-center"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">The AI searches that find you (and the ones that don&rsquo;t)</td>
-                <td class="py-3 text-center"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">Where your wording doesn&rsquo;t match what buyers ask</td>
-                <td class="py-3 text-center"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">What proof AI looks for when recommending</td>
-                <td class="py-3 text-center"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">What makes AI recommend you (not just mention you)</td>
-                <td class="py-3 text-center"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">Fix list scope</td>
-                <td class="py-3 text-center text-sm text-on-surface">Page-level</td>
-                <td class="py-3 text-center text-sm text-on-surface bg-surface-container-lowest">Page + site-level</td>
-                <td class="py-3 text-center text-sm text-on-surface">Page + site + product</td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">Effort / impact labels per fix</td>
-                <td class="py-3 text-center"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">What invisibility is costing you</td>
-                <td class="py-3 text-center"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center text-sm text-on-surface">✓ per segment</td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">Breakdown by buyer type</td>
-                <td class="py-3 text-center"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">How AI decides who to recommend in your space</td>
-                <td class="py-3 text-center"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">Words that make you invisible</td>
-                <td class="py-3 text-center"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">Categories where you should show up but don&rsquo;t</td>
-                <td class="py-3 text-center"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">Where to compete vs where to reposition</td>
-                <td class="py-3 text-center"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">Week 1 sprint</td>
-                <td class="py-3 text-center"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
     </section>
@@ -793,72 +505,29 @@
           </div>
           <div class="bg-surface p-10">
             <span class="material-symbols-outlined text-primary text-3xl mb-6 block">campaign</span>
-            <h3 class="font-headline text-xl text-on-surface mb-3">"I need a deliverable that proves my client is losing money to AI invisibility."</h3>
+            <h3 class="font-headline text-xl text-on-surface mb-3">"I need a deliverable for my client."</h3>
             <p class="text-sm text-on-surface-variant leading-relaxed font-body-sans">
-              You're an agency or consultant. Buy a report for $299, deliver it as a $2,500 audit. White-label ready, <a href="/blog/agency-guide-ai-visibility-audits/" class="text-primary hover:underline">volume pricing</a> for 5+ reports/month.
+              You're an agency or consultant. Buy a report, deliver it as an audit. White-label ready, <a href="/for-agencies/" class="text-primary hover:underline">volume pricing</a> for 5+ reports/month.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ========== PROOF BLOCK ========== -->
-    <section class="py-16 md:py-20 relative bg-white">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="bg-surface-container-low p-10 md:p-14">
-          <h2 class="font-headline text-2xl md:text-3xl text-on-surface mb-8">AI Visibility Audit — What You Get</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 text-sm text-on-surface-variant font-body-sans">
-            <div><strong class="text-on-surface">Pricing:</strong> $99 (Snapshot), $299 (Deep Dive), $499 (Full Arsenal). Pay per report, no subscription.</div>
-            <div><strong class="text-on-surface">Turnaround:</strong> Delivered within 24 hours of order.</div>
-            <div><strong class="text-on-surface">AI Platforms Covered:</strong> ChatGPT, Perplexity, Gemini, Claude, Grok, DeepSeek, Copilot, Google AI Overviews.</div>
-            <div><strong class="text-on-surface">Report Includes:</strong> Executive summary, AI visibility assessment, query-level breakdown, wrong fact extraction with source tracing, source map, wording mismatch analysis, competitor comparison, prioritized fix list. Deep Dive+ adds wording rewrites and revenue displacement estimate.</div>
-            <div><strong class="text-on-surface">Agency Fit:</strong> Pay per client report, white-label ready, volume pricing for 5+ reports/month. Buy a report for $299, bill it as a $2,500 audit.</div>
-            <div><strong class="text-on-surface">Guarantee:</strong> 3+ actionable insights or full refund.</div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ========== DOGFOODING PROOF SECTION ========== -->
-    <!-- Replaces the old "Metricus by the Numbers" social-proof shell with a real (anonymized) chart. -->
-    <section class="py-16 md:py-24 bg-on-primary-fixed text-on-primary relative overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-          <div class="md:col-span-5">
-            <p class="text-xs uppercase tracking-widest text-on-primary/60 font-semibold mb-3">The only proof you need</p>
-            <h2 class="font-headline italic text-3xl md:text-5xl leading-tight mb-6">A real brand and its traffic, 10 days into a Metricus-optimized implementation.</h2>
-            <p class="text-sm md:text-base text-on-primary/80 leading-relaxed">Daily organic visitors went from 0&ndash;5/day to 30+/day.</p>
-          </div>
-          <div class="md:col-span-7">
-            <div class="bg-on-primary-fixed border border-on-primary/20 p-6">
-              <svg viewBox="0 0 360 160" class="w-full" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daily visitors chart from baseline noise to consistent upward trend after audit applied.">
-                <g stroke="rgba(246,247,255,0.12)" stroke-width="0.5">
-                  <line x1="32" y1="20" x2="350" y2="20"/>
-                  <line x1="32" y1="55" x2="350" y2="55"/>
-                  <line x1="32" y1="90" x2="350" y2="90"/>
-                  <line x1="32" y1="125" x2="350" y2="125"/>
-                </g>
-                <g font-family="Public Sans, sans-serif" font-size="9" fill="rgba(246,247,255,0.5)" text-anchor="end">
-                  <text x="28" y="23">40</text>
-                  <text x="28" y="58">30</text>
-                  <text x="28" y="93">20</text>
-                  <text x="28" y="128">10</text>
-                  <text x="28" y="143">0</text>
-                </g>
-                <line x1="32" y1="20" x2="32" y2="140" stroke="rgba(246,247,255,0.4)" stroke-width="0.6"/>
-                <line x1="32" y1="140" x2="350" y2="140" stroke="rgba(246,247,255,0.4)" stroke-width="0.6"/>
-                <line x1="180" y1="20" x2="180" y2="140" stroke="rgba(246,247,255,0.5)" stroke-width="0.6" stroke-dasharray="3,3"/>
-                <text x="184" y="30" font-family="Public Sans, sans-serif" font-size="10" fill="#f6f7ff" font-weight="600">audit applied</text>
-                <polyline fill="none" stroke="#f6f7ff" stroke-width="2.2"
-                  points="32,138 40,137 48,136 56,134 64,128 72,118 80,108 88,118 96,128 104,135 112,138 120,138 128,137 136,135 144,138 152,140 160,138 168,138 176,138 184,135 192,128 200,118 208,108 216,115 224,102 232,108 240,90 248,82 256,90 264,72 272,68 280,80 288,55 296,52 304,60 312,42 320,38 328,45 336,28 344,22"/>
-                <g font-family="Public Sans, sans-serif" font-size="9" fill="rgba(246,247,255,0.5)">
-                  <text x="178" y="155" text-anchor="middle">0</text>
-                  <text x="350" y="155" text-anchor="end">10 days</text>
-                </g>
-                <text x="6" y="80" font-family="Public Sans, sans-serif" font-size="8" fill="rgba(246,247,255,0.5)" transform="rotate(-90 6 80)">daily visitors</text>
-              </svg>
-            </div>
-          </div>
+    <!-- ========== RESULTS REFERENCE ========== -->
+    <section class="py-16 md:py-20 relative bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        <div class="bg-surface p-10 md:p-16 max-w-3xl mx-auto">
+          <span class="material-symbols-outlined text-primary text-5xl mb-6 block">trending_up</span>
+          <h2 class="font-headline text-3xl md:text-4xl text-on-surface mb-4">What Happens After a Report</h2>
+          <p class="text-lg text-on-surface-variant leading-relaxed mb-8 font-body-sans">
+            Brands that act on their Metricus fix list change how AI talks about them. See real before-and-after outcomes.
+          </p>
+          <a href="/results/" class="inline-flex items-center gap-2 text-[16px] text-primary font-semibold hover:text-primary-hover transition-colors group">
+            See what happens after a report
+            <span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
         </div>
       </div>
     </section>
@@ -873,9 +542,6 @@
           <p class="text-lg text-on-surface-variant leading-relaxed mb-6 font-body-sans">
             3+ actionable insights or full refund. No questions asked.
           </p>
-          <p class="text-sm text-on-surface-variant leading-relaxed max-w-lg mx-auto font-body-sans">
-            Every Metricus report queries AI hundreds of times to find the real patterns. If any report doesn't deliver at least 3 actionable insights, we refund that report in full.
-          </p>
         </div>
       </div>
     </section>
@@ -887,20 +553,14 @@
         <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
           <div class="md:col-span-8 bg-surface-container-lowest p-10 md:p-14 flex flex-col justify-center">
             <h2 class="font-headline text-3xl md:text-4xl text-on-surface mb-4">
-              Not sure which question to start with?
+              See what AI says about your brand, why it says it, and what to fix first.
             </h2>
             <p class="text-base text-on-surface-variant leading-relaxed mb-8 max-w-xl font-body-sans">
-              Most first-time buyers start with Deep Dive — it explains why AI prefers your competitors and gives you the exact fix list. Volume pricing available for 5+ reports/month.
-            </p>
-            <p class="text-sm text-on-surface-variant font-body-sans mb-8">
-              Every report is one-time. No subscription. No recurring charges.
-            </p>
-            <p class="text-sm text-on-surface-variant font-body-sans mb-8">
-              Start with a Metricus audit — find out what AI says, why, and what to change. Then decide if ongoing monitoring is worth it.
+              One report. No subscription. No recurring charges. Start with a Metricus audit, then decide if ongoing monitoring is worth it.
             </p>
             <div>
               <a href="/get-report/" class="inline-block bg-primary text-on-primary text-xs font-semibold uppercase tracking-widest px-8 py-3.5 hover:bg-primary-hover transition-colors">
-                Get Your Report
+                Get Your AI Visibility Report
               </a>
             </div>
           </div>
@@ -939,7 +599,6 @@
           <ul class="space-y-3 text-[15px]">
             <li><a href="/blog/ai-visibility-action-plan/" class="text-primary hover:text-primary-hover transition-colors">AI Visibility Action Plan</a></li>
             <li><a href="/blog/agency-guide-ai-visibility-audits/" class="text-primary hover:text-primary-hover transition-colors">AI Visibility for Agencies</a></li>
-            <li><a href="/blog/diy-ai-visibility-audit/" class="text-primary hover:text-primary-hover transition-colors">Free AI Visibility Check</a></li>
           </ul>
         </div>
         <div>
@@ -948,6 +607,7 @@
             <li><a href="/methodology/" class="text-primary hover:text-primary-hover transition-colors">Methodology</a></li>
             <li><a href="/press/" class="text-primary hover:text-primary-hover transition-colors">Press Kit</a></li>
             <li><a href="/sample-ai-visibility-report/" class="text-primary hover:text-primary-hover transition-colors">Sample Report</a></li>
+            <li><a href="/results/" class="text-primary hover:text-primary-hover transition-colors">Results</a></li>
           </ul>
         </div>
       </div>
@@ -971,9 +631,9 @@
       <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
         <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
         <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
-        <a href="/blog/agency-guide-ai-visibility-audits/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/results/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
         <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
-        <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
         <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
         <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
         <a href="/privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a>
@@ -984,47 +644,6 @@
   </footer>
 
 <script>
-  // Hero email gate — captures email + optional website, logs to Sheets, saves to storage, redirects to sample report
-  (function() {
-    var heroForm = document.getElementById('heroForm');
-    if (!heroForm) return;
-    var SCRIPT_URL = 'https://metricus.red-hill-a87d.workers.dev/';
-
-    // Auto-fill email if returning visitor
-    try {
-      var savedEmail = localStorage.getItem('metricus_email');
-      if (savedEmail) {
-        var emailField = document.getElementById('heroEmail');
-        if (emailField) emailField.value = savedEmail;
-      }
-    } catch(e) {}
-
-    heroForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      var email = document.getElementById('heroEmail').value.trim();
-      if (!email) return;
-
-      // Log to Sheets — POST with body so Apps Script doPost reads e.parameter
-      try {
-        var ts = new Date().toISOString();
-        var data = new URLSearchParams({
-          contact: email,
-          pricing: 'hero|' + ts
-        });
-        if (navigator.sendBeacon) navigator.sendBeacon(SCRIPT_URL, data);
-        else fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: data }).catch(function(){});
-      } catch(err) {}
-
-      // Persist
-      try { localStorage.setItem('metricus_email', email); } catch(err) {}
-
-      // Redirect to sample report after a 300ms beat
-      setTimeout(function() {
-        window.location.href = heroForm.getAttribute('data-redirect') || '/sample-ai-visibility-report/';
-      }, 300);
-    });
-  })();
-
   // Pricing tier buttons: navigate to get-report with tier + website
   document.addEventListener('click', function(e) {
     var btn = e.target.closest('[data-action="buy-tier"]');
