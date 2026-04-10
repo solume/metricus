@@ -1111,6 +1111,11 @@
         if (radio) {
           radio.checked = true;
           updatePickerState(key);
+          logToSheet('', 'TIER_CLICK // ' + key.toUpperCase() + ' // Page: /get-report/');
+        }
+        // Update Payment Element amount
+        if (elements && TIER_AMOUNTS[key]) {
+          elements.update({ amount: TIER_AMOUNTS[key] });
         }
         var anchor = document.getElementById('mb-form-anchor');
         if (anchor) anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
