@@ -427,7 +427,7 @@
             <p class="text-sm text-on-surface-variant leading-relaxed font-body-sans mb-6">
               The first audit of how AI describes your brand. Exact quotes, wrong facts, mention rates, and a page-level fix list.
             </p>
-            <a href="/get-report/?tier=snapshot" class="mt-auto inline-flex items-center justify-center gap-2 border border-primary text-primary text-sm font-semibold px-6 py-3 hover:bg-primary hover:text-on-primary transition-colors">Get Report</a>
+            <button data-action="buy-tier" data-tier="snapshot" class="mt-auto inline-flex items-center justify-center gap-2 border border-primary text-primary text-sm font-semibold px-6 py-3 hover:bg-primary hover:text-on-primary transition-colors cursor-pointer">Get Report</button>
           </div>
 
           <!-- Deep Dive -->
@@ -441,7 +441,7 @@
             <p class="text-sm text-on-surface-variant leading-relaxed font-body-sans mb-6">
               Everything in Snapshot, plus the causal layer. Why each competitor wins, where your wording mismatches, and a site-level fix list with effort and impact labels.
             </p>
-            <a href="/get-report/?tier=deep-dive" class="mt-auto inline-flex items-center justify-center gap-2 bg-primary text-on-primary text-sm font-semibold px-6 py-3 hover:bg-primary-dim transition-colors">Get Report</a>
+            <button data-action="buy-tier" data-tier="deep-dive" class="mt-auto inline-flex items-center justify-center gap-2 bg-primary text-on-primary text-sm font-semibold px-6 py-3 hover:bg-primary-dim transition-colors cursor-pointer">Get Report</button>
           </div>
 
           <!-- Full Arsenal -->
@@ -452,7 +452,7 @@
             <p class="text-sm text-on-surface-variant leading-relaxed font-body-sans mb-6">
               Everything in Deep Dive, plus segment depth, 10+ competitors mapped, and a sequenced plan covering page, content, and positioning.
             </p>
-            <a href="/get-report/?tier=full-arsenal" class="mt-auto inline-flex items-center justify-center gap-2 border border-primary text-primary text-sm font-semibold px-6 py-3 hover:bg-primary hover:text-on-primary transition-colors">Get Report</a>
+            <button data-action="buy-tier" data-tier="full-arsenal" class="mt-auto inline-flex items-center justify-center gap-2 border border-primary text-primary text-sm font-semibold px-6 py-3 hover:bg-primary hover:text-on-primary transition-colors cursor-pointer">Get Report</button>
           </div>
         </div>
 
@@ -640,7 +640,8 @@
   </footer>
 
 <script>
-  // Pricing tier buttons: navigate to get-report with tier + website
+  // Pricing tier buttons: log click + navigate to get-report with tier + website
+  var WORKER_URL = 'https://metricus.red-hill-a87d.workers.dev/';
   document.addEventListener('click', function(e) {
     var btn = e.target.closest('[data-action="buy-tier"]');
     if (!btn) return;
@@ -648,6 +649,12 @@
     var tier = btn.getAttribute('data-tier');
     var website = '';
     try { website = sessionStorage.getItem('metricus_website') || ''; } catch(e) {}
+    // Log tier selection
+    try {
+      var data = new URLSearchParams({ contact: '', pricing: 'TIER_CLICK // ' + tier.toUpperCase() + ' // Page: ' + location.pathname });
+      if (navigator.sendBeacon) navigator.sendBeacon(WORKER_URL, data);
+      else fetch(WORKER_URL, { method: 'POST', mode: 'no-cors', body: data }).catch(function(){});
+    } catch(e) {}
     var href = 'get-report/?tier=' + tier;
     if (website) href += '&website=' + encodeURIComponent(website);
     window.location.href = href;

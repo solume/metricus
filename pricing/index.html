@@ -316,9 +316,7 @@
                 Page-level fix list you can ship this week
               </li>
             </ul>
-            <a href="/get-report/?tier=snapshot" class="mt-10 block text-center border-2 border-primary text-primary text-xs font-semibold uppercase tracking-widest px-6 py-3 hover:bg-primary hover:text-on-primary transition-colors">
-              Get this report
-            </a>
+            <button data-action="buy-tier" data-tier="snapshot" class="mt-10 block text-center border-2 border-primary text-primary text-xs font-semibold uppercase tracking-widest px-6 py-3 hover:bg-primary hover:text-on-primary transition-colors cursor-pointer">Get this report</button>
           </div>
 
           <!-- Tier 2: Deep Dive (Most popular) -->
@@ -374,9 +372,7 @@
                 What invisibility is costing you
               </li>
             </ul>
-            <a href="/get-report/?tier=deep-dive" class="mt-10 block text-center bg-primary text-on-primary text-xs font-semibold uppercase tracking-widest px-6 py-3 hover:bg-primary-dim transition-colors">
-              Get this report
-            </a>
+            <button data-action="buy-tier" data-tier="deep-dive" class="mt-10 block text-center bg-primary text-on-primary text-xs font-semibold uppercase tracking-widest px-6 py-3 hover:bg-primary-dim transition-colors cursor-pointer">Get this report</button>
           </div>
 
           <!-- Tier 3: Full Arsenal -->
@@ -429,9 +425,7 @@
                 How complete the audit is (coverage %)
               </li>
             </ul>
-            <a href="/get-report/?tier=full-arsenal" class="mt-10 block text-center bg-surface-container-high text-on-surface text-xs font-semibold uppercase tracking-widest px-6 py-3 hover:bg-surface-container-highest transition-colors">
-              Get this report
-            </a>
+            <button data-action="buy-tier" data-tier="full-arsenal" class="mt-10 block text-center bg-surface-container-high text-on-surface text-xs font-semibold uppercase tracking-widest px-6 py-3 hover:bg-surface-container-highest transition-colors cursor-pointer">Get this report</button>
           </div>
 
         </div>
@@ -768,5 +762,25 @@
   </footer>
 
   <script src="/js/reader-pulse-b.js" defer></script>
+
+<script>
+  var WORKER_URL = 'https://metricus.red-hill-a87d.workers.dev/';
+  document.addEventListener('click', function(e) {
+    var btn = e.target.closest('[data-action="buy-tier"]');
+    if (!btn) return;
+    e.preventDefault();
+    var tier = btn.getAttribute('data-tier');
+    var website = '';
+    try { website = sessionStorage.getItem('metricus_website') || ''; } catch(e) {}
+    try {
+      var data = new URLSearchParams({ contact: '', pricing: 'TIER_CLICK // ' + tier.toUpperCase() + ' // Page: ' + location.pathname });
+      if (navigator.sendBeacon) navigator.sendBeacon(WORKER_URL, data);
+      else fetch(WORKER_URL, { method: 'POST', mode: 'no-cors', body: data }).catch(function(){});
+    } catch(e) {}
+    var href = '/get-report/?tier=' + tier;
+    if (website) href += '&website=' + encodeURIComponent(website);
+    window.location.href = href;
+  });
+</script>
 </body>
 </html>
