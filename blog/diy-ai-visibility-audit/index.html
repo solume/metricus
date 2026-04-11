@@ -606,42 +606,6 @@
     </div>
   </footer>
 
-
-  <!-- Email gate submit handler -->
-  <script>
-    (function() {
-      var SCRIPT_URL = 'https://metricus.red-hill-a87d.workers.dev/';
-
-      document.querySelectorAll('form.email-gate-form').forEach(function(form) {
-        form.addEventListener('submit', function(e) {
-          e.preventDefault();
-          var emailInput = form.querySelector('input[type="email"]');
-          var email = emailInput ? emailInput.value.trim() : '';
-          if (!email) return;
-
-          var leadMagnet = form.getAttribute('data-lead-magnet') || 'diy-skill';
-          var thankYouUrl = form.getAttribute('data-thank-you-url');
-          var ts = new Date().toISOString();
-
-          try {
-            var data = new URLSearchParams({
-              contact: email,
-              pricing: leadMagnet + '|' + ts
-            });
-            if (navigator.sendBeacon) navigator.sendBeacon(SCRIPT_URL, data);
-            else fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: data }).catch(function() {});
-          } catch(e) {}
-
-          try { localStorage.setItem('metricus_email', email); } catch(e) {}
-
-          if (thankYouUrl) {
-            window.location.href = thankYouUrl;
-          }
-        });
-      });
-    })();
-  </script>
-
   <script src="/js/email-gate.js" defer></script>
 </body>
 </html>
