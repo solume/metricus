@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You Asked ChatGPT About Your Brand and It Looked Fine — But That's Not What Everyone Sees | Metricus</title>
+  <meta name="description" content="ChatGPT gives different answers every time. A single spot-check tells you nothing about what buyers actually see when they ask AI about your brand.">
+  <meta property="og:title" content="You Asked ChatGPT About Your Brand and It Looked Fine — But That's Not What Everyone Sees">
+  <meta property="og:description" content="ChatGPT gives different answers every time. A single spot-check tells you nothing about what buyers actually see.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metricusapp.com/blog/chatgpt-different-answers-every-time/">
+  <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="You Asked ChatGPT About Your Brand and It Looked Fine — But That's Not What Everyone Sees | Metricus">
+  <meta name="twitter:description" content="ChatGPT gives different answers every time. A single spot-check tells you nothing about what buyers actually see when they ask AI about your brand.">
+  <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
+  <link rel="canonical" href="https://metricusapp.com/blog/chatgpt-different-answers-every-time/">
+
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w70oz7g1k3");
+  </script>
+
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#515F74',
+            'primary-hover': '#1E293B',
+            'on-primary': '#f6f7ff',
+            'on-primary-fixed': '#324054',
+            'primary-dim': '#455368',
+            surface: '#f7f9fb',
+            'surface-container-low': '#f0f4f7',
+            'surface-container': '#e8eff3',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-highest': '#d9e4ea',
+            'surface-container-high': '#e1e9ee',
+            'surface-variant': '#d9e4ea',
+            'on-surface': '#2a3439',
+            'on-surface-variant': '#566166',
+            outline: '#717c82',
+            'outline-variant': '#a9b4b9',
+            'slate-text': '#0F172A',
+            'slate-muted': '#64748B',
+            'slate-accent': '#475569',
+          },
+          fontFamily: {
+            display: ['Newsreader', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            body: ['Public Sans', 'sans-serif'],
+            headline: ['Newsreader', 'serif'],
+          },
+          borderRadius: {
+            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
+            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
+            full: '0.75rem',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #0F172A;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .font-display { font-family: 'Newsreader', serif; }
+    .font-headline { font-family: 'Newsreader', serif; }
+    .font-body-sans { font-family: 'Public Sans', sans-serif; }
+
+    .editorial-btn {
+      transition: background-color 150ms ease-in-out, transform 150ms ease;
+    }
+    .editorial-btn:hover {
+      background-color: #1E293B;
+    }
+
+    .bg-grid-dots {
+      background-image: radial-gradient(circle, #717c82 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+      opacity: 0.05;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .blog-card {
+      transition: transform 200ms ease, background-color 200ms ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+      background-color: #f7f9fb;
+    }
+
+    .article-body h2 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      line-height: 1.2;
+      color: #0F172A;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) {
+      .article-body h2 {
+        font-size: 2rem;
+      }
+    }
+    .article-body h3 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.3;
+      color: #0F172A;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .article-body p {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+    }
+    .article-body ul, .article-body ol {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+    }
+    .article-body ul { list-style-type: disc; }
+    .article-body ol { list-style-type: decimal; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body blockquote {
+      border-left: 2px solid #334155;
+      padding-left: 1.5rem;
+      font-style: italic;
+      color: #475569;
+      font-size: 1.125rem;
+      line-height: 1.75;
+      margin: 2rem 0;
+    }
+    .article-body a {
+      color: #334155;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .article-body a:hover {
+      color: #1E293B;
+    }
+  </style>
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "You Asked ChatGPT About Your Brand and It Looked Fine — But That's Not What Everyone Sees",
+    "description": "ChatGPT gives different answers every time. A single spot-check tells you nothing about what buyers actually see when they ask AI about your brand.",
+    "author": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "datePublished": "2026-04-10",
+    "dateModified": "2026-04-10",
+    "mainEntityOfPage": "https://metricusapp.com/blog/chatgpt-different-answers-every-time/",
+    "image": "https://metricusapp.com/metricus-og-image.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "ChatGPT Gives Different Answers Every Time", "item": "https://metricusapp.com/blog/chatgpt-different-answers-every-time/"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does ChatGPT give the same answer to everyone?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. ChatGPT is probabilistic, not deterministic. Two people asking the exact same question will often receive different answers with different brand recommendations, different ordering, and different details. Research from SparkToro found that AI recommendation lists repeat less than 1% of the time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does ChatGPT give different answers about my brand each time?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "LLMs like ChatGPT use probabilistic token prediction, meaning each response is generated fresh. Built-in randomness (temperature), floating-point arithmetic, hardware parallelism, and batching effects all contribute to variation. Even at the lowest randomness settings, outputs are not fully deterministic."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many times do I need to ask ChatGPT to get an accurate picture of my brand visibility?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Research suggests 60 to 100 queries per prompt per platform to establish a statistically meaningful pattern. A single spot-check captures less than 15% of the actual pattern. Metricus runs 50+ queries per platform across multiple AI systems to build a reliable picture."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I trust what ChatGPT says about my company?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Any single response from ChatGPT is unreliable as a measure of how your brand appears to AI users overall. The answer your colleague sees may be completely different from yours. What matters is the aggregate pattern across many queries, which requires systematic measurement rather than spot-checking."
+        }
+      }
+    ]
+  }
+  </script>
+  <script src="/js/reader-pulse-b.js" defer></script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
+
+  <!-- Site Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="/" class="flex items-center gap-2 group" aria-label="Metricus home">
+        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+        </svg>
+        <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
+        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
+        <a href="/blog/" class="text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Learn</a>
+        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
+        <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
+    <div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div>
+    <nav class="absolute top-0 right-0 w-72 h-full bg-surface-container-lowest shadow-xl flex flex-col pt-6 px-6">
+      <button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">How It Works</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/" id="mobile-pricing-link">Pricing</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
+      <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    (function(){
+      var btn=document.getElementById('mobile-menu-btn');
+      var menu=document.getElementById('mobile-menu');
+      var close=document.getElementById('mobile-menu-close');
+      var backdrop=document.getElementById('mobile-menu-backdrop');
+      var pricingLink=document.getElementById('mobile-pricing-link');
+      if(!btn||!menu)return;
+      function open(){menu.classList.remove('hidden');menu.setAttribute('aria-hidden','false');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+      function shut(){menu.classList.add('hidden');menu.setAttribute('aria-hidden','true');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+      btn.addEventListener('click',open);
+      if(close)close.addEventListener('click',shut);
+      if(backdrop)backdrop.addEventListener('click',shut);
+      if(pricingLink)pricingLink.addEventListener('click',shut);
+    })();
+  </script>
+
+
+  <main class="flex-grow flex flex-col relative overflow-x-hidden">
+
+    <div class="absolute inset-0 bg-grid-dots -z-10 pointer-events-none"></div>
+
+    <!-- ========== ARTICLE ========== -->
+    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
+
+      <!-- Breadcrumb -->
+      <nav class="mb-8">
+        <ol class="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-muted">
+          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
+          <li class="select-none">/</li>
+          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
+          <li class="select-none">/</li>
+          <li class="text-slate-text">ChatGPT Gives Different Answers Every Time</li>
+        </ol>
+      </nav>
+
+      <!-- Article Header -->
+      <header class="mb-12">
+        <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-4">AI Visibility</p>
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
+          You Asked ChatGPT About Your Brand and It Looked Fine &mdash; But That&rsquo;s Not What Everyone Sees
+        </h1>
+        <p class="text-sm text-outline">Metricus Research &middot; April 10, 2026 &middot; 8 min read</p>
+      </header>
+
+
+      <!-- Key Finding Box -->
+      <div class="bg-surface-container-low p-8 mb-12">
+        <p class="text-lg leading-relaxed text-on-surface">
+          <strong>AI recommendation lists repeat less than 1% of the time.</strong> SparkToro research across 2,961 queries found that ChatGPT, Claude, and Gemini almost never return the same brand list twice for the same prompt. A single spot-check of what AI says about your brand captures less than 15% of the actual pattern.
+        </p>
+      </div>
+
+
+      <!-- Table of Contents -->
+      <div class="border border-[#E2E8F0] p-8 mb-12">
+        <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">In this article</p>
+        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
+          <li><a href="#spot-check" class="hover:text-primary-hover underline underline-offset-2">The spot-check illusion</a></li>
+          <li><a href="#why-different" class="hover:text-primary-hover underline underline-offset-2">Why ChatGPT gives different answers every time</a></li>
+          <li><a href="#research" class="hover:text-primary-hover underline underline-offset-2">What the research shows</a></li>
+          <li><a href="#brands" class="hover:text-primary-hover underline underline-offset-2">What this means for your brand</a></li>
+          <li><a href="#how-many" class="hover:text-primary-hover underline underline-offset-2">How many queries it takes to see the real picture</a></li>
+          <li><a href="#what-to-do" class="hover:text-primary-hover underline underline-offset-2">What to do instead of spot-checking</a></li>
+        </ol>
+      </div>
+
+
+<!-- Article Body -->
+      <div class="article-body">
+
+        <h2 id="spot-check">The spot-check illusion</h2>
+
+        <p>You typed your company name into ChatGPT. The answer looked reasonable &mdash; maybe it got your product category right, mentioned a couple of features, listed you alongside competitors. You closed the tab feeling fine about it. Then your colleague ran the same query from their laptop. Different answer. Different competitors listed. Your brand mentioned third instead of first &mdash; or not mentioned at all.</p>
+
+        <p>This is not a bug. This is how large language models work. Every response is generated fresh, and the output varies based on built-in randomness, context, timing, and infrastructure factors that no user controls. What you saw in your one query was one sample from a distribution of possible answers &mdash; and that distribution is far wider than most people realize.</p>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>The core problem:</strong> A single ChatGPT query about your brand is like checking the weather by glancing out the window once. You might catch sunshine, you might catch rain. Neither tells you the climate.
+          </p>
+        </div>
+
+
+        <h2 id="why-different">Why ChatGPT gives different answers every time</h2>
+
+        <p>ChatGPT does not retrieve pre-written answers from a database. It generates every response from scratch by predicting what words should come next, based on patterns learned during training. This prediction process is inherently probabilistic &mdash; the model assigns probability weights to thousands of possible next tokens and samples from that distribution. The result is that two identical prompts can produce meaningfully different outputs.</p>
+
+        <p>Multiple technical factors compound this variability:</p>
+
+        <ul>
+          <li><strong>Temperature and sampling:</strong> A randomness parameter controls how creative or conservative the model is. Even at low settings, the output is not fully deterministic. Higher settings &mdash; common in conversational products like ChatGPT &mdash; introduce more variation by design.</li>
+          <li><strong>Floating-point arithmetic:</strong> LLMs perform billions of mathematical operations per response. Tiny rounding differences in floating-point calculations can cascade through the model, producing different final outputs from identical inputs.</li>
+          <li><strong>Hardware parallelism:</strong> GPUs process operations in parallel, and the order in which those operations complete can vary between runs. This introduces nondeterminism at the infrastructure level that exists independently of any model setting.</li>
+          <li><strong>Request batching:</strong> Cloud inference systems batch multiple users&rsquo; requests together. The result for one request can depend on which other requests were in the same batch &mdash; a factor that changes from second to second.</li>
+        </ul>
+
+        <p>The net effect is that even when OpenAI sets temperature to zero internally, outputs are not guaranteed to be identical. A 2026 study documented that even under the most deterministic settings possible, LLM outputs still varied across runs. For consumer-facing products like ChatGPT, where temperature is set higher to make conversations feel natural, the variation is substantially greater.</p>
+
+
+        <h2 id="research">What the research shows</h2>
+
+        <p>The scale of this variability is not theoretical. Multiple studies have now quantified it.</p>
+
+        <h3>SparkToro: 2,961 queries, less than 1% list repetition</h3>
+
+        <p>SparkToro recruited 600 volunteers who ran 2,961 individual AI queries across 12 different prompts on three major AI platforms. Each prompt was run 60 to 100 times per platform to generate statistically meaningful samples. The finding: AI tools returned the same brand recommendation list less than 1% of the time. When it came to ordering, researchers estimated you would need roughly 1,000 runs before seeing two identical ordered lists.</p>
+
+        <p>Despite this extreme per-query variability, the research did find that AI platforms drew from a relatively consistent consideration set. For headphone recommendations, brands like Bose, Sony, Sennheiser, and Apple appeared in 55% to 77% of the 994 responses &mdash; but their position, the surrounding recommendations, and the framing changed nearly every time.</p>
+
+        <h3>Washington State University: 73% consistency rate</h3>
+
+        <p>A March 2026 WSU study tested ChatGPT by feeding it the same prompts 10 times each. The model produced consistent answers only about 73% of the time. It frequently contradicted itself, sometimes flipping answers on the same question across runs. When adjusted for random chance, the accuracy was just 60% better than guessing.</p>
+
+        <h3>Metricus internal testing: 20% to 80% mention rate swings</h3>
+
+        <p>In our own AI visibility report testing, running the same brand query 10 times on ChatGPT produced mention rates ranging from 20% to 80% for the same brand. This is why any tool that runs a query once and reports a score is giving you noise, not signal. A <a href="../ai-visibility-scores-explained/">meaningful AI visibility score</a> requires 50+ queries per platform to reach statistical significance.</p>
+
+
+        <h2 id="brands">What this means for your brand</h2>
+
+        <p>The implications for brand visibility in AI are significant. When you spot-checked ChatGPT and saw your brand mentioned, you were seeing one outcome from a slot machine that spins differently every time. Your colleague who got a different answer was seeing another equally valid pull.</p>
+
+        <p>This creates several concrete problems:</p>
+
+        <ul>
+          <li><strong>False confidence:</strong> A favorable single query makes you think your AI presence is fine. You deprioritize it. Meanwhile, the majority of actual buyer queries may be returning answers where your brand is absent or mispositioned.</li>
+          <li><strong>False alarm:</strong> Conversely, one bad query can trigger panic. You saw a competitor listed first and your brand missing entirely. But that might have been a low-probability outcome that occurs in only 15% of queries.</li>
+          <li><strong>No baseline for improvement:</strong> Without knowing your actual aggregate visibility, you cannot measure whether any action you take &mdash; updating your website, publishing content, earning press &mdash; actually moved the needle.</li>
+          <li><strong>Inconsistent buyer experience:</strong> Some percentage of buyers asking AI about your category will see your brand prominently recommended. Others will never see it mentioned. You have no visibility into the ratio.</li>
+        </ul>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>The real question is not &ldquo;what did ChatGPT say?&rdquo;</strong> It is &ldquo;across 100 buyer queries on multiple AI platforms, how often does my brand appear, where is it positioned, and is the information accurate?&rdquo;
+          </p>
+        </div>
+
+
+        <h2 id="how-many">How many queries it takes to see the real picture</h2>
+
+        <p>SparkToro&rsquo;s research suggests a minimum of 60 to 100 queries per prompt per platform to establish a statistically meaningful pattern. Our own testing at Metricus confirms this range: at fewer than 50 queries, the variance is too high to distinguish real patterns from noise.</p>
+
+        <p>But the number of queries per prompt is only one dimension. To understand your actual AI visibility, you also need:</p>
+
+        <ul>
+          <li><strong>Multiple prompt variations:</strong> Buyers do not all phrase their questions the same way. &ldquo;Best CRM for startups&rdquo; and &ldquo;what CRM should a 10-person company use&rdquo; are functionally the same question but can produce different AI responses. Our <a href="../ai-visibility-discovery-benchmark/">benchmark study of 182 prompts</a> found that prompt phrasing significantly affects which brands surface.</li>
+          <li><strong>Multiple platforms:</strong> A brand might score 75% visibility on ChatGPT and 40% on Perplexity for identical queries. Each platform uses different training data, retrieval mechanisms, and synthesis logic. Testing one platform gives you less than half the picture.</li>
+          <li><strong>Real user interface testing:</strong> Many measurement tools use developer APIs, which return different results than the actual consumer interface. API responses often lack the web-search grounding that real sessions include, producing a completely different set of recommendations. As we explain in our <a href="../ai-visibility-scores-explained/">analysis of how AI visibility scores work</a>, the measurement method matters as much as the measurement itself.</li>
+        </ul>
+
+        <p>The math adds up quickly. If you need 60+ queries across 20+ prompt variations across 3+ platforms, you are looking at 3,600+ individual AI queries to build a reliable picture of your brand&rsquo;s AI visibility. This is not something you can do by hand over lunch.</p>
+
+
+        <h2 id="what-to-do">What to do instead of spot-checking</h2>
+
+        <p>The first step is accepting that your single query told you almost nothing. That is not a comfortable realization, but it is the necessary starting point.</p>
+
+        <p>From there, you need systematic measurement. Not one query, not five, not even twenty &mdash; but a statistically valid sample across the prompts real buyers use, on the platforms they actually use, through the interfaces they actually interact with.</p>
+
+        <p>What systematic measurement reveals that spot-checking cannot:</p>
+
+        <ul>
+          <li><strong>Your actual mention rate:</strong> Not whether you appeared once, but what percentage of buyer queries surface your brand.</li>
+          <li><strong>Your positioning distribution:</strong> Are you typically the first recommendation, one of several alternatives, or an afterthought? The distribution matters more than any single instance.</li>
+          <li><strong>Accuracy patterns:</strong> Is AI getting your pricing, features, or positioning wrong? A single query might show correct information while the majority of responses contain errors. If AI is saying wrong things about your brand, you need to know the pattern, not a snapshot.</li>
+          <li><strong>Competitive context:</strong> Which competitors consistently appear alongside or instead of you, and in what framing?</li>
+          <li><strong>Platform gaps:</strong> Where you are visible versus invisible across different AI systems, and which gaps matter most based on where your buyers are.</li>
+        </ul>
+
+        <p>A Metricus AI visibility report does exactly this: 50+ queries per platform, across multiple AI systems, through real user interfaces, with statistical analysis of mention rates, positioning, accuracy, and competitive context. The result is not a single number but a detailed map of how AI actually represents your brand to the people asking about your category.</p>
+
+        <p>Your one ChatGPT query was not wrong. It was just one data point out of thousands. The question is what the other thousands look like.</p>
+
+        <p class="text-sm text-slate-muted mt-8">Last updated: April 2026</p>
+
+      </div>
+      <!-- End Article Body -->
+
+
+
+
+
+      <!-- ========== ARTICLE CTA ========== -->
+      <div class="bg-primary p-8 md:p-12 mt-16">
+        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">Find out what AI actually says about your brand</h3>
+        <p class="text-on-primary/80 text-base max-w-lg mb-8">
+          Not what it said once. What it says across thousands of queries. One-time fee, no subscription.
+        </p>
+        <a href="/get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
+          Get your report
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- ========== CITE THIS ARTICLE ========== -->
+      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
+        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
+          <cite class="not-italic"><a href="https://metricusapp.com/blog/chatgpt-different-answers-every-time/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; You Asked ChatGPT About Your Brand and It Looked Fine &mdash; But That&rsquo;s Not What Everyone Sees</a></cite>
+        </p>
+      </footer>
+
+    </article>
+
+
+
+    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-6">Go deeper</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <a href="/ai-platform-comparison-brands/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">Platform Intelligence Guide</p>
+          <p class="text-sm text-on-surface-variant mt-1">How AI platforms score and rank content</p>
+        </a>
+        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
+          <p class="text-sm text-on-surface-variant mt-1">Accuracy patterns across AI platforms</p>
+        </a>
+      </div>
+    </section>
+
+<!-- ========== RELATED POSTS ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-8">Related articles</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <a href="../ai-visibility-scores-explained/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Methodology</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            How AI Visibility Scores Actually Work
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            AI visibility scores vary wildly between tools. How they're calculated, why nondeterminism matters, and what a meaningful score actually looks like.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../ai-visibility-discovery-benchmark/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Research</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            What 182 LLM Prompt Tests Reveal About How AI Recommends B2B SaaS
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            79% of AI answers about B2B SaaS came from training data, not live web search. Here is what that means for your visibility.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../chatgpt-says-wrong-things-about-my-company/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Guide</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            ChatGPT Says Wrong Things About My Company &mdash; What to Do About It
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            When AI gets your brand details wrong, here is what is actually happening and the steps that fix it.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>April 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <!-- Site Footer -->
+  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+        <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
+        <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
+        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
+        <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
+        <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
+        <a href="/privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a>
+        <a href="/terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a>
+        <a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Used to Recommend Your Brand — Then It Stopped. Here's Why. | Metricus</title>
+  <meta name="description" content="Your brand used to appear in ChatGPT and Perplexity answers. Now it doesn't. Here's what changed — model updates, training data shifts, competitor moves — and how to diagnose the drop.">
+  <meta property="og:title" content="AI Used to Recommend Your Brand — Then It Stopped. Here's Why.">
+  <meta property="og:description" content="Your brand used to appear in ChatGPT and Perplexity answers. Now it doesn't. Here's what changed — model updates, training data shifts, competitor moves — and how to diagnose the drop.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metricusapp.com/blog/ai-stopped-recommending-my-brand/">
+  <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AI Used to Recommend Your Brand — Then It Stopped. Here's Why.">
+  <meta name="twitter:description" content="Your brand used to appear in ChatGPT and Perplexity answers. Now it doesn't. Here's what changed — model updates, training data shifts, competitor moves — and how to diagnose the drop.">
+  <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
+  <link rel="canonical" href="https://metricusapp.com/blog/ai-stopped-recommending-my-brand/">
+
+  <!-- GTM -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w70oz7g1k3");
+  </script>
+
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "AI Used to Recommend Your Brand — Then It Stopped. Here's Why.",
+    "description": "Your brand used to appear in ChatGPT and Perplexity answers. Now it doesn't. Here's what changed — model updates, training data shifts, competitor moves — and how to diagnose the drop.",
+    "author": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "datePublished": "2026-04-10",
+    "dateModified": "2026-04-10",
+    "mainEntityOfPage": "https://metricusapp.com/blog/ai-stopped-recommending-my-brand/",
+    "image": "https://metricusapp.com/metricus-og-image.png"
+  }
+  </script>
+
+  <!-- JSON-LD BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "AI Stopped Recommending My Brand", "item": "https://metricusapp.com/blog/ai-stopped-recommending-my-brand/"}
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#515F74',
+            'primary-hover': '#1E293B',
+            'on-primary': '#f6f7ff',
+            'on-primary-fixed': '#324054',
+            'primary-dim': '#455368',
+            surface: '#f7f9fb',
+            'surface-container-low': '#f0f4f7',
+            'surface-container': '#e8eff3',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-highest': '#d9e4ea',
+            'surface-container-high': '#e1e9ee',
+            'surface-variant': '#d9e4ea',
+            'on-surface': '#2a3439',
+            'on-surface-variant': '#566166',
+            outline: '#717c82',
+            'outline-variant': '#a9b4b9',
+            'slate-text': '#0F172A',
+            'slate-muted': '#64748B',
+            'slate-accent': '#475569',
+          },
+          fontFamily: {
+            display: ['Newsreader', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            body: ['Public Sans', 'sans-serif'],
+            headline: ['Newsreader', 'serif'],
+          },
+          borderRadius: {
+            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
+            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
+            full: '0.75rem',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #0F172A;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .font-display { font-family: 'Newsreader', serif; }
+    .font-headline { font-family: 'Newsreader', serif; }
+    .font-body-sans { font-family: 'Public Sans', sans-serif; }
+
+    .editorial-btn {
+      transition: background-color 150ms ease-in-out, transform 150ms ease;
+    }
+    .editorial-btn:hover {
+      background-color: #1E293B;
+    }
+
+    .bg-grid-dots {
+      background-image: radial-gradient(circle, #717c82 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+      opacity: 0.05;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .blog-card {
+      transition: transform 200ms ease, background-color 200ms ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+      background-color: #f7f9fb;
+    }
+
+    /* Article prose styles */
+    .article-body h2 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      line-height: 1.2;
+      color: #0F172A;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) {
+      .article-body h2 {
+        font-size: 2rem;
+      }
+    }
+    .article-body h3 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.3;
+      color: #0F172A;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .article-body p {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+    }
+    .article-body ul, .article-body ol {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+    }
+    .article-body ul { list-style-type: disc; }
+    .article-body ol { list-style-type: decimal; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body blockquote {
+      border-left: 2px solid #334155;
+      padding-left: 1.5rem;
+      font-style: italic;
+      color: #475569;
+      font-size: 1.125rem;
+      line-height: 1.75;
+      margin: 2rem 0;
+    }
+    .article-body a {
+      color: #334155;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .article-body a:hover {
+      color: #1E293B;
+    }
+  </style>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why did AI stop recommending my brand?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The most common causes are model updates that changed training data, competitors strengthening their third-party presence, retrieval index refreshes that reshuffled source rankings, or nondeterminism — AI answers vary significantly between runs, so what looked like consistent visibility may have been statistical noise."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a single AI model update remove my brand from recommendations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. When a model retrains on new data, the weighting of sources changes. A brand that appeared in 70% of responses under one model version can drop to 10% under the next if the new training data includes stronger competitor coverage or if your previously indexed content was deprioritized."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often do AI models update their training data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Major providers update models multiple times per year. In Q1 2026 alone, there were over 250 model releases across major labs. Each update can shift which brands appear in recommendations, making continuous monitoring essential."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I tell if my AI visibility drop is real or just nondeterminism?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You need statistically significant measurement. SparkToro research found that fewer than 1 in 100 runs produce the same brand list. A single query tells you almost nothing. You need 60-100+ runs of the same prompt to distinguish a real drop from normal variation. A Metricus AI visibility report runs this volume of testing across all major platforms."
+        }
+      }
+    ]
+  }
+  </script>
+  <script src="/js/reader-pulse-b.js" defer></script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
+
+  <!-- Site Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="/" class="flex items-center gap-2 group" aria-label="Metricus home">
+        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+        </svg>
+        <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
+        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
+        <a href="/blog/" class="text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Learn</a>
+        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
+        <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
+    <div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div>
+    <nav class="absolute top-0 right-0 w-72 h-full bg-surface-container-lowest shadow-xl flex flex-col pt-6 px-6">
+      <button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">How It Works</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/" id="mobile-pricing-link">Pricing</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
+      <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    (function(){
+      var btn=document.getElementById('mobile-menu-btn');
+      var menu=document.getElementById('mobile-menu');
+      var close=document.getElementById('mobile-menu-close');
+      var backdrop=document.getElementById('mobile-menu-backdrop');
+      var pricingLink=document.getElementById('mobile-pricing-link');
+      if(!btn||!menu)return;
+      function open(){menu.classList.remove('hidden');menu.setAttribute('aria-hidden','false');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+      function shut(){menu.classList.add('hidden');menu.setAttribute('aria-hidden','true');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+      btn.addEventListener('click',open);
+      if(close)close.addEventListener('click',shut);
+      if(backdrop)backdrop.addEventListener('click',shut);
+      if(pricingLink)pricingLink.addEventListener('click',shut);
+    })();
+  </script>
+
+
+  <main class="flex-grow flex flex-col relative overflow-x-hidden">
+
+    <!-- Background dot grid -->
+    <div class="absolute inset-0 bg-grid-dots -z-10 pointer-events-none"></div>
+
+
+    <!-- ========== ARTICLE ========== -->
+    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
+
+      <!-- Breadcrumb -->
+      <nav class="mb-8">
+        <ol class="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-muted">
+          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
+          <li class="select-none">/</li>
+          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
+          <li class="select-none">/</li>
+          <li class="text-slate-text">AI Stopped Recommending My Brand</li>
+        </ol>
+      </nav>
+
+      <!-- Article Header -->
+      <header class="mb-12">
+        <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-4">Diagnostic Guide</p>
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
+          AI Used to Recommend Your Brand &mdash; Then It Stopped. Here&rsquo;s Why.
+        </h1>
+        <p class="text-sm text-outline">Metricus &middot; April 10, 2026 &middot; 9 min read</p>
+      </header>
+
+
+      <!-- Definition Box -->
+      <div class="bg-surface-container-low p-8 mb-12">
+        <p class="text-lg leading-relaxed text-on-surface">
+          Three months ago, ChatGPT recommended your product when buyers asked about your category. Today it doesn&rsquo;t. Nothing changed on your end &mdash; no rebrand, no bad press, no product downgrade. But something changed on theirs. This guide explains the six reasons AI visibility disappears, how to tell which one hit you, and what to do about it.
+        </p>
+      </div>
+
+
+      <!-- Table of Contents -->
+      <div class="border border-[#E2E8F0] p-8 mb-12">
+        <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">In this article</p>
+        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
+          <li><a href="#not-imagining-it" class="hover:text-primary-hover underline underline-offset-2">You are not imagining it</a></li>
+          <li><a href="#six-causes" class="hover:text-primary-hover underline underline-offset-2">The 6 reasons AI stops recommending a brand</a></li>
+          <li><a href="#nondeterminism" class="hover:text-primary-hover underline underline-offset-2">The nondeterminism trap</a></li>
+          <li><a href="#diagnose" class="hover:text-primary-hover underline underline-offset-2">How to diagnose which cause hit you</a></li>
+          <li><a href="#what-to-do" class="hover:text-primary-hover underline underline-offset-2">What to do next</a></li>
+        </ol>
+      </div>
+
+
+<!-- Article Body -->
+      <div class="article-body">
+
+        <h2 id="not-imagining-it">You are not imagining it</h2>
+
+        <p>This is one of the most disorienting things that can happen to a marketing team. You had AI visibility. You could ask ChatGPT or Perplexity a buyer-intent question in your category, and your brand appeared in the answer. Then one day it stopped. You didn&rsquo;t change anything. Your website is the same. Your reviews are the same. Your competitors didn&rsquo;t acquire you. But AI simply stopped mentioning you.</p>
+
+        <p>What Metricus found across hundreds of AI visibility reports is that this pattern &mdash; having visibility and then losing it &mdash; is more common than never having it at all. Research from SparkToro confirms the underlying instability: fewer than 1 in 100 runs of the same prompt produce the same list of recommended brands. The AI recommendation surface is structurally volatile, and brands move in and out of it constantly.</p>
+
+        <p>The question is whether your drop is real or whether you were never as visible as you thought. Both happen, and they require different responses.</p>
+
+
+        <h2 id="six-causes">The 6 reasons AI stops recommending a brand</h2>
+
+        <h3>1. A model update changed the training data</h3>
+
+        <p>This is the most common cause and the hardest to see coming. When OpenAI, Anthropic, or Google releases a new model version, the training data changes. Content that was weighted heavily in the previous version may be weighted differently in the new one. In Q1 2026 alone, there were over 250 model releases across major AI labs. Each one reshuffles which sources the model draws from and how it ranks them.</p>
+
+        <p>The practical impact is stark. A brand that appeared in 70% of responses under one model version can drop to 10% under the next &mdash; not because the brand did anything wrong, but because the new training data includes stronger competitor content, or because the model&rsquo;s new architecture weighs different signals. What Metricus found is that brands frequently lose visibility after a major model update without any change on their own side.</p>
+
+        <h3>2. The knowledge cutoff moved past your best content</h3>
+
+        <p>Every AI model has a knowledge cutoff &mdash; a date beyond which it has no training data. When a new model ships with a newer cutoff, the content landscape it sees is different. Your strongest third-party mentions might have been published in a window that the old model included but the new model treats differently. Conversely, competitor content published after the old cutoff is now visible to the new model for the first time.</p>
+
+        <p>The cutoff dates across models vary significantly. GPT-5.2 and Claude 4.6 have cutoffs around August 2025. GPT-4o still uses an October 2023 cutoff &mdash; a 29-month gap. This means your visibility can be entirely different depending on which model version the buyer happens to use. A product launch from January 2025 is invisible to GPT-4o but exists in GPT-5.2.</p>
+
+        <h3>3. A competitor strengthened their position</h3>
+
+        <p>AI recommendations are a zero-sum surface. When a model is asked to recommend three tools in a category, your brand occupies a slot that a competitor wants. If a competitor published authoritative content, earned coverage in industry publications, or built up their presence on review platforms, the model may start favoring them over you &mdash; even though your own signals did not weaken.</p>
+
+        <p>What Metricus found in longitudinal tracking is that competitive displacement is the second most common cause of visibility loss. The brand that lost visibility often did nothing wrong. A competitor simply did more, and AI shifted its recommendations accordingly.</p>
+
+        <h3>4. The retrieval index refreshed</h3>
+
+        <p>Several AI platforms &mdash; Perplexity, Google AI Overviews, and ChatGPT with browsing enabled &mdash; do not rely solely on training data. They use retrieval-augmented generation (RAG), pulling live web results to supplement the model&rsquo;s knowledge. When these retrieval indexes refresh, the sources they pull can change overnight.</p>
+
+        <p>This is particularly relevant for Perplexity, which crawls the web in real time. If a competitor publishes a stronger page that outranks yours in Perplexity&rsquo;s retrieval index, your brand can disappear from answers within days. Unlike training data changes, retrieval shifts are fast and continuous.</p>
+
+        <h3>5. Your third-party coverage aged out</h3>
+
+        <p>AI models and retrieval systems favor recent content. A G2 review page that was updated 18 months ago carries less weight than one updated last month. An industry report from 2024 is less authoritative than one from 2026. If your strongest third-party signals are aging and you are not generating new ones, your visibility decays gradually &mdash; then suddenly, as a threshold is crossed and a competitor with fresher signals takes your slot.</p>
+
+        <p>What Metricus found is that pages not updated quarterly are roughly three times more likely to lose AI citations. The brands with the most stable AI visibility are the ones consistently generating fresh external coverage.</p>
+
+        <h3>6. Structural nondeterminism made your visibility look more stable than it was</h3>
+
+        <p>This is the cause no one wants to hear. AI chatbots are nondeterministic &mdash; they give different answers to the same question every time. SparkToro&rsquo;s research found that asking ChatGPT the same brand recommendation query 100 times produces a different list in 99 of those runs. What Metricus found in our own testing is that a single query can show mention rates ranging from 20% to 80% for the same brand.</p>
+
+        <p>If you checked your visibility by asking ChatGPT a few times and seeing your brand appear, you may have been observing favorable variance rather than stable visibility. When you checked again later and did not see your brand, that may also be variance. Without statistically significant measurement &mdash; 60 to 100 runs per prompt, across multiple platforms &mdash; you cannot distinguish a real drop from noise.</p>
+
+
+        <h2 id="nondeterminism">The nondeterminism trap</h2>
+
+        <p>This point deserves emphasis because it changes how you should interpret every AI visibility observation. The nondeterminism trap works like this: you check ChatGPT, see your brand, and feel confident. A month later you check again, don&rsquo;t see your brand, and panic. In reality, your actual visibility may not have changed at all. Or it may have dropped catastrophically. A single query tells you almost nothing.</p>
+
+        <p>SparkToro&rsquo;s data makes this concrete. Across 2,961 prompts run through ChatGPT, Claude, and Google AI Overviews, fewer than 1 in 100 runs produced the same brand list, and fewer than 1 in 1,000 produced the same list in the same order. The variation is not a bug &mdash; it is a structural feature of how large language models generate responses.</p>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>The measurement threshold:</strong> To determine whether your AI visibility actually changed, you need at least 60&ndash;100 runs of the same prompt across each platform. Anything less is anecdotal. A single check is statistically meaningless.
+          </p>
+        </div>
+
+        <p>This means that most brands who believe they &ldquo;lost&rdquo; AI visibility have never actually measured it. They observed a few favorable results, then observed a few unfavorable results, and assumed a drop occurred. Some of them are right &mdash; real drops do happen, for the five reasons above. But without proper measurement, you cannot tell.</p>
+
+
+        <h2 id="diagnose">How to diagnose which cause hit you</h2>
+
+        <p>Each cause has a different diagnostic signature. Here is how to start narrowing it down.</p>
+
+        <h3>Check the timeline against model releases</h3>
+
+        <p>If your visibility drop coincides with a major model update &mdash; GPT-5.4 in March 2026, Claude 4.6 in February 2026, Gemini 3.1 in March 2026 &mdash; a training data shift is the most likely cause. The drop would appear across many queries simultaneously, not just one or two.</p>
+
+        <h3>Check platform-by-platform</h3>
+
+        <p>If you lost visibility on Perplexity but retained it on ChatGPT, the cause is likely a retrieval index change rather than a training data shift. Perplexity uses real-time web crawling, so its recommendations can shift within days of competitor content changes. ChatGPT relies more heavily on training data, so changes there map to model updates.</p>
+
+        <h3>Check what replaced you</h3>
+
+        <p>Run the buyer-intent queries that used to return your brand and look at who appears now. If a specific competitor is consistently taking your slot, that points to competitive displacement &mdash; they strengthened their signals. If the recommendations are scattered and different each time, nondeterminism or a broad training data reweight is more likely.</p>
+
+        <h3>Check the volume of your third-party coverage</h3>
+
+        <p>Search for your brand name on G2, Capterra, industry publications, and review sites. Look at when your most recent mentions were published. If your freshest coverage is more than six months old while competitors have coverage from the last quarter, content aging is a contributing factor.</p>
+
+        <h3>Run statistically significant tests</h3>
+
+        <p>The only way to confirm a real visibility change is to measure it properly. This means running your buyer-intent queries 60&ndash;100 times per platform, calculating mention rates, and comparing them to a prior baseline measured the same way. If you never had a baseline, you cannot prove a drop occurred &mdash; you can only establish your current position and begin tracking from there.</p>
+
+
+        <h2 id="what-to-do">What to do next</h2>
+
+        <p>The response depends on the cause. If the root cause is a training data shift from a model update, you need to strengthen the signals that the new model weighs &mdash; which requires first understanding what those signals are. If the cause is competitive displacement, you need to identify exactly where competitors overtook you and build coverage in those specific gaps. If the cause is content aging, you need fresh third-party mentions. If the cause is nondeterminism, you need proper measurement before taking any action at all.</p>
+
+        <p>What all of these have in common is that they require data. Not a guess from checking ChatGPT twice &mdash; actual structured measurement across platforms, across query types, at statistically significant volume. That is what a Metricus AI visibility report provides: the full picture of where your brand stands today, which specific causes are affecting your visibility, who is appearing instead of you, and what actions will have the highest impact.</p>
+
+        <p>The worst response to losing AI visibility is guessing at the cause and acting on the wrong one. The second worst is doing nothing because you are not sure if the drop is real. Measurement resolves both.</p>
+
+        <p class="text-sm text-slate-muted mt-8">Last updated: April 2026</p>
+
+      </div>
+      <!-- End Article Body -->
+
+
+
+
+
+      <!-- ========== ARTICLE CTA ========== -->
+      <div class="bg-primary p-8 md:p-12 mt-16">
+        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">Find out why AI stopped recommending your brand</h3>
+        <p class="text-on-primary/80 text-base max-w-lg mb-8">
+          Get your AI visibility report. Pinpoint whether your drop is real, which cause is behind it, and exactly what to fix. One-time fee, no subscription.
+        </p>
+        <a href="/get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
+          Get your report
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- ========== CITE THIS ARTICLE ========== -->
+      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
+        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
+          <cite class="not-italic"><a href="https://metricusapp.com/blog/ai-stopped-recommending-my-brand/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; AI Used to Recommend Your Brand &mdash; Then It Stopped. Here&rsquo;s Why.</a></cite>
+        </p>
+      </footer>
+
+    </article>
+
+
+
+    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-6">Go deeper</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
+          <p class="text-sm text-on-surface-variant mt-1">48 clusters on why AI gets brands wrong</p>
+        </a>
+        <a href="/ai-brand-alignment-guide/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">Alignment Framework</p>
+          <p class="text-sm text-on-surface-variant mt-1">69 clusters on getting recommended by AI</p>
+        </a>
+      </div>
+    </section>
+
+<!-- ========== RELATED POSTS ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-8">Related articles</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <a href="../why-ai-ignores-your-brand/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Diagnostic Guide</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            Why AI Ignores Your Brand: A Step-by-Step Diagnostic Guide
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            Your brand ranks on Google but ChatGPT doesn't mention you. Symptoms, root causes, and how to fix it.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../ai-visibility-monitoring-vs-one-time-audits/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Buyer's Guide</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            AI Visibility Monitoring vs One-Time Audits: Which Should You Buy?
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            Subscription dashboards vs. one-time reports compared on cost, depth, and fit for how your team actually works.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../ai-visibility-scores-explained/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Methodology</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            How AI Visibility Scores Actually Work
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            Why most scores are unreliable, the nondeterminism problem, and the 5 metrics that produce a meaningful result.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <!-- Site Footer -->
+  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+        <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
+        <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
+        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
+        <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
+        <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
+        <a href="/privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a>
+        <a href="/terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a>
+        <a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Recommends You Sometimes but Not Others — Here's What Triggers the Difference | Metricus</title>
+  <meta name="description" content="AI recommends your brand in some answers and skips it in others. The pattern is not random. Here is what triggers inclusion vs exclusion and how to shift the ratio.">
+  <meta property="og:title" content="AI Recommends You Sometimes but Not Others — Here's What Triggers the Difference">
+  <meta property="og:description" content="AI recommends your brand in some answers and skips it in others. The pattern is not random. Here is what triggers inclusion vs exclusion.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metricusapp.com/blog/ai-recommends-you-sometimes-not-others/">
+  <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AI Recommends You Sometimes but Not Others — Here's What Triggers the Difference | Metricus">
+  <meta name="twitter:description" content="AI recommends your brand in some answers and skips it in others. The pattern is not random. Here is what triggers inclusion vs exclusion.">
+  <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
+  <link rel="canonical" href="https://metricusapp.com/blog/ai-recommends-you-sometimes-not-others/">
+
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w70oz7g1k3");
+  </script>
+
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#515F74',
+            'primary-hover': '#1E293B',
+            'on-primary': '#f6f7ff',
+            'on-primary-fixed': '#324054',
+            'primary-dim': '#455368',
+            surface: '#f7f9fb',
+            'surface-container-low': '#f0f4f7',
+            'surface-container': '#e8eff3',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-highest': '#d9e4ea',
+            'surface-container-high': '#e1e9ee',
+            'surface-variant': '#d9e4ea',
+            'on-surface': '#2a3439',
+            'on-surface-variant': '#566166',
+            outline: '#717c82',
+            'outline-variant': '#a9b4b9',
+            'slate-text': '#0F172A',
+            'slate-muted': '#64748B',
+            'slate-accent': '#475569',
+          },
+          fontFamily: {
+            display: ['Newsreader', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            body: ['Public Sans', 'sans-serif'],
+            headline: ['Newsreader', 'serif'],
+          },
+          borderRadius: {
+            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
+            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
+            full: '0.75rem',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #0F172A;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .font-display { font-family: 'Newsreader', serif; }
+    .font-headline { font-family: 'Newsreader', serif; }
+    .font-body-sans { font-family: 'Public Sans', sans-serif; }
+
+    .editorial-btn {
+      transition: background-color 150ms ease-in-out, transform 150ms ease;
+    }
+    .editorial-btn:hover {
+      background-color: #1E293B;
+    }
+
+    .bg-grid-dots {
+      background-image: radial-gradient(circle, #717c82 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+      opacity: 0.05;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .blog-card {
+      transition: transform 200ms ease, background-color 200ms ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+      background-color: #f7f9fb;
+    }
+
+    .article-body h2 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      line-height: 1.2;
+      color: #0F172A;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) {
+      .article-body h2 {
+        font-size: 2rem;
+      }
+    }
+    .article-body h3 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.3;
+      color: #0F172A;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .article-body p {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+    }
+    .article-body ul, .article-body ol {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+    }
+    .article-body ul { list-style-type: disc; }
+    .article-body ol { list-style-type: decimal; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body blockquote {
+      border-left: 2px solid #334155;
+      padding-left: 1.5rem;
+      font-style: italic;
+      color: #475569;
+      font-size: 1.125rem;
+      line-height: 1.75;
+      margin: 2rem 0;
+    }
+    .article-body a {
+      color: #334155;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .article-body a:hover {
+      color: #1E293B;
+    }
+  </style>
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "AI Recommends You Sometimes but Not Others — Here's What Triggers the Difference",
+    "description": "AI recommends your brand in some answers and skips it in others. The pattern is not random. Here is what triggers inclusion vs exclusion and how to shift the ratio.",
+    "author": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "datePublished": "2026-04-10",
+    "dateModified": "2026-04-10",
+    "mainEntityOfPage": "https://metricusapp.com/blog/ai-recommends-you-sometimes-not-others/",
+    "image": "https://metricusapp.com/metricus-og-image.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "AI Recommends You Sometimes but Not Others", "item": "https://metricusapp.com/blog/ai-recommends-you-sometimes-not-others/"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why does AI recommend my brand sometimes but not others?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI systems are probability engines, not deterministic search indexes. Whether your brand appears depends on how confidently the model associates you with the query topic. Brands below the corroboration threshold — lacking 2-3 independent, authoritative sources confirming the same claims — get included intermittently instead of consistently. SparkToro research found AI recommendation lists repeat less than 1% of the time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the corroboration threshold in AI recommendations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The corroboration threshold is the minimum number of independent, high-confidence sources that confirm the same claims about your brand before AI commits to including it consistently. Below the threshold, the AI hedges — it includes your brand in some responses but not others. Crossing the threshold requires 2-3 authoritative, independent sources all saying the same thing about your identity, function, and credibility."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a pattern to when AI includes or excludes a brand?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. While individual outputs are nondeterministic, the underlying inclusion probability is shaped by measurable factors: source corroboration, positioning consistency across the web, category specificity of the query, and whether your brand is present in the entity graph, document graph, and concept graph that AI retrieves from. Brands strong on all three appear consistently. Brands weak on one or more appear intermittently."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I increase the consistency of AI recommending my brand?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Focus on three areas: cross the corroboration threshold by earning independent editorial mentions that confirm your positioning, eliminate positioning contradictions across your web properties so AI does not encounter conflicting descriptions, and build presence across all three knowledge layers AI draws from — entity graphs, document indexes, and parametric training data. Monitoring your mention rate over time with systematic measurement reveals whether these efforts are working."
+        }
+      }
+    ]
+  }
+  </script>
+  <script src="/js/reader-pulse-b.js" defer></script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
+
+  <!-- Site Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="/" class="flex items-center gap-2 group" aria-label="Metricus home">
+        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+        </svg>
+        <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
+        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
+        <a href="/blog/" class="text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Learn</a>
+        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
+        <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
+    <div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div>
+    <nav class="absolute top-0 right-0 w-72 h-full bg-surface-container-lowest shadow-xl flex flex-col pt-6 px-6">
+      <button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">How It Works</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/" id="mobile-pricing-link">Pricing</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
+      <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    (function(){
+      var btn=document.getElementById('mobile-menu-btn');
+      var menu=document.getElementById('mobile-menu');
+      var close=document.getElementById('mobile-menu-close');
+      var backdrop=document.getElementById('mobile-menu-backdrop');
+      var pricingLink=document.getElementById('mobile-pricing-link');
+      if(!btn||!menu)return;
+      function open(){menu.classList.remove('hidden');menu.setAttribute('aria-hidden','false');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+      function shut(){menu.classList.add('hidden');menu.setAttribute('aria-hidden','true');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+      btn.addEventListener('click',open);
+      if(close)close.addEventListener('click',shut);
+      if(backdrop)backdrop.addEventListener('click',shut);
+      if(pricingLink)pricingLink.addEventListener('click',shut);
+    })();
+  </script>
+
+
+  <main class="flex-grow flex flex-col relative overflow-x-hidden">
+
+    <div class="absolute inset-0 bg-grid-dots -z-10 pointer-events-none"></div>
+
+    <!-- ========== ARTICLE ========== -->
+    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
+
+      <!-- Breadcrumb -->
+      <nav class="mb-8">
+        <ol class="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-muted">
+          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
+          <li class="select-none">/</li>
+          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
+          <li class="select-none">/</li>
+          <li class="text-slate-text">AI Recommends You Sometimes but Not Others</li>
+        </ol>
+      </nav>
+
+      <!-- Article Header -->
+      <header class="mb-12">
+        <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-4">AI Visibility</p>
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
+          AI Recommends You Sometimes but Not Others &mdash; Here&rsquo;s What Triggers the Difference
+        </h1>
+        <p class="text-sm text-outline">Metricus Research &middot; April 10, 2026 &middot; 9 min read</p>
+      </header>
+
+
+      <!-- Key Finding Box -->
+      <div class="bg-surface-container-low p-8 mb-12">
+        <p class="text-lg leading-relaxed text-on-surface">
+          <strong>AI recommendation lists repeat less than 1% of the time &mdash; but the inconsistency is not random.</strong> SparkToro research across 2,961 queries found that brands above a corroboration threshold appeared in 55&ndash;97% of responses, while brands below it surfaced intermittently. The difference between &ldquo;sometimes recommended&rdquo; and &ldquo;consistently recommended&rdquo; comes down to measurable factors you can identify and fix.
+        </p>
+      </div>
+
+
+      <!-- Table of Contents -->
+      <div class="border border-[#E2E8F0] p-8 mb-12">
+        <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">In this article</p>
+        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
+          <li><a href="#intermittent" class="hover:text-primary-hover underline underline-offset-2">The intermittent-visibility problem</a></li>
+          <li><a href="#not-random" class="hover:text-primary-hover underline underline-offset-2">Why the pattern is not random</a></li>
+          <li><a href="#inclusion-triggers" class="hover:text-primary-hover underline underline-offset-2">What triggers inclusion</a></li>
+          <li><a href="#exclusion-triggers" class="hover:text-primary-hover underline underline-offset-2">What triggers exclusion</a></li>
+          <li><a href="#three-graphs" class="hover:text-primary-hover underline underline-offset-2">The three knowledge layers AI draws from</a></li>
+          <li><a href="#measure" class="hover:text-primary-hover underline underline-offset-2">How to measure your actual inclusion rate</a></li>
+          <li><a href="#shift-ratio" class="hover:text-primary-hover underline underline-offset-2">How to shift the ratio</a></li>
+        </ol>
+      </div>
+
+
+<!-- Article Body -->
+      <div class="article-body">
+
+        <h2 id="intermittent">The intermittent-visibility problem</h2>
+
+        <p>You asked ChatGPT to recommend products in your category. Your brand appeared. You asked again the next day and it was gone &mdash; replaced by a competitor you have never heard of. You asked a third time and you were back, but listed last instead of first. Nothing changed on your end. No new press. No website update. No pricing change. Yet AI&rsquo;s answer about you shifted completely between queries.</p>
+
+        <p>This is not a glitch. It is a signal. Your brand sits at the boundary of what AI considers confidently recommendable for this topic. Sometimes the probability tips in your favor. Sometimes it does not. The question worth asking is not &ldquo;why did it change?&rdquo; but &ldquo;what determines the probability that we appear at all?&rdquo;</p>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>The real insight:</strong> Intermittent visibility is not randomness. It means you are close to a threshold &mdash; and the factors that push you above or below it are identifiable.
+          </p>
+        </div>
+
+
+        <h2 id="not-random">Why the pattern is not random</h2>
+
+        <p>Large language models are probability engines. Every response is generated by sampling from a distribution of likely next tokens. This makes individual outputs nondeterministic &mdash; <a href="../chatgpt-different-answers-every-time/">the same prompt produces different answers every time</a>. SparkToro&rsquo;s research across 2,961 queries confirmed that AI recommendation lists repeat less than 1% of the time.</p>
+
+        <p>But nondeterministic does not mean patternless. Underneath the per-query variation, there is a stable probability distribution. Some brands show up in 90% of relevant queries. Others show up in 15%. The per-query randomness makes the pattern invisible when you spot-check, but it becomes clear when you measure at scale.</p>
+
+        <p>Think of it this way: a coin flip is random, but a loaded coin still lands heads more often. The &ldquo;loading&rdquo; of AI&rsquo;s coin &mdash; the factors that determine how often your brand lands in the answer &mdash; follows predictable rules. The SparkToro study found that in constrained categories like healthcare, top brands appeared in 55% to 97% of responses. In broader categories, the field was more scattered. Whether your brand sits at 90% or 15% is not luck. It is a function of how AI evaluates you against specific criteria.</p>
+
+
+        <h2 id="inclusion-triggers">What triggers inclusion</h2>
+
+        <p>When AI decides whether to include your brand in a recommendation, it is not checking a ranking list. It is evaluating confidence &mdash; how sure it is that recommending you is a correct, well-supported answer to the question being asked. Multiple factors compound to build or undermine that confidence.</p>
+
+        <h3>Corroboration from independent sources</h3>
+
+        <p>The single strongest predictor of consistent AI inclusion is what researchers call the corroboration threshold: the point at which 2&ndash;3 independent, authoritative sources all confirm the same claims about your brand. Below the threshold, AI hedges. It says &ldquo;claims to be&rdquo; instead of &ldquo;is.&rdquo; It includes you in some outputs but not others. Above the threshold, confidence locks in and your mention rate stabilizes.</p>
+
+        <p>This is multiplicative, not additive. Search Engine Land documented a cascading confidence model: if each processing stage passes 90% confidence across 10 stages, total confidence drops to 35%. A single weak link at 50% drops the total to 19%. One gap in corroboration can drag your entire inclusion probability down.</p>
+
+        <h3>Positioning consistency</h3>
+
+        <p>AI cross-references your website, marketplace listings, review sites, LinkedIn page, and other public data sources. If those sources describe your brand consistently &mdash; same category, same core claims, same positioning &mdash; AI&rsquo;s confidence increases. Brands with consistent editorial mentions achieved AI recommendation rates 89% higher than brands with scattered, contradictory positioning across their web presence.</p>
+
+        <h3>Category specificity of the query</h3>
+
+        <p>Narrow queries produce more consistent results. When someone asks about &ldquo;cloud computing providers,&rdquo; the field is small and well-defined, so top brands appear in nearly every response. When someone asks about &ldquo;best project management tools,&rdquo; the category is broad enough that AI rotates through dozens of options. Your mention rate on broad queries depends on how strongly AI associates you with the specific sub-need the user described.</p>
+
+        <h3>Content freshness and volume</h3>
+
+        <p>AI models pull from training data and, increasingly, from live retrieval. Brands that produce consistent, category-relevant content create more touchpoints for AI to find and corroborate. Data from Brandi AI found that brands producing 12+ optimized pieces of content saw up to 200x faster visibility gains compared to those producing four or fewer. This is not about volume for its own sake &mdash; it is about giving AI more evidence to build confidence.</p>
+
+
+        <h2 id="exclusion-triggers">What triggers exclusion</h2>
+
+        <p>Understanding why AI skips you is as important as understanding why it includes you. Several factors actively suppress inclusion, even when other signals are strong.</p>
+
+        <h3>Positioning contradictions</h3>
+
+        <p>If your homepage says &ldquo;enterprise security platform,&rdquo; your G2 listing says &ldquo;compliance automation tool,&rdquo; and a press article calls you a &ldquo;cybersecurity startup,&rdquo; AI cannot confidently categorize you. This ambiguity reduces the likelihood of inclusion in any specific answer. The model is not confused &mdash; it is rationally hedging because your own sources disagree about what you are.</p>
+
+        <h3>Vocabulary mismatch</h3>
+
+        <p>Your brand uses internal terminology. Buyers use different language when asking AI. If your website talks about &ldquo;unified observability&rdquo; but buyers ask for &ldquo;server monitoring tools,&rdquo; AI may not connect the two. The mismatch does not make you invisible everywhere, but it makes your inclusion dependent on whether the specific phrasing of each query happens to overlap with your content &mdash; which is exactly the kind of intermittent visibility you are experiencing.</p>
+
+        <h3>Negative sentiment signals</h3>
+
+        <p>AI models weigh sentiment. If your brand has significant negative coverage &mdash; poor reviews, unresolved PR issues, or customer complaints dominating community discussions &mdash; positive mentions alone will not override those signals. Brands with low review scores or viral controversies can find themselves omitted from AI-generated answers even when they otherwise meet the inclusion criteria.</p>
+
+        <h3>Blocked AI crawlers</h3>
+
+        <p>Many companies have robots.txt configurations that inadvertently block AI crawlers like GPTBot, ClaudeBot, or PerplexityBot. If AI cannot retrieve your content during live-search-augmented responses, your visibility in those sessions drops to whatever the model remembers from training data alone &mdash; which may be outdated or insufficient. This creates a pattern where you appear in some queries (when the model answers from parametric memory) but not others (when it relies on retrieval).</p>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>Exclusion is usually a combination.</strong> Brands rarely drop out for a single reason. More often, two or three factors compound &mdash; mild positioning ambiguity plus a vocabulary gap plus one blocked crawler &mdash; and the combined effect pushes your confidence score below the inclusion threshold on a significant percentage of queries.
+          </p>
+        </div>
+
+
+        <h2 id="three-graphs">The three knowledge layers AI draws from</h2>
+
+        <p>AI does not retrieve answers from a single source. It synthesizes across three distinct knowledge representations, each with its own strengths and failure modes. Understanding these layers explains why your brand might appear in some types of queries but not others.</p>
+
+        <h3>Entity graph (structured knowledge)</h3>
+
+        <p>This is AI&rsquo;s factual database &mdash; structured information about companies, products, people, and their relationships. If your brand has a well-defined entity in knowledge graphs (think Wikipedia, Wikidata, Crunchbase, or well-structured schema markup on your own site), AI can confidently identify what you are. Brands with weak entity presence get treated as ambiguous &mdash; AI is less willing to recommend something it cannot clearly categorize.</p>
+
+        <h3>Document graph (indexed web content)</h3>
+
+        <p>When AI platforms use retrieval-augmented generation &mdash; pulling live web results to inform their answers &mdash; they draw from an index of web content. Your placement here depends on whether authoritative sites have published content that mentions your brand in relevant contexts. Review sites, industry publications, comparison articles, and community discussions all contribute. If the document graph contains strong, recent, consistent mentions of your brand for a topic, you appear more often in retrieval-augmented responses.</p>
+
+        <h3>Concept graph (learned associations)</h3>
+
+        <p>This is the &ldquo;gut feel&rdquo; layer &mdash; associations the model learned during training from the massive corpus of text it ingested. If your brand was frequently mentioned in training data alongside your category, that association persists even without retrieval. But this layer is also the fuzziest. It reflects whatever the training data contained, including outdated information, and it cannot be directly updated outside of model retraining.</p>
+
+        <p>Brands present across all three layers receive disproportionate visibility. The layers reinforce each other: the entity graph confirms what you are, the document graph provides recent evidence, and the concept graph provides the learned association. When one layer is missing, your inclusion becomes inconsistent &mdash; you appear when the query happens to lean on a layer where you are strong, and you disappear when it leans on a layer where you are weak.</p>
+
+
+        <h2 id="measure">How to measure your actual inclusion rate</h2>
+
+        <p>You cannot see the pattern by spot-checking. When <a href="../chatgpt-different-answers-every-time/">every query produces a different answer</a>, a handful of manual tests tells you almost nothing about your real inclusion rate.</p>
+
+        <p>Meaningful measurement requires:</p>
+
+        <ul>
+          <li><strong>Volume:</strong> SparkToro&rsquo;s methodology used 60&ndash;100 queries per prompt per platform. At fewer than 50 queries, variance is too high to distinguish real patterns from noise. A brand that appears in 3 out of 5 queries could have a true inclusion rate anywhere from 20% to 80%.</li>
+          <li><strong>Prompt diversity:</strong> Buyers phrase the same need differently. &ldquo;Best CRM for startups&rdquo; and &ldquo;what CRM should a small team use&rdquo; are functionally identical but produce different AI outputs. You need to test across the full range of phrasings your buyers actually use.</li>
+          <li><strong>Platform coverage:</strong> A brand might score 75% inclusion on ChatGPT and 30% on Perplexity for the same queries. Each platform uses different training data, retrieval mechanisms, and synthesis logic. Testing one gives you less than half the picture.</li>
+          <li><strong>Real interface testing:</strong> Developer APIs return different results than the consumer-facing product. API responses often lack the web-search grounding that real sessions include. As we detail in our <a href="../ai-visibility-scores-explained/">analysis of how AI visibility scores work</a>, the measurement method matters as much as the measurement itself.</li>
+        </ul>
+
+        <p>What you are looking for is your mention rate &mdash; the percentage of relevant buyer queries where your brand appears &mdash; broken out by platform, by query type, and over time. A brand at 40% mention rate that was at 55% three months ago is <a href="../ai-visibility-getting-worse-how-to-tell/">losing ground in ways a spot-check would never reveal</a>.</p>
+
+
+        <h2 id="shift-ratio">How to shift the ratio</h2>
+
+        <p>Once you know your actual inclusion rate and the specific factors suppressing it, you can target the gaps. The goal is not to game AI but to give it the evidence it needs to recommend you confidently.</p>
+
+        <ul>
+          <li><strong>Cross the corroboration threshold.</strong> Identify the core claims AI needs to confirm about your brand &mdash; what you do, who you serve, why you are credible &mdash; and ensure at least 2&ndash;3 independent, authoritative sources confirm each one. This means earning editorial mentions, analyst coverage, or expert reviews that corroborate your positioning, not just mention your name.</li>
+          <li><strong>Eliminate positioning contradictions.</strong> Audit how your brand is described across every public source &mdash; your website, marketplaces, review sites, social profiles, press coverage. Where descriptions conflict, fix them. Where category labels differ, align them. AI&rsquo;s confidence tracks directly with how consistently your sources agree about what you are.</li>
+          <li><strong>Close vocabulary gaps.</strong> Map the exact language buyers use when asking AI about your category and make sure your content uses those same terms. This is not keyword stuffing &mdash; it is ensuring AI can connect buyer intent to your brand without requiring a vocabulary translation it may not make.</li>
+          <li><strong>Unblock AI crawlers.</strong> Check your robots.txt for rules that block GPTBot, ClaudeBot, PerplexityBot, or Google-Extended. If you are blocking these, you are invisible to retrieval-augmented answers regardless of how strong your other signals are.</li>
+          <li><strong>Build across all three knowledge layers.</strong> Entity graph gaps require structured data, Wikipedia presence, and clear entity markup. Document graph gaps require fresh, authoritative web mentions. Concept graph gaps require consistent long-term presence in the types of content that feeds AI training data.</li>
+          <li><strong>Measure, then measure again.</strong> Run a baseline measurement of your inclusion rate. Make your changes. Wait 4&ndash;6 weeks for the effects to propagate. Measure again. The shift in your mention rate is the only reliable indicator of whether your efforts worked.</li>
+        </ul>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>The pattern exists. You just cannot see it with one query.</strong> Intermittent visibility means you are close to the threshold. Systematic measurement reveals exactly where the gaps are, and targeted fixes move you above it.
+          </p>
+        </div>
+
+        <p class="text-sm text-slate-muted mt-8">Last updated: April 2026</p>
+
+      </div>
+      <!-- End Article Body -->
+
+
+
+
+
+      <!-- ========== ARTICLE CTA ========== -->
+      <div class="bg-primary p-8 md:p-12 mt-16">
+        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">See your actual AI inclusion rate</h3>
+        <p class="text-on-primary/80 text-base max-w-lg mb-8">
+          Not one query. Thousands, across every major AI platform. Find out exactly how often AI recommends you and what triggers the gaps.
+        </p>
+        <a href="/get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
+          Get your report
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- ========== CITE THIS ARTICLE ========== -->
+      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
+        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
+          <cite class="not-italic"><a href="https://metricusapp.com/blog/ai-recommends-you-sometimes-not-others/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; AI Recommends You Sometimes but Not Others &mdash; Here&rsquo;s What Triggers the Difference</a></cite>
+        </p>
+      </footer>
+
+    </article>
+
+
+
+    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-6">Go deeper</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <a href="/ai-platform-comparison-brands/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">Platform Intelligence Guide</p>
+          <p class="text-sm text-on-surface-variant mt-1">How AI platforms score and rank content</p>
+        </a>
+        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
+          <p class="text-sm text-on-surface-variant mt-1">Accuracy patterns across AI platforms</p>
+        </a>
+      </div>
+    </section>
+
+<!-- ========== RELATED POSTS ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-8">Related articles</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <a href="../chatgpt-different-answers-every-time/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Research</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            You Asked ChatGPT About Your Brand and It Looked Fine &mdash; But That&rsquo;s Not What Everyone Sees
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            ChatGPT gives different answers every time. A single spot-check tells you nothing about what buyers actually see.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>April 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../ai-visibility-scores-explained/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Methodology</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            How AI Visibility Scores Actually Work
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            AI visibility scores vary wildly between tools. How they're calculated, why nondeterminism matters, and what a meaningful score actually looks like.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../ai-visibility-getting-worse-how-to-tell/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Guide</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            Your AI Visibility Might Be Declining Right Now &mdash; And You&rsquo;d Have No Idea
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            AI visibility can erode gradually without any obvious signal. How to detect and measure decline before it costs you pipeline.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>April 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <!-- Site Footer -->
+  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+        <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
+        <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
+        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
+        <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
+        <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
+        <a href="/privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a>
+        <a href="/terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a>
+        <a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

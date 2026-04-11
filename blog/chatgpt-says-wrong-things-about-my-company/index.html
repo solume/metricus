@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Customer Just Told You ChatGPT Is Lying About Your Product — Here's What to Do | Metricus</title>
+  <meta name="description" content="ChatGPT is telling customers the wrong thing about your product. 72% of brands have factual errors in AI responses. Here's the data on what's at stake and how to find out what AI gets wrong.">
+  <meta property="og:title" content="A Customer Just Told You ChatGPT Is Lying About Your Product — Here's What to Do">
+  <meta property="og:description" content="ChatGPT is telling customers the wrong thing about your product. 72% of brands have factual errors in AI responses. Here's the data on what's at stake.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metricusapp.com/blog/chatgpt-says-wrong-things-about-my-company/">
+  <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="A Customer Just Told You ChatGPT Is Lying About Your Product — Here's What to Do | Metricus">
+  <meta name="twitter:description" content="ChatGPT is telling customers the wrong thing about your product. 72% of brands have factual errors in AI responses. Here's the data on what's at stake.">
+  <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
+  <link rel="canonical" href="https://metricusapp.com/blog/chatgpt-says-wrong-things-about-my-company/">
+
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w70oz7g1k3");
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#515F74',
+            'primary-hover': '#1E293B',
+            'on-primary': '#f6f7ff',
+            'on-primary-fixed': '#324054',
+            'primary-dim': '#455368',
+            surface: '#f7f9fb',
+            'surface-container-low': '#f0f4f7',
+            'surface-container': '#e8eff3',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-highest': '#d9e4ea',
+            'surface-container-high': '#e1e9ee',
+            'surface-variant': '#d9e4ea',
+            'on-surface': '#2a3439',
+            'on-surface-variant': '#566166',
+            outline: '#717c82',
+            'outline-variant': '#a9b4b9',
+            'slate-text': '#0F172A',
+            'slate-muted': '#64748B',
+            'slate-accent': '#475569',
+          },
+          fontFamily: {
+            display: ['Newsreader', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            body: ['Public Sans', 'sans-serif'],
+            headline: ['Newsreader', 'serif'],
+          },
+          borderRadius: {
+            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
+            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
+            full: '0.75rem',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #0F172A;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .font-display { font-family: 'Newsreader', serif; }
+    .font-headline { font-family: 'Newsreader', serif; }
+    .font-body-sans { font-family: 'Public Sans', sans-serif; }
+
+    .editorial-btn {
+      transition: background-color 150ms ease-in-out, transform 150ms ease;
+    }
+    .editorial-btn:hover {
+      background-color: #1E293B;
+    }
+
+    .bg-grid-dots {
+      background-image: radial-gradient(circle, #717c82 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+      opacity: 0.05;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .blog-card {
+      transition: transform 200ms ease, background-color 200ms ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+      background-color: #f7f9fb;
+    }
+
+    .article-body h2 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      line-height: 1.2;
+      color: #0F172A;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) {
+      .article-body h2 {
+        font-size: 2rem;
+      }
+    }
+    .article-body h3 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.3;
+      color: #0F172A;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .article-body p {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+    }
+    .article-body ul, .article-body ol {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+    }
+    .article-body ul { list-style-type: disc; }
+    .article-body ol { list-style-type: decimal; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body blockquote {
+      border-left: 2px solid #334155;
+      padding-left: 1.5rem;
+      font-style: italic;
+      color: #475569;
+      font-size: 1.125rem;
+      line-height: 1.75;
+      margin: 2rem 0;
+    }
+    .article-body a {
+      color: #334155;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .article-body a:hover {
+      color: #1E293B;
+    }
+  </style>
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "A Customer Just Told You ChatGPT Is Lying About Your Product — Here's What to Do",
+    "description": "ChatGPT is telling customers the wrong thing about your product. 72% of brands have factual errors in AI responses. Here's the data on what's at stake and how to find out what AI gets wrong.",
+    "author": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "datePublished": "2026-04-10",
+    "dateModified": "2026-04-10",
+    "mainEntityOfPage": "https://metricusapp.com/blog/chatgpt-says-wrong-things-about-my-company/",
+    "image": "https://metricusapp.com/metricus-og-image.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "A Customer Just Told You ChatGPT Is Lying About Your Product", "item": "https://metricusapp.com/blog/chatgpt-says-wrong-things-about-my-company/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why does ChatGPT say wrong things about my company?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI models like ChatGPT generate responses by pattern-matching across training data and web sources. When your brand information is inconsistent across third-party sites, review platforms, and directories, AI picks the wrong version. Information gaps get filled with plausible-sounding fabrications. Stale training data reflects your company as it was months or years ago. The result is confident-sounding misinformation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How common are AI errors about brands?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "72% of brands have at least one factual error in AI-generated responses. The most common errors are wrong pricing from stale review sites, feature conflation across product tiers, fabricated company details, and outdated information about discontinued products. Pricing errors found on one AI platform exist on at least two others 60% of the time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I contact OpenAI to fix what ChatGPT says about my brand?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. There is no official correction portal at OpenAI, Google, or Anthropic where you can request changes to what AI says about your brand. AI models do not store facts in an editable database. Correction requires an indirect strategy: auditing which errors exist, identifying which sources feed them, and fixing those sources so future model updates reflect accurate information."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I find out what AI is getting wrong about my company?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An AI visibility report audits what ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews say about your brand across hundreds of prompts. It flags every factual error, traces each to its likely source, and shows which platforms are most inaccurate about your specific company."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does wrong AI information actually affect my business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. 41% of consumers have purchased a product recommended by AI in the past six months. Over 60% of consumers express high trust in AI-generated results. When AI tells a prospect the wrong price, wrong features, or recommends a competitor instead, it directly impacts revenue. One documented case showed hallucinated product specs caused a 25% spike in returns."
+        }
+      }
+    ]
+  }
+  </script>
+  <script src="/js/reader-pulse-b.js" defer></script>
+  <script src="/js/email-gate.js" defer></script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
+
+  <!-- Site Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="/" class="flex items-center gap-2 group" aria-label="Metricus home">
+        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+        </svg>
+        <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
+        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
+        <a href="/blog/" class="text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Learn</a>
+        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
+        <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
+    <div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div>
+    <nav class="absolute top-0 right-0 w-72 h-full bg-surface-container-lowest shadow-xl flex flex-col pt-6 px-6">
+      <button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">How It Works</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/" id="mobile-pricing-link">Pricing</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
+      <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    (function(){
+      var btn=document.getElementById('mobile-menu-btn');
+      var menu=document.getElementById('mobile-menu');
+      var close=document.getElementById('mobile-menu-close');
+      var backdrop=document.getElementById('mobile-menu-backdrop');
+      var pricingLink=document.getElementById('mobile-pricing-link');
+      if(!btn||!menu)return;
+      function open(){menu.classList.remove('hidden');menu.setAttribute('aria-hidden','false');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+      function shut(){menu.classList.add('hidden');menu.setAttribute('aria-hidden','true');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+      btn.addEventListener('click',open);
+      if(close)close.addEventListener('click',shut);
+      if(backdrop)backdrop.addEventListener('click',shut);
+      if(pricingLink)pricingLink.addEventListener('click',shut);
+    })();
+  </script>
+
+
+  <main class="flex-grow flex flex-col relative overflow-x-hidden">
+
+    <div class="absolute inset-0 bg-grid-dots -z-10 pointer-events-none"></div>
+
+    <!-- ========== ARTICLE ========== -->
+    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
+
+      <!-- Breadcrumb -->
+      <nav class="mb-8">
+        <ol class="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-muted">
+          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
+          <li class="select-none">/</li>
+          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
+          <li class="select-none">/</li>
+          <li class="text-slate-text">ChatGPT Says Wrong Things About My Company</li>
+        </ol>
+      </nav>
+
+      <!-- Article Header -->
+      <header class="mb-12">
+        <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-4">Research</p>
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
+          A Customer Just Told You ChatGPT Is Lying About Your Product &mdash; Here's What to Do
+        </h1>
+        <p class="text-sm text-outline">Metricus Research &middot; April 10, 2026 &middot; 6 min read</p>
+      </header>
+
+
+      <!-- Answer Block -->
+      <div class="bg-surface-container-low p-8 mb-12">
+        <p class="text-lg leading-relaxed text-on-surface">
+          <strong>You are not alone, and you are not overreacting.</strong> 72% of brands have at least one factual error in AI-generated responses &mdash; wrong pricing, fabricated features, outdated product details presented as current. A <a href="/get-report/" class="underline underline-offset-2 hover:text-primary-hover">Metricus AI visibility report</a> audits exactly what ChatGPT, Perplexity, Gemini, and Google AI Overviews say about your company, flags every error, and traces each to its source.
+        </p>
+      </div>
+
+
+      <!-- Table of Contents -->
+      <div class="border border-[#E2E8F0] p-8 mb-12">
+        <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">In this article</p>
+        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
+          <li><a href="#scope" class="hover:text-primary-hover underline underline-offset-2">How widespread is this?</a></li>
+          <li><a href="#root-causes" class="hover:text-primary-hover underline underline-offset-2">Why AI gets your brand wrong</a></li>
+          <li><a href="#error-patterns" class="hover:text-primary-hover underline underline-offset-2">The error patterns we see most</a></li>
+          <li><a href="#stakes" class="hover:text-primary-hover underline underline-offset-2">What's actually at stake</a></li>
+          <li><a href="#what-we-found" class="hover:text-primary-hover underline underline-offset-2">What we found across audits</a></li>
+          <li><a href="#auditing" class="hover:text-primary-hover underline underline-offset-2">The case for auditing before acting</a></li>
+          <li><a href="#faq" class="hover:text-primary-hover underline underline-offset-2">FAQ</a></li>
+        </ol>
+      </div>
+
+
+      <!-- Article Body -->
+      <div class="article-body">
+
+        <h2 id="scope">How widespread is this?</h2>
+
+        <p>The moment a customer tells you that ChatGPT is saying something wrong about your product, the instinct is to assume it is an isolated glitch. It almost never is. When Metricus runs AI visibility reports, we find factual errors in AI-generated responses for 72% of the brands we audit. These are not subtle differences in tone or positioning. They are demonstrably wrong facts: incorrect prices, features attributed to the wrong product tier, fabricated company details that never existed, and discontinued products described as currently available.</p>
+
+        <p>The scale is growing in lockstep with AI adoption. ChatGPT now has over 800 million weekly users. Over 60% of consumers express high trust in AI-generated results, according to a 2026 Boston Consulting Group study. 41% of consumers have purchased a product recommended by AI in the past six months. When AI gets your brand wrong, it is not a theoretical problem &mdash; it is a live channel feeding bad information to people who are ready to buy.</p>
+
+        <!-- Reader Pulse -->
+        <div id="reader-pulse" class="my-10"></div>
+
+        <h2 id="root-causes">Why AI gets your brand wrong</h2>
+
+        <p>AI models do not store verified facts in an editable database. They generate responses by pattern-matching across training data and web sources. That architecture creates three failure modes for brand information.</p>
+
+        <p><strong>Conflicting sources.</strong> Your pricing page says one thing. A G2 review from 18 months ago says another. A comparison blog post says a third. AI has no reliable way to determine which source is authoritative, and it frequently picks the wrong one. LLMs cite Reddit and editorial sites for over 60% of brand information &mdash; not corporate websites.</p>
+
+        <p><strong>Information gaps.</strong> When AI cannot find a specific fact about your company, it does not say "I don't know." It fills the gap with a plausible-sounding fabrication. This is how brands end up with invented founding dates, fabricated employee counts, and headquarters in cities they have never operated from.</p>
+
+        <p><strong>Stale training data.</strong> AI models reflect your brand as it appeared months or years ago in their training corpus. If you have changed pricing, renamed a product, or undergone a rebrand, AI may still be serving the old version to every prospect who asks about you.</p>
+
+
+        <h2 id="error-patterns">The error patterns we see most</h2>
+
+        <ul>
+          <li><strong>Wrong pricing:</strong> AI cites prices from 12&ndash;24 months ago, typically sourced from cached G2 or Capterra listings. Pricing errors found on one AI platform exist on at least two others 60% of the time.</li>
+          <li><strong>Feature conflation:</strong> AI merges features from different tiers or product lines into a single description, misrepresenting what each plan includes.</li>
+          <li><strong>Fabricated details:</strong> AI invents founding dates, employee counts, or headquarters locations with no basis in any indexed source. These are pure hallucinations &mdash; confident and completely wrong.</li>
+          <li><strong>Outdated information:</strong> AI recommends discontinued products, cites old partnerships, or describes deprecated features as current.</li>
+          <li><strong>Competitive misattribution:</strong> AI attributes a competitor&rsquo;s feature to your brand, or your feature to a competitor, typically sourced from comparison articles.</li>
+        </ul>
+
+        <p>These error types cluster by platform. A Industry research of hundreds of millions of prompts found Google AI Overviews is 44% more likely to display negative brand information than ChatGPT. Google AI Overviews also carries an approximately 10% error rate across all queries. ChatGPT tends toward feature conflation and fabricated details because it relies heavily on training data. Perplexity, which uses more real-time web search, tends toward outdated pricing errors because it pulls from whatever stale sources rank well.</p>
+
+
+        <h2 id="stakes">What's actually at stake</h2>
+
+        <p>The business impact of AI misinformation is not abstract. 35% of brands report that inaccurate AI responses have already damaged their reputation. One documented case showed hallucinated product specs caused a 25% spike in product returns. When AI tells a prospect the wrong price, it creates mismatched expectations your sales team has to correct &mdash; or the prospect walks away without ever contacting you.</p>
+
+        <p>The compounding effect makes this worse over time. AI hallucinations about a brand tend to persist across model updates unless actively corrected. A fabricated detail embedded in one model&rsquo;s training data can propagate to newer models, to AI-generated content on third-party sites, and from there back into future training data. Without intervention, hallucinations become self-reinforcing. 85% of brands now report experiencing AI-accelerated threats, including misinformation and misrepresentation.</p>
+
+        <p>And there is no correction portal. You cannot contact OpenAI, Google, or Anthropic and request that specific wrong information about your brand be fixed. AI models do not work that way. Correction requires identifying which errors exist, tracing them to their sources, and fixing those sources so that future model updates reflect accurate information.</p>
+
+
+        <h2 id="what-we-found">What we found across audits</h2>
+
+        <div class="bg-surface-container-low p-6 my-8">
+          <p class="text-lg text-on-surface leading-relaxed">
+            <strong>What we found:</strong> Companies with multiple product lines, frequent pricing changes, or recent rebrands have the highest hallucination rates. Brands with limited web presence outside their own domain have higher fabrication rates because AI fills information gaps with plausible-sounding but invented details. The error rate also increases with brand complexity &mdash; and the errors are rarely confined to a single platform.
+          </p>
+        </div>
+
+        <p>The cross-platform pattern is one of the most important findings. When a pricing error appears on ChatGPT, it exists on at least two other AI platforms 60% of the time. This means the customer who told you ChatGPT got something wrong is probably only seeing part of the picture. Perplexity, Gemini, Claude, and Google AI Overviews may all be serving their own versions of misinformation about your brand, each sourced from different places, each wrong in different ways.</p>
+
+        <p>75% of marketing teams now use AI, according to Salesforce &mdash; yet most lack a formal process to verify what AI says about their own brand. The brands that discover the problem are the lucky ones. The ones who never check never know why their lead quality shifted or why prospects arrive with wrong expectations.</p>
+
+
+        <h2 id="auditing">The case for auditing before acting</h2>
+
+        <p>The instinct after that panicked customer call is to start fixing things immediately &mdash; update your website copy, rewrite your FAQ, publish a blog post correcting the record. That instinct is understandable but premature. Without knowing exactly what AI gets wrong about your brand, which platforms have which errors, and which sources feed the misinformation, you are guessing at solutions.</p>
+
+        <p>An <a href="/get-report/">AI visibility report</a> gives you the complete picture: every factual error across every major AI platform, traced to its likely source. That is the prerequisite to any correction strategy that actually works &mdash; because the fix for a pricing error sourced from a stale G2 listing is completely different from the fix for a fabricated detail with no source at all.</p>
+
+        <p class="text-sm text-slate-muted mt-8">Last updated: April 2026</p>
+
+      </div>
+      <!-- End Article Body -->
+
+
+      <!-- ========== FAQ SECTION ========== -->
+      <div class="mt-16 border-t border-[#E2E8F0] pt-12">
+        <h2 class="font-display font-bold text-2xl md:text-3xl text-slate-text mb-8">Frequently asked questions</h2>
+
+        <div class="space-y-8">
+          <div>
+            <h3 class="font-display font-bold text-lg text-slate-text mb-2">Why does ChatGPT say wrong things about my company?</h3>
+            <p class="text-[17px] leading-relaxed text-[#334155]">AI models like ChatGPT generate responses by pattern-matching across training data and web sources. When your brand information is inconsistent across third-party sites, review platforms, and directories, AI picks the wrong version. Information gaps get filled with plausible-sounding fabrications. Stale training data reflects your company as it was months or years ago. The result is confident-sounding misinformation.</p>
+          </div>
+
+          <div>
+            <h3 class="font-display font-bold text-lg text-slate-text mb-2">How common are AI errors about brands?</h3>
+            <p class="text-[17px] leading-relaxed text-[#334155]">72% of brands have at least one factual error in AI-generated responses. The most common errors are wrong pricing from stale review sites, feature conflation across product tiers, fabricated company details, and outdated information about discontinued products. Pricing errors found on one AI platform exist on at least two others 60% of the time.</p>
+          </div>
+
+          <div>
+            <h3 class="font-display font-bold text-lg text-slate-text mb-2">Can I contact OpenAI to fix what ChatGPT says about my brand?</h3>
+            <p class="text-[17px] leading-relaxed text-[#334155]">No. There is no official correction portal at OpenAI, Google, or Anthropic where you can request changes to what AI says about your brand. AI models do not store facts in an editable database. Correction requires an indirect strategy: auditing which errors exist, identifying which sources feed them, and fixing those sources so future model updates reflect accurate information.</p>
+          </div>
+
+          <div>
+            <h3 class="font-display font-bold text-lg text-slate-text mb-2">How do I find out what AI is getting wrong about my company?</h3>
+            <p class="text-[17px] leading-relaxed text-[#334155]">An <a href="/get-report/" class="text-[#334155] underline underline-offset-2 hover:text-[#1E293B]">AI visibility report</a> audits what ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews say about your brand across hundreds of prompts. It flags every factual error, traces each to its likely source, and shows which platforms are most inaccurate about your specific company.</p>
+          </div>
+
+          <div>
+            <h3 class="font-display font-bold text-lg text-slate-text mb-2">Does wrong AI information actually affect my business?</h3>
+            <p class="text-[17px] leading-relaxed text-[#334155]">Yes. 41% of consumers have purchased a product recommended by AI in the past six months. Over 60% of consumers express high trust in AI-generated results. When AI tells a prospect the wrong price, wrong features, or recommends a competitor instead, it directly impacts revenue. One documented case showed hallucinated product specs caused a 25% spike in returns.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ========== ARTICLE CTA ========== -->
+      <div class="bg-primary p-8 md:p-12 mt-16">
+        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">Find out what AI is getting wrong about your brand</h3>
+        <p class="text-on-primary/80 text-base max-w-lg mb-8">
+          Get your AI visibility report. Every factual error, every platform, traced to its source. One-time fee, no subscription.
+        </p>
+        <a href="/get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
+          Get your report
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- ========== CITE THIS ARTICLE ========== -->
+      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
+        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
+          <cite class="not-italic"><a href="https://metricusapp.com/blog/chatgpt-says-wrong-things-about-my-company/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; A Customer Just Told You ChatGPT Is Lying About Your Product &mdash; Here's What to Do</a></cite>
+        </p>
+      </footer>
+
+    </article>
+
+
+    <!-- ========== RELATED POSTS ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-8">Related articles</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <a href="../fix-ai-brand-hallucinations/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Research</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            Fix AI Brand Hallucinations: Why ChatGPT Describes Your Company Incorrectly
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            72% of brands have at least one factual error in AI-generated responses. Here's why AI hallucinations happen to brands.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../ai-wrong-price-fix/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Research</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            Is AI Telling Prospects the Wrong Price? How to Check and Fix It
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            AI pricing errors propagate across platforms. Here's how to find them before your prospects do.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../ai-visibility-how-brands-show-up/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Guide</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            AI Visibility: How Brands Show Up in AI Search
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            How AI platforms decide which brands to recommend and what information to surface about them.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+        <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
+        <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
+        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
+        <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
+        <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
+        <a href="/privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a>
+        <a href="/terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a>
+        <a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
