@@ -237,9 +237,7 @@
     }
 
     function getAnswer(){
-      if (selected === null) return '';
-      if (selected === otherIdx) return 'Other: ' + (otherInput.value || '').trim();
-      return DEFAULT_CHOICES[selected];
+      return getAnswerByIdx(selected);
     }
 
     // --- Events ---
