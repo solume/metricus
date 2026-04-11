@@ -20,9 +20,10 @@
 
   var DEFAULT_QUESTION = 'What\u2019s stopping you from finding out what AI says about your business?';
   var DEFAULT_CHOICES = [
-    'I don\u2019t think AI affects how people find me yet',
-    'I wouldn\u2019t know what to do with that info',
-    'I can probably figure it out myself'
+    'I\u2019m not sure AI matters for my business yet',
+    'I don\u2019t have time to look into it',
+    'I wouldn\u2019t know what to do with the results',
+    'I\u2019d rather spend the budget elsewhere'
   ];
 
   var CSS = [
