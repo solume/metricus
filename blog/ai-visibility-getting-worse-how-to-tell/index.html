@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your AI Visibility Might Be Declining Right Now — And You'd Have No Idea | Metricus</title>
+  <meta name="description" content="Without a baseline, you can't tell if AI is recommending you less. Here's what to measure, how to detect decline, and why most brands don't catch it until it's too late.">
+  <meta property="og:title" content="Your AI Visibility Might Be Declining Right Now — And You'd Have No Idea">
+  <meta property="og:description" content="Without a baseline, you can't tell if AI is recommending you less. Here's what to measure, how to detect decline, and why most brands don't catch it until it's too late.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metricusapp.com/blog/ai-visibility-getting-worse-how-to-tell/">
+  <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Your AI Visibility Might Be Declining Right Now — And You'd Have No Idea | Metricus">
+  <meta name="twitter:description" content="Without a baseline, you can't tell if AI is recommending you less. Here's what to measure, how to detect decline, and why most brands don't catch it until it's too late.">
+  <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
+  <link rel="canonical" href="https://metricusapp.com/blog/ai-visibility-getting-worse-how-to-tell/">
+
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w70oz7g1k3");
+  </script>
+
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#515F74',
+            'primary-hover': '#1E293B',
+            'on-primary': '#f6f7ff',
+            'on-primary-fixed': '#324054',
+            'primary-dim': '#455368',
+            surface: '#f7f9fb',
+            'surface-container-low': '#f0f4f7',
+            'surface-container': '#e8eff3',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-highest': '#d9e4ea',
+            'surface-container-high': '#e1e9ee',
+            'surface-variant': '#d9e4ea',
+            'on-surface': '#2a3439',
+            'on-surface-variant': '#566166',
+            outline: '#717c82',
+            'outline-variant': '#a9b4b9',
+            'slate-text': '#0F172A',
+            'slate-muted': '#64748B',
+            'slate-accent': '#475569',
+          },
+          fontFamily: {
+            display: ['Newsreader', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            body: ['Public Sans', 'sans-serif'],
+            headline: ['Newsreader', 'serif'],
+          },
+          borderRadius: {
+            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
+            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
+            full: '0.75rem',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #0F172A;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .font-display { font-family: 'Newsreader', serif; }
+    .font-headline { font-family: 'Newsreader', serif; }
+    .font-body-sans { font-family: 'Public Sans', sans-serif; }
+
+    .editorial-btn {
+      transition: background-color 150ms ease-in-out, transform 150ms ease;
+    }
+    .editorial-btn:hover {
+      background-color: #1E293B;
+    }
+
+    .bg-grid-dots {
+      background-image: radial-gradient(circle, #717c82 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+      opacity: 0.05;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .blog-card {
+      transition: transform 200ms ease, background-color 200ms ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+      background-color: #f7f9fb;
+    }
+
+    .article-body h2 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      line-height: 1.2;
+      color: #0F172A;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) {
+      .article-body h2 {
+        font-size: 2rem;
+      }
+    }
+    .article-body h3 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.3;
+      color: #0F172A;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .article-body p {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+    }
+    .article-body ul, .article-body ol {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+    }
+    .article-body ul { list-style-type: disc; }
+    .article-body ol { list-style-type: decimal; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body blockquote {
+      border-left: 2px solid #334155;
+      padding-left: 1.5rem;
+      font-style: italic;
+      color: #475569;
+      font-size: 1.125rem;
+      line-height: 1.75;
+      margin: 2rem 0;
+    }
+    .article-body a {
+      color: #334155;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .article-body a:hover {
+      color: #1E293B;
+    }
+  </style>
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Your AI Visibility Might Be Declining Right Now — And You'd Have No Idea",
+    "description": "Without a baseline, you can't tell if AI is recommending you less. Here's what to measure, how to detect decline, and why most brands don't catch it until it's too late.",
+    "author": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "datePublished": "2026-04-10",
+    "dateModified": "2026-04-10",
+    "mainEntityOfPage": "https://metricusapp.com/blog/ai-visibility-getting-worse-how-to-tell/",
+    "image": "https://metricusapp.com/metricus-og-image.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "AI Visibility Declining", "item": "https://metricusapp.com/blog/ai-visibility-getting-worse-how-to-tell/"}
+    ]
+  }
+  </script>
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I know if my AI visibility is declining?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You need a baseline measurement first. Run a set of prompts across ChatGPT, Perplexity, Gemini, and Claude that represent how your customers search for what you sell. Document whether your brand appears, in what position, and with what accuracy. Repeat the same prompts quarterly. Without that first measurement, you have no reference point to detect decline."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What metrics should I track for AI visibility?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Track five core metrics: mention presence (does your brand appear at all), citation share (how often you're cited vs competitors), sentiment accuracy (is the AI description correct and current), prompt coverage (what percentage of relevant queries surface your brand), and position consistency (where you appear in lists and recommendations across repeated tests)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can AI visibility decline even if my SEO rankings stay the same?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. AI visibility and search rankings are separate systems. AI models pull from training data, web scraping, and retrieval-augmented generation — each with different update cycles. Your Google rankings can hold steady while AI models shift to recommending competitors based on fresher content, stronger structured data, or better entity coverage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I measure AI visibility?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Quarterly measurement is the minimum for most brands. This gives AI models time to incorporate changes between checks while catching meaningful shifts before they compound. Brands in competitive categories or those running active optimization campaigns may benefit from monthly measurement."
+        }
+      }
+    ]
+  }
+  </script>
+  <script src="/js/reader-pulse-b.js" defer></script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
+
+  <!-- Site Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="/" class="flex items-center gap-2 group" aria-label="Metricus home">
+        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+        </svg>
+        <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
+        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
+        <a href="/blog/" class="text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Learn</a>
+        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
+        <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
+    <div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div>
+    <nav class="absolute top-0 right-0 w-72 h-full bg-surface-container-lowest shadow-xl flex flex-col pt-6 px-6">
+      <button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">How It Works</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/" id="mobile-pricing-link">Pricing</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
+      <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    (function(){
+      var btn=document.getElementById('mobile-menu-btn');
+      var menu=document.getElementById('mobile-menu');
+      var close=document.getElementById('mobile-menu-close');
+      var backdrop=document.getElementById('mobile-menu-backdrop');
+      var pricingLink=document.getElementById('mobile-pricing-link');
+      if(!btn||!menu)return;
+      function open(){menu.classList.remove('hidden');menu.setAttribute('aria-hidden','false');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+      function shut(){menu.classList.add('hidden');menu.setAttribute('aria-hidden','true');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+      btn.addEventListener('click',open);
+      if(close)close.addEventListener('click',shut);
+      if(backdrop)backdrop.addEventListener('click',shut);
+      if(pricingLink)pricingLink.addEventListener('click',shut);
+    })();
+  </script>
+
+
+  <main class="flex-grow flex flex-col relative overflow-x-hidden">
+
+    <div class="absolute inset-0 bg-grid-dots -z-10 pointer-events-none"></div>
+
+    <!-- ========== ARTICLE ========== -->
+    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
+
+      <!-- Breadcrumb -->
+      <nav class="mb-8">
+        <ol class="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-muted">
+          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
+          <li class="select-none">/</li>
+          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
+          <li class="select-none">/</li>
+          <li class="text-slate-text">AI Visibility Declining</li>
+        </ol>
+      </nav>
+
+      <!-- Article Header -->
+      <header class="mb-12">
+        <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-4">AI Visibility</p>
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
+          Your AI Visibility Might Be Declining Right Now &mdash; And You'd Have No Idea
+        </h1>
+        <p class="text-sm text-outline">Metricus Research &middot; April 10, 2026 &middot; 9 min read</p>
+      </header>
+
+
+      <!-- Definition Box -->
+      <div class="bg-surface-container-low p-8 mb-12">
+        <p class="text-lg leading-relaxed text-on-surface">
+          <strong>AI visibility can decline without warning.</strong> Unlike search rankings where you get console alerts and can watch positions change, AI visibility erodes silently. AI models update their training data, competitors publish stronger content, and the recommendations shift &mdash; all while your dashboard shows nothing because you never set up measurement in the first place.
+        </p>
+      </div>
+
+
+      <!-- Table of Contents -->
+      <div class="border border-[#E2E8F0] p-8 mb-12">
+        <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">In this article</p>
+        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
+          <li><a href="#the-silent-problem" class="hover:text-primary-hover underline underline-offset-2">The silent problem: no baseline means no detection</a></li>
+          <li><a href="#what-decline-looks-like" class="hover:text-primary-hover underline underline-offset-2">What AI visibility decline actually looks like</a></li>
+          <li><a href="#five-metrics" class="hover:text-primary-hover underline underline-offset-2">5 metrics that reveal whether you're losing ground</a></li>
+          <li><a href="#how-to-establish-baseline" class="hover:text-primary-hover underline underline-offset-2">How to establish your baseline</a></li>
+          <li><a href="#why-quarterly" class="hover:text-primary-hover underline underline-offset-2">Why quarterly measurement catches what monthly SEO reports miss</a></li>
+          <li><a href="#faq" class="hover:text-primary-hover underline underline-offset-2">Frequently asked questions</a></li>
+        </ol>
+      </div>
+
+
+<!-- Article Body -->
+      <div class="article-body">
+
+        <h2 id="the-silent-problem">The silent problem: no baseline means no detection</h2>
+
+        <p>Most brands have never measured how they appear in AI-generated answers. They track Google rankings. They monitor paid ad performance. They watch social media mentions. But when a potential customer asks ChatGPT, Perplexity, or Gemini for a recommendation in their category, they have no idea whether their brand shows up, how it's described, or whether the AI gets basic facts right.</p>
+
+        <p>That gap creates a specific kind of risk: things can get worse and you'd never know. Without a first measurement, there is no reference point. There is no "before" to compare against. A competitor publishes a comprehensive comparison page, an AI model retrains on fresher data, or your product page goes stale &mdash; and the recommendations shift. You find out months later when a customer mentions that "ChatGPT told me to use [competitor] instead."</p>
+
+        <p>Research across AI visibility measurement platforms shows that only 30% of brands stay visible from one AI answer to the next, and just 20% remain visible across five consecutive runs of the same prompt. AI responses are volatile by nature. Without systematic measurement, you cannot separate normal fluctuation from genuine decline.</p>
+
+        <h2 id="what-decline-looks-like">What AI visibility decline actually looks like</h2>
+
+        <p>AI visibility decline doesn't announce itself. It shows up in indirect signals that most teams attribute to other causes.</p>
+
+        <h3>Disappearing mentions</h3>
+
+        <p>The most direct signal: your brand used to appear in AI answers for category queries and no longer does. Someone asks "What are the best project management tools for small teams?" and your product is no longer in the list. The challenge is that without historical records, you don't know it was ever there. You can only catch this pattern if you've been tracking specific prompts over time.</p>
+
+        <h3>Sentiment drift</h3>
+
+        <p>Sometimes the brand still appears, but the framing changes. AI models might shift from recommending your product to describing it neutrally, or start surfacing outdated criticisms while missing recent improvements. This kind of sentiment decay is especially hard to detect because it requires comparing how AI characterizes your brand across time periods, not just whether it mentions you.</p>
+
+        <h3>Competitive displacement</h3>
+
+        <p>Your total mention count may hold steady while your share of voice drops. If a competitor invests in structured data, publishes authoritative content, and builds stronger entity signals, AI models gradually prefer them in recommendations. Your absolute visibility might not change, but your relative position weakens &mdash; and in recommendation contexts, relative position is what drives the user's choice.</p>
+
+        <h3>Accuracy erosion</h3>
+
+        <p>AI models sometimes start getting facts wrong about your brand &mdash; pricing, features, service areas, positioning. These inaccuracies compound over time as models train on each other's outputs. A wrong price that appears in one model can propagate to others within months. Without regular fact-checking against a known baseline, these errors accumulate invisibly.</p>
+
+
+        <h2 id="five-metrics">5 metrics that reveal whether you're losing ground</h2>
+
+        <p>Measuring AI visibility is not the same as checking rankings. The metrics are different, the tools are different, and the cadence matters differently. Here are the five metrics that actually tell you whether your position is improving or deteriorating.</p>
+
+        <h3>1. Mention presence</h3>
+
+        <p>The most fundamental metric: does your brand appear at all in AI responses to relevant queries? Test prompts across ChatGPT, Perplexity, Gemini, Claude, and other major platforms. Record a simple yes or no for each prompt-platform combination. This gives you a presence rate &mdash; the percentage of relevant queries where your brand shows up. Track this number over time. A practical early target is 10&ndash;25% across a high-intent prompt set, with improvement quarter over quarter.</p>
+
+        <h3>2. Citation share</h3>
+
+        <p>When AI does cite sources, how often is your content among them? Citation share measures how frequently your brand is referenced as a source in AI-generated answers. This metric matters because citations signal to both the AI model and the end user that your content is authoritative in the category. A declining citation share, even if mentions hold steady, indicates that competitors are building stronger source signals.</p>
+
+        <h3>3. Prompt coverage</h3>
+
+        <p>Define 15&ndash;20 high-value prompts that represent how real customers discover brands in your category: direct brand queries, category searches, problem-solution questions, and competitor comparisons. Prompt coverage is the share of that library where your brand appears at least once. This metric measures breadth across the buyer journey. A brand might appear for "best [category] tools" but be absent from "how to solve [problem your product addresses]" &mdash; that gap represents missed discovery opportunities.</p>
+
+        <h3>4. Sentiment accuracy</h3>
+
+        <p>When AI mentions your brand, does it describe you correctly? Does it use your positioning language, or substitute generic descriptions? Does it reflect current pricing, current features, and current differentiators? Sentiment accuracy measures alignment between what AI says about you and what you actually are. Decline here is particularly dangerous because inaccurate AI descriptions actively work against your brand &mdash; a wrong price, an outdated feature list, or a competitor's positioning language applied to your brand all erode trust.</p>
+
+        <h3>5. Position consistency</h3>
+
+        <p>AI responses are nondeterministic. The same prompt run five times might produce five different lists. Position consistency measures how reliably your brand appears in a given position range across repeated tests. If you appear first in a recommendation list 80% of the time this quarter but only 40% next quarter, that's measurable decline even though you still technically "show up." This metric requires running the same prompts multiple times per measurement period to capture the variance.</p>
+
+
+        <h2 id="how-to-establish-baseline">How to establish your baseline</h2>
+
+        <p>The baseline audit is the single most important step for any brand concerned about AI visibility. It gives you the reference point that makes all future measurement meaningful. Here's a practical approach you can execute now.</p>
+
+        <h3>Step 1: Build your prompt library</h3>
+
+        <p>Select 15&ndash;20 prompts that represent your buyer's search journey. Include category queries ("best [your category] for [use case]"), problem queries ("how to [problem your product solves]"), comparison queries ("[your brand] vs [competitor]"), and recommendation queries ("what [product type] should I use for [scenario]"). These should be prompts real customers actually type &mdash; not keywords you wish they'd search for.</p>
+
+        <h3>Step 2: Test across platforms</h3>
+
+        <p>Run each prompt on ChatGPT, Perplexity, Gemini, Claude, and at least one additional platform relevant to your audience. At minimum, use four platforms. Record the full response for each prompt-platform pair. Note whether your brand appears, in what context, what position in any list, what facts the AI states about you, and whether those facts are accurate.</p>
+
+        <h3>Step 3: Document everything</h3>
+
+        <p>Your baseline needs to capture mention presence, citation share, prompt coverage, sentiment accuracy, and any factual errors. This is your "before" snapshot. Every future measurement gets compared against this document. The value of the baseline comes entirely from the ability to compare against it later &mdash; so be thorough and consistent in how you record results.</p>
+
+        <h3>Step 4: Identify what AI gets wrong</h3>
+
+        <p>A baseline audit almost always reveals factual inaccuracies &mdash; wrong pricing, outdated features, incorrect positioning, or missing information. These are your immediate action items. Fixing AI inaccuracies through structured data, authoritative content, and source optimization improves your visibility independent of any tracking effort. This is where a <a href="/blog/ai-visibility-scores-explained/">deeper understanding of how AI visibility scores work</a> helps prioritize which fixes matter most.</p>
+
+        <h3>Or: get a Metricus report</h3>
+
+        <p>A Metricus AI visibility report does all of this in a single deliverable. The report covers all major AI platforms, provides a query-level breakdown, checks factual accuracy with source tracing, maps where AI models get their information about your brand, compares your visibility against competitors, and delivers a prioritized action plan. One-time fee, no subscription: $99 (Snapshot), $299 (Deep Dive), or $499 (Full Arsenal). The report becomes your baseline &mdash; and every subsequent report shows exactly what changed.</p>
+
+
+        <h2 id="why-quarterly">Why quarterly measurement catches what monthly SEO reports miss</h2>
+
+        <p>AI visibility and traditional search rankings operate on completely different systems. Your Google rankings can hold steady while AI models shift to recommending competitors. Approximately 93% of Google AI Mode sessions end without a click to any website &mdash; meaning if your brand isn't mentioned in the AI response itself, you effectively don't exist for that user.</p>
+
+        <p>Quarterly measurement is the right cadence for most brands. It's frequent enough to catch meaningful shifts before they compound, while giving AI models time to incorporate any changes you've made between measurements. The process is straightforward: run the same prompt library across the same platforms, compare results against your baseline and previous quarter, and identify what moved and why.</p>
+
+        <p>Brands in fast-moving categories or those running active AI optimization campaigns may benefit from monthly measurement. But the critical point is that <em>any</em> regular measurement is infinitely better than no measurement. The difference between "our AI visibility declined 15% this quarter" and "we have no idea what's happening" is the difference between a strategic response and a slow, invisible loss of market position. For more on how <a href="/blog/ai-visibility-monitoring-vs-one-time-audits/">monitoring and one-time audits compare</a>, we break down the cost and fit tradeoffs in detail.</p>
+
+        <p>The brands that catch AI visibility decline early are the ones that established a baseline and committed to regular measurement. The brands that don't catch it are the ones that assumed their Google performance told the full story. <a href="/blog/ai-visibility-discovery-benchmark/">Our benchmark research across 182 LLM prompt tests</a> shows just how different AI discovery patterns are from traditional search &mdash; and why measuring both is no longer optional.</p>
+
+        <p class="text-sm text-slate-muted mt-8">Last updated: April 2026</p>
+
+      </div>
+      <!-- End Article Body -->
+
+
+      <div class="bg-surface-container-low p-8 md:p-10 my-12">
+          <p class="font-display font-bold text-xl text-slate-text mb-6">AI Visibility Audit &mdash; What You Get</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4 text-[14px] text-slate-muted leading-relaxed">
+            <div><strong class="text-slate-text">Pricing:</strong> $99 (Snapshot), $299 (Deep Dive), $499 (Full Arsenal). Pay per report, no subscription.</div>
+            <div><strong class="text-slate-text">Turnaround:</strong> Reports delivered promptly after order.</div>
+            <div><strong class="text-slate-text">AI Platforms Covered:</strong> ChatGPT, Perplexity, Gemini, Claude, Grok, DeepSeek, Copilot, Google AI Overviews.</div>
+            <div><strong class="text-slate-text">Report Includes:</strong> AI visibility assessment, query-level breakdown, wrong facts check with source tracing, source map, wording mismatch analysis, competitor comparison, prioritized action plan.</div>
+            <div><strong class="text-slate-text">Agency Fit:</strong> Pay per client report, white-label ready, volume pricing for 5+ reports/month.</div>
+            <div><strong class="text-slate-text">Guarantee:</strong> 3+ actionable insights or full refund.</div>
+          </div>
+        </div>
+
+
+      <!-- FAQ Section -->
+      <div class="article-body">
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <h3>How do I know if my AI visibility is declining?</h3>
+        <p>You need a baseline measurement first. Run a set of 15&ndash;20 prompts across ChatGPT, Perplexity, Gemini, and Claude that represent how your customers search for what you sell. Document whether your brand appears, in what position, and with what accuracy. Repeat the same prompts quarterly. Without that first measurement, you have no reference point to detect decline. A Metricus report gives you this baseline in a single deliverable.</p>
+
+        <h3>What metrics should I track for AI visibility?</h3>
+        <p>Five core metrics: mention presence (does your brand appear at all), citation share (how often you're cited vs competitors), sentiment accuracy (is the AI description correct and current), prompt coverage (what percentage of relevant queries surface your brand), and position consistency (where you appear in lists and recommendations across repeated tests). Together these give you a complete picture of your AI visibility health.</p>
+
+        <h3>Can AI visibility decline even if my SEO rankings stay the same?</h3>
+        <p>Yes. AI visibility and search rankings are separate systems. AI models pull from training data, web scraping, and retrieval-augmented generation &mdash; each with different update cycles. Your Google rankings can hold steady while AI models shift to recommending competitors based on fresher content, stronger structured data, or better entity coverage. This is why measuring both systems independently is essential.</p>
+
+        <h3>How often should I measure AI visibility?</h3>
+        <p>Quarterly measurement is the minimum for most brands. This gives AI models time to incorporate changes between checks while catching meaningful shifts before they compound. Brands in competitive categories or those running active optimization campaigns may benefit from monthly measurement. The key is consistency: same prompts, same platforms, same evaluation criteria every time.</p>
+
+        <h3>What causes AI visibility to decline?</h3>
+        <p>Five common causes: competitor content improvements (someone publishes a stronger resource in your category), stale brand content (your pages haven't been updated and models favor freshness), AI model retraining (new training data shifts recommendations), structural data gaps (competitors add schema markup and entity signals you lack), and accuracy erosion (wrong facts about your brand propagate across models). Regular measurement catches all five.</p>
+
+        <h3>Do I need a monitoring subscription to track AI visibility?</h3>
+        <p>Not necessarily. Monitoring subscriptions ($29&ndash;$489/month) make sense for teams running weekly optimization campaigns. Most brands check AI visibility quarterly at most, making pay-per-report audits more cost-effective. A quarterly Metricus report costs $99&ndash;$499 per check with no wasted months between audits. Start with a baseline audit before committing to a subscription.</p>
+      </div>
+
+
+
+
+      <!-- ========== ARTICLE CTA ========== -->
+      <div class="bg-primary p-8 md:p-12 mt-16">
+        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">Stop guessing. Get your AI visibility baseline.</h3>
+        <p class="text-on-primary/80 text-base max-w-lg mb-8">
+          Find out where you stand across every major AI platform. One report, one fee, no subscription.
+        </p>
+        <a href="/get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
+          Get your report
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- ========== CITE THIS ARTICLE ========== -->
+      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
+        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
+          <cite class="not-italic"><a href="https://metricusapp.com/blog/ai-visibility-getting-worse-how-to-tell/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; Your AI Visibility Might Be Declining Right Now &mdash; And You'd Have No Idea</a></cite>
+        </p>
+      </footer>
+
+    </article>
+
+
+
+    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-6">Go deeper</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <a href="/ai-platform-comparison-brands/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">Platform Intelligence Guide</p>
+          <p class="text-sm text-on-surface-variant mt-1">How AI platforms update and refresh</p>
+        </a>
+        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
+          <p class="text-sm text-on-surface-variant mt-1">Monitoring accuracy over time</p>
+        </a>
+      </div>
+    </section>
+
+<!-- ========== RELATED POSTS ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-8">Related articles</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <a href="../ai-visibility-monitoring-vs-one-time-audits/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Buyer's Guide</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            AI Visibility Monitoring vs One-Time Audits: Which Should You Buy?
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            Monitoring tools cost $100+/mo but most brands need an audit first. Compare approaches on cost, depth, and fit.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../ai-visibility-scores-explained/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Deep Dive</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            How AI Visibility Scores Actually Work
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            AI visibility scores vary wildly between tools. How they're calculated, why nondeterminism matters, and what a meaningful score looks like.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../ai-visibility-discovery-benchmark/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Research</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            What 182 LLM Prompt Tests Reveal About How AI Recommends B2B SaaS
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            We tested 182 prompts to see how AI platforms recommend B2B SaaS products. 79% of answers came from training data, not search.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <!-- Site Footer -->
+  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+        <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
+        <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
+        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
+        <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
+        <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
+        <a href="/privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a>
+        <a href="/terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a>
+        <a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

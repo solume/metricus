@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Can You Just Check ChatGPT Yourself? When a $99 Audit Actually Makes Sense | Metricus</title>
+  <meta name="description" content="You can spot-check ChatGPT yourself for free. But a single check captures one answer from a shifting distribution. Here's what a $99 audit catches that DIY misses.">
+  <meta property="og:title" content="Can You Just Check ChatGPT Yourself? When a $99 Audit Actually Makes Sense">
+  <meta property="og:description" content="You can spot-check ChatGPT yourself for free. But a single check captures one answer from a shifting distribution. Here's what a $99 audit catches that DIY misses.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metricusapp.com/blog/ai-visibility-worth-paying-for/">
+  <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Can You Just Check ChatGPT Yourself? When a $99 Audit Actually Makes Sense | Metricus">
+  <meta name="twitter:description" content="You can spot-check ChatGPT yourself for free. But a single check captures one answer from a shifting distribution. Here's what a $99 audit catches that DIY misses.">
+  <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
+  <link rel="canonical" href="https://metricusapp.com/blog/ai-visibility-worth-paying-for/">
+
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w70oz7g1k3");
+  </script>
+
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#515F74',
+            'primary-hover': '#1E293B',
+            'on-primary': '#f6f7ff',
+            'on-primary-fixed': '#324054',
+            'primary-dim': '#455368',
+            surface: '#f7f9fb',
+            'surface-container-low': '#f0f4f7',
+            'surface-container': '#e8eff3',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-highest': '#d9e4ea',
+            'surface-container-high': '#e1e9ee',
+            'surface-variant': '#d9e4ea',
+            'on-surface': '#2a3439',
+            'on-surface-variant': '#566166',
+            outline: '#717c82',
+            'outline-variant': '#a9b4b9',
+            'slate-text': '#0F172A',
+            'slate-muted': '#64748B',
+            'slate-accent': '#475569',
+          },
+          fontFamily: {
+            display: ['Newsreader', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            body: ['Public Sans', 'sans-serif'],
+            headline: ['Newsreader', 'serif'],
+          },
+          borderRadius: {
+            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
+            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
+            full: '0.75rem',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #0F172A;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .font-display { font-family: 'Newsreader', serif; }
+    .font-headline { font-family: 'Newsreader', serif; }
+    .font-body-sans { font-family: 'Public Sans', sans-serif; }
+
+    .editorial-btn {
+      transition: background-color 150ms ease-in-out, transform 150ms ease;
+    }
+    .editorial-btn:hover {
+      background-color: #1E293B;
+    }
+
+    .bg-grid-dots {
+      background-image: radial-gradient(circle, #717c82 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+      opacity: 0.05;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .blog-card {
+      transition: transform 200ms ease, background-color 200ms ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+      background-color: #f7f9fb;
+    }
+
+    .article-body h2 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      line-height: 1.2;
+      color: #0F172A;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) {
+      .article-body h2 {
+        font-size: 2rem;
+      }
+    }
+    .article-body h3 {
+      font-family: 'Newsreader', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.3;
+      color: #0F172A;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .article-body p {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+    }
+    .article-body ul, .article-body ol {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+    }
+    .article-body ul { list-style-type: disc; }
+    .article-body ol { list-style-type: decimal; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body blockquote {
+      border-left: 2px solid #334155;
+      padding-left: 1.5rem;
+      font-style: italic;
+      color: #475569;
+      font-size: 1.125rem;
+      line-height: 1.75;
+      margin: 2rem 0;
+    }
+    .article-body a {
+      color: #334155;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .article-body a:hover {
+      color: #1E293B;
+    }
+  </style>
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Can You Just Check ChatGPT Yourself? When a $99 Audit Actually Makes Sense",
+    "description": "You can spot-check ChatGPT yourself for free. But a single check captures one answer from a shifting distribution. Here's what a $99 audit catches that DIY misses.",
+    "author": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Metricus",
+      "url": "https://metricusapp.com"
+    },
+    "datePublished": "2026-04-10",
+    "dateModified": "2026-04-10",
+    "mainEntityOfPage": "https://metricusapp.com/blog/ai-visibility-worth-paying-for/",
+    "image": "https://metricusapp.com/metricus-og-image.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "When a $99 Audit Makes Sense", "item": "https://metricusapp.com/blog/ai-visibility-worth-paying-for/"}
+    ]
+  }
+  </script>
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I check my AI visibility myself for free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can open ChatGPT, Gemini, and Perplexity and type questions about your category. But each check captures a single answer from a non-deterministic system. AI platforms rarely return the same brand list twice for the same prompt, so one manual check is one data point from a constantly shifting distribution."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does a $99 AI visibility audit include that DIY misses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Metricus Snapshot audit covers 8 AI platforms with multiple runs per prompt to account for output variance. It includes a source map tracing where AI pulled its information, a factual accuracy check, competitor comparison, and a prioritized action plan. DIY spot-checking covers one platform at a time with no variance sampling, no source tracing, and no structured comparison."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much time does a DIY AI visibility check take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A basic DIY check across three platforms with 20 prompts takes roughly 2 hours. That covers surface-level results only. Repeating quarterly, across more platforms, with variance sampling and source verification would require 10-15 hours per quarter for thorough coverage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is $99 worth it for a brand that has never checked AI visibility?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For most brands, yes. If you have never checked how AI describes your brand, you likely have no baseline. A $99 Snapshot audit covers 8 platforms, checks factual accuracy, maps sources, and gives you a prioritized list of what to fix first. That baseline changes every decision you make about AI visibility going forward."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I NOT pay for an AI visibility audit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If your brand is brand new with no web presence, AI platforms have nothing to get right or wrong about you yet. Focus on building your digital footprint first. Similarly, if you already run an AI visibility monitoring subscription with comprehensive platform coverage, a separate audit adds less value."
+        }
+      }
+    ]
+  }
+  </script>
+  <script src="/js/reader-pulse-b.js" defer></script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
+
+  <!-- Site Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="/" class="flex items-center gap-2 group" aria-label="Metricus home">
+        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+        </svg>
+        <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
+        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
+        <a href="/blog/" class="text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Learn</a>
+        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
+        <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
+    <div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div>
+    <nav class="absolute top-0 right-0 w-72 h-full bg-surface-container-lowest shadow-xl flex flex-col pt-6 px-6">
+      <button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">How It Works</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/" id="mobile-pricing-link">Pricing</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
+      <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    (function(){
+      var btn=document.getElementById('mobile-menu-btn');
+      var menu=document.getElementById('mobile-menu');
+      var close=document.getElementById('mobile-menu-close');
+      var backdrop=document.getElementById('mobile-menu-backdrop');
+      var pricingLink=document.getElementById('mobile-pricing-link');
+      if(!btn||!menu)return;
+      function open(){menu.classList.remove('hidden');menu.setAttribute('aria-hidden','false');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+      function shut(){menu.classList.add('hidden');menu.setAttribute('aria-hidden','true');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+      btn.addEventListener('click',open);
+      if(close)close.addEventListener('click',shut);
+      if(backdrop)backdrop.addEventListener('click',shut);
+      if(pricingLink)pricingLink.addEventListener('click',shut);
+    })();
+  </script>
+
+
+  <main class="flex-grow flex flex-col relative overflow-x-hidden">
+
+    <div class="absolute inset-0 bg-grid-dots -z-10 pointer-events-none"></div>
+
+    <!-- ========== ARTICLE ========== -->
+    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
+
+      <!-- Breadcrumb -->
+      <nav class="mb-8">
+        <ol class="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-muted">
+          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
+          <li class="select-none">/</li>
+          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
+          <li class="select-none">/</li>
+          <li class="text-slate-text">DIY vs Paid Audit</li>
+        </ol>
+      </nav>
+
+      <!-- Article Header -->
+      <header class="mb-12">
+        <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-4">Buyer's Guide</p>
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
+          Can You Just Check ChatGPT Yourself? When a $99 Audit Actually Makes Sense
+        </h1>
+        <p class="text-sm text-outline">Metricus Research &middot; April 10, 2026 &middot; 9 min read</p>
+      </header>
+
+
+      <!-- Definition Box -->
+      <div class="bg-surface-container-low p-8 mb-12">
+        <p class="text-lg leading-relaxed text-on-surface">
+          <strong>You can check ChatGPT yourself for free right now.</strong> Type your brand name, see what comes back. That takes five minutes and costs nothing. The question is whether five minutes of spot-checking tells you enough to act on &mdash; or whether the gaps in that approach leave you making decisions based on incomplete information. This guide breaks down exactly what a DIY check captures, what it misses, and when the $99 version of the same thing is actually worth the money.
+        </p>
+      </div>
+
+
+      <!-- Table of Contents -->
+      <div class="border border-[#E2E8F0] p-8 mb-12">
+        <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">In this article</p>
+        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
+          <li><a href="#diy-check" class="hover:text-primary-hover underline underline-offset-2">What a DIY check actually gives you</a></li>
+          <li><a href="#variance-problem" class="hover:text-primary-hover underline underline-offset-2">The variance problem nobody mentions</a></li>
+          <li><a href="#what-audit-adds" class="hover:text-primary-hover underline underline-offset-2">What a paid audit adds</a></li>
+          <li><a href="#side-by-side" class="hover:text-primary-hover underline underline-offset-2">Side-by-side: DIY vs. $99 audit</a></li>
+          <li><a href="#when-diy-enough" class="hover:text-primary-hover underline underline-offset-2">When DIY is genuinely enough</a></li>
+          <li><a href="#when-audit-makes-sense" class="hover:text-primary-hover underline underline-offset-2">When the audit makes sense</a></li>
+          <li><a href="#faq" class="hover:text-primary-hover underline underline-offset-2">Frequently asked questions</a></li>
+        </ol>
+      </div>
+
+
+<!-- Article Body -->
+      <div class="article-body">
+
+        <h2 id="diy-check">What a DIY check actually gives you</h2>
+
+        <p>The free version of an AI visibility check works like this: open ChatGPT, type a question someone in your category would ask, and see whether your brand appears in the response. Then do the same in Gemini, Perplexity, and Claude. If you are thorough, you write down what you find in a spreadsheet.</p>
+
+        <p>This is not a bad idea. It takes about two hours if you test 20 prompts across three platforms, and it gives you something most brands still do not have: a baseline. You will learn whether AI mentions your brand at all, how it describes you when it does, and which competitors show up alongside you.</p>
+
+        <p>For brands that have never looked at this before, that two-hour exercise can be genuinely revealing. Some discover that ChatGPT describes their product with outdated pricing. Others find that AI recommends a competitor they did not know existed. The act of looking, even informally, surfaces information you did not have yesterday.</p>
+
+        <h3>What the DIY approach covers</h3>
+
+        <ul>
+          <li>Whether your brand appears at all for key queries</li>
+          <li>How AI frames your product or service in natural language</li>
+          <li>Which competitors AI mentions in the same response</li>
+          <li>Whether the basic facts &mdash; pricing, features, positioning &mdash; are accurate</li>
+        </ul>
+
+        <p>If all you need is a quick gut check, this is a legitimate way to get one. The problems start when you try to use it as a basis for decisions.</p>
+
+
+        <h2 id="variance-problem">The variance problem nobody mentions</h2>
+
+        <p>Here is the fact that makes DIY spot-checking unreliable for anything beyond curiosity: AI responses are non-deterministic. ChatGPT does not return the same brand list twice for the same prompt. There is less than a 1-in-100 chance of getting identical output on consecutive runs of the same query.</p>
+
+        <p>This means your single manual check captures one data point from a constantly shifting distribution. You might ask "best project management tools for small teams" and see your brand mentioned. You might ask the same question ten minutes later and see an entirely different list. Both are real outputs. Neither is the complete picture.</p>
+
+        <p>The practical consequence: if you make a DIY check on a Tuesday afternoon and your brand appears, you might conclude that your AI visibility is fine. But you have no way of knowing whether that response represents 80% of the outputs for that query or 5%. Without multiple runs and statistical aggregation, you cannot distinguish between "AI consistently recommends us" and "we got lucky once."</p>
+
+        <h3>What variance means in practice</h3>
+
+        <ul>
+          <li><strong>False confidence:</strong> Your brand appeared once, so you assume it always appears. It may not.</li>
+          <li><strong>False alarm:</strong> Your brand was missing once, so you assume it never appears. It may appear frequently.</li>
+          <li><strong>Invisible competitor shifts:</strong> A competitor that appeared in 70% of responses last month now appears in 30%. A single check on either side of that shift tells you nothing about the trend.</li>
+        </ul>
+
+        <p>This is not a theoretical concern. It is the central limitation of any approach that checks AI output once per prompt instead of sampling across multiple runs.</p>
+
+
+        <h2 id="what-audit-adds">What a paid audit adds</h2>
+
+        <p>A structured AI visibility audit addresses the limitations above by doing three things that manual spot-checking cannot.</p>
+
+        <h3>1. Multi-run variance sampling</h3>
+
+        <p>Instead of checking each prompt once, a Metricus audit runs prompts multiple times per platform to capture the distribution of responses rather than a single snapshot. This is the difference between checking the temperature once and looking at a weather forecast. One tells you what is happening right now. The other tells you what to expect.</p>
+
+        <h3>2. Cross-platform coverage at scale</h3>
+
+        <p>A manual check of 20 prompts across 3 platforms is 60 data points. A Metricus Snapshot audit covers 8 AI platforms &mdash; ChatGPT, Perplexity, Gemini, Claude, Grok, DeepSeek, Copilot, and Google AI Overviews &mdash; with structured prompt sets designed to reflect actual buyer research behavior. The coverage difference between 60 data points and hundreds changes whether you catch platform-specific problems. A brand that is visible on ChatGPT but absent from Perplexity has a gap that a three-platform DIY check may never surface.</p>
+
+        <h3>3. Source tracing</h3>
+
+        <p>When AI gets something wrong about your brand, the question that matters is: where did it get that information? A DIY check tells you what AI said. An audit traces it back to the source &mdash; the specific URL, the outdated article, the competitor comparison page that trained the model's understanding. Without source tracing, you know there is a problem but have no path to fixing it.</p>
+
+        <h3>4. Structured prioritization</h3>
+
+        <p>A spreadsheet of observations is not the same as a prioritized action plan. An audit organizes findings by impact: what is factually wrong and causing real damage, what is a missed opportunity, and what is cosmetic. That prioritization determines whether you spend your limited time on the issue that moves the needle or the one you happened to notice first.</p>
+
+
+        <h2 id="side-by-side">Side-by-side: DIY vs. $99 audit</h2>
+
+        <div class="border border-[#E2E8F0] my-8 overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-surface-container-low">
+                <th class="text-left p-4 font-semibold text-slate-text">Dimension</th>
+                <th class="text-left p-4 font-semibold text-slate-text">DIY Spot-Check</th>
+                <th class="text-left p-4 font-semibold text-slate-text">Metricus Snapshot ($99)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[#E2E8F0]">
+              <tr><td class="p-4 font-medium">Cost</td><td class="p-4">Free</td><td class="p-4">$99 one-time</td></tr>
+              <tr><td class="p-4 font-medium">Time investment</td><td class="p-4">~2 hours</td><td class="p-4">Order and receive</td></tr>
+              <tr><td class="p-4 font-medium">Platforms covered</td><td class="p-4">2&ndash;3 (manual)</td><td class="p-4">8 AI platforms</td></tr>
+              <tr><td class="p-4 font-medium">Prompts tested</td><td class="p-4">10&ndash;20</td><td class="p-4">Structured prompt set</td></tr>
+              <tr><td class="p-4 font-medium">Variance sampling</td><td class="p-4">Single run per prompt</td><td class="p-4">Multiple runs per prompt</td></tr>
+              <tr><td class="p-4 font-medium">Source tracing</td><td class="p-4">None</td><td class="p-4">URL-level source map</td></tr>
+              <tr><td class="p-4 font-medium">Factual accuracy check</td><td class="p-4">Your own judgment</td><td class="p-4">Systematic fact verification</td></tr>
+              <tr><td class="p-4 font-medium">Competitor comparison</td><td class="p-4">Ad hoc</td><td class="p-4">Structured side-by-side</td></tr>
+              <tr><td class="p-4 font-medium">Action plan</td><td class="p-4">None (raw observations)</td><td class="p-4">Prioritized by impact</td></tr>
+              <tr><td class="p-4 font-medium">Repeatability</td><td class="p-4">Manual re-run each quarter</td><td class="p-4">Consistent methodology</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>The table above is not an argument that DIY is worthless. It is an argument that DIY and a paid audit answer different questions. DIY answers "does AI mention us?" A paid audit answers "how does AI represent us across platforms, how reliable is that representation, and what should we fix first?"</p>
+
+
+        <h2 id="when-diy-enough">When DIY is genuinely enough</h2>
+
+        <p>There are situations where a free manual check is the right call and spending $99 would be premature.</p>
+
+        <ul>
+          <li><strong>You have never looked at this before.</strong> If you have never once asked ChatGPT about your brand, start there. Spend 15 minutes. See what comes back. That initial curiosity check is free, fast, and often motivating enough to decide whether you want to go deeper.</li>
+          <li><strong>You are validating a single specific claim.</strong> If someone told you that ChatGPT says your product is discontinued and you just need to verify that one thing, open ChatGPT and check. You do not need an audit for a single factual question.</li>
+          <li><strong>Your brand is brand new with minimal web presence.</strong> If you launched last month and have a five-page website, AI platforms have very little to work with. There is not enough out there to audit yet. Build your digital footprint first.</li>
+          <li><strong>You already run a comprehensive monitoring tool.</strong> If you are on an a monitoring subscription or similar and get weekly dashboard updates across multiple platforms, a separate one-time audit adds less marginal value.</li>
+        </ul>
+
+        <p>In all four cases, the right answer is either free self-checking or tools you already have. No need to spend money you do not need to spend.</p>
+
+
+        <h2 id="when-audit-makes-sense">When the audit makes sense</h2>
+
+        <p>The $99 audit pays for itself when any of the following are true.</p>
+
+        <h3>You need a baseline for the first time</h3>
+
+        <p>Most brands have never systematically checked their AI visibility. They have a vague sense that it matters but no concrete data. A baseline audit gives you the numbers: how often AI mentions you, whether the facts are right, which platforms are problems, and what to fix first. Every subsequent decision about AI visibility &mdash; whether to invest more, which content to create, whether monitoring is worth it &mdash; depends on having that baseline.</p>
+
+        <h3>You are presenting to stakeholders</h3>
+
+        <p>A spreadsheet of notes from your afternoon of manual checking does not carry weight in a meeting. A structured report with cross-platform data, source maps, and prioritized findings does. If you need to make the case for AI visibility investment to a manager, a client, or a board, the report format matters as much as the data inside it.</p>
+
+        <h3>You suspect AI is getting facts wrong</h3>
+
+        <p>Factual errors in AI responses &mdash; wrong pricing, discontinued products, incorrect descriptions &mdash; cause real damage when prospects rely on those answers. A manual check can spot an error if you happen to ask the right question. An audit systematically verifies facts across your core claims and traces errors back to their source, so you know which URL to update or which third-party content to address.</p>
+
+        <h3>You want to understand the competitive picture</h3>
+
+        <p>AI does not just describe your brand in isolation. It ranks, compares, and recommends. A DIY check might reveal that a competitor shows up alongside you, but it cannot tell you how consistently or across how many query types. An audit quantifies the competitive picture: who AI favors, for which kinds of questions, and on which platforms.</p>
+
+        <h3>You are deciding whether to invest in ongoing monitoring</h3>
+
+        <p>A $99 audit is the cheapest way to determine whether you even have an AI visibility problem worth monitoring. If the audit shows strong, accurate representation across platforms, you may not need monitoring at all. If it reveals significant gaps, you have the data to justify a monitoring subscription. Either way, you make the decision with evidence instead of guessing.</p>
+
+        <p class="text-sm text-slate-muted mt-8">Last updated: April 2026</p>
+
+      </div>
+      <!-- End Article Body -->
+
+
+      <div class="bg-surface-container-low p-8 md:p-10 my-12">
+          <p class="font-display font-bold text-xl text-slate-text mb-6">AI Visibility Audit &mdash; What You Get</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4 text-[14px] text-slate-muted leading-relaxed">
+            <div><strong class="text-slate-text">Pricing:</strong> $99 (Snapshot), $299 (Deep Dive), $499 (Full Arsenal). Pay per report, no subscription.</div>
+            <div><strong class="text-slate-text">Turnaround:</strong> Reports delivered promptly after order.</div>
+            <div><strong class="text-slate-text">AI Platforms Covered:</strong> ChatGPT, Perplexity, Gemini, Claude, Grok, DeepSeek, Copilot, Google AI Overviews.</div>
+            <div><strong class="text-slate-text">Report Includes:</strong> AI visibility assessment, query-level breakdown, wrong facts check with source tracing, source map, wording mismatch analysis, competitor comparison, prioritized action plan.</div>
+            <div><strong class="text-slate-text">Agency Fit:</strong> Pay per client report, white-label ready, volume pricing for 5+ reports/month.</div>
+            <div><strong class="text-slate-text">Guarantee:</strong> 3+ actionable insights or full refund.</div>
+          </div>
+        </div>
+
+
+      <!-- FAQ Section -->
+      <div class="article-body">
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <h3>Can I check my AI visibility myself for free?</h3>
+        <p>Yes. Open ChatGPT, Gemini, Perplexity, or any AI platform and type questions your customers would ask. You will see whether your brand appears and how it is described. This takes about 15 minutes for a basic check or 2 hours for a more thorough review across multiple platforms and prompts. The limitation is that each check captures a single response from a non-deterministic system, so you cannot tell whether that result represents 5% or 80% of what users actually see.</p>
+
+        <h3>What does a $99 AI visibility audit include that DIY misses?</h3>
+        <p>A Metricus Snapshot audit covers 8 AI platforms with multiple runs per prompt to capture response variance. It includes a source map tracing where AI pulled its information at the URL level, a factual accuracy check across your core brand claims, a structured competitor comparison, and a prioritized action plan sorted by impact. DIY spot-checking covers one platform at a time with no variance sampling, no source tracing, and no systematic way to turn observations into priorities.</p>
+
+        <h3>How much time does a DIY AI visibility check take?</h3>
+        <p>A basic pass through three platforms with 20 prompts takes roughly 2 hours, giving you about 60 data points. To match the coverage of even a basic paid audit &mdash; 8 platforms, variance sampling, source verification &mdash; you would need 10 to 15 hours per quarter. That time cost is the hidden expense of the free approach: it trades money for a significant chunk of your workweek.</p>
+
+        <h3>Is $99 worth it for a brand that has never checked AI visibility?</h3>
+        <p>For most brands with an established web presence, yes. Without a baseline, you are making decisions about AI visibility in the dark. The $99 Snapshot gives you cross-platform coverage, factual accuracy verification, and a prioritized action plan. That baseline changes every subsequent decision: whether to create content, whether monitoring is worth it, which platforms to focus on. It is the cheapest decision-quality data in the AI visibility market.</p>
+
+        <h3>When should I NOT pay for an AI visibility audit?</h3>
+        <p>Skip the paid audit if your brand is brand new with minimal web presence (AI has nothing to get right or wrong yet), if you only need to verify a single specific factual claim (just check it yourself), or if you already run a comprehensive AI monitoring subscription that covers the same platforms. In those cases, spending $99 adds little that free checking or your existing tools do not already cover.</p>
+
+        <h3>How does a $99 audit compare to a $300/month monitoring subscription?</h3>
+        <p>They solve different problems. A $99 audit gives you a comprehensive snapshot with source tracing and an action plan. A monitoring subscription gives you ongoing trend data via a dashboard. Most brands should start with the audit to establish a baseline. If the audit reveals issues worth tracking over time and you have the team to act on weekly data, monitoring may be the next step. If you check AI visibility quarterly or less, repeat audits are more cost-effective than an annual subscription.</p>
+      </div>
+
+
+
+
+      <!-- ========== ARTICLE CTA ========== -->
+      <div class="bg-primary p-8 md:p-12 mt-16">
+        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">Find out what AI is getting wrong about your brand</h3>
+        <p class="text-on-primary/80 text-base max-w-lg mb-8">
+          Get your AI visibility report. One-time fee, no subscription. Starts at $99.
+        </p>
+        <a href="/get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
+          Get your report
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- ========== CITE THIS ARTICLE ========== -->
+      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
+        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
+          <cite class="not-italic"><a href="https://metricusapp.com/blog/ai-visibility-worth-paying-for/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; Can You Just Check ChatGPT Yourself? When a $99 Audit Actually Makes Sense</a></cite>
+        </p>
+      </footer>
+
+    </article>
+
+
+
+    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-6">Go deeper</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <a href="/ai-platform-comparison-brands/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">Platform Intelligence Guide</p>
+          <p class="text-sm text-on-surface-variant mt-1">How AI platforms update and refresh</p>
+        </a>
+        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
+          <p class="text-sm text-on-surface-variant mt-1">Monitoring accuracy over time</p>
+        </a>
+      </div>
+    </section>
+
+<!-- ========== RELATED POSTS ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-8">Related articles</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <a href="../ai-visibility-monitoring-vs-one-time-audits/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Buyer's Guide</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            AI Visibility Monitoring vs One-Time Audits: Which Should You Buy?
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            Monitoring tools cost $100+/mo but most brands need an audit first. Compare the two approaches on cost, depth, and fit.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../ai-visibility-tools-worth-it-2026/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Buyer's Guide</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            12 AI Visibility Tools Compared: Which One Is Worth Your Money in 2026
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            We compare 12+ AI visibility platforms by coverage, accuracy audits, action plans, and pricing.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>March 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../ai-visibility-cheapest-way-to-check/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Buyer's Guide</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            The Cheapest Way to Check Your AI Visibility in 2026
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            Every option from free DIY checks to budget audits, ranked by what you actually learn per dollar spent.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>April 2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <!-- Site Footer -->
+  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+        <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
+        <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
+        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
+        <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
+        <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
+        <a href="/privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a>
+        <a href="/terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a>
+        <a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
