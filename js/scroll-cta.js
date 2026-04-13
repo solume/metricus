@@ -6,8 +6,8 @@
  * to avoid being intrusive.
  *
  * Content defaults:
- *   "Find out what AI is getting wrong about your brand."
- *   Button: "Get Your Report" -> /get-report/
+ *   "See what AI says about your brand and what to fix first."
+ *   Button: "Get my report" -> /get-report/
  *
  * Override via data attributes on <body> or a parent element:
  *   data-scroll-cta-headline="..."
@@ -15,6 +15,11 @@
  *   data-scroll-cta-button-text="..."
  *   data-scroll-cta-button-url="..."
  *   data-scroll-cta-lead-magnet="playbook"  (shows email form instead)
+ *
+ * Priority (highest wins):
+ *   1. Data attributes on the page element
+ *   2. PATH_CONFIG for current path
+ *   3. Hardcoded defaults
  *
  * Usage:
  *   <script src="/js/scroll-cta.js" defer></script>
@@ -29,9 +34,62 @@
   var SCROLL_TRIGGER = 0.60;          /* 60% of document height */
   var CTA_ID = 'metricus-scroll-cta';
 
-  var DEFAULT_HEADLINE = 'Find out what AI is getting wrong about your brand.';
-  var DEFAULT_BUTTON_TEXT = 'Get Your Report \u2192';
+  var DEFAULT_HEADLINE = 'See what AI says about your brand and what to fix first.';
+  var DEFAULT_BODY = 'You send your website. Metricus sends back the exact AI quotes, source pages, competitor gaps, and a ranked fix list.';
+  var DEFAULT_BUTTON_TEXT = 'Get my report \u2192';
   var DEFAULT_BUTTON_URL = '/get-report/';
+
+  /* ------------------------------------------------------------------ */
+  /*  Path-specific CTA content                                          */
+  /* ------------------------------------------------------------------ */
+
+  var PATH_CONFIG = {
+    '/blog/90-day-ai-visibility-plan/': {
+      headline: 'This playbook gives you the framework. What\u2019s missing is the data.',
+      body: 'A Metricus report shows what AI actually says about your brand, where those answers came from, and what to change first.',
+      buttonText: 'Get the data for your brand \u2192'
+    },
+    '/blog/agency-guide-ai-visibility-audits/': {
+      headline: 'Your clients are asking what AI says about them.',
+      body: 'Answer that with a client-ready report \u2014 exact AI quotes, source pages, competitor gaps, and a fix list you present as your deliverable.',
+      buttonText: 'Get a client report \u2192'
+    },
+    '/blog/ai-chatbot-recommendations/': {
+      headline: 'You\u2019ve seen what AI recommends in general. What does it say about your brand?',
+      body: 'A Metricus report tests your brand against the buyer questions that matter in your category.',
+      buttonText: 'See who AI recommends instead of you \u2192'
+    },
+    '/blog/ai-visibility-scores-explained/': {
+      headline: 'Now you know why single-query scores are unreliable.',
+      body: 'A Metricus report tests your brand across hundreds of buyer questions \u2014 enough to show a real pattern, not noise.',
+      buttonText: 'See your actual visibility \u2192'
+    },
+    '/blog/ai-visibility-tools-no-subscription/': {
+      headline: 'You don\u2019t need a monthly subscription for this.',
+      body: 'One report. One time. You see what AI says, where it came from, who it recommends instead, and what to fix first.',
+      buttonText: 'Get your one-time report \u2192'
+    },
+    '/blog/ai-visibility-tools-worth-it-2026/': {
+      headline: 'You\u2019ve compared the tools. What does AI actually say about your brand?',
+      body: 'A Metricus report answers that directly \u2014 exact quotes, source pages, competitor gaps, and a ranked fix list.',
+      buttonText: 'See what AI says about your brand \u2192'
+    },
+    '/blog/ai-visibility-how-brands-show-up/': {
+      headline: 'Now you understand how AI visibility works. What does AI say about your brand?',
+      body: 'A Metricus report shows the exact AI quotes, source pages, competitors who appear where you don\u2019t, and what to fix.',
+      buttonText: 'Find out what AI says about you \u2192'
+    },
+    '/blog/b2b-saas-invisible-chatgpt/': {
+      headline: 'Is your SaaS brand invisible in AI?',
+      body: 'A Metricus report tests your brand against the buyer questions that matter \u2014 and shows where you\u2019re invisible.',
+      buttonText: 'Find out if your brand is invisible \u2192'
+    },
+    '/blog/diy-ai-visibility-audit/': {
+      headline: 'The free check covers the foundation. What does AI actually say?',
+      body: 'A Metricus report answers the harder questions: what AI says, where it got that from, who it recommends instead, and what to fix.',
+      buttonText: 'See what AI says about your brand \u2192'
+    }
+  };
 
   /* ------------------------------------------------------------------ */
   /*  Guards                                                             */
@@ -43,7 +101,7 @@
   }
 
   /* ------------------------------------------------------------------ */
-  /*  Read optional overrides from data attributes                      */
+  /*  Read config: data attributes > PATH_CONFIG > defaults              */
   /* ------------------------------------------------------------------ */
 
   function getConfig() {
@@ -53,11 +111,13 @@
                  document.querySelector('[data-scroll-cta-headline]');
     if (custom) src = custom;
 
+    var pathOverride = PATH_CONFIG[window.location.pathname];
+
     return {
-      headline:    src.dataset.scrollCtaHeadline   || DEFAULT_HEADLINE,
-      body:        src.dataset.scrollCtaBody       || '',
-      buttonText:  src.dataset.scrollCtaButtonText || DEFAULT_BUTTON_TEXT,
-      buttonUrl:   src.dataset.scrollCtaButtonUrl  || DEFAULT_BUTTON_URL,
+      headline:    src.dataset.scrollCtaHeadline   || (pathOverride && pathOverride.headline)   || DEFAULT_HEADLINE,
+      body:        src.dataset.scrollCtaBody       || (pathOverride && pathOverride.body)       || DEFAULT_BODY,
+      buttonText:  src.dataset.scrollCtaButtonText || (pathOverride && pathOverride.buttonText) || DEFAULT_BUTTON_TEXT,
+      buttonUrl:   src.dataset.scrollCtaButtonUrl  || (pathOverride && pathOverride.buttonUrl)  || DEFAULT_BUTTON_URL,
       leadMagnet:  src.dataset.scrollCtaLeadMagnet || ''
     };
   }
