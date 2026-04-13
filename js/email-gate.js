@@ -136,6 +136,31 @@
     form.parentNode.insertBefore(wrapper, form.nextSibling);
   }
 
+  function getStatusNode(form) {
+    var node = form.parentNode.querySelector('.metricus-gate-status');
+    if (node) return node;
+
+    node = document.createElement('p');
+    node.className = 'metricus-gate-status';
+    node.style.cssText = 'font-size:0.8125rem;color:#64748B;margin:0.75rem 0 0 0;';
+    form.parentNode.insertBefore(node, form.nextSibling);
+    return node;
+  }
+
+  function setStatus(form, message, color) {
+    var node = getStatusNode(form);
+    node.textContent = message;
+    node.style.color = color || '#64748B';
+  }
+
+  function setSubmitting(form, submitting) {
+    var btn = form.querySelector('button[type="submit"]');
+    if (!btn) return;
+    btn.disabled = submitting;
+    btn.style.opacity = submitting ? '0.7' : '';
+    btn.style.cursor = submitting ? 'wait' : '';
+  }
+
   /* ------------------------------------------------------------------ */
   /*  Form handler                                                      */
   /* ------------------------------------------------------------------ */
@@ -157,14 +182,24 @@
     if (!email || !EMAIL_RE.test(email)) {
       emailInput.focus();
       emailInput.style.borderColor = '#ef4444';
+      setStatus(form, 'Enter a valid email address to continue.', '#dc2626');
       return;
     }
 
     /* Reset visual error state. */
     emailInput.style.borderColor = '';
+    setStatus(form, '');
 
     var leadMagnet = form.dataset.leadMagnet || 'unknown';
     var thankYouUrl = form.dataset.thankYouUrl || '';
+
+    if (typeof navigator !== 'undefined' && navigator.onLine === false) {
+      setStatus(form, 'You appear to be offline. Reconnect and try again.', '#dc2626');
+      return;
+    }
+
+    setSubmitting(form, true);
+    setStatus(form, 'Sending…', '#64748B');
 
     /* 1. Store email locally. */
     storeEmail(email);
@@ -180,8 +215,11 @@
 
     /* 5. Redirect or show inline thank-you. */
     if (thankYouUrl) {
-      window.location.href = thankYouUrl;
+      setTimeout(function () {
+        window.location.href = thankYouUrl;
+      }, 120);
     } else {
+      setSubmitting(form, false);
       showInlineThankYou(form);
     }
   }
