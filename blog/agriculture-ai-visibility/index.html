@@ -16,552 +16,204 @@
   <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
   <link rel="canonical" href="https://metricusapp.com/blog/agriculture-ai-visibility/">
 
-  <!-- Google Tag Manager -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w70oz7g1k3");
-  </script>
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w70oz7g1k3");</script>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Material Symbols -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#515F74',
-            'primary-hover': '#1E293B',
-            'on-primary': '#f6f7ff',
-            'on-primary-fixed': '#324054',
-            'primary-dim': '#455368',
-            surface: '#f7f9fb',
-            'surface-container-low': '#f0f4f7',
-            'surface-container': '#e8eff3',
-            'surface-container-lowest': '#ffffff',
-            'surface-container-highest': '#d9e4ea',
-            'surface-container-high': '#e1e9ee',
-            'surface-variant': '#d9e4ea',
-            'on-surface': '#2a3439',
-            'on-surface-variant': '#566166',
-            outline: '#717c82',
-            'outline-variant': '#a9b4b9',
-            'slate-text': '#0F172A',
-            'slate-muted': '#64748B',
-            'slate-accent': '#475569',
-          },
-          fontFamily: {
-            display: ['Newsreader', 'serif'],
-            sans: ['Inter', 'sans-serif'],
-            body: ['Public Sans', 'sans-serif'],
-            headline: ['Newsreader', 'serif'],
-          },
-          borderRadius: {
-            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
-            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
-            full: '0.75rem',
-          },
-        },
-      },
-    }
-  </script>
+  <script>tailwind.config={theme:{extend:{colors:{primary:'#515F74','primary-hover':'#1E293B','on-primary':'#f6f7ff','on-primary-fixed':'#324054','primary-dim':'#455368',surface:'#f7f9fb','surface-container-low':'#f0f4f7','surface-container':'#e8eff3','surface-container-lowest':'#ffffff','surface-container-highest':'#d9e4ea','surface-container-high':'#e1e9ee','surface-variant':'#d9e4ea','on-surface':'#2a3439','on-surface-variant':'#566166',outline:'#717c82','outline-variant':'#a9b4b9','slate-text':'#0F172A','slate-muted':'#64748B','slate-accent':'#475569'},fontFamily:{display:['Newsreader','serif'],sans:['Inter','sans-serif'],body:['Public Sans','sans-serif'],headline:['Newsreader','serif']},borderRadius:{none:'0px',sm:'0px',DEFAULT:'0px',md:'0px',lg:'0px',xl:'0px','2xl':'0px','3xl':'0px',full:'0.75rem'}}}}</script>
+  <style>body{font-family:'Inter',sans-serif;background-color:#fff;color:#0F172A;-webkit-font-smoothing:antialiased}.font-display,.font-headline{font-family:'Newsreader',serif}.bg-grid-dots{background-image:radial-gradient(circle,#717c82 .5px,transparent .5px);background-size:24px 24px;opacity:.05}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24}.article-body h2{font-family:'Newsreader',serif;font-weight:700;font-size:1.75rem;line-height:1.2;color:#0F172A;margin-top:3rem;margin-bottom:1rem}@media(min-width:768px){.article-body h2{font-size:2rem}}.article-body h3{font-family:'Newsreader',serif;font-weight:700;font-size:1.25rem;line-height:1.3;color:#0F172A;margin-top:2rem;margin-bottom:.75rem}.article-body p{font-size:1.125rem;line-height:1.75;color:#334155;margin-bottom:1.25rem}.article-body ul,.article-body ol{font-size:1.125rem;line-height:1.75;color:#334155;margin-bottom:1.25rem;padding-left:1.5rem}.article-body ul{list-style-type:disc}.article-body ol{list-style-type:decimal}.article-body li{margin-bottom:.5rem}.article-body blockquote{border-left:2px solid #334155;padding-left:1.5rem;font-style:italic;color:#475569;font-size:1.125rem;line-height:1.75;margin:2rem 0}.article-body a{color:#334155;text-decoration:underline;text-underline-offset:3px}.article-body a:hover{color:#1E293B}</style>
 
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #ffffff;
-      color: #0F172A;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .font-display { font-family: 'Newsreader', serif; }
-    .font-headline { font-family: 'Newsreader', serif; }
-    .font-body-sans { font-family: 'Public Sans', sans-serif; }
-
-    .editorial-btn {
-      transition: background-color 150ms ease-in-out, transform 150ms ease;
-    }
-    .editorial-btn:hover {
-      background-color: #1E293B;
-    }
-
-    .bg-grid-dots {
-      background-image: radial-gradient(circle, #717c82 0.5px, transparent 0.5px);
-      background-size: 24px 24px;
-      opacity: 0.05;
-    }
-
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-    }
-
-    .blog-card {
-      transition: transform 200ms ease, background-color 200ms ease;
-    }
-    .blog-card:hover {
-      transform: translateY(-2px);
-      background-color: #f7f9fb;
-    }
-
-    .article-body h2 {
-      font-family: 'Newsreader', serif;
-      font-weight: 700;
-      font-size: 1.75rem;
-      line-height: 1.2;
-      color: #0F172A;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-    }
-    @media (min-width: 768px) {
-      .article-body h2 {
-        font-size: 2rem;
-      }
-    }
-    .article-body h3 {
-      font-family: 'Newsreader', serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      line-height: 1.3;
-      color: #0F172A;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    .article-body p {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-    }
-    .article-body ul, .article-body ol {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-      padding-left: 1.5rem;
-    }
-    .article-body ul { list-style-type: disc; }
-    .article-body ol { list-style-type: decimal; }
-    .article-body li { margin-bottom: 0.5rem; }
-    .article-body blockquote {
-      border-left: 2px solid #334155;
-      padding-left: 1.5rem;
-      font-style: italic;
-      color: #475569;
-      font-size: 1.125rem;
-      line-height: 1.75;
-      margin: 2rem 0;
-    }
-    .article-body a {
-      color: #334155;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .article-body a:hover {
-      color: #1E293B;
-    }
-  </style>
-
-  <!-- JSON-LD BlogPosting -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "AI Visibility for Agriculture: Why ChatGPT Only Recommends John Deere When Farmers Ask for Help",
-    "description": "The agtech market is worth $33 billion, but AI chatbots only recommend a handful of brands. Data on which agriculture companies AI cites, what it gets wrong, and how to fix it.",
-    "author": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "datePublished": "2026-04-05",
-    "dateModified": "2026-04-10",
-    "mainEntityOfPage": "https://metricusapp.com/blog/agriculture-ai-visibility/",
-    "image": "https://metricusapp.com/metricus-og-image.png"
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "AI Visibility for Agriculture", "item": "https://metricusapp.com/blog/agriculture-ai-visibility/"}
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Why does ChatGPT only recommend John Deere when farmers ask about equipment?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "John Deere has approximately 15 million monthly website visits and over $500 million in annual marketing spend. This creates a massive web corpus that AI models learn from. Regional equipment manufacturers with 5,000-80,000 monthly visits have a 200x-3,000x smaller footprint. AI recommends proportional to training data frequency."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How are farmers using AI chatbots today?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "According to McKinsey (2024), approximately 28% of agricultural companies have adopted at least one AI tool. Farmers increasingly use ChatGPT for crop scouting recommendations, equipment comparisons, input cost analysis, and supplier discovery. Gartner projects traditional search volume will drop 25% by 2026 due to AI chatbots."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What does AI get wrong about agriculture companies?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Common errors include post-merger brand confusion (recommending Monsanto products when Bayer owns them), discontinued seed varieties cited as current, commodity prices 1-3 years out of date, fabricated dealer locations, and generic agronomic advice that ignores regional soil types and climate zones."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is a Metricus AI visibility report for agriculture?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A Metricus report queries every major AI platform hundreds of times with agriculture-specific prompts to map exactly how your brand appears. It identifies factual errors, traces them to their sources, benchmarks you against competitors, and delivers a prioritized action plan. One-time purchase from $99."
-        }
-      }
-    ]
-  }
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Why Is My Agtech Company Invisible in AI Recommendations?","description":"The agtech market is worth $33 billion, but AI chatbots only recommend a handful of brands. Data on which agriculture companies AI cites, what it gets wrong, and how to fix it.","author":{"@type":"Organization","name":"Metricus","url":"https://metricusapp.com"},"publisher":{"@type":"Organization","name":"Metricus","url":"https://metricusapp.com"},"datePublished":"2026-04-05","dateModified":"2026-04-12","mainEntityOfPage":"https://metricusapp.com/blog/agriculture-ai-visibility/","image":"https://metricusapp.com/metricus-og-image.png"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://metricusapp.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://metricusapp.com/blog/"},{"@type":"ListItem","position":3,"name":"AI Visibility for Agriculture","item":"https://metricusapp.com/blog/agriculture-ai-visibility/"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does AI only recommend the same 3-4 agriculture brands?","acceptedAnswer":{"@type":"Answer","text":"AI generates recommendations from patterns in its training data. Dominant agriculture brands have 200x to 3,000x more web mentions than regional equipment manufacturers, seed companies, and agtech startups. AI recommends proportional to training data frequency. A brand with 15 million monthly website visits and decades of press coverage will dominate AI responses over a regional company with 5,000 to 80,000 monthly visits, regardless of product quality or local reputation."}},{"@type":"Question","name":"What does AI get wrong about agriculture companies?","acceptedAnswer":{"@type":"Answer","text":"Common AI errors in agriculture include post-merger brand confusion such as recommending Monsanto products when Bayer owns the brand, discontinued seed varieties cited as current, commodity prices 1 to 3 years out of date, fabricated dealer locations, and generic agronomic advice that ignores regional soil types and climate zones. These errors erode buyer trust before you ever make contact."}},{"@type":"Question","name":"How are farmers and agronomists using AI today?","acceptedAnswer":{"@type":"Answer","text":"According to McKinsey (2024), approximately 28 percent of agricultural companies have adopted at least one AI tool. Farmers increasingly use AI for crop scouting recommendations, equipment comparisons, input cost analysis, and supplier discovery. As AI adoption grows in agriculture, the brands absent from AI responses lose an increasing share of buyer discovery."}},{"@type":"Question","name":"How do I find out what AI says when a buyer asks best equipment for my crop or region?","acceptedAnswer":{"@type":"Answer","text":"The step most agriculture brands miss is checking what AI actually says when someone asks best seed for corn in the Midwest or best precision agriculture equipment for 2026. AI gives different answers every time and those answers rarely include niche or regional brands. A Metricus AI visibility report checks this systematically, showing what AI says about your brand across the major AI platforms, who AI recommends instead, every factual error traced to its source, and a prioritized fix list. One report, one price, from $99."}},{"@type":"Question","name":"What is at stake financially if my ag brand is invisible to AI?","acceptedAnswer":{"@type":"Answer","text":"A single precision agriculture customer is worth $50,000 to $200,000 over 5 years. A seed company customer represents $80,000 to $300,000 in annual revenue. If AI directs even 5 percent of purchase journeys toward visible competitors, the compounding revenue loss is significant. Every quarter you wait, the gap widens as AI model updates continue to reinforce the brands already visible."}},{"@type":"Question","name":"What do I get in a Metricus AI visibility report for agriculture?","acceptedAnswer":{"@type":"Answer","text":"You submit your webpage. Within 24 hours you receive a report showing what AI says about your brand across the major AI platforms your buyers use. The report covers exact quotes from real buyer queries, every factual error AI repeats about you traced to its source, who AI recommends instead of you in best-of and comparison queries, and a prioritized fix list with one-click imports. One report, one price, from $99."}}]}</script>
   <script src="/js/reader-pulse-b.js" defer></script>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
-
-  <!-- Site Nav -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
-      <a href="/" class="flex items-center gap-2 group" aria-label="Metricus home">
-        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
-        </svg>
-        <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
-      </a>
-      <div class="hidden md:flex items-center gap-8">
-        <a href="/methodology/" class="nav-link-howitworks text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
-        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
-        <a href="/blog/" class="nav-link-blog text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Learn</a>
-        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
-        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
-        <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
-      </div>
-      <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
-        <span class="material-symbols-outlined">menu</span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
-    <div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div>
-    <nav class="absolute top-0 right-0 w-72 h-full bg-surface-container-lowest shadow-xl flex flex-col pt-6 px-6">
-      <button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu">
-        <span class="material-symbols-outlined">close</span>
-      </button>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">How It Works</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/" id="mobile-pricing-link">Pricing</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
-      <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
-    </nav>
-  </div>
-
-  <!-- Mobile Menu Script -->
-  <script>
-    (function(){
-      var btn=document.getElementById('mobile-menu-btn');
-      var menu=document.getElementById('mobile-menu');
-      var close=document.getElementById('mobile-menu-close');
-      var backdrop=document.getElementById('mobile-menu-backdrop');
-      var pricingLink=document.getElementById('mobile-pricing-link');
-      if(!btn||!menu)return;
-      function open(){menu.classList.remove('hidden');menu.setAttribute('aria-hidden','false');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
-      function shut(){menu.classList.add('hidden');menu.setAttribute('aria-hidden','true');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
-      btn.addEventListener('click',open);
-      if(close)close.addEventListener('click',shut);
-      if(backdrop)backdrop.addEventListener('click',shut);
-      if(pricingLink)pricingLink.addEventListener('click',shut);
-    })();
-  </script>
-
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30"><div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16"><a href="/" class="flex items-center gap-2 group" aria-label="Metricus home"><svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path></svg><span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span></a><div class="hidden md:flex items-center gap-8"><a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a><a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a><a href="/blog/" class="text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Learn</a><a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a><a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a><a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a></div><button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button></div></nav>
+  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true"><div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div><nav class="absolute top-0 right-0 w-72 h-full bg-surface-container-lowest shadow-xl flex flex-col pt-6 px-6"><button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu"><span class="material-symbols-outlined">close</span></button><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">How It Works</a><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/" id="mobile-pricing-link">Pricing</a><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a><a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a></nav></div>
+  <script>(function(){var b=document.getElementById('mobile-menu-btn'),m=document.getElementById('mobile-menu'),c=document.getElementById('mobile-menu-close'),d=document.getElementById('mobile-menu-backdrop'),p=document.getElementById('mobile-pricing-link');if(!b||!m)return;function o(){m.classList.remove('hidden');m.setAttribute('aria-hidden','false');b.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}function s(){m.classList.add('hidden');m.setAttribute('aria-hidden','true');b.setAttribute('aria-expanded','false');document.body.style.overflow='';}b.addEventListener('click',o);if(c)c.addEventListener('click',s);if(d)d.addEventListener('click',s);if(p)p.addEventListener('click',s);})();</script>
 
   <main class="flex-grow flex flex-col relative overflow-x-hidden">
-
     <div class="absolute inset-0 bg-grid-dots -z-10 pointer-events-none"></div>
-
-    <!-- ========== ARTICLE ========== -->
     <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
+      <nav class="mb-8"><ol class="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-muted"><li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li><li class="select-none">/</li><li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li><li class="select-none">/</li><li class="text-slate-text">Agriculture AI Visibility</li></ol></nav>
 
-      <!-- Breadcrumb -->
-      <nav class="mb-8">
-        <ol class="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-muted">
-          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
-          <li class="select-none">/</li>
-          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
-          <li class="select-none">/</li>
-          <li class="text-slate-text">Agriculture AI Visibility</li>
-        </ol>
-      </nav>
-
-      <!-- Article Header -->
       <header class="mb-12">
         <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-4">Industry Research</p>
-        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
-          Why Is My Agtech Company Invisible in AI Recommendations?
-        </h1>
-        <p class="text-sm text-outline">Metricus Research &middot; April 5, 2026 &middot; 8 min read</p>
-        <p class="text-sm text-outline mt-2">Last updated: April 2026</p>
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">Why Is My Agtech Company Invisible in AI Recommendations?</h1>
+        <p class="text-sm text-outline">Metricus Research &middot; Last updated: April 2026 &middot; 14 min read</p>
       </header>
 
-
-      <!-- Tension Stat -->
       <div class="bg-surface-container-low p-8 mb-12">
-        <p class="text-lg leading-relaxed text-on-surface">
-          <strong>The global agtech market is worth $33.9 billion</strong> (MarketsandMarkets, 2024) and growing at 12.1% CAGR. But when farmers, agronomists, and agribusiness buyers ask ChatGPT for equipment recommendations, seed advice, or supplier comparisons, AI names the same 3&ndash;4 companies every time &mdash; and hundreds of capable agriculture brands don&rsquo;t exist.
-        </p>
+        <p class="text-lg leading-relaxed text-on-surface"><strong>The global agtech market is worth $33.9 billion</strong> (MarketsandMarkets, 2024) and growing at 12.1% CAGR. But when farmers, agronomists, and agribusiness buyers ask AI for equipment recommendations, seed advice, or supplier comparisons, AI names the same 3&ndash;4 companies every time &mdash; and hundreds of capable agriculture brands don&rsquo;t exist. A Metricus AI visibility report reveals exactly what AI says about your brand across the major AI platforms your buyers use, who AI recommends instead, and what to fix first.</p>
       </div>
 
-<p><strong>Short answer:</strong> Most agtech companies are invisible to AI because the training data is dominated by a handful of brands. In our audits of agriculture brands, Metricus found that AI recommends the same 3-4 companies in 90%+ of queries. A Metricus AI visibility report reveals exactly what AI says about your brand, which competitors dominate, and what data gaps are costing you leads.</p>
-
-
-      <!-- Table of Contents -->
-      <div class="border border-[#E2E8F0] p-8 mb-12">
-        <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">In this article</p>
-                <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
-          <li><a href="#the-shift" class="hover:text-primary-hover underline underline-offset-2">The shift: AI is replacing the dealer visit</a></li>
-          <li><a href="#who-ai-recommends" class="hover:text-primary-hover underline underline-offset-2">Who AI actually recommends in agriculture</a></li>
-          <li><a href="#why-invisible" class="hover:text-primary-hover underline underline-offset-2">Why most ag brands are invisible to AI</a></li>
-          <li><a href="#what-ai-gets-wrong" class="hover:text-primary-hover underline underline-offset-2">What AI gets wrong about agriculture companies</a></li>
-          <li><a href="#precision-ag" class="hover:text-primary-hover underline underline-offset-2">The precision agriculture blind spot</a></li>
-          <li><a href="#whats-at-stake" class="hover:text-primary-hover underline underline-offset-2">What is at stake for agriculture brands</a></li>
-          <li><a href="#faq" class="hover:text-primary-hover underline underline-offset-2">Frequently asked questions</a></li>
-        </ol>
-      </div>
-
-      <!-- Article Body -->
       <div class="article-body">
-
         <h2 id="the-shift">The shift: AI is replacing the dealer visit</h2>
 
-        <p>The agriculture industry is changing how buyers discover brands. Gartner forecast that traditional search engine volume would drop 25% by 2026 due to AI chatbots. ChatGPT surpassed 5.8 billion monthly visits by mid-2025. When agriculture buyers ask AI for recommendations, the responses determine which brands enter the consideration set &mdash; and most agriculture brands are not in it.</p>
+        <p>The agriculture industry is changing how buyers discover brands. Gartner forecast that traditional search engine volume would drop 25% by 2026 due to AI. Major AI platforms surpassed billions of monthly visits by mid-2025. When agriculture buyers ask AI for recommendations, the responses determine which brands enter the consideration set &mdash; and most agriculture brands are not in it.</p>
 
-        <p>In our audits of agriculture brands, we found a consistent pattern: AI narrows an entire market down to 3&ndash;5 names. John Deere (92%+ AI mention rate), Bayer Crop Science (~70%), CNH Industrial (~60%). Everyone else is functionally invisible.</p>
+        <p>In audits of agriculture brands, a consistent pattern emerges: AI narrows an entire market down to 3&ndash;5 names. The same dominant brands appear in equipment queries, seed queries, and input cost queries. Everyone else is functionally invisible. <strong>Regional ag retailers, independent seed companies, and specialty equipment manufacturers appear in less than 2% of AI responses.</strong></p>
 
-
-        <h2 id="who-ai-recommends">Who AI actually recommends in agriculture</h2>
-
-        <p>We tested extensively across the major AI platforms using buyer-intent prompts. The results are stark: John Deere (92%+ AI mention rate), Bayer Crop Science (~70%), CNH Industrial (~60%).</p>
-
-        <p><strong>Regional ag retailers, independent seed companies, and specialty equipment manufacturers appear in less than 2% of AI responses.</strong></p>
-
-        <p>This is not a bug in the AI. It is a structural feature of how large language models process the web. Brands with the most mentions, backlinks, and structured content across the training corpus are the ones AI recommends. The agriculture market is worth $33.9 billion (MarketsandMarkets, 2024), but AI visibility is concentrated in a handful of players.</p>
+        <p>This is not a temporary glitch. It is a structural feature of how large language models process the web. Brands with the most mentions, backlinks, and structured content across the training corpus are the ones AI recommends. The agriculture market is worth $33.9 billion, but AI visibility is concentrated in a handful of players.</p>
 
         <div data-reader-pulse-b data-source="agriculture-ai-visibility"></div>
 
+        <h2 id="niche-query-gap">The queries that matter most: &ldquo;best [equipment/seed/service] for [crop/region]&rdquo;</h2>
+
+        <p>The step most agriculture brands miss: checking what AI actually says when someone asks &ldquo;best seed for corn in the Midwest&rdquo; or &ldquo;best precision agriculture equipment for cotton farms.&rdquo; These niche, buyer-intent queries are where purchase decisions start &mdash; and where most ag brands are entirely absent.</p>
+
+        <p>Agriculture is inherently regional. A corn farmer in Iowa has different needs than a cotton grower in Mississippi or a vineyard in Napa. But AI does not differentiate. When a buyer asks for the best seed supplier for their crop and region, AI gives a generic national answer because that is what dominates the training data. The regional seed company with 40 years of local agronomic expertise and the dealer network that serves three counties &mdash; these brands have near-zero representation in AI responses.</p>
+
+        <p>The economics of these niche queries are significant. A farmer asking &ldquo;best precision ag equipment for irrigated corn&rdquo; is further along in the purchase funnel than someone asking &ldquo;what is precision agriculture.&rdquo; They have identified a need and are comparing options. If AI does not include your brand in that comparison, you are excluded from the consideration set at the exact moment the buyer is ready to evaluate.</p>
+
+        <p>In traditional search, you could rank for long-tail regional keywords. &ldquo;Best seed dealer in central Illinois&rdquo; could surface your business on page one. In AI-generated responses, there is no results page. There is a single synthesized answer, and you are either in it or you are not. The binary nature of AI inclusion makes niche query positioning the single highest-value surface for agriculture brands.</p>
+
+        <h2 id="who-ai-recommends">Who AI actually recommends in agriculture</h2>
+
+        <p>Across the major AI platforms, using buyer-intent prompts, the same names dominate: the largest equipment manufacturers appear in 90%+ of responses. The largest crop science companies appear in 60&ndash;70% of responses. Regional brands, independent dealers, and specialty agtech companies appear in fewer than 2% of responses.</p>
+
+        <p>This is not a quality signal. AI does not evaluate product quality, dealer service, or regional fit. It recommends proportional to training data frequency. A brand with 15 million monthly website visits and decades of press coverage in major agricultural publications will dominate AI responses over a regional company with 5,000 to 80,000 monthly visits &mdash; regardless of who actually serves the buyer&rsquo;s market better.</p>
+
+        <p>The concentration is especially severe in agriculture because the industry&rsquo;s web presence is dominated by a few massive companies. The top 5 ag brands collectively generate hundreds of millions of monthly web visits. The next 500 ag brands collectively generate a fraction of that. AI reflects this distribution exactly.</p>
 
         <h2 id="why-invisible">Why most ag brands are invisible to AI</h2>
 
-        <p>AI chatbots generate recommendations from patterns in training data &mdash; billions of web pages, news articles, Reddit threads, review platforms, and forum discussions. Three factors determine whether AI mentions your agriculture brand:</p>
+        <p>Three factors determine whether AI mentions your agriculture brand:</p>
 
         <ul>
-          <li><strong>Corpus frequency:</strong> How often your brand appears across the web. There is a 200x-3,000x gap in web presence between top brands and regional ag companies. The Princeton/Georgia Tech GEO study found that content with statistical citations was up to 40% more likely to be cited by generative AI.</li>
-          <li><strong>Source authority:</strong> AI weights authoritative sources disproportionately &mdash; major industry publications, review platforms, and government databases carry far more weight than your own marketing copy.</li>
-          <li><strong>Content structure:</strong> Most agriculture websites feature brochure-style content with no structured data, no statistical claims, and no comparison content that AI can extract and cite.</li>
+          <li><strong>Corpus frequency:</strong> How often your brand appears across the web. There is a 200x&ndash;3,000x gap in web presence between dominant brands and regional ag companies. Content with statistical citations is up to 40% more likely to be cited by AI (Princeton / Georgia Tech GEO study).</li>
+          <li><strong>Source authority:</strong> AI weights authoritative third-party sources disproportionately &mdash; major agricultural publications, trade journals, university extension services, and government databases carry far more weight than your own marketing copy.</li>
+          <li><strong>Content structure:</strong> Most agriculture websites feature brochure-style content with no structured data, no statistical claims, and no comparison content that AI can extract and cite. Spec sheets presented as images, promotional banners, and branded hero images do not give AI anything to work with.</li>
         </ul>
 
-        <!-- METRICUS_MID_CTA -->
-        <aside class="metricus-mid-cta my-12 bg-surface border-l-4 border-primary p-8 md:p-10" style="background-color:#f7f9fb;border-left:4px solid #515F74;">
-          <p class="font-display italic text-2xl md:text-3xl text-slate-text leading-tight mb-3" style="color:#0F172A;font-family:'Newsreader',serif;">What does AI say about your brand? Why? What should you change first?</p>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6" style="color:#64748B;">One-time report. No subscription. From $99.</p>
-          <a href="/get-report/" class="metricus-mid-cta-btn inline-flex items-center gap-2 bg-primary text-on-primary text-sm font-semibold tracking-tight px-6 py-3 hover:bg-primary-dim transition-colors" style="background-color:#515F74;color:#f6f7ff;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;font-size:14px;font-weight:600;">
-            Get your report <span aria-hidden="true">&rarr;</span>
-          </a>
-        </aside>
+        <p>The gap is not just about size. Even mid-market ag brands with meaningful web traffic remain invisible because their content is built for human browsers, not for AI extraction. Product pages with photos, dealer locator tools, and &ldquo;contact us&rdquo; forms do not give AI structured factual claims it can cite. AI needs comparison data, statistical claims, and third-party validation &mdash; and most agricultural sites have none.</p>
 
+        <h3>The regional dealer paradox</h3>
+
+        <p>Regional ag dealers face a compounding problem. When buyers ask AI about equipment or seed, AI almost never includes location-specific recommendations. The dealer 20 miles from the buyer&rsquo;s farm asks &ldquo;best equipment dealer near me&rdquo; and gets a response about national manufacturers. Your 30-year relationship with local growers, your certified agronomists on staff, your parts inventory that keeps farmers running during harvest &mdash; none of it registers because AI does not parse your web presence as authoritative in the way it parses national brand coverage.</p>
+
+        <p>This paradox means regional dealers must build authority signals that exist outside their own website. Mentions in agricultural extension publications, coverage in regional farm journals, structured data that AI can parse, and a presence in agricultural forums and communities where AI training data originates &mdash; these are the signals that bridge the gap between local reputation and AI visibility.</p>
+
+        <aside class="metricus-mid-cta my-12 bg-surface border-l-4 border-primary p-8 md:p-10" style="background-color:#f7f9fb;border-left:4px solid #515F74;">
+          <p class="font-display italic text-2xl md:text-3xl text-slate-text leading-tight mb-3" style="color:#0F172A;font-family:'Newsreader',serif;">See what AI says about your brand, why it says it, and what to fix first.</p>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6" style="color:#64748B;">Submit your webpage. Get back what AI says, why, and how to fix it within 24 hours. One report, one price, from $99.</p>
+          <a href="/get-report/" class="metricus-mid-cta-btn inline-flex items-center gap-2 bg-primary text-on-primary text-sm font-semibold tracking-tight px-6 py-3 hover:bg-primary-dim transition-colors" style="background-color:#515F74;color:#f6f7ff;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;font-size:14px;font-weight:600;">Get your report <span aria-hidden="true">&rarr;</span></a>
+        </aside>
 
         <h2 id="what-ai-gets-wrong">What AI gets wrong about agriculture companies</h2>
 
-        <p>Even when AI does mention an agriculture brand, there is a significant chance it gets the facts wrong. The most common errors we find in AI responses about agriculture companies:</p>
+        <p>Even when AI does mention an agriculture brand, there is a significant chance it gets the facts wrong. The most common errors found in AI responses about agriculture companies:</p>
 
-        <p><strong>post-merger brand confusion (Monsanto/Bayer, DuPont Pioneer/Corteva), discontinued seed varieties recommended as current, 1-3 year old commodity prices cited as current, fabricated dealer locations.</strong></p>
+        <ul>
+          <li><strong>Post-merger brand confusion</strong> &mdash; AI recommends Monsanto products when Bayer owns the brand, or references DuPont Pioneer when the current entity is Corteva. M&amp;A activity in agriculture has been extensive, and AI training data lags behind corporate restructuring by months or years.</li>
+          <li><strong>Discontinued seed varieties cited as current</strong> &mdash; AI recommends specific seed varieties that have been pulled from the market, reformulated, or replaced. A farmer acting on this recommendation wastes time researching products they cannot buy.</li>
+          <li><strong>Commodity prices 1&ndash;3 years out of date</strong> &mdash; AI cites commodity pricing from its training data window, which may be years behind current market conditions. Agriculture input decisions are heavily price-sensitive, and stale pricing data leads to incorrect cost projections.</li>
+          <li><strong>Fabricated dealer locations</strong> &mdash; AI generates dealer addresses that do not exist, conflates multiple dealerships into one, or lists locations that closed years ago. A buyer who drives to a fabricated location has a trust-destroying experience.</li>
+          <li><strong>Generic agronomic advice ignoring regional conditions</strong> &mdash; AI gives crop management recommendations that ignore regional soil types, climate zones, and growing seasons. Advice appropriate for the Southeast applied to the Northern Plains can damage a crop.</li>
+        </ul>
 
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>The compound problem:</strong> Your agriculture brand is either invisible in AI (bad) or mentioned with wrong information (worse). Both cost you customers. The first means buyers never discover you. The second means they discover you with incorrect data that erodes trust before you ever talk to them.
-          </p>
-        </div>
+        <p>The compound problem is severe: your agriculture brand is either invisible in AI (bad) or mentioned with wrong information (worse). The first means buyers never discover you. The second means they discover you with incorrect data that erodes trust before you ever make contact.</p>
 
+        <h3>The precision agriculture data gap</h3>
 
-        <h2 id="whats-at-stake">What is at stake for agriculture brands</h2>
+        <p>Precision agriculture products face a unique accuracy problem. GPS guidance systems, variable rate technology, soil sensors, and drone-based crop monitoring &mdash; these products evolve rapidly, with new capabilities released every season. AI training data cannot keep pace with this rate of change. The result is that AI frequently describes precision ag products with specifications from two or three generations ago, presents discontinued features as current, and misattributes capabilities between competing products.</p>
 
-        <p>A single precision agriculture customer is worth $50,000-$200,000 over 5 years. A seed company customer represents $80,000-$300,000 in annual revenue. If AI directs even 5% of purchase journeys toward visible competitors, the compounding revenue loss is significant.</p>
+        <p>For a precision ag buyer evaluating a $50,000&ndash;$200,000 technology investment, outdated specification data is not just inconvenient &mdash; it can lead to purchasing decisions based on capabilities a product no longer offers or never had.</p>
+
+        <h2 id="the-money">The $33.9 billion market AI is reshaping</h2>
+
+        <p>The agtech market is worth $33.9 billion and growing at 12.1% CAGR. A single precision agriculture customer is worth $50,000&ndash;$200,000 over 5 years. A seed company customer represents $80,000&ndash;$300,000 in annual revenue. If AI directs even 5% of purchase journeys toward visible competitors, the compounding revenue loss is significant.</p>
 
         <p>Agriculture brands that do not address AI visibility face compounding losses. As more buyers shift to AI-driven research, the brands invisible in AI lose top-of-funnel discovery &mdash; which means fewer leads, fewer sales, and less revenue to invest in the visibility that might fix the problem. The feedback loop accelerates with every AI model update.</p>
 
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>The bottom line:</strong> If you operate an agriculture brand that depends on buyer discovery &mdash; and in 2026, that is everyone &mdash; you need to know what AI is saying about you. Not next quarter. Now.
-          </p>
-        </div>
+        <p>Meanwhile, the brands that do appear in AI responses capture not just the AI traffic but amplified traditional traffic as well. Brands cited inside AI Overviews earn more organic clicks and more paid clicks than brands on the same queries that are not cited. AI visibility is not a separate channel &mdash; it amplifies every other channel you invest in.</p>
 
+        <h3>The compounding loss over time</h3>
 
-        <h2 id="faq">Frequently Asked Questions</h2>
+        <p>The data shows that the average brand&rsquo;s AI visibility gap widens when left unaddressed. Every quarter without action means a larger gap to close. This is because AI model updates reinforce existing patterns: brands that are already visible accumulate more citations, more coverage, and more web mentions &mdash; which makes them even more visible in the next model update. Brands that are invisible get no citations, no AI-driven traffic, and no reinforcement. The rich get richer.</p>
 
-        <h3>Why does ChatGPT only recommend John Deere when farmers ask about equipment?</h3>
-        <p>John Deere has approximately 15 million monthly website visits and over $500 million in annual marketing spend. This creates a massive web corpus that AI models learn from. Regional equipment manufacturers with 5,000-80,000 monthly visits have a 200x-3,000x smaller footprint. AI recommends proportional to training data frequency.</p>
+        <p>In agriculture, this compounding effect is amplified by the seasonal nature of purchasing. If a buyer is invisible to AI during the narrow spring planting window when equipment and seed decisions are made, that lost discovery cannot be recovered until the next season. One season of AI invisibility can mean 12 months of compounding damage.</p>
 
-        <h3>How are farmers using AI chatbots today?</h3>
-        <p>According to McKinsey (2024), approximately 28% of agricultural companies have adopted at least one AI tool. Farmers increasingly use ChatGPT for crop scouting recommendations, equipment comparisons, input cost analysis, and supplier discovery. Gartner projects traditional search volume will drop 25% by 2026 due to AI chatbots.</p>
+        <h2 id="authority-signals">The authority signals that drive AI recommendations in agriculture</h2>
+
+        <p>AI does not randomly choose which brands to recommend. It follows a consistent set of authority signals, and in agriculture those signals are specific:</p>
+
+        <h3>Third-party editorial coverage</h3>
+
+        <p>Coverage in agricultural trade publications, university extension service mentions, and independent review sites create the third-party authority that AI trusts. AI weights these independent mentions more heavily than anything on your own website. A single mention in a respected agricultural publication can have more impact on AI recommendations than a complete website redesign.</p>
+
+        <h3>Structured comparison data</h3>
+
+        <p>When AI needs to answer a comparison query, it looks for structured data it can extract cleanly. Specification tables with proper schema markup, yield comparison data, and standardized product attributes all make your content parseable. Most agricultural sites present this information as PDF brochures or unstructured text that AI cannot extract.</p>
+
+        <h3>University and extension service citations</h3>
+
+        <p>Agriculture is unique in that university extension services and USDA publications carry enormous authority in AI training data. Brands mentioned in university trials, extension service recommendations, and government agricultural databases benefit from extremely high source-authority signals. These citations are some of the strongest authority signals available in any industry.</p>
+
+        <h3>Forum and community presence</h3>
+
+        <p>Agricultural forums and farming communities contribute to AI training data. Brands discussed positively in these communities build training data frequency without relying on their own marketing. The organic, conversational nature of forum mentions makes them particularly valuable for AI citation.</p>
+
+        <h2 id="what-a-report-shows">What an AI visibility report reveals for agriculture brands</h2>
+
+        <p>A Metricus AI visibility report shows what AI says about your brand when someone asks about your category &mdash; across the major AI platforms your buyers use. For agriculture brands, the report covers:</p>
+
+        <ul>
+          <li>Exact quotes from real buyer queries &mdash; what AI says when someone asks about &ldquo;best [equipment/seed] for [crop/region]&rdquo;</li>
+          <li>Every factual error AI repeats about you, traced to its source &mdash; post-merger confusion, discontinued products, wrong dealer locations</li>
+          <li>Who AI recommends instead of you in comparison queries and why</li>
+          <li>Which authority signals are missing from your web presence</li>
+          <li>A prioritized fix list with one-click imports for every fix</li>
+        </ul>
+
+        <p>You submit your webpage and get your report back within 24 hours. One report, one price, from $99.</p>
+
+        <p class="text-sm text-slate-muted mt-8"><strong>Sources:</strong> MarketsandMarkets agtech market report (2024); McKinsey agricultural AI adoption study (2024); Gartner search volume forecast (February 2024); Princeton / Georgia Tech GEO study on AI citation factors; USDA agricultural statistics. AI mention rates based on Metricus internal testing across the major AI platforms (2026).</p>
+
+        <h2>Related reading</h2>
+
+        <ul>
+          <li><a href="/blog/ai-visibility-action-plan/">How to Turn AI Visibility Data Into an Action Plan</a> &mdash; The 5-step framework for turning your AI audit findings into specific, prioritized actions.</li>
+          <li><a href="/blog/fix-ai-brand-hallucinations/">AI Is Getting Facts Wrong About Your Brand</a> &mdash; 72% of brands have factual errors in AI responses. The process to audit and fix them.</li>
+          <li><a href="/blog/ai-visibility-worth-paying-for/">Can You Just Check Yourself? When a $99 Audit Actually Makes Sense</a> &mdash; What a single spot-check misses and when a systematic AI visibility audit is worth the investment.</li>
+        </ul>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <h3>Why does AI only recommend the same 3&ndash;4 agriculture brands?</h3>
+        <p>AI generates recommendations from patterns in its training data. Dominant agriculture brands have 200x to 3,000x more web mentions than regional equipment manufacturers, seed companies, and agtech startups. AI recommends proportional to training data frequency. A brand with 15 million monthly website visits and decades of press coverage will dominate AI responses over a regional company with 5,000 to 80,000 monthly visits, regardless of product quality or local reputation.</p>
 
         <h3>What does AI get wrong about agriculture companies?</h3>
-        <p>Common errors include post-merger brand confusion (recommending Monsanto products when Bayer owns them), discontinued seed varieties cited as current, commodity prices 1-3 years out of date, fabricated dealer locations, and generic agronomic advice that ignores regional soil types and climate zones.</p>
+        <p>Common AI errors in agriculture include post-merger brand confusion such as recommending Monsanto products when Bayer owns the brand, discontinued seed varieties cited as current, commodity prices 1 to 3 years out of date, fabricated dealer locations, and generic agronomic advice that ignores regional soil types and climate zones. These errors erode buyer trust before you ever make contact.</p>
 
-        <h3>What is a Metricus AI visibility report for agriculture?</h3>
-        <p>A Metricus report queries every major AI platform hundreds of times with agriculture-specific prompts to map exactly how your brand appears. It identifies factual errors, traces them to their sources, benchmarks you against competitors, and delivers a prioritized action plan. One-time purchase from $99.</p>
+        <h3>How are farmers and agronomists using AI today?</h3>
+        <p>According to McKinsey (2024), approximately 28% of agricultural companies have adopted at least one AI tool. Farmers increasingly use AI for crop scouting recommendations, equipment comparisons, input cost analysis, and supplier discovery. As AI adoption grows in agriculture, the brands absent from AI responses lose an increasing share of buyer discovery.</p>
 
+        <h3>How do I find out what AI says when a buyer asks &ldquo;best [equipment/seed] for [crop/region]&rdquo;?</h3>
+        <p>The step most agriculture brands miss: checking what AI actually says when someone asks &ldquo;best seed for corn in the Midwest&rdquo; or &ldquo;best precision agriculture equipment for cotton farms.&rdquo; AI gives different answers every time &mdash; and those answers rarely include niche or regional brands. A Metricus AI visibility report checks this systematically: what AI says about your brand, who AI recommends instead, every factual error traced to its source, and a prioritized fix list. One report, one price, from $99.</p>
+
+        <h3>What is at stake financially if my ag brand is invisible to AI?</h3>
+        <p>A single precision agriculture customer is worth $50,000 to $200,000 over 5 years. A seed company customer represents $80,000 to $300,000 in annual revenue. If AI directs even 5% of purchase journeys toward visible competitors, the compounding revenue loss is significant. Every quarter you wait, the gap widens as AI model updates reinforce the brands already visible.</p>
+
+        <h3>What do I get in a Metricus AI visibility report for agriculture?</h3>
+        <p>You submit your webpage. Within 24 hours you receive a report showing what AI says about your brand across the major AI platforms your buyers use &mdash; exact quotes from real buyer queries, every factual error AI repeats about you traced to its source, who AI recommends instead of you in best-of and comparison queries, and a prioritized fix list with one-click imports. One report, one price, from $99.</p>
       </div>
-      <!-- End Article Body -->
 
-      <p class="text-sm text-slate-muted mt-8 border-t border-[#E2E8F0] pt-6">Find out what AI is getting wrong about your brand. <a href="/get-report/" class="text-primary hover:underline">Get your report</a>.</p>
-
-      <!-- ========== ARTICLE CTA ========== -->
       <div class="bg-primary p-8 md:p-12 mt-16">
-        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">Find out what AI is getting wrong about your brand</h3>
-        <p class="text-on-primary/80 text-base max-w-lg mb-8">
-          Find out what AI is getting wrong about your brand. Get your report.
-        </p>
-        <a href="/get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
-          Get your report
-          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-        </a>
-        <p class="mt-4"><a href="/sample-ai-visibility-report/" class="text-on-primary/70 hover:text-on-primary text-sm underline transition-colors">Or see what a report looks like &rarr;</a></p>
+        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">See what AI says about your agriculture brand &mdash; and what to fix first.</h3>
+        <p class="text-on-primary/80 text-base max-w-lg mb-8">Submit your webpage. Get back what AI says about your brand, who AI recommends instead, and how to fix it within 24 hours. One report, one price, from $99.</p>
+        <a href="/get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">Get your report <span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
       </div>
-
-      <!-- ========== CITE THIS ARTICLE ========== -->
-      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
-        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
-          <cite class="not-italic"><a href="https://metricusapp.com/blog/agriculture-ai-visibility/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; AI Visibility for Agriculture: Why ChatGPT Only Recommends John Deere When Farmers Ask for Help</a></cite>
-        </p>
-      </footer>
-
+      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40"><p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as: <cite class="not-italic"><a href="https://metricusapp.com/blog/agriculture-ai-visibility/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; Why Is My Agtech Company Invisible in AI Recommendations?</a></cite></p></footer>
     </article>
-
-
-    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
-      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-6">Go deeper</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <a href="/geo-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">GEO Knowledge Base</p>
-          <p class="text-sm text-on-surface-variant mt-1">81 research clusters on AI visibility and brand monitoring</p>
-        </a>
-        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
-          <p class="text-sm text-on-surface-variant mt-1">48 clusters on fixing AI accuracy issues and hallucinations</p>
-        </a>
-      </div>
-    </section>
-
-    <!-- ========== RELATED POSTS ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
-      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-8">Related articles</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        <a href="../ai-visibility-action-plan/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Playbook</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            How to Turn AI Visibility Data Into an Action Plan
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            The 5-step framework for turning your AI audit findings into specific, prioritized actions.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../fix-ai-brand-hallucinations/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Research</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            AI Is Getting Facts Wrong About Your Brand
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            72% of brands have factual errors in AI responses. Here&rsquo;s a 4-step process to audit and fix them.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../b2b-saas-invisible-chatgpt/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Industry Research</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            Why B2B SaaS Brands Are Invisible in ChatGPT
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            The same visibility dynamics, different industry. Transferable strategies for any brand.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
   </main>
-
-
-  <!-- ========== FOOTER ========== -->
-  <!-- Site Footer -->
-  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p>
-      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-        <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
-        <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
-        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
-        <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
-        <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
-        <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
-        <a href="/privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a>
-        <a href="/terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a>
-        <a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
-      </div>
-    </div>
-  </footer>
-
+  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8"><div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4"><p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p><div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2"><a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a><a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a><a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a><a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a><a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a><a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a><a href="/privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a><a href="/terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a><a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a></div></div></footer>
+  <script src="/js/reader-pulse-b.js" defer></script>
 </body>
 </html>
