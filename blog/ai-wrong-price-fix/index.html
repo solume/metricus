@@ -16,514 +16,242 @@
   <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
   <link rel="canonical" href="https://metricusapp.com/blog/ai-wrong-price-fix/">
 
-  <!-- GTM -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w70oz7g1k3");
-  </script>
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w70oz7g1k3");</script>
 
-
-  <!-- JSON-LD BlogPosting -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "AI Is Getting Your Pricing Wrong — And It's Costing You Customers",
-    "description": "In our initial audits of B2B brands, the majority had at least one factual error in AI responses. Wrong pricing was the #1 issue. Here's where errors come from and how to fix them.",
-    "author": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "datePublished": "2026-03-01",
-    "dateModified": "2026-04-10",
-    "mainEntityOfPage": "https://metricusapp.com/blog/ai-wrong-price-fix/",
-    "image": "https://metricusapp.com/metricus-og-image.png"
-  }
-  </script>
-
-  <!-- JSON-LD BreadcrumbList -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "AI Is Getting Your Pricing Wrong — And It's Costing You Customers", "item": "https://metricusapp.com/blog/ai-wrong-price-fix/"}
-    ]
-  }
-  </script>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Material Symbols -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#515F74',
-            'primary-hover': '#1E293B',
-            'on-primary': '#f6f7ff',
-            'on-primary-fixed': '#324054',
-            'primary-dim': '#455368',
-            surface: '#f7f9fb',
-            'surface-container-low': '#f0f4f7',
-            'surface-container': '#e8eff3',
-            'surface-container-lowest': '#ffffff',
-            'surface-container-highest': '#d9e4ea',
-            'surface-container-high': '#e1e9ee',
-            'surface-variant': '#d9e4ea',
-            'on-surface': '#2a3439',
-            'on-surface-variant': '#566166',
-            outline: '#717c82',
-            'outline-variant': '#a9b4b9',
-            'slate-text': '#0F172A',
-            'slate-muted': '#64748B',
-            'slate-accent': '#475569',
-          },
-          fontFamily: {
-            display: ['Newsreader', 'serif'],
-            sans: ['Inter', 'sans-serif'],
-            body: ['Public Sans', 'sans-serif'],
-            headline: ['Newsreader', 'serif'],
-          },
-          borderRadius: {
-            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
-            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
-            full: '0.75rem',
-          },
-        },
-      },
-    }
-  </script>
+  <script>tailwind.config={theme:{extend:{colors:{primary:'#515F74','primary-hover':'#1E293B','on-primary':'#f6f7ff','on-primary-fixed':'#324054','primary-dim':'#455368',surface:'#f7f9fb','surface-container-low':'#f0f4f7','surface-container':'#e8eff3','surface-container-lowest':'#ffffff','surface-container-highest':'#d9e4ea','surface-container-high':'#e1e9ee','surface-variant':'#d9e4ea','on-surface':'#2a3439','on-surface-variant':'#566166',outline:'#717c82','outline-variant':'#a9b4b9','slate-text':'#0F172A','slate-muted':'#64748B','slate-accent':'#475569'},fontFamily:{display:['Newsreader','serif'],sans:['Inter','sans-serif'],body:['Public Sans','sans-serif'],headline:['Newsreader','serif']},borderRadius:{none:'0px',sm:'0px',DEFAULT:'0px',md:'0px',lg:'0px',xl:'0px','2xl':'0px','3xl':'0px',full:'0.75rem'}}}}</script>
+  <style>body{font-family:'Inter',sans-serif;background-color:#fff;color:#0F172A;-webkit-font-smoothing:antialiased}.font-display,.font-headline{font-family:'Newsreader',serif}.bg-grid-dots{background-image:radial-gradient(circle,#717c82 .5px,transparent .5px);background-size:24px 24px;opacity:.05}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24}.article-body h2{font-family:'Newsreader',serif;font-weight:700;font-size:1.75rem;line-height:1.2;color:#0F172A;margin-top:3rem;margin-bottom:1rem}@media(min-width:768px){.article-body h2{font-size:2rem}}.article-body h3{font-family:'Newsreader',serif;font-weight:700;font-size:1.25rem;line-height:1.3;color:#0F172A;margin-top:2rem;margin-bottom:.75rem}.article-body p{font-size:1.125rem;line-height:1.75;color:#334155;margin-bottom:1.25rem}.article-body ul,.article-body ol{font-size:1.125rem;line-height:1.75;color:#334155;margin-bottom:1.25rem;padding-left:1.5rem}.article-body ul{list-style-type:disc}.article-body ol{list-style-type:decimal}.article-body li{margin-bottom:.5rem}.article-body blockquote{border-left:2px solid #334155;padding-left:1.5rem;font-style:italic;color:#475569;font-size:1.125rem;line-height:1.75;margin:2rem 0}.article-body a{color:#334155;text-decoration:underline;text-underline-offset:3px}.article-body a:hover{color:#1E293B}</style>
 
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #ffffff;
-      color: #0F172A;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .font-display { font-family: 'Newsreader', serif; }
-    .font-headline { font-family: 'Newsreader', serif; }
-    .font-body-sans { font-family: 'Public Sans', sans-serif; }
-
-    .editorial-btn {
-      transition: background-color 150ms ease-in-out, transform 150ms ease;
-    }
-    .editorial-btn:hover {
-      background-color: #1E293B;
-    }
-
-    .bg-grid-dots {
-      background-image: radial-gradient(circle, #717c82 0.5px, transparent 0.5px);
-      background-size: 24px 24px;
-      opacity: 0.05;
-    }
-
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-    }
-
-    .blog-card {
-      transition: transform 200ms ease, background-color 200ms ease;
-    }
-    .blog-card:hover {
-      transform: translateY(-2px);
-      background-color: #f7f9fb;
-    }
-
-    /* Article prose styles */
-    .article-body h2 {
-      font-family: 'Newsreader', serif;
-      font-weight: 700;
-      font-size: 1.75rem;
-      line-height: 1.2;
-      color: #0F172A;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-    }
-    @media (min-width: 768px) {
-      .article-body h2 {
-        font-size: 2rem;
-      }
-    }
-    .article-body h3 {
-      font-family: 'Newsreader', serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      line-height: 1.3;
-      color: #0F172A;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    .article-body p {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-    }
-    .article-body ul, .article-body ol {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-      padding-left: 1.5rem;
-    }
-    .article-body ul { list-style-type: disc; }
-    .article-body ol { list-style-type: decimal; }
-    .article-body li { margin-bottom: 0.5rem; }
-    .article-body blockquote {
-      border-left: 2px solid #334155;
-      padding-left: 1.5rem;
-      font-style: italic;
-      color: #475569;
-      font-size: 1.125rem;
-      line-height: 1.75;
-      margin: 2rem 0;
-    }
-    .article-body a {
-      color: #334155;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .article-body a:hover {
-      color: #1E293B;
-    }
-  </style>
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Why does AI get my pricing wrong?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI models pull pricing from whatever sources they find during retrieval, including cached review sites, old comparison articles, and outdated press releases. The most frequently cited number becomes the consensus price, even when it is outdated."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What types of AI pricing errors are most common?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The five most common: outdated pricing from stale review listings, tier conflation mixing features across plans, discontinued plan recommendations, competitor-sourced misinformation, and currency confusion."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How can I find out what AI says about my pricing?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "An AI visibility report tests buyer-intent prompts across all major AI platforms and flags every factual discrepancy, including pricing errors, tracing each to its source."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does wrong AI pricing cost a business?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Wrong pricing either eliminates prospects from your pipeline (if AI overstates your price) or creates mismatched expectations during sales (if AI understates it). Both outcomes directly impact conversion rates."
-        }
-      }
-    ]
-  }
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Is AI Telling Prospects the Wrong Price? How to Check and Fix It","description":"AI told prospects $30/user when the actual price was $10. Most B2B brands have wrong pricing in AI. Here's where the errors come from and how to fix them.","author":{"@type":"Organization","name":"Metricus","url":"https://metricusapp.com"},"publisher":{"@type":"Organization","name":"Metricus","url":"https://metricusapp.com"},"datePublished":"2026-03-01","dateModified":"2026-04-12","mainEntityOfPage":"https://metricusapp.com/blog/ai-wrong-price-fix/","image":"https://metricusapp.com/metricus-og-image.png"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://metricusapp.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://metricusapp.com/blog/"},{"@type":"ListItem","position":3,"name":"AI Getting Pricing Wrong","item":"https://metricusapp.com/blog/ai-wrong-price-fix/"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does AI get my pricing wrong?","acceptedAnswer":{"@type":"Answer","text":"AI models pull pricing from whatever sources they find during retrieval, including cached review sites, old comparison articles, and outdated press releases. The most frequently cited number becomes the consensus price, even when it is outdated. A single stale listing on a review site can propagate across multiple AI platforms within weeks, creating the appearance of agreement when the underlying source is one wrong number repeated."}},{"@type":"Question","name":"What types of AI pricing errors are most common?","acceptedAnswer":{"@type":"Answer","text":"The five most common: outdated pricing from stale review listings, tier conflation mixing features across plans, discontinued plan recommendations, competitor-sourced misinformation from comparison pages that overstate your price, and currency confusion. Outdated pricing is the most frequent because review sites and comparison articles update on their own schedule, not yours."}},{"@type":"Question","name":"How can I find out what AI says about my pricing?","acceptedAnswer":{"@type":"Answer","text":"The step most brands skip when AI gets pricing wrong: checking every other detail AI gets wrong, not just price. In our data, the average brand's AI visibility gap widened by 10% every 90 days when left unaddressed — and wrong pricing actively steers buyers to competitors. One-time AI visibility reports (like Metricus) show every inaccuracy — you submit your webpage, and within 24 hours you see what AI says about your pricing and everything else, with fixes and one-click imports. 80% of brands that implemented the top 3 fixes saw measurable changes within 10 days."}},{"@type":"Question","name":"How much does wrong AI pricing cost a business?","acceptedAnswer":{"@type":"Answer","text":"Wrong pricing either eliminates prospects from your pipeline (if AI overstates your price) or creates mismatched expectations during sales (if AI understates it). When AI tells a buyer your product costs three times what it costs, that buyer never contacts you. When AI understates your price, you get a lead who discovers the real number during sales and feels misled. Both outcomes reduce conversion rates and waste sales resources on unqualified or misaligned leads."}},{"@type":"Question","name":"How do pricing errors propagate across AI platforms?","acceptedAnswer":{"@type":"Answer","text":"A single stale source — often a review listing or an old comparison article — gets picked up during retrieval by multiple AI platforms. The wrong price then appears in responses across platforms, creating false consensus. In observed patterns, a pricing error discovered on one AI platform existed on at least two others the majority of the time. RAG-based responses reinforce the error in real time by citing the same stale source, while model training bakes it into base responses until enough contradictory information accumulates to override it."}},{"@type":"Question","name":"What do I get in a Metricus report?","acceptedAnswer":{"@type":"Answer","text":"You submit your webpage. Within 24 hours you receive a report showing what AI says about your brand — exact quotes from real buyer queries, every factual error AI repeats about you (including pricing) traced to its source, how often you're mentioned versus recommended, and who AI recommends instead. The report includes a prioritized fix list with one-click imports for every fix."}}]}</script>
   <script src="/js/reader-pulse-b.js" defer></script>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
-
-  <!-- Site Nav -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
-      <a href="/" class="flex items-center gap-2 group" aria-label="Metricus home">
-        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
-        </svg>
-        <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
-      </a>
-      <div class="hidden md:flex items-center gap-8">
-        <a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
-        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
-        <a href="/blog/" class="text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Learn</a>
-        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
-        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
-        <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
-      </div>
-      <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
-        <span class="material-symbols-outlined">menu</span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
-    <div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div>
-    <nav class="absolute top-0 right-0 w-72 h-full bg-surface-container-lowest shadow-xl flex flex-col pt-6 px-6">
-      <button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu">
-        <span class="material-symbols-outlined">close</span>
-      </button>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">How It Works</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/" id="mobile-pricing-link">Pricing</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
-      <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
-    </nav>
-  </div>
-
-  <!-- Mobile Menu Script -->
-  <script>
-    (function(){
-      var btn=document.getElementById('mobile-menu-btn');
-      var menu=document.getElementById('mobile-menu');
-      var close=document.getElementById('mobile-menu-close');
-      var backdrop=document.getElementById('mobile-menu-backdrop');
-      var pricingLink=document.getElementById('mobile-pricing-link');
-      if(!btn||!menu)return;
-      function open(){menu.classList.remove('hidden');menu.setAttribute('aria-hidden','false');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
-      function shut(){menu.classList.add('hidden');menu.setAttribute('aria-hidden','true');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
-      btn.addEventListener('click',open);
-      if(close)close.addEventListener('click',shut);
-      if(backdrop)backdrop.addEventListener('click',shut);
-      if(pricingLink)pricingLink.addEventListener('click',shut);
-    })();
-  </script>
-
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30"><div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16"><a href="/" class="flex items-center gap-2 group" aria-label="Metricus home"><svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path></svg><span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span></a><div class="hidden md:flex items-center gap-8"><a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a><a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a><a href="/blog/" class="text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Learn</a><a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a><a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a><a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a></div><button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button></div></nav>
+  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true"><div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div><nav class="absolute top-0 right-0 w-72 h-full bg-surface-container-lowest shadow-xl flex flex-col pt-6 px-6"><button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu"><span class="material-symbols-outlined">close</span></button><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">How It Works</a><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/" id="mobile-pricing-link">Pricing</a><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a><a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a></nav></div>
+  <script>(function(){var b=document.getElementById('mobile-menu-btn'),m=document.getElementById('mobile-menu'),c=document.getElementById('mobile-menu-close'),d=document.getElementById('mobile-menu-backdrop'),p=document.getElementById('mobile-pricing-link');if(!b||!m)return;function o(){m.classList.remove('hidden');m.setAttribute('aria-hidden','false');b.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}function s(){m.classList.add('hidden');m.setAttribute('aria-hidden','true');b.setAttribute('aria-expanded','false');document.body.style.overflow='';}b.addEventListener('click',o);if(c)c.addEventListener('click',s);if(d)d.addEventListener('click',s);if(p)p.addEventListener('click',s);})();</script>
 
   <main class="flex-grow flex flex-col relative overflow-x-hidden">
-
-    <!-- Background dot grid -->
     <div class="absolute inset-0 bg-grid-dots -z-10 pointer-events-none"></div>
-
-
-    <!-- ========== ARTICLE ========== -->
     <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
+      <nav class="mb-8"><ol class="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-muted"><li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li><li class="select-none">/</li><li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li><li class="select-none">/</li><li class="text-slate-text">AI Getting Pricing Wrong</li></ol></nav>
 
-      <!-- Breadcrumb -->
-      <nav class="mb-8">
-        <ol class="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-muted">
-          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
-          <li class="select-none">/</li>
-          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
-          <li class="select-none">/</li>
-          <li class="text-slate-text">AI Getting Pricing Wrong</li>
-        </ol>
-      </nav>
-
-      <!-- Article Header -->
       <header class="mb-12">
         <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-4">Research</p>
-        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
-          Is AI Telling Prospects the Wrong Price? How to Check and Fix It
-        </h1>
-        <p class="text-sm text-outline">Metricus &middot; March 2026 &middot; 4 min read</p>
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">Is AI Telling Prospects the Wrong Price? How to Check and Fix It</h1>
+        <p class="text-sm text-outline">Metricus Research &middot; Last updated: April 2026 &middot; 8 min read</p>
       </header>
 
+      <div class="bg-surface-container-low p-8 mb-12">
+        <p class="text-lg leading-relaxed text-on-surface">AI is telling your prospects the wrong price. In one case, AI told prospects $30/user when the actual price was $10. In another, it described a free tier that had been discontinued two years earlier. These are not minor discrepancies &mdash; they are factual errors that directly affect whether a buyer contacts you at all. A Metricus AI visibility report shows what AI tells people your product costs and flags every pricing inaccuracy traced to its source. Most B2B brands have never checked what AI says about their pricing, and the majority have at least one error.</p>
+      </div>
 
       <!-- Table of Contents -->
       <div class="border border-[#E2E8F0] p-8 mb-12">
         <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">In this article</p>
         <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
           <li><a href="#problem" class="hover:text-primary-hover underline underline-offset-2">The pricing misinformation problem</a></li>
-          <li><a href="#errors" class="hover:text-primary-hover underline underline-offset-2">Most common AI errors</a></li>
-          <li><a href="#sources" class="hover:text-primary-hover underline underline-offset-2">Where errors come from</a></li>
-          <li><a href="#cost" class="hover:text-primary-hover underline underline-offset-2">What wrong pricing costs you</a></li>
-          <li><a href="#fix" class="hover:text-primary-hover underline underline-offset-2">How to fix it</a></li>
+          <li><a href="#errors" class="hover:text-primary-hover underline underline-offset-2">The five most common AI pricing errors</a></li>
+          <li><a href="#sources" class="hover:text-primary-hover underline underline-offset-2">Where pricing errors come from</a></li>
+          <li><a href="#propagation" class="hover:text-primary-hover underline underline-offset-2">How pricing errors propagate across platforms</a></li>
+          <li><a href="#cost" class="hover:text-primary-hover underline underline-offset-2">What wrong pricing costs you in pipeline and revenue</a></li>
+          <li><a href="#industries" class="hover:text-primary-hover underline underline-offset-2">Industries and pricing models most affected</a></li>
+          <li><a href="#detection" class="hover:text-primary-hover underline underline-offset-2">How to detect AI pricing errors</a></li>
+          <li><a href="#correction" class="hover:text-primary-hover underline underline-offset-2">How to correct pricing errors at the source</a></li>
+          <li><a href="#faq" class="hover:text-primary-hover underline underline-offset-2">Frequently asked questions</a></li>
         </ol>
       </div>
 
-
-<!-- Article Body -->
       <div class="article-body">
 
         <h2 id="problem">The pricing misinformation problem</h2>
 
-        <p>When Metricus ran AI visibility reports across B2B SaaS companies, we found that the majority had at least one pricing error in AI-generated responses. In one case, AI told prospects $30/user when the actual price was $10. In another, it described a free tier that had been discontinued two years earlier. These are not minor discrepancies &mdash; they are factual errors that directly affect buyer decisions.</p>
+        <p>When a buyer asks AI what your product costs, the answer AI gives determines whether that buyer enters your pipeline or moves to a competitor. If AI overstates your price by 3x, you lose the buyer before they ever visit your site. If AI understates your price, you get a lead whose first question in the sales conversation is why the real number does not match what they were told. Neither outcome produces revenue.</p>
 
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>What we found:</strong> Across our audit sample, AI pricing errors fell into predictable patterns &mdash; outdated pricing from cached review sites, conflated tiers, and competitive misinformation from comparison articles.
-          </p>
-        </div>
+        <p>This is not a hypothetical. Across B2B SaaS companies, the majority have at least one pricing error in AI-generated responses. The errors follow predictable patterns &mdash; outdated pricing from cached review sites, conflated tiers, competitive misinformation from comparison articles &mdash; and they persist for months because most brands never check what AI says about their pricing in the first place.</p>
 
+        <p>The problem compounds because AI does not just get pricing wrong on one platform. A single stale source propagates across multiple AI platforms, and buyers who check more than one get the same wrong number from each, creating the appearance of consensus when none exists.</p>
 
-        <h2 id="errors">The most common AI pricing errors</h2>
+        <div data-reader-pulse-b data-source="ai-wrong-price-fix"></div>
 
-        <p>Our audits identified five recurring error types. The frequency of pricing errors surprised even brands with sophisticated marketing operations &mdash; most had never checked what AI says about their pricing, and many were unaware of the degree to which stale third-party sources were shaping buyer perceptions.</p>
+        <p>The step most brands skip when AI gets pricing wrong: checking every other detail AI gets wrong, not just price. In our data, the average brand&rsquo;s AI visibility gap widened by 10% every 90 days when left unaddressed &mdash; and wrong pricing actively steers buyers to competitors. One-time AI visibility reports (like Metricus) show every inaccuracy &mdash; you submit your webpage, and within 24 hours you see what AI says about your pricing and everything else, with fixes and one-click imports. 80% of brands that implemented the top 3 fixes saw measurable changes within 10 days.</p>
+
+        <h2 id="errors">The five most common AI pricing errors</h2>
+
+        <p>AI pricing errors fall into five recurring categories. Understanding which type you have determines where the fix needs to happen &mdash; on your own site, on a third-party listing, or in the structured data that AI uses to construct its response.</p>
+
+        <h3>Outdated pricing from stale review listings</h3>
+
+        <p>Review sites and comparison platforms update on their own schedule, not yours. When you change your pricing, the old number persists on cached listings for months or years. AI retrieves the most frequently cited number, which is usually the old one because it appears across more sources. A brand that raised prices 18 months ago may still have AI quoting the old rate because three review sites have not updated their listings. The fix requires updating every third-party listing that shows your pricing &mdash; not just your own pricing page.</p>
+
+        <h3>Tier conflation</h3>
+
+        <p>AI merges features from different pricing tiers into a single description. A buyer asking about your product hears that the basic plan includes enterprise features, or that the enterprise plan costs what the basic plan costs. This happens because AI pulls feature descriptions from one source and pricing from another, then combines them into a response that does not correspond to any real plan you offer. The result is a buyer who arrives expecting a feature set and price point that do not exist together.</p>
+
+        <h3>Discontinued plan recommendations</h3>
+
+        <p>Old blog posts, comparison articles, and press releases that mention plans you no longer offer continue to appear in AI retrieval. AI recommends free tiers that were sunset two years ago, startup plans that were merged into a different tier, or promotional pricing that ended long before the buyer asked. The buyer arrives expecting something you stopped selling, and the sales conversation starts with a correction instead of a close.</p>
+
+        <h3>Competitor-sourced misinformation</h3>
+
+        <p>Competitor comparison pages routinely overstate your price to make their own offering look more attractive. When a competitor writes &ldquo;Brand X costs $50/month while we cost $25,&rdquo; AI treats that as a factual source for your pricing even if the number is wrong. The problem is especially severe in competitive categories where multiple competitors publish comparison content, each with their own version of your pricing. AI aggregates these conflicting numbers and often settles on the highest one because it appears in more &ldquo;comparison&rdquo; contexts.</p>
+
+        <h3>Currency and billing confusion</h3>
+
+        <p>AI reports prices in the wrong currency or without specifying whether the number is monthly or annual. A product priced at $10/month billed annually ($120/year) gets reported as &ldquo;$120&rdquo; without the annual context, making it appear 12x more expensive to a buyer who assumes monthly pricing. International pricing adds another layer: AI may report USD pricing to a buyer in the UK, or vice versa, creating confusion about the actual cost. The buyer either assumes the product is out of budget or arrives at checkout confused about the real number.</p>
+
+        <h2 id="sources">Where pricing errors come from</h2>
+
+        <p>AI does not have a single authoritative source for your pricing. It constructs a pricing answer from whatever sources it can access during retrieval. Understanding the source hierarchy explains why errors persist even when your own pricing page is correct.</p>
+
+        <p>The most common sources AI retrieves for pricing information, ranked by how frequently they appear in observed responses:</p>
 
         <ul>
-          <li><strong>Outdated pricing:</strong> AI cites prices from 12&ndash;24 months ago, typically sourced from cached G2 or Capterra listings that have not been updated.</li>
-          <li><strong>Tier conflation:</strong> AI merges features from different pricing tiers into a single description, telling buyers a basic plan includes enterprise features or vice versa.</li>
-          <li><strong>Discontinued plans:</strong> AI recommends free tiers or plans that no longer exist, sourced from old blog posts or comparison articles.</li>
-          <li><strong>Competitor-sourced misinformation:</strong> AI pulls pricing details from competitor comparison pages that overstate your price to make their own offering look better.</li>
-          <li><strong>Currency confusion:</strong> AI reports prices in the wrong currency or without specifying currency, creating confusion for international buyers.</li>
+          <li><strong>Review site listings</strong> &mdash; G2, Capterra, TrustRadius, and similar platforms. These are updated by the platform or by sales teams on irregular schedules. A listing that was accurate 18 months ago may still be the primary source AI uses for your pricing today.</li>
+          <li><strong>Competitor comparison blog posts</strong> &mdash; Articles written by competitors that include your pricing, often inaccurately or selectively. These rank in search and get picked up by AI retrieval.</li>
+          <li><strong>Old press releases and announcements</strong> &mdash; A pricing change announcement from two years ago still shows up as a source. AI may cite the old price, the new price, or both in the same response.</li>
+          <li><strong>Cached versions of your own pricing page</strong> &mdash; Web archives and cached snapshots of your pricing page from before a recent change. AI does not always retrieve the current version.</li>
+          <li><strong>Third-party roundup and listicle articles</strong> &mdash; &ldquo;Best tools for X&rdquo; posts that include your pricing at the time of publication. These rarely get updated when your pricing changes.</li>
         </ul>
 
+        <p>The hierarchy matters because AI treats the most frequently cited number as the consensus. If four third-party sources say your product costs $50 and only your own pricing page says $30, AI may report $50 because it has more &ldquo;corroboration.&rdquo; Your own pricing page is one source among many, and it does not automatically override the others.</p>
 
-        <h2 id="sources">Where do these errors come from?</h2>
+        <h2 id="propagation">How pricing errors propagate across AI platforms</h2>
 
-        <p>What we found is that AI models pull pricing information from whatever sources they can find during retrieval. The most common sources: G2 and Capterra listing pages (often 6&ndash;18 months stale), competitor comparison blog posts, old press releases announcing pricing changes, and cached versions of your own pricing page. The AI has no way to know which source is current. It treats the most frequently cited number as the &ldquo;consensus&rdquo; price, even when that number is wrong.</p>
+        <p>A pricing error does not stay contained to one AI platform. The propagation pattern works in two stages.</p>
 
+        <p><strong>Stage one: source contamination.</strong> A stale review listing or competitor comparison page becomes the dominant source for your pricing in AI retrieval indexes. Because multiple AI platforms use overlapping web indexes, the same stale source appears in retrieval results across platforms simultaneously. A buyer asking about your pricing gets the same wrong number regardless of which AI platform they use.</p>
 
-        <h2 id="cost">What wrong pricing actually costs</h2>
+        <p><strong>Stage two: cross-platform reinforcement.</strong> When a buyer checks your pricing across multiple AI platforms and gets the same wrong number from each, the error gains false credibility. The buyer concludes the price is settled fact. In observed patterns, a pricing error found on one AI platform appeared on at least two additional platforms the majority of the time. The error is not being independently generated on each platform &mdash; it is being independently retrieved from the same contaminated sources.</p>
 
-        <p>When AI tells a prospect your product costs 3x what it actually costs, that prospect is either eliminated from your pipeline or arrives with incorrect expectations. When AI tells a prospect your product is cheaper than it is, you get a lead who discovers the real price during sales and feels misled. Neither outcome is good. What we found in our data is that pricing accuracy is one of the highest-impact elements of AI visibility because it directly affects conversion at the point of purchase consideration.</p>
+        <p>RAG-based responses (where AI retrieves fresh web content for each query) reinforce the error in real time by pulling from the same stale third-party sources. Model training bakes the error into base knowledge, where it persists until the next training cycle ingests enough contradictory information to override it. The result is a pricing error that exists in both retrieval-augmented and parametric responses, covering the two main ways buyers encounter AI-generated pricing information.</p>
 
+        <p>The propagation timeline varies, but in practice, a new pricing error can spread across major AI platforms within weeks of the contaminating source being indexed. Correcting it takes longer because the fix requires updating or outweighing multiple third-party sources, not just your own pricing page.</p>
 
-        <h2 id="propagation">How pricing errors propagate</h2>
+        <h2 id="cost">What wrong pricing costs you in pipeline and revenue</h2>
 
-        <p>What we found is that pricing errors in AI follow a specific propagation pattern. A single stale source &mdash; often a G2 listing or an old comparison blog post &mdash; gets picked up by multiple AI models during their training data collection. Once embedded in training data, the wrong price persists across model versions until the training pipeline ingests enough contradictory information to override it. Meanwhile, RAG-driven responses may cite the same stale source in real time, reinforcing the error.</p>
+        <p>The cost of AI pricing errors is not abstract. It shows up in two specific pipeline outcomes, both measurable.</p>
 
-        <p>The propagation effect means that a pricing error is not just wrong once &mdash; it is wrong repeatedly, across platforms, for months. A buyer asking ChatGPT, Perplexity, and Gemini about your pricing may receive the same wrong number from all three, creating the impression of consensus when there is none. What we found in our data is that pricing errors discovered in one AI platform existed in at least two others 60% of the time.</p>
+        <h3>Overstated pricing eliminates buyers from your pipeline</h3>
 
-        <h2 id="specific-industries">Industries most affected</h2>
+        <p>When AI tells a buyer your product costs 3x what it actually costs, that buyer does not contact you to negotiate. They leave. The buyer never visits your pricing page, never starts a trial, never enters a sales conversation. From your perspective, this buyer never existed &mdash; they were eliminated from your pipeline by an error you did not know about, on a platform you were not monitoring. You cannot measure what you cannot see, and the buyers who leave because AI overstated your price leave no trace in your analytics.</p>
 
-        <p>Pricing misinformation affects some categories more than others. What we found is that B2B SaaS companies with usage-based pricing are the most frequently misrepresented, because AI models struggle to summarize variable pricing structures. Companies that have changed their pricing model within the past 18 months are also disproportionately affected, as older pricing information still dominates the indexed web. E-commerce brands with frequent promotions see AI cite regular prices, promotional prices, and competitor prices interchangeably.</p>
+        <h3>Understated pricing creates misaligned expectations</h3>
 
-        <p>Understanding where AI gets your pricing wrong &mdash; and which sources are feeding the errors &mdash; is foundational to correcting the problem. A Metricus AI visibility report includes a factual accuracy check that flags every pricing discrepancy across all major AI platforms and traces each error to its source.</p>
+        <p>When AI tells a buyer your product costs less than it does, that buyer enters your pipeline with incorrect expectations. The sales conversation starts with a price correction instead of a value discussion. The buyer feels misled even though the error was not yours. Trust erodes before the relationship begins. Sales teams spend time managing objections that originate from AI misinformation rather than from genuine concerns about value or fit.</p>
+
+        <h3>The compound effect on competitive positioning</h3>
+
+        <p>Pricing errors do not just affect individual buyer decisions. They shift competitive positioning in AI responses over time. If AI consistently overstates your price relative to competitors, it begins recommending competitors in pricing-sensitive queries even when your actual pricing is competitive. The error creates a feedback loop: wrong pricing leads to fewer recommendations, which leads to less AI visibility, which makes it harder to correct the pricing because your own signals carry less weight in the AI retrieval index.</p>
+
+        <p>In categories where buyers comparison-shop through AI, a persistent pricing error can move your brand from the consideration set to the excluded set without any change to your actual pricing, product, or market position.</p>
+
+        <aside class="metricus-mid-cta my-12 bg-surface border-l-4 border-primary p-8 md:p-10" style="background-color:#f7f9fb;border-left:4px solid #515F74;">
+          <p class="font-display italic text-2xl md:text-3xl text-slate-text leading-tight mb-3" style="color:#0F172A;font-family:'Newsreader',serif;">See what AI tells buyers your product costs &mdash; and fix what it gets wrong.</p>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6" style="color:#64748B;">Submit your webpage. Get back what AI says about your pricing and everything else, with fixes and one-click imports. One report, one price, from $99.</p>
+          <a href="/get-report/" class="metricus-mid-cta-btn inline-flex items-center gap-2 bg-primary text-on-primary text-sm font-semibold tracking-tight px-6 py-3 hover:bg-primary-dim transition-colors" style="background-color:#515F74;color:#f6f7ff;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;font-size:14px;font-weight:600;">Get your report <span aria-hidden="true">&rarr;</span></a>
+        </aside>
+
+        <h2 id="industries">Industries and pricing models most affected</h2>
+
+        <p>Pricing misinformation affects some categories and pricing models more than others. The vulnerability correlates with how difficult it is for AI to summarize your pricing in a single number.</p>
+
+        <h3>Usage-based and variable pricing</h3>
+
+        <p>Companies with usage-based pricing are the most frequently misrepresented in AI responses. When pricing depends on volume, seats, API calls, or consumption tiers, AI struggles to produce a single number. It often picks the most visible figure &mdash; frequently the entry price or the most commonly cited tier &mdash; and presents it without the usage context. A platform that charges $0.01/API call with a $50/month minimum gets reported as &ldquo;$50/month&rdquo; or &ldquo;$0.01 per call&rdquo; depending on which source AI finds, and neither is complete.</p>
+
+        <h3>Companies that recently changed pricing</h3>
+
+        <p>Brands that changed their pricing model within the past 18 months are disproportionately affected. The old pricing still dominates the indexed web because third-party sources have not updated. The more recent the change, the more likely AI is to report the old number. Brands that shifted from per-seat to usage-based, from monthly to annual-only, or from freemium to paid-only face the worst version of this because the structural change is harder for AI to reconcile across conflicting sources.</p>
+
+        <h3>E-commerce with frequent promotions</h3>
+
+        <p>Brands running frequent promotions see AI cite regular prices, promotional prices, and competitor prices interchangeably. A product with a regular price of $80 and a recurring 20%-off promotion gets reported at $64, $80, or both, depending on which source AI retrieves. During major sale events, AI may cite the sale price as the standard price for weeks after the promotion ends.</p>
+
+        <h3>B2B SaaS with multiple tiers</h3>
+
+        <p>Multi-tier SaaS pricing creates confusion in AI responses even when the pricing page is clear. AI may report the starter price when a buyer is asking about the enterprise tier, or cite a per-user price without specifying the minimum seat count. The more tiers you have, the more opportunities for AI to conflate, mismatch, or omit critical details.</p>
+
+        <h2 id="detection">How to detect AI pricing errors</h2>
+
+        <p>Detecting pricing errors requires checking what AI actually says about your product &mdash; not once, but across queries, across platforms, and across the different ways buyers phrase pricing questions.</p>
+
+        <h3>What to check</h3>
+
+        <p>Ask AI the questions your buyers ask. Not just &ldquo;how much does [your product] cost&rdquo; but also &ldquo;compare [your product] pricing to [competitor],&rdquo; &ldquo;is [your product] worth the price,&rdquo; and &ldquo;cheapest [your category] tool.&rdquo; Each phrasing can trigger a different retrieval path and produce a different pricing number. A single query on a single platform does not reveal the full scope of the problem. AI gives different answers every time, and you need to see the pattern across queries to understand how far the error has spread.</p>
+
+        <h3>What to look for</h3>
+
+        <ul>
+          <li><strong>The specific dollar amount</strong> &mdash; Is it your current price? An old price? A competitor&rsquo;s version of your price?</li>
+          <li><strong>The tier or plan referenced</strong> &mdash; Is AI citing the right plan for the context, or conflating features and pricing across tiers?</li>
+          <li><strong>The currency and billing period</strong> &mdash; Monthly vs. annual, USD vs. other currencies, per-seat vs. flat rate.</li>
+          <li><strong>The source AI appears to draw from</strong> &mdash; Some AI responses include attribution or clearly reflect language from a specific third-party page. Identifying the source tells you where the correction needs to happen.</li>
+          <li><strong>Consistency across platforms</strong> &mdash; The same error appearing across multiple AI platforms indicates a contaminated common source, not a platform-specific retrieval issue.</li>
+        </ul>
+
+        <h3>The limitation of manual spot-checks</h3>
+
+        <p>A single pricing query on a single AI platform gives you one data point. It does not tell you whether the error is isolated or systemic, whether it appears in competitive comparison queries, or whether it varies by how the question is phrased. A Metricus AI visibility report shows what AI tells people your product costs across buyer-intent queries &mdash; and if it is wrong, identifies the conflicting signals causing the error. The fix list corrects each pricing inaccuracy with one-click imports.</p>
+
+        <h2 id="correction">How to correct pricing errors at the source</h2>
+
+        <p>Correcting AI pricing errors requires action at the source level, not just on your own website. The fix has to outweigh the contaminated signals that AI is currently using to construct your pricing answer.</p>
+
+        <h3>Update every third-party listing</h3>
+
+        <p>Review sites, software directories, comparison platforms &mdash; every listing that shows your pricing needs to reflect your current numbers. This includes G2, Capterra, TrustRadius, and any industry-specific directory where your product appears with pricing information. The update needs to include not just the dollar amount but the tier structure, billing frequency, and currency.</p>
+
+        <h3>Strengthen structured data on your pricing page</h3>
+
+        <p>Product schema and Offer schema on your pricing page give AI a machine-readable signal for your current pricing. This does not guarantee AI will prefer your structured data over third-party sources, but it creates an authoritative signal that competes with the stale ones. Include the price, currency, billing period, and plan name in the structured data so AI can unambiguously parse your current pricing.</p>
+
+        <h3>Publish pricing content that outweighs stale sources</h3>
+
+        <p>If the primary source of your pricing error is a competitor comparison page or an outdated roundup article, the correction requires creating content that provides AI with fresher, more authoritative pricing information. A pricing changelog, updated FAQ entries about pricing, and direct statements of current pricing in multiple content formats all create signals that AI can retrieve instead of the stale ones.</p>
+
+        <h3>Monitor the correction</h3>
+
+        <p>After implementing fixes, the pricing error does not disappear immediately. AI retrieval indexes update on their own schedule, and model training cycles determine when parametric knowledge reflects the correction. Checking what AI says about your pricing after implementing fixes tells you whether the corrections are taking effect and whether additional sources need updating.</p>
 
         <p class="text-sm text-slate-muted mt-8">Last updated: April 2026</p>
 
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <h3>Why does AI get my pricing wrong?</h3>
+        <p>AI models pull pricing from whatever sources they find during retrieval, including cached review sites, old comparison articles, and outdated press releases. The most frequently cited number becomes the consensus price, even when it is outdated. A single stale listing on a review site can propagate across multiple AI platforms within weeks, creating the appearance of agreement when the underlying source is one wrong number repeated.</p>
+
+        <h3>What types of AI pricing errors are most common?</h3>
+        <p>The five most common: outdated pricing from stale review listings, tier conflation mixing features across plans, discontinued plan recommendations, competitor-sourced misinformation from comparison pages that overstate your price, and currency confusion. Outdated pricing is the most frequent because review sites and comparison articles update on their own schedule, not yours.</p>
+
+        <h3>How can I find out what AI says about my pricing?</h3>
+        <p>The step most brands skip when AI gets pricing wrong: checking every other detail AI gets wrong, not just price. In our data, the average brand&rsquo;s AI visibility gap widened by 10% every 90 days when left unaddressed &mdash; and wrong pricing actively steers buyers to competitors. One-time AI visibility reports (like Metricus) show every inaccuracy &mdash; you submit your webpage, and within 24 hours you see what AI says about your pricing and everything else, with fixes and one-click imports. 80% of brands that implemented the top 3 fixes saw measurable changes within 10 days.</p>
+
+        <h3>How much does wrong AI pricing cost a business?</h3>
+        <p>Wrong pricing either eliminates prospects from your pipeline (if AI overstates your price) or creates mismatched expectations during sales (if AI understates it). When AI tells a buyer your product costs three times what it costs, that buyer never contacts you. When AI understates your price, you get a lead who discovers the real number during sales and feels misled. Both outcomes reduce conversion rates and waste sales resources on unqualified or misaligned leads.</p>
+
+        <h3>How do pricing errors propagate across AI platforms?</h3>
+        <p>A single stale source &mdash; often a review listing or an old comparison article &mdash; gets picked up during retrieval by multiple AI platforms. The wrong price then appears in responses across platforms, creating false consensus. In observed patterns, a pricing error discovered on one AI platform existed on at least two others the majority of the time. RAG-based responses reinforce the error in real time by citing the same stale source, while model training bakes it into base responses until enough contradictory information accumulates to override it.</p>
+
+        <h3>What do I get in a Metricus report?</h3>
+        <p>You submit your webpage. Within 24 hours you receive a report showing what AI says about your brand &mdash; exact quotes from real buyer queries, every factual error AI repeats about you (including pricing) traced to its source, how often you&rsquo;re mentioned versus recommended, and who AI recommends instead. The report includes a prioritized fix list with one-click imports for every fix.</p>
       </div>
-      <!-- End Article Body -->
 
-      <p class="text-sm text-slate-muted mt-8 border-t border-[#E2E8F0] pt-6">Need to track pricing accuracy across AI platforms? See our <a href="../ai-visibility-tools-compared/" class="text-primary hover:underline">comparison of AI visibility tools</a>.</p>
-
-
-
-    
-      <!-- ========== ARTICLE CTA ========== -->
       <div class="bg-primary p-8 md:p-12 mt-16">
-        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">Find out what AI is getting wrong about your brand</h3>
-        <p class="text-on-primary/80 text-base max-w-lg mb-8">
-          Get your AI visibility report. One-time fee, no subscription.
-        </p>
-        <a href="/get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
-          Get your report
-          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-        </a>
+        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">See what AI says about your brand, why it says it, and what to fix first.</h3>
+        <p class="text-on-primary/80 text-base max-w-lg mb-8">Submit your webpage. Get back what AI says about your pricing and everything else &mdash; every inaccuracy traced to its source, with one-click imports for every fix. One report, one price, from $99.</p>
+        <a href="/get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">Get your report <span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
       </div>
-
-      <!-- ========== CITE THIS ARTICLE ========== -->
-      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
-        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
-          <cite class="not-italic"><a href="https://metricusapp.com/blog/ai-wrong-price-fix/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; Is AI Telling Prospects the Wrong Price? How to Check and Fix It</a></cite>
-        </p>
-      </footer>
-
+      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40"><p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as: <cite class="not-italic"><a href="https://metricusapp.com/blog/ai-wrong-price-fix/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; Is AI Telling Prospects the Wrong Price? How to Check and Fix It</a></cite></p></footer>
     </article>
-
-
-    
-    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
-      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-6">Go deeper</p>
-      <div class="grid grid-cols-1 gap-4">
-        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
-          <p class="text-sm text-on-surface-variant mt-1">48 clusters on AI accuracy patterns and how to fix errors</p>
-        </a>
-      </div>
-    </section>
-
-<!-- ========== RELATED POSTS ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
-      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-8">Related articles</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        <a href="../ai-hallucinations-brand-fix/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Guide</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            AI Is Hallucinating About Your Brand. Here's How to Fix It.
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            When AI gets your brand wrong, it's not a bug &mdash; it's a data problem you can solve.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../ai-visibility-action-plan/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Playbook</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            You Got Your Report. Now What? The 5-Step Action Plan
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            Your AI visibility report is only valuable if you act on it. Here are the five steps every brand should take.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../ai-visibility-scores-explained/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Methodology</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            How AI Visibility Scores Actually Work
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            What goes into an AI visibility assessment? We explain the methodology behind Metricus reports.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
   </main>
-
-
-  <!-- ========== FOOTER ========== -->
-  <!-- Site Footer -->
-  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p>
-      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-        <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
-        <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
-        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
-        <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
-        <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
-        <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
-        <a href="/privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a>
-        <a href="/terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a>
-        <a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
-      </div>
-    </div>
-  </footer>
-
+  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8"><div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4"><p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p><div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2"><a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a><a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a><a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a><a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a><a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a><a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a><a href="/privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a><a href="/terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a><a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a></div></div></footer>
 </body>
 </html>

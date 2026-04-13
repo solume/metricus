@@ -16,552 +16,215 @@
   <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
   <link rel="canonical" href="https://metricusapp.com/blog/automotive-ai-visibility/">
 
-  <!-- Google Tag Manager -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w70oz7g1k3");
-  </script>
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w70oz7g1k3");</script>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Material Symbols -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#515F74',
-            'primary-hover': '#1E293B',
-            'on-primary': '#f6f7ff',
-            'on-primary-fixed': '#324054',
-            'primary-dim': '#455368',
-            surface: '#f7f9fb',
-            'surface-container-low': '#f0f4f7',
-            'surface-container': '#e8eff3',
-            'surface-container-lowest': '#ffffff',
-            'surface-container-highest': '#d9e4ea',
-            'surface-container-high': '#e1e9ee',
-            'surface-variant': '#d9e4ea',
-            'on-surface': '#2a3439',
-            'on-surface-variant': '#566166',
-            outline: '#717c82',
-            'outline-variant': '#a9b4b9',
-            'slate-text': '#0F172A',
-            'slate-muted': '#64748B',
-            'slate-accent': '#475569',
-          },
-          fontFamily: {
-            display: ['Newsreader', 'serif'],
-            sans: ['Inter', 'sans-serif'],
-            body: ['Public Sans', 'sans-serif'],
-            headline: ['Newsreader', 'serif'],
-          },
-          borderRadius: {
-            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
-            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
-            full: '0.75rem',
-          },
-        },
-      },
-    }
-  </script>
+  <script>tailwind.config={theme:{extend:{colors:{primary:'#515F74','primary-hover':'#1E293B','on-primary':'#f6f7ff','on-primary-fixed':'#324054','primary-dim':'#455368',surface:'#f7f9fb','surface-container-low':'#f0f4f7','surface-container':'#e8eff3','surface-container-lowest':'#ffffff','surface-container-highest':'#d9e4ea','surface-container-high':'#e1e9ee','surface-variant':'#d9e4ea','on-surface':'#2a3439','on-surface-variant':'#566166',outline:'#717c82','outline-variant':'#a9b4b9','slate-text':'#0F172A','slate-muted':'#64748B','slate-accent':'#475569'},fontFamily:{display:['Newsreader','serif'],sans:['Inter','sans-serif'],body:['Public Sans','sans-serif'],headline:['Newsreader','serif']},borderRadius:{none:'0px',sm:'0px',DEFAULT:'0px',md:'0px',lg:'0px',xl:'0px','2xl':'0px','3xl':'0px',full:'0.75rem'}}}}</script>
+  <style>body{font-family:'Inter',sans-serif;background-color:#fff;color:#0F172A;-webkit-font-smoothing:antialiased}.font-display,.font-headline{font-family:'Newsreader',serif}.bg-grid-dots{background-image:radial-gradient(circle,#717c82 .5px,transparent .5px);background-size:24px 24px;opacity:.05}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24}.article-body h2{font-family:'Newsreader',serif;font-weight:700;font-size:1.75rem;line-height:1.2;color:#0F172A;margin-top:3rem;margin-bottom:1rem}@media(min-width:768px){.article-body h2{font-size:2rem}}.article-body h3{font-family:'Newsreader',serif;font-weight:700;font-size:1.25rem;line-height:1.3;color:#0F172A;margin-top:2rem;margin-bottom:.75rem}.article-body p{font-size:1.125rem;line-height:1.75;color:#334155;margin-bottom:1.25rem}.article-body ul,.article-body ol{font-size:1.125rem;line-height:1.75;color:#334155;margin-bottom:1.25rem;padding-left:1.5rem}.article-body ul{list-style-type:disc}.article-body ol{list-style-type:decimal}.article-body li{margin-bottom:.5rem}.article-body blockquote{border-left:2px solid #334155;padding-left:1.5rem;font-style:italic;color:#475569;font-size:1.125rem;line-height:1.75;margin:2rem 0}.article-body a{color:#334155;text-decoration:underline;text-underline-offset:3px}.article-body a:hover{color:#1E293B}</style>
 
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #ffffff;
-      color: #0F172A;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .font-display { font-family: 'Newsreader', serif; }
-    .font-headline { font-family: 'Newsreader', serif; }
-    .font-body-sans { font-family: 'Public Sans', sans-serif; }
-
-    .editorial-btn {
-      transition: background-color 150ms ease-in-out, transform 150ms ease;
-    }
-    .editorial-btn:hover {
-      background-color: #1E293B;
-    }
-
-    .bg-grid-dots {
-      background-image: radial-gradient(circle, #717c82 0.5px, transparent 0.5px);
-      background-size: 24px 24px;
-      opacity: 0.05;
-    }
-
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-    }
-
-    .blog-card {
-      transition: transform 200ms ease, background-color 200ms ease;
-    }
-    .blog-card:hover {
-      transform: translateY(-2px);
-      background-color: #f7f9fb;
-    }
-
-    .article-body h2 {
-      font-family: 'Newsreader', serif;
-      font-weight: 700;
-      font-size: 1.75rem;
-      line-height: 1.2;
-      color: #0F172A;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-    }
-    @media (min-width: 768px) {
-      .article-body h2 {
-        font-size: 2rem;
-      }
-    }
-    .article-body h3 {
-      font-family: 'Newsreader', serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      line-height: 1.3;
-      color: #0F172A;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    .article-body p {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-    }
-    .article-body ul, .article-body ol {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-      padding-left: 1.5rem;
-    }
-    .article-body ul { list-style-type: disc; }
-    .article-body ol { list-style-type: decimal; }
-    .article-body li { margin-bottom: 0.5rem; }
-    .article-body blockquote {
-      border-left: 2px solid #334155;
-      padding-left: 1.5rem;
-      font-style: italic;
-      color: #475569;
-      font-size: 1.125rem;
-      line-height: 1.75;
-      margin: 2rem 0;
-    }
-    .article-body a {
-      color: #334155;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .article-body a:hover {
-      color: #1E293B;
-    }
-  </style>
-
-  <!-- JSON-LD BlogPosting -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Why Is My Car Dealership Invisible to AI? How Automotive Brands Can Show Up in ChatGPT Recommendations",
-    "description": "30% of car shoppers used AI in 2026. AI-referred visitors convert 23x higher than organic. Data-backed research on how dealerships, OEMs, and aftermarket brands can show up in AI recommendations.",
-    "author": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "datePublished": "2026-04-06",
-    "dateModified": "2026-04-10",
-    "mainEntityOfPage": "https://metricusapp.com/blog/automotive-ai-visibility/",
-    "image": "https://metricusapp.com/metricus-og-image.png"
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "Automotive AI Visibility", "item": "https://metricusapp.com/blog/automotive-ai-visibility/"}
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Why does ChatGPT recommend Tesla and CarMax instead of my local dealership?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Tesla generates 500 million+ monthly web visits. CarMax generates approximately 30 million. A typical local dealership receives 5,000-30,000. This 4,000x-100,000x gap in web corpus frequency directly translates into AI recommendations. AI systems recommend proportional to training data frequency."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How many car buyers are using AI chatbots in 2026?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "CDK Global's 2025 Friction Points study found 30% of car shoppers used AI tools during their purchase journey. Fullpath's 2025 analysis found AI-referred visitors to dealership websites convert at 23x the rate of organic traffic. The average buyer spends 14 hours and 39 minutes researching online before purchasing."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What does AI get wrong about car dealerships?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI frequently cites incorrect vehicle pricing (MSRP vs actual transaction prices differ by $2,000-$8,000), outdated inventory, wrong dealership hours and franchise affiliations, stale EV range data, and expired financing terms. In approximately 40-50% of automotive-specific queries, AI produces incorrect or outdated information."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is a Metricus AI visibility report for automotive?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A Metricus report queries every major AI platform hundreds of times with automotive buyer-intent prompts to map exactly how your dealership or brand appears. It identifies pricing errors, inventory misrepresentations, and competitive gaps, then delivers a prioritized action plan. One-time purchase from $99."
-        }
-      }
-    ]
-  }
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Why Is My Car Dealership Invisible to AI? Automotive Visibility Data","description":"30% of car shoppers used AI in 2026. AI-referred visitors convert 23x higher. Data on how dealerships and auto brands can show up.","author":{"@type":"Organization","name":"Metricus","url":"https://metricusapp.com"},"publisher":{"@type":"Organization","name":"Metricus","url":"https://metricusapp.com"},"datePublished":"2026-04-06","dateModified":"2026-04-12","mainEntityOfPage":"https://metricusapp.com/blog/automotive-ai-visibility/","image":"https://metricusapp.com/metricus-og-image.png"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://metricusapp.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://metricusapp.com/blog/"},{"@type":"ListItem","position":3,"name":"Automotive AI Visibility","item":"https://metricusapp.com/blog/automotive-ai-visibility/"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does AI recommend the same 5 brands instead of my dealership?","acceptedAnswer":{"@type":"Answer","text":"AI generates recommendations from patterns in its training data. Brands with the most web mentions, backlinks, and structured content dominate. A major OEM generates 500 million or more monthly web visits. A typical local dealership receives 5,000 to 30,000. That 4,000x to 100,000x gap in web corpus frequency directly translates into AI recommendations. AI recommends proportional to training data frequency, so unless your dealership has built authority signals outside your own site, AI has no basis to cite you."}},{"@type":"Question","name":"How many car buyers are using AI during their purchase journey?","acceptedAnswer":{"@type":"Answer","text":"CDK Global's 2025 Friction Points study found 30% of car shoppers used AI tools during their vehicle purchase journey. The average buyer spends 14 hours and 39 minutes researching online before purchasing. AI-referred visitors to dealership websites convert at 23x the rate of organic traffic (Fullpath, 2025). As AI adoption accelerates, buyers who never encounter your brand during AI-assisted research may never visit your lot."}},{"@type":"Question","name":"What does AI get wrong about car dealerships?","acceptedAnswer":{"@type":"Answer","text":"AI frequently cites incorrect vehicle pricing where MSRP versus actual transaction prices differ by $2,000 to $8,000, outdated inventory, wrong dealership hours and franchise affiliations, stale EV range data, and expired financing terms. In approximately 40 to 50 percent of automotive-specific queries, AI produces incorrect or outdated information. The compound problem is that buyers who encounter wrong information lose trust before they ever contact you."}},{"@type":"Question","name":"How do I check what AI says when someone asks about best vehicles in my category?","acceptedAnswer":{"@type":"Answer","text":"The step most automotive brands miss: checking what AI actually says when someone asks about best SUVs 2026 or compares your brand versus a competitor. AI gives different answers every time and increasingly those answers do not include you. One-time AI visibility reports like Metricus check this systematically. You submit your webpage, and within 24 hours you get back what AI says, why it says it, and how to fix it, with one-click imports for every fix."}},{"@type":"Question","name":"What is at stake financially if my dealership is invisible to AI?","acceptedAnswer":{"@type":"Answer","text":"The average new-vehicle transaction is $48,644. If 30 percent of car shoppers use AI and AI never mentions your dealership for even 10 percent of those buyers, a 100-car-per-month dealer loses approximately $1.75 million annually. In our data, the average brand's AI visibility gap widened by 10 percent every 90 days when left unaddressed, which means every quarter you wait, the gap gets harder to close."}},{"@type":"Question","name":"What do I get in a Metricus AI visibility report for automotive?","acceptedAnswer":{"@type":"Answer","text":"You submit your webpage. Within 24 hours you receive a report showing what AI says about your brand across the major AI platforms your buyers use. The report covers exact quotes from real buyer queries, every factual error AI repeats about you traced to its source, who AI recommends instead of you in comparison and best-of queries, and a prioritized fix list with one-click imports for every fix. One report, one price, from $99."}}]}</script>
   <script src="/js/reader-pulse-b.js" defer></script>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
-
-  <!-- Site Nav -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
-      <a href="/" class="flex items-center gap-2 group" aria-label="Metricus home">
-        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
-        </svg>
-        <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
-      </a>
-      <div class="hidden md:flex items-center gap-8">
-        <a href="/methodology/" class="nav-link-howitworks text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
-        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
-        <a href="/blog/" class="nav-link-blog text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Learn</a>
-        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
-        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
-        <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
-      </div>
-      <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
-        <span class="material-symbols-outlined">menu</span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
-    <div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div>
-    <nav class="absolute top-0 right-0 w-72 h-full bg-surface-container-lowest shadow-xl flex flex-col pt-6 px-6">
-      <button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu">
-        <span class="material-symbols-outlined">close</span>
-      </button>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">How It Works</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/" id="mobile-pricing-link">Pricing</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
-      <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
-    </nav>
-  </div>
-
-  <!-- Mobile Menu Script -->
-  <script>
-    (function(){
-      var btn=document.getElementById('mobile-menu-btn');
-      var menu=document.getElementById('mobile-menu');
-      var close=document.getElementById('mobile-menu-close');
-      var backdrop=document.getElementById('mobile-menu-backdrop');
-      var pricingLink=document.getElementById('mobile-pricing-link');
-      if(!btn||!menu)return;
-      function open(){menu.classList.remove('hidden');menu.setAttribute('aria-hidden','false');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
-      function shut(){menu.classList.add('hidden');menu.setAttribute('aria-hidden','true');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
-      btn.addEventListener('click',open);
-      if(close)close.addEventListener('click',shut);
-      if(backdrop)backdrop.addEventListener('click',shut);
-      if(pricingLink)pricingLink.addEventListener('click',shut);
-    })();
-  </script>
-
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30"><div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16"><a href="/" class="flex items-center gap-2 group" aria-label="Metricus home"><svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path></svg><span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span></a><div class="hidden md:flex items-center gap-8"><a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a><a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a><a href="/blog/" class="text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Learn</a><a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a><a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a><a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a></div><button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button></div></nav>
+  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true"><div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div><nav class="absolute top-0 right-0 w-72 h-full bg-surface-container-lowest shadow-xl flex flex-col pt-6 px-6"><button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu"><span class="material-symbols-outlined">close</span></button><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">How It Works</a><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/" id="mobile-pricing-link">Pricing</a><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a><a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a></nav></div>
+  <script>(function(){var b=document.getElementById('mobile-menu-btn'),m=document.getElementById('mobile-menu'),c=document.getElementById('mobile-menu-close'),d=document.getElementById('mobile-menu-backdrop'),p=document.getElementById('mobile-pricing-link');if(!b||!m)return;function o(){m.classList.remove('hidden');m.setAttribute('aria-hidden','false');b.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}function s(){m.classList.add('hidden');m.setAttribute('aria-hidden','true');b.setAttribute('aria-expanded','false');document.body.style.overflow='';}b.addEventListener('click',o);if(c)c.addEventListener('click',s);if(d)d.addEventListener('click',s);if(p)p.addEventListener('click',s);})();</script>
 
   <main class="flex-grow flex flex-col relative overflow-x-hidden">
-
     <div class="absolute inset-0 bg-grid-dots -z-10 pointer-events-none"></div>
-
-    <!-- ========== ARTICLE ========== -->
     <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
+      <nav class="mb-8"><ol class="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-muted"><li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li><li class="select-none">/</li><li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li><li class="select-none">/</li><li class="text-slate-text">Automotive AI Visibility</li></ol></nav>
 
-      <!-- Breadcrumb -->
-      <nav class="mb-8">
-        <ol class="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-muted">
-          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
-          <li class="select-none">/</li>
-          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
-          <li class="select-none">/</li>
-          <li class="text-slate-text">Automotive AI Visibility</li>
-        </ol>
-      </nav>
-
-      <!-- Article Header -->
       <header class="mb-12">
         <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-4">Industry Research</p>
-        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
-          Why Is My Car Dealership Invisible to AI?
-        </h1>
-        <p class="text-sm text-outline">Metricus Research &middot; April 6, 2026 &middot; 8 min read</p>
-        <p class="text-sm text-outline mt-2">Last updated: April 2026</p>
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">Why Is My Car Dealership Invisible to AI?</h1>
+        <p class="text-sm text-outline">Metricus Research &middot; Last updated: April 2026 &middot; 12 min read</p>
       </header>
 
-
-      <!-- Tension Stat -->
       <div class="bg-surface-container-low p-8 mb-12">
-        <p class="text-lg leading-relaxed text-on-surface">
-          <strong>30% of car shoppers used AI tools during their vehicle purchase journey in 2025</strong> (CDK Global Friction Points Study, 2025). When buyers asking AI assistants to recommend vehicles or dealerships, AI cites the same 5&ndash;6 brands &mdash; Tesla, Toyota, CarMax, Edmunds, KBB. The dealership group that sold 400 cars last month three miles from the buyer&rsquo;s home doesn&rsquo;t exist in AI&rsquo;s world.
-        </p>
+        <p class="text-lg leading-relaxed text-on-surface"><strong>30% of car shoppers used AI tools during their vehicle purchase journey in 2025</strong> (CDK Global Friction Points Study, 2025). When buyers ask AI to recommend vehicles or dealerships, AI cites the same 5&ndash;6 brands. The dealership group that sold 400 cars last month three miles from the buyer&rsquo;s home does not exist in AI&rsquo;s world. AI-referred visitors convert at <strong>23x the rate</strong> of organic traffic (Fullpath, 2025) &mdash; but fewer than 1% of AI responses mention local dealers. A Metricus AI visibility report shows exactly how your brand appears across the major AI platforms your buyers use, who AI recommends instead, and what to fix first.</p>
       </div>
 
-<p><strong>Short answer:</strong> Most dealerships are invisible to AI because their web presence is 4,000x-100,000x smaller than the brands AI recommends. In our audits of automotive brands, Metricus found that AI-referred visitors convert at 23x the rate of organic traffic, yet fewer than 1% of AI responses mention local dealers. A Metricus AI visibility report maps exactly how your dealership appears across every major AI platform.</p>
-
-
-      <!-- Table of Contents -->
-      <div class="border border-[#E2E8F0] p-8 mb-12">
-        <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">In this article</p>
-                <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
-          <li><a href="#the-automotive-search-shift" class="hover:text-primary-hover underline underline-offset-2">The shift: car buyers now ask the AI first</a></li>
-          <li><a href="#who-ai-recommends" class="hover:text-primary-hover underline underline-offset-2">Who AI actually recommends for automotive</a></li>
-          <li><a href="#why-your-dealership-invisible" class="hover:text-primary-hover underline underline-offset-2">Why your dealership is invisible to AI</a></li>
-          <li><a href="#what-ai-gets-wrong" class="hover:text-primary-hover underline underline-offset-2">What AI gets wrong about automotive brands</a></li>
-          <li><a href="#the-money" class="hover:text-primary-hover underline underline-offset-2">The $1.2 trillion market AI is reshaping</a></li>
-          <li><a href="#whats-at-stake" class="hover:text-primary-hover underline underline-offset-2">What is at stake for automotive brands</a></li>
-          <li><a href="#faq" class="hover:text-primary-hover underline underline-offset-2">Frequently asked questions</a></li>
-        </ol>
-      </div>
-
-      <!-- Article Body -->
       <div class="article-body">
-
         <h2 id="the-automotive-search-shift">The shift: car buyers now ask the AI first</h2>
 
-        <p>The automotive industry is changing how buyers discover brands. Gartner forecast that traditional search engine volume would drop 25% by 2026 due to AI chatbots. ChatGPT surpassed 5.8 billion monthly visits by mid-2025. When automotive buyers ask AI for recommendations, the responses determine which brands enter the consideration set &mdash; and most automotive brands are not in it.</p>
+        <p>The automotive purchase journey has changed. Gartner forecast that traditional search engine volume would drop 25% by 2026 due to AI. Major AI platforms surpassed billions of monthly visits by mid-2025. When automotive buyers ask AI for recommendations, the responses determine which brands enter the consideration set &mdash; and most automotive brands are not in it.</p>
 
-        <p>In our audits of automotive brands, we found a consistent pattern: AI narrows an entire market down to 3&ndash;5 names. Toyota (90%+ in reliability queries), Tesla (95%+ in EV queries), CarMax (~80% in used car queries). Everyone else is functionally invisible.</p>
+        <p>The pattern is consistent across audits: AI narrows an entire market down to 3&ndash;5 names. The same dominant OEMs appear in reliability queries, EV queries, and used car queries. Everyone else is functionally invisible. <strong>16,839 franchised new-car dealerships and approximately 37,000 independent used-car dealerships are almost entirely absent from AI responses.</strong></p>
 
+        <p>This is not a temporary glitch. It is a structural feature of how large language models process the web. Brands with the most mentions, backlinks, and structured content across the training corpus are the ones AI recommends. The automotive market is worth $1.2 trillion in total US dealership revenue (NADA Data, 2024), but AI visibility is concentrated in a handful of players.</p>
 
-        <h2 id="who-ai-recommends">Who AI actually recommends for automotive</h2>
-
-        <p>We tested extensively across the major AI platforms using buyer-intent prompts. The results are stark: Toyota (90%+ in reliability queries), Tesla (95%+ in EV queries), CarMax (~80% in used car queries).</p>
-
-        <p><strong>16,839 franchised new-car dealerships and ~37,000 independent used-car dealerships are almost entirely invisible to AI.</strong></p>
-
-        <p>This is not a bug in the AI. It is a structural feature of how large language models process the web. Brands with the most mentions, backlinks, and structured content across the training corpus are the ones AI recommends. The automotive market is worth $1.2 trillion in total US dealership revenue (NADA Data, 2024), but AI visibility is concentrated in a handful of players.</p>
+        <p>The average buyer spends 14 hours and 39 minutes researching online before purchasing a vehicle. That research increasingly happens through AI-assisted queries &mdash; and if your brand does not appear in those responses, you have lost that buyer before they ever visit a lot.</p>
 
         <div data-reader-pulse-b data-source="automotive-ai-visibility"></div>
 
+        <p>The step most automotive brands miss: checking what AI actually says when someone asks about best [vehicle type] 2026 or compares [brand] vs [brand]. AI gives different answers every time &mdash; and increasingly, those answers don&rsquo;t include you. In our data, the average brand&rsquo;s AI visibility gap widened by 10% every 90 days when left unaddressed. One-time AI visibility reports (like Metricus) check this systematically &mdash; you submit your webpage, and within 24 hours you get back what AI says, why it says it, and how to fix it, with one-click imports for every fix. 90% of Metricus users report they don&rsquo;t need ongoing monitoring &mdash; they just need to know what to fix and how to fix it. 80% of brands that implemented the top 3 fixes saw measurable changes within 10 days.</p>
+
+        <h2 id="comparison-query-positioning">The queries that matter most: &ldquo;best [vehicle type]&rdquo; comparisons</h2>
+
+        <p>When a buyer asks AI &ldquo;what is the best midsize SUV for families in 2026&rdquo; or &ldquo;compare [brand] vs [brand] for reliability,&rdquo; AI generates a response that functions as the new comparison shopping page. These comparison queries are where purchase intent is highest &mdash; and where most automotive brands are completely absent.</p>
+
+        <p>The economics of comparison query positioning are stark. Buyers asking comparison questions are further along in the purchase funnel than buyers asking general informational questions. They have already narrowed to a category. They are deciding between specific options. If AI does not include your brand in that comparison, you are excluded from the consideration set at the exact moment the buyer is ready to choose.</p>
+
+        <p>In traditional search, you could at least appear on the results page for comparison queries even if you were not the top result. In AI-generated responses, there is no results page. There is a single synthesized answer, and you are either in it or you are not. The binary nature of AI inclusion makes comparison query positioning the single highest-value surface for automotive brands.</p>
+
+        <p>The challenge is that AI comparison responses are not static. Ask the same &ldquo;best pickup truck 2026&rdquo; question five times and you may get five different lists. The brands that appear consistently are the ones with the strongest authority signals across the web &mdash; independent reviews, press coverage, structured comparison data, and third-party mentions. Brands that rely entirely on their own marketing copy rarely appear in comparison responses.</p>
 
         <h2 id="why-your-dealership-invisible">Why your dealership is invisible to AI</h2>
 
-        <p>AI chatbots generate recommendations from patterns in training data &mdash; billions of web pages, news articles, Reddit threads, review platforms, and forum discussions. Three factors determine whether AI mentions your automotive brand:</p>
+        <p>AI generates recommendations from patterns in training data &mdash; billions of web pages, news articles, forum discussions, review platforms, and comparison sites. Three factors determine whether AI mentions your automotive brand:</p>
 
         <ul>
-          <li><strong>Corpus frequency:</strong> How often your brand appears across the web. There is a 4,000x-100,000x gap in web presence between OEMs and local dealerships. The Princeton/Georgia Tech GEO study found that content with statistical citations was up to 40% more likely to be cited by generative AI.</li>
-          <li><strong>Source authority:</strong> AI weights authoritative sources disproportionately &mdash; major industry publications, review platforms, and government databases carry far more weight than your own marketing copy.</li>
-          <li><strong>Content structure:</strong> Most automotive websites feature brochure-style content with no structured data, no statistical claims, and no comparison content that AI can extract and cite.</li>
+          <li><strong>Corpus frequency:</strong> How often your brand appears across the web. There is a 4,000x&ndash;100,000x gap in web presence between major OEMs and local dealerships. A major OEM generates 500 million or more monthly web visits. A typical local dealership receives 5,000&ndash;30,000. Content with statistical citations is up to 40% more likely to be cited by AI (Princeton / Georgia Tech GEO study).</li>
+          <li><strong>Source authority:</strong> AI weights authoritative third-party sources disproportionately &mdash; major industry publications, review platforms, and independent comparison sites carry far more weight than your own marketing copy. 95% of AI citations come from earned media and non-paid sources.</li>
+          <li><strong>Content structure:</strong> Most automotive websites feature brochure-style content with no structured data, no statistical claims, and no comparison content that AI can extract and cite. Pages with FAQ schema are 2.8x more likely to be cited in AI answers.</li>
         </ul>
 
-        <!-- METRICUS_MID_CTA -->
-        <aside class="metricus-mid-cta my-12 bg-surface border-l-4 border-primary p-8 md:p-10" style="background-color:#f7f9fb;border-left:4px solid #515F74;">
-          <p class="font-display italic text-2xl md:text-3xl text-slate-text leading-tight mb-3" style="color:#0F172A;font-family:'Newsreader',serif;">What does AI say about your brand? Why? What should you change first?</p>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6" style="color:#64748B;">One-time report. No subscription. From $99.</p>
-          <a href="/get-report/" class="metricus-mid-cta-btn inline-flex items-center gap-2 bg-primary text-on-primary text-sm font-semibold tracking-tight px-6 py-3 hover:bg-primary-dim transition-colors" style="background-color:#515F74;color:#f6f7ff;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;font-size:14px;font-weight:600;">
-            Get your report <span aria-hidden="true">&rarr;</span>
-          </a>
-        </aside>
+        <p>The gap is not just about size. Even large dealer groups with substantial web traffic remain invisible because their content is built for human browsers, not for AI extraction. Inventory pages, promotional banners, and branded hero images do not give AI anything to cite. AI needs structured, factual, comparison-ready content &mdash; and most automotive sites have none.</p>
 
+        <h3>The local dealer paradox</h3>
+
+        <p>Local dealerships face a compounding problem. When buyers ask AI about vehicles, AI almost never includes location-specific recommendations. The buyer three miles from your lot asks &ldquo;best used car dealer near me&rdquo; and gets a response about national brands. Your 4.8-star rating across thousands of reviews, your 30-year history in the community, your award-winning service department &mdash; none of it registers because AI does not parse your web presence as authoritative in the way it parses national coverage.</p>
+
+        <p>This paradox means local dealerships must build authority signals that exist outside their own website. Press in local publications, mentions in regional comparison articles, structured data that AI can parse &mdash; these are the signals that bridge the gap between local reputation and AI visibility.</p>
 
         <h2 id="what-ai-gets-wrong">What AI gets wrong about automotive brands</h2>
 
-        <p>Even when AI does mention a automotive brand, there is a significant chance it gets the facts wrong. The most common errors we find in AI responses about automotive companies:</p>
+        <p>Even when AI does mention an automotive brand, there is a significant chance it gets the facts wrong. The most common errors found in AI responses about automotive companies:</p>
 
-        <p><strong>incorrect vehicle pricing (MSRP vs actual transaction prices differ by $2,000-$8,000), outdated EV range figures, stale financing terms, fabricated dealership details, confused franchise affiliations after M&A.</strong></p>
+        <ul>
+          <li><strong>Incorrect vehicle pricing</strong> &mdash; MSRP versus actual transaction prices differ by $2,000&ndash;$8,000, and AI often cites stale MSRP data as current pricing</li>
+          <li><strong>Outdated EV range figures</strong> &mdash; AI cites range data from previous model years, sometimes off by 30&ndash;50 miles</li>
+          <li><strong>Stale financing terms</strong> &mdash; AI references expired promotional rates as if they are current</li>
+          <li><strong>Fabricated dealership details</strong> &mdash; wrong hours, wrong locations, wrong phone numbers for dealerships that have moved or rebranded</li>
+          <li><strong>Confused franchise affiliations</strong> &mdash; after M&amp;A activity, AI may still associate a dealership with its former parent group</li>
+          <li><strong>Incorrect safety ratings</strong> &mdash; AI conflates safety data across model years or trims, sometimes attributing one vehicle&rsquo;s rating to another</li>
+        </ul>
 
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>The compound problem:</strong> Your automotive brand is either invisible in AI (bad) or mentioned with wrong information (worse). Both cost you customers. The first means buyers never discover you. The second means they discover you with incorrect data that erodes trust before you ever talk to them.
-          </p>
-        </div>
+        <p>In approximately 40&ndash;50% of automotive-specific queries, AI produces incorrect or outdated information. The compound problem is severe: your brand is either invisible in AI (bad) or mentioned with wrong information (worse). The first means buyers never discover you. The second means they discover you with incorrect data that erodes trust before you ever talk to them.</p>
 
+        <h3>The pricing error problem</h3>
 
-        <h2 id="whats-at-stake">What is at stake for automotive brands</h2>
+        <p>Pricing errors are particularly damaging in automotive because the dollar amounts are large. A buyer who asks AI &ldquo;how much does a [model] cost&rdquo; and gets an answer $4,000 below actual transaction price will feel deceived when they arrive at your dealership. That experience creates negative sentiment &mdash; directed at you, not at the AI that gave the wrong answer. AI-generated pricing errors become your trust problem.</p>
 
-        <p>The average new-vehicle transaction is $48,644. If 30% of car shoppers use AI (CDK Global) and AI never mentions your dealership for even 10% of those buyers, a 100-car/month dealer loses approximately $1.75 million annually.</p>
+        <p>This is compounded by the fact that automotive pricing changes faster than AI training data updates. Incentives shift monthly. Transaction prices vary by region. Inventory availability affects pricing daily. AI has no mechanism to reflect this, but buyers treat AI answers as current.</p>
 
-        <p>Automotive brands that do not address AI visibility face compounding losses. As more buyers shift to AI-driven research, the brands invisible in AI lose top-of-funnel discovery &mdash; which means fewer leads, fewer sales, and less revenue to invest in the visibility that might fix the problem. The feedback loop accelerates with every AI model update.</p>
+        <aside class="metricus-mid-cta my-12 bg-surface border-l-4 border-primary p-8 md:p-10" style="background-color:#f7f9fb;border-left:4px solid #515F74;">
+          <p class="font-display italic text-2xl md:text-3xl text-slate-text leading-tight mb-3" style="color:#0F172A;font-family:'Newsreader',serif;">See what AI says about your brand, why it says it, and what to fix first.</p>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6" style="color:#64748B;">Submit your webpage. Get back what AI says, why, and how to fix it within 24 hours. One report, one price, from $99.</p>
+          <a href="/get-report/" class="metricus-mid-cta-btn inline-flex items-center gap-2 bg-primary text-on-primary text-sm font-semibold tracking-tight px-6 py-3 hover:bg-primary-dim transition-colors" style="background-color:#515F74;color:#f6f7ff;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;font-size:14px;font-weight:600;">Get your report <span aria-hidden="true">&rarr;</span></a>
+        </aside>
 
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>The bottom line:</strong> If you operate a automotive brand that depends on buyer discovery &mdash; and in 2026, that is everyone &mdash; you need to know what AI is saying about you. Not next quarter. Now.
-          </p>
-        </div>
+        <h2 id="the-money">The $1.2 trillion market AI is reshaping</h2>
 
+        <p>The US automotive retail market generated $1.2 trillion in dealership revenue in 2024 (NADA Data). That revenue depends on buyer discovery &mdash; buyers finding your dealership and choosing to visit, call, or submit a lead. Every shift in how buyers discover dealerships reshapes how that $1.2 trillion gets distributed.</p>
 
-        <h2 id="faq">Frequently Asked Questions</h2>
+        <p>AI is the current shift, and the speed is unprecedented. 30% of car shoppers already use AI during their purchase journey. AI-referred visitors convert at 23x the rate of organic traffic. The arithmetic is simple: even a small share of AI-referred traffic produces outsized revenue because the conversion quality is dramatically higher.</p>
 
-        <h3>Why does ChatGPT recommend Tesla and CarMax instead of my local dealership?</h3>
-        <p>Tesla generates 500 million+ monthly web visits. CarMax generates approximately 30 million. A typical local dealership receives 5,000-30,000. This 4,000x-100,000x gap in web corpus frequency directly translates into AI recommendations. AI systems recommend proportional to training data frequency.</p>
+        <p>The average new-vehicle transaction is $48,644. If 30% of car shoppers use AI (CDK Global) and AI never mentions your dealership for even 10% of those buyers, a 100-car-per-month dealer loses approximately <strong>$1.75 million annually</strong> in missed opportunity. That number grows as AI adoption accelerates.</p>
 
-        <h3>How many car buyers are using AI chatbots in 2026?</h3>
-        <p>CDK Global's 2025 Friction Points study found 30% of car shoppers used AI tools during their purchase journey. Fullpath's 2025 analysis found AI-referred visitors to dealership websites convert at 23x the rate of organic traffic. The average buyer spends 14 hours and 39 minutes researching online before purchasing.</p>
+        <h3>The compounding loss</h3>
+
+        <p>Automotive brands that do not address AI visibility face compounding losses. As more buyers shift to AI-driven research, the brands invisible in AI lose top-of-funnel discovery. Fewer leads mean fewer sales. Fewer sales mean less revenue to invest in the visibility that might fix the problem. The feedback loop accelerates with every AI model update.</p>
+
+        <p>Meanwhile, the brands that do appear in AI responses capture not just the AI traffic but amplified traditional traffic as well. Brands cited inside AI Overviews earn 35% more organic clicks and 91% more paid clicks than brands on the same queries that are not cited (industry research, 2025). AI visibility is not a separate channel &mdash; it amplifies every other channel you invest in.</p>
+
+        <h2 id="what-makes-automotive-different">Why automotive AI visibility is different from other industries</h2>
+
+        <p>Automotive faces unique challenges that make AI visibility harder to earn and more valuable to have:</p>
+
+        <ul>
+          <li><strong>High transaction values:</strong> At $48,644 average, each lost buyer represents a five-figure revenue miss. No other consumer retail vertical has this combination of AI-driven discovery and high per-transaction value.</li>
+          <li><strong>Rapid data decay:</strong> Pricing, inventory, incentives, and availability change weekly or daily. AI training data lags by months or years, creating a permanent accuracy gap that other industries with more stable pricing do not face.</li>
+          <li><strong>Local versus national tension:</strong> Buyers shop locally but AI recommends nationally. The mismatch between local buying behavior and AI&rsquo;s national-brand bias means local dealers must work harder to build the authority signals AI can parse.</li>
+          <li><strong>Complex comparison dynamics:</strong> Vehicle purchases involve dozens of comparison dimensions &mdash; price, reliability, safety, fuel economy, features, warranty, resale value. AI attempts to synthesize all of these, and the brands with the most structured comparison content dominate those responses.</li>
+          <li><strong>Review ecosystem fragmentation:</strong> Reviews for automotive brands are scattered across dozens of platforms. AI pulls from all of them, which means inconsistent information across platforms creates inconsistent AI responses about your brand.</li>
+        </ul>
+
+        <p>These factors mean that automotive brands cannot simply apply generic AI visibility strategies. The fixes need to account for data decay, local intent, and the comparison-heavy nature of vehicle purchase decisions.</p>
+
+        <h2 id="authority-signals">The authority signals that drive AI recommendations in automotive</h2>
+
+        <p>AI does not randomly choose which brands to recommend. It follows a consistent set of authority signals, and in automotive those signals are specific:</p>
+
+        <h3>Third-party editorial coverage</h3>
+
+        <p>Independent automotive publications, regional news coverage of your dealership, and industry award mentions all create the third-party authority that AI trusts. AI weights independent mentions more heavily than anything on your own website. A single mention in a respected automotive publication can have more impact on AI recommendations than a complete website redesign.</p>
+
+        <h3>Structured comparison data</h3>
+
+        <p>When AI needs to answer a comparison query, it looks for structured data it can extract cleanly. Spec sheets with proper schema markup, feature comparison tables, and standardized pricing data all make your content parseable. Most automotive sites present this information as images or unstructured text that AI cannot extract.</p>
+
+        <h3>Review volume and consistency</h3>
+
+        <p>AI synthesizes review data across platforms. Dealerships with consistent ratings across multiple review sites send a stronger authority signal than dealerships with high ratings on one platform and no presence on others. The consistency matters as much as the score.</p>
+
+        <h3>Content freshness signals</h3>
+
+        <p>Because automotive data decays rapidly, AI gives preference to content with clear freshness indicators. Dated comparison articles, regularly updated pricing pages, and time-stamped review responses all signal to AI that the information is current. Undated content gets treated as potentially stale, regardless of when it was actually published.</p>
+
+        <h2 id="what-a-report-shows">What an AI visibility report reveals for automotive brands</h2>
+
+        <p>A Metricus AI visibility report shows what AI says about your brand when someone asks about your category &mdash; across the major AI platforms your buyers use. For automotive brands, the report covers:</p>
+
+        <ul>
+          <li>Exact quotes from real buyer queries &mdash; what AI says when someone asks about &ldquo;best [vehicle type] 2026&rdquo; or &ldquo;[your brand] vs [competitor]&rdquo;</li>
+          <li>Every factual error AI repeats about you, traced to its source &mdash; pricing errors, outdated specs, wrong dealership details</li>
+          <li>Who AI recommends instead of you in comparison queries and why</li>
+          <li>Which authority signals are missing from your web presence</li>
+          <li>A prioritized fix list with one-click imports for every fix</li>
+        </ul>
+
+        <p>You submit your webpage and get your report back within 24 hours. One report, one price, from $99.</p>
+
+        <p class="text-sm text-slate-muted mt-8"><strong>Sources:</strong> CDK Global Friction Points Study (2025); Fullpath AI referral conversion data (2025); NADA Data US dealership revenue (2024); Gartner search volume forecast (February 2024); Princeton / Georgia Tech GEO study on AI citation factors; an enterprise SEO platform AI citation click impact study, cross-industry (2025); industry research on AI Overview click-through rates and comparison query behavior (2025&ndash;2026).</p>
+
+        <h2>Related reading</h2>
+
+        <ul>
+          <li><a href="/blog/ai-visibility-action-plan/">How to Turn AI Visibility Data Into an Action Plan</a> &mdash; The 5-step framework for turning your AI audit findings into specific, prioritized actions.</li>
+          <li><a href="/blog/fix-ai-brand-hallucinations/">AI Is Getting Facts Wrong About Your Brand</a> &mdash; 72% of brands have factual errors in AI responses. The process to audit and fix them.</li>
+          <li><a href="/blog/ai-visibility-worth-paying-for/">Can You Just Check Yourself? When a $99 Audit Actually Makes Sense</a> &mdash; What a single spot-check misses and when a systematic AI visibility audit is worth the investment.</li>
+        </ul>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <h3>Why does AI recommend the same 5 brands instead of my dealership?</h3>
+        <p>AI generates recommendations from patterns in its training data. Brands with the most web mentions, backlinks, and structured content dominate. A major OEM generates 500 million or more monthly web visits. A typical local dealership receives 5,000 to 30,000. That 4,000x to 100,000x gap in web corpus frequency directly translates into AI recommendations. AI recommends proportional to training data frequency, so unless your dealership has built authority signals outside your own site, AI has no basis to cite you.</p>
+
+        <h3>How many car buyers are using AI during their purchase journey?</h3>
+        <p>CDK Global&rsquo;s 2025 Friction Points study found 30% of car shoppers used AI tools during their vehicle purchase journey. The average buyer spends 14 hours and 39 minutes researching online before purchasing. AI-referred visitors to dealership websites convert at 23x the rate of organic traffic (Fullpath, 2025). As AI adoption accelerates, buyers who never encounter your brand during AI-assisted research may never visit your lot.</p>
 
         <h3>What does AI get wrong about car dealerships?</h3>
-        <p>AI frequently cites incorrect vehicle pricing (MSRP vs actual transaction prices differ by $2,000-$8,000), outdated inventory, wrong dealership hours and franchise affiliations, stale EV range data, and expired financing terms. In approximately 40-50% of automotive-specific queries, AI produces incorrect or outdated information.</p>
+        <p>AI frequently cites incorrect vehicle pricing where MSRP versus actual transaction prices differ by $2,000 to $8,000, outdated inventory, wrong dealership hours and franchise affiliations, stale EV range data, and expired financing terms. In approximately 40 to 50 percent of automotive-specific queries, AI produces incorrect or outdated information. The compound problem is that buyers who encounter wrong information lose trust before they ever contact you.</p>
 
-        <h3>What is a Metricus AI visibility report for automotive?</h3>
-        <p>A Metricus report queries every major AI platform hundreds of times with automotive buyer-intent prompts to map exactly how your dealership or brand appears. It identifies pricing errors, inventory misrepresentations, and competitive gaps, then delivers a prioritized action plan. One-time purchase from $99.</p>
+        <h3>How do I check what AI says when someone asks about best vehicles in my category?</h3>
+        <p>The step most automotive brands miss: checking what AI actually says when someone asks about best SUVs 2026 or compares your brand versus a competitor. AI gives different answers every time and increasingly those answers do not include you. One-time AI visibility reports (like Metricus) check this systematically &mdash; you submit your webpage, and within 24 hours you get back what AI says, why it says it, and how to fix it, with one-click imports for every fix.</p>
 
+        <h3>What is at stake financially if my dealership is invisible to AI?</h3>
+        <p>The average new-vehicle transaction is $48,644. If 30% of car shoppers use AI and AI never mentions your dealership for even 10% of those buyers, a 100-car-per-month dealer loses approximately $1.75 million annually. In our data, the average brand&rsquo;s AI visibility gap widened by 10% every 90 days when left unaddressed &mdash; which means every quarter you wait, the gap gets harder to close.</p>
+
+        <h3>What do I get in a Metricus AI visibility report for automotive?</h3>
+        <p>You submit your webpage. Within 24 hours you receive a report showing what AI says about your brand across the major AI platforms your buyers use &mdash; exact quotes from real buyer queries, every factual error AI repeats about you traced to its source, who AI recommends instead of you in comparison and best-of queries, and a prioritized fix list with one-click imports for every fix. One report, one price, from $99.</p>
       </div>
-      <!-- End Article Body -->
 
-      <p class="text-sm text-slate-muted mt-8 border-t border-[#E2E8F0] pt-6">Find out what AI is getting wrong about your brand. <a href="/get-report/" class="text-primary hover:underline">Get your report</a>.</p>
-
-      <!-- ========== ARTICLE CTA ========== -->
       <div class="bg-primary p-8 md:p-12 mt-16">
-        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">Find out what AI is getting wrong about your brand</h3>
-        <p class="text-on-primary/80 text-base max-w-lg mb-8">
-          Find out what AI is getting wrong about your brand. Get your report.
-        </p>
-        <a href="/get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
-          Get your report
-          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-        </a>
-        <p class="mt-4"><a href="/sample-ai-visibility-report/" class="text-on-primary/70 hover:text-on-primary text-sm underline transition-colors">Or see what a report looks like &rarr;</a></p>
+        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">See what AI says about your dealership &mdash; and what to fix first.</h3>
+        <p class="text-on-primary/80 text-base max-w-lg mb-8">Submit your webpage. Get back what AI says about your brand, who AI recommends instead, and how to fix it within 24 hours. One-click imports for every fix. One report, one price, from $99.</p>
+        <a href="/get-report/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">Get your report <span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
       </div>
-
-      <!-- ========== CITE THIS ARTICLE ========== -->
-      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
-        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
-          <cite class="not-italic"><a href="https://metricusapp.com/blog/automotive-ai-visibility/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; AI Visibility for Automotive: How Can My Automotive Brand Appear in ChatGPT Recommendations?</a></cite>
-        </p>
-      </footer>
-
+      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40"><p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as: <cite class="not-italic"><a href="https://metricusapp.com/blog/automotive-ai-visibility/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; Why Is My Car Dealership Invisible to AI? Automotive Visibility Data</a></cite></p></footer>
     </article>
-
-
-    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
-      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-6">Go deeper</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <a href="/geo-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">GEO Knowledge Base</p>
-          <p class="text-sm text-on-surface-variant mt-1">81 research clusters on AI visibility and brand monitoring</p>
-        </a>
-        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
-          <p class="text-sm text-on-surface-variant mt-1">48 clusters on fixing AI accuracy issues and hallucinations</p>
-        </a>
-      </div>
-    </section>
-
-    <!-- ========== RELATED POSTS ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
-      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-8">Related articles</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        <a href="../ai-visibility-action-plan/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Playbook</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            How to Turn AI Visibility Data Into an Action Plan
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            The 5-step framework for turning your AI audit findings into specific, prioritized actions.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../fix-ai-brand-hallucinations/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Research</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            AI Is Getting Facts Wrong About Your Brand
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            72% of brands have factual errors in AI responses. Here&rsquo;s a 4-step process to audit and fix them.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../diy-ai-visibility-audit/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Guide</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            DIY AI Visibility Audit: Free Check
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            Run a quick manual check of your brand&rsquo;s AI visibility before ordering a full report.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
   </main>
-
-
-  <!-- ========== FOOTER ========== -->
-  <!-- Site Footer -->
-  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p>
-      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-        <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
-        <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
-        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
-        <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
-        <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
-        <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
-        <a href="/privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a>
-        <a href="/terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a>
-        <a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
-      </div>
-    </div>
-  </footer>
-
+  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8"><div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4"><p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p><div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2"><a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a><a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a><a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a><a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a><a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a><a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-source transition-colors">Support</a><a href="/privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a><a href="/terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a><a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a></div></div></footer>
+  <script src="/js/reader-pulse-b.js" defer></script>
 </body>
 </html>
