@@ -266,7 +266,6 @@
     ]
   }
   </script>
-  <script src="/js/reader-pulse-b.js" defer></script>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
 
@@ -366,6 +365,8 @@
 
 <p><strong>Short answer:</strong> Most fintechs are invisible to AI because NerdWallet and Bankrate dominate financial AI responses as authoritative sources. In our audits of fintech brands, Metricus found that NerdWallet appears in 90%+ of AI personal finance answers while neobanks and challengers are absent. A Metricus AI visibility report maps exactly how your fintech appears across every major AI platform.</p>
 
+      <div data-benchmark-quiz="fintech" data-source="fintech-ai-visibility"></div>
+
 
       <!-- Table of Contents -->
       <div class="border border-[#E2E8F0] p-8 mb-12">
@@ -434,9 +435,6 @@
           <li><strong>Payments:</strong> AI surfaces well-known payment brands while newer, feature-rich alternatives remain invisible.</li>
           <li><strong>Investment:</strong> AI names legacy brokerages and personal finance publishers before newer platforms that offer fractional shares, crypto integration, or lower-cost alternatives.</li>
         </ul>
-
-        <div data-reader-pulse-b data-source="fintech-ai-visibility"></div>
-
 
         <h2 id="why-invisible">Why most fintechs are invisible to AI</h2>
 
@@ -674,6 +672,7 @@
     </div>
   </footer>
 
-  <script src="/js/reader-pulse-b.js" defer></script>
+  <script src="/js/benchmark-quiz-engine.js" defer></script>
+  <script src="/js/fintech-benchmark-quiz.js" defer></script>
 </body>
 </html>
