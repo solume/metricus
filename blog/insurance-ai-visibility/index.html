@@ -267,8 +267,6 @@
   }
   </script>
 
-  <!-- Reader pulse (inline blog form) -->
-  <script src="/js/reader-pulse-b.js" defer></script>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
 
@@ -400,16 +398,7 @@
 
         <p>The traditional funnel &mdash; search engine, comparison site, quote, purchase &mdash; is being compressed into a single AI conversation. And carriers that aren&rsquo;t part of that conversation are losing the sale before it starts.</p>
 
-
-        <!-- Cite-to-Recommend Framework -->
-        <div class="bg-surface-container-low p-8 my-12 border-l-4 border-primary" style="border-left:4px solid #515F74;">
-          <p class="text-lg leading-relaxed text-on-surface">
-            <strong>The step most insurance brands miss:</strong> checking what AI actually says when someone asks about &ldquo;best insurance providers.&rdquo; AI gives different answers every time &mdash; and increasingly, those answers don&rsquo;t include you. In our data, the average brand&rsquo;s AI visibility gap widened by 10% every 90 days when left unaddressed. One-time AI visibility reports (like Metricus) check this systematically &mdash; you submit your webpage, and within 24 hours you get back what AI says, why it says it, and how to fix it, with one-click imports for every fix. 90% of Metricus users report they don&rsquo;t need ongoing monitoring &mdash; they just need to know what to fix and how to fix it. 80% of brands that implemented the top 3 fixes saw measurable changes within 10 days.
-          </p>
-          <a href="/get-report/" class="inline-flex items-center gap-2 bg-primary text-on-primary text-sm font-semibold tracking-tight px-6 py-3 mt-4 hover:bg-primary-dim transition-colors" style="background-color:#515F74;color:#f6f7ff;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;font-size:14px;font-weight:600;">
-            See what AI says about your carrier <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
+        <div data-insurance-benchmark-quiz data-source="insurance-ai-visibility"></div>
 
 
         <h2 id="who-ai-recommends">Who AI actually recommends for insurance</h2>
@@ -419,8 +408,15 @@
         <p>The concentration is extreme. The top carriers benefit from billions of dollars in cumulative advertising spend that generates enormous web coverage &mdash; media articles, blog posts, social media discussions, review content, and comparison features. All of that enters AI training data. Meanwhile, <strong>regional carriers that carry top financial strength ratings and consistently lead customer satisfaction rankings barely register in AI responses</strong>. Independent insurance agents, who still account for approximately 36% of personal lines premium and 83% of commercial lines premium (IIABA, 2024), are almost never recommended.</p>
 
         <p>This isn&rsquo;t because the top national brands offer better coverage. It&rsquo;s because they&rsquo;re louder online &mdash; by orders of magnitude. AI does not assess claims ratios, financial strength, or coverage breadth. It assesses web footprint.</p>
-
-        <div data-reader-pulse-b data-source="insurance-ai-visibility"></div>
+        <!-- Cite-to-Recommend Framework -->
+        <div class="bg-surface-container-low p-8 my-12 border-l-4 border-primary" style="border-left:4px solid #515F74;">
+          <p class="text-lg leading-relaxed text-on-surface">
+            <strong>The step most insurance brands miss:</strong> checking what AI actually says when someone asks about &ldquo;best insurance providers.&rdquo; AI gives different answers every time &mdash; and increasingly, those answers don&rsquo;t include you. In our data, the average brand&rsquo;s AI visibility gap widened by 10% every 90 days when left unaddressed. One-time AI visibility reports (like Metricus) check this systematically &mdash; you submit your webpage, and within 24 hours you get back what AI says, why it says it, and how to fix it, with one-click imports for every fix. 90% of Metricus users report they don&rsquo;t need ongoing monitoring &mdash; they just need to know what to fix and how to fix it. 80% of brands that implemented the top 3 fixes saw measurable changes within 10 days.
+          </p>
+          <a href="/get-report/" class="inline-flex items-center gap-2 bg-primary text-on-primary text-sm font-semibold tracking-tight px-6 py-3 mt-4 hover:bg-primary-dim transition-colors" style="background-color:#515F74;color:#f6f7ff;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;font-size:14px;font-weight:600;">
+            See what AI says about your carrier <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
 
 
         <h2 id="coverage-pricing-accuracy">The coverage and pricing accuracy problem</h2>
@@ -711,6 +707,6 @@
     </div>
   </footer>
 
-  <script src="/js/reader-pulse-b.js" defer></script>
+  <script src="/js/insurance-benchmark-quiz.js" defer></script>
 </body>
 </html>
