@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Visibility Reports: See What ChatGPT, Perplexity and Gemini Say About Your Brand | Metricus</title>
-  <meta name="description" content="See what AI says about your brand, why it says it, and what to fix. One-time AI visibility reports from $99. No subscription.">
+  <title>AI Visibility For Your Brand — What ChatGPT, Perplexity and Gemini Say About You | Metricus</title>
+  <meta name="description" content="AI visibility for your brand: what AI says, why AI says it, what you can do about it. Free 60-second benchmark against 100,000+ real brands. One-time reports from $99.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://metricusapp.com/">
-  <meta property="og:title" content="AI Visibility Reports: See What ChatGPT, Perplexity and Gemini Say About Your Brand">
-  <meta property="og:description" content="See what AI says about your brand, why it says it, and what to fix. One-time AI visibility reports from $99.">
+  <meta property="og:title" content="AI Visibility For Your Brand — What ChatGPT, Perplexity and Gemini Say About You">
+  <meta property="og:description" content="What AI says about your brand. Why AI says it. What you can do about it. Free 60-second benchmark. One-time reports from $99.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://metricusapp.com/">
   <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="AI Visibility Reports: See What ChatGPT, Perplexity and Gemini Say About Your Brand">
-  <meta name="twitter:description" content="See what AI says about your brand, why it says it, and what to fix. One-time AI visibility reports from $99. No subscription.">
+  <meta name="twitter:title" content="AI Visibility For Your Brand — What ChatGPT, Perplexity and Gemini Say About You">
+  <meta name="twitter:description" content="What AI says about your brand. Why AI says it. What you can do about it. Free 60-second benchmark. One-time reports from $99.">
   <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
   <!-- Google Tag Manager -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
@@ -166,6 +166,96 @@
     .material-symbols-outlined {
       font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
     }
+
+    /* Hero nav minimization — on homepage only, the nav fades to just the logo
+       when scrolled to top. As soon as the user scrolls past ~80px, the full nav
+       (links + Get Your Report button + mobile hamburger) fades back in. */
+    nav.site-nav {
+      transition: background-color 280ms ease, border-color 280ms ease, backdrop-filter 280ms ease, -webkit-backdrop-filter 280ms ease;
+    }
+    .nav-items,
+    #mobile-menu-btn {
+      transition: opacity 280ms ease, transform 280ms ease;
+    }
+    nav.site-nav.nav-hero-minimal {
+      background-color: transparent !important;
+      border-bottom-color: transparent !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+    }
+    nav.site-nav.nav-hero-minimal .nav-items,
+    nav.site-nav.nav-hero-minimal #mobile-menu-btn {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-4px);
+    }
+
+    /* Hero CTA — continuous scale + glow pulse, hover amplifies (doesn't stop), arrow nudges in sync */
+    @keyframes heroCtaPulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow:
+          0 14px 32px rgba(45, 62, 80, 0.22),
+          0 0 0 0 rgba(81, 95, 116, 0.55);
+      }
+      50% {
+        transform: scale(1.025);
+        box-shadow:
+          0 22px 48px rgba(45, 62, 80, 0.34),
+          0 0 0 18px rgba(81, 95, 116, 0);
+      }
+    }
+    @keyframes heroCtaPulseHover {
+      0%, 100% {
+        transform: scale(1.01);
+        box-shadow:
+          0 18px 40px rgba(45, 62, 80, 0.32),
+          0 0 0 0 rgba(81, 95, 116, 0.70);
+      }
+      50% {
+        transform: scale(1.045);
+        box-shadow:
+          0 28px 56px rgba(45, 62, 80, 0.44),
+          0 0 0 22px rgba(81, 95, 116, 0);
+      }
+    }
+    @keyframes heroCtaArrow {
+      0%, 100% { transform: translateX(0); }
+      50%      { transform: translateX(4px); }
+    }
+    .hero-cta {
+      position: relative;
+      overflow: hidden;
+      animation: heroCtaPulse 2s ease-in-out infinite;
+      box-shadow: 0 14px 32px rgba(45, 62, 80, 0.22);
+      transform-origin: center;
+      /* Single bright aura — Y locked to 50%, X tracks mouse directly.
+         Compact radius so the hot spot is a distinct blob, not a wash. */
+      background-image: radial-gradient(
+        220px circle at var(--mx, 50%) 50%,
+        rgba(187, 247, 208, 0.85),
+        rgba(52, 211, 153, 0.95) 16%,
+        rgba(16, 185, 129, 0.55) 38%,
+        rgba(16, 185, 129, 0.12) 60%,
+        transparent 78%
+      );
+      isolation: isolate;
+    }
+    .hero-cta > * { position: relative; z-index: 1; }
+    .hero-cta:hover {
+      animation: heroCtaPulseHover 1.6s ease-in-out infinite;
+    }
+    .hero-cta svg {
+      animation: heroCtaArrow 2s ease-in-out infinite;
+    }
+    .hero-cta:hover svg {
+      animation-duration: 1.6s;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-cta,
+      .hero-cta:hover,
+      .hero-cta svg { animation: none; }
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -212,8 +302,8 @@
 </head>
 <body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
 
-  <!-- Site Nav -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30">
+  <!-- Site Nav — starts in nav-hero-minimal (homepage only); the inline script below reveals the full nav on scroll. -->
+  <nav class="site-nav nav-hero-minimal fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
       <a href="/" class="flex items-center gap-2 group" aria-label="Metricus home">
         <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
@@ -221,7 +311,7 @@
         </svg>
         <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
       </a>
-      <div class="hidden md:flex items-center gap-8">
+      <div class="nav-items hidden md:flex items-center gap-8">
         <a href="/methodology/" class="nav-link-howitworks text-sm text-on-surface-variant hover:text-on-surface transition-colors">How It Works</a>
         <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
         <a href="/blog/" class="nav-link-blog text-sm text-on-surface-variant hover:text-on-surface transition-colors">Learn</a>
@@ -265,6 +355,128 @@
       if(close)close.addEventListener('click',shut);
       if(backdrop)backdrop.addEventListener('click',shut);
     })();
+
+    // Hero nav minimization — homepage only. At top of page (scrollY <= threshold),
+    // only the Metricus logo is visible. On any scroll, the full nav fades in.
+    (function(){
+      var nav = document.querySelector('nav.site-nav');
+      if (!nav) return;
+      var THRESHOLD = 80;
+
+      function update() {
+        if (window.scrollY > THRESHOLD) {
+          nav.classList.remove('nav-hero-minimal');
+        } else {
+          nav.classList.add('nav-hero-minimal');
+        }
+      }
+
+      // Start minimal, then check current scroll (handles mid-page refresh).
+      nav.classList.add('nav-hero-minimal');
+      update();
+      window.addEventListener('scroll', update, { passive: true });
+    })();
+
+    // Hero CTA — continual sine-wave sweep of the aura across the button.
+    // Base speed runs forever (button never idle). Mouse motion (H or V) injects
+    // a temporary frequency boost that decays back to baseline over ~1s.
+    //
+    // Tweakables:
+    //   PHASE_SPEED — radians/frame at baseline. 0.020 ≈ 5s cycle, 0.040 ≈ 2.5s.
+    //   AMPLITUDE   — % of button width. 100 = aura touches edges; 120+ = aura
+    //                 exits the button at extremes (the "swoops off-screen" feel).
+    //   BOOST_SCALE — how much mouse pixel-speed feeds into the boost.
+    //   BOOST_DECAY — per-frame decay of the boost (closer to 1 = longer lived).
+    (function(){
+      var PHASE_SPEED  = 0;       // 0 = no baseline drift; wave only advances on user input
+      var AMPLITUDE    = 35;      // % swing from center. 35 keeps the aura well inside the button at max.
+      var BOOST_SCALE  = 0.0003;  // per-pixel mouse-speed → phase-velocity
+      var SCROLL_SCALE = 0.0002;  // per-pixel scroll-delta → phase-velocity (tune separately from mouse)
+      var BOOST_DECAY  = 0.94;    // per-frame boost decay; phase stops advancing ~1s after input stops
+      var BOOST_MAX    = 0.05;    // caps sweep velocity; ~2s for a half-swing at max boost
+      var AMP_RAMP     = 0.08;    // per-frame amplitude ramp-up rate while input is happening
+      var AMP_FADE     = 0.04;    // per-frame amplitude fade rate after the still-timeout elapses
+      var STILL_MS     = 5000;    // milliseconds of no input before the aura starts returning to center
+
+      function init() {
+        var cta = document.querySelector('.hero-cta');
+        if (!cta) return;
+
+        var phase = 0;
+        var boost = 0;
+        var amplitude = 0;   // tracked separately from AMPLITUDE constant; 0 = centered, AMPLITUDE = full swing
+        var lastX = null, lastY = null;
+        var lastMoveTime = 0;
+        var running = false;
+
+        function tick() {
+          phase += PHASE_SPEED + boost;
+          boost *= BOOST_DECAY;
+
+          var timeSinceMove = performance.now() - lastMoveTime;
+
+          if (boost > 0.001) {
+            // Mouse is actively generating motion — ramp amplitude up to full
+            amplitude = Math.min(amplitude + AMPLITUDE * AMP_RAMP, AMPLITUDE);
+          } else if (timeSinceMove > STILL_MS) {
+            // Past the still-timeout — fade amplitude toward 0 for the smooth return
+            amplitude *= (1 - AMP_FADE);
+          }
+          // else: within the freeze window → amplitude holds at its current value
+
+          var mx = 50 + Math.sin(phase) * amplitude;
+          cta.style.setProperty('--mx', mx.toFixed(2) + '%');
+
+          // Keep ticking while there is any amplitude to render, or boost still decaying.
+          // This covers the active sweep, the 5s freeze, and the return-fade phases.
+          if (amplitude > 0.1 || boost > 0.0002) {
+            requestAnimationFrame(tick);
+          } else {
+            cta.style.setProperty('--mx', '50%');
+            running = false;
+          }
+        }
+
+        function kick() {
+          lastMoveTime = performance.now();
+          if (!running) {
+            running = true;
+            requestAnimationFrame(tick);
+          }
+        }
+
+        document.addEventListener('mousemove', function(e) {
+          if (lastX !== null) {
+            var dx = e.clientX - lastX;
+            var dy = e.clientY - lastY;
+            var speed = Math.sqrt(dx*dx + dy*dy);
+            boost = Math.min(boost + speed * BOOST_SCALE, BOOST_MAX);
+            kick();
+          }
+          lastX = e.clientX;
+          lastY = e.clientY;
+        }, { passive: true });
+
+        // Scroll counts as user input too — feed scroll delta into the same boost.
+        // Covers wheel, trackpad, keyboard (PgDn/Space/arrows), and touch scroll.
+        var lastScrollY = window.scrollY;
+        window.addEventListener('scroll', function() {
+          var currentScrollY = window.scrollY;
+          var delta = Math.abs(currentScrollY - lastScrollY);
+          lastScrollY = currentScrollY;
+          if (delta > 0) {
+            boost = Math.min(boost + delta * SCROLL_SCALE, BOOST_MAX);
+            kick();
+          }
+        }, { passive: true });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
   </script>
 
 
@@ -275,93 +487,25 @@
 
 
     <!-- ========== HERO SECTION ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pt-24 pb-16 md:pt-32 md:pb-32 flex flex-col items-center text-center relative z-10">
-      <h1 class="font-display font-bold text-[40px] leading-[1.1] md:text-[56px] lg:text-[72px] text-slate-text mb-6 tracking-tight max-w-[900px]">
-        See what AI says about your brand, where it got that from, and what to fix first
-      </h1>
-      <p class="text-[16px] md:text-[18px] text-slate-muted font-normal max-w-[580px] mb-12 leading-relaxed">
-        You send your website. Metricus sends back a report showing the exact words AI uses to describe your brand, where those answers came from, who AI recommends instead of you, and what to fix first. From $99. No subscription.
+    <section class="w-full max-w-[1200px] mx-auto px-6 min-h-screen flex flex-col items-center justify-center text-center relative z-10">
+      <p class="text-[11px] md:text-[12px] uppercase tracking-[0.22em] font-semibold text-primary mb-5 font-body-sans">
+        Free &middot; 60-Second AI Visibility Benchmark
       </p>
+      <h1 class="font-display font-bold text-[44px] leading-[1.05] md:text-[64px] lg:text-[76px] text-slate-text mb-6 md:mb-8 tracking-tight max-w-[900px] text-balance">
+        AI Visibility For Your Brand
+      </h1>
 
-      <!-- Primary CTA -->
-      <div class="w-full max-w-[540px] mb-20 relative z-20 text-center">
-        <a href="/get-report/" class="inline-flex items-center justify-center gap-2 h-14 px-10 bg-primary text-white font-semibold text-[16px] hover:bg-primary-dim transition-colors group">
-          Get Your AI Visibility Report
-          <span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+      <!-- Primary CTA: navigate to /benchmark/ -->
+      <div class="w-full max-w-[640px] mx-auto relative z-20 text-center">
+        <a href="/benchmark/" class="hero-cta inline-flex items-center justify-center gap-3 h-16 md:h-[72px] px-10 md:px-14 bg-primary text-white font-semibold text-[17px] md:text-[19px] hover:bg-primary-dim transition-colors group">
+          See your AI visibility score &mdash; free
+          <svg class="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M13 5l7 7-7 7"/>
+          </svg>
         </a>
-        <p class="text-xs text-slate-muted text-center mt-4">One-time report. Delivered within 24 hours. From $99.</p>
-      </div>
-
-      <!-- Floating 3D Graphic Container -->
-      <div class="w-full max-w-[1000px] relative mt-8 perspective-1000" style="isolation: isolate; contain: layout style paint;">
-        <div class="three-d-card animate-float relative z-0" style="will-change: transform; backface-visibility: hidden;">
-          <div class="bg-white border border-[#E2E8F0] shadow-2xl overflow-hidden text-left max-w-[640px] mx-auto bg-white/95 backdrop-blur-sm">
-
-            <!-- Header bar -->
-            <div class="flex items-center justify-between px-8 pt-6 pb-4 border-b border-slate-100">
-              <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-slate-400">AI Visibility Report</span>
-              <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-primary">Snapshot sample</span>
-            </div>
-
-            <!-- Exact AI Quote Row (real Snapshot deliverable) -->
-            <div class="px-8 py-5 border-b border-slate-50">
-              <div class="flex items-center gap-2 mb-3">
-                <span class="material-symbols-outlined text-[16px] text-primary">format_quote</span>
-                <span class="text-[10px] uppercase tracking-[0.15em] font-bold text-slate-400">Exact AI quote about your brand</span>
-              </div>
-              <p class="text-[13px] text-slate-text leading-snug italic">"Several CRMs are worth considering, including [Competitor A] for enterprise teams and [Competitor B] for SMBs. [Your brand] is sometimes mentioned but not as a top recommendation."</p>
-              <p class="text-[11px] text-slate-muted mt-1">From query: "best CRM for a 50-person sales team"</p>
-            </div>
-
-            <!-- Error + Citation Row -->
-            <div class="grid grid-cols-2 divide-x divide-slate-50">
-              <!-- Error Flag -->
-              <div class="px-8 py-5">
-                <div class="flex items-center gap-2 mb-3">
-                  <span class="material-symbols-outlined text-[16px] text-red-400">error</span>
-                  <span class="text-[10px] uppercase tracking-[0.15em] font-bold text-slate-400">Factual Error</span>
-                </div>
-                <p class="text-[13px] text-slate-text leading-snug">"Pricing starts at $99/mo"</p>
-                <p class="text-[11px] text-slate-muted mt-1">Actual: $29/mo. Source: outdated G2 listing</p>
-              </div>
-              <!-- Citation Trace -->
-              <div class="px-8 py-5">
-                <div class="flex items-center gap-2 mb-3">
-                  <span class="material-symbols-outlined text-[16px] text-primary">link</span>
-                  <span class="text-[10px] uppercase tracking-[0.15em] font-bold text-slate-400">Sources Behind the Answer</span>
-                </div>
-                <div class="space-y-1.5 text-[13px]">
-                  <div class="flex justify-between"><span class="text-slate-text">G2</span><span class="text-slate-muted">47%</span></div>
-                  <div class="flex justify-between"><span class="text-slate-text">Reddit</span><span class="text-slate-muted">28%</span></div>
-                  <div class="flex justify-between"><span class="text-slate-text">Company blog</span><span class="text-slate-muted">12%</span></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Mentions vs recommendations -->
-            <div class="px-8 py-5 bg-slate-50/50 border-t border-slate-100">
-              <span class="text-[10px] uppercase tracking-[0.15em] font-bold text-slate-400 block mb-3">Mentions vs recommendations</span>
-              <div class="space-y-2 text-[12px]">
-                <div class="flex items-center gap-3">
-                  <span class="text-primary font-semibold w-20">You</span>
-                  <span class="text-slate-text">Mentioned 7 times · Recommended 4 times</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <span class="text-slate-muted w-20">Comp. A</span>
-                  <span class="text-slate-muted">Mentioned 23 times · Recommended 18 times</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <span class="text-slate-muted w-20">Comp. B</span>
-                  <span class="text-slate-muted">Mentioned 14 times · Recommended 9 times</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <!-- Depth Decorative Elements -->
-          <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/5 blur-3xl -z-10"></div>
-          <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-slate-200/20 blur-3xl -z-10"></div>
-        </div>
+        <p class="text-[12px] md:text-[13px] text-slate-muted text-center mt-3 max-w-[460px] mx-auto leading-snug">
+          Compare your AI visibility against 100,000+ similar brands. See exactly where you rank against your peers &mdash; in 60 seconds.
+        </p>
       </div>
     </section>
 

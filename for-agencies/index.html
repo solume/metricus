@@ -249,14 +249,30 @@
         One report per client. No subscription. White-label ready.
       </p>
       <div class="flex flex-col sm:flex-row gap-4">
-        <a href="#agency-toolkit" class="bg-primary text-on-primary text-sm font-semibold px-8 py-3.5 hover:bg-primary-dim transition-colors inline-flex items-center gap-2">
-          Get the Agency Toolkit
+        <a href="#agency-quiz" class="bg-primary text-on-primary text-sm font-semibold px-8 py-3.5 hover:bg-primary-dim transition-colors inline-flex items-center gap-2">
+          Take the Agency Benchmark
           <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
         </a>
-        <a href="/agency-inquiry/" class="border-2 border-primary text-primary text-sm font-semibold px-8 py-3.5 hover:bg-primary hover:text-on-primary transition-colors">
-          Inquire About Volume Pricing
+        <a href="#agency-toolkit" class="border-2 border-primary text-primary text-sm font-semibold px-8 py-3.5 hover:bg-primary hover:text-on-primary transition-colors">
+          Get the Agency Toolkit
         </a>
       </div>
+    </section>
+
+
+    <!-- ========== AGENCY BENCHMARK QUIZ ========== -->
+    <section id="agency-quiz" class="w-full max-w-[1200px] mx-auto px-6 pb-20 md:pb-24">
+      <div data-agency-quiz data-source="for-agencies"></div>
+      <noscript>
+        <div class="max-w-[720px] mx-auto text-center bg-surface p-8 border border-outline-variant/30">
+          <p class="text-[15px] text-slate-muted leading-relaxed font-body-sans">
+            The agency benchmark quiz requires JavaScript. Skip ahead to
+            <a href="#agency-toolkit" class="text-primary font-semibold">the Agency Toolkit</a>
+            or
+            <a href="/agency-inquiry/" class="text-primary font-semibold">inquire about volume pricing</a>.
+          </p>
+        </div>
+      </noscript>
     </section>
 
 
@@ -484,5 +500,7 @@
 </script>
   <script src="/js/email-gate.js" defer></script>
   <script src="/js/reader-pulse-b.js" defer></script>
+  <script src="/js/benchmark-quiz-engine.js" defer></script>
+  <script src="/js/agency-quiz.js" defer></script>
 </body>
 </html>
