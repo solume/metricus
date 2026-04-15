@@ -55,7 +55,8 @@
       '.m-bq__wrap--intro{min-height:auto;border-color:#c7e5d7;box-shadow:0 22px 48px rgba(15,138,98,0.12)}',
       '@media(hover:hover){.m-bq__wrap--intro:hover{transform:translateY(-2px);box-shadow:0 26px 56px rgba(15,138,98,0.15)}}',
       '.m-bq__top{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1.15rem}',
-      '.m-bq__brand{font-family:"Newsreader",Georgia,serif;font-size:2.1rem;line-height:1;color:' + c.primary + ';font-weight:700;letter-spacing:-0.04em}',
+      '.m-bq__brand{display:inline-flex;align-items:center;gap:.5rem;font-family:"Newsreader",Georgia,serif;font-size:1.25rem;line-height:1;color:' + c.text + ';font-weight:400;font-style:italic;letter-spacing:-0.02em}',
+      '.m-bq__brand-icon{width:1.15rem;height:1.15rem;color:' + c.primary + ';flex:none}',
       '.m-bq__meta{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:' + c.textDim + ';text-align:right}',
       '.m-bq__screen{animation:mbqFade .26s ease;min-height:470px;display:flex;flex-direction:column}',
       '.m-bq__screen--intro{min-height:auto}',
@@ -70,6 +71,8 @@
       '.m-bq__lead{font-size:1.08rem;line-height:1.48;margin:0 0 .7rem;color:' + c.text + ';max-width:48rem}',
       '.m-bq__sub{font-size:.98rem;line-height:1.55;margin:0 0 .68rem;color:' + c.textDim + ';max-width:50rem}',
       '.m-bq__introPanel{background:linear-gradient(180deg,#f7fcfa,' + c.accentSoft + ');border:1px solid #b9dccd;padding:.88rem .92rem;display:flex;flex-direction:column;justify-content:space-between;gap:.85rem;box-shadow:0 12px 26px rgba(15,138,98,0.09);min-height:272px}',
+      '.m-bq__introPanel--simple{background:transparent;border:none;box-shadow:none;padding:0;min-height:0;justify-content:center;align-items:center;flex-direction:column}',
+      '.m-bq__btn--big{font-size:1.08rem;padding:1.15rem 1.7rem;min-width:13rem;letter-spacing:-0.01em}',
       '.m-bq__introFlow{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-bottom:.55rem}',
       '.m-bq__introFlowLabel{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:' + c.accent + ';font-weight:800}',
       '.m-bq__introDots{display:inline-flex;gap:.26rem;align-items:center}',
@@ -322,11 +325,18 @@
     }
 
     function resolveQuestionIds(answers) {
+      // Always returns 6 IDs so the progress counter reads "X of 6" throughout
+      // the quiz instead of jumping 5→6 after main_failure is answered.
+      // The q5 slot defaults to q5_discoverability until the branch is chosen;
+      // stepIndex only reaches that slot AFTER main_failure is answered, so the
+      // real branch is always used when rendering.
       var ids = ['org_type', 'segment', 'footprint', 'main_failure'];
+      var q5id = 'q5_discoverability';
       if (answers.main_failure) {
         var discoverabilityAnswers = (cfg.branching && cfg.branching.discoverabilityAnswers) || [];
-        ids.push(discoverabilityAnswers.indexOf(answers.main_failure) !== -1 ? 'q5_discoverability' : 'q5_accuracy');
+        q5id = discoverabilityAnswers.indexOf(answers.main_failure) !== -1 ? 'q5_discoverability' : 'q5_accuracy';
       }
+      ids.push(q5id);
       ids.push('business_impact');
       return ids;
     }
@@ -508,7 +518,12 @@
       function topBar() {
         return '' +
           '<div class="m-bq__top">' +
-            '<div class="m-bq__brand">Metricus</div>' +
+            '<div class="m-bq__brand" aria-label="Metricus">' +
+              '<svg class="m-bq__brand-icon" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">' +
+                '<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>' +
+              '</svg>' +
+              '<span>Metricus</span>' +
+            '</div>' +
             '<div class="m-bq__meta">' + escapeHtml(cfg.metaLabel || 'Benchmark research') + '</div>' +
           '</div>';
       }
@@ -621,7 +636,7 @@
             return '' +
               '<button type="button" class="m-bq__option" data-bq-answer="' + escapeHtml(option.id) + '" data-bq-question="' + escapeHtml(questionId) + '">' +
                 '<span class="m-bq__optionLabel">' + escapeHtml(option.label) + '</span>' +
-                '<span class="m-bq__optionMeta"><span>Select answer</span><span class="m-bq__optionArrow">→</span></span>' +
+                '<span class="m-bq__optionMeta"><span></span><span class="m-bq__optionArrow">→</span></span>' +
               '</button>';
           }).join('');
 
@@ -838,8 +853,18 @@
               };
             });
             state.dataMap = map;
-            state.screen = 'intro';
             tracked(analyticsPrefix + '_VIEW', { DataMode: 'benchmark' });
+            if (root.getAttribute('data-autostart') === '1') {
+              // Skip the intro screen entirely — used when handed off from the
+              // landing quiz, where the user has already committed.
+              state.screen = 'question';
+              state.stepIndex = 0;
+              state.answers = {};
+              tracked(analyticsPrefix + '_START', { Autostart: '1' });
+              trackedGtag('benchmark_quiz_start', { benchmark_key: bootstrap.key, autostart: true });
+            } else {
+              state.screen = 'intro';
+            }
             render();
           })
           .catch(function(err) {
@@ -888,5 +913,9 @@
     }
   }
 
-  global.MetricusBenchmarkQuizEngine = { boot: boot };
+  global.MetricusBenchmarkQuizEngine = {
+    boot: boot,
+    ensureStyle: function(colors) { injectStyle(mergeColors(colors || {})); },
+    mergeColors: mergeColors
+  };
 })(window);
