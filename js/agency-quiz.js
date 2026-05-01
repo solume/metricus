@@ -230,6 +230,7 @@
   }
 
   function track(kind, payload, contact) {
+    if (/_VIEW$/.test(kind)) return;
     try {
       var parts = [kind];
       var extras = payload || {};

@@ -220,6 +220,7 @@
   }
 
   function track(kind, source, payload, contact) {
+    if (/_VIEW$/.test(kind)) return;
     try {
       var extras = payload || {};
       var parts = [kind, 'Source: ' + (source || 'unknown')];
