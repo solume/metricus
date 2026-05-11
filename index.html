@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Visibility For Your Brand — What ChatGPT, Perplexity and Gemini Say About You | Metricus</title>
-  <meta name="description" content="AI visibility for your brand: what AI says, why AI says it, what you can do about it. Free 60-second benchmark against 100,000+ real brands. One-time reports from $99.">
+  <title>AI Visibility Engineering For Your Brand — Measure and Live-Tune Content Against AI | Metricus</title>
+  <meta name="description" content="Engineer your AI visibility. Measure how AI describes your brand, then live-tune your title, meta, and page copy against it. From $99.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://metricusapp.com/">
-  <meta property="og:title" content="AI Visibility For Your Brand — What ChatGPT, Perplexity and Gemini Say About You">
-  <meta property="og:description" content="What AI says about your brand. Why AI says it. What you can do about it. Free 60-second benchmark. One-time reports from $99.">
+  <meta property="og:title" content="AI Visibility Engineering For Your Brand — Measure and Live-Tune Against AI">
+  <meta property="og:description" content="Measure how AI describes you. Live-tune your title, meta, and copy. From $99.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://metricusapp.com/">
   <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="AI Visibility For Your Brand — What ChatGPT, Perplexity and Gemini Say About You">
-  <meta name="twitter:description" content="What AI says about your brand. Why AI says it. What you can do about it. Free 60-second benchmark. One-time reports from $99.">
+  <meta name="twitter:title" content="AI Visibility Engineering For Your Brand — Measure and Live-Tune Against AI">
+  <meta name="twitter:description" content="Measure how AI describes you. Live-tune your title, meta, and copy. From $99.">
   <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
   <!-- Google Tag Manager -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
@@ -190,72 +190,6 @@
       transform: translateY(-4px);
     }
 
-    /* Hero CTA — continuous scale + glow pulse, hover amplifies (doesn't stop), arrow nudges in sync */
-    @keyframes heroCtaPulse {
-      0%, 100% {
-        transform: scale(1);
-        box-shadow:
-          0 14px 32px rgba(45, 62, 80, 0.22),
-          0 0 0 0 rgba(81, 95, 116, 0.55);
-      }
-      50% {
-        transform: scale(1.025);
-        box-shadow:
-          0 22px 48px rgba(45, 62, 80, 0.34),
-          0 0 0 18px rgba(81, 95, 116, 0);
-      }
-    }
-    @keyframes heroCtaPulseHover {
-      0%, 100% {
-        transform: scale(1.01);
-        box-shadow:
-          0 18px 40px rgba(45, 62, 80, 0.32),
-          0 0 0 0 rgba(81, 95, 116, 0.70);
-      }
-      50% {
-        transform: scale(1.045);
-        box-shadow:
-          0 28px 56px rgba(45, 62, 80, 0.44),
-          0 0 0 22px rgba(81, 95, 116, 0);
-      }
-    }
-    @keyframes heroCtaArrow {
-      0%, 100% { transform: translateX(0); }
-      50%      { transform: translateX(4px); }
-    }
-    .hero-cta {
-      position: relative;
-      overflow: hidden;
-      animation: heroCtaPulse 2s ease-in-out infinite;
-      box-shadow: 0 14px 32px rgba(45, 62, 80, 0.22);
-      transform-origin: center;
-      /* Single bright aura — Y locked to 50%, X tracks mouse directly.
-         Compact radius so the hot spot is a distinct blob, not a wash. */
-      background-image: radial-gradient(
-        220px circle at var(--mx, 50%) 50%,
-        rgba(187, 247, 208, 0.85),
-        rgba(52, 211, 153, 0.95) 16%,
-        rgba(16, 185, 129, 0.55) 38%,
-        rgba(16, 185, 129, 0.12) 60%,
-        transparent 78%
-      );
-      isolation: isolate;
-    }
-    .hero-cta > * { position: relative; z-index: 1; }
-    .hero-cta:hover {
-      animation: heroCtaPulseHover 1.6s ease-in-out infinite;
-    }
-    .hero-cta svg {
-      animation: heroCtaArrow 2s ease-in-out infinite;
-    }
-    .hero-cta:hover svg {
-      animation-duration: 1.6s;
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .hero-cta,
-      .hero-cta:hover,
-      .hero-cta svg { animation: none; }
-    }
   </style>
   <script type="application/ld+json">
   {
@@ -263,7 +197,7 @@
     "@type": "Organization",
     "name": "Metricus",
     "url": "https://metricusapp.com",
-    "description": "AI visibility reports for brands — find out what AI says about your brand, and how to fix it.",
+    "description": "AI visibility engineering for your brand: measure how AI describes you, then live-tune your title, meta, and page copy against it.",
     "email": "hello@metricusapp.com",
     "dateModified": "2026-04-10"
   }
@@ -317,7 +251,8 @@
         <a href="/blog/" class="nav-link-blog text-sm text-on-surface-variant hover:text-on-surface transition-colors">Learn</a>
         <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
         <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
-        <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
+        <a href="/benchmark/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Free Benchmark</a>
+        <a href="/studio/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Tune Your Content, Live &rarr;</a>
       </div>
       <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
         <span class="material-symbols-outlined">menu</span>
@@ -337,7 +272,8 @@
       <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
       <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
       <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
-      <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/benchmark/">Free Benchmark</a>
+      <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/studio/">Tune Your Content, Live &rarr;</a>
     </nav>
   </div>
 
@@ -377,106 +313,6 @@
       window.addEventListener('scroll', update, { passive: true });
     })();
 
-    // Hero CTA — continual sine-wave sweep of the aura across the button.
-    // Base speed runs forever (button never idle). Mouse motion (H or V) injects
-    // a temporary frequency boost that decays back to baseline over ~1s.
-    //
-    // Tweakables:
-    //   PHASE_SPEED — radians/frame at baseline. 0.020 ≈ 5s cycle, 0.040 ≈ 2.5s.
-    //   AMPLITUDE   — % of button width. 100 = aura touches edges; 120+ = aura
-    //                 exits the button at extremes (the "swoops off-screen" feel).
-    //   BOOST_SCALE — how much mouse pixel-speed feeds into the boost.
-    //   BOOST_DECAY — per-frame decay of the boost (closer to 1 = longer lived).
-    (function(){
-      var PHASE_SPEED  = 0;       // 0 = no baseline drift; wave only advances on user input
-      var AMPLITUDE    = 35;      // % swing from center. 35 keeps the aura well inside the button at max.
-      var BOOST_SCALE  = 0.0003;  // per-pixel mouse-speed → phase-velocity
-      var SCROLL_SCALE = 0.0002;  // per-pixel scroll-delta → phase-velocity (tune separately from mouse)
-      var BOOST_DECAY  = 0.94;    // per-frame boost decay; phase stops advancing ~1s after input stops
-      var BOOST_MAX    = 0.05;    // caps sweep velocity; ~2s for a half-swing at max boost
-      var AMP_RAMP     = 0.08;    // per-frame amplitude ramp-up rate while input is happening
-      var AMP_FADE     = 0.04;    // per-frame amplitude fade rate after the still-timeout elapses
-      var STILL_MS     = 5000;    // milliseconds of no input before the aura starts returning to center
-
-      function init() {
-        var cta = document.querySelector('.hero-cta');
-        if (!cta) return;
-
-        var phase = 0;
-        var boost = 0;
-        var amplitude = 0;   // tracked separately from AMPLITUDE constant; 0 = centered, AMPLITUDE = full swing
-        var lastX = null, lastY = null;
-        var lastMoveTime = 0;
-        var running = false;
-
-        function tick() {
-          phase += PHASE_SPEED + boost;
-          boost *= BOOST_DECAY;
-
-          var timeSinceMove = performance.now() - lastMoveTime;
-
-          if (boost > 0.001) {
-            // Mouse is actively generating motion — ramp amplitude up to full
-            amplitude = Math.min(amplitude + AMPLITUDE * AMP_RAMP, AMPLITUDE);
-          } else if (timeSinceMove > STILL_MS) {
-            // Past the still-timeout — fade amplitude toward 0 for the smooth return
-            amplitude *= (1 - AMP_FADE);
-          }
-          // else: within the freeze window → amplitude holds at its current value
-
-          var mx = 50 + Math.sin(phase) * amplitude;
-          cta.style.setProperty('--mx', mx.toFixed(2) + '%');
-
-          // Keep ticking while there is any amplitude to render, or boost still decaying.
-          // This covers the active sweep, the 5s freeze, and the return-fade phases.
-          if (amplitude > 0.1 || boost > 0.0002) {
-            requestAnimationFrame(tick);
-          } else {
-            cta.style.setProperty('--mx', '50%');
-            running = false;
-          }
-        }
-
-        function kick() {
-          lastMoveTime = performance.now();
-          if (!running) {
-            running = true;
-            requestAnimationFrame(tick);
-          }
-        }
-
-        document.addEventListener('mousemove', function(e) {
-          if (lastX !== null) {
-            var dx = e.clientX - lastX;
-            var dy = e.clientY - lastY;
-            var speed = Math.sqrt(dx*dx + dy*dy);
-            boost = Math.min(boost + speed * BOOST_SCALE, BOOST_MAX);
-            kick();
-          }
-          lastX = e.clientX;
-          lastY = e.clientY;
-        }, { passive: true });
-
-        // Scroll counts as user input too — feed scroll delta into the same boost.
-        // Covers wheel, trackpad, keyboard (PgDn/Space/arrows), and touch scroll.
-        var lastScrollY = window.scrollY;
-        window.addEventListener('scroll', function() {
-          var currentScrollY = window.scrollY;
-          var delta = Math.abs(currentScrollY - lastScrollY);
-          lastScrollY = currentScrollY;
-          if (delta > 0) {
-            boost = Math.min(boost + delta * SCROLL_SCALE, BOOST_MAX);
-            kick();
-          }
-        }, { passive: true });
-      }
-
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-      } else {
-        init();
-      }
-    })();
   </script>
 
 
@@ -489,50 +325,28 @@
     <!-- ========== HERO SECTION ========== -->
     <section class="w-full max-w-[1200px] mx-auto px-6 min-h-screen flex flex-col items-center justify-center text-center relative z-10">
       <p class="text-[11px] md:text-[12px] uppercase tracking-[0.22em] font-semibold text-primary mb-5 font-body-sans">
-        Free &middot; 60-Second AI Visibility Benchmark
+        AI Visibility Engineering &middot; Inspect, Iterate, Deploy
       </p>
       <h1 class="font-display font-bold text-[44px] leading-[1.05] md:text-[64px] lg:text-[76px] text-slate-text mb-6 md:mb-8 tracking-tight max-w-[900px] text-balance">
-        AI Visibility For Your Brand
+        AI Visibility Engineering For Your Brand
       </h1>
 
-      <!-- Primary CTA: navigate to /benchmark/ -->
+      <!-- Primary CTA: Studio -->
       <div class="w-full max-w-[640px] mx-auto relative z-20 text-center">
-        <a href="/benchmark/" class="hero-cta inline-flex items-center justify-center gap-3 h-16 md:h-[72px] px-10 md:px-14 bg-primary text-white font-semibold text-[17px] md:text-[19px] hover:bg-primary-dim transition-colors group">
-          See your AI visibility score &mdash; free
+        <a href="/studio/" class="inline-flex items-center justify-center gap-3 h-16 md:h-[72px] px-10 md:px-14 bg-primary text-white font-semibold text-[17px] md:text-[19px] hover:bg-primary-dim transition-colors group">
+          Tune Your Content, Live
           <svg class="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M5 12h14M13 5l7 7-7 7"/>
           </svg>
         </a>
-        <p class="text-[12px] md:text-[13px] text-slate-muted text-center mt-3 max-w-[460px] mx-auto leading-snug">
-          Compare your AI visibility against 100,000+ similar brands. See exactly where you rank against your peers &mdash; in 60 seconds.
+        <p class="text-[13px] md:text-[14px] text-slate-muted text-center mt-4 max-w-[460px] mx-auto leading-snug">
+          Or <a href="/benchmark/" class="text-primary font-semibold hover:text-primary-hover underline underline-offset-4 decoration-primary/40 hover:decoration-primary">run the free 60-second benchmark</a> first.
         </p>
       </div>
     </section>
 
 
-    <!-- ========== YOU SEND / YOU GET / WITHIN 24 HOURS STRIP ========== -->
-    <div class="w-full max-w-[1200px] mx-auto px-6 pb-16 relative z-20">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="bg-surface-container-lowest border border-[#E2E8F0] p-6 text-center">
-          <span class="material-symbols-outlined text-primary text-[28px] mb-3 block">upload</span>
-          <p class="font-display font-bold text-lg text-slate-text mb-2">You Send</p>
-          <p class="text-sm text-slate-muted leading-relaxed">Your website and brand name.</p>
-        </div>
-        <div class="bg-surface-container-lowest border border-[#E2E8F0] p-6 text-center">
-          <span class="material-symbols-outlined text-primary text-[28px] mb-3 block">inbox</span>
-          <p class="font-display font-bold text-lg text-slate-text mb-2">You Get</p>
-          <p class="text-sm text-slate-muted leading-relaxed">A report with the exact AI quotes, source pages, competitor gaps, and a ranked fix list.</p>
-        </div>
-        <div class="bg-surface-container-lowest border border-[#E2E8F0] p-6 text-center">
-          <span class="material-symbols-outlined text-primary text-[28px] mb-3 block">schedule</span>
-          <p class="font-display font-bold text-lg text-slate-text mb-2">Within 24 Hours</p>
-          <p class="text-sm text-slate-muted leading-relaxed">One email. The full report. Nothing else to set up.</p>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- ========== RESULTS PROOF BLOCK ========== -->
+    <!-- ========== DOCUMENTED RESULT (moved up) ========== -->
     <div class="w-full max-w-[1200px] mx-auto px-6 pb-24 relative z-20">
       <div class="bg-surface p-10 md:p-16 max-w-3xl mx-auto">
         <p class="text-xs uppercase tracking-widest text-slate-muted mb-4 font-semibold font-body-sans">Documented Result</p>
@@ -557,55 +371,18 @@
     </div>
 
 
-    <!-- ========== INPUT/OUTPUT PROCESS SECTION ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-32 relative z-20 bg-white/50 backdrop-blur-sm pt-16">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
-        <div class="flex flex-col border-t border-[#E2E8F0] pt-8">
-          <span class="material-symbols-outlined text-primary mb-4 text-[28px]">upload</span>
-          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">You Send Your Website</h3>
-          <p class="text-[15px] text-slate-muted leading-relaxed">
-            Your website URL, brand name, and delivery email. That's it. No onboarding, no dashboard, no account to create.
-          </p>
-        </div>
-        <div class="flex flex-col border-t border-[#E2E8F0] pt-8">
-          <span class="material-symbols-outlined text-primary mb-4 text-[28px]">inbox</span>
-          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">Your Report Arrives</h3>
-          <p class="text-[15px] text-slate-muted leading-relaxed">
-            Within 24 hours, you get the exact words AI uses to describe your brand, every wrong fact it repeats, the source pages those answers came from, and who AI recommends instead of you.
-          </p>
-        </div>
-        <div class="flex flex-col border-t border-[#E2E8F0] pt-8">
-          <span class="material-symbols-outlined text-primary mb-4 text-[28px]">checklist</span>
-          <h3 class="font-display font-bold text-[24px] text-slate-text mb-3 leading-tight">You See What to Fix First</h3>
-          <p class="text-[15px] text-slate-muted leading-relaxed">
-            A ranked list of changes to make on your site — with the biggest-impact fixes at the top. Not a score. Not a dashboard. A specific list you can hand to your team.
-          </p>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ========== SAMPLE REPORT LINK ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-16 relative z-20 text-center">
-      <a href="sample-ai-visibility-report/" class="inline-flex items-center gap-2 text-[16px] md:text-[18px] text-primary font-semibold hover:text-primary-hover transition-colors group">
-        See what a report looks like: Sample Report
-        <span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-      </a>
-    </section>
-
-
     <!-- ========== PRICING SUMMARY ========== -->
     <section id="pricing" class="py-16 md:py-24 bg-surface relative">
       <div class="absolute inset-0 bg-grid-dots pointer-events-none"></div>
       <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
 
         <div class="mb-12">
-          <p class="text-xs uppercase tracking-widest text-slate-muted mb-4 font-semibold font-body-sans">Pay-Per-Report Pricing</p>
+          <p class="text-xs uppercase tracking-widest text-slate-muted mb-4 font-semibold font-body-sans">Want it done for you</p>
           <h2 class="font-display text-4xl md:text-5xl leading-[0.95] text-on-surface mb-4">
-            Three reports. Pick the question you need answered.
+            One-time reports. No subscription.
           </h2>
           <p class="text-base text-on-surface-variant leading-relaxed font-body-sans max-w-2xl">
-            Every report is one-time, delivered within 24 hours, and built to be understood without reading a feature matrix.
+            Send your URL. Get the audit, the competitor gaps, and the ranked fix list back in 24 hours.
           </p>
         </div>
 
@@ -654,6 +431,10 @@
           </a>
         </div>
 
+        <p class="mt-6 text-center text-[13px] text-on-surface-variant font-body-sans">
+          Useful-report guarantee &middot; if it doesn&rsquo;t give you clear next actions, we refund it.
+        </p>
+
         <!-- Agency Volume CTA -->
         <div class="mt-12 bg-surface-container-low p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
@@ -666,89 +447,23 @@
         </div>
       </div>
     </section>
-
-
-    <!-- ========== MONEY-BACK GUARANTEE ========== -->
-    <section class="py-16 md:py-20 relative bg-white">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="bg-surface p-10 md:p-16 max-w-3xl mx-auto text-center">
-          <span class="material-symbols-outlined text-primary text-5xl mb-6 block">verified</span>
-          <h2 class="font-headline text-3xl md:text-4xl text-on-surface mb-4">Useful Report Guarantee</h2>
-          <p class="text-lg text-on-surface-variant leading-relaxed mb-6 font-body-sans">
-            If your report doesn't give you clear next actions, we refund it. No questions asked.
-          </p>
-          <p class="text-sm text-on-surface-variant leading-relaxed max-w-xl mx-auto font-body-sans">
-            The point is to give you a report you can act on — not another dashboard to check.
-          </p>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ========== FINAL CTA (BENTO GRID) ========== -->
-    <section class="py-16 md:py-20 bg-surface relative">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-          <div class="md:col-span-8 bg-surface-container-lowest p-10 md:p-14 flex flex-col justify-center">
-            <h2 class="font-headline text-3xl md:text-4xl text-on-surface mb-4">
-              See what AI says about your brand, why it says it, and what to fix first.
-            </h2>
-            <p class="text-base text-on-surface-variant leading-relaxed mb-8 max-w-xl font-body-sans">
-              One report. No subscription. You send your website, Metricus sends back the findings. Start with a report, then decide if ongoing monitoring is worth it.
-            </p>
-            <div>
-              <a href="/get-report/" class="inline-block bg-primary text-on-primary text-xs font-semibold uppercase tracking-widest px-8 py-3.5 hover:bg-primary-hover transition-colors">
-                Get Your AI Visibility Report
-              </a>
-            </div>
-          </div>
-          <div class="md:col-span-4 bg-primary text-on-primary p-10 md:p-14 flex flex-col justify-center">
-            <span class="material-symbols-outlined text-4xl mb-6 text-on-primary/80">architecture</span>
-            <h3 class="font-headline text-2xl mb-3">Pay Per Report</h3>
-            <p class="text-sm text-on-primary/70 leading-relaxed font-body-sans">
-              No subscription, no platform fees. Order one report or one hundred — pay per audit, get results.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
 
-  <!-- ========== LEARN MORE ========== -->
-  <section class="py-16 md:py-20 bg-white border-t border-[#E2E8F0]">
+  <!-- ========== LEARN MORE — compact link row ========== -->
+  <section class="py-10 md:py-12 bg-white border-t border-[#E2E8F0]">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <h2 class="font-headline text-3xl md:text-4xl text-on-surface mb-12">Learn More About AI Visibility</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">Understand</p>
-          <ul class="space-y-3 text-[15px]">
-            <li><a href="/blog/ai-visibility-how-brands-show-up/" class="text-primary hover:text-primary-hover transition-colors">What Is AI Visibility?</a></li>
-            <li><a href="/blog/ai-visibility-tools-worth-it-2026/" class="text-primary hover:text-primary-hover transition-colors">AI Visibility Tools Compared</a></li>
-            <li><a href="/geo-knowledge-base/" class="text-primary hover:text-primary-hover transition-colors">GEO Knowledge Base</a> — 81 research clusters</li>
-            <li><a href="/brand-accuracy-knowledge-base/" class="text-primary hover:text-primary-hover transition-colors">AI Brand Accuracy Guide</a> — 48 clusters</li>
-            <li><a href="/ai-brand-alignment-guide/" class="text-primary hover:text-primary-hover transition-colors">Alignment Framework</a> — 69 clusters</li>
-            <li><a href="/ai-platform-comparison-brands/" class="text-primary hover:text-primary-hover transition-colors">Platform Intelligence Guide</a> — 63 clusters</li>
-            <li><a href="/ai-buyer-behavior-research/" class="text-primary hover:text-primary-hover transition-colors">Buyer Behavior Research</a> — 50 clusters</li>
-          </ul>
-        </div>
-        <div>
-          <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">Take Action</p>
-          <ul class="space-y-3 text-[15px]">
-            <li><a href="/blog/ai-visibility-action-plan/" class="text-primary hover:text-primary-hover transition-colors">AI Visibility Action Plan</a></li>
-            <li><a href="/blog/90-day-ai-visibility-plan/" class="text-primary hover:text-primary-hover transition-colors">90-Day AI Visibility Playbook</a></li>
-            <li><a href="/blog/agency-guide-ai-visibility-audits/" class="text-primary hover:text-primary-hover transition-colors">AI Visibility for Agencies</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4">About Metricus</p>
-          <ul class="space-y-3 text-[15px]">
-            <li><a href="/methodology/" class="text-primary hover:text-primary-hover transition-colors">Methodology</a></li>
-            <li><a href="/press/" class="text-primary hover:text-primary-hover transition-colors">Press Kit</a></li>
-            <li><a href="/sample-ai-visibility-report/" class="text-primary hover:text-primary-hover transition-colors">Sample Report</a></li>
-            <li><a href="/results/" class="text-primary hover:text-primary-hover transition-colors">Results</a></li>
-          </ul>
-        </div>
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-4 font-body-sans">Learn more</p>
+      <div class="flex flex-wrap gap-x-6 gap-y-2 text-[14px]">
+        <a href="/blog/ai-visibility-how-brands-show-up/" class="text-primary hover:text-primary-hover transition-colors">What Is AI Visibility?</a>
+        <a href="/blog/ai-visibility-tools-worth-it-2026/" class="text-primary hover:text-primary-hover transition-colors">Tools Compared</a>
+        <a href="/blog/ai-visibility-action-plan/" class="text-primary hover:text-primary-hover transition-colors">Action Plan</a>
+        <a href="/geo-knowledge-base/" class="text-primary hover:text-primary-hover transition-colors">GEO Knowledge Base</a>
+        <a href="/ai-platform-comparison-brands/" class="text-primary hover:text-primary-hover transition-colors">Platform Intelligence</a>
+        <a href="/methodology/" class="text-primary hover:text-primary-hover transition-colors">Methodology</a>
+        <a href="/sample-ai-visibility-report/" class="text-primary hover:text-primary-hover transition-colors">Sample Report</a>
+        <a href="/results/" class="text-primary hover:text-primary-hover transition-colors">Results</a>
+        <a href="/press/" class="text-primary hover:text-primary-hover transition-colors">Press</a>
       </div>
     </div>
   </section>
