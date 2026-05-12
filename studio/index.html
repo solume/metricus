@@ -1783,6 +1783,159 @@
     border-bottom:1px dashed #1f2533}
   #rec-suggest .sugg:hover, #rec-suggest .sugg.hl{background:#16243a;color:var(--ink)}
   #rec-suggest .sugg b{color:var(--accent)}
+
+  /* ============================================================
+     v7 — linear-flow layout
+     ============================================================ */
+  .v7{display:block;width:100%;max-width:1100px;margin:0 auto;padding:18px 22px 60px}
+  .v7-flow{display:flex;flex-direction:column;gap:28px}
+  .v7-stage{position:relative;transition:opacity .25s ease;padding:18px 0 16px;border-top:1px solid var(--line)}
+  .v7-stage:first-child{border-top:none;padding-top:8px}
+  .v7-stage.v7-dim{opacity:.28;pointer-events:none;filter:saturate(.3)}
+  .v7-stage-inner{display:flex;flex-direction:column;gap:10px}
+  .v7-stage-url-inner{align-items:flex-start;padding-top:24px;max-width:820px;gap:14px}
+  .v7-substage{display:flex;flex-direction:column;gap:8px;padding-top:14px}
+  .v7-substage-hero{background:#0d1320;border:1px solid var(--line);border-radius:6px;padding:14px 16px;margin:6px 0 2px;box-shadow:0 0 0 1px rgba(124,193,255,.06)}
+  .v7-stage-eyebrow{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-dim);font-weight:600}
+  .v7-stage-heading{font-size:22px;font-weight:500;color:var(--ink);margin:0;line-height:1.2;letter-spacing:-.005em}
+  .v7-stage-desc{font-size:12px;color:var(--ink-dim);margin:0;line-height:1.5}
+  .v7-stage-status{font-size:11px;color:var(--ink-dim);min-height:14px;font-family:inherit}
+  .v7-stage-status.v7-err{color:var(--bad)}
+  .v7-stage-actions{display:flex;align-items:center;gap:12px;margin-top:6px;flex-wrap:wrap}
+  .v7-action-hint{font-size:11px;color:var(--ink-dim)}
+  .v7-lbl{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-dim);font-weight:600;display:block;margin-bottom:4px;margin-top:8px}
+  .v7-lbl-dim{color:var(--ink-dim);font-weight:400;text-transform:none;letter-spacing:0;opacity:.7}
+
+  /* Loading block */
+  .v7-stage.v7-loading-mode .v7-stage-content,
+  .v7-stage.v7-loading-mode .v7-prose-grid,
+  .v7-stage.v7-loading-mode .v7-substage{display:none}
+  .v7-stage-loading{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 0;min-height:140px;border:1px dashed var(--line);border-radius:4px;background:#0b0e14;gap:6px}
+  .v7-stage-loading[hidden]{display:none}
+  .v7-stage-loading .sw-agent-icon{margin:0 0 8px}
+  .v7-loading-status{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);font-weight:600;font-family:"JetBrains Mono",ui-monospace,monospace}
+  .v7-loading-fact{font-size:12px;color:var(--ink-dim);max-width:520px;text-align:center;margin-top:6px;line-height:1.5;opacity:0;transform:translateY(4px);transition:opacity .35s,transform .35s}
+  .v7-loading-fact.show{opacity:1;transform:translateY(0)}
+  .v7-loading-fact-eyebrow{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-dim);opacity:.6;margin-top:14px}
+
+  /* buttons */
+  .v7-btn-primary{background:var(--accent);color:#0b0e14;border:none;padding:9px 18px;font-size:12px;font-weight:600;cursor:pointer;border-radius:3px;letter-spacing:.02em;transition:filter .15s,opacity .15s}
+  .v7-btn-primary:hover:not(:disabled){filter:brightness(1.1)}
+  .v7-btn-primary:disabled{opacity:.4;cursor:not-allowed}
+  .v7-btn-secondary{background:transparent;color:var(--ink);border:1px solid var(--line);padding:8px 14px;font-size:12px;font-weight:500;cursor:pointer;border-radius:3px;letter-spacing:.02em;transition:background .15s,border-color .15s}
+  .v7-btn-secondary:hover:not(:disabled){background:#16243a;border-color:var(--accent)}
+  .v7-btn-secondary:disabled{opacity:.4;cursor:not-allowed}
+
+  /* stage 1 url */
+  .v7-url-form{display:flex;gap:8px;width:100%;max-width:680px;margin-top:4px}
+  .v7-url-input{flex:1;background:#0b0e14;color:var(--ink);border:1px solid var(--line);padding:11px 14px;font-size:13px;font-family:"JetBrains Mono",ui-monospace,monospace;border-radius:3px;outline:none;transition:border-color .15s}
+  .v7-url-input:focus{border-color:var(--accent)}
+
+  /* stage 2 prompt */
+  .v7-prompt-input{width:100%;max-width:720px;background:#0b0e14;color:var(--ink);border:1px solid var(--line);padding:10px 12px;font-size:13px;font-family:inherit;border-radius:3px;outline:none;resize:vertical;line-height:1.5}
+  .v7-prompt-input:focus{border-color:var(--accent)}
+
+  /* Stage 2 — brief blocks (prompt + creative, balanced weight) */
+  .v7-brief-block{display:flex;flex-direction:column;gap:6px;padding:14px 0}
+  .v7-brief-block + .v7-brief-block{border-top:1px dashed #1a1f2c}
+  .v7-sub-eyebrow{font-size:11px;font-weight:600;color:var(--ink);letter-spacing:.02em;text-transform:none}
+  .v7-sub-desc{font-size:12px;color:var(--ink-dim);margin:0 0 6px;line-height:1.5}
+
+  .v7-eyebrow-aside{text-transform:none;letter-spacing:0;color:var(--ink-dim);font-weight:400;font-size:10px;margin-left:2px;opacity:.75}
+  /* mini controls in the with-your-page prose head */
+  .v7-heart-mini{background:transparent;border:1px solid var(--line);color:var(--ink-dim);padding:3px 8px;font-size:11px;font-weight:500;cursor:pointer;border-radius:3px;transition:color .15s,border-color .15s,background .15s;display:inline-flex;align-items:center;gap:4px}
+  .v7-heart-mini:hover{color:#ff8a9b;border-color:#5a2a35}
+  .v7-heart-mini.v7-saved{color:#ff5577;border-color:#5a2a35;background:#1a0e14}
+  .v7-heart-glyph{font-size:12px;line-height:1}
+  .v7-heart-lbl{font-size:10px}
+  .v7-rerun-mini{background:transparent;border:1px solid var(--line);color:var(--ink-dim);padding:3px 8px;font-size:11px;font-weight:500;cursor:pointer;border-radius:3px;transition:color .15s,border-color .15s,background .15s}
+  .v7-rerun-mini:hover{color:var(--accent);border-color:var(--accent)}
+  .v7-stale-badge{display:inline-block;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#c97a45;font-weight:600;font-family:"JetBrains Mono",ui-monospace,monospace;padding:4px 10px;background:rgba(201,122,69,.06);border:1px solid rgba(201,122,69,.25);border-radius:2px;margin:8px 0 6px}
+
+  /* stage 3 queries */
+  .v7-chip-list{display:flex;flex-wrap:wrap;gap:6px;min-height:32px}
+  .v7-chip{display:inline-flex;align-items:center;gap:4px;background:#0b0e14;border:1px solid var(--line);border-radius:14px;padding:4px 8px 4px 12px;font-size:12px;color:var(--ink);transition:border-color .15s}
+  .v7-chip:focus-within{border-color:var(--accent)}
+  .v7-chip.v7-chip-edited{border-color:var(--accent)}
+  .v7-chip-text{outline:none;background:transparent;border:none;color:inherit;font:inherit;min-width:60px;padding:0}
+  .v7-chip-thumb{background:transparent;border:none;color:var(--ink-dim);cursor:pointer;font-size:11px;padding:2px 4px;opacity:.4;transition:opacity .15s}
+  .v7-chip:hover .v7-chip-thumb{opacity:.7}
+  .v7-chip-thumb.v7-active{opacity:1;color:var(--ink)}
+  .v7-chip-thumb.v7-active.v7-down{color:var(--bad)}
+  .v7-chip-x{background:transparent;border:none;color:var(--ink-dim);cursor:pointer;font-size:14px;line-height:1;padding:0 2px 0 4px;transition:color .15s}
+  .v7-chip-x:hover{color:var(--bad)}
+  .v7-chip-add{background:#0b0e14;color:var(--ink);border:1px dashed var(--line);padding:6px 12px;font-size:12px;font-family:inherit;border-radius:14px;outline:none;width:280px;max-width:100%;margin-top:4px;transition:border-color .15s}
+  .v7-chip-add:focus{border-color:var(--accent);border-style:solid}
+
+  /* stage 4 prose */
+  .v7-prose-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:920px){.v7-prose-grid{grid-template-columns:1fr}}
+  .v7-prose-col{background:#0b0e14;border:1px solid var(--line);border-radius:4px;display:flex;flex-direction:column;min-height:120px}
+  .v7-prose-col.v7-target{border-color:#2a3a52}
+  .v7-prose-head{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line);gap:10px;flex-wrap:wrap}
+  .v7-prose-title{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-dim);font-weight:600}
+  .v7-prose-title.v7-target-title{color:var(--ink)}
+  .v7-prose-head-actions{display:flex;align-items:center;gap:6px}
+  .v7-prose-body{padding:14px;max-height:50vh;overflow:auto;font-size:13px;line-height:1.55;color:var(--ink-dim)}
+  .v7-prose-body.v7-loading{display:flex;align-items:center;justify-content:center;min-height:120px;color:var(--ink-dim);font-size:12px;font-style:italic}
+  .v7-prose-body strong{color:var(--ink);font-weight:600}
+  .v7-prose-body .v7-cite{color:var(--accent);font-size:10px;vertical-align:super;text-decoration:none;cursor:default}
+  .v7-prose-body details{margin-top:10px;font-size:12px}
+  .v7-prose-body details summary{cursor:pointer;color:var(--ink-dim);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:4px 0}
+  .v7-thumb{background:transparent;border:1px solid transparent;color:var(--ink-dim);cursor:pointer;font-size:13px;padding:2px 6px;border-radius:3px;opacity:.5;transition:opacity .15s,background .15s}
+  .v7-thumb:hover{opacity:1}
+  .v7-thumb.v7-active{opacity:1;background:#16243a;border-color:var(--line)}
+  .v7-thumb.v7-down.v7-active{background:#2a1a1a;border-color:#5a2a2a}
+  .v7-heart{background:transparent;border:1px solid transparent;color:var(--ink-dim);cursor:pointer;font-size:15px;padding:2px 6px;border-radius:3px;transition:color .15s,background .15s}
+  .v7-heart:hover{color:#ff6b8a}
+  .v7-heart.v7-saved{color:#ff5577}
+
+  /* stage 5 unified table */
+  .v7-results-table-wrap{margin-top:18px;display:flex;flex-direction:column;gap:8px}
+  .v7-unified-table{width:100%;border-collapse:collapse;font-size:12px;font-family:"JetBrains Mono",ui-monospace,monospace}
+  .v7-unified-table thead th{text-align:left;color:var(--ink-dim);font-weight:500;font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:6px 8px;border-bottom:1px solid var(--line)}
+  .v7-unified-table thead th.v7-num{text-align:right}
+  .v7-unified-table tbody td{padding:8px;border-bottom:1px solid #131820;vertical-align:middle}
+  .v7-unified-table tbody td.v7-num{text-align:right;color:var(--ink-dim)}
+  .v7-unified-table tbody tr{transition:background .15s}
+  .v7-unified-table tbody tr.v7-target td:first-child{border-left:4px solid var(--accent)}
+  .v7-unified-table tbody tr.v7-target{background:#13202e}
+  .v7-unified-table tbody tr.v7-target td{color:var(--ink)}
+  .v7-gutter{width:32px;min-width:32px;padding:4px;text-align:center;border-right:1px solid #131820}
+  .v7-gutter-track{display:flex;flex-direction:column;align-items:center;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:9px;line-height:1.1;color:var(--ink-dim)}
+  .v7-gutter-arrow{font-size:11px;margin:1px 0}
+  .v7-gutter-arrow.v7-up{color:var(--good)}
+  .v7-gutter-arrow.v7-down{color:var(--bad)}
+  .v7-gutter-arrow.v7-same{color:var(--ink-dim);opacity:.5}
+  .v7-callout{display:inline-block;font-weight:600;font-size:11px;color:var(--good);background:rgba(126,231,135,.08);border:1px solid rgba(126,231,135,.25);padding:2px 8px;border-radius:3px;margin-left:8px;letter-spacing:.02em}
+  .v7-callout.v7-callout-down{color:var(--bad);background:rgba(255,123,114,.08);border-color:rgba(255,123,114,.25)}
+  .v7-callout.v7-callout-new{color:var(--accent);background:rgba(124,193,255,.08);border-color:rgba(124,193,255,.25)}
+  .v7-callout.v7-callout-same{color:var(--ink-dim);background:transparent;border-color:var(--line)}
+  .v7-baseline-sub{font-size:10px;color:var(--ink-dim);opacity:.7;margin-left:4px}
+  .v7-table-empty{padding:24px;text-align:center;color:var(--ink-dim);font-style:italic;font-size:13px}
+
+  /* creative editor inputs */
+  .v7-cr-input{background:#0b0e14;color:var(--ink);border:1px solid var(--line);padding:9px 12px;font-size:13px;font-family:inherit;border-radius:3px;outline:none;width:100%;line-height:1.5}
+  .v7-cr-input:focus{border-color:var(--accent)}
+
+  /* bottom bar */
+  .v7-bottom-bar{display:flex;justify-content:space-between;align-items:center;margin-top:32px;padding:16px 0;border-top:1px solid var(--line);gap:16px;flex-wrap:wrap}
+  .v7-saved-pill{font-size:12px}
+  .v7-saved-pill summary{cursor:pointer;color:var(--ink-dim);padding:6px 10px;border:1px solid var(--line);border-radius:14px;display:inline-block;list-style:none;outline:none}
+  .v7-saved-pill summary::-webkit-details-marker{display:none}
+  .v7-saved-pill[open] summary{background:#16243a;color:var(--ink)}
+  .v7-saved-pill #v7-saved-count{color:var(--ink);font-weight:600}
+  .v7-saved-list{margin-top:8px;display:flex;flex-direction:column;gap:6px;max-height:240px;overflow:auto;border:1px solid var(--line);border-radius:4px;padding:8px}
+  .v7-saved-row{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:11px;padding:4px 6px;border-radius:2px}
+  .v7-saved-row:hover{background:#16243a}
+  .v7-saved-row .v7-saved-title{color:var(--ink);flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .v7-saved-row .v7-saved-delta{color:var(--accent);font-family:"JetBrains Mono",ui-monospace,monospace;font-size:10px}
+  .v7-saved-row .v7-saved-x{background:transparent;border:none;color:var(--ink-dim);cursor:pointer;font-size:13px;padding:0 4px}
+  .v7-saved-row .v7-saved-x:hover{color:var(--bad)}
+
+  /* loading dots */
+  .v7-dots::after{content:"";display:inline-block;width:1em;text-align:left;animation:v7-dots 1.2s infinite}
+  @keyframes v7-dots{0%{content:""}25%{content:"."}50%{content:".."}75%{content:"..."}100%{content:""}}
 </style>
 </head>
 <body>
@@ -1797,41 +1950,93 @@
 </header>
 
 <main>
-  <!-- SIMPLE TAB v6 — prompt investigation workbench -->
-  <section class="panel tab-panel" data-tab-panel="simple">
-    <div class="simple-workbench">
-      <div class="sw-grid">
-        <!-- LEFT PANEL: prompt GUI -->
-        <aside class="sw-left">
-          <div class="sw-field">
-            <label class="sw-label" for="sw-prompt">Prompt <span class="sw-counter" id="sw-prompt-counter">0 / 5000</span></label>
-            <textarea id="sw-prompt" rows="5" maxlength="5000" placeholder="the customer query you want to investigate — e.g. best niacinamide serum for sensitive skin"></textarea>
-          </div>
-          <div class="sw-field">
-            <label class="sw-label" for="sw-brand">Brand</label>
-            <textarea id="sw-brand" rows="5" placeholder="your brand + product (leave blank for generic AI response) — e.g. Bareen Cosmetics — Korean glass-skin niacinamide serum"></textarea>
-          </div>
-          <div class="sw-actions">
-            <button class="sw-run" id="sw-run">Run prediction for this prompt</button>
-            <span class="sw-run-hint" id="sw-run-hint">⌘+Enter to ask</span>
-          </div>
-        </aside>
-        <!-- RIGHT PANEL: response + per-brand pCTR -->
-        <main class="sw-right">
-          <div id="sw-result">
-            <div class="sw-result-empty">
-              <div class="sw-fact-wrap">
-                <div class="sw-fact-eyebrow">did you know</div>
-                <p class="sw-fact-text show" id="sw-fact-empty"></p>
-              </div>
+  <!-- v7 — linear-flow operator workbench -->
+  <section class="v7">
+    <div class="v7-flow" id="v7-flow">
+
+      <div class="v7-stage v7-stage-url" id="v7-stage-url" data-stage="url">
+        <div class="v7-stage-inner v7-stage-url-inner">
+          <div class="v7-stage-eyebrow">1 · brief</div>
+          <h2 class="v7-stage-heading">What page are we directing?</h2>
+          <p class="v7-sub">See how AI describes your brand · then shape it.</p>
+          <form class="v7-url-form" id="v7-url-form" autocomplete="off">
+            <input type="text" id="v7-url" class="v7-url-input" placeholder="your-brand.com/product" spellcheck="false" autocapitalize="off">
+            <button type="submit" class="v7-btn-primary" id="v7-analyze">Begin analysis →</button>
+          </form>
+          <div class="v7-stage-status" id="v7-stage-url-status"></div>
+        </div>
+      </div>
+
+      <div class="v7-stage v7-stage-prompt v7-dim" id="v7-stage-prompt" data-stage="prompt" hidden>
+        <div class="v7-stage-inner">
+          <div class="v7-stage-eyebrow">2 · the brief</div>
+          <div class="v7-stage-loading" id="v7-stage-prompt-loading" hidden></div>
+          <div class="v7-stage-content" id="v7-stage-prompt-content">
+
+            <div class="v7-brief-block">
+              <div class="v7-sub-eyebrow">what your customers ask to AI</div>
+              <p class="v7-sub-desc">a question they'd type into ChatGPT, Perplexity, or Gemini.</p>
+              <textarea id="v7-prompt" class="v7-prompt-input" rows="3" placeholder="best niacinamide serum for sensitive skin"></textarea>
+            </div>
+
+            <div class="v7-brief-block">
+              <div class="v7-sub-eyebrow">how your page appears in AI's results</div>
+              <p class="v7-sub-desc">the title and description AI sees when it cites your page. you'll mainly iterate on these to direct how AI describes you.</p>
+              <label class="v7-lbl" for="v7-cr-title">page title</label>
+              <input type="text" id="v7-cr-title" class="v7-cr-input" maxlength="160" placeholder="how AI would name your page">
+              <label class="v7-lbl" for="v7-cr-snippet">description</label>
+              <textarea id="v7-cr-snippet" class="v7-cr-input" maxlength="500" rows="3" placeholder="how AI would describe your page in one sentence"></textarea>
+            </div>
+
+            <div class="v7-stage-actions">
+              <button class="v7-btn-primary" id="v7-to-queries">Continue with this brief →</button>
+              <span class="v7-action-hint">⌘+Enter</span>
             </div>
           </div>
-        </main>
+          <div class="v7-stage-status" id="v7-stage-prompt-status"></div>
+        </div>
       </div>
+
+      <div class="v7-stage v7-stage-queries v7-dim" id="v7-stage-queries" data-stage="queries" hidden>
+        <div class="v7-stage-inner">
+          <div class="v7-stage-eyebrow">3 · what AI searches for</div>
+          <p class="v7-stage-desc">the searches AI would run before answering. edit, add, remove.</p>
+          <div class="v7-stage-loading" id="v7-stage-queries-loading" hidden></div>
+          <div class="v7-stage-content" id="v7-stage-queries-content">
+            <div class="v7-chip-list" id="v7-chip-list"></div>
+            <input type="text" class="v7-chip-add" id="v7-chip-add" placeholder="+ add a search and press enter">
+            <div class="v7-stage-actions">
+              <button class="v7-btn-primary" id="v7-run-comparison">See AI's answer →</button>
+              <span class="v7-action-hint">with and without your page</span>
+            </div>
+          </div>
+          <div class="v7-stage-status" id="v7-stage-queries-status"></div>
+        </div>
+      </div>
+
+      <div class="v7-stage v7-stage-results v7-dim" id="v7-stage-results" data-stage="results" hidden>
+        <div class="v7-stage-inner">
+          <div class="v7-stage-eyebrow">4 · AI's answer · with and without your page</div>
+          <div class="v7-stage-loading" id="v7-stage-results-loading" hidden></div>
+          <div class="v7-prose-grid" id="v7-prose-grid"></div>
+
+          <div class="v7-substage">
+            <div class="v7-stage-eyebrow">5 · how AI sees you <span class="v7-eyebrow-aside">(in the results above)</span></div>
+            <div id="v7-unified-table"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="v7-bottom-bar" id="v7-bottom-bar" hidden>
+        <details class="v7-saved-pill" id="v7-saved-pill">
+          <summary><span id="v7-saved-count">0</span> <span class="v7-lbl-dim">takes saved</span></summary>
+          <div class="v7-saved-list" id="v7-saved-list"></div>
+        </details>
+        <button class="v7-btn-primary" id="v7-export">Export brief ↓</button>
+      </div>
+
     </div>
   </section>
-
-
 </main>
 
 <footer class="site-footer">
@@ -1852,16 +2057,42 @@
 
 
 <script>
-// Metricus Studio — sole client. All pipeline + telemetry goes to hosted workers.
+// Metricus Studio v7 — linear-flow operator workbench.
+// Single-file client; calls two hosted Cloudflare workers (pipeline + telemetry).
 'use strict';
 
+// ============================================================
+// State
+// ============================================================
+
 const STATE = {
-  keywords: [], filtered: [], selected: null,
-  lastPrompt: "", lastAI: "", lastPromptId: null, lastPredPctr: null,
-  hoverTimer: null, hoverStart: null, hoverKw: null,
+  stage: "url",                  // "url" | "prompt" | "queries" | "results"
+  url: "",
+  brandContext: null,            // { resolved_name, source_url, title, description } | null
+  promptSuggestion: "",
+  prompt: "",
+  queries: [],                   // current editable list
+  originalQueries: [],           // returned from baseline (used to detect edits)
+  queryThumbs: {},               // { query: "up" | "down" | null }
+  siteToggle: false,
+  baselineResult: null,          // packed result: { distill, final, citations, queries, warnings }
+  interleavedResult: null,       // packed result (interleaved or composed-with-sandbox)
+  creative: { title: "", snippet: "", url: "" },
+  creativeBaseline: { title: "", snippet: "" },  // what was last saved/run
+  savedCreatives: [],
+  unsavedAfterSave: false,       // for the stale badge next to the heart
+  aiThumbs: { baseline: null, interleaved: null },
+  runStartedAt: null,
 };
 
+// ============================================================
+// Constants + utils
+// ============================================================
+
+const METRICUS_STUDIO_URL = "https://metricus-studio.red-hill-a87d.workers.dev/";
 const SW_LOGS_URL = "https://metricus-studio-logs.red-hill-a87d.workers.dev/";
+const SAVED_KEY = "metricus_saved";
+
 const SW_UID = (() => {
   let u = localStorage.getItem("metricus_uid");
   if (!u) {
@@ -1873,8 +2104,8 @@ const SW_UID = (() => {
 })();
 const SW_SID = (crypto.randomUUID && crypto.randomUUID()) ||
                ("sid-" + Math.random().toString(36).slice(2) + Date.now().toString(36));
+
 function swLog(event, value) {
-  // fire-and-forget POST to the studio logs worker
   try {
     fetch(SW_LOGS_URL, {
       method: "POST",
@@ -1885,25 +2116,39 @@ function swLog(event, value) {
   } catch {}
 }
 
-function fmt(n, d=2) {
+function fmt(n, d = 2) {
   if (n === null || n === undefined || isNaN(n)) return "—";
-  if (Math.abs(n) >= 1000) return n.toLocaleString(undefined,{maximumFractionDigits:0});
+  if (Math.abs(n) >= 1000) return n.toLocaleString(undefined, { maximumFractionDigits: 0 });
   return Number(n).toFixed(d);
 }
 
-function escapeHtml(s){return s.replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function escapeHtml(s) {
+  return String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
 
-const SW_FACTS = [
-  "Tip: paste a product URL into the Brand field — Metricus auto-scrapes JSON-LD, page title, and meta description.",
-  "Tip: click any recommendation card to expand its bullets and read the AI's reasoning.",
-  "Tip: after a run, click ▸ Brand context at the top of the result to edit what we sent to the AI without re-scraping.",
-  "Tip: the colored bar is the predicted CTR; the small gray tick behind it is the smoothed category average.",
-  "Tip: leave the Brand field blank to see the generic AI answer with no context injected.",
-  "Tip: ⌘ + Enter runs your prompt — no need to reach for the mouse.",
-  "Tip: every result is matched against a category cluster — see which one in the eyebrow above the cards.",
-  "Tip: the prompt counter turns orange near 4,500 chars and red at 5,000 — Metricus caps prompts at 5,000.",
-  "Tip: the full AI response is collapsed under ▸ Show full AI response — products are the headline, prose is the appendix.",
-];
+function domainFromUrl(u) {
+  try {
+    const url = new URL(u);
+    return url.hostname.replace(/^www\./, "");
+  } catch {
+    const m = String(u || "").match(/(?:https?:\/\/)?(?:www\.)?([a-z0-9][a-z0-9-]*(?:\.[a-z0-9-]+)+)/i);
+    return m ? m[1].toLowerCase() : "";
+  }
+}
+
+function newId() {
+  return (crypto.randomUUID && crypto.randomUUID()) || ("id-" + Math.random().toString(36).slice(2));
+}
+
+function arraysEqual(a, b) {
+  if (a.length !== b.length) return false;
+  for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) return false;
+  return true;
+}
+
+// ============================================================
+// Loading block — agent icon + rotating fact
+// ============================================================
 
 const SW_AGENT_ICON_HTML = `
   <svg class="sw-agent-icon" viewBox="0 0 80 24" width="80" height="24" aria-hidden="true">
@@ -1913,147 +2158,68 @@ const SW_AGENT_ICON_HTML = `
   </svg>
 `;
 
+const SW_FACTS = [
+  "the side-by-side panels show how AI describes the category today, and how it would describe it if your page surfaced.",
+  "the chips are searches you can shape — edit inline, add your own, remove ones that are off.",
+  "the title and snippet shape how AI would describe your page — direct them like ad copy.",
+  "the with-your-page column is the future state: what AI would say after you ship.",
+  "the table sorts by your with-your-page result — the version of reality you're directing toward.",
+  "save a take with the heart; takes you save get bundled into the brief on export.",
+  "the small 'changed' tag means your take is newer than what you saved. save again to capture it.",
+  "your edits don't change your live page — they let you preview what AI would say if you shipped them.",
+  "the colored stripe on each row is per-brand — the same color appears across every result for that brand.",
+  "sources under each panel show which pages AI cited to form its answer.",
+];
+
 function swPickFacts(n) {
   return [...SW_FACTS].sort(() => Math.random() - 0.5).slice(0, n);
 }
 
-function _swBrandHue(name) {
-  let h = 0;
-  for (let i = 0; i < name.length; i++) h = (h * 31 + name.charCodeAt(i)) & 0xffff;
-  return h % 360;
+let _tipInterval = null;
+function swStartTipRotation() {
+  swStopTipRotation();
+  const facts = swPickFacts(8);
+  let idx = 0;
+  _tipInterval = setInterval(() => {
+    const els = document.querySelectorAll(".v7-loading-fact");
+    if (!els.length) return;
+    els.forEach(el => el.classList.remove("show"));
+    setTimeout(() => {
+      idx = (idx + 1) % facts.length;
+      els.forEach(el => { el.textContent = facts[idx]; el.classList.add("show"); });
+    }, 360);
+  }, 4800);
+}
+function swStopTipRotation() {
+  if (_tipInterval) { clearInterval(_tipInterval); _tipInterval = null; }
 }
 
-function _swBaselineRankMap() {
-  const map = new Map();
-  for (const e of (STATE._modeBaseline?.final || [])) {
-    if (e.type === "rec") map.set((e.brand || "").toLowerCase(), e.rank);
-  }
-  return map;
+function renderLoadingBlock(statusText) {
+  const fact = swPickFacts(1)[0] || "";
+  return `${SW_AGENT_ICON_HTML}
+    <div class="v7-loading-status">${escapeHtml(statusText || "working")}</div>
+    <div class="v7-loading-fact-eyebrow">did you know</div>
+    <div class="v7-loading-fact show">${escapeHtml(fact)}</div>`;
 }
 
-function swRenderTableCompact(final, colKey) {
-  if (!final || !final.length) {
-    return `<div class="sw-col-empty">no recommendations</div>`;
-  }
-  const brandLower = (STATE._lastBrand || "").toLowerCase().trim();
-  const recs = final.filter(e => e.type === "rec");
-  const sorted = [...recs].sort((a, b) => (a.rank ?? 999) - (b.rank ?? 999));
-  const baseMap = colKey === "baseline" ? null : _swBaselineRankMap();
-  return `<table class="sw-table-compact">
-    <thead><tr>
-      <th class="num">#</th>
-      ${colKey === "baseline" ? "" : '<th class="num">Δ</th>'}
-      <th>entity</th>
-      <th class="num">CTR%</th><th class="num">CVR%</th><th class="num">eng/1k</th>
-    </tr></thead>
-    <tbody>${sorted.map(r => {
-      const nameLower = (r.brand || "").toLowerCase();
-      const isYou = brandLower && nameLower.includes(brandLower);
-      const cls = [isYou ? "you" : "", r._simulated ? "sim" : "", r._brand_side ? "brand-side" : ""].filter(Boolean).join(" ");
-      const pills = (r._simulated ? '<span class="sim-pill">sim</span>' : "")
-                  + (r._brand_side ? '<span class="brand-pill">brand</span>' : "");
-      // Per-brand color stripe — same hue across all 3 columns for same brand
-      const hue = _swBrandHue(nameLower);
-      const stripe = `border-left: 3px solid hsl(${hue}, 50%, 55%)`;
-      // Rank-delta badge for non-baseline columns
-      let deltaCell = "";
-      if (baseMap) {
-        const baseRank = baseMap.get(nameLower);
-        let badge;
-        if (baseRank == null) badge = `<span class="delta new">NEW</span>`;
-        else if (baseRank > r.rank) badge = `<span class="delta up">↑${baseRank - r.rank}</span>`;
-        else if (baseRank < r.rank) badge = `<span class="delta down">↓${r.rank - baseRank}</span>`;
-        else                        badge = `<span class="delta same">—</span>`;
-        deltaCell = `<td class="num">${badge}</td>`;
-      }
-      return `<tr class="${cls}" style="${stripe}">
-        <td class="num dim">${r.rank}</td>
-        ${deltaCell}
-        <td>${escapeHtml(r.brand || "")}${pills}</td>
-        <td class="num">${r.E_ctr_pct?.toFixed?.(2) ?? "—"}</td>
-        <td class="num">${r.E_cvr_pct?.toFixed?.(2) ?? "—"}</td>
-        <td class="num">${r.E_engagement?.toFixed?.(3) ?? "—"}</td>
-      </tr>`;
-    }).join("")}</tbody>
-  </table>`;
+function showStageLoading(stage, statusText) {
+  const stageEl = document.getElementById(`v7-stage-${stage}`);
+  const loading = document.getElementById(`v7-stage-${stage}-loading`);
+  if (stageEl) stageEl.classList.add("v7-loading-mode");
+  if (loading) { loading.innerHTML = renderLoadingBlock(statusText); loading.hidden = false; }
+  swStartTipRotation();
+}
+function hideStageLoading(stage) {
+  const stageEl = document.getElementById(`v7-stage-${stage}`);
+  const loading = document.getElementById(`v7-stage-${stage}-loading`);
+  if (stageEl) stageEl.classList.remove("v7-loading-mode");
+  if (loading) { loading.hidden = true; loading.innerHTML = ""; }
+  swStopTipRotation();
 }
 
-function _swCurrentBrandDomain() {
-  // Re-derive on every render so toggle reflects whatever's in the Brand field
-  // *right now*, not what was cached at pipeline-run time.
-  const raw = (document.getElementById("sw-brand")?.value || "").trim();
-  const m = raw.match(
-    /(?:https?:\/\/)?(?:www\.)?([a-z0-9][a-z0-9-]*(?:\.[a-z0-9-]+)*\.[a-z]{2,})/i
-  );
-  return m ? m[1].toLowerCase() : "";
-}
-
-function swRenderComposedColumn() {
-  const baseline = STATE._lastBaselineQueries || [];
-  const cs = STATE._composedState || (STATE._composedState = {
-    composed: [],
-    siteToggle: false,
-    customInput: "",
-    thumbs: {},
-  });
-  const baselineChips = baseline.length ? baseline.map(q => {
-    const t = cs.thumbs[q];
-    const chosen = cs.composed.includes(q);
-    return `<div class="sw-q-chip${chosen ? " chosen" : ""}" draggable="true" data-q="${escapeHtml(q)}">
-      <span class="sw-q-text">${escapeHtml(q)}</span>
-      <button class="sw-q-thumb up${t === "up" ? " active" : ""}" data-thumb="up" title="👍 useful query">👍</button>
-      <button class="sw-q-thumb down${t === "down" ? " active" : ""}" data-thumb="down" title="👎 unhelpful">👎</button>
-    </div>`;
-  }).join("") : `<div class="sw-q-empty">no queries yet</div>`;
-  const composedChips = cs.composed.length ? cs.composed.map(q =>
-    `<div class="sw-q-chip composed" data-q="${escapeHtml(q)}">
-      <span class="sw-q-text">${escapeHtml(q)}</span>
-      <button class="sw-q-x" data-action="remove" title="remove">✕</button>
-    </div>`
-  ).join("") : `<div class="sw-q-empty drop-hint">drag queries here, or add your own ↓</div>`;
-  const domain = _swCurrentBrandDomain();
-  const siteToggle = domain
-    ? `<label class="sw-site-toggle">
-        <input type="checkbox" id="sw-site-toggle" ${cs.siteToggle ? "checked" : ""}>
-        force results from <code>${escapeHtml(domain)}</code> only
-        <span class="sw-site-toggle-hint">(adds <code>site:${escapeHtml(domain)}</code> to every query)</span>
-      </label>` : "";
-  const resultHtml = STATE._modeComposed
-    ? swRenderTableCompact(STATE._modeComposed.final, "composed")
-    : `<div class="sw-col-empty">click Re-run after composing your queries</div>`;
-  return `<div class="sw-composed-col">
-    <div class="sw-q-section">
-      <div class="sw-q-section-title">baseline queries (drag to compose, 👍/👎 to rate)</div>
-      <div class="sw-q-list">${baselineChips}</div>
-    </div>
-    <div class="sw-q-section">
-      <div class="sw-q-section-title">your composed set</div>
-      <div class="sw-q-list drop-zone" id="sw-composed-drop">${composedChips}</div>
-      <input type="text" class="sw-q-custom" id="sw-q-custom" placeholder="+ add a custom query and press enter" value="${escapeHtml(cs.customInput)}">
-      ${siteToggle}
-    </div>
-    <div class="sw-composed-actions">
-      <button class="sw-composed-run" id="sw-composed-run" ${!cs.composed.length ? "disabled" : ""}>
-        Re-run with composed queries →
-      </button>
-    </div>
-    <div class="sw-composed-result">${resultHtml}</div>
-  </div>`;
-}
-
-function swLabelFor(e, brandLower) {
-  const pills = (e._simulated ? '<span class="sim-pill">simulated</span>' : "")
-              + (e._brand_side ? '<span class="brand-pill">brand</span>' : "");
-  if (e.type === "rec") {
-    const isYou = brandLower && (e.brand || "").toLowerCase().includes(brandLower);
-    const arrow = (isYou || e._simulated) ? '<span class="you-arrow">→</span> ' : "";
-    return `${arrow}<span class="rank-pill">#${e.rank}</span> <b>${escapeHtml(e.brand || "")}</b>${pills}`;
-  }
-  const dom = e.domain ? `<span class="dim"> · ${escapeHtml(e.domain)}</span>` : "";
-  return `<span class="cit-pill">cit</span> ${escapeHtml(e.anchor || "")}${dom}${pills}`;
-}
-
-const METRICUS_STUDIO_URL = "https://metricus-studio.red-hill-a87d.workers.dev/";
+// ============================================================
+// Worker calls
+// ============================================================
 
 async function callStudio(body) {
   const r = await fetch(METRICUS_STUDIO_URL, {
@@ -2064,446 +2230,13 @@ async function callStudio(body) {
   if (!r.ok) throw new Error(`studio ${r.status}: ${(await r.text()).slice(0, 200)}`);
   const j = await r.json();
   if (Array.isArray(j.recommendations)) {
-    for (const r of j.recommendations) {
-      r.type = "rec";
-      r.E_engagement = r.eng_per_1k;
-      if (r.simulated) r._simulated = true;
+    for (const rec of j.recommendations) {
+      rec.type = "rec";
+      rec.E_engagement = rec.eng_per_1k;
+      if (rec.simulated) rec._simulated = true;
     }
   }
   return j;
-}
-
-function swRenderShell({ baselineLoading = false, interleavedLoading = false } = {}) {
-  return `<div class="sw-compare">
-    ${swColumnHtml("baseline", { loading: baselineLoading })}
-    ${swColumnHtml("composed", {})}
-    ${swColumnHtml("interleaved", { loading: interleavedLoading })}
-  </div>`;
-}
-
-function swColumnHtml(colKey, opts) {
-  const titles = {
-    baseline: {
-      title: "how AI sees you right now",
-      sub: "natural AI response, no tuning",
-      help: "AI's blind answer to your prompt — no tuning, no brand info. Use this to see where you stand naturally and compare every other column against it.",
-    },
-    composed: {
-      title: "retrieval explorer",
-      sub: "which queries surface you?",
-      help: "AI searches the web before answering. Curate which queries it uses — drag the ones you like, write your own, or force results from your domain only. Re-run to see how the AI's recommendation shifts when retrieval changes.",
-    },
-    interleaved: {
-      title: "creatives designer",
-      sub: "design your title + snippet",
-      help: "Design the title and snippet AI would see if your page appeared in search. Edit the wording, re-run, and watch how AI ranks you when given this specific creative. Export your final version for your team.",
-    },
-  };
-  const t = titles[colKey];
-  let body;
-  if (opts.loading) body = swLoadingBlock();
-  else if (colKey === "composed") body = swComposedBody();
-  else if (colKey === "interleaved") body = swInterleavedBody();
-  else body = swBaselineBody();
-  return `<div class="sw-col" data-col="${colKey}">
-    <div class="sw-col-head">
-      <div class="sw-col-title">${t.title}<span class="sw-help" data-tip="${escapeHtml(t.help)}" tabindex="0">?</span></div>
-      <div class="sw-col-sub">${t.sub}</div>
-    </div>
-    <div class="sw-col-body ${opts.loading ? 'loading' : ''}">${body}</div>
-    ${swColFooter(colKey)}
-  </div>`;
-}
-
-function swLoadingBlock() {
-  return `<div class="sw-col-loading">
-    ${SW_AGENT_ICON_HTML}
-    <div class="sw-loading-status">starting</div>
-    <div class="sw-fact-wrap" style="margin-top:18px">
-      <div class="sw-fact-eyebrow">did you know</div>
-      <p class="sw-fact-text show sw-tip-target">${escapeHtml(swPickFacts(1)[0])}</p>
-    </div>
-  </div>`;
-}
-
-function swBaselineBody() {
-  if (!STATE._modeBaseline) return `<div class="sw-col-empty">no data</div>`;
-  return swRenderTableCompact(STATE._modeBaseline.final, "baseline");
-}
-
-function swInterleavedBody() {
-  const sb = STATE._sandbox || { title: "", snippet: "", url: "" };
-  const tableHtml = STATE._modeInterleaved
-    ? swRenderTableCompact(STATE._modeInterleaved.final, "interleaved")
-    : `<div class="sw-col-empty">edit content sandbox below and re-run</div>`;
-  return `<div class="sw-sandbox-inline">
-    <div class="sw-sandbox-inline-title">CONTENT SANDBOX <span class="dim">— how AI would describe you</span></div>
-    <label class="sw-sb-lbl">Title</label>
-    <input type="text" id="sw-sb-title" maxlength="160" value="${escapeHtml(sb.title)}" placeholder="e.g. Metricus — AI Visibility Audit">
-    <label class="sw-sb-lbl">Snippet</label>
-    <textarea id="sw-sb-snippet" maxlength="500" rows="3" placeholder="the meta description AI would see">${escapeHtml(sb.snippet)}</textarea>
-    <div class="sw-sb-actions">
-      <button class="sw-composed-run" id="sw-sb-run">${STATE._modeInterleaved ? "Re-run interleaved" : "Run interleaved"} →</button>
-    </div>
-  </div>
-  ${tableHtml}`;
-}
-
-function swComposedBody() {
-  return swRenderComposedColumn();
-}
-
-function swColFooter(colKey) {
-  const data = colKey === "baseline" ? STATE._modeBaseline
-             : colKey === "composed" ? STATE._modeComposed
-             : STATE._modeInterleaved;
-  const reply = data?.distill?.body || "";
-  const preview = reply ? escapeHtml(reply.slice(0, 80).trim()).replace(/\s+/g, " ") + "…" : "";
-  STATE._aiThumbs = STATE._aiThumbs || {};
-  const thumbState = STATE._aiThumbs[colKey];
-  const aiBlock = reply ? `<details class="sw-col-ai">
-    <summary><span class="lbl">full AI response</span> <span class="preview">${preview}</span></summary>
-    <div class="sw-reply">${escapeHtml(reply.slice(0, 4000)).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>').replace(/\[(\d+)\]/g, '<sup class="sw-cite">[$1]</sup>')}</div>
-  </details>` : "";
-  const thumbsBlock = reply ? `<div class="sw-ai-thumbs">
-    <span class="sw-ai-thumbs-lbl">useful?</span>
-    <button class="sw-ai-thumb up ${thumbState === "up" ? "active" : ""}" data-ai-thumb-col="${colKey}" data-ai-thumb-dir="up" title="useful answer">👍</button>
-    <button class="sw-ai-thumb down ${thumbState === "down" ? "active" : ""}" data-ai-thumb-col="${colKey}" data-ai-thumb-dir="down" title="not useful">👎</button>
-  </div>` : "";
-  const exportBtn = (colKey === "interleaved" && data)
-    ? `<button class="sw-col-export" data-export-col="${colKey}">Export creative ↓</button>`
-    : "";
-  if (!aiBlock && !exportBtn) return "";
-  return `<div class="sw-col-footer">${aiBlock}${thumbsBlock}${exportBtn}</div>`;
-}
-
-function swSetColStage(colKey, statusText) {
-  const body = document.querySelector(`#sw-result .sw-col[data-col="${colKey}"] .sw-col-body`);
-  if (!body) return;
-  const st = body.querySelector(".sw-loading-status");
-  if (st) st.textContent = statusText;
-}
-
-function swRenderColumnDone(colKey) {
-  const out = document.getElementById("sw-result");
-  const col = out?.querySelector(`.sw-col[data-col="${colKey}"]`);
-  if (!col) return;
-  const body = col.querySelector(".sw-col-body");
-  body.classList.remove("loading");
-  let bodyHtml;
-  if (colKey === "baseline") bodyHtml = swBaselineBody();
-  else if (colKey === "composed") bodyHtml = swComposedBody();
-  else bodyHtml = swInterleavedBody();
-  body.innerHTML = bodyHtml;
-  const oldFoot = col.querySelector(".sw-col-footer");
-  if (oldFoot) oldFoot.remove();
-  const tmp = document.createElement("div");
-  tmp.innerHTML = swColFooter(colKey);
-  if (tmp.firstChild) col.appendChild(tmp.firstChild);
-  swWireCommonHandlers();
-}
-
-function swRenderColumnError(colKey, e) {
-  const body = document.querySelector(`#sw-result .sw-col[data-col="${colKey}"] .sw-col-body`);
-  if (!body) return;
-  body.classList.remove("loading");
-  body.innerHTML = `<div class="sw-col-empty" style="color:var(--bad)">failed — ${escapeHtml((e?.message || "").slice(0, 160))}</div>`;
-}
-
-function swStartTipRotation() {
-  const facts = swPickFacts(8);
-  let idx = 0;
-  STATE._tipInterval = setInterval(() => {
-    const els = document.querySelectorAll(".sw-tip-target");
-    if (!els.length) return;
-    els.forEach(el => el.classList.remove("show"));
-    setTimeout(() => {
-      idx = (idx + 1) % facts.length;
-      els.forEach(el => { el.textContent = facts[idx]; el.classList.add("show"); });
-    }, 400);
-  }, 5000);
-}
-function swStopTipRotation() {
-  if (STATE._tipInterval) { clearInterval(STATE._tipInterval); STATE._tipInterval = null; }
-}
-
-function swWireCommonHandlers() {
-  const out = document.getElementById("sw-result");
-  if (!out) return;
-  out.querySelectorAll("[data-export-col]").forEach(b => {
-    b.addEventListener("click", () => swExportColumn(b.dataset.exportCol));
-  });
-  out.querySelectorAll(".sw-ai-thumb").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const col = btn.dataset.aiThumbCol;
-      const dir = btn.dataset.aiThumbDir;
-      STATE._aiThumbs = STATE._aiThumbs || {};
-      STATE._aiThumbs[col] = (STATE._aiThumbs[col] === dir) ? null : dir;
-      out.querySelectorAll(`.sw-ai-thumb[data-ai-thumb-col="${col}"]`).forEach(b => {
-        b.classList.toggle("active", STATE._aiThumbs[col] === b.dataset.aiThumbDir);
-      });
-      swLog("ai_response_thumb", { column: col, thumb: STATE._aiThumbs[col] || "off", prompt: STATE._lastPrompt });
-    });
-  });
-  const sbTitle = out.querySelector("#sw-sb-title");
-  const sbSnippet = out.querySelector("#sw-sb-snippet");
-  sbTitle?.addEventListener("input", () => { STATE._sandbox.title = sbTitle.value; });
-  sbSnippet?.addEventListener("input", () => { STATE._sandbox.snippet = sbSnippet.value; });
-  out.querySelector("#sw-sb-run")?.addEventListener("click", async () => {
-    const btn = out.querySelector("#sw-sb-run");
-    const sb = STATE._sandbox;
-    if (!sb?.title?.trim() && !sb?.snippet?.trim()) return;
-    swLog("interleaved_rerun", {
-      prompt: STATE._lastPrompt,
-      title: sb.title?.slice(0, 200),
-      snippet: sb.snippet?.slice(0, 400),
-    });
-    btn.disabled = true; btn.textContent = "running…";
-    const body = out.querySelector(`.sw-col[data-col="interleaved"] .sw-col-body`);
-    body.classList.add("loading");
-    body.innerHTML = swLoadingBlock();
-    swStartTipRotation();
-    swSetColStage("interleaved", "running");
-    try {
-      const result = await runInterleaved(STATE._lastPrompt, sb);
-      STATE._modeInterleaved = result;
-      swStopTipRotation();
-      swRenderColumnDone("interleaved");
-    } catch (e) {
-      swStopTipRotation();
-      swRenderColumnError("interleaved", e);
-    } finally {
-      btn.disabled = false; btn.textContent = "Re-run interleaved →";
-    }
-  });
-  swWireComposedHandlers();
-}
-
-function swWireComposedHandlers() {
-  const out = document.getElementById("sw-result");
-  if (!out) return;
-  const cs = STATE._composedState;
-  if (!cs) return;
-  out.querySelectorAll(".sw-q-chip .sw-q-thumb").forEach(b => {
-    b.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const chip = b.closest(".sw-q-chip");
-      const q = chip.dataset.q;
-      const dir = b.dataset.thumb;
-      cs.thumbs[q] = (cs.thumbs[q] === dir) ? undefined : dir;
-      swLog("query_thumb", { query: q, thumb: cs.thumbs[q] || "off", prompt: STATE._lastPrompt });
-      swRenderColumnDone("composed");
-    });
-  });
-  out.querySelectorAll(".sw-q-chip[draggable='true']").forEach(chip => {
-    chip.addEventListener("dragstart", (e) => {
-      e.dataTransfer.setData("text/plain", chip.dataset.q);
-      e.dataTransfer.effectAllowed = "copy";
-      chip.classList.add("dragging");
-    });
-    chip.addEventListener("dragend", () => chip.classList.remove("dragging"));
-    chip.addEventListener("click", (e) => {
-      if (e.target.closest(".sw-q-thumb")) return;
-      const q = chip.dataset.q;
-      if (!cs.composed.includes(q)) cs.composed.push(q);
-      swRenderColumnDone("composed");
-    });
-  });
-  const drop = out.querySelector("#sw-composed-drop");
-  if (drop) {
-    drop.addEventListener("dragover", (e) => { e.preventDefault(); drop.classList.add("drag-over"); });
-    drop.addEventListener("dragleave", () => drop.classList.remove("drag-over"));
-    drop.addEventListener("drop", (e) => {
-      e.preventDefault();
-      drop.classList.remove("drag-over");
-      const q = e.dataTransfer.getData("text/plain");
-      if (q && !cs.composed.includes(q)) cs.composed.push(q);
-      swRenderColumnDone("composed");
-    });
-  }
-  out.querySelectorAll(".sw-q-chip.composed .sw-q-x").forEach(b => {
-    b.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const q = b.closest(".sw-q-chip").dataset.q;
-      cs.composed = cs.composed.filter(x => x !== q);
-      swRenderColumnDone("composed");
-    });
-  });
-  const custom = out.querySelector("#sw-q-custom");
-  if (custom) {
-    custom.addEventListener("input", () => { cs.customInput = custom.value; });
-    custom.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        const v = custom.value.trim();
-        if (v && !cs.composed.includes(v)) {
-          cs.composed.push(v);
-          cs.customInput = "";
-          swLog("custom_query", { query: v, prompt: STATE._lastPrompt });
-          swRenderColumnDone("composed");
-        }
-      }
-    });
-  }
-  const siteTog = out.querySelector("#sw-site-toggle");
-  if (siteTog) siteTog.addEventListener("change", () => { cs.siteToggle = siteTog.checked; });
-  const runBtn = out.querySelector("#sw-composed-run");
-  if (runBtn) {
-    runBtn.addEventListener("click", async () => {
-      if (!cs.composed.length) return;
-      runBtn.disabled = true; runBtn.textContent = "running…";
-      const body = out.querySelector(`.sw-col[data-col="composed"] .sw-col-body`);
-      body.classList.add("loading");
-      body.innerHTML = swLoadingBlock();
-      swStartTipRotation();
-      swSetColStage("composed", "running");
-      try {
-        const result = await runComposed(STATE._lastPrompt, cs);
-        STATE._modeComposed = result;
-        swLog("composed_run", {
-          prompt: STATE._lastPrompt,
-          composed_queries: cs.composed,
-          site_toggle: cs.siteToggle,
-          n_thumbs_up: Object.values(cs.thumbs).filter(t => t === "up").length,
-          n_thumbs_down: Object.values(cs.thumbs).filter(t => t === "down").length,
-        });
-        swStopTipRotation();
-        swRenderColumnDone("composed");
-      } catch (e) {
-        swStopTipRotation();
-        swRenderColumnError("composed", e);
-      } finally {
-        runBtn.disabled = false; runBtn.textContent = "Re-run with composed queries →";
-      }
-    });
-  }
-}
-
-function swExportColumn(colKey) {
-  if (colKey !== "interleaved") return;
-  const data = STATE._modeInterleaved;
-  const sb = STATE._sandbox || {};
-  if (!data) return;
-  const ts = new Date().toISOString();
-  const brand = (document.getElementById("sw-brand")?.value || "").trim();
-  const payload = {
-    schema_version: "metricus-creative/v1",
-    timestamp: ts,
-    prompt_investigated: STATE._lastPrompt || "",
-    creative: { title: sb.title || "", snippet: sb.snippet || "", url: sb.url || STATE._lastSourceUrl || "" },
-    brand_context: {
-      raw_text: brand,
-      resolved_name: STATE._lastBrand || null,
-      scraped_metadata: STATE._lastBrandContext || null,
-    },
-    projected_ai_response: data.distill?.body || "",
-    projected_recommendations: (data.final || []).filter(e => e.type === "rec").map(r => ({
-      rank: r.rank, brand: r.brand, simulated: !!r._simulated,
-      E_ctr_pct: r.E_ctr_pct, E_cvr_pct: r.E_cvr_pct, eng_per_1k: r.E_engagement,
-    })),
-    cluster_baseline: STATE._lastEngagement ? {
-      cluster: STATE._lastEngagement.neighbors?.[0]?.keyword,
-      confidence: STATE._lastEngagement.confidence,
-      ctr_pct: STATE._lastEngagement.ctr_pct,
-      cvr_pct: STATE._lastEngagement.cvr_pct,
-      eng_per_1k: STATE._lastEngagement.engagement_per_1k_imp,
-    } : null,
-  };
-  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = `metricus-creative-${ts.slice(0,19).replace(/[:T]/g, "-")}.json`;
-  document.body.appendChild(a); a.click(); document.body.removeChild(a);
-  URL.revokeObjectURL(url);
-  swLog("export_creative", {
-    prompt: payload.prompt_investigated,
-    brand_raw: brand.slice(0, 200),
-    title: payload.creative.title,
-    snippet: payload.creative.snippet,
-  });
-}
-
-async function swRun() {
-  const prompt = (document.getElementById("sw-prompt")?.value || "").trim();
-  const brandRaw = (document.getElementById("sw-brand")?.value || "").trim();
-  const out = document.getElementById("sw-result");
-  if (!prompt) {
-    document.getElementById("sw-prompt")?.focus();
-    return;
-  }
-  const btn = document.getElementById("sw-run");
-  if (btn) { btn.disabled = true; btn.textContent = "Asking…"; }
-  document.querySelector(".simple-workbench")?.classList.add("has-result");
-  // Reset state for a fresh run
-  STATE._modeBaseline = null;
-  STATE._modeInterleaved = null;
-  STATE._modeComposed = null;
-  STATE._composedState = null;
-  STATE._lastEngagement = null;
-  STATE._lastSourceUrl = null;
-  STATE._lastPrompt = prompt;
-  STATE._lastBrand = brandRaw;
-  STATE._lastBaselineQueries = [];
-  out.innerHTML = swRenderShell({ baselineLoading: true, interleavedLoading: true });
-  swStartTipRotation();
-  swLog("prediction_run", { prompt, brand: brandRaw.slice(0, 200) });
-  try {
-    swSetColStage("baseline", "running");
-    swSetColStage("interleaved", "running");
-    // Baseline always; interleaved if sandbox has any pre-existing content (re-runs)
-    // or if we can populate defaults from a JSON-LD scrape inside the worker.
-    const sb = STATE._sandbox || (STATE._sandbox = { title: "", snippet: "", url: "" });
-    const baselineP = callStudio({ mode: "baseline", prompt, brand: brandRaw });
-    // First-run interleaved: we may not have sandbox content yet. Run baseline first,
-    // hydrate sandbox from its brand_context, then fire interleaved.
-    const result = await baselineP;
-    STATE._modeBaseline = swPackResult(result);
-    STATE._lastBaselineQueries = result.queries || [];
-    STATE._lastEngagement = result.engagement || null;
-    STATE._lastSourceUrl = result.brand_context?.source_url || null;
-    STATE._lastBrandContext = swFlattenBrandContext(result.brand_context);
-    swLog("baseline_complete", {
-      prompt, brand: brandRaw.slice(0, 200),
-      queries: result.queries || [],
-      n_recs: (result.recommendations || []).length,
-      top_recs: (result.recommendations || []).slice(0, 5).map(r => ({ rank: r.rank, brand: r.brand })),
-      cluster: result.engagement?.neighbors?.[0]?.keyword || null,
-      confidence: result.engagement?.confidence || null,
-      ctr_pct: result.engagement?.ctr_pct || null,
-      cvr_pct: result.engagement?.cvr_pct || null,
-      brand_resolved: result.brand_context?.resolved_name || null,
-      warnings: result.warnings || [],
-    });
-    // Auto-populate sandbox defaults from brand_context if empty
-    if (!sb.title && result.brand_context?.title) sb.title = result.brand_context.title.slice(0, 120);
-    if (!sb.snippet && result.brand_context?.description) sb.snippet = result.brand_context.description.slice(0, 400);
-    if (!sb.url && result.brand_context?.source_url) sb.url = result.brand_context.source_url;
-    swRenderColumnDone("baseline");
-    swRenderColumnDone("composed");  // composed needs queries to render its chips
-    // Now fire interleaved if we have sandbox content
-    if (sb.title?.trim() || sb.snippet?.trim()) {
-      try {
-        const r2 = await callStudio({ mode: "interleaved", prompt, brand: brandRaw, sandbox: sb });
-        STATE._modeInterleaved = swPackResult(r2);
-      } catch (e) {
-        swRenderColumnError("interleaved", e);
-        throw e;
-      }
-      swRenderColumnDone("interleaved");
-    } else {
-      // No sandbox content yet — show empty state with prompt to edit
-      swRenderColumnDone("interleaved");
-    }
-  } catch (e) {
-    console.error("[studio]", e);
-    document.querySelectorAll(".sw-col-body.loading").forEach(b => {
-      b.innerHTML = `<div class="sw-col-empty" style="color:var(--bad)">failed — ${escapeHtml((e?.message || "").slice(0, 160))}</div>`;
-    });
-  } finally {
-    swStopTipRotation();
-    if (btn) { btn.disabled = false; btn.textContent = "Run prediction for this prompt"; }
-  }
 }
 
 function swPackResult(r) {
@@ -2516,51 +2249,747 @@ function swPackResult(r) {
   };
 }
 
-function swFlattenBrandContext(bc) {
-  if (!bc) return "";
-  const lines = [];
-  if (bc.title) lines.push(`Page title: ${bc.title}`);
-  if (bc.description) lines.push(`Description: ${bc.description}`);
-  if (bc.resolved_name) lines.push(`Name: ${bc.resolved_name}`);
-  return lines.join("\n");
+// ============================================================
+// Stage progression
+// ============================================================
+
+function setStage(stage) {
+  STATE.stage = stage;
+  const order = ["url", "prompt", "queries", "results"];
+  const idx = order.indexOf(stage);
+  for (let i = 0; i < order.length; i++) {
+    const el = document.getElementById(`v7-stage-${order[i]}`);
+    if (!el) continue;
+    if (i <= idx) {
+      el.hidden = false;
+      el.classList.remove("v7-dim");
+    } else {
+      el.classList.add("v7-dim");
+    }
+  }
 }
 
-async function runInterleaved(prompt, sim) {
-  const brand = (document.getElementById("sw-brand")?.value || "").trim();
-  const r = await callStudio({ mode: "interleaved", prompt, brand, sandbox: sim });
-  return swPackResult(r);
+function setStatus(stage, msg, isErr = false) {
+  const el = document.getElementById(`v7-stage-${stage}-status`);
+  if (!el) return;
+  el.textContent = msg || "";
+  el.classList.toggle("v7-err", !!isErr);
 }
 
-async function runComposed(prompt, cs) {
-  const brand = (document.getElementById("sw-brand")?.value || "").trim();
-  const r = await callStudio({
-    mode: "composed",
-    prompt,
-    brand,
-    composed_queries: cs.composed,
-    site_toggle: !!cs.siteToggle,
+function invalidateBelow(stage) {
+  const order = ["url", "prompt", "queries", "results"];
+  const idx = order.indexOf(stage);
+  for (let i = idx + 1; i < order.length; i++) {
+    const el = document.getElementById(`v7-stage-${order[i]}`);
+    if (!el) continue;
+    el.classList.add("v7-dim");
+  }
+  if (stage === "url" || stage === "prompt") {
+    STATE.baselineResult = null;
+    STATE.interleavedResult = null;
+    STATE.queries = [];
+    STATE.originalQueries = [];
+    STATE.queryThumbs = {};
+  }
+  if (stage === "url") {
+    STATE.brandContext = null;
+    STATE.promptSuggestion = "";
+    STATE.prompt = "";
+    STATE.siteToggle = false;
+  }
+}
+
+// ============================================================
+// Stage 1 — URL
+// ============================================================
+
+async function runInferPrompt(url) {
+  STATE.url = url;
+  STATE.runStartedAt = Date.now();
+  swLog("analyze_run", { url });
+  const btn = document.getElementById("v7-analyze");
+  if (btn) btn.disabled = true;
+  setStage("prompt");
+  showStageLoading("prompt", "reading your page");
+  try {
+    const r = await callStudio({ mode: "infer_prompt", url });
+    // brand_context is used backend-side and as the default for the creative
+    // (title + snippet in Stage 5); not shown to the user in Stage 2.
+    STATE.brandContext = r.brand_context || null;
+    STATE.promptSuggestion = r.prompt_suggestion || "";
+    STATE.prompt = STATE.promptSuggestion;
+    // Hydrate the creative inputs (Stage 2) from brand_context now, so the
+    // operator can edit them before the first run. These values are sent as
+    // the sandbox during the "with your page" call.
+    const bc = STATE.brandContext;
+    if (bc) {
+      if (!STATE.creative.title) STATE.creative.title = (bc.title || "").slice(0, 120);
+      if (!STATE.creative.snippet) STATE.creative.snippet = (bc.description || "").slice(0, 400);
+      STATE.creative.url = bc.source_url || STATE.url;
+    }
+    swLog("infer_prompt_complete", {
+      had_brand_context: !!STATE.brandContext,
+      had_suggestion: !!STATE.promptSuggestion,
+      warnings: r.warnings || [],
+    });
+    const ta = document.getElementById("v7-prompt");
+    if (ta) ta.value = STATE.prompt;
+    const crTitle = document.getElementById("v7-cr-title");
+    const crSnip = document.getElementById("v7-cr-snippet");
+    if (crTitle) crTitle.value = STATE.creative.title;
+    if (crSnip) crSnip.value = STATE.creative.snippet;
+    hideStageLoading("prompt");
+    if ((r.warnings || []).length) setStatus("prompt", `note: ${r.warnings[0]}`);
+  } catch (e) {
+    hideStageLoading("prompt");
+    setStatus("prompt", `failed — ${(e.message || "").slice(0, 160)}`, true);
+    setStage("url");
+  } finally {
+    if (btn) btn.disabled = false;
+  }
+}
+
+// ============================================================
+// Stage 2 → Stage 3 — Baseline call to get queries
+// ============================================================
+
+async function advanceToQueries() {
+  const prompt = (document.getElementById("v7-prompt")?.value || "").trim();
+  if (!prompt) { document.getElementById("v7-prompt")?.focus(); return; }
+  if (prompt !== STATE.promptSuggestion) {
+    swLog("prompt_edited", { final_length: prompt.length });
+  }
+  STATE.prompt = prompt;
+  invalidateBelow("prompt");
+  const btn = document.getElementById("v7-to-queries");
+  if (btn) btn.disabled = true;
+  setStage("queries");
+  showStageLoading("queries", "drafting the searches AI would run");
+  try {
+    const r = await callStudio({ mode: "baseline", prompt, brand: STATE.url });
+    STATE.baselineResult = swPackResult(r);
+    STATE.originalQueries = (r.queries || []).slice();
+    STATE.queries = STATE.originalQueries.slice();
+    STATE.queryThumbs = {};
+    // brand_context may also come back here; keep STATE.brandContext fresh.
+    const bc = r.brand_context || STATE.brandContext;
+    if (bc) STATE.brandContext = bc;
+    renderChips();
+    hideStageLoading("queries");
+    setStatus("queries", "");
+    document.getElementById("v7-chip-add")?.focus();
+  } catch (e) {
+    hideStageLoading("queries");
+    setStatus("queries", `failed — ${(e.message || "").slice(0, 160)}`, true);
+    setStage("prompt");
+  } finally {
+    if (btn) btn.disabled = false;
+  }
+}
+
+// ============================================================
+// Stage 3 — Editable query chip list
+// ============================================================
+
+function renderChips() {
+  const el = document.getElementById("v7-chip-list");
+  if (!el) return;
+  el.innerHTML = STATE.queries.map((q, i) => {
+    const thumb = STATE.queryThumbs[q];
+    const edited = !STATE.originalQueries.includes(q);
+    return `<span class="v7-chip${edited ? " v7-chip-edited" : ""}" data-q-i="${i}">
+      <span class="v7-chip-text" contenteditable="true" spellcheck="false" data-orig="${escapeHtml(q)}">${escapeHtml(q)}</span>
+      <button class="v7-chip-thumb v7-up${thumb === "up" ? " v7-active" : ""}" data-thumb="up" title="useful query">👍</button>
+      <button class="v7-chip-thumb v7-down${thumb === "down" ? " v7-active" : ""}" data-thumb="down" title="unhelpful">👎</button>
+      <button class="v7-chip-x" data-action="remove" title="remove">×</button>
+    </span>`;
+  }).join("");
+  // Wire chip events
+  el.querySelectorAll(".v7-chip").forEach(chip => {
+    const i = +chip.dataset.qI;
+    const txt = chip.querySelector(".v7-chip-text");
+    txt.addEventListener("blur", () => {
+      const v = txt.textContent.trim();
+      if (!v) {
+        STATE.queries.splice(i, 1);
+        renderChips();
+        return;
+      }
+      if (v !== STATE.queries[i]) {
+        STATE.queries[i] = v;
+        renderChips();
+      }
+    });
+    txt.addEventListener("keydown", e => {
+      if (e.key === "Enter") { e.preventDefault(); txt.blur(); }
+    });
+    chip.querySelectorAll(".v7-chip-thumb").forEach(b => {
+      b.addEventListener("click", e => {
+        e.stopPropagation();
+        const q = STATE.queries[i];
+        const dir = b.dataset.thumb;
+        STATE.queryThumbs[q] = STATE.queryThumbs[q] === dir ? null : dir;
+        swLog("query_thumb", { query: q, thumb: STATE.queryThumbs[q] || "off" });
+        renderChips();
+      });
+    });
+    chip.querySelector(".v7-chip-x").addEventListener("click", e => {
+      e.stopPropagation();
+      const q = STATE.queries[i];
+      STATE.queries.splice(i, 1);
+      swLog("query_removed", { query: q });
+      renderChips();
+    });
   });
-  return swPackResult(r);
 }
 
-(function swInit() {
-  const inp = document.getElementById("sw-prompt");
-  const btn = document.getElementById("sw-run");
-  if (!inp || !btn) return;
-  btn.addEventListener("click", swRun);
-  inp.addEventListener("keydown", (e) => {
-    if ((e.metaKey || e.ctrlKey) && e.key === "Enter") { e.preventDefault(); swRun(); }
-  });
-  const counter = document.getElementById("sw-prompt-counter");
-  const SW_MAX = 5000;
-  const updateCounter = () => {
-    const n = inp.value.length;
-    counter.textContent = `${n.toLocaleString()} / ${SW_MAX.toLocaleString()}`;
-    counter.classList.toggle("near", n >= SW_MAX * 0.9 && n < SW_MAX);
-    counter.classList.toggle("full", n >= SW_MAX);
+function isQueriesEdited() {
+  return !arraysEqual(STATE.queries, STATE.originalQueries);
+}
+
+// ============================================================
+// Stage 4-5 — Run comparison (baseline already cached; fire interleaved/composed)
+// ============================================================
+
+async function runComparison() {
+  invalidateBelow("queries");
+  setStatus("queries", "");
+  const btn = document.getElementById("v7-run-comparison");
+  if (btn) btn.disabled = true;
+  setStage("results");
+  // Hide previously-rendered content until both calls complete; show the loading block.
+  document.getElementById("v7-prose-grid").innerHTML = "";
+  document.getElementById("v7-unified-table").innerHTML = "";
+  showStageLoading("results", "asking AI · with and without your page");
+
+  try {
+    // If the operator edited queries OR enabled site toggle, baseline needs to use those queries too
+    // (otherwise the comparison isn't apples-to-apples). Run composed mode for both sides in that case.
+    let baselineToShow = STATE.baselineResult;
+    if (isQueriesEdited() || STATE.siteToggle) {
+      const baseR = await callStudio({
+        mode: "composed",
+        prompt: STATE.prompt,
+        brand: STATE.url,
+        composed_queries: STATE.queries,
+        site_toggle: STATE.siteToggle,
+      });
+      baselineToShow = swPackResult(baseR);
+      STATE.baselineResult = baselineToShow;
+    }
+    // Now interleaved (or composed-with-sandbox if queries edited)
+    const sandbox = {
+      title: STATE.creative.title || "",
+      snippet: STATE.creative.snippet || "",
+      url: STATE.creative.url || STATE.url,
+    };
+    const interleavedBody = (isQueriesEdited() || STATE.siteToggle)
+      ? { mode: "composed", prompt: STATE.prompt, brand: STATE.url, composed_queries: STATE.queries, site_toggle: STATE.siteToggle, sandbox }
+      : { mode: "interleaved", prompt: STATE.prompt, brand: STATE.url, sandbox };
+    const r = await callStudio(interleavedBody);
+    STATE.interleavedResult = swPackResult(r);
+    STATE.creativeBaseline = { title: STATE.creative.title, snippet: STATE.creative.snippet };
+    STATE.unsavedAfterSave = false;
+    hideStageLoading("results");
+    renderProseGrid({ baselineData: baselineToShow, interleavedData: STATE.interleavedResult });
+    renderUnifiedTable();
+    // Creative inputs are already wired at init time; nothing to reveal here.
+    revealBottomBar();
+  } catch (e) {
+    hideStageLoading("results");
+    setStatus("queries", `failed — ${(e.message || "").slice(0, 160)}`, true);
+    renderProseGrid({ baselineData: STATE.baselineResult, error: e });
+  } finally {
+    if (btn) btn.disabled = false;
+  }
+}
+
+async function rerunCreative() {
+  const title = (document.getElementById("v7-cr-title")?.value || "").trim();
+  const snippet = (document.getElementById("v7-cr-snippet")?.value || "").trim();
+  STATE.creative.title = title;
+  STATE.creative.snippet = snippet;
+  swLog("creative_rerun", { title_length: title.length, snippet_length: snippet.length });
+  setStatus("queries", "previewing your take…");
+  const btn = document.getElementById("v7-rerun-creative");
+  if (btn) btn.disabled = true;
+  renderProseGrid({ baselineData: STATE.baselineResult, interleavedLoading: true });
+  try {
+    const sandbox = { title, snippet, url: STATE.creative.url || STATE.url };
+    const body = (isQueriesEdited() || STATE.siteToggle)
+      ? { mode: "composed", prompt: STATE.prompt, brand: STATE.url, composed_queries: STATE.queries, site_toggle: STATE.siteToggle, sandbox }
+      : { mode: "interleaved", prompt: STATE.prompt, brand: STATE.url, sandbox };
+    const r = await callStudio(body);
+    STATE.interleavedResult = swPackResult(r);
+    STATE.creativeBaseline = { title, snippet };
+    STATE.unsavedAfterSave = false;
+    renderProseGrid({ baselineData: STATE.baselineResult, interleavedData: STATE.interleavedResult });
+    renderUnifiedTable();
+    refreshHeartUi();
+    setStatus("queries", "");
+  } catch (e) {
+    setStatus("queries", `failed — ${(e.message || "").slice(0, 160)}`, true);
+  } finally {
+    if (btn) btn.disabled = false;
+  }
+}
+
+// ============================================================
+// Render — side-by-side prose
+// ============================================================
+
+function formatProse(body) {
+  return escapeHtml(String(body || "").slice(0, 4000))
+    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+    .replace(/\[(\d+)\]/g, '<sup class="v7-cite">[$1]</sup>')
+    .replace(/\n\n+/g, "<br><br>")
+    .replace(/\n/g, " ");
+}
+
+function renderProseGrid({ baselineData, interleavedData, baselineLoading, interleavedLoading, error } = {}) {
+  const grid = document.getElementById("v7-prose-grid");
+  if (!grid) return;
+  const proseOrEmpty = (data, sideLabel) => {
+    const body = data?.distill?.body || "";
+    if (body.trim()) return `<div class="v7-prose-body">${formatProse(body)}${renderCitations(data.citations)}</div>`;
+    const warnings = data?.warnings || [];
+    const warn = warnings.length ? `<div style="font-size:11px;color:#c97a45;margin-top:8px">⚠ ${escapeHtml(warnings.slice(0, 2).join(" · "))}</div>` : "";
+    return `<div class="v7-prose-body" style="color:var(--ink-dim);font-style:italic">AI couldn't fetch enough search results for ${sideLabel} this run.${warn}</div>`;
   };
-  inp.addEventListener("input", updateCounter);
-  updateCounter();
+  const leftBody = baselineLoading ? `<div class="v7-prose-body v7-loading">asking AI<span class="v7-dots"></span></div>`
+                 : baselineData ? proseOrEmpty(baselineData, "the baseline")
+                 : `<div class="v7-prose-body v7-loading">waiting</div>`;
+  const rightBody = error ? `<div class="v7-prose-body" style="color:var(--bad)">failed — ${escapeHtml((error.message || "").slice(0, 160))}</div>`
+                  : interleavedLoading ? `<div class="v7-prose-body v7-loading">asking AI with your page<span class="v7-dots"></span></div>`
+                  : interleavedData ? proseOrEmpty(interleavedData, "the with-your-page side")
+                  : `<div class="v7-prose-body v7-loading">waiting</div>`;
+  // Show the take controls (heart + re-run + stale) only after the first comparison run.
+  const showControls = !!interleavedData;
+  const saved = isCurrentSaved();
+  const stale = isResultsStaleForCreative();
+  const heartHtml = showControls
+    ? `<button class="v7-heart-mini${saved ? " v7-saved" : ""}" id="v7-heart-big" title="save this take"><span class="v7-heart-glyph">♥</span> <span class="v7-heart-lbl">${saved ? "saved" : "save take"}</span></button>`
+    : "";
+  const rerunHtml = showControls
+    ? `<button class="v7-rerun-mini" id="v7-rerun-creative" title="re-run with current title and description">↻ re-run</button>`
+    : "";
+  const staleHtml = (showControls && stale)
+    ? `<span class="v7-stale-badge" id="v7-stale-badge">brief edited — re-run</span>`
+    : "";
+
+  grid.innerHTML = `
+    <div class="v7-prose-col">
+      <div class="v7-prose-head">
+        <div class="v7-prose-title">without your page</div>
+        <div class="v7-prose-head-actions">
+          ${renderThumbs("baseline")}
+        </div>
+      </div>
+      ${leftBody}
+    </div>
+    <div class="v7-prose-col v7-target">
+      <div class="v7-prose-head">
+        <div class="v7-prose-title v7-target-title">with your page</div>
+        <div class="v7-prose-head-actions">
+          ${renderThumbs("interleaved")}
+          ${heartHtml}
+          ${rerunHtml}
+        </div>
+      </div>
+      ${staleHtml}
+      ${rightBody}
+    </div>`;
+  // Wire thumbs
+  grid.querySelectorAll("[data-thumb-side]").forEach(b => {
+    b.addEventListener("click", () => {
+      const side = b.dataset.thumbSide;
+      const dir = b.dataset.thumbDir;
+      STATE.aiThumbs[side] = STATE.aiThumbs[side] === dir ? null : dir;
+      swLog("ai_response_thumb", { side, thumb: STATE.aiThumbs[side] || "off" });
+      renderProseGrid({ baselineData, interleavedData, baselineLoading, interleavedLoading, error });
+    });
+  });
+  // Wire heart
+  document.getElementById("v7-heart-big")?.addEventListener("click", saveCurrentCreative);
+  // Wire re-run
+  document.getElementById("v7-rerun-creative")?.addEventListener("click", rerunCreative);
+}
+
+function isResultsStaleForCreative() {
+  const cb = STATE.creativeBaseline || { title: "", snippet: "" };
+  return cb.title !== STATE.creative.title || cb.snippet !== STATE.creative.snippet;
+}
+
+function refreshHeartUi() {
+  // The heart + stale badge live inside the prose grid; re-render with current data.
+  if (STATE.interleavedResult) {
+    renderProseGrid({ baselineData: STATE.baselineResult, interleavedData: STATE.interleavedResult });
+  }
+}
+
+function renderThumbs(side) {
+  const t = STATE.aiThumbs[side];
+  return `<button class="v7-thumb v7-up${t === "up" ? " v7-active" : ""}" data-thumb-side="${side}" data-thumb-dir="up" title="useful answer">👍</button>
+          <button class="v7-thumb v7-down${t === "down" ? " v7-active" : ""}" data-thumb-side="${side}" data-thumb-dir="down" title="not useful">👎</button>`;
+}
+
+function renderCitations(citations) {
+  if (!citations || !citations.length) return "";
+  return `<details><summary>sources (${citations.length})</summary><ol style="margin:6px 0 0;padding-left:18px;font-size:11px;color:var(--ink-dim)">${citations.map(c => `<li>[${c.idx}] ${escapeHtml(c.title || c.anchor || "")}${c.domain ? ` · <span style="opacity:.7">${escapeHtml(c.domain)}</span>` : ""}</li>`).join("")}</ol></details>`;
+}
+
+// ============================================================
+// Render — unified ranked table
+// ============================================================
+
+function _brandLower() {
+  return (STATE.brandContext?.resolved_name || "").toLowerCase().trim();
+}
+
+function _isYou(name) {
+  const target = _brandLower();
+  if (!target) return false;
+  return (name || "").toLowerCase().includes(target);
+}
+
+// Brand-name matching across baseline/interleaved is fuzzy: the worker can return
+// "The Ordinary" in one call and "The Ordinary Niacinamide 10% + Zinc 2%" in the
+// other. Try exact match first, then bidirectional substring on a normalized form.
+function _normName(s) {
+  return String(s || "").toLowerCase().replace(/[^\p{L}\p{N} ]+/gu, " ").replace(/\s+/g, " ").trim();
+}
+function _findBaselineMatch(name) {
+  const recs = (STATE.baselineResult?.final || []).filter(r => r.type === "rec");
+  const t = _normName(name);
+  if (!t) return null;
+  for (const r of recs) if (_normName(r.brand) === t) return r;
+  for (const r of recs) {
+    const b = _normName(r.brand);
+    if (b && (b.includes(t) || t.includes(b))) return r;
+  }
+  return null;
+}
+
+function renderUnifiedTable() {
+  const wrap = document.getElementById("v7-unified-table");
+  if (!wrap) return;
+  const baselineRecs = (STATE.baselineResult?.final || []).filter(r => r.type === "rec");
+  const interleavedRecs = (STATE.interleavedResult?.final || []).filter(r => r.type === "rec");
+
+  if (!baselineRecs.length && !interleavedRecs.length) {
+    wrap.innerHTML = `<div class="v7-table-empty">no recommendations yet</div>`;
+    return;
+  }
+  // Pre-comparison: baseline only, no gutter
+  if (!interleavedRecs.length) {
+    wrap.innerHTML = renderBaselineOnlyTable(baselineRecs);
+    return;
+  }
+  // Post-comparison: interleaved order canonical, gutter on each row
+  const sorted = [...interleavedRecs].sort((a, b) => (a.rank ?? 999) - (b.rank ?? 999));
+  const rows = sorted.map(r => {
+    const baselineMatch = _findBaselineMatch(r.brand);
+    const baselineRank = baselineMatch?.rank ?? null;
+    const isYou = _isYou(r.brand);
+    const cls = isYou ? "v7-target" : "";
+    const gutter = renderGutter(baselineRank, r.rank);
+    const callout = isYou ? renderTargetCallout(baselineRank, r.rank) : "";
+    const baselineSub = isYou && baselineMatch
+      ? renderBaselineSub(baselineMatch, r)
+      : { ctr: "", cvr: "", eng: "" };
+    return `<tr class="${cls}">
+      <td class="v7-gutter">${gutter}</td>
+      <td class="v7-num">${r.rank}</td>
+      <td>${escapeHtml(r.brand || "")}${callout}${r._simulated ? ' <span class="v7-callout v7-callout-new" style="margin-left:6px">SIM</span>' : ""}</td>
+      <td class="v7-num">${fmt(r.E_ctr_pct)}${baselineSub.ctr}</td>
+      <td class="v7-num">${fmt(r.E_cvr_pct)}${baselineSub.cvr}</td>
+      <td class="v7-num">${fmt(r.E_engagement, 1)}${baselineSub.eng}</td>
+    </tr>`;
+  }).join("");
+  wrap.innerHTML = `<table class="v7-unified-table">
+    <thead><tr>
+      <th class="v7-gutter"></th>
+      <th class="v7-num">#</th>
+      <th>brand</th>
+      <th class="v7-num">CTR%</th>
+      <th class="v7-num">CVR%</th>
+      <th class="v7-num">eng/1k</th>
+    </tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`;
+}
+
+function renderBaselineOnlyTable(recs) {
+  const sorted = [...recs].sort((a, b) => (a.rank ?? 999) - (b.rank ?? 999));
+  const rows = sorted.map(r => {
+    const isYou = _isYou(r.brand);
+    const cls = isYou ? "v7-target" : "";
+    return `<tr class="${cls}">
+      <td class="v7-num">${r.rank}</td>
+      <td>${escapeHtml(r.brand || "")}</td>
+      <td class="v7-num">${fmt(r.E_ctr_pct)}</td>
+      <td class="v7-num">${fmt(r.E_cvr_pct)}</td>
+      <td class="v7-num">${fmt(r.E_engagement, 1)}</td>
+    </tr>`;
+  }).join("");
+  return `<table class="v7-unified-table">
+    <thead><tr>
+      <th class="v7-num">#</th>
+      <th>brand</th>
+      <th class="v7-num">CTR%</th>
+      <th class="v7-num">CVR%</th>
+      <th class="v7-num">eng/1k</th>
+    </tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`;
+}
+
+function renderGutter(baselineRank, interleavedRank) {
+  if (baselineRank == null) {
+    return `<div class="v7-gutter-track"><span style="opacity:.4">—</span><span class="v7-gutter-arrow v7-up">↑</span><span>${interleavedRank}</span></div>`;
+  }
+  let arrow = "v7-same", glyph = "—";
+  if (baselineRank > interleavedRank) { arrow = "v7-up"; glyph = "↑"; }
+  else if (baselineRank < interleavedRank) { arrow = "v7-down"; glyph = "↓"; }
+  return `<div class="v7-gutter-track"><span>${baselineRank}</span><span class="v7-gutter-arrow ${arrow}">${glyph}</span><span>${interleavedRank}</span></div>`;
+}
+
+function renderTargetCallout(baselineRank, interleavedRank) {
+  if (baselineRank == null) {
+    return `<span class="v7-callout v7-callout-new">NEW — now #${interleavedRank}</span>`;
+  }
+  if (baselineRank === interleavedRank) {
+    return `<span class="v7-callout v7-callout-same">still #${interleavedRank}</span>`;
+  }
+  if (baselineRank > interleavedRank) {
+    return `<span class="v7-callout">was #${baselineRank} → now #${interleavedRank}</span>`;
+  }
+  return `<span class="v7-callout v7-callout-down">was #${baselineRank} → now #${interleavedRank}</span>`;
+}
+
+function renderBaselineSub(baselineRec, interleavedRec) {
+  if (!baselineRec) return { ctr: "", cvr: "", eng: "" };
+  const sub = (val) => val == null ? "" : `<span class="v7-baseline-sub">(${fmt(val)})</span>`;
+  return {
+    ctr: sub(baselineRec.E_ctr_pct),
+    cvr: sub(baselineRec.E_cvr_pct),
+    eng: baselineRec.E_engagement == null ? "" : `<span class="v7-baseline-sub">(${fmt(baselineRec.E_engagement, 1)})</span>`,
+  };
+}
+
+// ============================================================
+// Creative editor + save heart
+// ============================================================
+
+// One-time wire for the creative inputs at Stage 2. Called from init.
+function wireCreativeInputs() {
+  const ti = document.getElementById("v7-cr-title");
+  const sn = document.getElementById("v7-cr-snippet");
+  if (ti && !ti.dataset.wired) {
+    ti.dataset.wired = "1";
+    ti.addEventListener("input", () => { STATE.creative.title = ti.value; markStaleIfNeeded(); });
+  }
+  if (sn && !sn.dataset.wired) {
+    sn.dataset.wired = "1";
+    sn.addEventListener("input", () => { STATE.creative.snippet = sn.value; markStaleIfNeeded(); });
+  }
+}
+
+function markStaleIfNeeded() {
+  if (!STATE.savedCreatives.length) { STATE.unsavedAfterSave = false; refreshHeartUi(); return; }
+  const lastSaved = STATE.savedCreatives[STATE.savedCreatives.length - 1];
+  const diff = lastSaved.creative.title !== STATE.creative.title || lastSaved.creative.snippet !== STATE.creative.snippet;
+  STATE.unsavedAfterSave = diff;
+  refreshHeartUi();
+}
+
+function isCurrentSaved() {
+  if (!STATE.savedCreatives.length) return false;
+  const last = STATE.savedCreatives[STATE.savedCreatives.length - 1];
+  return last.creative.title === STATE.creative.title && last.creative.snippet === STATE.creative.snippet;
+}
+
+function saveCurrentCreative() {
+  if (!STATE.interleavedResult) return;
+  const targetRow = (STATE.interleavedResult.final || []).find(r => r.type === "rec" && _isYou(r.brand));
+  const baselineRow = (STATE.baselineResult?.final || []).find(r => r.type === "rec" && _isYou(r.brand));
+  const targetRank = targetRow?.rank ?? null;
+  const baselineRank = baselineRow?.rank ?? null;
+  const snapshot = {
+    id: newId(),
+    ts: Date.now(),
+    prompt: STATE.prompt,
+    url: STATE.url,
+    queries: STATE.queries.slice(),
+    site_toggle: STATE.siteToggle,
+    creative: { title: STATE.creative.title, snippet: STATE.creative.snippet, url: STATE.creative.url || STATE.url },
+    brand_context: STATE.brandContext,
+    baseline: STATE.baselineResult,
+    interleaved: STATE.interleavedResult,
+    target_rank: targetRank,
+    baseline_rank: baselineRank,
+  };
+  STATE.savedCreatives.push(snapshot);
+  STATE.unsavedAfterSave = false;
+  persistSaved();
+  swLog("save_creative", {
+    id: snapshot.id,
+    target_rank: targetRank,
+    target_rank_delta: baselineRank != null && targetRank != null ? baselineRank - targetRank : null,
+  });
+  refreshHeartUi();
+  renderSavedList();
+  revealBottomBar();
+}
+
+function persistSaved() {
+  try {
+    localStorage.setItem(SAVED_KEY, JSON.stringify(STATE.savedCreatives));
+  } catch {}
+}
+
+function loadSaved() {
+  try {
+    const raw = localStorage.getItem(SAVED_KEY);
+    if (raw) STATE.savedCreatives = JSON.parse(raw) || [];
+  } catch { STATE.savedCreatives = []; }
+}
+
+function renderSavedList() {
+  const count = document.getElementById("v7-saved-count");
+  const list = document.getElementById("v7-saved-list");
+  if (count) count.textContent = STATE.savedCreatives.length;
+  if (!list) return;
+  if (!STATE.savedCreatives.length) {
+    list.innerHTML = `<div style="color:var(--ink-dim);font-size:11px;font-style:italic;padding:4px">no saved creatives yet</div>`;
+    return;
+  }
+  list.innerHTML = STATE.savedCreatives.map(s => {
+    const delta = s.baseline_rank != null && s.target_rank != null
+      ? (s.baseline_rank > s.target_rank ? `↑${s.baseline_rank - s.target_rank} (was #${s.baseline_rank} → now #${s.target_rank})`
+        : s.baseline_rank < s.target_rank ? `↓${s.target_rank - s.baseline_rank} (was #${s.baseline_rank} → now #${s.target_rank})`
+        : `still #${s.target_rank}`)
+      : (s.target_rank != null ? `now #${s.target_rank}` : "—");
+    return `<div class="v7-saved-row" data-saved-id="${s.id}">
+      <span class="v7-saved-title">${escapeHtml(s.creative.title || "(untitled)")}</span>
+      <span class="v7-saved-delta">${delta}</span>
+      <button class="v7-saved-x" data-action="unsave" title="remove">×</button>
+    </div>`;
+  }).join("");
+  list.querySelectorAll(".v7-saved-x").forEach(b => {
+    b.addEventListener("click", () => {
+      const id = b.closest(".v7-saved-row").dataset.savedId;
+      STATE.savedCreatives = STATE.savedCreatives.filter(s => s.id !== id);
+      persistSaved();
+      swLog("unsave_creative", { id });
+      renderSavedList();
+      refreshHeartUi();
+    });
+  });
+}
+
+function revealBottomBar() {
+  const el = document.getElementById("v7-bottom-bar");
+  if (el) el.hidden = false;
+}
+
+// ============================================================
+// Export
+// ============================================================
+
+function exportRun() {
+  const ts = new Date().toISOString();
+  const payload = {
+    timestamp: ts,
+    url: STATE.url,
+    brand_context: STATE.brandContext,
+    prompt: STATE.prompt,
+    prompt_suggestion: STATE.promptSuggestion,
+    queries: STATE.queries,
+    original_queries: STATE.originalQueries,
+    query_thumbs: STATE.queryThumbs,
+    site_toggle: STATE.siteToggle,
+    creative: STATE.creative,
+    baseline_result: STATE.baselineResult,
+    interleaved_result: STATE.interleavedResult,
+    ai_thumbs: STATE.aiThumbs,
+    saved_creatives: STATE.savedCreatives,
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `metricus-run-${ts.slice(0, 19).replace(/[:T]/g, "-")}.json`;
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  swLog("export_run", {
+    n_saved: STATE.savedCreatives.length,
+    run_duration_ms: STATE.runStartedAt ? Date.now() - STATE.runStartedAt : null,
+  });
+}
+
+// ============================================================
+// Init
+// ============================================================
+
+(function init() {
+  loadSaved();
+  renderSavedList();
+
+  // Stage 1
+  const form = document.getElementById("v7-url-form");
+  form?.addEventListener("submit", e => {
+    e.preventDefault();
+    let url = (document.getElementById("v7-url")?.value || "").trim();
+    if (!url) return;
+    // Accept bare domains like "formcase.de" — prepend https:// if missing.
+    if (!/^https?:\/\//i.test(url)) url = "https://" + url.replace(/^\/+/, "");
+    runInferPrompt(url);
+  });
+  document.getElementById("v7-url")?.addEventListener("input", () => {
+    if (STATE.stage !== "url") {
+      invalidateBelow("url");
+      setStage("url");
+    }
+  });
+
+  // Stage 2
+  document.getElementById("v7-to-queries")?.addEventListener("click", advanceToQueries);
+  document.getElementById("v7-prompt")?.addEventListener("keydown", e => {
+    if ((e.metaKey || e.ctrlKey) && e.key === "Enter") { e.preventDefault(); advanceToQueries(); }
+  });
+  document.getElementById("v7-prompt")?.addEventListener("input", () => {
+    if (STATE.stage !== "prompt") invalidateBelow("prompt");
+  });
+
+  // Stage 3
+  document.getElementById("v7-chip-add")?.addEventListener("keydown", e => {
+    if (e.key !== "Enter") return;
+    e.preventDefault();
+    const inp = e.currentTarget;
+    const v = inp.value.trim();
+    if (!v) return;
+    if (!STATE.queries.includes(v)) {
+      STATE.queries.push(v);
+      swLog("query_added", { query: v });
+      renderChips();
+    }
+    inp.value = "";
+  });
+  document.getElementById("v7-run-comparison")?.addEventListener("click", runComparison);
+
+  // Stage 2 creative inputs (re-run/save buttons are wired per-render inside renderProseGrid)
+  wireCreativeInputs();
+
+  // Bottom
+  document.getElementById("v7-export")?.addEventListener("click", exportRun);
+
+  // Always-visible bottom bar if there are saved creatives from prior sessions
+  if (STATE.savedCreatives.length) revealBottomBar();
+
+  // Init stage
+  setStage("url");
+  document.getElementById("v7-url")?.focus();
 })();
 </script>
 </body>
