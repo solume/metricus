@@ -2328,8 +2328,14 @@ async function runInferPrompt(url) {
       STATE.creative.url = bc.source_url || STATE.url;
     }
     swLog("infer_prompt_complete", {
-      had_brand_context: !!STATE.brandContext,
-      had_suggestion: !!STATE.promptSuggestion,
+      url,
+      prompt_suggestion: STATE.promptSuggestion,
+      brand_context: STATE.brandContext ? {
+        resolved_name: STATE.brandContext.resolved_name,
+        title: STATE.brandContext.title,
+        description: STATE.brandContext.description,
+        source_url: STATE.brandContext.source_url,
+      } : null,
       warnings: r.warnings || [],
     });
     const ta = document.getElementById("v7-prompt");
@@ -2356,9 +2362,22 @@ async function runInferPrompt(url) {
 async function advanceToQueries() {
   const prompt = (document.getElementById("v7-prompt")?.value || "").trim();
   if (!prompt) { document.getElementById("v7-prompt")?.focus(); return; }
-  if (prompt !== STATE.promptSuggestion) {
-    swLog("prompt_edited", { final_length: prompt.length });
+  const edited = prompt !== STATE.promptSuggestion;
+  if (edited) {
+    swLog("prompt_edited", {
+      suggested: STATE.promptSuggestion,
+      final: prompt,
+    });
   }
+  swLog("continue_to_queries", {
+    prompt: prompt,
+    prompt_suggestion: STATE.promptSuggestion,
+    edited_from_suggestion: edited,
+    creative_title: STATE.creative.title || "",
+    creative_snippet: STATE.creative.snippet || "",
+    brand_context_title: STATE.brandContext?.title || "",
+    brand_context_description: STATE.brandContext?.description || "",
+  });
   STATE.prompt = prompt;
   invalidateBelow("prompt");
   const btn = document.getElementById("v7-to-queries");
@@ -2374,6 +2393,17 @@ async function advanceToQueries() {
     // brand_context may also come back here; keep STATE.brandContext fresh.
     const bc = r.brand_context || STATE.brandContext;
     if (bc) STATE.brandContext = bc;
+    swLog("baseline_returned", {
+      generated_queries: STATE.originalQueries,
+      ai_response: (r.ai_response || "").slice(0, 3000),
+      citations: (r.citations || []).slice(0, 20).map(c => ({ idx: c.idx, title: c.title, domain: c.domain, url: c.url })),
+      recommendations: (r.recommendations || []).slice(0, 20).map(rec => ({
+        rank: rec.rank, brand: rec.brand,
+        E_ctr_pct: rec.E_ctr_pct, E_cvr_pct: rec.E_cvr_pct, eng_per_1k: rec.eng_per_1k,
+      })),
+      cluster: r.engagement?.neighbors?.[0]?.keyword || null,
+      warnings: r.warnings || [],
+    });
     renderChips();
     hideStageLoading("queries");
     setStatus("queries", "");
@@ -2409,14 +2439,17 @@ function renderChips() {
     const i = +chip.dataset.qI;
     const txt = chip.querySelector(".v7-chip-text");
     txt.addEventListener("blur", () => {
+      const before = STATE.queries[i];
       const v = txt.textContent.trim();
       if (!v) {
         STATE.queries.splice(i, 1);
+        swLog("query_removed", { query: before, via: "cleared_text" });
         renderChips();
         return;
       }
-      if (v !== STATE.queries[i]) {
+      if (v !== before) {
         STATE.queries[i] = v;
+        swLog("query_edited", { before, after: v, was_generated: STATE.originalQueries.includes(before) });
         renderChips();
       }
     });
@@ -2454,6 +2487,17 @@ function isQueriesEdited() {
 async function runComparison() {
   invalidateBelow("queries");
   setStatus("queries", "");
+  swLog("comparison_run", {
+    prompt: STATE.prompt,
+    queries_final: STATE.queries,
+    queries_generated: STATE.originalQueries,
+    queries_edited: isQueriesEdited(),
+    query_thumbs: STATE.queryThumbs,
+    creative_title: STATE.creative.title || "",
+    creative_snippet: STATE.creative.snippet || "",
+    brand_context_title: STATE.brandContext?.title || "",
+    brand_context_description: STATE.brandContext?.description || "",
+  });
   const btn = document.getElementById("v7-run-comparison");
   if (btn) btn.disabled = true;
   setStage("results");
@@ -2493,8 +2537,36 @@ async function runComparison() {
     hideStageLoading("results");
     renderProseGrid({ baselineData: baselineToShow, interleavedData: STATE.interleavedResult });
     renderUnifiedTable();
-    // Creative inputs are already wired at init time; nothing to reveal here.
     revealBottomBar();
+    // Log the full payloads of both sides + where the operator's brand landed.
+    const baselineRecs = (baselineToShow?.final || []).filter(x => x.type === "rec");
+    const interleavedRecs = (STATE.interleavedResult?.final || []).filter(x => x.type === "rec");
+    const targetBaseline = baselineRecs.find(x => _isYou(x.brand));
+    const targetInterleaved = interleavedRecs.find(x => _isYou(x.brand));
+    swLog("comparison_returned", {
+      without_your_page: {
+        ai_response: (baselineToShow?.distill?.body || "").slice(0, 3000),
+        citations: (baselineToShow?.citations || []).slice(0, 20),
+        recommendations: baselineRecs.slice(0, 20).map(rec => ({
+          rank: rec.rank, brand: rec.brand,
+          E_ctr_pct: rec.E_ctr_pct, E_cvr_pct: rec.E_cvr_pct, eng_per_1k: rec.eng_per_1k,
+        })),
+      },
+      with_your_page: {
+        ai_response: (r.ai_response || "").slice(0, 3000),
+        citations: (r.citations || []).slice(0, 20),
+        recommendations: interleavedRecs.slice(0, 20).map(rec => ({
+          rank: rec.rank, brand: rec.brand, simulated: !!rec._simulated,
+          E_ctr_pct: rec.E_ctr_pct, E_cvr_pct: rec.E_cvr_pct, eng_per_1k: rec.eng_per_1k,
+        })),
+      },
+      target: {
+        brand: STATE.brandContext?.resolved_name || null,
+        rank_without: targetBaseline?.rank ?? null,
+        rank_with: targetInterleaved?.rank ?? null,
+      },
+      warnings: r.warnings || [],
+    });
   } catch (e) {
     hideStageLoading("results");
     setStatus("queries", `failed — ${(e.message || "").slice(0, 160)}`, true);
@@ -2509,7 +2581,14 @@ async function rerunCreative() {
   const snippet = (document.getElementById("v7-cr-snippet")?.value || "").trim();
   STATE.creative.title = title;
   STATE.creative.snippet = snippet;
-  swLog("creative_rerun", { title_length: title.length, snippet_length: snippet.length });
+  swLog("creative_rerun", {
+    title,
+    snippet,
+    title_default: STATE.brandContext?.title || "",
+    snippet_default: STATE.brandContext?.description || "",
+    prompt: STATE.prompt,
+    queries_final: STATE.queries,
+  });
   setStatus("queries", "previewing your take…");
   const btn = document.getElementById("v7-rerun-creative");
   if (btn) btn.disabled = true;
@@ -2527,6 +2606,28 @@ async function rerunCreative() {
     renderUnifiedTable();
     refreshHeartUi();
     setStatus("queries", "");
+    // Log the new with-your-page payload + the resulting target rank.
+    const interleavedRecs = (STATE.interleavedResult?.final || []).filter(x => x.type === "rec");
+    const baselineRecs = (STATE.baselineResult?.final || []).filter(x => x.type === "rec");
+    const targetInterleaved = interleavedRecs.find(x => _isYou(x.brand));
+    const targetBaseline = baselineRecs.find(x => _isYou(x.brand));
+    swLog("creative_rerun_returned", {
+      creative: { title, snippet },
+      with_your_page: {
+        ai_response: (r.ai_response || "").slice(0, 3000),
+        citations: (r.citations || []).slice(0, 20),
+        recommendations: interleavedRecs.slice(0, 20).map(rec => ({
+          rank: rec.rank, brand: rec.brand, simulated: !!rec._simulated,
+          E_ctr_pct: rec.E_ctr_pct, E_cvr_pct: rec.E_cvr_pct, eng_per_1k: rec.eng_per_1k,
+        })),
+      },
+      target: {
+        brand: STATE.brandContext?.resolved_name || null,
+        rank_without: targetBaseline?.rank ?? null,
+        rank_with: targetInterleaved?.rank ?? null,
+      },
+      warnings: r.warnings || [],
+    });
   } catch (e) {
     setStatus("queries", `failed — ${(e.message || "").slice(0, 160)}`, true);
   } finally {
@@ -2787,11 +2888,35 @@ function wireCreativeInputs() {
   const sn = document.getElementById("v7-cr-snippet");
   if (ti && !ti.dataset.wired) {
     ti.dataset.wired = "1";
+    let focusVal = ti.value;
+    ti.addEventListener("focus", () => { focusVal = ti.value; });
     ti.addEventListener("input", () => { STATE.creative.title = ti.value; markStaleIfNeeded(); });
+    ti.addEventListener("blur", () => {
+      if (ti.value !== focusVal) {
+        swLog("creative_edited", {
+          field: "title",
+          before: focusVal,
+          after: ti.value,
+          default: STATE.brandContext?.title || "",
+        });
+      }
+    });
   }
   if (sn && !sn.dataset.wired) {
     sn.dataset.wired = "1";
+    let focusVal = sn.value;
+    sn.addEventListener("focus", () => { focusVal = sn.value; });
     sn.addEventListener("input", () => { STATE.creative.snippet = sn.value; markStaleIfNeeded(); });
+    sn.addEventListener("blur", () => {
+      if (sn.value !== focusVal) {
+        swLog("creative_edited", {
+          field: "snippet",
+          before: focusVal,
+          after: sn.value,
+          default: STATE.brandContext?.description || "",
+        });
+      }
+    });
   }
 }
 
