@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Visibility Report Pricing — Metricus</title>
-  <meta name="description" content="One-time AI visibility reports from $99. Three tiers: Snapshot, Deep Dive, Full Arsenal. No subscription, no recurring fees. Delivered within 24 hours.">
+  <title>Snapshot Pricing — $499 one-time | Metricus</title>
+  <meta name="description" content="One-time $499 AI visibility audit for B2B SMBs. PDF plus the actual drop-in files you ship (llms.txt, schemas, metadata, page copy). Manually reviewed by human AI experts. Delivered in 24 hours. No subscription.">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://metricusapp.com/pricing/">
-  <meta property="og:title" content="AI Visibility Report Pricing — Metricus">
-  <meta property="og:description" content="One-time AI visibility reports from $99. Three tiers: Snapshot, Deep Dive, Full Arsenal. No subscription. Delivered within 24 hours.">
+  <meta property="og:title" content="Snapshot Pricing — $499 one-time | Metricus">
+  <meta property="og:description" content="One-time $499 AI visibility audit for B2B SMBs. PDF plus drop-in files (llms.txt, schemas, metadata, page copy). Manually reviewed. 24-hour turnaround.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://metricusapp.com/pricing/">
   <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="AI Visibility Report Pricing — Metricus">
-  <meta name="twitter:description" content="One-time AI visibility reports from $99. Three tiers: Snapshot, Deep Dive, Full Arsenal. No subscription. Delivered within 24 hours.">
+  <meta name="twitter:title" content="Snapshot Pricing — $499 one-time | Metricus">
+  <meta name="twitter:description" content="One-time $499 AI visibility audit for B2B SMBs. PDF plus drop-in files. Manually reviewed. 24-hour turnaround.">
   <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
+
   <!-- Google Tag Manager -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
@@ -49,6 +50,7 @@
             'on-primary': '#f6f7ff',
             'on-primary-fixed': '#324054',
             'primary-dim': '#455368',
+            'primary-fixed-dim': '#c7d5ee',
             surface: '#f7f9fb',
             'surface-container-low': '#f0f4f7',
             'surface-container': '#e8eff3',
@@ -88,36 +90,26 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
-
     .font-display { font-family: 'Newsreader', serif; }
     .font-headline { font-family: 'Newsreader', serif; }
     .font-body-sans { font-family: 'Public Sans', sans-serif; }
-
-    .editorial-btn {
-      transition: background-color 150ms ease-in-out, transform 150ms ease;
-    }
-    .editorial-btn:hover {
-      background-color: #1E293B;
-    }
-
     .bg-grid-dots {
       background-image: radial-gradient(circle, #717c82 0.5px, transparent 0.5px);
       background-size: 24px 24px;
       opacity: 0.05;
     }
-
     .material-symbols-outlined {
       font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
     }
   </style>
 
-  <!-- Structured Data: Product with Offers -->
+  <!-- Structured Data: Product with single Offer -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "Metricus AI Visibility Report",
-    "description": "One-time AI visibility report — find out what AI says about your brand, what it gets wrong, and how to fix it.",
+    "name": "Metricus Snapshot — AI Visibility Audit",
+    "description": "A one-time AI visibility audit for B2B SMBs. 200+ buyer scenarios across the major AI systems, traced to source pages, with a phased fix list and the actual drop-in files you ship: llms.txt, robots.txt edits, JSON-LD schemas, FAQPage markup, slug/title/meta specs, page copy. Manually reviewed by human AI experts. 15–25 page PDF, delivered in 24 hours.",
     "image": "https://metricusapp.com/metricus-og-image.png",
     "brand": { "@type": "Brand", "name": "Metricus" },
     "hasMerchantReturnPolicy": {
@@ -128,11 +120,14 @@
       "returnMethod": "https://schema.org/ReturnByMail",
       "returnFees": "https://schema.org/FreeReturn"
     },
-    "offers": [
-      { "@type": "Offer", "name": "Snapshot", "price": "99", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://metricusapp.com/get-report/?tier=snapshot" },
-      { "@type": "Offer", "name": "Deep Dive", "price": "299", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://metricusapp.com/get-report/?tier=deep-dive" },
-      { "@type": "Offer", "name": "Full Arsenal", "price": "499", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://metricusapp.com/get-report/?tier=full-arsenal" }
-    ]
+    "offers": {
+      "@type": "Offer",
+      "name": "Snapshot",
+      "price": "499",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://metricusapp.com/get-report/"
+    }
   }
   </script>
 
@@ -147,15 +142,15 @@
         "name": "How long does delivery take?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Every report is delivered within 24 hours of your order. Most are ready sooner."
+          "text": "Every Snapshot is delivered within 24 hours of order. Every report is manually reviewed line by line by human AI experts before it ships."
         }
       },
       {
         "@type": "Question",
-        "name": "What if the report isn't useful?",
+        "name": "What if the Snapshot isn't useful?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "If your report doesn't give you clear next actions, we refund it. No questions asked."
+          "text": "If your Snapshot doesn't give you clear next actions, we refund it. No questions asked."
         }
       },
       {
@@ -163,15 +158,15 @@
         "name": "Can I use this for a client's brand?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Many agencies and consultants order reports on behalf of their clients. The reports are white-label ready, and volume pricing is available for teams ordering 5 or more reports per month."
+          "text": "Yes. Agencies and consultants order Snapshots on behalf of their clients. The PDF and drop-in files are white-label ready. Volume pricing is available for teams ordering 5 or more Snapshots per month."
         }
       },
       {
         "@type": "Question",
-        "name": "What AI platforms does the report cover?",
+        "name": "What AI platforms does the Snapshot cover?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Metricus covers your visibility across the major AI platforms your buyers use, including conversational AI assistants, AI search engines, and AI-powered overviews."
+          "text": "Your Snapshot covers how your brand appears across the major AI platforms your buyers use."
         }
       },
       {
@@ -179,7 +174,7 @@
         "name": "Is this a subscription?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Every Metricus report is a one-time purchase with no recurring fees. Order one report or many — you only pay per report."
+          "text": "No. The Snapshot is one-time. No recurring fees, no tiers, no platform access charges."
         }
       },
       {
@@ -254,387 +249,211 @@
 
   <main class="flex-grow flex flex-col">
 
-    <!-- ========== PAGE HEADER ========== -->
-    <section class="w-full max-w-7xl mx-auto px-6 lg:px-8 pt-28 pb-12 md:pt-36 md:pb-16">
-      <p class="text-xs uppercase tracking-widest text-slate-muted mb-4 font-semibold font-body-sans">Pay-Per-Report Pricing</p>
-      <h1 class="font-display font-bold text-[40px] leading-[1.1] md:text-[56px] lg:text-[64px] text-slate-text tracking-tight max-w-[800px]">
-        AI Visibility Report Pricing
+    <!-- ========== HEADER ========== -->
+    <section class="w-full max-w-3xl mx-auto px-6 pt-28 pb-12 md:pt-36 md:pb-16 text-center">
+      <p class="text-xs uppercase tracking-widest text-slate-muted mb-4 font-semibold font-body-sans italic">For B2B SMBs.</p>
+      <h1 class="font-display font-bold text-[40px] leading-[1.05] md:text-[60px] text-slate-text tracking-tight text-balance">
+        One product. One price. One PDF, plus the files you ship.
       </h1>
-      <p class="text-[16px] md:text-[18px] text-slate-muted font-normal max-w-[600px] mt-6 leading-relaxed font-body-sans">
-        Pick the question you need answered. Every report is one-time, delivered within 24 hours, and built to be read in one sitting &mdash; not studied.
+      <p class="text-[17px] md:text-[19px] text-slate-muted font-normal mt-6 leading-relaxed max-w-xl mx-auto">
+        The Metricus Snapshot — a one-time AI visibility audit. Delivered in 24 hours. Manually reviewed by human AI experts.
       </p>
     </section>
 
-    <!-- ========== YOU SEND / YOU GET / WITHIN 24 HOURS ========== -->
-    <section class="w-full max-w-7xl mx-auto px-6 lg:px-8 pb-12">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="bg-surface-container-lowest border border-outline-variant/30 p-6 text-center">
-          <span class="material-symbols-outlined text-primary text-2xl mb-2">upload</span>
-          <h3 class="font-headline text-lg text-on-surface mb-1">You Send</h3>
-          <p class="text-sm text-on-surface-variant font-body-sans">Your website, brand name, and delivery email.</p>
+
+    <!-- ========== PRICE CARD ========== -->
+    <section class="w-full max-w-3xl mx-auto px-6 pb-16 md:pb-20">
+      <div class="bg-white border border-outline-variant/60 shadow-sm">
+
+        <!-- Top — price + name -->
+        <div class="px-8 md:px-14 pt-12 pb-8 text-center border-b border-outline-variant/30">
+          <p class="text-[11px] uppercase tracking-[0.22em] text-slate-muted font-semibold mb-3 font-body-sans">Snapshot</p>
+          <p class="font-display text-[72px] md:text-[88px] leading-none text-slate-text">$499</p>
+          <p class="text-sm text-slate-muted mt-3 font-body-sans">One-time. Delivered in 24 hours. Manually reviewed.</p>
         </div>
-        <div class="bg-surface-container-lowest border border-outline-variant/30 p-6 text-center">
-          <span class="material-symbols-outlined text-primary text-2xl mb-2">inbox</span>
-          <h3 class="font-headline text-lg text-on-surface mb-1">You Get</h3>
-          <p class="text-sm text-on-surface-variant font-body-sans">A report with exact AI quotes, source pages, competitor gaps, and a ranked fix list.</p>
+
+        <!-- Middle — what's in it -->
+        <div class="px-8 md:px-14 py-10 md:py-12">
+          <p class="text-[12px] uppercase tracking-[0.22em] font-semibold text-primary mb-6 font-body-sans">What's in it</p>
+
+          <ul class="space-y-4 mb-10">
+            <li class="flex gap-3">
+              <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5" aria-hidden="true">check</span>
+              <span class="text-[16px] text-slate-text leading-relaxed">200+ real buyer scenarios specific to your domain, vertical, and competitors — run across the major AI systems</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5" aria-hidden="true">check</span>
+              <span class="text-[16px] text-slate-text leading-relaxed">For every answer where you appear: the exact AI wording, the source page it learned from, where you ranked against competitors</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5" aria-hidden="true">check</span>
+              <span class="text-[16px] text-slate-text leading-relaxed">For every answer where you don't: why, and what would change it</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5" aria-hidden="true">check</span>
+              <span class="text-[16px] text-slate-text leading-relaxed">A 15–25 page PDF, plus the actual drop-in files: <span class="font-semibold">llms.txt, robots.txt edits, JSON-LD schemas, FAQPage markup, slug/title/meta specs, page copy</span> — named to match where they go on your site</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5" aria-hidden="true">check</span>
+              <span class="text-[16px] text-slate-text leading-relaxed">Fixes sequenced into phases — quick wins to ship in a day, new pages to ship over weeks, measurement plan for day 30 / 60 / 90</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="material-symbols-outlined text-primary flex-shrink-0 mt-0.5" aria-hidden="true">check</span>
+              <span class="text-[16px] text-slate-text leading-relaxed">Manually reviewed line by line by human AI experts before it ships</span>
+            </li>
+          </ul>
+
+          <p class="text-[13px] text-slate-muted italic leading-relaxed">
+            See the full section-by-section structure on the <a href="/sample-ai-visibility-report/" class="text-primary font-semibold not-italic hover:text-primary-hover underline underline-offset-2">sample page</a>.
+          </p>
         </div>
-        <div class="bg-surface-container-lowest border border-outline-variant/30 p-6 text-center">
-          <span class="material-symbols-outlined text-primary text-2xl mb-2">schedule</span>
-          <h3 class="font-headline text-lg text-on-surface mb-1">Within 24 Hours</h3>
-          <p class="text-sm text-on-surface-variant font-body-sans">One email. The full report. Nothing else to set up.</p>
+
+        <!-- Bottom — CTA -->
+        <div class="border-t border-outline-variant/40 bg-surface-container-low px-8 md:px-14 py-10 md:py-12 text-center">
+          <a href="/get-report/" class="inline-flex items-center justify-center gap-3 h-14 md:h-16 px-8 md:px-10 bg-primary text-white font-semibold text-[16px] md:text-[18px] hover:bg-primary-dim transition-colors">
+            Order my Snapshot — $499
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <p class="text-[13px] text-slate-muted mt-4 italic">
+            PDF + ready-to-ship files. Delivered in 24 hours. Manually reviewed. Not a subscription.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========== USEFUL REPORT GUARANTEE ========== -->
+    <section class="py-16 md:py-20 bg-surface relative">
+      <div class="absolute inset-0 bg-grid-dots pointer-events-none"></div>
+      <div class="max-w-3xl mx-auto px-6 relative z-10">
+        <div class="bg-white p-10 md:p-14 text-center border border-outline-variant/40">
+          <span class="material-symbols-outlined text-primary text-5xl mb-6 block">verified</span>
+          <h2 class="font-headline text-3xl md:text-4xl text-on-surface mb-4">Useful report or refund.</h2>
+          <p class="text-base text-on-surface-variant leading-relaxed mb-2 font-body-sans">
+            If your Snapshot doesn't give you clear next actions, we refund it. No questions asked.
+          </p>
+          <p class="text-sm text-on-surface-variant leading-relaxed max-w-lg mx-auto font-body-sans mt-4">
+            Every Snapshot is meant to leave you with a specific list of what to ship — not just more reading.
+          </p>
         </div>
       </div>
     </section>
 
 
-    <!-- ========== TIER CARDS ========== -->
-    <section class="py-12 md:py-16 bg-surface relative">
-      <div class="absolute inset-0 bg-grid-dots pointer-events-none"></div>
-      <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-
-        <!-- Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3">
-
-          <!-- Tier 1: Snapshot -->
-          <div class="bg-surface-container-lowest p-10 min-h-[500px] flex flex-col">
-            <div class="mb-6">
-              <h2 class="font-headline text-3xl text-on-surface mb-1">Snapshot</h2>
-              <p class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">Is AI getting your brand right?</p>
-            </div>
-            <div class="mb-6">
-              <span class="font-headline text-5xl text-on-surface">$99</span>
-              <span class="text-sm text-on-surface-variant ml-2">per report</span>
-            </div>
-            <p class="text-base text-on-surface font-semibold mb-4 font-body-sans">
-              See what AI says about you and what's wrong.
-            </p>
-            <p class="text-sm text-on-surface-variant leading-relaxed mb-6 font-body-sans mb-auto">
-              You see the exact words AI uses to describe your brand, every wrong fact it repeats, and a list of what to fix on your site.
-            </p>
-            <button data-action="buy-tier" data-tier="snapshot" class="mt-10 block text-center border-2 border-primary text-primary text-xs font-semibold uppercase tracking-widest px-6 py-3 hover:bg-primary hover:text-on-primary transition-colors cursor-pointer">Get this report</button>
-          </div>
-
-          <!-- Tier 2: Deep Dive (Most popular) -->
-          <div class="bg-surface-container-lowest p-10 min-h-[500px] flex flex-col relative border-x-4 border-primary shadow-xl">
-            <div class="absolute top-0 right-0 bg-primary text-on-primary text-[10px] font-semibold uppercase tracking-widest px-4 py-1.5">
-              Most popular
-            </div>
-            <div class="mb-6">
-              <h2 class="font-headline text-3xl text-on-surface mb-1">Deep Dive</h2>
-              <p class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">Why does AI recommend your competitors instead?</p>
-            </div>
-            <div class="mb-6">
-              <span class="font-headline text-5xl text-on-surface">$299</span>
-              <span class="text-sm text-on-surface-variant ml-2">per report</span>
-            </div>
-            <p class="text-base text-on-surface font-semibold mb-4 font-body-sans">
-              See who replaces you and why.
-            </p>
-            <p class="text-sm text-on-surface-variant leading-relaxed mb-6 font-body-sans mb-auto">
-              Everything in Snapshot, plus you see which competitors replace you, why AI picks them, and a ranked list of what to fix &mdash; starting with the easiest wins.
-            </p>
-            <button data-action="buy-tier" data-tier="deep-dive" class="mt-10 block text-center bg-primary text-on-primary text-xs font-semibold uppercase tracking-widest px-6 py-3 hover:bg-primary-dim transition-colors cursor-pointer">Get this report</button>
-          </div>
-
-          <!-- Tier 3: Full Arsenal -->
-          <div class="bg-surface-container-lowest p-10 min-h-[500px] flex flex-col">
-            <div class="mb-6">
-              <h2 class="font-headline text-3xl text-on-surface mb-1">Full Arsenal</h2>
-              <p class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold">What's the complete fix plan for every type of buyer?</p>
-            </div>
-            <div class="mb-6">
-              <span class="font-headline text-5xl text-on-surface">$499</span>
-              <span class="text-sm text-on-surface-variant ml-2">per report</span>
-            </div>
-            <p class="text-base text-on-surface font-semibold mb-4 font-body-sans">
-              See every gap, for every buyer type.
-            </p>
-            <p class="text-sm text-on-surface-variant leading-relaxed mb-6 font-body-sans mb-auto">
-              Everything in Deep Dive, plus you see which buyer types can't find you, where you're invisible by category, and coverage across every buyer type you serve.
-            </p>
-            <button data-action="buy-tier" data-tier="full-arsenal" class="mt-10 block text-center bg-surface-container-high text-on-surface text-xs font-semibold uppercase tracking-widest px-6 py-3 hover:bg-surface-container-highest transition-colors cursor-pointer">Get this report</button>
-          </div>
-
-        </div>
-
-        <!-- Agency Volume CTA -->
-        <div class="mt-12 bg-surface-container-low p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+    <!-- ========== AGENCY VOLUME ========== -->
+    <section class="py-12 md:py-16">
+      <div class="max-w-3xl mx-auto px-6">
+        <div class="bg-on-primary-fixed text-surface p-8 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
-            <h3 class="font-headline text-xl text-on-surface mb-1">Running multiple audits?</h3>
-            <p class="text-sm text-on-surface-variant font-body-sans">Teams ordering 5+ reports per month get priority turnaround and volume pricing.</p>
+            <p class="text-[11px] uppercase tracking-[0.22em] text-primary-fixed-dim font-semibold mb-2">Running multiple audits?</p>
+            <h3 class="font-headline text-xl md:text-2xl text-surface mb-1">Agencies ordering 5+ Snapshots per month get volume pricing and priority turnaround.</h3>
           </div>
-          <a href="/agency-inquiry/" class="inline-block bg-on-primary-fixed text-on-primary text-xs font-semibold uppercase tracking-widest px-8 py-3.5 whitespace-nowrap hover:opacity-90 transition-opacity">
-            Get Volume Pricing
+          <a href="/for-agencies/" class="inline-block bg-surface text-on-surface text-xs font-semibold uppercase tracking-widest px-8 py-3.5 whitespace-nowrap hover:bg-surface-container-high transition-opacity">
+            For agencies →
           </a>
         </div>
       </div>
     </section>
 
 
-    <!-- ========== COMPARISON MATRIX ========== -->
-    <section class="py-16 md:py-20 bg-surface-container-low relative">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <details class="group">
-          <summary class="cursor-pointer flex items-center gap-3 text-on-surface font-headline text-xl mb-4 list-none [&::-webkit-details-marker]:hidden">
-            <span class="material-symbols-outlined text-primary text-xl transition-transform group-open:rotate-180">expand_more</span>
-            See the full feature comparison
-          </summary>
-          <p class="text-sm text-on-surface-variant font-body-sans mb-8 max-w-xl">Start with the tier cards above. This matrix has the line-by-line detail if you need it.</p>
-        <div class="overflow-x-auto">
-          <table class="w-full text-left">
-            <thead>
-              <tr>
-                <th class="pb-4 text-xs uppercase tracking-widest text-on-surface-variant font-semibold w-1/2"></th>
-                <th class="pb-4 text-xs uppercase tracking-widest text-on-surface-variant font-semibold text-center min-w-[120px]">
-                  <span class="block font-headline text-lg text-on-surface">Snapshot</span>
-                  <span class="block text-xs text-on-surface-variant">$99</span>
-                </th>
-                <th class="pb-4 text-xs uppercase tracking-widest text-primary font-semibold text-center min-w-[120px] bg-surface-container-lowest">
-                  <span class="block font-headline text-lg text-on-surface">Deep Dive</span>
-                  <span class="block text-xs text-on-surface-variant">$299</span>
-                </th>
-                <th class="pb-4 text-xs uppercase tracking-widest text-on-surface-variant font-semibold text-center min-w-[120px]">
-                  <span class="block font-headline text-lg text-on-surface">Full Arsenal</span>
-                  <span class="block text-xs text-on-surface-variant">$499</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody class="text-sm font-body-sans">
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">Exact AI quotes about your brand</td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">How often AI mentions you vs recommends you</td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">Which pages on your site AI actually reads</td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">Why competitors get recommended &amp; which queries trigger it</td>
-                <td class="py-3 text-center"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center text-sm text-on-surface bg-surface-container-lowest">why</td>
-                <td class="py-3 text-center text-sm text-on-surface">why &amp; when</td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">The AI searches that find you (and the ones that don&rsquo;t)</td>
-                <td class="py-3 text-center"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">Where your wording doesn&rsquo;t match what buyers ask</td>
-                <td class="py-3 text-center"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">What proof AI looks for when recommending</td>
-                <td class="py-3 text-center"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">What makes AI recommend you (not just mention you)</td>
-                <td class="py-3 text-center"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">Prioritized fix list from your data</td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">Breakdown by buyer type</td>
-                <td class="py-3 text-center"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">Words that make you invisible</td>
-                <td class="py-3 text-center"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">Categories where you should show up but don&rsquo;t</td>
-                <td class="py-3 text-center"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-              <tr class="border-b border-outline-variant/10">
-                <td class="py-3 text-on-surface font-semibold">Where to compete vs where to reposition</td>
-                <td class="py-3 text-center"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center bg-surface-container-lowest"><span class="text-outline-variant">&mdash;</span></td>
-                <td class="py-3 text-center"><span class="material-symbols-outlined text-primary text-lg">check</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        </details>
-      </div>
-    </section>
-
-
-    <!-- ========== MONEY-BACK GUARANTEE ========== -->
-    <section class="py-16 md:py-20 relative bg-white">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="bg-surface p-10 md:p-16 max-w-3xl mx-auto text-center">
-          <span class="material-symbols-outlined text-primary text-5xl mb-6 block">verified</span>
-          <h2 class="font-headline text-3xl md:text-4xl text-on-surface mb-4">Useful Report Guarantee</h2>
-          <p class="text-lg text-on-surface-variant leading-relaxed mb-6 font-body-sans">
-            If your report doesn't give you clear next actions, we refund it. No questions asked.
-          </p>
-          <p class="text-sm text-on-surface-variant leading-relaxed max-w-lg mx-auto font-body-sans">
-            Every report is meant to leave you with a specific list of what to do &mdash; not just more reading.
-          </p>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ========== FAQ SECTION ========== -->
-    <section class="py-16 md:py-20 bg-surface-container-low relative">
-      <div class="max-w-3xl mx-auto px-6 lg:px-8">
-        <h2 class="font-headline italic text-4xl text-on-surface mb-12">Frequently asked questions</h2>
+    <!-- ========== FAQ ========== -->
+    <section class="py-16 md:py-20 bg-surface-container-low">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="font-display italic text-3xl md:text-4xl text-on-surface mb-12">Frequently asked questions</h2>
 
         <div class="space-y-0">
-          <!-- FAQ 1 -->
-          <details class="group border-b border-outline-variant/20">
+
+          <details class="group border-t border-b border-outline-variant/30">
             <summary class="flex items-center justify-between py-5 cursor-pointer list-none">
               <h3 class="text-base text-on-surface font-semibold font-body-sans pr-4">How long does delivery take?</h3>
               <span class="material-symbols-outlined text-on-surface-variant text-xl shrink-0 transition-transform group-open:rotate-180">expand_more</span>
             </summary>
             <div class="pb-5">
-              <p class="text-sm text-on-surface-variant leading-relaxed font-body-sans">
-                Every report is delivered within 24 hours of your order. Most are ready sooner. You'll receive an email with your complete report as soon as it's done.
-              </p>
+              <p class="text-sm text-on-surface-variant leading-relaxed font-body-sans">Every Snapshot is delivered within 24 hours of order. Every report is manually reviewed line by line by human AI experts before it ships.</p>
             </div>
           </details>
 
-          <!-- FAQ 2 -->
-          <details class="group border-b border-outline-variant/20">
+          <details class="group border-b border-outline-variant/30">
             <summary class="flex items-center justify-between py-5 cursor-pointer list-none">
-              <h3 class="text-base text-on-surface font-semibold font-body-sans pr-4">What if the report isn't useful?</h3>
+              <h3 class="text-base text-on-surface font-semibold font-body-sans pr-4">What if the Snapshot isn't useful?</h3>
               <span class="material-symbols-outlined text-on-surface-variant text-xl shrink-0 transition-transform group-open:rotate-180">expand_more</span>
             </summary>
             <div class="pb-5">
-              <p class="text-sm text-on-surface-variant leading-relaxed font-body-sans">
-                If your report doesn't give you clear next actions, we refund it. No questions asked.
-              </p>
+              <p class="text-sm text-on-surface-variant leading-relaxed font-body-sans">If your Snapshot doesn't give you clear next actions, we refund it. No questions asked.</p>
             </div>
           </details>
 
-          <!-- FAQ 3 -->
-          <details class="group border-b border-outline-variant/20">
+          <details class="group border-b border-outline-variant/30">
             <summary class="flex items-center justify-between py-5 cursor-pointer list-none">
               <h3 class="text-base text-on-surface font-semibold font-body-sans pr-4">Can I use this for a client's brand?</h3>
               <span class="material-symbols-outlined text-on-surface-variant text-xl shrink-0 transition-transform group-open:rotate-180">expand_more</span>
             </summary>
             <div class="pb-5">
-              <p class="text-sm text-on-surface-variant leading-relaxed font-body-sans">
-                Yes. Many agencies and consultants order reports on behalf of their clients. The reports are white-label ready. Teams ordering 5+ reports per month get priority turnaround and volume pricing. <a href="/for-agencies/" class="text-primary hover:underline">Learn more about agency pricing.</a>
-              </p>
+              <p class="text-sm text-on-surface-variant leading-relaxed font-body-sans">Yes. Agencies and consultants order Snapshots on behalf of their clients. The PDF and drop-in files are white-label ready. Volume pricing is available for teams ordering 5+ Snapshots per month. <a href="/for-agencies/" class="text-primary hover:underline">For agencies →</a></p>
             </div>
           </details>
 
-          <!-- FAQ 4 -->
-          <details class="group border-b border-outline-variant/20">
+          <details class="group border-b border-outline-variant/30">
             <summary class="flex items-center justify-between py-5 cursor-pointer list-none">
-              <h3 class="text-base text-on-surface font-semibold font-body-sans pr-4">What AI platforms does the report cover?</h3>
+              <h3 class="text-base text-on-surface font-semibold font-body-sans pr-4">What AI platforms does the Snapshot cover?</h3>
               <span class="material-symbols-outlined text-on-surface-variant text-xl shrink-0 transition-transform group-open:rotate-180">expand_more</span>
             </summary>
             <div class="pb-5">
-              <p class="text-sm text-on-surface-variant leading-relaxed font-body-sans">
-                Covers your visibility across major AI platforms your buyers use -- including conversational AI assistants, AI search engines, and AI-powered overviews. Every report audits the platforms that matter for your category.
-              </p>
+              <p class="text-sm text-on-surface-variant leading-relaxed font-body-sans">Your Snapshot covers how your brand appears across the major AI platforms your buyers use.</p>
             </div>
           </details>
 
-          <!-- FAQ 5 -->
-          <details class="group border-b border-outline-variant/20">
+          <details class="group border-b border-outline-variant/30">
             <summary class="flex items-center justify-between py-5 cursor-pointer list-none">
               <h3 class="text-base text-on-surface font-semibold font-body-sans pr-4">Is this a subscription?</h3>
               <span class="material-symbols-outlined text-on-surface-variant text-xl shrink-0 transition-transform group-open:rotate-180">expand_more</span>
             </summary>
             <div class="pb-5">
-              <p class="text-sm text-on-surface-variant leading-relaxed font-body-sans">
-                No. Every Metricus report is a one-time purchase. No recurring fees, no subscription, no platform access charges. Order one report or many -- you only pay per report.
-              </p>
+              <p class="text-sm text-on-surface-variant leading-relaxed font-body-sans">No. The Snapshot is one-time. No recurring fees, no tiers, no platform access charges.</p>
             </div>
           </details>
 
-          <!-- FAQ 6 -->
-          <details class="group border-b border-outline-variant/20">
+          <details class="group border-b border-outline-variant/30">
             <summary class="flex items-center justify-between py-5 cursor-pointer list-none">
               <h3 class="text-base text-on-surface font-semibold font-body-sans pr-4">What do I need before ordering?</h3>
               <span class="material-symbols-outlined text-on-surface-variant text-xl shrink-0 transition-transform group-open:rotate-180">expand_more</span>
             </summary>
             <div class="pb-5">
-              <p class="text-sm text-on-surface-variant leading-relaxed font-body-sans">
-                Your website URL, brand name, and a delivery email. That's it. No account to create, no onboarding call, no setup.
-              </p>
+              <p class="text-sm text-on-surface-variant leading-relaxed font-body-sans">Your website URL, brand name, and a delivery email. That's it. No account to create, no onboarding call, no setup.</p>
             </div>
           </details>
+
         </div>
       </div>
     </section>
 
 
     <!-- ========== NOT SURE YET ========== -->
-    <div class="max-w-3xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-center gap-6 text-center sm:text-left">
-      <a href="/sample-ai-visibility-report/" class="inline-flex items-center gap-2 text-sm text-primary font-medium hover:text-primary-hover transition-colors group">
-        Not sure yet? See what a report delivers
-        <span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
-      </a>
-      <span class="hidden sm:inline text-outline-variant/40">|</span>
-      <a href="/blog/90-day-ai-visibility-plan/" class="inline-flex items-center gap-2 text-sm text-primary font-medium hover:text-primary-hover transition-colors group">
-        Plan your strategy first: 90-Day Playbook
+    <div class="max-w-3xl mx-auto px-6 py-12 text-center">
+      <a href="/sample-ai-visibility-report/" class="inline-flex items-center gap-2 text-sm text-primary font-semibold hover:text-primary-hover transition-colors group">
+        Not sure yet? See what every Snapshot contains
         <span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
       </a>
     </div>
 
 
     <!-- ========== FINAL CTA ========== -->
-    <section class="py-16 md:py-20 bg-surface relative">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-          <div class="md:col-span-8 bg-surface-container-lowest p-10 md:p-14 flex flex-col justify-center">
-            <h2 class="font-headline text-3xl md:text-4xl text-on-surface mb-4">
-              Not sure which question to start with?
-            </h2>
-            <p class="text-base text-on-surface-variant leading-relaxed mb-8 max-w-xl font-body-sans">
-              Most first-time buyers start with Deep Dive &mdash; it shows why AI recommends your competitors and gives you a ranked fix list. One-time purchase. No subscription.
-            </p>
-            <p class="text-sm text-on-surface-variant font-body-sans mb-8">
-              Every report is one-time. No subscription. No recurring charges.
-            </p>
-            <div>
-              <a href="/get-report/" class="inline-block bg-primary text-on-primary text-xs font-semibold uppercase tracking-widest px-8 py-3.5 hover:bg-primary-hover transition-colors">
-                Get Your Report
-              </a>
-            </div>
-          </div>
-          <div class="md:col-span-4 bg-primary text-on-primary p-10 md:p-14 flex flex-col justify-center">
-            <span class="material-symbols-outlined text-4xl mb-6 text-on-primary/80">architecture</span>
-            <h3 class="font-headline text-2xl mb-3">Pay Per Report</h3>
-            <p class="text-sm text-on-primary/70 leading-relaxed font-body-sans">
-              No subscription, no platform fees. Order one report or one hundred -- pay per audit, get results.
-            </p>
-          </div>
-        </div>
+    <section class="py-16 md:py-20 bg-on-surface text-surface">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <p class="text-xs uppercase tracking-[0.22em] text-primary-fixed-dim mb-6 font-semibold">Snapshot · $499 · 24 hours · manually reviewed</p>
+        <h2 class="font-display italic text-4xl md:text-5xl mb-8 leading-tight">Order yours.</h2>
+        <a href="/get-report/" class="inline-flex items-center justify-center gap-3 h-14 md:h-16 px-10 bg-surface text-on-surface font-semibold text-[16px] md:text-[18px] hover:bg-surface-container-high transition-colors">
+          Order my Snapshot — $499
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M13 5l7 7-7 7"/>
+          </svg>
+        </a>
       </div>
     </section>
+
   </main>
 
 
@@ -642,7 +461,7 @@
   <div class="w-full px-6 py-4">
     <footer class="citation max-w-3xl mx-auto pt-4 border-t border-[#E2E8F0]/40">
       <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed text-center">Cite as:
-        <cite class="not-italic"><a href="https://metricusapp.com/pricing/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; AI Visibility Report Pricing</a></cite>
+        <cite class="not-italic"><a href="https://metricusapp.com/pricing/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus — Snapshot Pricing</a></cite>
       </p>
     </footer>
   </div>
@@ -666,25 +485,5 @@
   </footer>
 
   <script src="/js/reader-pulse-b.js" defer></script>
-
-<script>
-  var WORKER_URL = 'https://metricus.red-hill-a87d.workers.dev/';
-  document.addEventListener('click', function(e) {
-    var btn = e.target.closest('[data-action="buy-tier"]');
-    if (!btn) return;
-    e.preventDefault();
-    var tier = btn.getAttribute('data-tier');
-    var website = '';
-    try { website = sessionStorage.getItem('metricus_website') || ''; } catch(e) {}
-    try {
-      var data = new URLSearchParams({ contact: '', pricing: 'TIER_CLICK // ' + tier.toUpperCase() + ' // Page: ' + location.pathname });
-      if (navigator.sendBeacon) navigator.sendBeacon(WORKER_URL, data);
-      else fetch(WORKER_URL, { method: 'POST', mode: 'no-cors', body: data }).catch(function(){});
-    } catch(e) {}
-    var href = '/get-report/?tier=' + tier;
-    if (website) href += '&website=' + encodeURIComponent(website);
-    window.location.href = href;
-  });
-</script>
 </body>
 </html>
