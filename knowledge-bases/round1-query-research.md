@@ -49,7 +49,7 @@ Each agent: unique persona, no local file context, instructed to do 15-20+ deep-
 - Schema markup = **3.2x more citations**, Wikipedia = credibility tiebreaker
 - 87% of ChatGPT Search citations match Bing's top organic results
 - Correction timeline: 4-12 weeks depending on platform. Perplexity fastest (real-time retrieval)
-- **68% of brands fail** AI visibility audits (Citedify, 2026)
+- **68% of brands fail** AI visibility reports (Citedify, 2026)
 - Legal frontier emerging: Walters v. OpenAI, Battle v. Microsoft testing AI defamation liability
 
 ### Articles Fetched
