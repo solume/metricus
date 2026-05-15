@@ -41,9 +41,36 @@
   /*  Constants                                                          */
   /* ------------------------------------------------------------------ */
 
-  var ENDPOINT = 'https://metricus.red-hill-a87d.workers.dev/';
+  var SW_LOGS_URL = 'https://metricus-studio-logs.red-hill-a87d.workers.dev/';
   var STORAGE_KEY = 'metricus_email';
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  var SW_UID = (function() {
+    try {
+      var u = localStorage.getItem('metricus_uid');
+      if (!u) {
+        u = (crypto.randomUUID && crypto.randomUUID()) ||
+            ('uid-' + Math.random().toString(36).slice(2) + Date.now().toString(36));
+        localStorage.setItem('metricus_uid', u);
+      }
+      return u;
+    } catch (e) {
+      return 'uid-' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+    }
+  })();
+  var SW_SID = (function() {
+    try {
+      var s = sessionStorage.getItem('metricus_sid');
+      if (!s) {
+        s = (crypto.randomUUID && crypto.randomUUID()) ||
+            ('sid-' + Math.random().toString(36).slice(2) + Date.now().toString(36));
+        sessionStorage.setItem('metricus_sid', s);
+      }
+      return s;
+    } catch (e) {
+      return 'sid-' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+    }
+  })();
 
   /* ------------------------------------------------------------------ */
   /*  Helpers                                                            */
@@ -61,23 +88,20 @@
     catch (e) { /* private browsing — fail silently */ }
   }
 
-  /** POST lead data to the Cloudflare Worker (same pattern as reader-pulse-b). */
+  /** POST lead data to the Studio logging Worker. */
   function postLead(email, leadMagnet) {
     try {
-      var pricing = 'EMAIL_GATE_LEAD // Lead Magnet: ' + (leadMagnet || 'unknown') +
+      var details = 'Lead Magnet: ' + (leadMagnet || 'unknown') +
                     ' // Page: ' + location.pathname;
-      var body = 'contact=' + encodeURIComponent(email) +
-                 '&pricing=' + encodeURIComponent(pricing);
-
-      if (typeof navigator !== 'undefined' && navigator.sendBeacon) {
-        var blob = new Blob([body], { type: 'application/x-www-form-urlencoded' });
-        if (navigator.sendBeacon(ENDPOINT, blob)) return;
-      }
-      fetch(ENDPOINT, {
+      fetch(SW_LOGS_URL, {
         method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: body,
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          uid: SW_UID,
+          sid: SW_SID,
+          event: 'EMAIL_GATE_LEAD',
+          value: { contact: email, details: details }
+        }),
         keepalive: true
       }).catch(function () {});
     } catch (e) { /* network errors are non-fatal */ }

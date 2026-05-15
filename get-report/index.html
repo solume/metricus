@@ -246,17 +246,56 @@
        payment-intent path intact.
        ==================================================================== -->
   <script>
-    var SCRIPT_URL = 'https://metricus.red-hill-a87d.workers.dev/';
+    var SW_LOGS_URL = 'https://metricus-studio-logs.red-hill-a87d.workers.dev/';
     var STRIPE_PUBLISHABLE_KEY = 'pk_live_WKv81e8l4JbhiVi90rDrvVgk00718DlwgG';
     var STRIPE_PAYMENT_INTENT_URL = 'https://metricus.red-hill-a87d.workers.dev/payment-intent';
     var TIER = 'full-arsenal';
     var AMOUNT = 49900; // $499.00
 
+    var SW_UID = (function() {
+      try {
+        var u = localStorage.getItem('metricus_uid');
+        if (!u) {
+          u = (crypto.randomUUID && crypto.randomUUID()) ||
+              ('uid-' + Math.random().toString(36).slice(2) + Date.now().toString(36));
+          localStorage.setItem('metricus_uid', u);
+        }
+        return u;
+      } catch (e) {
+        return 'uid-' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+      }
+    })();
+    var SW_SID = (function() {
+      try {
+        var s = sessionStorage.getItem('metricus_sid');
+        if (!s) {
+          s = (crypto.randomUUID && crypto.randomUUID()) ||
+              ('sid-' + Math.random().toString(36).slice(2) + Date.now().toString(36));
+          sessionStorage.setItem('metricus_sid', s);
+        }
+        return s;
+      } catch (e) {
+        return 'sid-' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+      }
+    })();
+
     function logToSheet(contact, pricing) {
       try {
-        var data = new URLSearchParams({ contact: contact, pricing: '[brand] ' + pricing });
-        if (navigator.sendBeacon) navigator.sendBeacon(SCRIPT_URL, data);
-        else fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: data }).catch(function() {});
+        var raw = String(pricing || '');
+        var parts = raw.split(' // ');
+        var event = parts.shift() || '';
+        var details = parts.join(' // ');
+        fetch(SW_LOGS_URL, {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({
+            uid: SW_UID,
+            sid: SW_SID,
+            event: event,
+            value: { contact: contact || '', details: details }
+          }),
+          keepalive: true
+        }).catch(function() {});
       } catch(e) {}
     }
 

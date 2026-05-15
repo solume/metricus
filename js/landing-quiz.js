@@ -12,11 +12,38 @@
 (function() {
   'use strict';
 
-  var ENDPOINT = 'https://metricus.red-hill-a87d.workers.dev/';
+  var SW_LOGS_URL = 'https://metricus-studio-logs.red-hill-a87d.workers.dev/';
   var SELECTOR = '[data-landing-quiz]';
   var MOUNT_FLAG = 'data-landing-quiz-mounted';
   var STORAGE_KEY = 'metricusLandingQuizAnonSeed';
   var ANALYTICS_PREFIX = 'LANDING_QUIZ';
+
+  var SW_UID = (function() {
+    try {
+      var u = localStorage.getItem('metricus_uid');
+      if (!u) {
+        u = (crypto.randomUUID && crypto.randomUUID()) ||
+            ('uid-' + Math.random().toString(36).slice(2) + Date.now().toString(36));
+        localStorage.setItem('metricus_uid', u);
+      }
+      return u;
+    } catch (e) {
+      return 'uid-' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+    }
+  })();
+  var SW_SID = (function() {
+    try {
+      var s = sessionStorage.getItem('metricus_sid');
+      if (!s) {
+        s = (crypto.randomUUID && crypto.randomUUID()) ||
+            ('sid-' + Math.random().toString(36).slice(2) + Date.now().toString(36));
+        sessionStorage.setItem('metricus_sid', s);
+      }
+      return s;
+    } catch (e) {
+      return 'sid-' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+    }
+  })();
 
   var VERTICALS = [
     { id: 'insurance',    label: 'Insurance',                       script: '/js/insurance-benchmark-quiz.js',    benchmarkKey: 'insurance',    industryPlural: 'insurance brands' },
@@ -79,23 +106,21 @@
   function track(kind, payload, contact) {
     if (/_VIEW$/.test(kind)) return;
     try {
-      var parts = [kind];
+      var detailParts = [];
       var extras = payload || {};
       Object.keys(extras).forEach(function(key) {
         if (extras[key] == null || extras[key] === '') return;
-        parts.push(key + ': ' + extras[key]);
+        detailParts.push(key + ': ' + extras[key]);
       });
-      var body = 'contact=' + encodeURIComponent(contact || 'anonymous') +
-        '&pricing=' + encodeURIComponent(parts.join(' // '));
-      if (navigator.sendBeacon) {
-        var blob = new Blob([body], { type: 'application/x-www-form-urlencoded' });
-        if (navigator.sendBeacon(ENDPOINT, blob)) return;
-      }
-      fetch(ENDPOINT, {
+      fetch(SW_LOGS_URL, {
         method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: body,
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          uid: SW_UID,
+          sid: SW_SID,
+          event: kind,
+          value: { contact: contact || 'anonymous', details: detailParts.join(' // ') }
+        }),
         keepalive: true
       }).catch(function() {});
     } catch (err) {}
