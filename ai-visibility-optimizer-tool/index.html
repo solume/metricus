@@ -1,0 +1,2058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>AI Visibility Optimizer Tool — Rewrite &amp; Test Any Page | Metricus</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://metricusapp.com/ai-visibility-optimizer-tool/">
+<meta name="description" content="Per-page AI visibility optimizer. Drafts six rewrites of your title, headline, and description, tests each across 42 buyer questions. Winner in 2 min.">
+<meta property="og:title" content="AI Visibility Optimizer Tool — Rewrite &amp; Test Any Page | Metricus">
+<meta property="og:description" content="Per-page AI visibility optimizer. Drafts six rewrites of your title, headline, and description, tests each across 42 buyer questions. Winner in 2 min.">
+<meta property="og:url" content="https://metricusapp.com/ai-visibility-optimizer-tool/">
+<meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AI Visibility Optimizer Tool — Rewrite &amp; Test Any Page | Metricus">
+<meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "w70oz7g1k3");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --primary:        #515F74;
+    --primary-hover:  #1E293B;
+    --primary-dim:    #455368;
+    --on-primary:     #f6f7ff;
+    --on-primary-fixed: #324054;
+    --primary-fixed-dim: #c7d5ee;
+    --surface:        #f7f9fb;
+    --surface-low:    #f0f4f7;
+    --surface-mid:    #e8eff3;
+    --on-surface:     #2a3439;
+    --on-surface-var: #566166;
+    --outline:        #717c82;
+    --outline-var:    #a9b4b9;
+    --slate-text:     #0F172A;
+    --slate-muted:    #64748B;
+    --hairline:       rgba(169, 180, 185, 0.4);
+    --ok:             #4A7A4F;
+    --err:            #B45236;
+    /* Variant palette — six colours that read distinctly on a white card */
+    --v0: #5A6470;
+    --v1: #515F74;
+    --v2: #6F8AAB;
+    --v3: #8AA6B5;
+    --v4: #6A8C5E;
+    --v5: #B38A2E;
+  }
+
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { overscroll-behavior-x: none; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: var(--slate-text);
+    font: 14px/1.5 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .serif { font-family: 'Newsreader', Georgia, serif; }
+  .mono  { font-family: 'Public Sans', sans-serif; font-variant-numeric: tabular-nums; }
+  a { color: var(--primary); text-decoration: none; }
+  a:hover { color: var(--primary-hover); text-decoration: underline; }
+  button { font-family: inherit; }
+
+  /* HEADER — minimal tool bar */
+  header.bar {
+    border-bottom: 1px solid var(--hairline);
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 12px 20px;
+    padding-top: calc(12px + env(safe-area-inset-top));
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  header.bar .logo { display: flex; align-items: center; gap: 7px; text-decoration: none; color: var(--on-surface); }
+  header.bar .logo svg { width: 16px; height: 16px; color: var(--primary); }
+  header.bar .logo .name {
+    font-family: 'Newsreader', Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    letter-spacing: -0.01em;
+  }
+  header.bar .tool-name {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--slate-muted);
+    border-left: 1px solid var(--hairline);
+    padding-left: 12px;
+  }
+  header.bar .home-link {
+    margin-left: auto;
+    font-size: 12px;
+    color: var(--slate-muted);
+  }
+  header.bar .home-link:hover { color: var(--on-surface); text-decoration: none; }
+
+  /* MAIN */
+  main.shell {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 20px 24px 60px;
+  }
+
+  /* INTRO */
+  .intro { margin-bottom: 16px; }
+  .intro .kicker {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .intro h1 {
+    font-family: 'Newsreader', Georgia, serif;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    margin: 0 0 6px 0;
+    max-width: 640px;
+    color: var(--slate-text);
+  }
+  .intro p {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--slate-muted);
+    margin: 0;
+    max-width: 620px;
+  }
+  .intro p + p { margin-top: 7px; }
+
+  /* FORM CARD */
+  .form-card {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    padding: 14px;
+    margin-bottom: 12px;
+  }
+  .form-card .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: flex-end;
+  }
+  .form-card label {
+    display: block;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--on-surface-var);
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  .form-card input {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid var(--outline-var);
+    padding: 9px 11px;
+    color: var(--slate-text);
+    font-size: 14px;
+    outline: none;
+    font-family: inherit;
+    transition: border-color 150ms ease;
+  }
+  .form-card input:focus { border-color: var(--primary); }
+  .form-card .field { flex: 1 1 220px; min-width: 0; }
+  .form-card button {
+    background: var(--primary);
+    color: var(--on-primary);
+    border: 0;
+    padding: 10px 22px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    min-height: 38px;
+    transition: background-color 150ms ease, transform 100ms ease;
+  }
+  .form-card button:hover { background: var(--primary-dim); }
+  .form-card button:active { transform: scale(0.98); }
+  .form-card button:disabled { background: var(--outline-var); color: var(--slate-muted); cursor: not-allowed; }
+  @media (min-width: 720px) {
+    .form-card .field-url   { flex: 2 1 280px; }
+    .form-card .field-email { flex: 1 1 200px; }
+  }
+
+  /* ACTIVITY — progress bar + clear phase labels */
+  .activity {
+    margin-bottom: 18px;
+    min-height: 24px;
+  }
+  .activity .progress-row {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 8px;
+  }
+  .activity .progress-track {
+    flex: 1;
+    height: 5px;
+    background: var(--surface-mid);
+    overflow: hidden;
+    position: relative;
+  }
+  .activity .progress-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--primary);
+    transition: width 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  /* Continuous shimmer that travels across the filled portion — keeps
+     the bar visibly alive even when the fill width isn't changing. */
+  .activity.running .progress-fill::after {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0; left: 0;
+    width: 40%;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.55) 50%,
+      transparent 100%);
+    animation: progShimmer 1.4s linear infinite;
+  }
+  @keyframes progShimmer {
+    0%   { transform: translateX(-120%); }
+    100% { transform: translateX(420%); }
+  }
+  .activity .progress-fill.indeterminate {
+    width: 100% !important;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      var(--primary) 30%,
+      var(--primary) 70%,
+      transparent 100%);
+    background-size: 40% 100%;
+    background-repeat: no-repeat;
+    animation: scanLoop 1.4s linear infinite;
+  }
+  @keyframes scanLoop {
+    from { background-position: -40% 0; }
+    to   { background-position: 140% 0; }
+  }
+  .activity .progress-pct {
+    font-family: 'Public Sans', sans-serif;
+    font-variant-numeric: tabular-nums;
+    font-size: 11px;
+    color: var(--slate-muted);
+    font-weight: 600;
+    min-width: 34px;
+    text-align: right;
+  }
+  .activity.done .progress-fill { background: var(--ok); }
+  .activity.err  .progress-fill { background: var(--err); }
+  .activity.idle .progress-row { display: none; }
+
+  .activity .phase-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+  .activity .dot {
+    width: 7px; height: 7px; flex-shrink: 0; border-radius: 50%;
+    background: var(--outline-var);
+    align-self: center;
+  }
+  .activity.running .dot { background: var(--primary); animation: pulse 1.2s ease-in-out infinite; }
+  .activity.done    .dot { background: var(--ok); }
+  .activity.err     .dot { background: var(--err); }
+  @keyframes pulse { 50% { opacity: 0.35; } }
+
+  .activity .phase {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--slate-text);
+    letter-spacing: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .activity.idle .phase { font-weight: 500; color: var(--slate-muted); }
+  /* Animated typing dots after the phase label — visible "still working" signal. */
+  .activity.running .phase::after {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 13px;
+    background-image:
+      radial-gradient(circle at 4px 7px, var(--primary) 1.6px, transparent 2px),
+      radial-gradient(circle at 12px 7px, var(--primary) 1.6px, transparent 2px),
+      radial-gradient(circle at 20px 7px, var(--primary) 1.6px, transparent 2px);
+    background-repeat: no-repeat;
+    animation: phaseDots 1.4s infinite;
+  }
+  @keyframes phaseDots {
+    0%   { opacity: 0.25; }
+    33%  { opacity: 1;    }
+    66%  { opacity: 0.6;  }
+    100% { opacity: 0.25; }
+  }
+  .activity .substatus {
+    font-family: 'Public Sans', sans-serif;
+    font-variant-numeric: tabular-nums;
+    font-size: 11px;
+    color: var(--slate-muted);
+    min-height: 14px;
+    margin-bottom: 6px;
+  }
+  .activity .substatus strong {
+    color: var(--slate-text);
+    font-weight: 600;
+  }
+  /* Live micro-action line — rotates fast to feel like the agent
+     is doing something even between cell completions. */
+  .activity .micro {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 11px;
+    color: var(--primary);
+    min-height: 14px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0;
+    transition: opacity 250ms ease;
+  }
+  .activity.running .micro { opacity: 1; }
+  .activity .micro::before {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border: 1.5px solid var(--primary);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    flex-shrink: 0;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .activity .micro.fade { opacity: 0; }
+  .activity .edu {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: var(--slate-muted);
+    font-style: italic;
+    transition: opacity 350ms ease;
+    max-width: 640px;
+  }
+  .activity .edu.fade { opacity: 0; }
+  .activity.idle .edu, .activity.done .edu, .activity.err .edu { display: none; }
+
+  /* HERO (scrape) CARD */
+  .hero-card {
+    border: 1px solid var(--hairline);
+    border-top: 3px solid var(--primary);
+    background: var(--surface);
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    display: none;
+  }
+  .hero-card.shown { display: block; }
+  .hero-card .url {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 11px;
+    color: var(--slate-muted);
+    margin-bottom: 5px;
+    word-break: break-all;
+  }
+  .hero-card .url a { color: var(--slate-muted); }
+  .hero-card .url a:hover { color: var(--on-surface); }
+  .hero-card .title {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--slate-text);
+    line-height: 1.25;
+    margin-bottom: 4px;
+  }
+  .hero-card .desc {
+    font-size: 13px;
+    color: var(--on-surface-var);
+    line-height: 1.5;
+    max-width: 720px;
+  }
+  .hero-card .summary {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--hairline);
+    font-family: 'Newsreader', Georgia, serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--on-surface-var);
+    line-height: 1.55;
+    max-width: 720px;
+  }
+
+  /* SECTION HEADERS */
+  section.block { margin-top: 24px; }
+  section.block .head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--hairline);
+    margin-bottom: 12px;
+  }
+  section.block h2 {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  section.block .meta {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--slate-muted);
+  }
+
+  /* SECTION EXPLAINERS — orient the naive user */
+  .block-explainer {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--on-surface-var);
+    max-width: 760px;
+    margin: 0 0 14px 0;
+  }
+  .block-explainer strong { color: var(--slate-text); font-weight: 600; }
+  .block-explainer em { font-style: italic; }
+  .detail-explainer { margin-top: 12px; margin-bottom: 6px; }
+
+  /* TAKEAWAY CARD — high-contrast result panel */
+  .takeaway-card {
+    background: var(--on-primary-fixed);
+    color: var(--on-primary);
+    border-left: 4px solid var(--primary-fixed-dim);
+    padding: 22px 24px;
+  }
+  .takeaway-card .winner-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .takeaway-card .winner-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--on-primary);
+    color: var(--slate-text);
+    padding: 4px 10px;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .takeaway-card .winner-badge::before {
+    content: "";
+    width: 8px; height: 8px;
+    background: var(--swatch, var(--primary));
+  }
+  .takeaway-card .winner-name {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--on-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+  .takeaway-card .lead {
+    font-family: 'Newsreader', Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.45;
+    color: rgba(246, 247, 255, 0.92);
+    margin-bottom: 16px;
+    letter-spacing: -0.005em;
+    max-width: 760px;
+  }
+  .takeaway-card .lead strong {
+    font-weight: 700;
+    font-style: normal;
+    color: var(--on-primary);
+  }
+  .takeaway-card .lead em {
+    color: var(--on-primary);
+    font-weight: 600;
+    background: rgba(199, 213, 238, 0.18);
+    padding: 1px 6px;
+  }
+  .takeaway-card .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0;
+    margin: 0 0 18px 0;
+    border-top: 1px solid rgba(199, 213, 238, 0.25);
+    border-bottom: 1px solid rgba(199, 213, 238, 0.25);
+  }
+  .takeaway-card .stat {
+    padding: 12px 14px 12px 0;
+    border-right: 1px solid rgba(199, 213, 238, 0.18);
+  }
+  .takeaway-card .stat:last-child { border-right: 0; }
+  .takeaway-card .stat .stat-label {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--primary-fixed-dim);
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  .takeaway-card .stat .stat-value {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--on-primary);
+    line-height: 1.25;
+  }
+  .takeaway-card .stat .stat-value.small {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(246, 247, 255, 0.85);
+  }
+  .takeaway-card .stat .stat-value .none {
+    color: var(--primary-fixed-dim);
+    font-style: italic;
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .takeaway-card .next-step {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 13px;
+    line-height: 1.55;
+    color: rgba(246, 247, 255, 0.92);
+    background: rgba(0, 0, 0, 0.15);
+    padding: 10px 14px;
+    border-left: 2px solid var(--primary-fixed-dim);
+  }
+  .takeaway-card .next-step strong {
+    color: var(--on-primary);
+    font-weight: 600;
+  }
+  @media (max-width: 640px) {
+    .takeaway-card { padding: 18px 16px; }
+    .takeaway-card .winner-name { font-size: 18px; }
+    .takeaway-card .lead { font-size: 16px; }
+  }
+
+  /* LEGEND — color → variant mapping above the funnel grid */
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    margin: 10px 0 14px 0;
+    padding: 10px 12px;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+  }
+  .legend .legend-title {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--slate-muted);
+    font-weight: 600;
+    margin-right: 4px;
+    align-self: center;
+  }
+  .legend .legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 11.5px;
+    color: var(--slate-text);
+    line-height: 1.3;
+  }
+  .legend .swatch {
+    width: 14px; height: 14px; flex-shrink: 0;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  .legend .swatch.outlined {
+    outline: 1.5px solid var(--primary);
+    outline-offset: 1px;
+  }
+  .legend .legend-item.baseline .label::after {
+    content: " (current)";
+    color: var(--slate-muted);
+    font-size: 10.5px;
+  }
+  .legend .legend-item.winner .label::after {
+    content: " ★";
+    color: var(--ok);
+    font-weight: 700;
+  }
+
+  /* VARIANTS LIST */
+  ul.variants {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  ul.variants li.vcard {
+    background: #ffffff;
+    border: 1px solid var(--hairline);
+    padding: 14px 16px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 200px;
+    gap: 16px;
+    transition: border-color 200ms ease;
+  }
+  ul.variants li.vcard.is-baseline { border-left: 3px solid var(--outline-var); }
+  ul.variants li.vcard.winner-overall { border-color: var(--primary); }
+
+  .vc-left { min-width: 0; }
+  .vc-right { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .vc-right-label {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--slate-muted);
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--hairline);
+    margin-bottom: 2px;
+    line-height: 1.3;
+  }
+
+  .vc-header {
+    display: flex; align-items: center; gap: 8px;
+    margin-bottom: 6px;
+  }
+  .vc-color-pill { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .vc-rank {
+    font-family: 'Public Sans', sans-serif; font-size: 10px;
+    color: var(--slate-muted); letter-spacing: 0.1em;
+    text-transform: uppercase; font-weight: 600;
+    flex-shrink: 0;
+  }
+  .vc-rank::before { content: "RANK " attr(data-r); }
+  ul.variants li.is-baseline .vc-rank::before { content: "BASELINE"; }
+  .vc-angle {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    flex: 1; min-width: 0;
+    color: var(--slate-text);
+  }
+  .vc-score {
+    font-family: 'Public Sans', sans-serif;
+    font-variant-numeric: tabular-nums;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--slate-text);
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .vc-score .label {
+    display: block;
+    font-size: 9px;
+    color: var(--slate-muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .vc-wins {
+    color: var(--slate-muted); font-size: 11px; margin-bottom: 8px;
+    font-family: 'Public Sans', sans-serif;
+  }
+  .vc-wins strong { color: var(--ok); font-weight: 600; }
+
+  /* assets */
+  .vc-assets { display: grid; gap: 5px; margin-bottom: 8px; }
+  .vc-asset {
+    display: grid; grid-template-columns: 80px 1fr 26px;
+    gap: 10px; align-items: start;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .vc-asset:last-child { border-bottom: none; }
+  .vc-asset .alabel {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 9px;
+    color: var(--slate-muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-top: 3px;
+  }
+  .vc-asset .avalue {
+    font-size: 13px; line-height: 1.4; color: var(--slate-text);
+    overflow-wrap: anywhere;
+  }
+  .vc-asset .avalue.title { font-weight: 500; }
+  .vc-asset .avalue.slug  { font-family: 'Public Sans', sans-serif; font-size: 12px; color: var(--primary); }
+  .vc-asset .avalue.url   { font-family: 'Public Sans', sans-serif; font-size: 11px; color: var(--slate-muted); }
+  .vc-asset .copy-one {
+    width: 24px; height: 24px; padding: 0;
+    border: 1px solid var(--hairline);
+    background: transparent;
+    color: var(--slate-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    transition: all 0.15s;
+  }
+  .vc-asset .copy-one:hover { border-color: var(--primary); color: var(--primary); background: var(--surface-low); }
+  .vc-asset .copy-one.copied { background: var(--ok); color: white; border-color: var(--ok); }
+  .vc-copy-all {
+    background: var(--slate-text); color: var(--on-primary); border: 0;
+    padding: 7px 12px; cursor: pointer;
+    font: 600 11px/1 inherit;
+    margin-top: 4px;
+    letter-spacing: 0.04em;
+  }
+  .vc-copy-all:hover { background: var(--primary-dim); }
+  .vc-copy-all.copied { background: var(--ok); }
+
+  /* per-stage mini-bars on the right */
+  .vc-stages-mini { display: flex; flex-direction: column; gap: 3px; }
+  .vc-stages-mini .stage-row {
+    display: grid; grid-template-columns: 1fr 24px;
+    gap: 6px; align-items: center; font-size: 10px;
+  }
+  .vc-stages-mini .stage-label {
+    color: var(--slate-muted);
+    font-family: 'Public Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.04em;
+    text-transform: lowercase;
+  }
+  .vc-stages-mini .stage-track {
+    height: 11px;
+    background: var(--surface-low);
+    position: relative;
+    overflow: hidden;
+  }
+  .vc-stages-mini .stage-fill {
+    height: 100%;
+    background: var(--primary);
+    transition: width 0.4s ease;
+  }
+  .vc-stages-mini .stage-fill.zero {
+    background: var(--hairline);
+  }
+  .vc-stages-mini .stage-fill.pending {
+    background-image: repeating-linear-gradient(45deg, var(--hairline) 0 3px, var(--surface-low) 3px 6px);
+    background-size: 8.5px 8.5px;
+    animation: stripeFlow 0.9s linear infinite;
+  }
+  .vc-stages-mini .stage-num {
+    font-family: 'Public Sans', sans-serif;
+    font-variant-numeric: tabular-nums;
+    font-size: 10px;
+    text-align: right;
+    color: var(--slate-text);
+  }
+  .vc-stages-mini .stage-num.zero,
+  .vc-stages-mini .stage-num.pending { color: var(--slate-muted); }
+  .vc-stages-mini .stage-row.win .stage-num { color: var(--ok); font-weight: 600; }
+  .vc-stages-mini .stage-row.win .stage-label::after { content: " ★"; color: var(--ok); }
+
+  /* FUNNEL DETAIL (collapsible) */
+  details.funnel { margin-top: 28px; }
+  details.funnel summary {
+    cursor: pointer;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--hairline);
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    list-style: none;
+  }
+  details.funnel summary::-webkit-details-marker { display: none; }
+  details.funnel summary .caret {
+    color: var(--slate-muted);
+    margin-right: 6px;
+    display: inline-block;
+    transition: transform 0.15s;
+    font-family: 'Public Sans', sans-serif;
+  }
+  details.funnel[open] summary .caret { transform: rotate(90deg); }
+  .funnel-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .stage-col {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 200ms ease, background 200ms ease;
+  }
+  .stage-col.active {
+    border-color: var(--primary);
+    background: #ffffff;
+  }
+  /* Scanning highlight bar across the top of the active stage column */
+  .stage-col.active::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      var(--primary) 50%,
+      transparent 100%);
+    background-size: 40% 100%;
+    background-repeat: no-repeat;
+    animation: scanLoop 1.3s linear infinite;
+  }
+  .stage-col.complete {
+    border-color: var(--hairline);
+  }
+  .stage-col.complete::after {
+    content: "✓";
+    position: absolute;
+    top: 6px; right: 8px;
+    font-size: 11px;
+    color: var(--ok);
+    font-weight: 700;
+    line-height: 1;
+  }
+  .stage-col h3 {
+    margin: 0;
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .stage-col .stage-num {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 9px;
+    color: var(--slate-muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .stage-col .prompt {
+    font-size: 11px;
+    color: var(--slate-muted);
+    font-style: italic;
+    font-family: 'Newsreader', Georgia, serif;
+    line-height: 1.4;
+    border-bottom: 1px solid var(--hairline);
+    padding-bottom: 6px;
+    min-height: 44px;
+  }
+  .bars {
+    display: flex; gap: 2px;
+    align-items: flex-end;
+    height: 88px;
+    padding-top: 4px;
+    position: relative;
+  }
+  .bar {
+    flex: 1;
+    background: var(--hairline);
+    position: relative;
+    min-height: 1px;
+    transition: height 0.4s ease;
+  }
+  .bar.b0 { background: var(--v0); }
+  .bar.b1 { background: var(--v1); }
+  .bar.b2 { background: var(--v2); }
+  .bar.b3 { background: var(--v3); }
+  .bar.b4 { background: var(--v4); }
+  .bar.b5 { background: var(--v5); }
+  .bar.pending {
+    background-image: repeating-linear-gradient(45deg, var(--surface-low) 0 4px, var(--surface-mid) 4px 8px);
+    background-size: 11.3px 11.3px;
+    height: 12px !important;
+    opacity: 0.75;
+    animation: stripeFlow 0.9s linear infinite;
+  }
+  .stage-col.active .bar.pending {
+    opacity: 1;
+    background-image: repeating-linear-gradient(45deg,
+      var(--primary-fixed-dim) 0 4px,
+      var(--surface-low) 4px 8px);
+    animation: stripeFlow 0.55s linear infinite;
+  }
+  @keyframes stripeFlow {
+    to { background-position: 11.3px 0; }
+  }
+  .bar.not-surfaced { opacity: 0.15; height: 3px !important; }
+  .bar.winner {
+    outline: 1.5px solid var(--primary);
+    outline-offset: 1px;
+  }
+  .bar .tip {
+    display: none; position: absolute; bottom: 100%;
+    left: 50%; transform: translateX(-50%);
+    white-space: nowrap;
+    background: var(--slate-text);
+    color: var(--on-primary);
+    padding: 4px 7px;
+    font-size: 10px;
+    font-family: 'Public Sans', sans-serif;
+    z-index: 10;
+    margin-bottom: 4px;
+  }
+  .bar:hover .tip { display: block; }
+
+  /* BRIDGE */
+  .bridge {
+    margin-top: 28px;
+    background: var(--on-primary-fixed);
+    color: var(--on-primary);
+    padding: 22px 22px;
+  }
+  .bridge .kicker {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--primary-fixed-dim);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .bridge h2 {
+    font-family: 'Newsreader', Georgia, serif;
+    font-style: italic;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 0 0 8px 0;
+    max-width: 720px;
+  }
+  .bridge p {
+    font-size: 13px;
+    line-height: 1.55;
+    color: rgba(246, 247, 255, 0.78);
+    margin: 0 0 16px 0;
+    max-width: 720px;
+  }
+  .bridge a.cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--on-primary);
+    color: var(--slate-text);
+    padding: 9px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+  .bridge a.cta:hover { background: #ffffff; text-decoration: none; }
+
+  /* TOAST */
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--slate-text);
+    color: var(--on-primary);
+    padding: 9px 16px;
+    font-size: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+    z-index: 100;
+  }
+  .toast.shown { opacity: 1; }
+
+  /* FOOTER */
+  footer.foot {
+    border-top: 1px solid var(--hairline);
+    padding: 16px 20px;
+    text-align: center;
+    color: var(--slate-muted);
+    font-size: 10px;
+    font-family: 'Public Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+  footer.foot a { color: var(--slate-muted); }
+  footer.foot a:hover { color: var(--on-surface); text-decoration: none; }
+  footer.foot .links { margin-top: 6px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+  /* RESPONSIVE */
+  @media (max-width: 860px) {
+    ul.variants li.vcard {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .vc-right { border-top: 1px solid var(--hairline); padding-top: 10px; }
+  }
+  @media (max-width: 640px) {
+    header.bar { padding: 10px 14px; padding-top: calc(10px + env(safe-area-inset-top)); gap: 8px; }
+    header.bar .tool-name { font-size: 10px; padding-left: 10px; }
+    main.shell { padding: 16px 14px 48px; }
+    .intro h1 { font-size: 21px; }
+    .funnel-grid { grid-template-columns: repeat(2, 1fr); }
+    .stage-col .prompt { min-height: 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a href="/" class="logo" aria-label="Metricus home">
+    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+      <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+    </svg>
+    <span class="name">Metricus</span>
+  </a>
+  <span class="tool-name">Forager · free preview</span>
+  <a href="/" class="home-link">← metricusapp.com</a>
+</header>
+
+<main class="shell">
+
+  <div class="intro">
+    <p class="kicker">Free preview · Metricus Forager</p>
+    <h1>Optimize your landing page or specific product page against AI.</h1>
+    <p>AI reads what's on it, drafts six rewritten versions of the title, headline, and description, then tests against AI whether your current page or one of the rewrites would surface for 42 different buyer questions across acquisition funnels.</p>
+    <p>You'll see results appear live, then a clear winner at the end.</p>
+    <p>One analysis run will take about 2 minutes, and you will see results appear live.</p>
+  </div>
+
+  <form id="preview-form" class="form-card">
+    <div class="row">
+      <div class="field field-url">
+        <label for="preview-url">Your page URL</label>
+        <input type="text" id="preview-url" name="url" required placeholder="yourbrand.com/product-page" inputmode="url" autocomplete="url" autocapitalize="none" spellcheck="false">
+      </div>
+      <div class="field field-email">
+        <label for="preview-email">Your email</label>
+        <input type="email" id="preview-email" name="email" required placeholder="you@company.com" inputmode="email" autocomplete="email" autocapitalize="none" spellcheck="false">
+      </div>
+      <div>
+        <button type="submit" id="preview-submit">Run</button>
+      </div>
+    </div>
+  </form>
+
+  <div class="activity idle" id="activity">
+    <div class="progress-row">
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="progress-pct" id="progress-pct">0%</div>
+    </div>
+    <div class="phase-row">
+      <span class="dot"></span>
+      <span class="phase" id="phase">Paste a URL and your email, then press Run.</span>
+    </div>
+    <div class="substatus" id="substatus"></div>
+    <div class="micro" id="micro"></div>
+    <div class="edu" id="edu"></div>
+  </div>
+
+  <div class="hero-card" id="hero-card"></div>
+
+  <section class="block" id="takeaway-section" style="display: none">
+    <div class="head">
+      <h2>What you found</h2>
+      <span class="meta">your takeaway</span>
+    </div>
+    <div class="takeaway-card" id="takeaway"></div>
+  </section>
+
+  <section class="block" id="variants-section" style="display: none">
+    <div class="head">
+      <h2>Six rewrites + your current page, ranked</h2>
+      <span class="meta">higher score = AI surfaced it more often</span>
+    </div>
+    <p class="block-explainer">Each card below is one version of your page. The first card is <strong>your page as it stands today</strong>. The other six are AI-drafted rewrites — same product, different angle (e.g. urgency, comparison, problem-first). The score on the right is how often that version was picked across all 42 buyer questions. <strong>Higher means AI is more likely to surface it.</strong></p>
+    <ul class="variants" id="variants"></ul>
+  </section>
+
+  <details class="funnel" id="funnel-detail" style="display: none">
+    <summary><span class="caret">›</span>See the breakdown by buying stage</summary>
+    <p class="block-explainer detail-explainer">A buyer goes through seven stages — from <em>not knowing they have a problem</em> all the way to <em>after they've already bought</em>. Each column below is one stage with the actual buyer question we tested. The bars show how each version scored. Tall bar = AI would surface that version for that question. Outlined bar = winner for that stage.</p>
+    <div class="legend" id="legend"></div>
+    <div class="funnel-grid" id="grid"></div>
+  </details>
+
+  <div class="bridge" id="bridge" style="display: none">
+    <div class="kicker">Want the full audit?</div>
+    <h2>This was one page. The Metricus Snapshot covers your whole brand.</h2>
+    <p>Forager looks at a single URL and how AI handles 42 buyer questions about it. The Metricus Snapshot is a different product: a one-time audit of how your brand surfaces across the major AI systems — 200+ real buyer scenarios, traced to source pages, with a phased fix list and drop-in files. Curated by AI experts. Delivered in 24 hours. $499.</p>
+    <a href="/get-report/" class="cta">Get your report — $499 →</a>
+  </div>
+
+</main>
+
+<div class="toast" id="toast"></div>
+
+<footer class="foot">
+  &copy; 2026 Metricus
+  <div class="links">
+    <a href="/methodology/">Methodology</a>
+    <a href="/pricing/">Pricing</a>
+    <a href="/for-agencies/">For Agencies</a>
+    <a href="/sample-ai-visibility-report/">Sample</a>
+    <a href="mailto:hello@metricusapp.com">Contact</a>
+  </div>
+</footer>
+
+<script>
+  // ============================================================
+  // Logger
+  // ============================================================
+  var SW_LOGS_URL = 'https://metricus-studio-logs.red-hill-a87d.workers.dev/';
+  var SW_UID = (function(){
+    try {
+      var u = localStorage.getItem('metricus_uid');
+      if (!u) {
+        u = (window.crypto && crypto.randomUUID && crypto.randomUUID()) ||
+            ('uid-' + Math.random().toString(36).slice(2) + Date.now().toString(36));
+        localStorage.setItem('metricus_uid', u);
+      }
+      return u;
+    } catch (e) { return 'uid-' + Math.random().toString(36).slice(2); }
+  })();
+  var SW_SID = (function(){
+    try {
+      var s = sessionStorage.getItem('metricus_sid');
+      if (!s) {
+        s = (window.crypto && crypto.randomUUID && crypto.randomUUID()) ||
+            ('sid-' + Math.random().toString(36).slice(2) + Date.now().toString(36));
+        sessionStorage.setItem('metricus_sid', s);
+      }
+      return s;
+    } catch (e) { return 'sid-' + Math.random().toString(36).slice(2); }
+  })();
+  function swLog(event, value) {
+    try {
+      fetch(SW_LOGS_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ uid: SW_UID, sid: SW_SID, event: event, value: value == null ? null : value }),
+        keepalive: true
+      }).catch(function(){});
+    } catch (e) {}
+  }
+
+  // ============================================================
+  // Forager constants
+  // ============================================================
+  var FORAGER_URL = 'https://metricus-forager.red-hill-a87d.workers.dev/forage';
+  var STAGES = [
+    { key: 'unaware',         label: 'unaware',         hint: "Customer doesn't yet realize they have the problem this product solves." },
+    { key: 'just_hit_pain',   label: 'just hit pain',   hint: "Customer just experienced the problem; venting or frustrated." },
+    { key: 'talking_it_out',  label: 'talking it out',  hint: "Customer is casually exploring whether to act." },
+    { key: 'researching',     label: 'researching',     hint: "Customer is actively gathering info on solution categories and brands." },
+    { key: 'comparing',       label: 'comparing',       hint: "Customer has narrowed to a few candidate products." },
+    { key: 'spec_shortlist',  label: 'spec shortlist',  hint: "Customer is comparing specs / features / prices." },
+    { key: 'after_purchase',  label: 'after purchase',  hint: "Customer already bought; post-purchase questions." }
+  ];
+  var N_VARIANTS = 6;
+  var COLORS = [
+    getComputedStyle(document.documentElement).getPropertyValue('--v0').trim() || '#5A6470',
+    getComputedStyle(document.documentElement).getPropertyValue('--v1').trim() || '#515F74',
+    getComputedStyle(document.documentElement).getPropertyValue('--v2').trim() || '#6F8AAB',
+    getComputedStyle(document.documentElement).getPropertyValue('--v3').trim() || '#8AA6B5',
+    getComputedStyle(document.documentElement).getPropertyValue('--v4').trim() || '#6A8C5E',
+    getComputedStyle(document.documentElement).getPropertyValue('--v5').trim() || '#B38A2E'
+  ];
+
+  // ============================================================
+  // DOM refs
+  // ============================================================
+  var $form   = document.getElementById('preview-form');
+  var $url    = document.getElementById('preview-url');
+  var $email  = document.getElementById('preview-email');
+  var $submit = document.getElementById('preview-submit');
+  var $activity = document.getElementById('activity');
+  var $edu      = document.getElementById('edu');
+  var $micro    = document.getElementById('micro');
+  var $phase    = document.getElementById('phase');
+  var $substatus = document.getElementById('substatus');
+  var $progFill = document.getElementById('progress-fill');
+  var $progPct  = document.getElementById('progress-pct');
+  var $hero     = document.getElementById('hero-card');
+  var $vars     = document.getElementById('variants');
+  var $varsSection = document.getElementById('variants-section');
+  var $funnel   = document.getElementById('funnel-detail');
+  var $grid     = document.getElementById('grid');
+  var $legend   = document.getElementById('legend');
+  var $bridge   = document.getElementById('bridge');
+  var $takeaway = document.getElementById('takeaway');
+  var $takeawaySection = document.getElementById('takeaway-section');
+  var $toast    = document.getElementById('toast');
+
+  // ============================================================
+  // State
+  // ============================================================
+  var TOTAL_CELLS = STAGES.length * N_VARIANTS; // 7 * 6 = 42
+  var variantsRef = [];
+  var cellByKey = new Map();
+  var heroScrape = null;
+  var heroSummary = null;
+  var cellsCompleted = 0;
+  var stagesSeen = new Set();
+  var startedAt = 0;
+  var currentActiveStage = null;
+
+  // ============================================================
+  // Progress + phase tracker — plain-English, with progress bar
+  // ============================================================
+  // Anchor percentages for each milestone. Cell evaluations fill 35% -> 99%.
+  var PROGRESS = {
+    start:    3,
+    scrape:   12,
+    summary:  22,
+    variants: 30,
+    prompts:  35,
+    cellsMin: 35,
+    cellsMax: 99,
+    done:     100
+  };
+
+  function setPhase(label) { $phase.textContent = label; }
+  function setSubstatus(html) { $substatus.innerHTML = html || ''; }
+  function setProgress(pct, indeterminate) {
+    if (indeterminate) {
+      $progFill.classList.add('indeterminate');
+      $progPct.textContent = '';
+      return;
+    }
+    $progFill.classList.remove('indeterminate');
+    var p = Math.max(0, Math.min(100, pct));
+    $progFill.style.width = p + '%';
+    $progPct.textContent = Math.round(p) + '%';
+  }
+  function setActivityMode(mode) {
+    $activity.className = 'activity' + (mode ? ' ' + mode : '');
+  }
+  function progressFromCells() {
+    var ratio = cellsCompleted / TOTAL_CELLS;
+    return PROGRESS.cellsMin + ratio * (PROGRESS.cellsMax - PROGRESS.cellsMin);
+  }
+
+  // Small rotating "did you know" line so the wait feels productive but
+  // never replaces the primary phase label. Mix of Forager usage tips
+  // and AI-search insights.
+  var EDU = [
+    "Did you know — you can paste any specific product or landing page URL here, and the Metricus Forager will analyze that exact page for you.",
+    "Did you know — each rewrite card has a \"Copy all assets\" button. Drop the winning title, description, headline, and slug straight into your CMS.",
+    "Did you know — the buyer questions below are generated fresh for your specific page, not pulled from a generic list.",
+    "Did you know — your current page is always the first card. That way you can compare every rewrite against the version live on your site right now.",
+    "Did you know — the outlined bar in each stage of the breakdown shows the version that won that specific buyer question.",
+    "Did you know — the score is an average across all 7 buying stages. A high score means a page surfaces broadly, not just for one type of buyer.",
+    "Did you know — Forager looks at one page. The full Metricus Snapshot does this across 200+ buyer scenarios for your whole brand.",
+    "Did you know — you can run Forager again on a competitor's page to see what AI says about them.",
+    "Did you know — the legend above the breakdown maps every bar color to the rewrite angle it represents.",
+    "AI doesn't crawl your site the way Google does — it blends training data, third-party listings, and live search.",
+    "Most pages over-explain what the product is, and under-explain what the buyer is trying to solve.",
+    "Different AI systems cite different sources — a page that wins on one can lose on another.",
+    "Buyers who haven't named their problem yet search by symptom, not category. That's where pages disappear.",
+    "AI doesn't pick the best product. It picks the best-understood one. The fix is almost always clarity.",
+    "Comparison-stage answers are where competitors get named. If you're not in them, AI suggests alternatives."
+  ];
+  var eduTimer = null, eduIndex = 0;
+  function startEdu() {
+    if (eduTimer) return;
+    eduIndex = 0;
+    $edu.textContent = EDU[0];
+    eduTimer = setInterval(function(){
+      $edu.classList.add('fade');
+      setTimeout(function(){
+        eduIndex = (eduIndex + 1) % EDU.length;
+        $edu.textContent = EDU[eduIndex];
+        $edu.classList.remove('fade');
+      }, 350);
+    }, 7000);
+  }
+  function stopEdu() {
+    if (eduTimer) { clearInterval(eduTimer); eduTimer = null; }
+    $edu.textContent = '';
+  }
+
+  function stageIndexOf(stageKey) {
+    for (var i = 0; i < STAGES.length; i++) if (STAGES[i].key === stageKey) return i;
+    return -1;
+  }
+
+  // Mark a stage column as currently being worked on.
+  function markStageActive(stageKey) {
+    if (currentActiveStage === stageKey) return;
+    if (currentActiveStage) {
+      var prev = $grid.querySelector('.stage-col[data-stage="' + currentActiveStage + '"]');
+      if (prev) { prev.classList.remove('active'); prev.classList.add('complete'); }
+    }
+    currentActiveStage = stageKey;
+    if (stageKey) {
+      var col = $grid.querySelector('.stage-col[data-stage="' + stageKey + '"]');
+      if (col) { col.classList.add('active'); col.classList.remove('complete'); }
+    }
+  }
+  function markStageComplete(stageKey) {
+    var col = $grid.querySelector('.stage-col[data-stage="' + stageKey + '"]');
+    if (col) { col.classList.remove('active'); col.classList.add('complete'); }
+    if (currentActiveStage === stageKey) currentActiveStage = null;
+  }
+  function clearAllStageStates() {
+    $grid.querySelectorAll('.stage-col').forEach(function(c){
+      c.classList.remove('active', 'complete');
+    });
+    currentActiveStage = null;
+  }
+
+  // Micro-action rotator — honest descriptions of what the agent is doing
+  // between cell completions. Keeps the page visibly alive.
+  var MICRO_PHASES = {
+    scrape:   [ 'Fetching the live HTML…', 'Parsing your title and meta…', 'Extracting body copy…' ],
+    summary:  [ 'Reading the page top-to-bottom…', 'Identifying what the page is selling…', 'Building an internal description…' ],
+    variants: [ 'Drafting the urgency angle…', 'Drafting the comparison angle…', 'Drafting the problem-first angle…', 'Drafting the outcome angle…', 'Drafting the specifics angle…', 'Drafting the curiosity angle…' ],
+    prompts:  [ 'Writing the unaware-stage question…', 'Writing the researching-stage question…', 'Writing the comparing-stage question…', 'Writing the after-purchase question…' ],
+    cells:    [
+      'Posing the buyer question to AI…',
+      'Comparing your current page against the rewrite…',
+      'Scoring how strongly the rewrite surfaces…',
+      'Recording the verdict…',
+      'Moving to the next variant…',
+      'Checking whether your current page would appear…',
+      'Reading the rewrite\'s title and description…',
+      'Asking AI which version a real buyer would land on…'
+    ]
+  };
+  var microTimer = null, microIdx = 0, microBucket = 'scrape';
+  function setMicroBucket(bucket) {
+    microBucket = bucket;
+    microIdx = 0;
+    var arr = MICRO_PHASES[bucket] || [];
+    if (arr.length) $micro.textContent = arr[0];
+  }
+  function startMicro() {
+    if (microTimer) return;
+    microTimer = setInterval(function(){
+      var arr = MICRO_PHASES[microBucket] || [];
+      if (!arr.length) return;
+      $micro.classList.add('fade');
+      setTimeout(function(){
+        microIdx = (microIdx + 1) % arr.length;
+        $micro.textContent = arr[microIdx];
+        $micro.classList.remove('fade');
+      }, 220);
+    }, 1700);
+  }
+  function stopMicro() {
+    if (microTimer) { clearInterval(microTimer); microTimer = null; }
+    $micro.textContent = '';
+  }
+
+  // ============================================================
+  // Toast
+  // ============================================================
+  function toast(msg) {
+    $toast.textContent = msg;
+    $toast.classList.add('shown');
+    clearTimeout(toast._t);
+    toast._t = setTimeout(function(){ $toast.classList.remove('shown'); }, 1400);
+  }
+  function copyText(text) {
+    return new Promise(function(resolve){
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function(){ resolve(true); }, function(){ resolve(false); });
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = text; ta.style.position='fixed'; ta.style.opacity='0';
+        document.body.appendChild(ta); ta.select();
+        var ok = false;
+        try { ok = document.execCommand('copy'); } catch(e){}
+        document.body.removeChild(ta);
+        resolve(ok);
+      }
+    });
+  }
+
+  function escapeHtml(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
+      return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c];
+    });
+  }
+
+  // ============================================================
+  // HERO
+  // ============================================================
+  function renderHero() {
+    if (!heroScrape && !heroSummary) { $hero.classList.remove('shown'); return; }
+    $hero.classList.add('shown');
+    var parts = [];
+    if (heroScrape) {
+      parts.push('<div class="url"><a href="' + escapeHtml(heroScrape.url) + '" target="_blank" rel="noopener">' + escapeHtml(heroScrape.url) + '</a></div>');
+      if (heroScrape.title) parts.push('<div class="title">' + escapeHtml(heroScrape.title) + '</div>');
+      if (heroScrape.description) parts.push('<div class="desc">' + escapeHtml(heroScrape.description) + '</div>');
+    }
+    if (heroSummary) parts.push('<div class="summary">' + escapeHtml(heroSummary) + '</div>');
+    $hero.innerHTML = parts.join('');
+  }
+
+  // ============================================================
+  // VARIANT SCORING
+  // ============================================================
+  function variantScore(vi) {
+    var scores = [];
+    for (var i = 0; i < STAGES.length; i++) {
+      var c = cellByKey.get(STAGES[i].key + ':' + vi);
+      if (c && typeof c.score === 'number') scores.push(c.surfaced ? c.score : 0);
+    }
+    if (!scores.length) return null;
+    var sum = 0; for (var j = 0; j < scores.length; j++) sum += scores[j];
+    return sum / scores.length;
+  }
+  function variantStageWins(vi) {
+    var wins = 0;
+    for (var i = 0; i < STAGES.length; i++) {
+      var max = -Infinity, maxIdx = -1;
+      for (var v = 0; v < N_VARIANTS; v++) {
+        var c = cellByKey.get(STAGES[i].key + ':' + v);
+        var sc = c && c.surfaced ? c.score : 0;
+        if (sc > max) { max = sc; maxIdx = v; }
+      }
+      if (maxIdx === vi && max > 0) wins += 1;
+    }
+    return wins;
+  }
+  function variantStageCount() {
+    var n = 0;
+    for (var i = 0; i < STAGES.length; i++) {
+      for (var v = 0; v < N_VARIANTS; v++) {
+        if (cellByKey.has(STAGES[i].key + ':' + v)) { n += 1; break; }
+      }
+    }
+    return n;
+  }
+  function urlWithVariantSlug(slug) {
+    if (!heroScrape || !heroScrape.url || !slug) return slug || '';
+    try {
+      var u = new URL(heroScrape.url);
+      var segs = u.pathname.split('/').filter(Boolean);
+      if (segs.length === 0) segs.push(slug);
+      else segs[segs.length - 1] = slug;
+      return u.origin + '/' + segs.join('/');
+    } catch (e) { return slug; }
+  }
+
+  // ============================================================
+  // RENDER VARIANTS (full Forager-style cards)
+  // ============================================================
+  function renderVariants() {
+    if (!variantsRef.length) { $varsSection.style.display = 'none'; return; }
+    $varsSection.style.display = 'block';
+
+    var enriched = variantsRef.map(function(v, vi){
+      return { v: v, vi: vi, score: variantScore(vi), wins: variantStageWins(vi) };
+    });
+    enriched.sort(function(a, b){
+      var sa = a.score == null ? -Infinity : a.score;
+      var sb = b.score == null ? -Infinity : b.score;
+      return sb - sa;
+    });
+    var first = enriched.find(function(e){ return e.score != null; });
+    var topScore = first ? first.score : null;
+
+    $vars.innerHTML = enriched.map(function(e, idx){
+      return renderVariantCard(e, idx + 1, topScore);
+    }).join('');
+
+    // Wire copy buttons
+    $vars.querySelectorAll('.copy-one').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var value = btn.getAttribute('data-value') || '';
+        if (!value) return;
+        var field = btn.getAttribute('data-field') || '';
+        var card = btn.closest('.vcard');
+        var vi = card ? Number(card.getAttribute('data-variant')) : -1;
+        var v = vi >= 0 ? variantsRef[vi] : null;
+        var angle = vi === 0 ? 'baseline (your current page)' : ((v && v.angle) || ('Variant ' + vi));
+        copyText(value).then(function(ok){
+          if (ok) {
+            btn.classList.add('copied');
+            toast('Copied ' + field);
+            setTimeout(function(){ btn.classList.remove('copied'); }, 1200);
+            swLog('FORAGER_COPY_SINGLE', {
+              url: heroScrape ? heroScrape.url : null,
+              variant_idx: vi,
+              variant_angle: angle,
+              field: field,
+              value: value
+            });
+          }
+        });
+      });
+    });
+    $vars.querySelectorAll('.vc-copy-all').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var vi = Number(btn.getAttribute('data-variant'));
+        var v = variantsRef[vi];
+        if (!v) return;
+        var angle = vi === 0 ? 'baseline (your current page)' : (v.angle || ('Variant ' + vi));
+        var block =
+          'ANGLE:       ' + (v.angle || '') + '\n\n' +
+          'TITLE:       ' + (v.title || '') + '\n\n' +
+          'DESCRIPTION: ' + (v.description || '') + '\n\n' +
+          'H1:          ' + (v.h1 || '') + '\n\n' +
+          'URL SLUG:    ' + (v.slug || '') + '\n';
+        copyText(block).then(function(ok){
+          if (ok) {
+            btn.classList.add('copied');
+            btn.textContent = '✓ Copied';
+            toast('Copied all assets for "' + (v.angle || 'variant') + '"');
+            setTimeout(function(){
+              btn.classList.remove('copied');
+              btn.textContent = 'Copy all assets';
+            }, 1400);
+            swLog('FORAGER_COPY_ALL', {
+              url: heroScrape ? heroScrape.url : null,
+              variant_idx: vi,
+              variant_angle: angle,
+              assets: {
+                angle: v.angle || '',
+                title: v.title || '',
+                description: v.description || '',
+                h1: v.h1 || '',
+                slug: v.slug || ''
+              },
+              copied_text: block
+            });
+          }
+        });
+      });
+    });
+  }
+
+  function renderVariantCard(e, rankPos, topScore) {
+    var v = e.v, vi = e.vi, score = e.score, wins = e.wins;
+    var isBaseline = vi === 0;
+    var isTop = topScore != null && score === topScore && rankPos === 1;
+    var color = COLORS[vi] || '#888';
+    var hasAny = score != null;
+
+    var stageRows = STAGES.map(function(s){
+      var c = cellByKey.get(s.key + ':' + vi);
+      var surf = c && c.surfaced;
+      var sc = surf ? c.score : 0;
+      var pending = !c;
+      var winnerVi = -1, max = -Infinity;
+      for (var vv = 0; vv < N_VARIANTS; vv++) {
+        var c2 = cellByKey.get(s.key + ':' + vv);
+        var sc2 = c2 && c2.surfaced ? c2.score : 0;
+        if (sc2 > max) { max = sc2; winnerVi = vv; }
+      }
+      var isWin = winnerVi === vi && max > 0;
+      var pct = Math.max(0, Math.min(1, sc));
+      var fillClass = pending ? 'pending' : (surf ? '' : 'zero');
+      var fillStyle = pending ? 'width:100%' : ('width:' + (pct * 100).toFixed(0) + '%; background:' + color);
+      return '<div class="stage-row' + (isWin ? ' win' : '') + '">' +
+        '<div>' +
+          '<div class="stage-label">' + escapeHtml(s.label) + '</div>' +
+          '<div class="stage-track"><div class="stage-fill ' + fillClass + '" style="' + fillStyle + '"></div></div>' +
+        '</div>' +
+        '<div class="stage-num ' + fillClass + '">' + (pending ? '…' : (surf ? sc.toFixed(2) : '0')) + '</div>' +
+      '</div>';
+    }).join('');
+
+    var fullUrl = urlWithVariantSlug(v.slug);
+    var angleLabel = isBaseline ? 'Your page right now' : (v.angle || ('Variant ' + vi));
+    var winsLine = hasAny && wins > 0
+      ? ('<div class="vc-wins">Best in <strong>' + wins + '</strong> of ' + variantStageCount() + ' stages observed</div>')
+      : (hasAny ? '<div class="vc-wins">No stages won yet</div>' : '');
+
+    return '<li class="vcard ' + (isBaseline ? 'is-baseline' : '') + ' ' + (isTop ? 'winner-overall' : '') + '" data-variant="' + vi + '">' +
+      '<div class="vc-left">' +
+        '<div class="vc-header">' +
+          '<span class="vc-color-pill" style="background:' + color + '"></span>' +
+          '<div class="vc-rank" data-r="' + rankPos + '"></div>' +
+          '<div class="vc-angle">' + escapeHtml(angleLabel) + '</div>' +
+          '<div class="vc-score">' + (hasAny ? score.toFixed(3) : '—') +
+            '<span class="label">avg pull</span>' +
+          '</div>' +
+        '</div>' +
+        winsLine +
+        '<div class="vc-assets">' +
+          asset('TITLE',       v.title || '', 'title') +
+          asset('DESCRIPTION', v.description || '', 'description') +
+          asset('H1',          v.h1 || '', 'h1') +
+          asset('URL SLUG',    v.slug || '', 'slug') +
+          (fullUrl ? assetFullUrl(fullUrl) : '') +
+        '</div>' +
+        '<button class="vc-copy-all" data-variant="' + vi + '">Copy all assets</button>' +
+      '</div>' +
+      '<div class="vc-right">' +
+        '<div class="vc-right-label">Visibility score per buying stage</div>' +
+        '<div class="vc-stages-mini">' + stageRows + '</div>' +
+      '</div>' +
+    '</li>';
+  }
+
+  function asset(label, value, fieldName) {
+    var cls = fieldName === 'slug' ? 'slug' : (label === 'TITLE' ? 'title' : '');
+    return '<div class="vc-asset">' +
+      '<div class="alabel">' + label + '</div>' +
+      '<div class="avalue ' + cls + '">' + escapeHtml(value || '—') + '</div>' +
+      (value
+        ? '<button class="copy-one" data-field="' + fieldName + '" data-value="' + escapeHtml(value) + '" title="Copy ' + label.toLowerCase() + '">⧉</button>'
+        : '<span></span>') +
+    '</div>';
+  }
+  function assetFullUrl(url) {
+    return '<div class="vc-asset">' +
+      '<div class="alabel">FULL URL</div>' +
+      '<div class="avalue url">' + escapeHtml(url) + '</div>' +
+      '<button class="copy-one" data-field="url" data-value="' + escapeHtml(url) + '" title="Copy full URL">⧉</button>' +
+    '</div>';
+  }
+
+  // ============================================================
+  // FUNNEL DETAIL GRID
+  // ============================================================
+  function setupGrid() {
+    $grid.innerHTML = '';
+    for (var i = 0; i < STAGES.length; i++) {
+      var s = STAGES[i];
+      var col = document.createElement('div');
+      col.className = 'stage-col';
+      col.setAttribute('data-stage', s.key);
+      col.innerHTML =
+        '<div class="stage-num">STAGE ' + (i + 1) + '/' + STAGES.length + '</div>' +
+        '<h3>' + escapeHtml(s.label) + '</h3>' +
+        '<div class="prompt" data-prompt>' + escapeHtml(s.hint) + '</div>' +
+        '<div class="bars" data-bars></div>';
+      var bars = col.querySelector('[data-bars]');
+      for (var v = 0; v < N_VARIANTS; v++) {
+        var b = document.createElement('div');
+        b.className = 'bar b' + v + ' pending';
+        b.setAttribute('data-variant', v);
+        b.innerHTML = '<div class="tip">v' + v + ': pending</div>';
+        bars.appendChild(b);
+      }
+      $grid.appendChild(col);
+    }
+  }
+  function setStagePrompt(stageKey, prompt) {
+    var col = $grid.querySelector('[data-stage="' + stageKey + '"]');
+    if (!col) return;
+    var p = col.querySelector('[data-prompt]');
+    if (p) p.textContent = prompt;
+  }
+  function updateCellInGrid(stageKey, vi, score, surfaced) {
+    var col = $grid.querySelector('[data-stage="' + stageKey + '"]');
+    if (!col) return;
+    var bar = col.querySelector('.bar[data-variant="' + vi + '"]');
+    if (!bar) return;
+    bar.classList.remove('pending');
+    if (surfaced) {
+      var pct = Math.max(0, Math.min(1, score));
+      bar.style.height = (pct * 100).toFixed(0) + '%';
+      bar.classList.remove('not-surfaced');
+    } else {
+      bar.classList.add('not-surfaced');
+      bar.style.height = '3px';
+    }
+    var tip = bar.querySelector('.tip');
+    if (tip) tip.textContent = 'v' + vi + ': ' + (surfaced ? score.toFixed(2) : 'not surfaced');
+    // Recompute winner for the stage
+    var maxV = -Infinity, maxIdx = -1;
+    for (var vv = 0; vv < N_VARIANTS; vv++) {
+      var c = cellByKey.get(stageKey + ':' + vv);
+      var sc = c && c.surfaced ? c.score : 0;
+      if (sc > maxV) { maxV = sc; maxIdx = vv; }
+    }
+    col.querySelectorAll('.bar').forEach(function(b){ b.classList.remove('winner'); });
+    if (maxIdx >= 0 && maxV > 0) {
+      var winBar = col.querySelector('.bar[data-variant="' + maxIdx + '"]');
+      if (winBar) winBar.classList.add('winner');
+    }
+  }
+
+  setupGrid();
+
+  // ============================================================
+  // LEGEND — color → variant mapping for the funnel grid
+  // ============================================================
+  function renderLegend(winnerVi) {
+    if (!variantsRef.length) { $legend.innerHTML = ''; return; }
+    var items = variantsRef.map(function(v, vi){
+      var label = vi === 0 ? 'Your page' : (v.angle || ('Variant ' + vi));
+      var classes = ['legend-item'];
+      if (vi === 0) classes.push('baseline');
+      if (winnerVi != null && vi === winnerVi) classes.push('winner');
+      var swatchClass = 'swatch' + (winnerVi != null && vi === winnerVi ? ' outlined' : '');
+      return '<span class="' + classes.join(' ') + '">' +
+        '<span class="' + swatchClass + '" style="background:' + (COLORS[vi] || '#888') + '"></span>' +
+        '<span class="label">' + escapeHtml(label) + '</span>' +
+      '</span>';
+    }).join('');
+    $legend.innerHTML = '<span class="legend-title">Bar colors</span>' + items;
+  }
+
+  // ============================================================
+  // Submit
+  // ============================================================
+  $form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var url = ($url.value || '').trim();
+    var email = ($email.value || '').trim();
+    if (!url || !email) return;
+    if (!/^https?:\/\//i.test(url)) {
+      url = 'https://' + url.replace(/^\/+/, '');
+      $url.value = url;
+    }
+
+    swLog('FORAGER_PREVIEW_REQUEST', { contact: email, details: 'URL: ' + url });
+
+    // Reset state
+    cellByKey.clear();
+    variantsRef = [];
+    heroScrape = null;
+    heroSummary = null;
+    $hero.classList.remove('shown');
+    $varsSection.style.display = 'none';
+    $vars.innerHTML = '';
+    $funnel.style.display = 'none';
+    $bridge.style.display = 'none';
+    $takeawaySection.style.display = 'none';
+    $takeaway.innerHTML = '';
+    cellsCompleted = 0;
+    stagesSeen.clear();
+    currentActiveStage = null;
+    startedAt = Date.now();
+    setupGrid();
+
+    $submit.disabled = true;
+    $submit.textContent = 'Running…';
+
+    setActivityMode('running');
+    setPhase('Fetching your page');
+    setSubstatus('Pulling the live HTML so the AI can read the same words a buyer would.');
+    setMicroBucket('scrape');
+    setProgress(PROGRESS.start, false);
+    startEdu();
+    startMicro();
+
+    var es;
+    try {
+      es = new EventSource(FORAGER_URL + '?url=' + encodeURIComponent(url));
+    } catch (err) {
+      stopEdu();
+      stopMicro();
+      setActivityMode('err');
+      setPhase("Couldn't reach the analyzer.");
+      setSubstatus('Check the URL and try again.');
+      setProgress(0, false);
+      $submit.disabled = false;
+      $submit.textContent = 'Run';
+      return;
+    }
+
+    es.addEventListener('status', function(){ /* silent — phase + micro + edu carry the wait */ });
+
+    es.addEventListener('scrape', function(e){
+      try {
+        var d = JSON.parse(e.data);
+        heroScrape = d;
+        renderHero();
+        setPhase('Reading the page');
+        setSubstatus('AI is reading your title, headline, description, and body copy.');
+        setMicroBucket('summary');
+        setProgress(PROGRESS.scrape, false);
+      } catch(err) {}
+    });
+
+    es.addEventListener('summary', function(e){
+      try {
+        var d = JSON.parse(e.data);
+        if (d.summary) { heroSummary = d.summary; renderHero(); }
+        setPhase('Understanding what your page is really selling');
+        setSubstatus('AI is summarising the page so it knows what to test the rewrites against.');
+        setMicroBucket('variants');
+        setProgress(PROGRESS.summary, false);
+      } catch(err) {}
+    });
+
+    es.addEventListener('variants', function(e){
+      try {
+        var d = JSON.parse(e.data);
+        if (d && Array.isArray(d.variants)) {
+          variantsRef = d.variants;
+          renderVariants();
+          renderLegend(null);
+          $funnel.style.display = 'block';
+        }
+        setPhase('Drafting six alternative versions of your page');
+        setSubstatus('AI rewrites your title, description, headline and URL six different ways — each one a different angle for the same product.');
+        setMicroBucket('prompts');
+        setProgress(PROGRESS.variants, false);
+      } catch(err) {}
+    });
+
+    es.addEventListener('funnel_prompts', function(e){
+      try {
+        var d = JSON.parse(e.data);
+        if (d && d.prompts) {
+          for (var k in d.prompts) {
+            if (Object.prototype.hasOwnProperty.call(d.prompts, k)) setStagePrompt(k, d.prompts[k]);
+          }
+        }
+        setPhase('Generating buyer questions');
+        setSubstatus('AI writes a realistic buyer question for each of the 7 stages of the buying journey.');
+        setMicroBucket('cells');
+        setProgress(PROGRESS.prompts, false);
+      } catch(err) {}
+    });
+
+    es.addEventListener('cell', function(e){
+      try {
+        var d = JSON.parse(e.data);
+        var vi = (typeof d.variant_idx === 'number') ? d.variant_idx : d.variant;
+        if (typeof d.stage === 'string' && typeof vi === 'number') {
+          var wasNew = !cellByKey.has(d.stage + ':' + vi);
+          cellByKey.set(d.stage + ':' + vi, { score: d.score, surfaced: !!d.surfaced });
+          updateCellInGrid(d.stage, vi, d.score, !!d.surfaced);
+          renderVariants();
+          markStageActive(d.stage);
+          if (wasNew) {
+            cellsCompleted += 1;
+            stagesSeen.add(d.stage);
+            var idx = stageIndexOf(d.stage);
+            var stageLabel = idx >= 0 ? STAGES[idx].label : d.stage;
+            var stageNum = idx >= 0 ? (idx + 1) : '?';
+            setPhase('Asking AI: which version wins each buyer question');
+            setSubstatus(
+              'Currently testing the <strong>"' + escapeHtml(stageLabel) + '"</strong> stage' +
+              ' (stage <strong>' + stageNum + ' of ' + STAGES.length + '</strong>) · ' +
+              '<strong>' + cellsCompleted + '</strong> of ' + TOTAL_CELLS + ' AI evaluations complete'
+            );
+            setMicroBucket('cells');
+            setProgress(progressFromCells(), false);
+          }
+        }
+      } catch(err) {}
+    });
+
+    es.addEventListener('stage_done', function(e){
+      try {
+        var d = JSON.parse(e.data);
+        if (d && d.stage) markStageComplete(d.stage);
+      } catch(err) {}
+    });
+    es.addEventListener('stage_error', function(){});
+    es.addEventListener('warn', function(){});
+
+    es.addEventListener('done', function(e){
+      stopEdu();
+      stopMicro();
+      var secs = null;
+      try {
+        var d = JSON.parse(e.data);
+        secs = d && d.wall_ms ? (d.wall_ms / 1000).toFixed(1) : null;
+      } catch (err) {}
+      if (secs == null && startedAt) secs = ((Date.now() - startedAt) / 1000).toFixed(1);
+      setActivityMode('done');
+      setProgress(100, false);
+      setPhase('Done — your results are below');
+      setSubstatus(
+        '<strong>' + TOTAL_CELLS + '</strong> AI evaluations completed' +
+        (secs ? ' in <strong>' + secs + 's</strong>' : '') +
+        '. Scroll down to see which version of your page surfaced best.'
+      );
+      clearAllStageStates();
+      // mark every stage column as complete on done (for the green ✓ marker)
+      $grid.querySelectorAll('.stage-col').forEach(function(c){ c.classList.add('complete'); });
+      renderTakeaway();
+      $takeawaySection.style.display = 'block';
+      $bridge.style.display = 'block';
+      try { es.close(); } catch(err) {}
+      $submit.disabled = false;
+      $submit.textContent = 'Run another URL';
+
+      // Log scan completion with the winner + baseline
+      try {
+        var ranked = variantsRef.map(function(v, vi){
+          return { vi: vi, angle: vi === 0 ? 'baseline (your current page)' : (v.angle || ('Variant ' + vi)),
+                   score: variantScore(vi), wins: variantStageWins(vi) };
+        }).filter(function(x){ return x.score != null; });
+        ranked.sort(function(a, b){ return b.score - a.score; });
+        var top = ranked[0] || null;
+        var base = ranked.find(function(x){ return x.vi === 0; }) || null;
+        var baseRank = ranked.findIndex(function(x){ return x.vi === 0; }) + 1;
+        swLog('FORAGER_SCAN_COMPLETE', {
+          url: heroScrape ? heroScrape.url : null,
+          wall_seconds: secs ? Number(secs) : null,
+          total_evaluations: TOTAL_CELLS,
+          completed_evaluations: cellsCompleted,
+          winner_idx: top ? top.vi : null,
+          winner_angle: top ? top.angle : null,
+          winner_score: top ? top.score : null,
+          winner_stage_wins: top ? top.wins : null,
+          baseline_score: base ? base.score : null,
+          baseline_rank: baseRank > 0 ? baseRank : null,
+          baseline_won: top ? top.vi === 0 : null
+        });
+      } catch(err) {}
+    });
+
+    es.onerror = function(){
+      if ($activity.classList.contains('done')) return;
+      stopEdu();
+      stopMicro();
+      setActivityMode('err');
+      setPhase('Connection closed before the scan finished.');
+      setSubstatus('Try running it again — most pages complete in 30-60 seconds.');
+      try { es.close(); } catch(err) {}
+      $submit.disabled = false;
+      $submit.textContent = 'Run';
+    };
+  });
+
+  // ============================================================
+  // TAKEAWAY — plain-English summary of the result
+  // ============================================================
+  function renderTakeaway() {
+    if (!variantsRef.length) return;
+    var ranked = variantsRef.map(function(v, vi){
+      return { v: v, vi: vi, score: variantScore(vi), wins: variantStageWins(vi) };
+    }).filter(function(e){ return e.score != null; });
+    if (!ranked.length) return;
+    ranked.sort(function(a, b){ return b.score - a.score; });
+
+    var top = ranked[0];
+    var baseline = ranked.find(function(e){ return e.vi === 0; });
+    var baselineRank = ranked.findIndex(function(e){ return e.vi === 0; }) + 1;
+    var isBaselineWin = top.vi === 0;
+    var topAngle = top.vi === 0 ? 'Your page as it stands today' : (top.v.angle || ('Variant ' + top.vi));
+    var topColor = COLORS[top.vi] || '#888';
+
+    // Stage-by-stage tally
+    var baselineLostStages = [];
+    var baselineWonStages = [];
+    for (var i = 0; i < STAGES.length; i++) {
+      var maxScore = -Infinity, maxVi = -1;
+      for (var vi = 0; vi < N_VARIANTS; vi++) {
+        var c = cellByKey.get(STAGES[i].key + ':' + vi);
+        var sc = c && c.surfaced ? c.score : 0;
+        if (sc > maxScore) { maxScore = sc; maxVi = vi; }
+      }
+      if (maxVi === 0 && maxScore > 0) baselineWonStages.push(STAGES[i].label);
+      else if (maxVi !== 0 && maxScore > 0) baselineLostStages.push(STAGES[i].label);
+    }
+
+    var liftPct = baseline && baseline.score > 0
+      ? Math.round(((top.score - baseline.score) / baseline.score) * 100)
+      : null;
+
+    // Refresh the legend so the winner is marked.
+    renderLegend(top.vi);
+
+    var lead;
+    if (isBaselineWin) {
+      lead = "Across all <strong>42</strong> AI evaluations, <strong>your current page outranked every rewrite</strong>. " +
+             "But it still lost specific stages — the side-by-side breakdown shows where a rewrite would surface more often.";
+    } else {
+      lead = "Across all <strong>42</strong> AI evaluations, the <em>" + escapeHtml(topAngle) + "</em> rewrite outranked your current page" +
+             (liftPct != null && liftPct > 0 ? " by <strong>" + liftPct + "%</strong>" : "") +
+             ". Your page placed <strong>#" + baselineRank + " of 7</strong>.";
+    }
+
+    var winnerScore = top.score != null ? top.score.toFixed(3) : '—';
+    var baselineScore = baseline && baseline.score != null ? baseline.score.toFixed(3) : '—';
+    var winsHtml = top.wins > 0 ? top.wins + ' of ' + STAGES.length : '<span class="none">none</span>';
+
+    var nextStep;
+    if (isBaselineWin) {
+      nextStep = '<strong>What to do next:</strong> hold your title and description as they are. Scroll the side-by-side breakdown for the stages where a rewrite still beat you — those are quick wins.';
+    } else {
+      nextStep = '<strong>What to do next:</strong> scroll to the <strong>' + escapeHtml(topAngle) + '</strong> card below and hit <em>Copy all assets</em>. Replace your page\'s title, description, headline, and slug with the winning version.';
+    }
+
+    $takeaway.innerHTML =
+      '<div class="winner-row">' +
+        '<span class="winner-badge" style="--swatch:' + topColor + '">Winner</span>' +
+        '<span class="winner-name">' + escapeHtml(topAngle) + '</span>' +
+      '</div>' +
+      '<div class="lead">' + lead + '</div>' +
+      '<div class="stats-grid">' +
+        '<div class="stat"><div class="stat-label">Winning score</div><div class="stat-value">' + winnerScore + ' <span style="font-size:11px;color:var(--primary-fixed-dim);font-weight:500;">avg pull</span></div></div>' +
+        '<div class="stat"><div class="stat-label">Your page\'s score</div><div class="stat-value">' + baselineScore + ' <span style="font-size:11px;color:var(--primary-fixed-dim);font-weight:500;">(rank #' + baselineRank + ')</span></div></div>' +
+        '<div class="stat"><div class="stat-label">Stage wins</div><div class="stat-value">' + winsHtml + '</div></div>' +
+        '<div class="stat"><div class="stat-label">Where your page leads</div><div class="stat-value small">' + (baselineWonStages.length ? escapeHtml(baselineWonStages.join(', ')) : '<span class="none">no stages</span>') + '</div></div>' +
+        '<div class="stat"><div class="stat-label">Where a rewrite beats you</div><div class="stat-value small">' + (baselineLostStages.length ? escapeHtml(baselineLostStages.join(', ')) : '<span class="none">no stages</span>') + '</div></div>' +
+      '</div>' +
+      '<div class="next-step">' + nextStep + '</div>';
+  }
+
+  swLog('PAGE_VIEW', { details: 'Page: /ai-visibility-optimizer-tool/' });
+
+  // Bridge CTA click — clicked through to the paid Snapshot
+  (function(){
+    var bridgeLink = $bridge ? $bridge.querySelector('a.cta') : null;
+    if (bridgeLink) {
+      bridgeLink.addEventListener('click', function(){
+        swLog('FORAGER_BRIDGE_CLICK', {
+          url: heroScrape ? heroScrape.url : null,
+          destination: bridgeLink.getAttribute('href')
+        });
+      });
+    }
+  })();
+
+  // Side-by-side detail open/close
+  $funnel.addEventListener('toggle', function(){
+    if ($funnel.open) {
+      swLog('FORAGER_DETAIL_OPEN', {
+        url: heroScrape ? heroScrape.url : null
+      });
+    }
+  });
+</script>
+</body>
+</html>
