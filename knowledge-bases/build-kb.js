@@ -272,7 +272,7 @@ ${content}
           <a href="../privacy-policy/" class="text-xs uppercase tracking-tighter text-outline hover:text-primary transition-colors">Privacy Policy</a>
           <a href="../terms-of-service/" class="text-xs uppercase tracking-tighter text-outline hover:text-primary transition-colors">Terms of Service</a>
           <a href="../support/" class="text-xs uppercase tracking-tighter text-outline hover:text-primary transition-colors">Support</a>
-          <a href="mailto:hello@metricusapp.com" class="text-xs uppercase tracking-tighter text-outline hover:text-primary transition-colors">Contact</a>
+          <a href="mailto:metricusapp@gmail.com" class="text-xs uppercase tracking-tighter text-outline hover:text-primary transition-colors">Contact</a>
         </div>
         <p class="text-xs uppercase tracking-tighter text-outline">&copy; 2026 Metricus. All rights reserved.</p>
       </div>
