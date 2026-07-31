@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Check if AI Recommends Your Page (2026 Data + Workflow) | Metricus</title>
+  <meta name="description" content="Checking whether AI recommends a page costs 13–19 hours per round by hand. What trackers and agencies charge in 2026, and the three-minute one-click alternative.">
+  <meta property="og:title" content="How to Check if AI Recommends Your Page (2026 Data + Workflow)">
+  <meta property="og:description" content="Checking whether AI recommends a page costs 13–19 hours per round by hand. What trackers and agencies charge in 2026, and the three-minute one-click alternative.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metricusapp.com/blog/how-to-check-if-ai-recommends-your-page/">
+  <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How to Check if AI Recommends Your Page (2026 Data + Workflow) | Metricus">
+  <meta name="twitter:description" content="Checking AI visibility by hand costs 13–19 hours per page-round. 2026 tracker and agency pricing, plus the three-minute alternative.">
+  <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
+  <link rel="canonical" href="https://metricusapp.com/blog/how-to-check-if-ai-recommends-your-page/">
+
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w70oz7g1k3");
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#515F74',
+            'primary-hover': '#1E293B',
+            'on-primary': '#f6f7ff',
+            'on-primary-fixed': '#324054',
+            'primary-dim': '#455368',
+            surface: '#f7f9fb',
+            'surface-container-low': '#f0f4f7',
+            'surface-container': '#e8eff3',
+            'surface-container-lowest': '#ffffff',
+            'surface-container-highest': '#d9e4ea',
+            'surface-container-high': '#e1e9ee',
+            'surface-variant': '#d9e4ea',
+            'on-surface': '#2a3439',
+            'on-surface-variant': '#566166',
+            outline: '#717c82',
+            'outline-variant': '#a9b4b9',
+            'slate-text': '#0F172A',
+            'slate-muted': '#64748B',
+            'slate-accent': '#475569',
+          },
+          fontFamily: {
+            display: ['Newsreader', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            body: ['Public Sans', 'sans-serif'],
+            headline: ['Newsreader', 'serif'],
+          },
+          borderRadius: {
+            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
+            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
+            full: '0.75rem',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #0F172A; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    .font-display { font-family: 'Newsreader', serif; }
+    .font-headline { font-family: 'Newsreader', serif; }
+    .font-body-sans { font-family: 'Public Sans', sans-serif; }
+    .editorial-btn { transition: background-color 150ms ease-in-out, transform 150ms ease; }
+    .editorial-btn:hover { background-color: #1E293B; }
+    .bg-grid-dots { background-image: radial-gradient(circle, #717c82 0.5px, transparent 0.5px); background-size: 24px 24px; opacity: 0.05; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+    .blog-card { transition: transform 200ms ease, background-color 200ms ease; }
+    .blog-card:hover { transform: translateY(-2px); background-color: #f7f9fb; }
+    .article-body h2 { font-family: 'Newsreader', serif; font-weight: 700; font-size: 1.75rem; line-height: 1.2; color: #0F172A; margin-top: 3rem; margin-bottom: 1rem; }
+    @media (min-width: 768px) { .article-body h2 { font-size: 2rem; } }
+    .article-body h3 { font-family: 'Newsreader', serif; font-weight: 700; font-size: 1.25rem; line-height: 1.3; color: #0F172A; margin-top: 2rem; margin-bottom: 0.75rem; }
+    .article-body p { font-size: 1.125rem; line-height: 1.75; color: #334155; margin-bottom: 1.25rem; }
+    .article-body ul, .article-body ol { font-size: 1.125rem; line-height: 1.75; color: #334155; margin-bottom: 1.25rem; padding-left: 1.5rem; }
+    .article-body ul { list-style-type: disc; }
+    .article-body ol { list-style-type: decimal; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body blockquote { border-left: 2px solid #334155; padding-left: 1.5rem; font-style: italic; color: #475569; font-size: 1.125rem; line-height: 1.75; margin: 2rem 0; }
+    .article-body a { color: #334155; text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: #1E293B; }
+    .approach-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 0.95rem; }
+    .approach-table th, .approach-table td { border: 1px solid #E2E8F0; padding: 12px 14px; text-align: left; vertical-align: top; color: #334155; line-height: 1.55; }
+    .approach-table th { background: #f7f9fb; font-family: 'Public Sans', sans-serif; font-weight: 600; color: #0F172A; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; }
+    .approach-table tr:nth-child(even) td { background: #fbfcfd; }
+    .approach-table td strong { color: #0F172A; }
+    .approach-table caption { caption-side: bottom; text-align: left; font-size: 0.8rem; color: #64748B; padding-top: 8px; line-height: 1.5; }
+    /* Override .article-body color rules for dark CTAs nested inside it */
+    .article-body .bg-on-primary-fixed h3 { color: #f6f7ff; }
+    .article-body .bg-on-primary-fixed p { color: rgba(246, 247, 255, 0.85); }
+    .article-body .bg-on-primary-fixed p.text-on-primary\/60 { color: rgba(246, 247, 255, 0.6); }
+    .article-body .bg-on-primary-fixed a { color: #0F172A; text-decoration: none; }
+    .article-body .bg-on-primary-fixed a:hover { color: #0F172A; }
+  </style>
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How do I check whether AI recommends my page — and fix it if it doesn't?",
+    "description": "What it costs to check whether AI recommends your page in 2026: 13–19 hours per round by hand, tracker subscriptions from $29/month, agencies from $1,500/month — and a one-click loop that runs in about three minutes.",
+    "author": { "@type": "Organization", "name": "Metricus", "url": "https://metricusapp.com" },
+    "publisher": { "@type": "Organization", "name": "Metricus", "url": "https://metricusapp.com" },
+    "datePublished": "2026-07-30",
+    "dateModified": "2026-07-31",
+    "mainEntityOfPage": "https://metricusapp.com/blog/how-to-check-if-ai-recommends-your-page/",
+    "image": "https://metricusapp.com/metricus-og-image.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "How to Check if AI Recommends Your Page", "item": "https://metricusapp.com/blog/how-to-check-if-ai-recommends-your-page/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long after publishing a page does AI start citing it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In Semrush's December 2025 citation-speed test (81 new pages), ChatGPT Search cited 10% of pages within 24 hours and 42% by day 30; Google AI Mode cited 36% within the first 24 hours. For edits to an already-indexed page, answers typically update within 3–14 days; 14–30 days is the evaluation window."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does AI cite my page without ever mentioning my brand?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the Semrush and Kevin Indig ghost-citations study (3,981 domains, 115 prompts, 14 countries, 4 AI engines), 62% of citations were links without a brand mention in the answer text. The same dataset found comparative content produced 2.4 times more brand mentions than informational content."
+      }
+    }
+  ]
+}
+  </script>
+  <script src="/js/reader-pulse-b.js" defer></script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
+
+  <!-- Site Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="/" class="flex items-center gap-2 group" aria-label="Metricus home">
+        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+        </svg>
+        <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Methodology</a>
+        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
+        <a href="/blog/" class="text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Learn</a>
+        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
+        <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
+    <div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div>
+    <nav class="absolute top-0 right-0 w-72 h-full bg-surface-container-lowest shadow-xl flex flex-col pt-6 px-6">
+      <button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">Methodology</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/" id="mobile-pricing-link">Pricing</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
+      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
+      <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    (function(){
+      var btn=document.getElementById('mobile-menu-btn');
+      var menu=document.getElementById('mobile-menu');
+      var close=document.getElementById('mobile-menu-close');
+      var backdrop=document.getElementById('mobile-menu-backdrop');
+      var pricingLink=document.getElementById('mobile-pricing-link');
+      if(!btn||!menu)return;
+      function open(){menu.classList.remove('hidden');menu.setAttribute('aria-hidden','false');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+      function shut(){menu.classList.add('hidden');menu.setAttribute('aria-hidden','true');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+      btn.addEventListener('click',open);
+      if(close)close.addEventListener('click',shut);
+      if(backdrop)backdrop.addEventListener('click',shut);
+      if(pricingLink)pricingLink.addEventListener('click',shut);
+    })();
+  </script>
+
+
+  <main class="flex-grow flex flex-col relative overflow-x-hidden">
+
+    <div class="absolute inset-0 bg-grid-dots -z-10 pointer-events-none"></div>
+
+    <!-- ========== ARTICLE ========== -->
+    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
+
+      <!-- Breadcrumb -->
+      <nav class="mb-8">
+        <ol class="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-muted">
+          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
+          <li class="select-none">/</li>
+          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
+          <li class="select-none">/</li>
+          <li class="text-slate-text">How to Check if AI Recommends Your Page</li>
+        </ol>
+      </nav>
+
+      <!-- Article Header -->
+      <header class="mb-12">
+        <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-4">Research &middot; AI Visibility</p>
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
+          How do I check whether AI recommends my page &mdash; and fix it if it doesn't?
+        </h1>
+        <p class="text-sm text-outline">Metricus Research &middot; July 30, 2026 &middot; 3 min read</p>
+      </header>
+
+
+      <!-- Article Body -->
+      <div class="article-body">
+
+        <h2 id="manual-hours">How long it takes to check and fix one page by hand</h2>
+
+        <p><strong>AI answers are non-deterministic.</strong> In SparkToro's January 2026 study (12 prompts, 2,961 total runs by 600 volunteers across ChatGPT, Claude and Google AI), repeated runs of the same prompt returned an identical brand list in under 1% of cases. Measuring a page's AI visibility therefore requires repeated runs of a prompt set. At 40 prompts &times; 3 platforms &times; 3 runs, one measurement round is <strong>360 prompt-runs</strong>; at ~45 seconds per run (open, paste, wait, read, log), execution alone is &asymp;4.5 hours, and the full round totals <strong>13&ndash;19 hours</strong>.</p>
+
+        <div class="overflow-x-auto">
+        <table class="approach-table">
+          <caption>Time per page for one check-and-rewrite round. Manual column: 40 prompts &times; 3 platforms &times; 3 runs at ~45 s per run, plus diagnosis and writing.</caption>
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>By hand</th>
+              <th>One-click tester</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. Decide which buyer questions the page competes for</strong></td>
+              <td>1&ndash;3 h</td>
+              <td rowspan="5" style="vertical-align: middle;"><strong>One Metricus Forager run &mdash; &asymp;3 minutes.</strong> Proposes buyer questions, tests the page against them, returns per-question verdicts and rewritten copy.</td>
+            </tr>
+            <tr>
+              <td><strong>2. Run the prompt set across platforms</strong></td>
+              <td>360 prompt-runs &asymp; 4.5 h</td>
+            </tr>
+            <tr>
+              <td><strong>3. Log each answer: cited, mentioned, position, which competitor won</strong></td>
+              <td>1&ndash;2 h</td>
+            </tr>
+            <tr>
+              <td><strong>4. Diagnose the questions the page lost</strong></td>
+              <td>1&ndash;3 h</td>
+            </tr>
+            <tr>
+              <td><strong>5. Write the replacement copy</strong></td>
+              <td>2&ndash;4 h</td>
+            </tr>
+            <tr>
+              <td><strong>6. Ship it</strong></td>
+              <td>0.5 h</td>
+              <td>0.5 h</td>
+            </tr>
+            <tr>
+              <td><strong>7. Wait for AI answers to reflect the edit</strong></td>
+              <td>3&ndash;14 days</td>
+              <td>3&ndash;14 days</td>
+            </tr>
+            <tr>
+              <td><strong>8. Re-run the prompt set to see if it moved</strong></td>
+              <td>&asymp; 4.5 h</td>
+              <td>another run</td>
+            </tr>
+            <tr>
+              <td><strong>Human time, one page, one round</strong></td>
+              <td><strong>13&ndash;19 hours</strong></td>
+              <td><strong>&asymp;1 hour of review and shipping</strong></td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+
+        <p>Reference figures: consultants price a manual audit of 50 prompts across 5 models at 1&ndash;2 days; an internal audit of a 50&ndash;200 page site is estimated at 30&ndash;60 hours. At the 60&ndash;100 runs per query used in the SparkToro study, the same 40-prompt, 3-platform set is 7,200&ndash;12,000 runs, &asymp;90&ndash;150 hours of execution time per round.</p>
+
+        <p>Step 7 is independent of tooling. In Semrush's December 2025 citation-speed test (81 new pages), ChatGPT Search cited 10% of pages within 24 hours and 42% by day 30; Google AI Mode cited 36% within 24 hours. Re-measuring before 3&ndash;14 days typically returns pre-edit answers.</p>
+
+
+        <h2 id="what-alternatives-cost">What the alternatives cost in 2026</h2>
+
+        <p><strong>Tracker subscriptions start at $29/month; agency retainers start at &asymp;$1,500/month.</strong> Neither performs the per-page check-and-rewrite loop in the table above: trackers monitor a fixed prompt set on a schedule, agencies staff the manual hours, and one-click testers execute steps 1&ndash;5 as a single run.</p>
+
+        <div class="overflow-x-auto">
+        <table class="approach-table">
+          <caption>Prices as of July 2026, from vendor and aggregator pricing pages. Tracker tiers are priced by number of tracked prompts.</caption>
+          <thead>
+            <tr>
+              <th>Route</th>
+              <th>What you get</th>
+              <th>Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Manual, in the chat interfaces</strong></td>
+              <td>No tooling. Runs cannot be repeated identically; cost is time only.</td>
+              <td>$0 plus 13&ndash;19 h per page-round</td>
+            </tr>
+            <tr>
+              <td><strong>Tracker subscription</strong> (Otterly, Peec, Profound and similar)</td>
+              <td>Fixed prompt set monitored on a schedule; reports mention/citation rates and share-of-voice trends. No page-level diagnosis or replacement copy.</td>
+              <td>Otterly $29&ndash;$189/mo &middot; Peec &euro;89&ndash;&euro;505/mo &middot; Profound entry ~$399&ndash;$499/mo, enterprise tiers tracked at $2,000&ndash;$5,000+/mo</td>
+            </tr>
+            <tr>
+              <td><strong>Agency retainer</strong></td>
+              <td>Staffed execution of the manual loop plus off-site work (digital PR, listings). Longest iteration cycle of the three categories.</td>
+              <td>$1,500&ndash;$3,000/mo entry &middot; $3,000&ndash;$12,000/mo mid-market &middot; one-time audits $5,000&ndash;$40,000</td>
+            </tr>
+            <tr>
+              <td><strong>One-click page testers</strong> (Frase Content Watchdog, Goodie AEO Writer, HeyAmos, Metricus Forager)</td>
+              <td>Steps 1&ndash;5 in a single run against one URL: buyer questions proposed, page tested against them, verdict and replacement copy returned.</td>
+              <td>Per run or per page; free entry points exist</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+
+
+        <h2 id="decide">What's the fastest way to check and fix a page?</h2>
+
+        <p>Before rewriting, verify the page states the facts buyer questions require &mdash; price, proof (reviews, case studies), and intended audience &mdash; as machine-readable text. A page that does not state a price cannot be returned as the answer to a price question.</p>
+
+        <p>Then test the copy. The manual procedure is the 13&ndash;19 hour table above. A one-click tester executes steps 1&ndash;5 in a single run; <a href="/ai-visibility-optimizer-tool/">Metricus Forager</a> runs the loop on one URL in &asymp;3 minutes, free.</p>
+
+        <p>Ship the selected copy. AI answers typically begin reflecting page edits in 3&ndash;14 days; 14&ndash;30 days is the evaluation window. Re-run the same prompt set at that point for a before/after comparison. Net human time per round: 13&ndash;19 hours manual versus &asymp;1 hour with a tester run.</p>
+
+        <p class="text-sm text-slate-muted mt-8">Last updated: July 31, 2026</p>
+
+      </div>
+      <!-- End Article Body -->
+
+
+      <!-- FAQ Section -->
+      <div class="article-body">
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <h3>How long after publishing a page does AI start citing it?</h3>
+        <p>In Semrush's December 2025 citation-speed test (81 new pages), ChatGPT Search cited 10% of pages within 24 hours and 42% by day 30; Google AI Mode cited 36% within the first 24 hours. For edits to an already-indexed page, answers typically update within 3&ndash;14 days; 14&ndash;30 days is the evaluation window.</p>
+
+        <h3>Why does AI cite my page without ever mentioning my brand?</h3>
+        <p>In the Semrush and Kevin Indig ghost-citations study (3,981 domains, 115 prompts, 14 countries, four AI engines), 62% of citations were links without a brand mention in the answer text. The same dataset found comparative content produced 2.4&times; more brand mentions than informational content.</p>
+      </div>
+
+
+      <!-- ========== ARTICLE CTA ========== -->
+      <div class="bg-primary p-8 md:p-12 mt-16">
+        <h3 class="font-display font-bold text-2xl md:text-3xl text-on-primary mb-3">Run one page through the loop.</h3>
+        <p class="text-on-primary/80 text-base max-w-lg mb-8">
+          Paste a URL. Forager proposes buyer questions, tests the page against them, and returns rewritten copy with per-question verdicts. Free, no follow-up.
+        </p>
+        <a href="/ai-visibility-optimizer-tool/" class="inline-flex items-center gap-2 h-12 px-8 bg-white text-primary font-semibold text-[15px] whitespace-nowrap border border-white hover:bg-slate-100 transition-colors">
+          Test a page
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- ========== CITE THIS ARTICLE ========== -->
+      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
+        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
+          <cite class="not-italic"><a href="https://metricusapp.com/blog/how-to-check-if-ai-recommends-your-page/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; How do I check whether AI recommends my page &mdash; and fix it if it doesn't? (July 2026)</a></cite>
+        </p>
+      </footer>
+
+    </article>
+
+
+    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-6">Go deeper</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <a href="/geo-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">GEO Knowledge Base</p>
+          <p class="text-sm text-on-surface-variant mt-1">Generative engine optimization, end to end</p>
+        </a>
+        <a href="/ai-platform-comparison-brands/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-2">Knowledge Base</p>
+          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">Platform Intelligence Guide</p>
+          <p class="text-sm text-on-surface-variant mt-1">How each AI platform picks what to cite</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== RELATED POSTS ========== -->
+    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
+      <p class="text-xs uppercase tracking-widest text-slate-muted font-semibold mb-8">Related articles</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <a href="../ai-visibility-tools-compared/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Comparison</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            AI Visibility Tools Compared
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            What each category of tool measures, what it leaves out, and where the prices land.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../ai-visibility-monitoring-vs-one-time-audits/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Comparison</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            Monitoring Subscriptions vs One-Time Audits
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            When a recurring tracker earns its price, and when a single check answers the question.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+        <a href="../ai-visibility-scores-explained/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
+          <p class="text-xs uppercase tracking-widest text-primary font-semibold mb-3">Research</p>
+          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
+            AI Visibility Scores Explained
+          </h3>
+          <p class="text-sm text-slate-muted leading-relaxed mb-6">
+            Why two tools can both be right and disagree about the same brand.
+          </p>
+          <div class="flex items-center justify-between text-sm text-outline">
+            <span>2026</span>
+            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+        <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
+        <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
+        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
+        <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
+        <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
+        <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
+        <a href="/privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a>
+        <a href="/terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a>
+        <a href="mailto:metricusapp@gmail.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
