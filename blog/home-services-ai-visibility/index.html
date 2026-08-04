@@ -32,10 +32,83 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://metricusapp.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://metricusapp.com/blog/"},{"@type":"ListItem","position":3,"name":"AI Visibility for Home Services","item":"https://metricusapp.com/blog/home-services-ai-visibility/"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does AI recommend Angi and HomeAdvisor instead of my local plumbing or electrical business?","acceptedAnswer":{"@type":"Answer","text":"AI generates recommendations from patterns in its training data. Angi and HomeAdvisor produce hundreds of millions of annual web visits, thousands of news articles, investor reports, and millions of contractor review pages. A local plumbing or electrical business typically has a basic website with a few hundred monthly visits and minimal third-party mentions. This gap in web corpus frequency translates directly into which entities AI surfaces. The lead generation platforms with the most mentions, backlinks, and structured content across the training corpus are the ones AI recommends."}},{"@type":"Question","name":"How much revenue can a home services contractor lose from AI invisibility?","acceptedAnswer":{"@type":"Answer","text":"A plumbing company averaging $500 per service call and handling 20 calls per week generates roughly $520,000 in annual revenue. If 5-10% of potential customers now start with AI, and AI never mentions that company, that represents $26,000-$52,000 in annual lost revenue from one discovery channel alone. For HVAC companies where a single system replacement averages $8,000-$15,000, losing even a few AI-influenced leads per quarter means $50,000-$100,000+ in annual revenue at risk. These losses compound as AI adoption accelerates."}},{"@type":"Question","name":"What does AI get wrong about home service contractors?","acceptedAnswer":{"@type":"Answer","text":"Common AI errors about contractors include fabricated pricing that can be off by 50-200% from actual local costs, incorrect service areas, wrong licensing and insurance status, merged reviews from multiple businesses with similar names, outdated business information, and invented certifications. AI also frequently recommends lead generation platforms as if they are contractors themselves, confusing homeowners about who will actually show up to do the work."}},{"@type":"Question","name":"How can a plumber, electrician, or HVAC company find out what AI says about them?","acceptedAnswer":{"@type":"Answer","text":"A Metricus AI visibility report maps exactly what AI says when someone asks for your trade in your service area, which sources it pulls from, every factual error it repeats about you, and who it recommends instead. You submit your webpage, and within 24 hours you get back the full picture with a prioritized fix list. One-time Snapshot, $499, no subscription. Delivered in 24 hours. Curated by AI experts. Useful report or refund."}},{"@type":"Question","name":"Why does AI recommend lead generation platforms instead of actual contractors?","acceptedAnswer":{"@type":"Answer","text":"Lead generation platforms like Angi and Thumbtack generate enormous web content: millions of contractor profiles, cost guides, project articles, and review pages. This creates a web footprint that is 10,000x-100,000x larger than the average independent contractor's. AI systems learn from web presence, so the entities that appear most frequently and authoritatively in training data are the ones AI recommends. Individual contractors who actually do the work are almost never mentioned by name because their web footprint is too small relative to the platforms."}},{"@type":"Question","name":"What is the difference between Google Local Services visibility and AI visibility for contractors?","acceptedAnswer":{"@type":"Answer","text":"Google Local Services Ads are pay-per-lead listings designed specifically for local contractors, where proximity and reviews determine placement. AI visibility is entirely different: AI systems generate narrative recommendations based on training data patterns, and there is no paid option to influence placement. A contractor can rank well in Google Local Services and still be completely invisible in AI responses. Both channels matter in 2026 because 45% of consumers now use AI assistants to find local services, while Google Local Services Ads remain the highest-converting paid channel for contractors."}}]}</script>
   <script src="/js/reader-pulse-b.js" defer></script>
+<style>
+  /* nav optimizer field */
+  .navopt{display:none;position:relative}
+  .navopt-wrap{position:relative;overflow:hidden;display:flex;align-items:stretch;border:1px solid #cbd2dc;background:#fff;transition:border-color .3s}
+  .navopt-tag{display:flex;align-items:center;padding:0 12px;background:#f3f4f6;border-right:1px solid #d1d5db;
+    font-size:11px;font-weight:600;letter-spacing:.06em;color:#374151;white-space:nowrap;user-select:none;transition:background .3s,color .3s}
+  .navopt-wrap::after{content:'';position:absolute;top:0;bottom:0;left:0;width:200%;pointer-events:none;
+    background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.45) 50%,transparent 60%);
+    transform:translateX(-100%)}
+  .navopt.sweep .navopt-wrap::after{animation:navopt-sweep 1.2s ease-in-out}
+  @keyframes navopt-sweep{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+  .navopt input[name=url]{flex:1;min-width:0;border:0;outline:none;padding:0 12px;font-size:14px;background:transparent;color:#111827}
+  .navopt input[name=url]::placeholder{color:#6b7280}
+  .navopt-wrap:focus-within{box-shadow:0 0 0 2px rgba(81,95,116,.35)}
+  .navopt button{border:0;background:#515F74;color:#fff;font-size:13px;font-weight:600;padding:0 13px;cursor:pointer;
+    white-space:nowrap;font-family:inherit;margin:4px 4px 4px 0;align-self:stretch;transition:background .25s,box-shadow .25s}
+  .navopt button:hover{background:#414d61}
+  .navopt.scrolled .navopt-wrap{border-color:#9aa6b8}
+  .navopt.scrolled .navopt-tag{background:#e9edf4;color:#515F74}
+  @keyframes navopt-pulse{0%{transform:scale(1)}45%{transform:scale(1.045)}100%{transform:scale(1)}}
+  .navopt.pulse button{animation:navopt-pulse .45s ease-in-out}
+  .navopt-hint{position:absolute;top:calc(100% + 8px);left:0;right:0;z-index:60;
+    background:#fff;border:1px solid #cbd2dc;box-shadow:0 6px 18px rgba(17,24,39,.08);
+    padding:9px 12px;font-size:12.5px;line-height:1.5;color:#374151;
+    opacity:0;visibility:hidden;transition:opacity .18s ease;pointer-events:none}
+  .navopt.show-hint:focus-within .navopt-hint{opacity:1;visibility:visible}
+  @media (prefers-reduced-motion:reduce){
+    .navopt-wrap::after{animation:none!important}
+    .navopt.pulse button{animation:none!important}
+  }
+  .navopt .bshort{display:none}
+  @media (min-width:900px){
+    .navopt-desktop{display:block;flex:1;min-width:360px;max-width:520px;margin-left:28px}
+    .navopt-desktop .navopt-wrap{height:40px}
+    .navopt-mobile{display:none}
+  }
+  @media (min-width:900px) and (max-width:1120px){
+    .navopt-desktop{min-width:280px}
+    .navopt-desktop .navopt-tag{display:none}
+  }
+  @media (max-width:899.98px){
+    .navopt-mobile{display:block;margin-top:64px;padding:6px 12px}
+    .navopt-mobile .navopt-wrap{height:44px}
+    .navopt-mobile .navopt-tag{padding:0 9px;font-size:10.5px}
+    .navopt-mobile button .blong{display:none}
+    .navopt-mobile button .bshort{display:inline}
+    .navopt-hint{display:none}
+  }
+</style>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30"><div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16"><a href="/" class="flex items-center gap-2 group" aria-label="Metricus home"><svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path></svg><span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span></a><div class="hidden md:flex items-center gap-8"><a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Methodology</a><a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a><a href="/blog/" class="text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Learn</a><a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a><a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a><a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a></div><button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button></div></nav>
-  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true"><div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div><nav class="absolute top-0 right-0 w-72 h-full bg-surface-container-lowest shadow-xl flex flex-col pt-6 px-6"><button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu"><span class="material-symbols-outlined">close</span></button><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">Methodology</a><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/" id="mobile-pricing-link">Pricing</a><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a><a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a></nav></div>
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30"><div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16"><a href="/" class="flex items-center gap-2 group" aria-label="Metricus home"><svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path></svg><span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span></a>
+      <form class="navopt navopt-desktop" action="/ai-visibility-optimizer-tool/" method="get" novalidate>
+        <div class="navopt-wrap">
+          <span class="navopt-tag" aria-hidden="true">FREE&nbsp;·&nbsp;2&nbsp;MIN</span>
+          <input name="url" type="url" inputmode="url" autocapitalize="none" autocorrect="off" spellcheck="false"
+            placeholder="yourdomain.com/blog-post"
+            aria-label="Type yourdomain.com/blog-post and get your page optimized in minutes — free" aria-describedby="navopt-hint-d">
+          <input type="hidden" name="src" value="nav--blog-home-services-ai-visibility">
+          <button type="submit"><span class="blong">Optimize page</span><span class="bshort">Optimize</span></button>
+        </div>
+        <div class="navopt-hint" role="tooltip" id="navopt-hint-d">Tests your page on real buyer questions — and hands you the version that wins. Free, ~2 min.</div>
+      </form>
+<div class="hidden md:flex items-center gap-8"><a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Methodology</a><a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a><a href="/blog/" class="text-sm font-bold text-on-surface border-b-2 border-on-surface pb-0.5">Learn</a><a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a><a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a></div><button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button></div></nav>
+
+  <form class="navopt navopt-mobile" action="/ai-visibility-optimizer-tool/" method="get" novalidate>
+    <div class="navopt-wrap">
+      <span class="navopt-tag" aria-hidden="true">FREE&nbsp;·&nbsp;2&nbsp;MIN</span>
+      <input name="url" type="url" inputmode="url" autocapitalize="none" autocorrect="off" spellcheck="false"
+        placeholder="yourdomain.com/blog-post"
+        aria-label="Type yourdomain.com/blog-post and get your page optimized in minutes — free">
+      <input type="hidden" name="src" value="nav--blog-home-services-ai-visibility">
+      <button type="submit"><span class="blong">Optimize page</span><span class="bshort">Optimize</span></button>
+    </div>
+  </form>
+
+  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true"><div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div><nav class="absolute top-0 right-0 w-72 h-full bg-surface-container-lowest shadow-xl flex flex-col pt-6 px-6"><button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu"><span class="material-symbols-outlined">close</span></button><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">Methodology</a><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/" id="mobile-pricing-link">Pricing</a><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a><a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a></nav></div>
   <script>(function(){var b=document.getElementById('mobile-menu-btn'),m=document.getElementById('mobile-menu'),c=document.getElementById('mobile-menu-close'),d=document.getElementById('mobile-menu-backdrop'),p=document.getElementById('mobile-pricing-link');if(!b||!m)return;function o(){m.classList.remove('hidden');m.setAttribute('aria-hidden','false');b.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}function s(){m.classList.add('hidden');m.setAttribute('aria-hidden','true');b.setAttribute('aria-expanded','false');document.body.style.overflow='';}b.addEventListener('click',o);if(c)c.addEventListener('click',s);if(d)d.addEventListener('click',s);if(p)p.addEventListener('click',s);})();</script>
 
   <main class="flex-grow flex flex-col relative overflow-x-hidden">
@@ -429,5 +502,89 @@
   </main>
   <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8"><div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4"><p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p><div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2"><a href="/results/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a><a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a><a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a><a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a><a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a><a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a><a href="/privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a><a href="/terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a><a href="mailto:metricusapp@gmail.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a></div></div></footer>
   <script src="/js/reader-pulse-b.js" defer></script>
+<script>
+  (function(){
+    var forms=[].slice.call(document.querySelectorAll('.navopt'));
+    if(!forms.length)return;
+    var inputs=forms.map(function(f){return f.querySelector('input[name=url]')}).filter(Boolean);
+    var reduced=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var retired=false;
+    var BASE='yourdomain.com/';
+    var EX=["blog-post", "pricing", "product"];
+
+    function retire(){
+      retired=true;
+      forms.forEach(function(f){f.classList.remove('sweep','pulse')});
+      inputs.forEach(function(i){i.placeholder=BASE+EX[0]});
+    }
+    inputs.forEach(function(i){
+      i.addEventListener('focus',retire,{once:true});
+      i.addEventListener('input',retire,{once:true});
+    });
+    forms.forEach(function(f){f.classList.add('show-hint')});
+    inputs.forEach(function(i){
+      i.addEventListener('input',function(){if(i.value)forms.forEach(function(f){f.classList.remove('show-hint')})});
+    });
+
+    function sweep(){
+      if(retired||reduced)return;
+      forms.forEach(function(f){f.classList.remove('sweep');void f.offsetWidth;f.classList.add('sweep')});
+    }
+    setTimeout(sweep,2000);
+
+    if(reduced){inputs.forEach(function(i){i.placeholder=BASE+EX[0]})}
+    else{
+      inputs.forEach(function(i){i.placeholder=BASE});
+      var ei=0,ci=0,mode='type',timer=null;
+      function setPh(t){inputs.forEach(function(i){i.placeholder=t})}
+      function tick(){
+        if(retired)return;
+        if(document.hidden){timer=setTimeout(tick,800);return}
+        var word=EX[ei];
+        if(mode==='type'){
+          ci++;setPh(BASE+word.slice(0,ci));
+          if(ci>=word.length){mode='hold';timer=setTimeout(tick,7000);return}
+          timer=setTimeout(tick,45);
+        }else if(mode==='hold'){mode='del';timer=setTimeout(tick,18);}
+        else{
+          ci--;setPh(BASE+word.slice(0,ci));
+          if(ci<=0){ei=(ei+1)%EX.length;mode='type';timer=setTimeout(tick,350);return}
+          timer=setTimeout(tick,18);
+        }
+      }
+      timer=setTimeout(tick,600);
+    }
+
+    var pulsed=false,glinted60=false,scrolledOn=false;
+    window.addEventListener('scroll',function(){
+      var y=window.scrollY;
+      if(!scrolledOn&&y>80){scrolledOn=true;forms.forEach(function(f){f.classList.add('scrolled')})}
+      var max=document.documentElement.scrollHeight-window.innerHeight;
+      if(max<=0)return;
+      var d=y/max;
+      if(!pulsed&&!retired&&!reduced&&d>=0.35){pulsed=true;forms.forEach(function(f){f.classList.add('pulse')});setTimeout(function(){forms.forEach(function(f){f.classList.remove('pulse')})},600)}
+      if(!glinted60&&d>=0.6){glinted60=true;sweep()}
+    },{passive:true});
+
+    if(window.matchMedia&&matchMedia('(pointer: fine)').matches){
+      var btn=null,rafPending=false,lastE=null;
+      document.addEventListener('mousemove',function(e){
+        lastE=e;
+        if(rafPending)return;rafPending=true;
+        requestAnimationFrame(function(){
+          rafPending=false;
+          if(!btn){forms.forEach(function(f){if(getComputedStyle(f).display!=='none'&&!btn)btn=f.querySelector('button')});if(!btn)return;}
+          var r=btn.getBoundingClientRect();
+          var dx=Math.max(r.left-lastE.clientX,0,lastE.clientX-r.right);
+          var dy=Math.max(r.top-lastE.clientY,0,lastE.clientY-r.bottom);
+          var dist=Math.sqrt(dx*dx+dy*dy);
+          var t=Math.max(0,Math.min(1,1-dist/220));
+          btn.style.boxShadow=t>0?('0 1px '+(8*t)+'px rgba(81,95,116,'+(0.45*t)+')'):'';
+          btn.style.background=t>0?('rgb('+Math.round(81+20*t)+','+Math.round(95+18*t)+','+Math.round(116+22*t)+')'):'';
+        });
+      },{passive:true});
+    }
+  })();
+</script>
 </body>
 </html>

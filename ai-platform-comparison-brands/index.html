@@ -97,6 +97,55 @@
       .kb-gated-content section > *:not(h2) { filter: blur(5px); }
     .kb-gated-content section > h2 { filter: none; }
 </style>
+<style>
+  /* nav optimizer field */
+  .navopt{display:none;position:relative}
+  .navopt-wrap{position:relative;overflow:hidden;display:flex;align-items:stretch;border:1px solid #cbd2dc;background:#fff;transition:border-color .3s}
+  .navopt-tag{display:flex;align-items:center;padding:0 12px;background:#f3f4f6;border-right:1px solid #d1d5db;
+    font-size:11px;font-weight:600;letter-spacing:.06em;color:#374151;white-space:nowrap;user-select:none;transition:background .3s,color .3s}
+  .navopt-wrap::after{content:'';position:absolute;top:0;bottom:0;left:0;width:200%;pointer-events:none;
+    background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.45) 50%,transparent 60%);
+    transform:translateX(-100%)}
+  .navopt.sweep .navopt-wrap::after{animation:navopt-sweep 1.2s ease-in-out}
+  @keyframes navopt-sweep{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+  .navopt input[name=url]{flex:1;min-width:0;border:0;outline:none;padding:0 12px;font-size:14px;background:transparent;color:#111827}
+  .navopt input[name=url]::placeholder{color:#6b7280}
+  .navopt-wrap:focus-within{box-shadow:0 0 0 2px rgba(81,95,116,.35)}
+  .navopt button{border:0;background:#515F74;color:#fff;font-size:13px;font-weight:600;padding:0 13px;cursor:pointer;
+    white-space:nowrap;font-family:inherit;margin:4px 4px 4px 0;align-self:stretch;transition:background .25s,box-shadow .25s}
+  .navopt button:hover{background:#414d61}
+  .navopt.scrolled .navopt-wrap{border-color:#9aa6b8}
+  .navopt.scrolled .navopt-tag{background:#e9edf4;color:#515F74}
+  @keyframes navopt-pulse{0%{transform:scale(1)}45%{transform:scale(1.045)}100%{transform:scale(1)}}
+  .navopt.pulse button{animation:navopt-pulse .45s ease-in-out}
+  .navopt-hint{position:absolute;top:calc(100% + 8px);left:0;right:0;z-index:60;
+    background:#fff;border:1px solid #cbd2dc;box-shadow:0 6px 18px rgba(17,24,39,.08);
+    padding:9px 12px;font-size:12.5px;line-height:1.5;color:#374151;
+    opacity:0;visibility:hidden;transition:opacity .18s ease;pointer-events:none}
+  .navopt.show-hint:focus-within .navopt-hint{opacity:1;visibility:visible}
+  @media (prefers-reduced-motion:reduce){
+    .navopt-wrap::after{animation:none!important}
+    .navopt.pulse button{animation:none!important}
+  }
+  .navopt .bshort{display:none}
+  @media (min-width:900px){
+    .navopt-desktop{display:block;flex:1;min-width:360px;max-width:520px;margin-left:28px}
+    .navopt-desktop .navopt-wrap{height:40px}
+    .navopt-mobile{display:none}
+  }
+  @media (min-width:900px) and (max-width:1120px){
+    .navopt-desktop{min-width:280px}
+    .navopt-desktop .navopt-tag{display:none}
+  }
+  @media (max-width:899.98px){
+    .navopt-mobile{display:block;margin-top:64px;padding:6px 12px}
+    .navopt-mobile .navopt-wrap{height:44px}
+    .navopt-mobile .navopt-tag{padding:0 9px;font-size:10.5px}
+    .navopt-mobile button .blong{display:none}
+    .navopt-mobile button .bshort{display:inline}
+    .navopt-hint{display:none}
+  }
+</style>
 </head>
 <body class="min-h-screen bg-dot-grid">
 
@@ -111,19 +160,42 @@
         </svg>
         <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
       </a>
+      <form class="navopt navopt-desktop" action="/ai-visibility-optimizer-tool/" method="get" novalidate>
+        <div class="navopt-wrap">
+          <span class="navopt-tag" aria-hidden="true">FREE&nbsp;·&nbsp;2&nbsp;MIN</span>
+          <input name="url" type="url" inputmode="url" autocapitalize="none" autocorrect="off" spellcheck="false"
+            placeholder="yourdomain.com/pricing"
+            aria-label="Type yourdomain.com/pricing and get your page optimized in minutes — free" aria-describedby="navopt-hint-d">
+          <input type="hidden" name="src" value="nav--ai-platform-comparison-brands">
+          <button type="submit"><span class="blong">Optimize page</span><span class="bshort">Optimize</span></button>
+        </div>
+        <div class="navopt-hint" role="tooltip" id="navopt-hint-d">Tests your page on real buyer questions — and hands you the version that wins. Free, ~2 min.</div>
+      </form>
+
       <div class="hidden md:flex items-center gap-8">
         <a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Methodology</a>
         <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
         <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Learn</a>
         <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
         <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
-        <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
             </div>
       <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
         <span class="material-symbols-outlined">menu</span>
       </button>
     </div>
   </nav>
+
+  <form class="navopt navopt-mobile" action="/ai-visibility-optimizer-tool/" method="get" novalidate>
+    <div class="navopt-wrap">
+      <span class="navopt-tag" aria-hidden="true">FREE&nbsp;·&nbsp;2&nbsp;MIN</span>
+      <input name="url" type="url" inputmode="url" autocapitalize="none" autocorrect="off" spellcheck="false"
+        placeholder="yourdomain.com/pricing"
+        aria-label="Type yourdomain.com/pricing and get your page optimized in minutes — free">
+      <input type="hidden" name="src" value="nav--ai-platform-comparison-brands">
+      <button type="submit"><span class="blong">Optimize page</span><span class="bshort">Optimize</span></button>
+    </div>
+  </form>
+
 
   <!-- Mobile Menu Overlay -->
   <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
@@ -137,7 +209,6 @@
       <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
       <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
       <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
-      <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
         </nav>
   </div>
 
@@ -1508,5 +1579,89 @@
   </script>
   <script src="/js/email-gate.js" defer></script>
   <script src="/js/reader-pulse-b.js" defer></script>
+<script>
+  (function(){
+    var forms=[].slice.call(document.querySelectorAll('.navopt'));
+    if(!forms.length)return;
+    var inputs=forms.map(function(f){return f.querySelector('input[name=url]')}).filter(Boolean);
+    var reduced=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var retired=false;
+    var BASE='yourdomain.com/';
+    var EX=["pricing", "product", "services"];
+
+    function retire(){
+      retired=true;
+      forms.forEach(function(f){f.classList.remove('sweep','pulse')});
+      inputs.forEach(function(i){i.placeholder=BASE+EX[0]});
+    }
+    inputs.forEach(function(i){
+      i.addEventListener('focus',retire,{once:true});
+      i.addEventListener('input',retire,{once:true});
+    });
+    forms.forEach(function(f){f.classList.add('show-hint')});
+    inputs.forEach(function(i){
+      i.addEventListener('input',function(){if(i.value)forms.forEach(function(f){f.classList.remove('show-hint')})});
+    });
+
+    function sweep(){
+      if(retired||reduced)return;
+      forms.forEach(function(f){f.classList.remove('sweep');void f.offsetWidth;f.classList.add('sweep')});
+    }
+    setTimeout(sweep,2000);
+
+    if(reduced){inputs.forEach(function(i){i.placeholder=BASE+EX[0]})}
+    else{
+      inputs.forEach(function(i){i.placeholder=BASE});
+      var ei=0,ci=0,mode='type',timer=null;
+      function setPh(t){inputs.forEach(function(i){i.placeholder=t})}
+      function tick(){
+        if(retired)return;
+        if(document.hidden){timer=setTimeout(tick,800);return}
+        var word=EX[ei];
+        if(mode==='type'){
+          ci++;setPh(BASE+word.slice(0,ci));
+          if(ci>=word.length){mode='hold';timer=setTimeout(tick,7000);return}
+          timer=setTimeout(tick,45);
+        }else if(mode==='hold'){mode='del';timer=setTimeout(tick,18);}
+        else{
+          ci--;setPh(BASE+word.slice(0,ci));
+          if(ci<=0){ei=(ei+1)%EX.length;mode='type';timer=setTimeout(tick,350);return}
+          timer=setTimeout(tick,18);
+        }
+      }
+      timer=setTimeout(tick,600);
+    }
+
+    var pulsed=false,glinted60=false,scrolledOn=false;
+    window.addEventListener('scroll',function(){
+      var y=window.scrollY;
+      if(!scrolledOn&&y>80){scrolledOn=true;forms.forEach(function(f){f.classList.add('scrolled')})}
+      var max=document.documentElement.scrollHeight-window.innerHeight;
+      if(max<=0)return;
+      var d=y/max;
+      if(!pulsed&&!retired&&!reduced&&d>=0.35){pulsed=true;forms.forEach(function(f){f.classList.add('pulse')});setTimeout(function(){forms.forEach(function(f){f.classList.remove('pulse')})},600)}
+      if(!glinted60&&d>=0.6){glinted60=true;sweep()}
+    },{passive:true});
+
+    if(window.matchMedia&&matchMedia('(pointer: fine)').matches){
+      var btn=null,rafPending=false,lastE=null;
+      document.addEventListener('mousemove',function(e){
+        lastE=e;
+        if(rafPending)return;rafPending=true;
+        requestAnimationFrame(function(){
+          rafPending=false;
+          if(!btn){forms.forEach(function(f){if(getComputedStyle(f).display!=='none'&&!btn)btn=f.querySelector('button')});if(!btn)return;}
+          var r=btn.getBoundingClientRect();
+          var dx=Math.max(r.left-lastE.clientX,0,lastE.clientX-r.right);
+          var dy=Math.max(r.top-lastE.clientY,0,lastE.clientY-r.bottom);
+          var dist=Math.sqrt(dx*dx+dy*dy);
+          var t=Math.max(0,Math.min(1,1-dist/220));
+          btn.style.boxShadow=t>0?('0 1px '+(8*t)+'px rgba(81,95,116,'+(0.45*t)+')'):'';
+          btn.style.background=t>0?('rgb('+Math.round(81+20*t)+','+Math.round(95+18*t)+','+Math.round(116+22*t)+')'):'';
+        });
+      },{passive:true});
+    }
+  })();
+</script>
 </body>
 </html>
