@@ -43,8 +43,10 @@
   .btn.ghost{background:transparent;color:var(--ink)}
   .btn.small{padding:9px 13px;min-height:0;font-size:13.5px}
   input.fld{font-family:var(--sans);font-size:15px;width:100%;border:1px solid var(--ink);border-radius:2px;padding:13px 12px;background:var(--surface)}
+  input.fld.mini{font-size:13.5px;padding:8px 10px}
   .chip{display:inline-block;border-radius:2px;padding:3px 8px;font-size:12px;margin:0 4px 4px 0}
   .chip.win{background:var(--win-bg);color:var(--win)} .chip.loss{background:var(--loss-bg);color:var(--loss)}
+  .chip.neutral{background:var(--chip-neutral);color:var(--annotation)}
   .soft{color:var(--annotation)}
   .small{font-size:12.5px}
   .tiny{font-size:11.5px}
@@ -53,30 +55,88 @@
   .fadeUp{animation:fadeUp .4s ease both}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
   .pulse{animation:pulse 1.2s ease-in-out infinite}
+  @keyframes flashbg{0%{background:var(--win-bg)}100%{background:var(--surface)}}
+  .flash{animation:flashbg 1.6s ease-out both}
   @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+  /* working mark — stepped frames + a scale pulse on the wrapper */
+  .mk{display:inline-flex;vertical-align:middle;flex:0 0 auto}
+  .mk svg{display:block}
+  .mkp{display:inline-block}
+  .mk .fr{opacity:0}
+  .mk.on .mkp{animation:mkpulse 1.08s ease-in-out infinite}
+  .mk.on .fr1{animation:mkf1 1.08s steps(1,end) infinite}
+  .mk.on .fr2{animation:mkf2 1.08s steps(1,end) infinite}
+  .mk.on .fr3{animation:mkf3 1.08s steps(1,end) infinite}
+  .mk.on .fr4{animation:mkf4 1.08s steps(1,end) infinite}
+  @keyframes mkpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+  @keyframes mkf1{0%{opacity:.95}25%,100%{opacity:0}}
+  @keyframes mkf2{0%,24.9%{opacity:0}25%{opacity:.95}50%,100%{opacity:0}}
+  @keyframes mkf3{0%,49.9%{opacity:0}50%{opacity:.95}75%,100%{opacity:0}}
+  @keyframes mkf4{0%,74.9%{opacity:0}75%{opacity:.95}100%{opacity:0}}
 
   /* landing */
   #landing{padding:34px 0 48px}
   .h1{font-family:var(--serif);font-weight:500;font-size:clamp(30px,7.5vw,42px);line-height:1.12;margin:0 0 10px}
   .sub{font-size:15.5px;line-height:1.55;color:#2a2a2a;margin:0 0 18px}
-  .example{margin-top:34px}
-  .example .exlabel{font-size:12.5px;color:var(--annotation);margin-bottom:8px}
+  .scoreboard{margin-top:22px;font-size:13px}
+  .scoreboard .sbrow{padding:7px 0;border-top:1px solid var(--rule-soft);display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .scoreboard .sbrow:first-of-type{border-top:0}
+  .scoreboard a{font-size:12.5px}
+  .dedup{margin-top:12px;border:1px solid var(--rule);background:var(--surface);border-radius:3px;padding:10px 12px;font-size:13.5px;display:flex;align-items:center;justify-content:space-between;gap:10px}
 
-  /* status header while running */
-  #status{position:sticky;top:0;z-index:30;background:var(--paper);border-bottom:1px solid var(--rule);padding:10px 0}
+  /* status header + session bar */
+  #status{position:sticky;top:0;z-index:30;background:var(--paper);border-bottom:1px solid var(--rule);padding:10px 0 0}
   #status .row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+  #status .uwrap{display:flex;align-items:center;gap:8px;min-width:0}
   #status .u{font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   #status .score{font-family:var(--mono);font-size:12px;white-space:nowrap}
   .barwrap{height:3px;background:var(--rule-soft);border-radius:2px;overflow:hidden;margin-top:8px}
   .barfill{display:block;height:100%;width:0%;background:var(--ink);border-radius:2px;transition:width .3s}
+  #sbar{display:flex;align-items:center;gap:6px;flex-wrap:wrap;padding:7px 0 8px;font-size:12px}
+  .pchip{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--rule);border-radius:2px;background:var(--surface);padding:3px 8px;font-family:var(--mono);font-size:11.5px;white-space:nowrap}
+  .pchip .x{cursor:pointer;color:var(--annotation);font-family:var(--sans)}
+  .pchip.q{color:var(--annotation);font-style:italic}
+  .pchip.link{cursor:pointer}
+  .pchip.link:hover{border-color:var(--ink)}
+  .pchip.viewing{border-color:var(--ink);background:var(--chip-neutral)}
+  .sbtn{border:1px solid var(--rule);background:transparent;border-radius:2px;padding:3px 9px;font-size:12px;white-space:nowrap}
+  .sbtn:hover{border-color:var(--ink)}
+  #sbar .gap{flex:1}
+  #sbar-addrow{display:flex;gap:6px;width:100%;margin-top:2px}
+  #sbar-addrow input{flex:1}
 
-  /* question feed */
+  /* trace stages */
+  .stage{background:var(--surface);border:1px solid var(--rule);border-radius:3px;margin-top:14px}
+  .sthead{display:flex;align-items:center;gap:9px;padding:11px 14px;cursor:default;user-select:none}
+  .stage.done .sthead{cursor:pointer}
+  .sthead .slot{width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 18px}
+  .sthead .tick{color:var(--win);font-size:14px}
+  .sttitle{font-weight:600;font-size:13.5px;flex:1}
+  .stel{font-family:var(--mono);font-size:11px;color:var(--annotation)}
+  .stbody{padding:0 14px 13px}
+  .stage.done .stbody{display:none}
+  .stage.done.open .stbody{display:block}
+  .facts{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:12.5px;color:var(--annotation)}
+  .facts b{color:var(--ink);font-weight:600}
+
+  /* question rows */
   .qrow{padding:10px 0;border-top:1px solid var(--rule-soft)}
   .qrow:first-child{border-top:0}
   .qtext{font-family:var(--serif);font-style:italic;font-size:14px;line-height:1.4}
   .qres{font-size:12.5px;margin-top:3px}
-  .qres.win{color:var(--win)} .qres.loss{color:var(--loss)}
-  #feedbox{max-height:300px;overflow-y:auto}
+  .qres.win{color:var(--win)} .qres.loss{color:var(--loss)} .qres.skip{color:var(--annotation)}
+  .qres.pend{color:var(--annotation);opacity:.55}
+
+  /* board */
+  .mgroup{font-size:12px;color:var(--annotation);margin:12px 0 2px;text-transform:capitalize}
+  .standings{margin-top:14px;border-top:1px solid var(--rule-soft);padding-top:8px}
+  .vrow{display:flex;align-items:center;gap:10px;padding:6px 0;border-top:1px solid var(--rule-soft)}
+  .vrow:first-child{border-top:0}
+  .vname{flex:1;font-size:13px}
+  .vbarw{flex:1.2;height:5px;background:var(--rule-soft);border-radius:2px;overflow:hidden}
+  .vbar{display:block;height:100%;border-radius:2px;transition:width .3s}
+  .vct{font-family:var(--mono);font-size:12px;width:46px;text-align:right}
 
   /* verdict */
   .bigscore{font-family:var(--serif);font-weight:600;font-size:52px;line-height:1}
@@ -100,8 +160,6 @@
   .capture .cs{font-size:13px;color:#333;margin-top:3px}
   .capture .row{display:flex;gap:8px;margin-top:12px}
   .capture .row input{flex:1;min-width:0}
-  .capture label input{flex:0 0 auto;margin-top:1px}
-  .capture label{display:flex;gap:7px;align-items:flex-start;font-size:12px;color:var(--annotation);margin-top:10px}
   .captured{font-size:13.5px;color:var(--win)}
 
   /* improved copy */
@@ -111,10 +169,9 @@
   .cur{font-size:12.5px;color:var(--loss);text-decoration:line-through;margin:5px 0 4px}
   .cur.missing{text-decoration:none;color:var(--annotation);font-style:italic}
   .winv{font-size:13px;background:var(--win-bg);border-radius:2px;padding:7px 9px;line-height:1.45}
-  .locked .assets{filter:blur(5px);user-select:none;pointer-events:none}
+  .copycard.locked .assets{filter:blur(5px);user-select:none;pointer-events:none}
   .copybtn{font-size:12px;border:1px solid var(--ink);border-radius:2px;padding:3px 10px;background:transparent}
   .rowbtns{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-  .shipdone{font-size:13px;color:var(--win);margin-top:12px}
 
   details{border:1px solid var(--rule);border-radius:3px;background:var(--surface);margin-top:14px}
   details summary{padding:13px 16px;font-size:14px;font-weight:600;cursor:pointer;list-style:none}
@@ -122,15 +179,15 @@
   details summary:after{content:'▾';float:right;color:var(--annotation)}
   details[open] summary:after{content:'▴'}
   details .inner{padding:0 16px 14px}
-  .mgroup{font-size:12px;color:var(--annotation);margin:12px 0 2px;text-transform:capitalize}
-  .vrow{display:flex;align-items:center;gap:10px;padding:7px 0;border-top:1px solid var(--rule-soft)}
-  .vrow:first-child{border-top:0}
-  .vname{flex:1;font-size:13.5px}
-  .vbarw{flex:1.2;height:5px;background:var(--rule-soft);border-radius:2px;overflow:hidden}
-  .vbar{display:block;height:100%;border-radius:2px}
-  .vct{font-family:var(--mono);font-size:12px;width:46px;text-align:right}
 
-  .sharecanvas{width:100%;height:auto;border:1px solid var(--rule);border-radius:3px;display:block;margin-top:8px}
+  /* up-next / keep-going */
+  .upnext .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+  .sibchip{border:1px solid var(--rule);background:var(--surface);border-radius:2px;padding:6px 10px;font-size:12.5px;cursor:pointer;text-align:left}
+  .sibchip:hover{border-color:var(--ink)}
+  .sibchip .p{font-family:var(--mono);font-size:11.5px}
+  .sibchip .m{display:block;color:var(--annotation);font-size:11.5px;margin-top:1px}
+  .upnext .addrow{display:flex;gap:8px;margin-top:9px}
+  .upnext .addrow input{flex:1;min-width:0}
 
   .foot{font-size:12px;color:var(--annotation);text-align:center;margin-top:28px;line-height:1.9}
   .foot a{cursor:pointer}
@@ -139,6 +196,8 @@
   .bridge p{font-size:13.5px;color:#2a2a2a;margin:8px 0 12px}
 
   .banner{background:var(--loss-bg);border:1px solid var(--loss);border-radius:3px;padding:10px 12px;font-size:13px;color:#5a1e10;margin-top:12px}
+  .banner.gray{background:var(--chip-neutral);border-color:var(--rule);color:var(--annotation)}
+  .autonext{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid var(--rule);background:var(--surface);border-radius:3px;padding:9px 12px;font-size:13px;margin-top:14px}
 
   .hidden{display:none!important}
   .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--inverse);font-size:13px;padding:9px 16px;border-radius:2px;opacity:0;transition:.2s;z-index:60;pointer-events:none}
@@ -163,18 +222,27 @@
 <div id="landing" class="col">
   <h1 class="h1">Would AI recommend your page?</h1>
   <p class="sub">Optimize your page now. The Metricus AI agent studies how buyers search, finds where your page already wins and where it's getting skipped, and writes the copy that fixes it — in minutes, not weeks of optimization.</p>
-  <input class="fld" id="url" placeholder="yourdomain.com" autocomplete="off" autocapitalize="off" spellcheck="false" inputmode="url">
+  <input class="fld" id="url" placeholder="yourdomain.com/pricing" autocomplete="off" autocapitalize="off" spellcheck="false" inputmode="url">
   <div class="sec"><button class="btn full" id="test-btn">Test it free</button></div>
-  <div class="small soft" style="margin-top:8px">Let's optimize your page for AI visibility.</div>
+  <div class="small soft" style="margin-top:8px">Pick the page AI should be recommending — a product, service, or pricing page. You can add more pages after the first test.</div>
+  <div id="dedup-slot"></div>
+  <div id="queued-slot"></div>
+  <div id="scoreboard-slot"></div>
 </div>
 
 <!-- ============ RUN ============ -->
 <div id="run" class="hidden">
   <div id="status"><div class="col">
-    <div class="row"><span class="u" id="st-url"></span><span class="score" id="st-score"></span></div>
+    <div class="row">
+      <span class="uwrap"><span id="mark-status"></span><span class="u" id="st-url"></span></span>
+      <span class="score" id="st-score"></span>
+    </div>
     <div class="barwrap"><span class="barfill" id="st-bar"></span></div>
+    <div id="sbar"></div>
   </div></div>
   <div class="col" id="flow"></div>
+  <div class="col" id="upnext-slot"></div>
+  <div class="col" id="archive-host"></div>
 </div>
 
 <div class="toast" id="toast"></div>
@@ -182,16 +250,33 @@
 <script>
 /* ============================================================ config */
 const BACKEND=(new URLSearchParams(location.search)).get('api')||'https://metricus-forager-v2.slate-harbor-75f9.workers.dev';
+const SAMPLES=3, BATCH_SIZE=5, CLIENT_CONCURRENCY=3;
+const TOOL_URL=location.origin+location.pathname;
 const $=s=>document.querySelector(s);
 const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;};
 const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('on'),2000);}
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('on'),2400);}
+const stripUrl=u=>String(u||'').replace(/^https?:\/\//,'').replace(/\/$/,'');
+const normUrl=u=>{u=String(u||'').trim();if(!/^https?:\/\//i.test(u))u='https://'+u.replace(/^\/+/,'');try{const x=new URL(u);x.hash='';return x.origin+x.pathname.replace(/\/$/,'')+x.search;}catch(e){return u;}};
+const pathOfUrl=u=>{try{return (new URL(normUrl(u)).pathname.replace(/\/$/,''))||'/';}catch(e){return '/';}};
+const domainOfUrl=u=>{try{return new URL(normUrl(u)).hostname.replace(/^www\./,'');}catch(e){return '';}};
+
+/* working mark (the site mark, with a stepped 4-frame working animation) */
+const MARK_SVG=(size)=>`<span class="mk"><span class="mkp"><svg viewBox="0 0 32 32" width="${size}" height="${size}" aria-hidden="true">
+<rect width="32" height="32" fill="#334155"/>
+<text x="16" y="23" text-anchor="middle" fill="#fff" font-family="Inter,system-ui,sans-serif" font-weight="800" font-size="20">M</text>
+<rect class="fr fr1" x="3" y="3" width="5" height="5" fill="#fff" opacity="0"/>
+<rect class="fr fr2" x="24" y="3" width="5" height="5" fill="#fff" opacity="0"/>
+<rect class="fr fr3" x="24" y="24" width="5" height="5" fill="#fff" opacity="0"/>
+<rect class="fr fr4" x="3" y="24" width="5" height="5" fill="#fff" opacity="0"/>
+</svg></span></span>`;
+
 /* ---- logging to the Studio-logs worker (same contract as reader-pulse-b.js) ---- */
 var SW_LOGS_URL='https://metricus-studio-logs.red-hill-a87d.workers.dev/';
 function _swid(store,key,pfx){try{var v=store.getItem(key);if(!v){v=(crypto.randomUUID&&crypto.randomUUID())||(pfx+Math.random().toString(36).slice(2)+Date.now().toString(36));store.setItem(key,v);}return v;}catch(e){return pfx+Math.random().toString(36).slice(2)+Date.now().toString(36);}}
 var SW_UID=_swid(localStorage,'metricus_uid','uid-'), SW_SID=_swid(sessionStorage,'metricus_sid','sid-');
 var LOG_URL='';
-var FKIND={run_start:'FORAGER_RUN_START',readback_shown:'FORAGER_READBACK',verdict_shown:'FORAGER_VERDICT',run_confirmed:'FORAGER_CONFIRMED',unlock_email:'FORAGER_EMAIL',competitor_added:'FORAGER_COMPETITOR',copy_click:'FORAGER_COPY',ship_click:'FORAGER_SHIP',method_click:'FORAGER_METHOD',bridge_click:'FORAGER_BRIDGE',share_click:'FORAGER_SHARE'};
+var FKIND={run_start:'FORAGER_RUN_START',readback_shown:'FORAGER_READBACK',verdict_shown:'FORAGER_VERDICT',run_confirmed:'FORAGER_CONFIRMED',unlock_email:'FORAGER_EMAIL',competitor_added:'FORAGER_COMPETITOR',copy_click:'FORAGER_COPY',ship_click:'FORAGER_SHIP',method_click:'FORAGER_METHOD',bridge_click:'FORAGER_BRIDGE',share_click:'FORAGER_SHARE',fail:'FORAGER_FAIL',queue:'FORAGER_QUEUE',digest:'FORAGER_DIGEST',duel_start:'FORAGER_DUEL_START',duel_confirmed:'FORAGER_DUEL_CONFIRMED',board:'FORAGER_BOARD'};
 function analytics(n,x){
   x=x||{};
   try{console.log('[analytics]',n,x);}catch(e){}
@@ -200,237 +285,723 @@ function analytics(n,x){
     var url=x.url||LOG_URL; if(url)parts.push('URL: '+url);
     if(x.score!=null)parts.push('Score: '+x.score);
     if(x.competitor)parts.push('Competitor: '+x.competitor);
-    if(typeof RUN_ID!=='undefined'&&RUN_ID)parts.push('RunID: '+RUN_ID);
+    if(x.phase)parts.push('Phase: '+x.phase);
+    if(x.message)parts.push('Msg: '+String(x.message).slice(0,140));
+    if(x.detail)parts.push('Detail: '+String(x.detail).slice(0,140));
+    if(S&&S.runId)parts.push('RunID: '+S.runId);
     fetch(SW_LOGS_URL,{method:'POST',headers:{'content-type':'application/json'},keepalive:true,
       body:JSON.stringify({uid:SW_UID,sid:SW_SID,event:FKIND[n]||('FORAGER_'+String(n).toUpperCase()),
-        value:{contact:x.email||(typeof EMAILED!=='undefined'&&EMAILED)||'anonymous',details:parts.join(' // ')}})}).catch(function(){});
+        value:{contact:x.email||LS.email()||'anonymous',details:parts.join(' // ')}})}).catch(function(){});
   }catch(e){}
 }
-const stripUrl=u=>String(u||'').replace(/^https?:\/\//,'').replace(/\/$/,'');
 
-/* ============================================================ state */
-let RUN=null, RUN_ID=null, EMAILED=false, TOTAL_Q=42, youCount=0, doneCount=0, quickSeen=0, quickWins=0, quickTotal=7, brand='';
+/* ============================================================ localStorage */
+const LS={
+  get(k,fb){try{const v=localStorage.getItem(k);return v?JSON.parse(v):fb;}catch(e){return fb;}},
+  set(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}},
+  email(){try{return localStorage.getItem('mf_email')||'';}catch(e){return '';}},
+  setEmail(e){try{localStorage.setItem('mf_email',e);}catch(e2){}},
+  pages(){return this.get('mf_pages',{});},
+  savePage(domain,path,rec){const p=this.pages();(p[domain]=p[domain]||{})[path]=rec;this.set('mf_pages',p);},
+  tokens(){const p=this.pages(),out=[];for(const d in p)for(const path in p[d])if(p[d][path].result_token)out.push(p[d][path].result_token);return out;},
+  // up-next list is session-only: it dies with the tab, never haunts the next visit
+  queue(){try{const q=(JSON.parse(sessionStorage.getItem('mf_queue')||'[]')).filter(x=>x&&x.url);return q;}catch(e){return [];}},
+  setQueue(q){try{sessionStorage.setItem('mf_queue',JSON.stringify(q));}catch(e){}},
+  last(){return this.get('mf_last',null);},
+  setLast(v){this.set('mf_last',v);},
+};
 
-/* ============================================================ start */
-$('#test-btn').addEventListener('click',()=>start($('#url').value));
-$('#url').addEventListener('keydown',e=>{if(e.key==='Enter')start($('#url').value);});
+/* ============================================================ api */
+async function apiPost(path,body,opts){
+  opts=opts||{};const retries=opts.retry==null?1:opts.retry;
+  let lastErr;
+  for(let a=0;a<=retries;a++){
+    try{
+      const r=await fetch(BACKEND+path,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body||{}),signal:AbortSignal.timeout(60000)});
+      const j=await r.json().catch(()=>({}));
+      if(!r.ok){const e=new Error(j.error||('HTTP '+r.status));e.status=r.status;e.fatal=(r.status===401||r.status===410||r.status===422||r.status===400);throw e;}
+      return j;
+    }catch(e){lastErr=e;if(e.fatal)throw e;}
+  }
+  throw lastErr;
+}
 
-async function start(raw){
-  const u=(raw||'').trim();
-  if(!u){toast('Paste a page URL first');$('#url').focus();return;}
-  LOG_URL=u; analytics('run_start',{url:u});
-  $('#landing').classList.add('hidden'); $('#run').classList.remove('hidden');
-  $('#st-url').textContent=stripUrl(u); $('#st-score').textContent='starting…';
-  const F=$('#flow'); F.innerHTML='';
+/* ============================================================ run state */
+let S=null;            // current run
+let RUN=null;          // finished record of current run
+let AUTONEXT_TIMER=null;
+let CURRENT_CTX=null;   // wiring for the latest finished results view
+let VIEWING=null;       // url of the archived view on screen (null = live)
+const ARCHIVES={};      // url -> {el, ctx}: finished views kept so earlier results stay readable
+const MOMENT_MAP=[[/pricing|plans/i,'ready to buy'],[/product|features|shop/i,'researching'],[/about|reviews/i,'shortlist'],[/blog|guides/i,'exploring'],[/contact|book/i,'booking']];
+function momentFor(path){for(const [re,m] of MOMENT_MAP)if(re.test(path))return m;return null;}
 
-  let run_id;
+function newState(url){
+  return {url:normUrl(url),runId:null,stateToken:null,resultToken:null,brand:'',meta:null,retrieval:null,partial:false,
+    siblings:[],readback:null,versions:[],questions:[],denom:0,results:{},judgeModels:{},
+    youCount:0,judgedCount:0,resolvedCount:0,counts:{},curRound:1,rounds:[],capturedThisRun:false,running:true,stages:{}};
+}
+
+/* ============================================================ session bar */
+function ago(t){const m=Math.max(1,Math.round((Date.now()-t)/60000));if(m<60)return m+' min ago';const h=Math.round(m/60);return h+' h ago';}
+function renderSbar(){
+  const bar=$('#sbar');if(!bar)return;
+  bar.innerHTML='';
+  const domain=S?domainOfUrl(S.url):'';
+  const pages=LS.pages()[domain]||{};
+  const curPath=S?pathOfUrl(S.url):null;
+  for(const path in pages){
+    if(S&&S.running&&path===curPath)continue;
+    const p=pages[path];
+    const full=normUrl('https://'+domain+(path==='/'?'':path));
+    const viewable=!!ARCHIVES[full]||(CURRENT_CTX&&CURRENT_CTX.run&&normUrl(CURRENT_CTX.run.url)===full);
+    const c=el('span','pchip'+(viewable?' link':'')+(VIEWING===full?' viewing':''),`${esc(path)} ${p.q}/${p.denom}`);
+    if(viewable){c.title='view this result';c.addEventListener('click',()=>{if(ARCHIVES[full])showArchive(full);else showLive();});}
+    bar.appendChild(c);
+  }
+  if(S&&S.running){
+    const c=el('span','pchip'+(VIEWING?' link':''),`${esc(curPath)} <span class="pulse">●</span>`);
+    if(VIEWING){c.title='back to the live test';c.addEventListener('click',showLive);}
+    bar.appendChild(c);
+  }
+  for(const q of LS.queue()){
+    const c=el('span','pchip q',`${esc(pathOfUrl(q.url))} up next <span class="x" title="remove">✕</span>`);
+    c.querySelector('.x').addEventListener('click',()=>{LS.setQueue(LS.queue().filter(x=>x.url!==q.url));renderSbar();renderUpnext();});
+    bar.appendChild(c);
+  }
+  bar.appendChild(el('span','gap',''));
+  const addP=el('button','sbtn','+ Page');
+  addP.addEventListener('click',()=>{
+    if($('#sbar-addrow'))return $('#sbar-addrow input').focus();
+    const row=el('div','', '');row.id='sbar-addrow';
+    row.innerHTML=`<input class="fld mini" placeholder="yourdomain.com/next-page"><button class="btn small">Add</button>`;
+    bar.appendChild(row);
+    const inp=row.querySelector('input'),go=()=>{const v=(inp.value||'').trim();if(!v)return;addToQueue(v);row.remove();};
+    row.querySelector('button').addEventListener('click',go);
+    inp.addEventListener('keydown',e=>{if(e.key==='Enter')go();});
+    inp.focus();
+  });
+  bar.appendChild(addP);
+  const n=LS.tokens().length;
+  if(n>0){
+    const em=el('button','sbtn',`Email my report (${n})`);
+    em.addEventListener('click',emailMyReport);
+    bar.appendChild(em);
+  }
+}
+function addToQueue(url){
+  const q=LS.queue();
+  const nu=normUrl(url);
+  if(q.some(x=>normUrl(x.url)===nu)){toast('Already lined up');return;}
+  q.push({url:nu,at:Date.now()});LS.setQueue(q);
+  analytics('queue',{detail:nu});
+  renderSbar();renderUpnext();
+  if(!S||!S.running)maybeStartNextQueued(5000);
+}
+async function emailMyReport(){
+  let email=LS.email();
+  if(!email){
+    email=prompt('Where should we send your report?');
+    if(!email||!email.includes('@')){if(email!=null)toast('Enter an email address');return;}
+    email=email.trim();
+    LS.setEmail(email);
+    analytics('unlock_email',{email});
+    apiPost('/api/lead',{email,url:S?S.url:'',source:'digest-button',run_id:S?S.runId:''},{retry:0}).catch(()=>{});
+  }
+  const tokens=LS.tokens();
+  if(!tokens.length){toast('No finished tests yet');return;}
+  analytics('digest',{detail:'pages='+tokens.length,email});
   try{
-    const r=await fetch(BACKEND+'/api/runs',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({url:u})});
-    const j=await r.json().catch(()=>({}));
-    if(!r.ok||!j.run_id)throw new Error(j.error||('HTTP '+r.status));
-    run_id=j.run_id; RUN_ID=run_id;
-  }catch(e){return fail("We couldn't start the test. Please try again in a moment.");}
-
-  // reading card
-  const rb=el('div','sec');
-  rb.innerHTML=`<div class="card fadeUp" id="rb">
-    <div class="small soft pulse" id="rb-wait">Reading your page…</div>
-    <div id="rb-body" class="hidden">
-      <div style="font-family:var(--serif);font-size:16.5px;line-height:1.45">Your page tells AI: <i id="rb-about"></i></div>
-      <div class="sec" id="rb-found"></div>
-      <div id="rb-missing" style="margin-top:6px"></div>
-      <div class="small soft" id="rb-next" style="margin-top:12px"></div>
-    </div></div>`;
-  F.appendChild(rb);
-
-  // question feed
-  const feed=el('div','sec hidden'); feed.id='feedsec';
-  feed.innerHTML=`<div class="small soft" id="feedhead">Asking AI real buyer questions about your page…</div>
-    <div class="card" style="margin-top:8px;padding:6px 16px"><div id="feedbox"></div></div>`;
-  F.appendChild(feed);
-
-  const es=new EventSource(BACKEND+'/api/runs/'+run_id+'/stream?url='+encodeURIComponent(u));
-  let doneFired=false;
-
-  es.addEventListener('readback',ev=>{
-    const d=JSON.parse(ev.data);
-    brand=d.brand||'';
-    $('#rb-wait').classList.add('hidden'); $('#rb-body').classList.remove('hidden'); $('#rb-body').classList.add('fadeUp');
-    $('#rb-about').textContent=d.about||'';
-    if(d.found&&d.found.length)$('#rb-found').innerHTML=`<span class="small soft">It can see: </span>`+d.found.map(x=>`<span class="chip win">${esc(x)}</span>`).join('');
-    if(d.missing&&d.missing.length)$('#rb-missing').innerHTML=`<span class="small soft">It can't find: </span>`+d.missing.map(x=>`<span class="chip loss">${esc(x)}</span>`).join('');
-    $('#rb-next').textContent='Writing 6 better versions of your title and description to test against…';
-    if(d.retrieval&&(d.retrieval.robots_blocked||d.retrieval.noindex)){
-      $('#flow').prepend(el('div','banner','Heads up — this page may be blocking AI from reading it at all. Fixing that comes first; the copy test below still shows what would win once AI can see it.'));
-    }
-    $('#st-score').textContent='reading…';
-    analytics('readback_shown');
-  });
-
-  es.addEventListener('questions',ev=>{
-    const d=JSON.parse(ev.data);
-    TOTAL_Q=d.total||42;
-    $('#rb-next').textContent='';
-    $('#feedsec').classList.remove('hidden');
-  });
-
-  es.addEventListener('quick_result',ev=>{
-    const d=JSON.parse(ev.data);
-    quickSeen++; if(d.you_won)quickWins++;
-    addFeedRow(d.question,d.you_won);
-    $('#st-score').textContent=`you: ${quickWins} of ${quickSeen}`;
-    setBar(4+(quickSeen/7)*16); // first ~20% of the bar
-  });
-
-  es.addEventListener('verdict_provisional',ev=>{
-    const d=JSON.parse(ev.data);
-    quickTotal=d.quick_total||7;
-    renderEarlyVerdict(7-(d.M||0));
-    analytics('verdict_shown');
-  });
-
-  es.addEventListener('question_result',ev=>{
-    const d=JSON.parse(ev.data);
-    doneCount=d.done; youCount=d.you_count; TOTAL_Q=d.total||TOTAL_Q;
-    addFeedRow(d.question,d.you_won);
-    $('#feedhead').textContent=`Testing all ${TOTAL_Q} questions — ${d.done} done, you've won ${d.you_count}`;
-    $('#st-score').textContent=`you: ${d.you_count} of ${d.done}`;
-    setBar(20+(d.done/TOTAL_Q)*78);
-  });
-
-  es.addEventListener('confirmed',ev=>{
-    doneFired=true; es.close();
-    try{RUN=JSON.parse(ev.data);}catch(e){return fail('The test finished but the result could not be read.');}
-    setBar(100);
-    analytics('run_confirmed',{score:RUN.Q_you});
-    buildDone(); window.scrollTo({top:0,behavior:'smooth'});
-  });
-
-  es.addEventListener('error',ev=>{
-    if(doneFired)return;
-    let msg=null; try{if(ev.data)msg=JSON.parse(ev.data).message||null;}catch(e){}
-    if(msg){doneFired=true;es.close();return fail(msg);}
-    if(es.readyState===2){es.close();fail('The connection dropped before the test finished. Please try again.');}
-  });
-}
-
-function addFeedRow(q,won){
-  const box=$('#feedbox'); if(!box||!q)return;
-  const r=el('div','qrow fadeUp',`<div class="qtext">“${esc(q)}”</div>
-    <div class="qres ${won?'win':'loss'}">${won?'✓ your page wins this one':'✗ your page loses this one'}</div>`);
-  box.appendChild(r); box.scrollTop=box.scrollHeight;
-}
-function setBar(p){$('#st-bar').style.width=Math.min(100,p)+'%';}
-
-/* ---- early verdict + capture (appears ~30-60s in, above the feed) ---- */
-function renderEarlyVerdict(lost){
-  if($('#early'))return;
-  const F=$('#flow');
-  const v=el('div','sec fadeUp'); v.id='early';
-  const line=lost===0
-    ?`Strong start — AI picked your page on all ${quickTotal} opening questions.`
-    :`AI skipped your page on <span class="bad">${lost} of the first ${quickTotal}</span> buyer questions.`;
-  v.innerHTML=`<div class="card">
-    <div class="vhead">${line}</div>
-    <div class="small soft" style="margin-top:6px">Now testing all ${TOTAL_Q} — about 2 more minutes.</div>
-    <div class="capture" style="margin-top:14px;border-width:1px" id="cap1">
-      <div class="cl">Get the full report + the improved page copy</div>
-      <div class="cs">We'll email it the moment the test finishes.</div>
-      <div class="row"><input class="fld" id="em1" type="email" placeholder="you@company.com"><button class="btn small" id="send1">Email me the report</button></div>
-      <label><input type="checkbox" id="alerts1"> Also alert me if an AI model update changes this score</label>
-    </div></div>`;
-  // insert above the feed
-  F.insertBefore(v,$('#feedsec'));
-  v.querySelector('#send1').addEventListener('click',()=>capture('#em1','#alerts1','#cap1'));
-  v.querySelector('#em1').addEventListener('keydown',e=>{if(e.key==='Enter')capture('#em1','#alerts1','#cap1');});
-}
-
-async function capture(emSel,alSel,boxSel){
-  const em=($(emSel).value||'').trim();
-  if(!em.includes('@')){toast('Enter an email address');return;}
-  try{
-    const r=await fetch(BACKEND+'/api/runs/'+RUN_ID+'/unlock',{method:'POST',headers:{'content-type':'application/json'},
-      body:JSON.stringify({email:em,model_alerts:!!($(alSel)&&$(alSel).checked)})});
-    const j=await r.json().catch(()=>({}));
-    if(!r.ok)throw new Error(j.error||('HTTP '+r.status));
-    EMAILED=em; analytics('unlock_email',{email:em});
-    if(j.versions&&RUN){j.versions.forEach(nv=>{const v=RUN.versions.find(x=>x.id===nv.id);if(v&&nv.assets)v.assets=nv.assets;});}
-    const box=$(boxSel); if(box)box.innerHTML=`<div class="captured">✓ We'll send it to ${esc(em)}.</div>`;
-    if(RUN)repaintAssets();
+    await apiPost('/api/digest',{email,result_tokens:tokens});
+    toast('On its way from metricusapp@gmail.com — check spam/Promotions');
   }catch(e){toast(String(e.message||e));}
 }
 
-/* ============================================================ DONE */
-function buildDone(){
-  const F=$('#flow'); F.innerHTML='';
-  $('#st-score').textContent=`you: ${RUN.Q_you} of ${RUN.Q_denominator||42}`;
-  const D=RUN.Q_denominator||42, L=D-RUN.Q_you;
+/* ============================================================ result archive */
+// Finished views move here (DOM + wiring intact) when the next test starts,
+// so earlier results stay readable mid-run via the session-bar chips.
+function activeCtx(){
+  if(VIEWING&&ARCHIVES[VIEWING])return ARCHIVES[VIEWING].ctx;
+  return CURRENT_CTX;
+}
+function archiveCurrent(){
+  if(!CURRENT_CTX||!CURRENT_CTX.run){CURRENT_CTX=null;return;}
+  const url=normUrl(CURRENT_CTX.run.url);
+  const F=$('#flow');
+  if(!F.firstChild){CURRENT_CTX=null;return;}
+  const an=F.querySelector('#autonext');if(an)an.remove();
+  const oldA=ARCHIVES[url];if(oldA&&oldA.el)oldA.el.remove();
+  const w=el('div','hidden');w.dataset.url=url;
+  while(F.firstChild)w.appendChild(F.firstChild);
+  $('#archive-host').appendChild(w);
+  ARCHIVES[url]={el:w,ctx:CURRENT_CTX};
+  CURRENT_CTX=null;
+}
+function showArchive(url){
+  const a=ARCHIVES[url];if(!a)return false;
+  VIEWING=url;
+  analytics('board',{detail:'view-archived:'+url});
+  $('#flow').classList.add('hidden');$('#upnext-slot').classList.add('hidden');
+  Object.values(ARCHIVES).forEach(x=>x.el.classList.add('hidden'));
+  const old=a.el.querySelector('.backstrip');if(old)old.remove();
+  const strip=el('div','banner gray backstrip sec');
+  strip.innerHTML=(S&&S.running)
+    ?`Earlier result — the current test keeps running in the background. <u style="cursor:pointer">Back to the live test</u>`
+    :`Earlier result. <u style="cursor:pointer">Back to the latest test</u>`;
+  strip.querySelector('u').addEventListener('click',showLive);
+  a.el.prepend(strip);
+  a.el.classList.remove('hidden');
+  renderSbar();
+  window.scrollTo({top:0,behavior:'smooth'});
+  return true;
+}
+function showLive(){
+  VIEWING=null;
+  Object.values(ARCHIVES).forEach(x=>x.el.classList.add('hidden'));
+  $('#flow').classList.remove('hidden');$('#upnext-slot').classList.remove('hidden');
+  renderSbar();
+}
+
+/* ============================================================ landing extras */
+function renderLanding(){
+  // queued chips (tap to start)
+  const qs=$('#queued-slot');qs.innerHTML='';
+  const q=LS.queue();
+  if(q.length){
+    const w=el('div','sec');
+    w.innerHTML=`<div class="small soft" style="margin-bottom:6px">Up next:</div>`;
+    const chips=el('div','upnext');const inner=el('div','chips');
+    q.forEach(x=>{
+      const c=el('button','sibchip',`<span class="p">${esc(stripUrl(x.url))}</span><span class="m">tap to start</span>`);
+      c.addEventListener('click',()=>startRun(x.url,{fromQueue:true}));
+      inner.appendChild(c);
+    });
+    chips.appendChild(inner);w.appendChild(chips);qs.appendChild(w);
+  }
+  // scoreboard
+  const sb=$('#scoreboard-slot');sb.innerHTML='';
+  const pages=LS.pages();
+  const rows=[];
+  for(const d in pages)for(const path in pages[d])rows.push({d,path,rec:pages[d][path]});
+  if(rows.length){
+    const w=el('div','scoreboard');
+    w.innerHTML=`<div class="small soft" style="margin-bottom:4px">Your pages:</div>`+rows.map(r=>
+      `<div class="sbrow"><span class="mono">${esc(r.path)} ${r.rec.q}/${r.rec.denom}</span><a href="${esc(TOOL_URL)}?url=${encodeURIComponent('https://'+r.d+(r.path==='/'?'':r.path))}"><u>Retest</u></a></div>`).join('');
+    sb.appendChild(w);
+  }
+}
+
+/* ============================================================ start / dedup */
+$('#test-btn').addEventListener('click',()=>startRun($('#url').value));
+$('#url').addEventListener('keydown',e=>{if(e.key==='Enter')startRun($('#url').value);});
+
+function startRun(raw,opts){
+  opts=opts||{};
+  const u=(raw||'').trim();
+  if(!u){toast('Paste a page URL first');$('#url').focus();return;}
+  const nu=normUrl(u);
+  if(S&&S.running){addToQueue(nu);toast('A test is already running — added to Up next');return;}
+  const last=LS.last();
+  if(!opts.force&&last&&normUrl(last.url)===nu&&(Date.now()-last.at)<24*3600*1000&&!opts.fromQueue){
+    const slot=$('#dedup-slot')||$('#flow');
+    const old=$('#dedup');if(old)old.remove();
+    const d=el('div','dedup');d.id='dedup';
+    d.innerHTML=`<span>Tested ${esc(ago(last.at))} — ${last.q}/${last.denom}. Retest?</span><button class="btn small">Retest</button>`;
+    d.querySelector('button').addEventListener('click',()=>{d.remove();startRun(u,{force:true});});
+    slot.appendChild(d);
+    return;
+  }
+  run(nu);
+}
+
+/* ============================================================ trace stages */
+function addStage(key,title){
+  const s=el('div','stage fadeUp');
+  s.innerHTML=`<div class="sthead"><span class="slot">${MARK_SVG(18)}</span><span class="sttitle">${esc(title)}</span><span class="stel"></span></div><div class="stbody"></div>`;
+  $('#flow').appendChild(s);
+  const st={key,root:s,body:s.querySelector('.stbody'),elapsed:s.querySelector('.stel'),t0:Date.now(),done:false};
+  s.querySelector('.mk').classList.add('on');
+  s.querySelector('.sthead').addEventListener('click',()=>{if(st.done){s.classList.toggle('open');analytics('board',{detail:'stage:'+key});}});
+  S.stages[key]=st;
+  return st;
+}
+function finishStage(st){
+  if(!st||st.done)return;
+  st.done=true;
+  st.elapsed.textContent=((Date.now()-st.t0)/1000).toFixed(1)+'s';
+  st.root.querySelector('.slot').innerHTML='<span class="tick">✓</span>';
+  st.root.classList.add('done');
+}
+function setBar(p){$('#st-bar').style.width=Math.min(100,p)+'%';}
+function marksOff(){document.querySelectorAll('.mk.on').forEach(m=>m.classList.remove('on'));}
+
+function fail(phase,msg){
+  analytics('fail',{phase,message:msg});
+  marksOff();
+  if(S)S.running=false;
+  renderSbar();
+  const s=el('div','sec');
+  s.innerHTML=`<div class="card"><div style="font-weight:600;color:var(--loss)">The test stopped</div>
+    <div style="margin-top:6px">${esc(msg)}</div>
+    <div class="rowbtns"><button class="btn small" onclick="location.href=location.pathname">Try another URL</button></div></div>`;
+  $('#flow').appendChild(s);
+  $('#st-score').textContent='';
+}
+
+/* ============================================================ the run */
+async function run(nu){
+  // keep the finished view readable in the archive, then reset the live pane
+  clearInterval(AUTONEXT_TIMER);
+  archiveCurrent();
+  showLive();
+  LS.setQueue(LS.queue().filter(x=>normUrl(x.url)!==normUrl(nu))); // starting it removes it from up next
+  S=newState(nu);RUN=null;
+  LOG_URL=nu;analytics('run_start',{url:nu});
+  $('#landing').classList.add('hidden');$('#run').classList.remove('hidden');
+  $('#flow').innerHTML='';$('#upnext-slot').innerHTML='';
+  $('#st-url').textContent=stripUrl(nu);$('#st-score').textContent='starting…';setBar(2);
+  $('#mark-status').innerHTML=MARK_SVG(18);$('#mark-status .mk').classList.add('on');
+  renderSbar();
+  window.scrollTo({top:0,behavior:'smooth'});
+
+  /* ---- stage 1: fetching page ---- */
+  const st1=addStage('fetch','Fetching page');
+  st1.body.innerHTML='<div class="small soft pulse" style="padding-top:2px">Requesting the page like an AI crawler would…</div>';
+  let sc;
+  try{sc=await apiPost('/api/scrape',{url:nu});}
+  catch(e){return fail('scrape',String(e.message||e));}
+  S.meta=sc.meta;S.retrieval=sc.retrieval;S.partial=!!sc.partial;S.brand=sc.brand||'';S.siblings=sc.siblings||[];
+  S.url=normUrl(sc.meta.url);
+  $('#st-url').textContent=stripUrl(S.url);
+  st1.body.innerHTML=`<div class="facts">
+    <span>title <b>${sc.meta.title?'found':'missing'}</b></span>
+    <span>AI access <b>${(sc.retrieval.robots_blocked||sc.retrieval.noindex)?'restricted':'open'}</b></span>
+    <span>fetch <b>${esc(String(sc.retrieval.fetch_ms))} ms</b></span>
+    <span>structured data <b>${sc.retrieval.jsonld_present?'yes':'none'}</b></span>
+  </div>`;
+  if(sc.retrieval&&(sc.retrieval.robots_blocked||sc.retrieval.noindex)){
+    $('#flow').prepend(el('div','banner','Heads up — this page may be blocking AI from reading it at all. Fixing that comes first; the copy test below still shows what would win once AI can see it.'));
+  }
+  finishStage(st1);setBar(8);
+  renderUpnext();
+
+  /* ---- stage 2: reading like an AI ---- */
+  const st2=addStage('read','Reading like an AI');
+  st2.body.innerHTML='<div class="small soft pulse" style="padding-top:2px">Reading your page…</div>';
+  $('#st-score').textContent='reading…';
+  let rb;
+  try{rb=await apiPost('/api/readback',{meta:S.meta});}
+  catch(e){return fail('readback',String(e.message||e));}
+  S.readback=rb;
+  st2.body.innerHTML=`<div style="font-family:var(--serif);font-size:16.5px;line-height:1.45;padding-top:2px">Your page tells AI: <i>${esc(rb.about||'')}</i></div>
+    ${rb.found&&rb.found.length?`<div class="sec"><span class="small soft">It can see: </span>${rb.found.map(x=>`<span class="chip win">${esc(x)}</span>`).join('')}</div>`:''}
+    ${rb.missing&&rb.missing.length?`<div style="margin-top:6px"><span class="small soft">It can't find: </span>${rb.missing.map(x=>`<span class="chip loss">${esc(x)}</span>`).join('')}</div>`:''}`;
+  analytics('readback_shown');
+  finishStage(st2);setBar(14);
+
+  /* ---- stage 3: drafting challengers ---- */
+  const st3=addStage('draft','Drafting 6 challengers');
+  st3.body.innerHTML='<div class="small soft pulse" style="padding-top:2px">Writing 6 better versions of your title and description to test against…</div>';
+  let prep;
+  try{prep=await apiPost('/api/prepare',{meta:S.meta,readback:S.readback,brand:S.brand});}
+  catch(e){return fail('prepare',String(e.message||e));}
+  S.runId=prep.run_id;S.stateToken=prep.state_token;S.versions=prep.versions;S.denom=prep.denom;
+  S.questions=[];
+  (prep.questions_by_moment||[]).forEach(m=>(m.questions||[]).forEach(q=>S.questions.push(q)));
+  st3.body.innerHTML=`<div style="padding-top:2px">${S.versions.filter(v=>v.id!=='YOU').map(v=>`<span class="chip neutral">${esc(v.angle)}</span>`).join('')}</div>
+    <div class="small soft" style="margin-top:6px">${S.denom} real buyer questions written across 7 moments.</div>`;
+  finishStage(st3);setBar(20);
+
+  /* ---- stage 4: opening round ---- */
+  const st4=addStage('opening','Opening round');
+  const byMoment={};S.questions.forEach(q=>{(byMoment[q.moment]=byMoment[q.moment]||[]).push(q);});
+  const openers=Object.values(byMoment).map(list=>list[0]).filter(Boolean);
+  st4.body.innerHTML='<div id="openrows"></div>';
+  const orows=$('#openrows');
+  openers.forEach(q=>{
+    orows.appendChild(el('div','qrow',`<div class="qtext" id="oq-${q.id}">“${esc(q.text)}”</div><div class="qres pend" id="or-${q.id}">· judging…</div>`));
+  });
+  const oResults=await judgeBatchSafe(openers);
+  if(oResults==='EXPIRED')return fail('judge',"This session expired — please rerun the test.");
+  oResults.forEach(r=>applyResult(r,{openerRow:true}));
+  const oJudged=openers.filter(q=>S.results[q.id]&&!S.results[q.id].voided);
+  const oWins=oJudged.filter(q=>S.results[q.id].winner==='YOU').length;
+  const oLost=oJudged.length-oWins;
+  finishStage(st4);setBar(30);
+
+  // early verdict + capture
+  const early=el('div','sec fadeUp');early.id='early';
+  const line=oLost===0
+    ?`Strong start — AI picked your page on all ${oJudged.length} opening questions.`
+    :`AI skipped your page on <span class="bad">${oLost} of the first ${oJudged.length}</span> buyer questions.`;
+  early.innerHTML=`<div class="card">
+    <div class="vhead">${line}</div>
+    <div class="small soft earlysub" style="margin-top:6px">Now testing all ${S.denom} — about 2 more minutes.</div>
+    ${LS.email()?'':`<div class="capture" style="margin-top:14px;border-width:1px" id="cap1">
+      <div class="cl">Get the full report + the improved page copy</div>
+      <div class="cs">We'll email it the moment the test finishes.</div>
+      <div class="row"><input class="fld" id="em1" type="email" placeholder="you@company.com"><button class="btn small" id="send1">Email me the report</button></div>
+    </div>`}</div>`;
+  $('#flow').appendChild(early);
+  if(!LS.email()){
+    const sub=()=>captureMidRun('#em1','#cap1');
+    early.querySelector('#send1').addEventListener('click',sub);
+    early.querySelector('#em1').addEventListener('keydown',e=>{if(e.key==='Enter')sub();});
+  }
+  analytics('verdict_shown',{score:oWins});
+
+  /* ---- stage 5: full test (round 1) ---- */
+  const st5=addStage('full','Full test');
+  buildBoard(st5.body,byMoment);
+  const remaining=S.questions.filter(q=>!S.results[q.id]);
+  const batches=[];for(let i=0;i<remaining.length;i+=BATCH_SIZE)batches.push(remaining.slice(i,i+BATCH_SIZE));
+  const expired=await runBatches(batches);
+  if(expired)return fail('judge',"This session expired — please rerun the test.");
+  await retryVoided();
+  const voided=S.questions.filter(q=>!S.results[q.id]||S.results[q.id].voided);
+  if(voided.length/S.questions.length>0.3){
+    const b=el('div','banner gray','Judging was unstable — treat this as a partial run. <u style="cursor:pointer">Rerun</u>');
+    st5.body.appendChild(b);
+    b.querySelector('u').addEventListener('click',()=>startRun(S.url,{force:true}));
+  }
+  finishStage(st5);setBar(97);
+  S.rounds.push(snapshotRound());
+
+  /* ---- evolution rounds: no challenger beat the page -> learn and redraft ---- */
+  const ROUNDS_MAX=Math.max(1,Math.min(5,parseInt(params.get('rounds'),10)||5));
+  while(S.rounds.length<ROUNDS_MAX){
+    const cur=S.rounds[S.rounds.length-1];
+    const youQ=cur.counts['YOU']||0;
+    const bestQ=Math.max(0,...S.versions.filter(v=>v.id!=='YOU').map(v=>cur.counts[v.id]||0));
+    if(bestQ>youQ)break; // a challenger won — stop evolving
+    const n=S.rounds.length+1;
+    const stR=addStage('round'+n,`Round ${n} — 6 new challengers`);
+    stR.body.innerHTML=`<div class="small soft pulse" style="padding-top:2px">None of the 6 beat your copy (best ${bestQ} vs your ${youQ}) — writing 6 new versions with what we learned…</div>`;
+    setEarlySub(`Your copy won round ${S.rounds.length} (${youQ} to the best challenger's ${bestQ}) — now testing round ${n} of rewrites.`);
+    let ev;
+    try{
+      ev=await apiPost('/api/evolve',{
+        state_token:cur.stateToken,readback:S.readback,round:n,
+        scores:{...cur.counts},
+        you_won_questions:S.questions.filter(q=>{const r=cur.results[q.id];return r&&!r.voided&&r.winner==='YOU';}).slice(0,10).map(q=>q.text),
+      });
+    }catch(e){finishStage(stR);break;} // evolution failed — keep the rounds we have
+    S.stateToken=ev.state_token;S.curRound=n;
+    S.results={};S.counts={};S.youCount=0;S.judgedCount=0;S.resolvedCount=0;
+    stR.body.innerHTML='';
+    buildBoard(stR.body,byMoment);
+    const b2=[];for(let i=0;i<S.questions.length;i+=BATCH_SIZE)b2.push(S.questions.slice(i,i+BATCH_SIZE));
+    const exp=await runBatches(b2);
+    if(exp)break; // session expired mid-evolution — certify what we have
+    await retryVoided();
+    finishStage(stR);
+    S.rounds.push(snapshotRound());
+  }
+
+  // certify the round where the best challenger got closest (or won)
+  const chosen=S.rounds.reduce((a,r)=>{
+    const by=Math.max(0,...S.versions.filter(v=>v.id!=='YOU').map(v=>r.counts[v.id]||0));
+    const margin=by-(r.counts['YOU']||0);
+    return (!a||margin>a.margin)?{r,margin}:a;
+  },null).r;
+  S.results=chosen.results;S.counts=chosen.counts;S.curRound=chosen.n;
+
+  /* ---- verdict ---- */
+  const st6=addStage('verdict','Verdict');
+  st6.body.innerHTML='<div class="small soft pulse" style="padding-top:2px">Confirming the result…</div>';
+  const email=LS.email()||null;
+  const send=!!(S.capturedThisRun&&email);
+  let fin;
+  try{
+    fin=await apiPost('/api/finish',{
+      state_token:chosen.stateToken,
+      results:S.questions.map(q=>{const r=chosen.results[q.id];return {id:q.id,text:q.text,moment:q.moment,moment_label:q.moment_label,moment_index:q.moment_index,
+        winner:r&&!r.voided?r.winner:null,winners_by_sample:r?r.winners_by_sample:[],voided:!r||r.voided};}),
+      siblings:S.siblings,readback:S.readback,judge_models:S.judgeModels,rounds:S.rounds.length,
+      email:email,send:send,
+    });
+  }catch(e){return fail('finish',String(e.message||e));}
+  RUN=fin.record;S.resultToken=fin.result_token;S.running=false;
+  finishStage(st6);setBar(100);marksOff();
+  analytics('run_confirmed',{score:RUN.Q_you});
+
+  LS.savePage(RUN.domain,RUN.path,{q:RUN.Q_you,denom:RUN.J,at:Date.now(),result_token:S.resultToken});
+  LS.setLast({url:S.url,at:Date.now(),q:RUN.Q_you,denom:RUN.J});
+  LS.setQueue(LS.queue().filter(x=>normUrl(x.url)!==S.url));
+
+  buildDone({sent:send});
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function setEarlySub(t){const e=document.querySelector('#early .earlysub');if(e)e.textContent=t;}
+async function retryVoided(){
+  const voided=S.questions.filter(q=>!S.results[q.id]||S.results[q.id].voided);
+  if(!voided.length)return;
+  const b=[];for(let i=0;i<voided.length;i+=BATCH_SIZE)b.push(voided.slice(i,i+BATCH_SIZE));
+  await runBatches(b);
+}
+function snapshotRound(){
+  return {n:S.curRound,stateToken:S.stateToken,results:S.results,counts:{...(S.counts||{})}};
+}
+
+/* ---- judge plumbing ---- *//* ---- judge plumbing ---- */
+async function judgeBatchSafe(qs){
+  try{
+    const j=await apiPost('/api/judge',{state_token:S.stateToken,questions:qs.map(q=>({id:q.id,text:q.text})),samples:SAMPLES});
+    Object.entries(j.judge_models||{}).forEach(([m,n])=>{S.judgeModels[m]=(S.judgeModels[m]||0)+n;});
+    return j.results||[];
+  }catch(e){
+    if(e.status===401)return 'EXPIRED';
+    return qs.map(q=>({id:q.id,winner:null,winners_by_sample:[],voided:true})); // batch lost -> skipped, retry round may recover
+  }
+}
+async function runBatches(batches){
+  let i=0,expired=false;
+  await Promise.all(Array.from({length:Math.min(CLIENT_CONCURRENCY,batches.length)},async()=>{
+    for(;;){
+      const k=i++;if(k>=batches.length||expired)return;
+      const res=await judgeBatchSafe(batches[k]);
+      if(res==='EXPIRED'){expired=true;return;}
+      res.forEach(r=>applyResult(r,{}));
+    }
+  }));
+  return expired;
+}
+function applyResult(r){
+  const q=S.questions.find(x=>x.id===r.id);if(!q)return;
+  const prev=S.results[q.id];
+  if(prev&&!prev.voided)return;
+  S.results[q.id]=r;
+  // live tally (per round)
+  S.youCount=0;S.judgedCount=0;const counts={};
+  S.questions.forEach(x=>{const rr=S.results[x.id];if(rr&&!rr.voided){S.judgedCount++;counts[rr.winner]=(counts[rr.winner]||0)+1;if(rr.winner==='YOU')S.youCount++;}});
+  S.counts=counts;
+  S.resolvedCount=S.questions.filter(x=>S.results[x.id]).length;
+  // rows
+  flipRow('#or-'+q.id,r);flipRow('#br-r'+S.curRound+'-'+q.id,r);
+  // header + bar
+  $('#st-score').textContent=`you: ${S.youCount} of ${S.judgedCount}`+(S.curRound>1?` · round ${S.curRound}`:'');
+  setBar(30+(S.resolvedCount/Math.max(1,S.questions.length))*67);
+  const fh=$('#fh-r'+S.curRound);if(fh)fh.textContent=`${S.curRound>1?'Round '+S.curRound+' — testing':'Testing'} all ${S.denom} questions — ${S.resolvedCount} done, you've won ${S.youCount}`;
+  updateStandings();
+}
+function flipRow(sel,r){
+  const n=$(sel);if(!n)return;
+  if(r.voided){n.className=n.className.replace(/pend|win|loss/g,'')+' skip';n.textContent='— couldn’t judge, skipped';return;}
+  const won=r.winner==='YOU';
+  n.className=n.className.replace(/pend|skip|win|loss/g,'')+(won?' win':' loss');
+  n.textContent=won?'✓ your page wins this one':'✗ goes to '+(r.winner_human||'another version');
+}
+function buildBoard(root,byMoment){
+  const n=S.curRound;
+  const wrap=el('div','');
+  wrap.innerHTML=`<div class="small soft" id="fh-r${n}" style="padding-top:2px">${n>1?'Round '+n+' — testing':'Testing'} all ${S.denom} questions…</div>`;
+  Object.values(byMoment).forEach(list=>{
+    if(!list.length)return;
+    wrap.appendChild(el('div','mgroup',esc(list[0].moment_label)));
+    list.forEach(q=>{
+      const r=S.results[q.id];
+      const row=el('div','qrow',`<div class="qtext">“${esc(q.text)}”</div><div class="qres pend" id="br-r${n}-${q.id}">· waiting</div>`);
+      wrap.appendChild(row);
+      if(r)setTimeout(()=>flipRow('#br-r'+n+'-'+q.id,r),0);
+    });
+  });
+  const stand=el('div','standings');
+  stand.innerHTML=`<div class="small soft" style="margin-bottom:2px">Live standings</div>`+S.versions.map(v=>{
+    const isYou=v.id==='YOU';
+    return `<div class="vrow"><span class="vname">${isYou?'<b>Your page today</b>':esc(capFirst(v.human||v.angle))}</span>
+      <span class="vbarw"><span class="vbar" id="vb-r${n}-${v.id}" style="width:0%;background:${isYou?'var(--ink)':'#B9B5AB'}"></span></span>
+      <span class="vct" id="vc-r${n}-${v.id}">0</span></div>`;
+  }).join('');
+  wrap.appendChild(stand);
+  root.appendChild(wrap);
+  updateStandings();
+}
+function updateStandings(){
+  if(!S.counts)return;
+  const n=S.curRound;
+  const max=Math.max(1,...Object.values(S.counts));
+  S.versions.forEach(v=>{
+    const b=$('#vb-r'+n+'-'+v.id),c=$('#vc-r'+n+'-'+v.id);if(!b)return;
+    const q=S.counts[v.id]||0;
+    b.style.width=(q/max*100)+'%';c.textContent=String(q);
+  });
+}
+const capFirst=s=>{s=String(s||'');return s.charAt(0).toUpperCase()+s.slice(1);};
+
+/* ---- captures ---- */
+function fireLead(email,source){
+  analytics('unlock_email',{email});
+  apiPost('/api/lead',{email,url:S?S.url:'',source,run_id:S?S.runId:''},{retry:0}).catch(()=>{});
+}
+function captureMidRun(emSel,boxSel){
+  const em=($(emSel).value||'').trim();
+  if(!em.includes('@')){toast('Enter an email address');return;}
+  LS.setEmail(em);S.capturedThisRun=true;
+  fireLead(em,'midrun'); // lead logged even if the run never finishes
+  const box=$(boxSel);if(box)box.innerHTML=`<div class="captured">✓ We'll send it to ${esc(em)} the moment the test finishes.</div>`;
+  renderSbar();
+}
+async function capturePostRun(ctx,box){
+  const em=(box.querySelector('.capmail').value||'').trim();
+  if(!em.includes('@')){toast('Enter an email address');return;}
+  LS.setEmail(em);
+  fireLead(em,'postrun');
+  try{
+    const j=await apiPost('/api/unlock',{result_token:ctx.token,email:em});
+    if(j.result_token){ctx.token=j.result_token;LS.savePage(ctx.domain,ctx.path,{q:ctx.run.Q_you,denom:ctx.run.J,at:Date.now(),result_token:ctx.token});}
+    applyUnlockedAssets(ctx.run,j.assets);
+    box.innerHTML=`<div class="captured">✓ On its way from metricusapp@gmail.com — check spam/Promotions.</div>`;
+    ctx.run.unlocked=true;
+    repaintCopyCard(ctx);
+    renderSbar();
+    if(ctx.copysec){const cc=ctx.copysec.querySelector('.copycard');if(cc)cc.scrollIntoView({behavior:'smooth',block:'center'});}
+  }catch(e){toast(String(e.message||e));}
+}
+function applyUnlockedAssets(run,assets){
+  if(!assets||!run)return;
+  (assets.versions||[]).forEach(nv=>{const v=run.versions.find(x=>x.id===nv.id);if(v&&nv.assets)v.assets=nv.assets;});
+  if(assets.money_shot)run.money_shot=assets.money_shot;
+}
+
+/* ============================================================ up-next card *//* ============================================================ up-next card */
+function renderUpnext(){
+  const slot=$('#upnext-slot');if(!slot||!S)return;
+  slot.innerHTML='';
+  if(!S.running||!S.meta)return;
+  const isRoot=(S.meta.path==='/'||S.meta.path==='');
+  const head=(isRoot&&S.siblings.length)
+    ?'Homepage entered — specific pages test sharper. Pick a page to test next:'
+    :'Up next — add another page while this one runs:';
+  const card=el('div','card sec upnext');card.id='upnext';
+  card.innerHTML=`<div style="font-weight:600;font-size:13.5px">${esc(head)}</div><div class="chips"></div>
+    <div class="addrow"><input class="fld mini" placeholder="yourdomain.com/another-page"><button class="btn small">Add</button></div>`;
+  const chips=card.querySelector('.chips');
+  const queued=LS.queue();
+  S.siblings.forEach(s=>{
+    const full=normUrl('https://'+S.meta.domain+s.path);
+    if(queued.some(x=>normUrl(x.url)===full))return;
+    const m=momentFor(s.path);
+    const c=el('button','sibchip',`<span class="p">${esc(s.path)}</span><span class="m">${m?esc(`Your ${s.path} faces the '${m}' questions — test it →`):'Test this page next'}</span>`);
+    c.addEventListener('click',()=>addToQueue(full));
+    chips.appendChild(c);
+  });
+  queued.forEach(x=>{
+    const c=el('span','pchip q',`${esc(pathOfUrl(x.url))} up next <span class="x">✕</span>`);
+    c.querySelector('.x').addEventListener('click',()=>{LS.setQueue(LS.queue().filter(y=>y.url!==x.url));renderSbar();renderUpnext();});
+    chips.appendChild(c);
+  });
+  const inp=card.querySelector('input');
+  const go=()=>{const v=(inp.value||'').trim();if(!v)return;addToQueue(v);inp.value='';};
+  card.querySelector('.addrow button').addEventListener('click',go);
+  inp.addEventListener('keydown',e=>{if(e.key==='Enter')go();});
+  slot.appendChild(card);
+}
+
+/* ============================================================ DONE view */
+function buildDone(opts){
+  opts=opts||{};
+  const F=$('#flow');F.innerHTML='';$('#upnext-slot').innerHTML='';
+  const ctx={run:RUN,url:S.url,token:S.resultToken,domain:RUN.domain,path:RUN.path,
+    questions:S.questions,results:S.results,copysec:null};
+  CURRENT_CTX=ctx;
+  renderSbar();
+  const J=RUN.J,V=RUN.voided||0;
+  $('#st-score').textContent=`you: ${RUN.Q_you} of ${J}`;
 
   // 1) verdict
   const v=el('div','sec');
   const ms=RUN.money_shot;
+  const beaten=RUN.Q_best>RUN.Q_you;
   v.innerHTML=`<div class="card">
-    <span class="bigscore">${RUN.Q_you}<span class="of"> / ${D}</span></span><span class="gradechip">grade ${esc(RUN.grade.confirmed)}</span>
-    <div class="small soft" style="margin-top:2px">buyer questions where AI picks your page</div>
-    <div class="vhead" style="margin-top:10px">${L===0?'AI picks your page on every question we asked. Rare.':'On the other <span class="bad">'+L+' questions</span>, AI recommends someone else.'}</div>
-    ${ms?moneyHtml(ms):''}
+    <span class="bigscore">${RUN.Q_you}<span class="of"> / ${J}</span></span><span class="gradechip">grade ${esc(RUN.grade)}</span>${(RUN.samples>1&&RUN.variance!=null)?`<span class="gradechip">±${RUN.variance} across ${RUN.samples} runs</span>`:''}
+    <div class="small soft" style="margin-top:2px">judged buyer questions where AI picks your page${V?` (${V} skipped)`:''}</div>
+    <div class="vhead" style="margin-top:10px">Your current copy won ${RUN.Q_you} of ${J} judged questions. The best rewrite of your page won <span style="color:var(--win)">${RUN.Q_best} of ${J}</span> — same facts, different framing.</div>
+    ${(RUN.rounds||1)>1?`<div class="small soft" style="margin-top:6px">${beaten?`It took ${RUN.rounds} rounds of rewrites to find copy that beats your page.`:`Your copy held off ${RUN.rounds} rounds of challengers — ${RUN.rounds*6} rewrites couldn't beat it.`}</div>`:''}
+    ${V?`<div class="small soft" style="margin-top:6px">${V} questions couldn't be judged and were skipped, not counted against you.</div>`:''}
+    ${ms?moneyHtml(ms,ctx):''}
   </div>`;
   F.appendChild(v);
 
-  // 2) capture (if not yet)
-  if(!EMAILED){
-    const c=el('div','capture'); c.id='cap2';
+  // next lined-up page: visible countdown, Start now / Cancel
+  maybeStartNextQueued();
+
+  // 2) capture box (only if no stored email)
+  if(!LS.email()){
+    const c=el('div','capture');
     c.innerHTML=`<div class="cl">Get the full report + the improved page copy</div>
       <div class="cs">Free — sent straight to your inbox. The copy also appears below.</div>
-      <div class="row"><input class="fld" id="em2" type="email" placeholder="you@company.com"><button class="btn small" id="send2">Send it to me</button></div>
-      <label><input type="checkbox" id="alerts2"> Also alert me if an AI model update changes this score</label>`;
+      <div class="row"><input class="fld capmail" type="email" placeholder="you@company.com"><button class="btn small capsend">Send it to me</button></div>`;
     F.appendChild(c);
-    c.querySelector('#send2').addEventListener('click',()=>capture('#em2','#alerts2','#cap2'));
-    c.querySelector('#em2').addEventListener('keydown',e=>{if(e.key==='Enter')capture('#em2','#alerts2','#cap2');});
+    c.querySelector('.capsend').addEventListener('click',()=>capturePostRun(ctx,c));
+    c.querySelector('.capmail').addEventListener('keydown',e=>{if(e.key==='Enter')capturePostRun(ctx,c);});
+  }else if(opts.sent){
+    F.appendChild(el('div','captured sec','✓ On its way from metricusapp@gmail.com — check spam/Promotions.'));
+  }else{
+    const c=el('div','sec');
+    c.innerHTML=`<div class="captured" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">✓ Added to your report — <button class="sbtn digestbtn">Email my report (${LS.tokens().length})</button></div>`;
+    F.appendChild(c);
+    c.querySelector('.digestbtn').addEventListener('click',emailMyReport);
   }
 
-  // 3) improved copy
-  F.appendChild(improvedCopy());
+  // 3) winning copy
+  ctx.copysec=improvedCopy(ctx);
+  F.appendChild(ctx.copysec);
 
-  // 4) all questions
-  F.appendChild(allQuestions());
+  // 4) next pages
+  const kg=keepGoing(ctx);
+  if(kg)F.appendChild(kg);
 
-  // 5) all versions
-  F.appendChild(allVersions());
+  // 5) details
+  F.appendChild(allQuestions(ctx));
+  F.appendChild(allVersions(ctx));
 
-  // 6) competitor
-  const comp=el('div','sec');
-  comp.innerHTML=`<div class="card"><div style="font-weight:600">Compare against a competitor</div>
-    <div class="small soft" style="margin-top:3px">Their page enters the same ${D}-question test.</div>
-    <div style="display:flex;gap:8px;margin-top:10px"><input class="fld" id="rival" placeholder="competitor.com/page"><button class="btn small" id="addcomp">Add</button></div></div>`;
-  F.appendChild(comp);
-  comp.querySelector('#addcomp').addEventListener('click',async()=>{
-    const rv=(comp.querySelector('#rival').value||'').trim();
-    if(!rv){toast('Enter a competitor URL');return;}
-    analytics('competitor_added',{competitor:rv});
-    try{await fetch(BACKEND+'/api/runs/'+RUN_ID+'/competitor',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({url:rv})});}catch(e){}
-    toast('Queued — '+rv+' joins the test');
-  });
+  // 6) methodology + footer
+  F.appendChild(methodology(ctx));
+  const d=new Date(RUN.finished_at||RUN.created_at);
+  F.appendChild(el('div','foot',
+    `Tested ${d.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'})} · ${J} judged questions, ${RUN.samples||3} runs each`));
 
-  // footer + bridge
-  const d=new Date(RUN.created_at);
-  const foot=el('div','foot',
-    `Tested ${d.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'})} · ${D} questions, ${RUN.samples||3} runs each · <a onclick="analytics('method_click')"><u>how this works</u></a><br>
-     <a onclick="location.href=location.pathname"><u>Test another page ↺</u></a>`);
-  F.appendChild(foot);
-
+  // 7) bridge
   const br=el('div','bridge');
-  br.innerHTML=`<div class="bq">This was one page. The Metricus Snapshot covers your whole brand.</div>
+  br.innerHTML=`<div class="bq">The Metricus Snapshot covers your whole brand.</div>
     <p>A one-time audit of how AI answers 200+ buyer questions about your business — with every fix done for you. Delivered in 24 hours.</p>
-    <button class="btn ghost" onclick="analytics('bridge_click')">Get the full audit — $499 →</button>`;
+    <a class="btn ghost" style="display:inline-block;text-decoration:none" href="https://calendar.app.google/CymBeaq6XGGQN7yp8" target="_blank" rel="noopener" onclick="analytics('bridge_click')">Get the full audit — $499 →</a>`;
   F.appendChild(br);
 }
 
-function moneyHtml(ms){
+function maybeStartNextQueued(delay){
+  clearInterval(AUTONEXT_TIMER);
+  const q=LS.queue();
+  if(!q.length)return;
+  const next=q[0];
+  const old=$('#autonext');if(old)old.remove();
+  const bar=el('div','autonext fadeUp');bar.id='autonext';
+  let secs=Math.max(0,Math.round((delay==null?10000:delay)/1000));
+  bar.innerHTML=`<span>Up next: <b class="mono" style="font-size:12px">${esc(stripUrl(next.url))}</b> — <span id="an-t">starting in ${secs}s</span></span>
+    <span style="display:flex;gap:6px;flex:0 0 auto"><button class="btn small" id="an-go">Start now</button><button class="btn small ghost" id="an-stop">Cancel</button></span>`;
+  const F=$('#flow');F.insertBefore(bar,F.firstChild?F.firstChild.nextSibling:null);
+  const go=()=>{
+    clearInterval(AUTONEXT_TIMER);
+    LS.setQueue(LS.queue().filter(x=>x.url!==next.url));
+    startRun(next.url,{fromQueue:true});
+  };
+  bar.querySelector('#an-go').addEventListener('click',go);
+  bar.querySelector('#an-stop').addEventListener('click',()=>{clearInterval(AUTONEXT_TIMER);bar.remove();});
+  if(secs<=0)return go();
+  AUTONEXT_TIMER=setInterval(()=>{
+    secs--;
+    const t=$('#an-t');
+    if(secs<=0)go();
+    else if(t)t.textContent='starting in '+secs+'s';
+  },1000);
+}
+
+function moneyHtml(ms,ctx){
   let now=esc(ms.now);
   if(ms.absent_clause){const ac=esc(ms.absent_clause);now=now.replace(ac,'<span class="miss">'+ac+'</span>');}
   let rw=esc(ms.with_rewrite);
-  if(brand||RUN.brand){const b=esc(RUN.brand||brand);rw=rw.replace(b,'<b>'+b+'</b>');}
+  const b=esc(ctx.run.brand||'');
+  if(b)rw=rw.replace(b,'<b>'+b+'</b>');
   return `<div class="money">
     <div class="small soft" style="margin-bottom:6px">Here's one you're losing:</div>
     <div class="mq">“${esc(ms.question)}”</div>
@@ -439,130 +1010,142 @@ function moneyHtml(ms){
   </div>`;
 }
 
-/* ---- improved copy section ---- */
-function improvedCopy(){
-  const sec=el('div','sec'); sec.id='copysec';
-  const w=RUN.versions.find(v=>v.id===RUN.best_challenger.id), you=RUN.versions.find(v=>v.id==='YOU');
-  const locked=!EMAILED;
+/* ---- winning copy (per-row gating: title free, meta+h1 locked) ---- */
+function bestChallenger(run){
+  return run.versions.filter(x=>x.id!=='YOU').sort((a,b)=>b.Q-a.Q)[0];
+}
+function improvedCopy(ctx){
+  const r=ctx.run;
+  const sec=el('div','sec');
+  const w=bestChallenger(r),you=r.versions.find(x=>x.id==='YOU');
+  const locked=!hasAssets(w);
+  // stand-in text rendered only underneath the blur — real values stay server-sealed until unlock
+  const STANDIN={title:'A title rewritten to win the questions your page loses',meta:'A rewritten description that answers the buyer questions your page currently loses — same facts, reframed to win.',h1:'A headline rewritten to win the questions above'};
   const rows=[['Title','title'],['Description','meta'],['Headline','h1']].map(([lbl,k])=>{
-    const cur=you.assets?you.assets[k]:null, win=(w&&w.assets)?w.assets[k]:null;
-    return `<div class="arow"><div class="atop"><span>${lbl}</span><button class="copybtn" data-copy="${esc(win||'')}">copy</button></div>
+    const cur=you.assets?you.assets[k]:null;
+    let win=(w&&w.assets)?w.assets[k]:null;
+    if(locked&&win==null)win=STANDIN[k];
+    return `<div class="arow"><div class="atop"><span>${lbl}</span>${(win!=null&&!locked)?`<button class="copybtn" data-copy="${esc(win)}">copy</button>`:''}</div>
       ${cur?`<div class="cur">${esc(cur)}</div>`:`<div class="cur missing">— your page has none</div>`}
-      <div class="winv">${win?esc(win):'<span style="opacity:.5">…</span>'}</div></div>`;
+      <div class="winv">${win!=null?esc(win):'<span style="opacity:.5">…</span>'}</div>
+    </div>`;
   }).join('');
-  sec.innerHTML=`<div class="card ${locked?'locked':''}" id="copycard">
-    <div style="font-weight:600">The version that won</div>
-    <div class="small soft" style="margin-top:3px">We wrote 6 versions of your title and description and tested every one. ${esc(RUN.best_challenger.human||'This one')} beat your current page — paste it in and you're done.</div>
-    <div class="assets" style="margin-top:10px" ${locked?'aria-hidden="true"':''}>${rows}</div>
-    ${locked?'':shipRowHtml()}
+  sec.innerHTML=`<div class="card copycard${locked?' locked':''}">
+    <div style="font-weight:600">${w&&w.Q>r.Q_you?'The version that won':'The strongest challenger'}</div>
+    <div class="small soft" style="margin-top:3px">We wrote ${(r.rounds||1)>1?(r.rounds*6)+' versions across '+r.rounds+' rounds':'6 versions'} of your title and description and tested every one. ${w&&w.Q>r.Q_you?esc(capFirst((w&&w.human)||'this one'))+' beat your current page — paste it in and you\'re done.':esc(capFirst((w&&w.human)||'this one'))+' came closest to your current copy — steal what works from it.'}</div>
+    <div class="assets" style="margin-top:10px"${locked?' aria-hidden="true"':''}>${rows}</div>
+    ${locked?`<div class="small soft" style="margin-top:8px">Blurred until we can send it to you — enter your email above and it unlocks here too.</div>`:''}
+    <div class="rowbtns">
+      ${(!locked&&hasAssets(w))?'<button class="btn small copyall">Copy all as HTML</button>':''}
+      <a class="btn small ghost remindcal" style="text-decoration:none" target="_blank" rel="noopener" href="${esc(calendarUrl(ctx))}">Remind me in 2 weeks</a>
+    </div>
   </div>`;
-  if(!locked)wireCopy(sec);
+  wireCopy(sec,ctx);
   return sec;
 }
-function shipRowHtml(){
-  return `<div class="rowbtns"><button class="btn small" id="copyall">Copy all as HTML</button></div>
-  <button class="btn full" id="ship" style="margin-top:12px">I've updated my page → retest in 14 days and email me the difference</button>`;
+function hasAssets(v){return !!(v&&v.assets&&v.assets.title!=null&&v.assets.meta!=null);}
+function repaintCopyCard(ctx){
+  if(!ctx.copysec)return;
+  const fresh=improvedCopy(ctx);
+  ctx.copysec.replaceWith(fresh);
+  ctx.copysec=fresh;
+  const cc=fresh.querySelector('.copycard');if(cc)cc.classList.add('flash');
 }
-function repaintAssets(){
-  const old=$('#copysec'); if(!old)return;
-  const fresh=improvedCopy(); old.replaceWith(fresh);
-}
-function wireCopy(sec){
+function wireCopy(sec,ctx){
   sec.querySelectorAll('.copybtn').forEach(b=>b.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(b.dataset.copy);analytics('copy_click');toast('Copied');}));
-  const w=RUN.versions.find(v=>v.id===RUN.best_challenger.id);
-  const ca=sec.querySelector('#copyall');
+  const w=bestChallenger(ctx.run);
+  const ca=sec.querySelector('.copyall');
   if(ca)ca.addEventListener('click',()=>{
     const html=`<title>${w.assets.title}</title>\n<meta name="description" content="${w.assets.meta}">\n<h1>${w.assets.h1||''}</h1>`;
     navigator.clipboard&&navigator.clipboard.writeText(html);analytics('copy_click');toast('Copied as HTML');
   });
-  const sh=sec.querySelector('#ship');
-  if(sh)sh.addEventListener('click',async function(){
-    analytics('ship_click');
-    let retest=null;
-    try{const r=await fetch(BACKEND+'/api/runs/'+RUN_ID+'/ship',{method:'POST'});const j=await r.json().catch(()=>({}));retest=j.retest_at;}catch(e){}
-    if(!retest)retest=new Date(Date.now()+14*864e5).toISOString().slice(0,10);
-    this.outerHTML=`<div class="shipdone">✓ Retest booked for ${esc(new Date(retest).toLocaleDateString('en-GB',{day:'2-digit',month:'short'}))} — we'll email your before/after.</div>`;
-  });
+  const rc=sec.querySelector('.remindcal');
+  if(rc)rc.addEventListener('click',()=>analytics('ship_click'));
+}
+function calendarUrl(ctx){
+  const fmt=t=>new Date(t).toISOString().slice(0,10).replace(/-/g,'');
+  const d1=fmt(Date.now()+14*864e5),d2=fmt(Date.now()+15*864e5);
+  return 'https://calendar.google.com/calendar/render?action=TEMPLATE'
+    +'&text='+encodeURIComponent(`Retest ${ctx.domain} on Metricus`)
+    +'&dates='+d1+'/'+d2
+    +'&details='+encodeURIComponent(TOOL_URL+'?url='+encodeURIComponent(ctx.run.url));
+}
+
+/* ---- next pages ---- */
+function keepGoing(ctx){
+  const r=ctx.run;
+  if(!(r.siblings||[]).length)return null;
+  const sec=el('div','sec');
+  const sibs=r.siblings.map(s=>{
+    const m=momentFor(s.path);
+    return `<button class="sibchip" data-u="${esc(normUrl('https://'+r.domain+s.path))}"><span class="p">${esc(s.path)}</span><span class="m">${m?esc(`Your ${s.path} faces the '${m}' questions — test it →`):'Test this page next'}</span></button>`;
+  }).join('');
+  sec.innerHTML=`<div class="card"><div style="font-weight:600">Test your next page</div>
+    <div class="small soft" style="margin-top:3px">Other pages AI gets asked about:</div>
+    <div class="upnext"><div class="chips">${sibs}</div></div></div>`;
+  sec.querySelectorAll('.sibchip').forEach(c=>c.addEventListener('click',()=>startRun(c.dataset.u,{})));
+  return sec;
 }
 
 /* ---- disclosures ---- */
-function humanOf(id){if(id==='YOU')return 'your page';const v=RUN.versions.find(x=>x.id===id);return v?(v.human||v.angle||id):'another version';}
-function allQuestions(){
+function humanOf(id,run){if(id==='YOU')return 'your page';const v=run.versions.find(x=>x.id===id);return v?(v.human||v.angle||id):'another version';}
+function allQuestions(ctx){
   const d=el('details');
-  const D=RUN.Q_denominator||42;
-  const inner=RUN.moments.map(m=>{
-    const qs=(m.questions||[]).map(q=>{
-      const won=q.winner==='YOU';
+  const byMoment={};
+  ctx.questions.forEach(q=>{(byMoment[q.moment_label]=byMoment[q.moment_label]||[]).push(q);});
+  const inner=Object.entries(byMoment).map(([label,qs])=>{
+    const rows=qs.map(q=>{
+      const r=ctx.results[q.id];
+      if(!r||r.voided)return `<div class="qrow"><div class="qtext">“${esc(q.text)}”</div><div class="qres skip">— couldn't judge, skipped</div></div>`;
+      const won=r.winner==='YOU';
       return `<div class="qrow"><div class="qtext">“${esc(q.text)}”</div>
-        <div class="qres ${won?'win':'loss'}">${won?'✓ your page wins':'✗ goes to '+esc(humanOf(q.winner))}</div></div>`;
+        <div class="qres ${won?'win':'loss'}">${won?'✓ your page wins':'✗ goes to '+esc(humanOf(r.winner,ctx.run))}</div></div>`;
     }).join('');
-    return `<div class="mgroup">${esc(m.label)}</div>${qs}`;
+    return `<div class="mgroup">${esc(label)}</div>${rows}`;
   }).join('');
-  d.innerHTML=`<summary>All ${D} questions</summary><div class="inner">${inner}</div>`;
+  d.innerHTML=`<summary>All ${ctx.questions.length} questions</summary><div class="inner">${inner}</div>`;
+  d.addEventListener('toggle',()=>{if(d.open)analytics('board',{detail:'questions'});});
   return d;
 }
-function allVersions(){
+function allVersions(ctx){
   const d=el('details');
-  const D=RUN.Q_denominator||42;
-  const ranked=[...RUN.versions].sort((a,b)=>b.Q-a.Q);
+  const r=ctx.run;
+  const J=r.J;
+  const ranked=[...r.versions].sort((a,b)=>b.Q-a.Q);
   const maxQ=Math.max(1,ranked[0].Q);
+  const best=bestChallenger(r);
   const rows=ranked.map(v=>{
     const isYou=v.id==='YOU';
-    const color=isYou?'var(--ink)':(v.id===RUN.best_challenger.id?'var(--win)':'#B9B5AB');
-    return `<div class="vrow"><span class="vname">${isYou?'<b>Your page today</b>':esc(cap(v.human||v.angle))}</span>
+    const color=isYou?'var(--ink)':(best&&v.id===best.id?'var(--win)':'#B9B5AB');
+    return `<div class="vrow"><span class="vname">${isYou?'<b>Your page today</b>':esc(capFirst(v.human||v.angle))}</span>
       <span class="vbarw"><span class="vbar" style="width:${v.Q/maxQ*100}%;background:${color}"></span></span>
-      <span class="vct">${v.Q}/${D}</span></div>`;
+      <span class="vct">${v.Q}/${J}</span></div>`;
   }).join('');
-  d.innerHTML=`<summary>All 6 versions we tested</summary><div class="inner" style="padding-top:6px">${rows}</div>`;
+  d.innerHTML=`<summary>All 6 ${(r.rounds||1)>1?'final-round ':''}versions we tested</summary><div class="inner" style="padding-top:6px">${rows}</div>`;
+  d.addEventListener('toggle',()=>{if(d.open)analytics('board',{detail:'versions'});});
   return d;
 }
-const cap=s=>{s=String(s||'');return s.charAt(0).toUpperCase()+s.slice(1);};
-
-/* ---- share card ---- */
-function drawShare(cv,D){
-  const ctx=cv.getContext('2d');
-  ctx.fillStyle='#141414';ctx.fillRect(0,0,1200,627);
-  ctx.fillStyle='#FAFAF7';
-  ctx.font='600 190px Newsreader, Georgia, serif';ctx.textBaseline='alphabetic';
-  const scoreTxt=`${RUN.Q_you}`;
-  ctx.fillText(scoreTxt,64,270);
-  const wScore=ctx.measureText(scoreTxt).width;
-  ctx.font='400 64px Newsreader, Georgia, serif';ctx.globalAlpha=.6;
-  ctx.fillText(' / '+D,64+wScore+8,270);ctx.globalAlpha=1;
-  ctx.font='400 40px Newsreader, Georgia, serif';
-  wrap(ctx,`buyer questions where AI picks this page`,64,340,1000,50);
-  ctx.globalAlpha=.75;ctx.font='400 22px "IBM Plex Mono", monospace';
-  ctx.fillText(stripUrl(RUN.url),64,420);ctx.globalAlpha=1;
-  if(RUN.money_shot){ctx.globalAlpha=.85;ctx.font='italic 400 26px Newsreader, Georgia, serif';
-    wrap(ctx,`"${RUN.money_shot.question}"`,64,485,1060,34);ctx.globalAlpha=1;}
-  ctx.globalAlpha=.6;ctx.font='400 17px "IBM Plex Mono", monospace';
-  ctx.fillText('metricusapp.com — test yours free',64,575);ctx.globalAlpha=1;
-}
-function wrap(ctx,text,x,y,maxW,lh){const words=String(text).split(' ');let line='',yy=y;for(const w of words){const t=line+w+' ';if(ctx.measureText(t).width>maxW&&line){ctx.fillText(line,x,yy);line=w+' ';yy+=lh;}else line=t;}ctx.fillText(line,x,yy);}
-
-/* ---- errors ---- */
-function fail(msg){
-  const F=$('#flow');
-  const s=el('div','sec');
-  s.innerHTML=`<div class="card"><div style="font-weight:600;color:var(--loss)">The test stopped</div>
-    <div style="margin-top:6px">${esc(msg)}</div>
-    <div class="rowbtns"><button class="btn small" onclick="location.href=location.pathname">Try another URL</button></div></div>`;
-  F.appendChild(s);
-  $('#st-score').textContent='';
+function methodology(ctx){
+  const r=ctx.run;
+  const d=el('details');
+  d.innerHTML=`<summary>How this works</summary><div class="inner small" style="line-height:1.7">
+    Every question is judged blind: the 7 versions are shown to the judge as anonymous sources in a <b>randomized order</b>, and the order is <b>counterbalance-rotated on every sample</b> so no position gets an advantage.<br>
+    Each question is judged <b>${r.samples||3} independent times</b>; the winner is the version that takes the most samples.<br>
+    ${(r.rounds||1)>1?`When no rewrite beats the page, a fresh round of 6 challengers is drafted from what lost — this run went <b>${r.rounds} rounds</b>.<br>`:''}
+    Judge model this run: <span class="mono">${esc(r.judge_model||r.judge_label||'')}</span> (pinned label <span class="mono">${esc(r.judge_label||'')}</span>).<br>
+    Questions the judge can't rank cleanly are <b>skipped, never counted as losses</b> — your score is out of judged questions only${r.voided?` (${r.voided} skipped this run)`:''}.
+  </div>`;
+  d.addEventListener('toggle',()=>{if(d.open)analytics('method_click');});
+  return d;
 }
 
-/* ---- restore + autostart ---- */
+/* ---- boot: queue pruning, landing extras, autostart ---- *//* ---- boot: landing extras, autostart ---- */
+try{localStorage.removeItem('mf_queue');}catch(e){} // old persistent up-next list — cleared
+renderLanding();
 const params=new URLSearchParams(location.search);
-if(params.get('r')){
-  RUN_ID=params.get('r');
-  fetch(BACKEND+'/api/runs/'+encodeURIComponent(RUN_ID)).then(r=>r.json()).then(rec=>{
-    if(rec&&rec.versions){RUN=rec;EMAILED=!!(rec.flags&&rec.flags.unlocked);brand=rec.brand||'';
-      $('#landing').classList.add('hidden');$('#run').classList.remove('hidden');
-      $('#st-url').textContent=stripUrl(rec.url);setBar(100);buildDone();}
-  }).catch(()=>{});
-}else if(params.get('url')){
+if(params.get('url')){
   $('#url').value=params.get('url');
-  start(params.get('url'));
+  startRun(params.get('url'));
 }
 </script>
 </body>
