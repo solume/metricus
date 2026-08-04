@@ -106,34 +106,45 @@
   #sbar-addrow{display:flex;gap:6px;width:100%;margin-top:2px}
   #sbar-addrow input{flex:1}
 
-  /* trace stages */
-  .stage{background:var(--surface);border:1px solid var(--rule);border-radius:3px;margin-top:14px}
-  .sthead{display:flex;align-items:center;gap:9px;padding:11px 14px;cursor:default;user-select:none}
+  /* trace: one compact container, slim rows, scrollable stage bodies */
+  .trace{background:var(--surface);border:1px solid var(--rule);border-radius:3px;margin-top:14px}
+  .stage{border-top:1px solid var(--rule-soft)}
+  .stage:first-child{border-top:0}
+  .sthead{display:flex;align-items:center;gap:8px;padding:8px 12px;cursor:default;user-select:none;min-height:34px}
   .stage.done .sthead{cursor:pointer}
-  .sthead .slot{width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 18px}
-  .sthead .tick{color:var(--win);font-size:14px}
-  .sttitle{font-weight:600;font-size:13.5px;flex:1}
-  .stel{font-family:var(--mono);font-size:11px;color:var(--annotation)}
-  .stbody{padding:0 14px 13px}
+  .sthead .slot{width:15px;height:15px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 15px}
+  .sthead .tick{color:var(--win);font-size:12px}
+  .sttitle{font-weight:600;font-size:12.5px;flex:1}
+  .stel{font-family:var(--mono);font-size:10.5px;color:var(--annotation)}
+  .stbody{padding:0 12px 10px;max-height:260px;overflow-y:auto;overscroll-behavior:contain}
   .stage.done .stbody{display:none}
   .stage.done.open .stbody{display:block}
-  .facts{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:12.5px;color:var(--annotation)}
+  .facts{display:flex;flex-wrap:wrap;gap:3px 10px;font-size:11.5px;color:var(--annotation)}
   .facts b{color:var(--ink);font-weight:600}
+  .dot{color:var(--annotation);font-size:9px;line-height:1}
+  /* serp list */
+  .serprow{display:flex;gap:8px;align-items:flex-start;padding:5px 0;border-top:1px solid var(--rule-soft);min-width:0}
+  .serprow:first-child{border-top:0}
+  .serprow img{width:14px;height:14px;margin-top:2px;flex:0 0 14px}
+  .serprow .sm{min-width:0;flex:1}
+  .serprow .t{font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+  .serprow .d{font-family:var(--mono);font-size:10.5px;color:var(--annotation)}
+  .serprow.picked .t{font-weight:600}
 
   /* question rows */
-  .qrow{padding:10px 0;border-top:1px solid var(--rule-soft)}
+  .qrow{padding:5px 0;border-top:1px solid var(--rule-soft)}
   .qrow:first-child{border-top:0}
-  .qtext{font-family:var(--serif);font-style:italic;font-size:14px;line-height:1.4}
-  .qres{font-size:12.5px;margin-top:3px}
+  .qtext{font-family:var(--serif);font-style:italic;font-size:12.5px;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .qres{font-size:11px;margin-top:1px}
   .qres.win{color:var(--win)} .qres.loss{color:var(--loss)} .qres.skip{color:var(--annotation)}
   .qres.pend{color:var(--annotation);opacity:.55}
 
   /* board */
-  .mgroup{font-size:12px;color:var(--annotation);margin:12px 0 2px;text-transform:capitalize}
-  .standings{margin-top:14px;border-top:1px solid var(--rule-soft);padding-top:8px}
-  .vrow{display:flex;align-items:center;gap:10px;padding:6px 0;border-top:1px solid var(--rule-soft)}
+  .mgroup{font-size:10.5px;color:var(--annotation);margin:8px 0 0;text-transform:capitalize;letter-spacing:.04em}
+  .standings{margin-top:10px;border-top:1px solid var(--rule-soft);padding-top:6px}
+  .vrow{display:flex;align-items:center;gap:10px;padding:4px 0;border-top:1px solid var(--rule-soft)}
   .vrow:first-child{border-top:0}
-  .vname{flex:1;font-size:13px}
+  .vname{flex:1;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .vbarw{flex:1.2;height:5px;background:var(--rule-soft);border-radius:2px;overflow:hidden}
   .vbar{display:block;height:100%;border-radius:2px;transition:width .3s}
   .vct{font-family:var(--mono);font-size:12px;width:46px;text-align:right}
@@ -515,12 +526,15 @@ function startRun(raw,opts){
 }
 
 /* ============================================================ trace stages */
-function addStage(key,title){
-  const s=el('div','stage fadeUp');
-  s.innerHTML=`<div class="sthead"><span class="slot">${MARK_SVG(18)}</span><span class="sttitle">${esc(title)}</span><span class="stel"></span></div><div class="stbody"></div>`;
-  $('#flow').appendChild(s);
+function addStage(key,title,opts){
+  opts=opts||{};
+  let tr=$('#trace');
+  if(!tr){tr=el('div','trace fadeUp');tr.id='trace';$('#flow').appendChild(tr);}
+  const s=el('div','stage');
+  s.innerHTML=`<div class="sthead"><span class="slot">${opts.bg?'<span class="dot pulse">●</span>':MARK_SVG(15)}</span><span class="sttitle">${esc(title)}</span><span class="stel"></span></div><div class="stbody"></div>`;
+  tr.appendChild(s);
   const st={key,root:s,body:s.querySelector('.stbody'),elapsed:s.querySelector('.stel'),t0:Date.now(),done:false};
-  s.querySelector('.mk').classList.add('on');
+  const mk=s.querySelector('.mk');if(mk)mk.classList.add('on');
   s.querySelector('.sthead').addEventListener('click',()=>{if(st.done){s.classList.toggle('open');analytics('board',{detail:'stage:'+key});}});
   S.stages[key]=st;
   return st;
@@ -612,6 +626,10 @@ async function run(nu){
     <div class="small soft" style="margin-top:6px">${S.denom} real buyer questions written across 7 moments.</div>`;
   finishStage(st3);setBar(20);
 
+  // real-SERP overlay: one live results page, pulled while judging runs
+  S.searchQuery=prep.search_query||null;
+  S.serpPromise=startSerp();
+
   /* ---- stage 4: opening round ---- */
   const st4=addStage('opening','Opening round');
   const byMoment={};S.questions.forEach(q=>{(byMoment[q.moment]=byMoment[q.moment]||[]).push(q);});
@@ -642,7 +660,8 @@ async function run(nu){
       <div class="cs">We'll email it the moment the test finishes.</div>
       <div class="row"><input class="fld" id="em1" type="email" placeholder="you@company.com"><button class="btn small" id="send1">Email me the report</button></div>
     </div>`}</div>`;
-  $('#flow').appendChild(early);
+  const trEl=$('#trace');
+  if(trEl)$('#flow').insertBefore(early,trEl);else $('#flow').appendChild(early);
   if(!LS.email()){
     const sub=()=>captureMidRun('#em1','#cap1');
     early.querySelector('#send1').addEventListener('click',sub);
@@ -672,18 +691,32 @@ async function run(nu){
   while(S.rounds.length<ROUNDS_MAX){
     const cur=S.rounds[S.rounds.length-1];
     const youQ=cur.counts['YOU']||0;
-    const bestQ=Math.max(0,...S.versions.filter(v=>v.id!=='YOU').map(v=>cur.counts[v.id]||0));
-    if(bestQ>youQ)break; // a challenger won — stop evolving
+    let bestQ=0,bestId=null;
+    S.versions.filter(v=>v.id!=='YOU').forEach(v=>{const q=cur.counts[v.id]||0;if(q>bestQ){bestQ=q;bestId=v.id;}});
+    let reason=null;
+    if(bestQ>youQ){
+      // head-to-head winner — it must also get cited on the live results page (when we have one)
+      let checked=false,rank=null;
+      if(S.serpToken&&bestId){
+        try{const j=await apiPost('/api/serp-check',{state_token:cur.stateToken,serp_token:S.serpToken,version_id:bestId},{retry:0});if(j&&j.ok){checked=true;rank=j.rank==null?null:j.rank;if(j.serp_token)S.serpToken=j.serp_token;}}catch(e){}
+      }
+      if(checked)cur.serpRank=rank;
+      if(!checked||rank!=null)break; // no overlay -> head-to-head decides; cited -> full win
+      reason='serp';
+    }
     const n=S.rounds.length+1;
     const stR=addStage('round'+n,`Round ${n} — 6 new challengers`);
-    stR.body.innerHTML=`<div class="small soft pulse" style="padding-top:2px">None of the 6 beat your copy (best ${bestQ} vs your ${youQ}) — writing 6 new versions with what we learned…</div>`;
-    setEarlySub(`Your copy won round ${S.rounds.length} (${youQ} to the best challenger's ${bestQ}) — now testing round ${n} of rewrites.`);
+    stR.body.innerHTML=`<div class="small soft pulse" style="padding-top:2px">${reason==='serp'?`The head-to-head winner isn't cited on the live results page yet — writing copy that would be…`:`None of the 6 beat your copy (best ${bestQ} vs your ${youQ}) — writing 6 new versions with what we learned…`}</div>`;
+    setEarlySub(reason==='serp'?`Round ${S.rounds.length} beat your copy head-to-head but not on the live results page — testing round ${n}.`:`Your copy won round ${S.rounds.length} (${youQ} to the best challenger's ${bestQ}) — now testing round ${n} of rewrites.`);
     let ev;
     try{
       ev=await apiPost('/api/evolve',{
         state_token:cur.stateToken,readback:S.readback,round:n,
         scores:{...cur.counts},
         you_won_questions:S.questions.filter(q=>{const r=cur.results[q.id];return r&&!r.voided&&r.winner==='YOU';}).slice(0,10).map(q=>q.text),
+        serp:S.serp?{query:S.serp.query,cited:S.serp.results.filter(r=>(S.serp.picked||[]).includes(r.domain))}:undefined,
+        serp_token:S.serpToken||undefined,
+        reason:reason||undefined,
       });
     }catch(e){finishStage(stR);break;} // evolution failed — keep the rounds we have
     S.stateToken=ev.state_token;S.curRound=n;
@@ -698,15 +731,17 @@ async function run(nu){
     S.rounds.push(snapshotRound());
   }
 
-  // certify the round where the best challenger got closest (or won)
+  // certify: both-gates rounds first, then head-to-head wins, then closest
   const chosen=S.rounds.reduce((a,r)=>{
     const by=Math.max(0,...S.versions.filter(v=>v.id!=='YOU').map(v=>r.counts[v.id]||0));
     const margin=by-(r.counts['YOU']||0);
-    return (!a||margin>a.margin)?{r,margin}:a;
+    const score=(margin>0&&r.serpRank!=null?2:margin>0?1:0)*10000+margin;
+    return (!a||score>a.score)?{r,score}:a;
   },null).r;
   S.results=chosen.results;S.counts=chosen.counts;S.curRound=chosen.n;
 
   /* ---- verdict ---- */
+  if(S.serpPromise){try{await S.serpPromise;}catch(e){}}
   const st6=addStage('verdict','Verdict');
   st6.body.innerHTML='<div class="small soft pulse" style="padding-top:2px">Confirming the result…</div>';
   const email=LS.email()||null;
@@ -718,6 +753,8 @@ async function run(nu){
       results:S.questions.map(q=>{const r=chosen.results[q.id];return {id:q.id,text:q.text,moment:q.moment,moment_label:q.moment_label,moment_index:q.moment_index,
         winner:r&&!r.voided?r.winner:null,winners_by_sample:r?r.winners_by_sample:[],voided:!r||r.voided};}),
       siblings:S.siblings,readback:S.readback,judge_models:S.judgeModels,rounds:S.rounds.length,
+      serp_token:S.serpToken||undefined,
+      serp_outcome:chosen.serpRank!==undefined?{rank_after:chosen.serpRank}:undefined,
       email:email,send:send,
     });
   }catch(e){return fail('finish',String(e.message||e));}
@@ -786,10 +823,14 @@ function applyResult(r){
 }
 function flipRow(sel,r){
   const n=$(sel);if(!n)return;
-  if(r.voided){n.className=n.className.replace(/pend|win|loss/g,'')+' skip';n.textContent='— couldn’t judge, skipped';return;}
-  const won=r.winner==='YOU';
-  n.className=n.className.replace(/pend|skip|win|loss/g,'')+(won?' win':' loss');
-  n.textContent=won?'✓ your page wins this one':'✗ goes to '+(r.winner_human||'another version');
+  if(r.voided){n.className=n.className.replace(/pend|win|loss/g,'')+' skip';n.textContent='— couldn’t judge, skipped';}
+  else{
+    const won=r.winner==='YOU';
+    n.className=n.className.replace(/pend|skip|win|loss/g,'')+(won?' win':' loss');
+    n.textContent=won?'✓ your page wins this one':'✗ goes to '+(r.winner_human||'another version');
+  }
+  const row=n.closest('.qrow'),box=n.closest('.stbody');
+  if(row&&box&&box.scrollHeight>box.clientHeight)box.scrollTop=Math.max(0,row.offsetTop-box.offsetTop-box.clientHeight*0.6);
 }
 function buildBoard(root,byMoment){
   const n=S.curRound;
@@ -897,6 +938,49 @@ function renderUpnext(){
   slot.appendChild(card);
 }
 
+/* ============================================================ real-SERP overlay */
+function startSerp(){
+  if(!S.searchQuery)return Promise.resolve(null);
+  const st=addStage('serp','Real results page',{bg:true});
+  st.body.innerHTML=`<div class="small soft pulse" style="padding-top:2px">Searching what buyers actually see for “${esc(S.searchQuery)}”…</div>`;
+  return apiPost('/api/serp',{state_token:S.stateToken,query:S.searchQuery},{retry:0}).then(j=>{
+    if(!j||!j.ok){st.body.innerHTML='<div class="small soft" style="padding-top:2px">Couldn\'t pull a live results page this run — skipped.</div>';finishStage(st);return null;}
+    S.serp=j;S.serpToken=j.serp_token;
+    st.body.innerHTML=`<div class="small soft" style="padding-top:2px">Buyers search: <i>“${esc(j.query)}”</i> — the live results page:</div>
+      <div class="serplist"></div>
+      <div class="small soft" style="margin-top:6px">${j.you_rank?`AI picks your page #${j.you_rank} of its top picks here.`:`Your page isn't picked here today${j.picked&&j.picked.length?` — AI cites ${esc(j.picked.slice(0,2).join(' and '))}`:''}.`}</div>`;
+    renderSerpList(st.body.querySelector('.serplist'),j.results,j);
+    finishStage(st);
+    return j;
+  }).catch(()=>{st.body.innerHTML='<div class="small soft" style="padding-top:2px">Couldn\'t pull a live results page this run — skipped.</div>';finishStage(st);return null;});
+}
+function renderSerpList(box,results,meta){
+  if(!box)return;
+  results.forEach(r=>{
+    const row=el('div','serprow'+(meta&&meta.picked&&meta.picked.includes(r.domain)?' picked':''));
+    row.innerHTML=`<img src="https://www.google.com/s2/favicons?sz=32&domain=${encodeURIComponent(r.domain)}" alt="" loading="lazy">
+      <span class="sm"><span class="t">${esc(r.title)}</span><span class="d">${esc(r.domain)}</span></span>`;
+    box.appendChild(row);
+  });
+}
+function serpCard(ctx){
+  const sp=ctx.run.serp;if(!sp)return null;
+  const beaten=ctx.run.Q_best>ctx.run.Q_you;
+  const sec=el('div','sec');
+  sec.innerHTML=`<div class="card">
+    <div style="font-weight:600">The real search test</div>
+    <div class="small soft" style="margin-top:3px">Buyers search: <i>“${esc(sp.query)}”</i> — the live results page AI reads for this search.</div>
+    <div class="serplist" style="margin-top:8px"></div>
+    <div style="margin-top:10px;font-size:13px;line-height:1.55">
+      <div><b style="color:var(--loss)">Today:</b> ${sp.picked&&sp.picked.length?`AI cites ${esc(sp.picked.slice(0,2).join(' and '))} — `:''}your page ${sp.rank_before?`is picked #${sp.rank_before}`:`isn't picked`}.</div>
+      ${sp.rank_after?`<div><b style="color:var(--win)">With the ${beaten?'winning':'challenger'} copy:</b> picked #${sp.rank_after} of AI's top picks.</div>`
+        :sp.gate==='failed'?`<div><b style="color:var(--loss)">The head-to-head winner:</b> not cited here yet either — the search test stays open.</div>`:''}
+    </div>
+  </div>`;
+  renderSerpList(sec.querySelector('.serplist'),sp.results,sp);
+  return sec;
+}
+
 /* ============================================================ DONE view */
 function buildDone(opts){
   opts=opts||{};
@@ -917,10 +1001,15 @@ function buildDone(opts){
     <div class="small soft" style="margin-top:2px">judged buyer questions where AI picks your page${V?` (${V} skipped)`:''}</div>
     <div class="vhead" style="margin-top:10px">Your current copy won ${RUN.Q_you} of ${J} judged questions. The best rewrite of your page won <span style="color:var(--win)">${RUN.Q_best} of ${J}</span> — same facts, different framing.</div>
     ${(RUN.rounds||1)>1?`<div class="small soft" style="margin-top:6px">${beaten?`It took ${RUN.rounds} rounds of rewrites to find copy that beats your page.`:`Your copy held off ${RUN.rounds} rounds of challengers — ${RUN.rounds*6} rewrites couldn't beat it.`}</div>`:''}
+    ${(beaten&&RUN.serp&&RUN.serp.gate==='failed')?`<div class="small soft" style="margin-top:6px">It beat your copy head-to-head, but isn't cited on the live results page — the search test stays open.</div>`:''}
     ${V?`<div class="small soft" style="margin-top:6px">${V} questions couldn't be judged and were skipped, not counted against you.</div>`:''}
     ${ms?moneyHtml(ms,ctx):''}
   </div>`;
   F.appendChild(v);
+
+  // the real search test (renders only when the overlay succeeded)
+  const spc=serpCard(ctx);
+  if(spc)F.appendChild(spc);
 
   // next lined-up page: visible countdown, Start now / Cancel
   maybeStartNextQueued();
@@ -1018,6 +1107,7 @@ function improvedCopy(ctx){
   const r=ctx.run;
   const sec=el('div','sec');
   const w=bestChallenger(r),you=r.versions.find(x=>x.id==='YOU');
+  const fullWin=!!(w&&w.Q>r.Q_you&&(!r.serp||r.serp.gate!=='failed'));
   const locked=!hasAssets(w);
   // stand-in text rendered only underneath the blur — real values stay server-sealed until unlock
   const STANDIN={title:'A title rewritten to win the questions your page loses',meta:'A rewritten description that answers the buyer questions your page currently loses — same facts, reframed to win.',h1:'A headline rewritten to win the questions above'};
@@ -1031,8 +1121,8 @@ function improvedCopy(ctx){
     </div>`;
   }).join('');
   sec.innerHTML=`<div class="card copycard${locked?' locked':''}">
-    <div style="font-weight:600">${w&&w.Q>r.Q_you?'The version that won':'The strongest challenger'}</div>
-    <div class="small soft" style="margin-top:3px">We wrote ${(r.rounds||1)>1?(r.rounds*6)+' versions across '+r.rounds+' rounds':'6 versions'} of your title and description and tested every one. ${w&&w.Q>r.Q_you?esc(capFirst((w&&w.human)||'this one'))+' beat your current page — paste it in and you\'re done.':esc(capFirst((w&&w.human)||'this one'))+' came closest to your current copy — steal what works from it.'}</div>
+    <div style="font-weight:600">${fullWin?'The version that won':'The strongest challenger'}</div>
+    <div class="small soft" style="margin-top:3px">We wrote ${(r.rounds||1)>1?(r.rounds*6)+' versions across '+r.rounds+' rounds':'6 versions'} of your title and description and tested every one. ${fullWin?esc(capFirst((w&&w.human)||'this one'))+' beat your current page — paste it in and you\'re done.':(w&&w.Q>r.Q_you)?esc(capFirst((w&&w.human)||'this one'))+' beat your page head-to-head but isn\'t cited on the live results page yet — steal what works, keep iterating.':esc(capFirst((w&&w.human)||'this one'))+' came closest to your current copy — steal what works from it.'}</div>
     <div class="assets" style="margin-top:10px"${locked?' aria-hidden="true"':''}>${rows}</div>
     ${locked?`<div class="small soft" style="margin-top:8px">Blurred until we can send it to you — enter your email above and it unlocks here too.</div>`:''}
     <div class="rowbtns">
