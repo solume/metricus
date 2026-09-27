@@ -1,153 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shopify Structured Data and JSON-LD Schema in Plain English (2026) | Metricus</title>
-  <meta name="description" content="What structured data is, whether your Shopify store already has it, and why it matters for AI search visibility. Plain English for non-technical founders.">
-  <meta property="og:title" content="Shopify Structured Data and JSON-LD Schema in Plain English (2026)">
-  <meta property="og:description" content="What structured data is, whether your Shopify store already has it, and why it matters for AI search visibility. Plain English for non-technical founders.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://metricusapp.com/blog/shopify-structured-data-json-ld-plain-english/">
-  <meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Shopify Structured Data and JSON-LD Schema in Plain English (2026)">
-  <meta name="twitter:description" content="What structured data is, whether your Shopify store already has it, and why it matters for AI search visibility.">
-  <meta name="twitter:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <link rel="canonical" href="https://metricusapp.com/blog/shopify-structured-data-json-ld-plain-english/">
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w70oz7g1k3");</script>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>tailwind.config={theme:{extend:{colors:{primary:'#515F74','primary-hover':'#1E293B','on-primary':'#f6f7ff','on-primary-fixed':'#324054','primary-dim':'#455368',surface:'#f7f9fb','surface-container-low':'#f0f4f7','surface-container':'#e8eff3','surface-container-lowest':'#ffffff','surface-container-highest':'#d9e4ea','surface-container-high':'#e1e9ee','surface-variant':'#d9e4ea','on-surface':'#2a3439','on-surface-variant':'#566166',outline:'#717c82','outline-variant':'#a9b4b9','slate-text':'#0F172A','slate-muted':'#64748B','slate-accent':'#475569'},fontFamily: {
-            display: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            body: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            headline: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            label: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-          },borderRadius:{none:'0px',sm:'0px',DEFAULT:'0px',md:'0px',lg:'0px',xl:'0px','2xl':'0px','3xl':'0px',full:'0.75rem'}}}}</script>
-  <style>body{font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;background-color:#fff;color:#0F172A;-webkit-font-smoothing:antialiased}.font-display,.font-headline{font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;background-size:24px 24px;opacity:.05}.article-body h2{font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-weight:700;font-size:1.75rem;line-height:1.2;color:#0F172A;margin-top:3rem;margin-bottom:1rem}@media(min-width:768px){.article-body h2{font-size:2rem}}.article-body h3{font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-weight:700;font-size:1.25rem;line-height:1.3;color:#0F172A;margin-top:2rem;margin-bottom:.75rem}.article-body p{font-size:1.125rem;line-height:1.75;color:#334155;margin-bottom:1.25rem}.article-body ul{font-size:1.125rem;line-height:1.75;color:#334155;margin-bottom:1.25rem;padding-left:1.5rem;list-style-type:disc}.article-body li{margin-bottom:.5rem}.article-body a{color:#334155;text-decoration:underline;text-underline-offset:3px}.article-body a:hover{color:#1E293B}</style>
-
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Shopify Structured Data and JSON-LD Schema in Plain English","description":"What structured data is, whether your Shopify store already has it, and why it matters for AI search visibility.","author":{"@type":"Organization","name":"Metricus","url":"https://metricusapp.com"},"publisher":{"@type":"Organization","name":"Metricus","url":"https://metricusapp.com"},"datePublished":"2026-04-09","dateModified":"2026-05-17","mainEntityOfPage":"https://metricusapp.com/blog/shopify-structured-data-json-ld-plain-english/","image":"https://metricusapp.com/landing/img/og.jpg"}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://metricusapp.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://metricusapp.com/blog/"},{"@type":"ListItem","position":3,"name":"Shopify Structured Data in Plain English","item":"https://metricusapp.com/blog/shopify-structured-data-json-ld-plain-english/"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does my Shopify store already have structured data?","acceptedAnswer":{"@type":"Answer","text":"Shopify themes include basic Product schema by default, but most themes only output a subset of what AI systems need. 78% of self-built Shopify stores are missing key schema types including AggregateRating, FAQPage, Organization, and complete breadcrumb markup. The default coverage is a starting point, not a complete implementation."}},{"@type":"Question","name":"What is JSON-LD schema and why does it matter for AI visibility?","acceptedAnswer":{"@type":"Answer","text":"JSON-LD is a standardized format for embedding structured data in web pages that search engines and AI systems can read. It tells AI platforms exactly what your product costs, whether it's in stock, what customers rate it, and what your brand is. Without it, AI systems have to guess from unstructured page text, which leads to errors, omissions, and lost visibility."}},{"@type":"Question","name":"Which schema types matter most for a Shopify store in 2026?","acceptedAnswer":{"@type":"Answer","text":"In order of impact: Product (with price, availability, brand), AggregateRating (customer review scores), Organization (brand identity on homepage), FAQPage (pre-purchase questions), and BreadcrumbList (site structure). Shopify merchants with comprehensive Product schema saw a 34% higher rate of AI shopping inclusion per Shopify's Q4 2025 earnings."}},{"@type":"Question","name":"Can I add structured data to Shopify without writing code?","acceptedAnswer":{"@type":"Answer","text":"Yes. Free Shopify apps add schema markup without any code. Installation takes under 30 minutes. The key is choosing one app (not multiple, as they conflict) and verifying the output with Google's Rich Results Test."}},{"@type":"Question","name":"How do I check if missing structured data is hurting my AI visibility?","acceptedAnswer":{"@type":"Answer","text":"The step most store owners skip is checking what AI actually says about their products first. In our data, the average store's AI visibility gap widened by 10% every 90 days when left unaddressed. A page-level check does this: you put in a URL, see what the major AI platforms answer when your page is the source, and get rewrites that change the answer. 80% of brands that implemented the top 3 fixes saw measurable changes within 10 days."}},{"@type":"Question","name":"What does the free Metricus optimizer show?","acceptedAnswer":{"@type":"Answer","text":"You put in a page URL. The tool fetches the page, shows what the major AI platforms answer when that page is the source, marks which passages matter, and proposes rewrites that change the answer. It runs in the browser. Free, no signup, no credit card."}}]}</script>
-  <script src="/js/reader-pulse-b.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shopify Structured Data and JSON-LD Schema in Plain English (2026) | Metricus</title>
+<meta name="description" content="What structured data is, whether your Shopify store already has it, and why it matters for AI search visibility. Plain English for non-technical founders.">
+<link rel="canonical" href="https://metricusapp.com/blog/shopify-structured-data-json-ld-plain-english/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Metricus">
+<meta property="og:url" content="https://metricusapp.com/blog/shopify-structured-data-json-ld-plain-english/">
+<meta property="og:title" content="Shopify Structured Data and JSON-LD Schema in Plain English (2026)">
+<meta property="og:description" content="What structured data is, whether your Shopify store already has it, and why it matters for AI search visibility. Plain English for non-technical founders.">
+<meta property="og:image" content="https://metricusapp.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Metricus: see what AI answers when your customers ask for what you offer.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shopify Structured Data and JSON-LD Schema in Plain English (2026)">
+<meta name="twitter:description" content="What structured data is, whether your Shopify store already has it, and why it matters for AI search visibility.">
+<meta name="twitter:image" content="https://metricusapp.com/assets/og.png">
+<!-- metricus:head -->
+<link rel="stylesheet" href="/assets/metricus.css?v=20260927">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#FBFAF7">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w70oz7g1k3");</script>
+<!-- /metricus:head -->
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "Shopify Structured Data and JSON-LD Schema in Plain English",
+ "description": "What structured data is, whether your Shopify store already has it, and why it matters for AI search visibility.",
+ "author": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "datePublished": "2026-04-09",
+ "dateModified": "2026-09-27",
+ "mainEntityOfPage": "https://metricusapp.com/blog/shopify-structured-data-json-ld-plain-english/",
+ "image": "https://metricusapp.com/assets/og.png"
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://metricusapp.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://metricusapp.com/blog/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Shopify Structured Data in Plain English",
+   "item": "https://metricusapp.com/blog/shopify-structured-data-json-ld-plain-english/"
+  }
+ ]
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Does my Shopify store already have structured data?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Almost certainly some, but probably not enough. Default Shopify themes include basic Product schema. Most are missing AggregateRating, FAQPage, Organization, and complete breadcrumbs. The gap between default and complete is where AI visibility is lost."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I add schema without writing code?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Free Shopify apps add schema markup without code. Install one (not multiple, as they conflict) and verify output with Google’s Rich Results Test."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is structured data really worth the effort for a small store?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Shopify’s own data: 34% higher AI shopping inclusion for merchants with comprehensive schema. Pages with complete schema see +74.1% CTR lift. For a store with 50 products, one free app covers all of them in under an hour."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What happens if my schema has errors?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Malformed schema is often worse than no schema, because it can trigger rich result penalties or confuse AI parsers. Always verify with Google’s Rich Results Test after installing a schema app."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I check if missing structured data is hurting my AI visibility?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The step most store owners skip is checking what AI actually says about their products first. Ask AI the questions your shoppers ask and check whether it names your products and gets their price, stock and reviews right."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What does Metricus show?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Metricus shows the answer AI gives when your customers ask for what you sell, with every business it names. You pick your website, edit the answer into what you want AI to say, and get new text for your website. The AI Visibility Score shows how often AI mentions and recommends you, today and with the new text. It is free, with no signup."
+   }
+  }
+ ]
+}</script>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 gap-4">
-      <a href="/" class="text-on-surface font-semibold" aria-label="Metricus home">Metricus <span class="font-normal text-on-surface-variant">Optimizer</span></a>
-      <div class="flex items-center gap-5">
-        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface">Learn</a>
-        <a href="/ai-visibility-optimizer-tool/" class="bg-primary text-on-primary text-sm font-semibold px-4 py-2.5 hover:bg-primary-dim">Open the tool</a>
-      </div>
-    </div>
-  </header>
-
-
-
-  <main class="flex-grow flex flex-col relative overflow-x-hidden">
-    <div class="absolute inset-0 -z-10 pointer-events-none"></div>
-    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
-      <nav class="mb-8"><ol class="flex items-center gap-2 text-xs text-slate-muted"><li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li><li class="select-none">/</li><li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li><li class="select-none">/</li><li class="text-slate-text">Shopify Structured Data</li></ol></nav>
-
-      <header class="mb-12">
-        <p class="text-xs text-primary font-semibold mb-4">Ecommerce Playbook</p>
-        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">Shopify Structured Data and JSON-LD Schema in Plain English</h1>
-        <p class="text-sm text-outline">Metricus Research &middot; Last updated: April 2026 &middot; 6 min read</p>
-      </header>
-
-      <div class="bg-surface-container-low p-8 mb-12">
-        <p class="text-lg leading-relaxed text-on-surface">Structured data is the machine-readable layer that tells AI platforms exactly what your products cost, whether they are in stock, and what customers think of them. Without it, AI systems guess from unstructured text &mdash; and guess wrong. <strong>Pages with complete product schema are 2.5x more likely to be cited in AI Overviews</strong> (BrightEdge / Alhena.ai, 2025). Metricus has a free tool that shows what the major AI platforms answer when your page is the source, and what to rewrite. <a href="/ai-visibility-optimizer-tool/">Open the tool</a>.</p>
-      </div>
-
-      <div class="article-body">
-        <h2>What structured data actually is</h2>
-
-        <p>JSON-LD schema is a standardized format for embedding product information in your web pages that both search engines and AI systems can parse directly. Instead of AI having to guess your product&rsquo;s price from surrounding text, Product schema states it explicitly: name, price, currency, availability, brand, description, review rating. AI systems use this structured layer to populate shopping features, generate accurate descriptions, and decide which products to surface.</p>
-
-        <p>Think of it as the difference between a librarian reading a book to find information versus reading a card catalog. The catalog is faster, more accurate, and less prone to misinterpretation. Schema markup is the card catalog for AI systems.</p>
-
-        <p>If you&rsquo;re not sure which structured data changes will have the most impact on your AI visibility, the step most store owners skip is checking what AI actually says about their products first. In our data, the average store&rsquo;s AI visibility gap widened by 10% every 90 days when left unaddressed. A page-level check shows what the major AI platforms answer when your page is the source, and which passages matter. 80% of brands that implemented the top 3 fixes saw measurable changes within 10 days.</p>
-
-        <h2>What Shopify does and does not include by default</h2>
-
-        <p>Shopify themes include basic Product schema by default, but <strong>78% of self-built Shopify stores are missing key schema types</strong>. The typical gaps: no AggregateRating schema (review scores invisible to AI), no FAQPage schema (pre-purchase questions not machine-readable), no Organization schema on the homepage (brand identity missing), and incomplete BreadcrumbList schema (site structure unclear to crawlers).</p>
-
-        <p>The default Shopify Product schema often outputs only name and price, missing availability, brand, description, and image properties that AI shopping surfaces require for product matching. This partial implementation is worse than no schema in one specific way: it passes basic validation but fails to provide the complete data that AI surfaces need for inclusion.</p>
-
-        <h2>The schema types that matter most in 2026</h2>
-
-        <p><strong>Product</strong> (price, availability, brand, description, image) &mdash; the baseline requirement. Shopify merchants with comprehensive Product schema saw a <strong>34% higher rate of AI shopping inclusion</strong> (Shopify Q4 2025 earnings).</p>
-
-        <p><strong>AggregateRating</strong> &mdash; makes your review scores machine-readable. Products with visible star ratings in search results see a <strong>+74.1% CTR lift</strong> (Semrush, 2025), which compounds into more indexed data for AI training.</p>
-
-        <p><strong>FAQPage</strong> &mdash; the highest-citation-rate content format for AI systems. FAQ blocks with schema markup directly answer the question format AI uses to retrieve information. Major AI platforms have been documented citing product FAQ blocks in shopper query responses.</p>
-
-        <p><strong>Organization</strong> &mdash; tells AI who your brand is. Without Organization schema on your homepage, AI systems have no authoritative source for your brand name, description, and contact information.</p>
-
-        <div data-reader-pulse-b data-source="shopify-structured-data-json-ld-plain-english"></div>
-
-        <h2>The evidence on AI visibility impact</h2>
-
-        <p>Research confirms that major AI platforms all actively process schema markup when crawling content (SearchVIU, October 2025). <strong>65% of pages cited in AI Overviews and 71% of pages cited by major AI platforms include structured data</strong> (Search Engine Journal, 2025). AI shopping surfaces use structured data to determine which products to include in results.</p>
-
-        <p>The practical consequence: a Shopify store with no schema is excluded from AI shopping features regardless of product quality. It is not a ranking factor in the traditional sense &mdash; it is a visibility prerequisite. Products without structured data simply cannot be parsed into the format AI commerce surfaces need.</p>
-
-        
-
-        <p class="text-sm text-slate-muted mt-8"><strong>Sources:</strong> BrightEdge / Alhena.ai ecommerce schema analysis (2025); Shopify Q4 2025 earnings; SearchVIU schema markup study (October 2025); Search Engine Journal structured data and AI citation data (2025); Semrush CTR study (2025).</p>
-
-        <h2>Frequently asked questions</h2>
-
-        <h3>Does my Shopify store already have structured data?</h3>
-        <p>Almost certainly some, but probably not enough. Default Shopify themes include basic Product schema. Most are missing AggregateRating, FAQPage, Organization, and complete breadcrumbs. The gap between default and complete is where AI visibility is lost.</p>
-
-        <h3>Can I add schema without writing code?</h3>
-        <p>Yes. Free Shopify apps add schema markup without code. Install one (not multiple, as they conflict) and verify output with Google&rsquo;s Rich Results Test.</p>
-
-        <h3>Is structured data really worth the effort for a small store?</h3>
-        <p>Shopify&rsquo;s own data: 34% higher AI shopping inclusion for merchants with comprehensive schema. Pages with complete schema see +74.1% CTR lift. For a store with 50 products, one free app covers all of them in under an hour.</p>
-
-        <h3>What happens if my schema has errors?</h3>
-        <p>Malformed schema is often worse than no schema, because it can trigger rich result penalties or confuse AI parsers. Always verify with Google&rsquo;s Rich Results Test after installing a schema app.</p>
-
-        <h3>How do I check if missing structured data is hurting my AI visibility?</h3>
-        <p>The step most store owners skip is checking what AI actually says about their products first. In our data, the average store&rsquo;s AI visibility gap widened by 10% every 90 days when left unaddressed. A page-level check does this: you put in a URL, see what the major AI platforms answer when your page is the source, and get rewrites that change the answer. 80% of brands that implemented the top 3 fixes saw measurable changes within 10 days.</p>
-
-        <h3>What does the free Metricus optimizer show?</h3>
-        <p>You put in a page URL. The tool fetches the page, shows what the major AI platforms answer when that page is the source, marks which passages matter, and proposes rewrites that change the answer. It runs in the browser. Free, no signup, no credit card.</p>
-      </div>
-
-      <div class="border-t border-outline-variant/30 mt-16 pt-10" data-cta="tool">
-        <h2 class="text-2xl font-semibold text-on-surface mb-2">Put in a page.</h2>
-        <p class="text-on-surface-variant mb-5 max-w-xl">See what an AI assistant answers about your page, which passages caused it, and a rewrite for each one. Free, no signup.</p>
-        <form class="flex flex-col sm:flex-row gap-2 max-w-xl" action="/ai-visibility-optimizer-tool/" method="get">
-          <label class="sr-only" for="cta-url">Address of the page to check</label>
-          <input id="cta-url" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="your-site.com/page" required class="flex-1 min-w-0 px-4 py-3 border border-outline-variant bg-white text-on-surface">
-          <button type="submit" class="bg-primary text-on-primary font-semibold px-6 py-3 hover:bg-primary-dim whitespace-nowrap">Start optimizing</button>
-        </form>
-      </div>
-      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40"><p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as: <cite class="not-italic"><a href="https://metricusapp.com/blog/shopify-structured-data-json-ld-plain-english/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; Shopify Structured Data and JSON-LD Schema in Plain English (2026)</a></cite></p></footer>
-    </article>
-  </main>
-  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-on-surface-variant">
-      <span class="text-on-surface font-semibold">Metricus</span>
-      <a href="/ai-visibility-optimizer-tool/" class="hover:text-on-surface">Open the tool</a>
-      <a href="/blog/" class="hover:text-on-surface">Learn</a>
-      <a href="/methodology/" class="hover:text-on-surface">How it works</a>
-      <a href="/results/" class="hover:text-on-surface">Results</a>
-      <a href="/for-agencies/" class="hover:text-on-surface">For agencies</a>
-      <a href="/about/" class="hover:text-on-surface">About</a>
-      <a href="/press/" class="hover:text-on-surface">Press</a>
-      <a href="/support/" class="hover:text-on-surface">Support</a>
-      <a href="/privacy-policy/" class="hover:text-on-surface">Privacy</a>
-      <a href="/terms-of-service/" class="hover:text-on-surface">Terms</a>
-      <a href="mailto:metricusapp@gmail.com" class="hover:text-on-surface">Contact</a>
-      <span class="ml-auto">&copy; 2026 Metricus</span>
-    </div>
-  </footer>
+<body class="doc">
+<!-- metricus:header -->
+<header class="nav"><div class="in"><a class="logo" href="/" id="navhome">Metricus</a><span class="sp"></span><span class="muted" id="host"></span></div></header>
+<!-- /metricus:header -->
+<main class="doc-main" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <span aria-current="page">Shopify Structured Data</span></nav>
+<p class="kicker">Ecommerce Playbook</p>
+<h1>Shopify Structured Data and JSON-LD Schema in Plain English</h1>
+<p class="byline">Metricus Research · Last updated: September 2026 · 6 min read</p>
+<div class="note">
+<p>Structured data is the machine-readable layer that tells AI platforms exactly what your products cost, whether they are in stock, and what customers think of them. Without it, AI systems guess from unstructured text — and guess wrong. <strong>Pages with complete product schema are 2.5x more likely to be cited in AI Overviews</strong> (BrightEdge / Alhena.ai, 2025). Metricus shows the answer AI gives when your customers ask for what you sell, with every business it names, and gives new text for your website.</p>
+</div>
+<h2>What structured data actually is</h2>
+<p>JSON-LD schema is a standardized format for embedding product information in your web pages that both search engines and AI systems can parse directly. Instead of AI having to guess your product’s price from surrounding text, Product schema states it explicitly: name, price, currency, availability, brand, description, review rating. AI systems use this structured layer to populate shopping features, generate accurate descriptions, and decide which products to surface.</p>
+<p>Think of it as the difference between a librarian reading a book to find information versus reading a card catalog. The catalog is faster, more accurate, and less prone to misinterpretation. Schema markup is the card catalog for AI systems.</p>
+<p>If you’re not sure which structured data changes will have the most impact on your AI visibility, the step most store owners skip is checking what AI actually says about their products first. Ask AI the questions your shoppers ask and check whether it names your products and gets their price, stock and reviews right.</p>
+<h2>What Shopify does and does not include by default</h2>
+<p>Shopify themes include basic Product schema by default, but <strong>78% of self-built Shopify stores are missing key schema types</strong>. The typical gaps: no AggregateRating schema (review scores invisible to AI), no FAQPage schema (pre-purchase questions not machine-readable), no Organization schema on the homepage (brand identity missing), and incomplete BreadcrumbList schema (site structure unclear to crawlers).</p>
+<p>The default Shopify Product schema often outputs only name and price, missing availability, brand, description, and image properties that AI shopping surfaces require for product matching. This partial implementation is worse than no schema in one specific way: it passes basic validation but fails to provide the complete data that AI surfaces need for inclusion.</p>
+<h2>The schema types that matter most in 2026</h2>
+<p><strong>Product</strong> (price, availability, brand, description, image) — the baseline requirement. Shopify merchants with comprehensive Product schema saw a <strong>34% higher rate of AI shopping inclusion</strong> (Shopify Q4 2025 earnings).</p>
+<p><strong>AggregateRating</strong> — makes your review scores machine-readable. Products with visible star ratings in search results see a <strong>+74.1% CTR lift</strong> (Semrush, 2025), which compounds into more indexed data for AI training.</p>
+<p><strong>FAQPage</strong> — the highest-citation-rate content format for AI systems. FAQ blocks with schema markup directly answer the question format AI uses to retrieve information. Major AI platforms have been documented citing product FAQ blocks in shopper query responses.</p>
+<p><strong>Organization</strong> — tells AI who your brand is. Without Organization schema on your homepage, AI systems have no authoritative source for your brand name, description, and contact information.</p>
+<div data-reader-pulse-b="" data-source="shopify-structured-data-json-ld-plain-english"></div>
+<h2>The evidence on AI visibility impact</h2>
+<p>Research confirms that major AI platforms all actively process schema markup when crawling content (SearchVIU, October 2025). <strong>65% of pages cited in AI Overviews and 71% of pages cited by major AI platforms include structured data</strong> (Search Engine Journal, 2025). AI shopping surfaces use structured data to determine which products to include in results.</p>
+<p>The practical consequence: a Shopify store with no schema is excluded from AI shopping features regardless of product quality. It is not a ranking factor in the traditional sense — it is a visibility prerequisite. Products without structured data simply cannot be parsed into the format AI commerce surfaces need.</p>
+<p><strong>Sources:</strong> BrightEdge / Alhena.ai ecommerce schema analysis (2025); Shopify Q4 2025 earnings; SearchVIU schema markup study (October 2025); Search Engine Journal structured data and AI citation data (2025); Semrush CTR study (2025).</p>
+<h2>Frequently asked questions</h2>
+<h3>Does my Shopify store already have structured data?</h3>
+<p>Almost certainly some, but probably not enough. Default Shopify themes include basic Product schema. Most are missing AggregateRating, FAQPage, Organization, and complete breadcrumbs. The gap between default and complete is where AI visibility is lost.</p>
+<h3>Can I add schema without writing code?</h3>
+<p>Yes. Free Shopify apps add schema markup without code. Install one (not multiple, as they conflict) and verify output with Google’s Rich Results Test.</p>
+<h3>Is structured data really worth the effort for a small store?</h3>
+<p>Shopify’s own data: 34% higher AI shopping inclusion for merchants with comprehensive schema. Pages with complete schema see +74.1% CTR lift. For a store with 50 products, one free app covers all of them in under an hour.</p>
+<h3>What happens if my schema has errors?</h3>
+<p>Malformed schema is often worse than no schema, because it can trigger rich result penalties or confuse AI parsers. Always verify with Google’s Rich Results Test after installing a schema app.</p>
+<h3>How do I check if missing structured data is hurting my AI visibility?</h3>
+<p>The step most store owners skip is checking what AI actually says about their products first. Ask AI the questions your shoppers ask and check whether it names your products and gets their price, stock and reviews right.</p>
+<h3>What does Metricus show?</h3>
+<p>Metricus shows the answer AI gives when your customers ask for what you sell, with every business it names. You pick your website, edit the answer into what you want AI to say, and get new text for your website. The AI Visibility Score shows how often AI mentions and recommends you, today and with the new text. It is free, with no signup.</p>
+<p class="cite">Cite as: <a href="https://metricusapp.com/blog/shopify-structured-data-json-ld-plain-english/">Metricus — Shopify Structured Data and JSON-LD Schema in Plain English (2026)</a></p>
+<!-- metricus:ask -->
+<section class="ask-cta" aria-labelledby="ask-cta-h"><h2 id="ask-cta-h">What do your customers ask AI?</h2><form class="chatbox" action="/" method="get"><input class="input" type="text" name="q" maxlength="600" autocomplete="off" required placeholder="Type what people would ask AI&hellip;" aria-labelledby="ask-cta-h"><button class="send" type="submit" aria-label="Ask AI" title="Ask AI"><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V6M6 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form></section>
+<!-- /metricus:ask -->
+</main>
+<!-- metricus:footer -->
+<footer class="foot"><nav aria-label="Site"><a href="/blog/">Blog</a><a href="/geo-knowledge-base/">Knowledge base</a><a href="/results/">Results</a><a href="/about/">About</a><a href="/press/">Press</a><a href="/support/">Support</a><a href="/privacy-policy/">Privacy</a><a href="/terms-of-service/">Terms</a><a href="mailto:metricusapp@gmail.com">Contact</a></nav><p>&copy; 2026 Metricus</p></footer>
+<!-- /metricus:footer -->
+<script src="/js/reader-pulse-b.js" defer></script>
 </body>
 </html>

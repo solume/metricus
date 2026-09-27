@@ -1,755 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How Can My Healthcare Practice Show Up in AI Recommendations? | Metricus</title>
-  <meta name="description" content="80% of patients search online before choosing a provider. AI sends them to WebMD. JAMA data on accuracy and visibility strategies.">
-  <meta property="og:title" content="How Can My Healthcare Practice Show Up in AI Recommendations?">
-  <meta property="og:description" content="80% of patients search online before choosing a provider. AI sends them to WebMD. JAMA data on accuracy and visibility strategies.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://metricusapp.com/blog/healthcare-ai-visibility/">
-  <meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="How Can My Healthcare Practice Show Up in AI Recommendations?">
-  <meta name="twitter:description" content="80% of patients search online before choosing a provider. AI sends them to WebMD. JAMA data on accuracy and visibility strategies.">
-  <meta name="twitter:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <link rel="canonical" href="https://metricusapp.com/blog/healthcare-ai-visibility/">
-
-  <!-- Google Tag Manager -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w70oz7g1k3");
-  </script>
-
-  <!-- Google Fonts -->
-
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#515F74',
-            'primary-hover': '#1E293B',
-            'on-primary': '#f6f7ff',
-            'on-primary-fixed': '#324054',
-            'primary-dim': '#455368',
-            surface: '#f7f9fb',
-            'surface-container-low': '#f0f4f7',
-            'surface-container': '#e8eff3',
-            'surface-container-lowest': '#ffffff',
-            'surface-container-highest': '#d9e4ea',
-            'surface-container-high': '#e1e9ee',
-            'surface-variant': '#d9e4ea',
-            'on-surface': '#2a3439',
-            'on-surface-variant': '#566166',
-            outline: '#717c82',
-            'outline-variant': '#a9b4b9',
-            'slate-text': '#0F172A',
-            'slate-muted': '#64748B',
-            'slate-accent': '#475569',
-          },
-          fontFamily: {
-            display: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            body: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            headline: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            label: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-          },
-          borderRadius: {
-            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
-            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
-            full: '0.75rem',
-          },
-        },
-      },
-    }
-  </script>
-
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: #ffffff;
-      color: #0F172A;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .font-display { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-headline { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-body-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-
-    .editorial-btn {
-      transition: background-color 150ms ease-in-out, transform 150ms ease;
-    }
-    .editorial-btn:hover {
-      background-color: #1E293B;
-    }.blog-card {
-      transition: transform 200ms ease, background-color 200ms ease;
-    }
-    .blog-card:hover {
-      transform: translateY(-2px);
-      background-color: #f7f9fb;
-    }
-
-    .article-body h2 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.75rem;
-      line-height: 1.2;
-      color: #0F172A;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-    }
-    @media (min-width: 768px) {
-      .article-body h2 {
-        font-size: 2rem;
-      }
-    }
-    .article-body h3 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      line-height: 1.3;
-      color: #0F172A;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    .article-body p {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-    }
-    .article-body ul, .article-body ol {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-      padding-left: 1.5rem;
-    }
-    .article-body ul { list-style-type: disc; }
-    .article-body ol { list-style-type: decimal; }
-    .article-body li { margin-bottom: 0.5rem; }
-    .article-body blockquote {
-      border-left: 2px solid #334155;
-      padding-left: 1.5rem;
-      font-style: italic;
-      color: #475569;
-      font-size: 1.125rem;
-      line-height: 1.75;
-      margin: 2rem 0;
-    }
-    .article-body a {
-      color: #334155;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .article-body a:hover {
-      color: #1E293B;
-    }
-  </style>
-
-  <!-- JSON-LD BlogPosting -->
-  <script type="application/ld+json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Can My Healthcare Practice Show Up in AI Recommendations? | Metricus</title>
+<meta name="description" content="80% of patients search online before choosing a provider. AI sends them to WebMD. JAMA data on accuracy and visibility strategies.">
+<link rel="canonical" href="https://metricusapp.com/blog/healthcare-ai-visibility/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Metricus">
+<meta property="og:url" content="https://metricusapp.com/blog/healthcare-ai-visibility/">
+<meta property="og:title" content="How Can My Healthcare Practice Show Up in AI Recommendations?">
+<meta property="og:description" content="80% of patients search online before choosing a provider. AI sends them to WebMD. JAMA data on accuracy and visibility strategies.">
+<meta property="og:image" content="https://metricusapp.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Metricus: see what AI answers when your customers ask for what you offer.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How Can My Healthcare Practice Show Up in AI Recommendations?">
+<meta name="twitter:description" content="80% of patients search online before choosing a provider. AI sends them to WebMD. JAMA data on accuracy and visibility strategies.">
+<meta name="twitter:image" content="https://metricusapp.com/assets/og.png">
+<!-- metricus:head -->
+<link rel="stylesheet" href="/assets/metricus.css?v=20260927">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#FBFAF7">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w70oz7g1k3");</script>
+<!-- /metricus:head -->
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "AI Visibility for Healthcare: Why ChatGPT Recommends Mayo Clinic While Your Practice Doesn't Exist",
+ "description": "80% of patients search online before choosing a provider. When they ask AI chatbots for recommendations, local practices are invisible. Data on why, what it costs, and how to fix it.",
+ "author": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "datePublished": "2026-04-05",
+ "dateModified": "2026-09-27",
+ "mainEntityOfPage": "https://metricusapp.com/blog/healthcare-ai-visibility/",
+ "image": "https://metricusapp.com/assets/og.png"
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
   {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "AI Visibility for Healthcare: Why ChatGPT Recommends Mayo Clinic While Your Practice Doesn't Exist",
-    "description": "80% of patients search online before choosing a provider. When they ask AI chatbots for recommendations, local practices are invisible. Data on why, what it costs, and how to fix it.",
-    "author": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "datePublished": "2026-04-05",
-    "dateModified": "2026-05-17",
-    "mainEntityOfPage": "https://metricusapp.com/blog/healthcare-ai-visibility/",
-    "image": "https://metricusapp.com/landing/img/og.jpg"
-  }
-  </script>
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://metricusapp.com/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "AI Visibility for Healthcare", "item": "https://metricusapp.com/blog/healthcare-ai-visibility/"}
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://metricusapp.com/blog/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Why does ChatGPT recommend Mayo Clinic and Cleveland Clinic instead of local medical practices?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI chatbots like ChatGPT generate recommendations based on training data scraped from the web. Mayo Clinic receives approximately 88 million monthly visits and has millions of citations across medical literature, news, and forums. The average local medical practice receives 2,000-20,000 monthly visits. This 5,000x+ gap in web presence directly translates into AI 'mindshare' -- the brands with the most mentions, backlinks, and authoritative content across the training corpus are the ones AI recommends. Additionally, AI models are trained to prioritize medically conservative recommendations, which further favors nationally recognized academic medical centers."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How many patients use AI chatbots to find healthcare providers or get health information?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "According to a 2024 Accenture survey, approximately 42% of consumers have used generative AI tools like ChatGPT for health-related questions. A Rock Health survey found that 28% of consumers used AI tools for health information in 2024, up from 11% in 2023. Younger demographics show even higher adoption: over 50% of adults aged 18-34 have tried AI chatbots for health queries. Gartner projects traditional search volume will drop 25% by 2026 due to AI chatbots, and healthcare informational queries are among the most affected categories."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is it dangerous when patients use AI chatbots for medical information?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "There are documented risks. A 2023 study published in JAMA Internal Medicine found that ChatGPT provided accurate triage advice only 51% of the time. Research from Ben-Gurion University (2024) found that AI chatbots gave incorrect medical advice in approximately 30-40% of cases when asked about specific conditions. The FDA does not regulate AI chatbots as medical devices in most conversational use cases. However, the bigger risk for healthcare providers is reputational: AI may cite outdated insurance networks, wrong specialties, fabricated physician credentials, or incorrect facility information -- directing patients elsewhere based on false data."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How can hospitals and medical practices improve their AI visibility?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Healthcare organizations can improve AI visibility by: (1) auditing what AI currently says about them across the major AI platforms, (2) publishing data-rich clinical content with specific statistics, outcomes data, and structured claims that AI can cite, (3) building citations on authoritative third-party sources like Healthgrades, Vitals, WebMD physician directories, and medical association listings, (4) implementing MedicalOrganization, Physician, and Hospital schema markup, and (5) correcting factual errors at their source."
-        }
-      }
-    ]
+   "@type": "ListItem",
+   "position": 3,
+   "name": "AI Visibility for Healthcare",
+   "item": "https://metricusapp.com/blog/healthcare-ai-visibility/"
   }
-  </script>
-  <script src="/js/reader-pulse-b.js" defer></script>
+ ]
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Why does ChatGPT recommend Mayo Clinic and Cleveland Clinic instead of local medical practices?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "AI chatbots like ChatGPT generate recommendations based on training data scraped from the web. Mayo Clinic receives approximately 88 million monthly visits and has millions of citations across medical literature, news, and forums. The average local medical practice receives 2,000-20,000 monthly visits. This 5,000x+ gap in web presence directly translates into AI 'mindshare' -- the brands with the most mentions, backlinks, and authoritative content across the training corpus are the ones AI recommends. Additionally, AI models are trained to prioritize medically conservative recommendations, which further favors nationally recognized academic medical centers."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How many patients use AI chatbots to find healthcare providers or get health information?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "According to a 2024 Accenture survey, approximately 42% of consumers have used generative AI tools like ChatGPT for health-related questions. A Rock Health survey found that 28% of consumers used AI tools for health information in 2024, up from 11% in 2023. Younger demographics show even higher adoption: over 50% of adults aged 18-34 have tried AI chatbots for health queries. Gartner projects traditional search volume will drop 25% by 2026 due to AI chatbots, and healthcare informational queries are among the most affected categories."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is it dangerous when patients use AI chatbots for medical information?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "There are documented risks. A 2023 study published in JAMA Internal Medicine found that ChatGPT provided accurate triage advice only 51% of the time. Research from Ben-Gurion University (2024) found that AI chatbots gave incorrect medical advice in approximately 30-40% of cases when asked about specific conditions. The FDA does not regulate AI chatbots as medical devices in most conversational use cases. However, the bigger risk for healthcare providers is reputational: AI may cite outdated insurance networks, wrong specialties, fabricated physician credentials, or incorrect facility information -- directing patients elsewhere based on false data."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How can hospitals and medical practices improve their AI visibility?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Healthcare organizations can improve AI visibility by: (1) auditing what AI currently says about them across the major AI platforms, (2) publishing data-rich clinical content with specific statistics, outcomes data, and structured claims that AI can cite, (3) building citations on authoritative third-party sources like Healthgrades, Vitals, WebMD physician directories, and medical association listings, (4) implementing MedicalOrganization, Physician, and Hospital schema markup, and (5) correcting factual errors at their source."
+   }
+  }
+ ]
+}</script>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
-
-  <!-- Site Nav -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 gap-4">
-      <a href="/" class="text-on-surface font-semibold" aria-label="Metricus home">Metricus <span class="font-normal text-on-surface-variant">Optimizer</span></a>
-      <div class="flex items-center gap-5">
-        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface">Learn</a>
-        <a href="/ai-visibility-optimizer-tool/" class="bg-primary text-on-primary text-sm font-semibold px-4 py-2.5 hover:bg-primary-dim">Open the tool</a>
-      </div>
-    </div>
-  </header>
-
-
-
-  <!-- Mobile Menu Overlay -->
-
-
-
-  <main class="flex-grow flex flex-col relative overflow-x-hidden">
-
-    <div class="absolute inset-0 -z-10 pointer-events-none"></div>
-
-    <!-- ========== ARTICLE ========== -->
-    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
-
-      <!-- Breadcrumb -->
-      <nav class="mb-8">
-        <ol class="flex items-center gap-2 text-xs text-slate-muted">
-          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
-          <li class="select-none">/</li>
-          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
-          <li class="select-none">/</li>
-          <li class="text-slate-text">Healthcare AI Visibility</li>
-        </ol>
-      </nav>
-
-      <!-- Article Header -->
-      <header class="mb-12">
-        <p class="text-xs text-primary font-semibold mb-4">Industry Research</p>
-        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
-          How Can My Healthcare Practice Show Up in AI Recommendations?
-        </h1>
-        <p class="text-sm text-outline">Metricus Research &middot; April 5, 2026 &middot; 8 min read</p>
-        <p class="text-sm text-outline mt-2">Last updated: April 2026</p>
-      </header>
-
-
-      <!-- Tension Stat -->
-      <div class="bg-surface-container-low p-8 mb-12">
-        <p class="text-lg leading-relaxed text-on-surface">
-          <strong>80% of patients search online before choosing a healthcare provider</strong> (Pew Research Center, 2023). Increasingly, &ldquo;searching online&rdquo; means asking AI assistants. When patients do that, AI recommends the same 5&ndash;6 nationally known institutions every time &mdash; and local hospitals, clinics, and medical practices don&rsquo;t exist.
+<body class="doc">
+<!-- metricus:header -->
+<header class="nav"><div class="in"><a class="logo" href="/" id="navhome">Metricus</a><span class="sp"></span><span class="muted" id="host"></span></div></header>
+<!-- /metricus:header -->
+<main class="doc-main" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <span aria-current="page">Healthcare AI Visibility</span></nav>
+<p class="kicker">Industry Research</p>
+<h1>How Can My Healthcare Practice Show Up in AI Recommendations?</h1>
+<p class="byline">Metricus Research · April 5, 2026 · 8 min read</p>
+<p class="updated">Last updated: September 2026</p>
+<div class="note">
+<p>
+<strong>80% of patients search online before choosing a healthcare provider</strong> (Pew Research Center, 2023). Increasingly, “searching online” means asking AI assistants. When patients do that, AI recommends the same 5–6 nationally known institutions every time — and local hospitals, clinics, and medical practices don’t exist.
         </p>
-      </div>
-
-
-<p><strong>Short answer:</strong> When patients ask AI for healthcare recommendations, WebMD, Healthline, and Mayo Clinic dominate 80%+ of responses. Most private practices and regional health systems are invisible. The free Metricus optimizer shows what the major AI platforms answer when a page from your practice&rsquo;s site is the source, and where the errors are. <a href="/ai-visibility-optimizer-tool/">Open the tool</a>.</p>
-
-
-      <!-- Table of Contents -->
-      <div class="border border-[#E2E8F0] p-8 mb-12">
-        <p class="text-xs text-slate-muted font-semibold mb-4">In this article</p>
-        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
-          <li><a href="#the-shift" class="hover:underline">The shift: from &ldquo;Dr. Google&rdquo; to &ldquo;ask the AI&rdquo;</a></li>
-          <li><a href="#who-ai-recommends" class="hover:underline">Who AI actually recommends in healthcare</a></li>
-          <li><a href="#why-local-invisible" class="hover:underline">Why your practice is invisible to AI</a></li>
-          <li><a href="#ai-health-accuracy" class="hover:underline">The accuracy problem: what AI gets wrong about healthcare</a></li>
-          <li><a href="#patients-using-ai" class="hover:underline">Patients are already using AI for health decisions</a></li>
-          <li><a href="#the-money" class="hover:underline">The $20 billion question: healthcare digital marketing spend</a></li>
-          <li><a href="#telehealth-ai-convergence" class="hover:underline">Telehealth, healthtech, and the AI convergence</a></li>
-          <li><a href="#what-works" class="hover:underline">What we found</a></li>
-          <li><a href="#case-for-auditing" class="hover:underline">The case for auditing your AI visibility now</a></li>
-        </ol>
-      </div>
-
-      <!-- Article Body -->
-      <div class="article-body">
-
-        <h2 id="the-shift">The shift: from &ldquo;Dr. Google&rdquo; to &ldquo;ask the AI&rdquo;</h2>
-
-        <p>For two decades, the healthcare industry adapted to one reality: patients Google their symptoms, Google their doctors, and Google their treatment options before making decisions. The entire healthcare digital marketing ecosystem &mdash; SEO, paid search, physician directory listings, patient review management &mdash; was built around this behavior.</p>
-
-        <p>That ecosystem is breaking.</p>
-
-        <p>Gartner forecast in February 2024 that <strong>traditional search engine volume will drop 25% by 2026</strong> due to AI chatbots and virtual agents. ChatGPT surpassed 5.8 billion monthly visits by mid-2025, making it one of the top 10 most-visited sites on the planet (Similarweb, 2025). Perplexity AI grew to over 100 million monthly visits by Q4 2024. Google itself now shows AI Overviews for an estimated <strong>84% of informational queries</strong> (BrightEdge, 2024) &mdash; and health queries are among the most heavily affected categories, given their inherently informational nature.</p>
-
-        <p>The healthcare implications are uniquely severe. Google has long classified health queries as YMYL (&ldquo;Your Money or Your Life&rdquo;) and applied higher quality standards. But AI chatbots have no such guardrails in practice. Rock Health&rsquo;s 2025 Consumer Adoption Survey found that <strong>32% of consumers have used AI chatbots for health-related information</strong>, double the 16% from a year prior. Among Gen Z and Millennials, adoption exceeds 45% (Rock Health, 2025).</p>
-
-        <p>When a patient asks ChatGPT &ldquo;What&rsquo;s the best hospital for knee replacement?&rdquo; or &ldquo;Who is the best cardiologist near me?&rdquo;, the answer doesn&rsquo;t link to your practice website. The traditional funnel &mdash; Google search &rarr; physician directory &rarr; practice website &rarr; appointment booking &mdash; is being bypassed entirely.</p>
-
-
-        <h2 id="who-ai-recommends">Who AI actually recommends in healthcare</h2>
-
-        <p>We tested this extensively. Across the major AI platforms, using patient-intent prompts like &ldquo;What is the best hospital in the US?&rdquo;, &ldquo;Who should I see for back pain?&rdquo;, and &ldquo;Best telehealth services&rdquo; &mdash; the same names dominate:</p>
-
-        <div class="overflow-x-auto my-8">
-          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Rank</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Brand / Institution</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Monthly Visits (approx.)</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">AI Mention Rate *</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">1</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Mayo Clinic</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~88 million</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in 90%+ of responses</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">2</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Cleveland Clinic</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~40 million</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~80% of responses</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">3</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">WebMD</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~150 million</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~75% of responses</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">4</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Healthline</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~95 million</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~65% of responses</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">5</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Johns Hopkins Medicine</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~30 million</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~55% of responses</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">6</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">NIH / MedlinePlus</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~70 million (combined)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~50% of responses</td>
-              </tr>
-              <tr class="bg-surface-container-low">
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">&mdash;</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Avg. regional hospital / practice</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">2,000&ndash;50,000</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">&lt;1% of responses</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="text-xs text-slate-muted mt-2 mb-0" id="methodology-note">* AI mention rates based on structured testing across ChatGPT, Perplexity, Claude, and Gemini using standardized industry queries. <a href="../../methodology/" class="underline">Full methodology</a>.</p>
-
-        <p><strong>Local hospitals, clinics, and medical practices are almost never recommended</strong> unless the user specifically names a city and the institution has exceptional regional brand recognition &mdash; think Mass General in Boston or Cedars-Sinai in Los Angeles. Even then, they appear below the national heavyweights.</p>
-
-        <p>For health information queries, the pattern is even more concentrated. AI leans heavily on WebMD, Healthline, Mayo Clinic&rsquo;s patient education library, and NIH/MedlinePlus. These four sources account for the vast majority of AI-generated health information &mdash; leaving thousands of hospital content marketing teams producing material that AI never surfaces.</p>
-
-        <p>This matters because patients don&rsquo;t distinguish between &ldquo;information queries&rdquo; and &ldquo;provider queries.&rdquo; A patient who asks ChatGPT about symptoms naturally follows up with &ldquo;Where should I go for this?&rdquo; &mdash; and the AI recommends the same institutions it cited for the health information.</p>
-
-
-        <div data-reader-pulse-b data-source="healthcare-ai-visibility"></div>
-
-        <h2 id="why-local-invisible">Why your practice is invisible to AI</h2>
-
-        <p>AI chatbots generate recommendations based on patterns in their training data &mdash; billions of web pages, medical literature, news articles, Reddit threads, review sites, and forum discussions. The brands that appear most frequently and authoritatively in that data are the ones AI recommends.</p>
-
-        <p>Consider the math for healthcare:</p>
-
-        <ul>
-          <li><strong>Mayo Clinic</strong> has approximately <strong>88 million monthly website visits</strong> (Similarweb, 2024), is cited in over 170,000 PubMed-indexed research papers, and is mentioned across millions of web pages from news outlets, medical forums, and patient communities.</li>
-          <li><strong>WebMD</strong> receives approximately <strong>150 million monthly visits</strong> and has published over 100,000 medically reviewed health articles since its founding in 1998.</li>
-          <li><strong>The average regional hospital</strong> website receives <strong>20,000&ndash;200,000 monthly visits</strong> (Definitive Healthcare, 2024).</li>
-          <li><strong>The average medical practice</strong> website receives <strong>2,000&ndash;20,000 monthly visits</strong>.</li>
-        </ul>
-
-        <p>That&rsquo;s a 1,000x&ndash;50,000x gap in web presence. And web presence is what AI systems learn from.</p>
-
-        <p>Four specific factors determine whether AI mentions your healthcare brand:</p>
-
-        <ol>
-          <li><strong>Corpus frequency:</strong> How often your institution appears across the web. Mayo Clinic has millions of mentions. A community hospital might have a few thousand. AI recommendation probability is roughly proportional to corpus mention frequency.</li>
-          <li><strong>Medical authority signals:</strong> AI models are trained to be especially cautious with health information (what Google calls YMYL). This means they disproportionately favor institutions with strong medical credibility signals &mdash; academic affiliations, research citations, board certifications mentioned in structured data, and peer-reviewed publications.</li>
-          <li><strong>Source authority:</strong> Mentions in the New England Journal of Medicine, JAMA, or the New York Times carry more weight than mentions on a local health blog. Academic medical centers have a structural advantage here that compounds over time.</li>
-          <li><strong>Content structure:</strong> The Princeton/Georgia Tech GEO study (2023) found that content with statistical citations and clear factual claims was <strong>up to 40% more likely to be cited</strong> by generative AI systems (Aggarwal et al., &ldquo;GEO: Generative Engine Optimization,&rdquo; 2023). Most practice websites are built around &ldquo;schedule an appointment&rdquo; CTAs, not structured, data-rich health content that AI can extract and cite.</li>
-        </ol>
-
-        <p>Most healthcare websites &mdash; from solo practices to mid-size hospital systems &mdash; fail on all four. They have low corpus frequency, limited medical authority signals outside their immediate community, few authoritative third-party mentions, and marketing-heavy content with no structured claims.</p>
-        <!-- METRICUS_MID_CTA -->
-        
-
-
-        <h2 id="ai-health-accuracy">The accuracy problem: what AI gets wrong about healthcare</h2>
-
-        <p>The stakes of AI inaccuracy in healthcare are uniquely high. When AI gets a real estate commission wrong, it costs money. When AI gets medical information wrong, it can cost health outcomes.</p>
-
-        <p>And AI gets healthcare information wrong frequently:</p>
-
-        <ul>
-          <li>A 2023 study published in <strong>JAMA Internal Medicine</strong> found that ChatGPT provided appropriate triage recommendations only <strong>51% of the time</strong> when presented with clinical vignettes, though the quality of its empathetic communication outperformed physician responses.</li>
-          <li>Research from <strong>Ben-Gurion University</strong> (2024) found AI chatbots gave incorrect or potentially harmful medical advice in approximately <strong>30&ndash;40% of cases</strong> involving specific conditions and treatment recommendations.</li>
-          <li>A study in <strong>JAMA Ophthalmology</strong> (2023) found ChatGPT answered ophthalmology board-style questions with only <strong>55.8% accuracy</strong>.</li>
-          <li>The <strong>World Health Organization</strong> issued a January 2024 advisory warning that &ldquo;AI-generated health information may be inaccurate or misleading&rdquo; and urged caution in relying on chatbots for medical decisions.</li>
-        </ul>
-
-        <p>But the accuracy problem isn&rsquo;t limited to medical advice. AI also gets basic <em>institutional facts</em> wrong &mdash; and this is where it directly harms healthcare businesses:</p>
-
-        <h3>Insurance and network information</h3>
-        <p>AI frequently provides <strong>outdated or fabricated insurance network details</strong>. If your hospital recently added or dropped an insurance plan, AI may not reflect the change for months or years. For a patient choosing a provider based on insurance coverage, this is make-or-break information &mdash; and AI gets it wrong often enough to redirect patients to competitors.</p>
-
-        <h3>Physician credentials and specializations</h3>
-        <p>We&rsquo;ve seen AI chatbots <strong>invent physician names</strong>, attribute wrong board certifications, list doctors as practicing at hospitals they left years ago, and merge credentials from different physicians with similar names. A Stanford study on AI hallucination found that medical entity hallucination rates exceeded <strong>20% across all major chatbots</strong> (Stanford HAI, 2024).</p>
-
-        <h3>Service lines and capabilities</h3>
-        <p>AI regularly describes hospital service lines that don&rsquo;t exist, conflates capabilities of different facilities within the same health system, and provides outdated descriptions of telehealth services. If your health system recently launched a new robotic surgery program or specialty clinic, AI likely doesn&rsquo;t know about it.</p>
-
-        <h3>Location and access information</h3>
-        <p>Especially problematic for multi-location health systems: AI may provide <strong>wrong addresses, phone numbers, or hours</strong> for specific clinic locations, or direct patients to closed facilities. Google Business Profile data helps, but AI training data often lags behind real-time directory information by 6&ndash;18 months.</p>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>The compound problem:</strong> Your healthcare organization is either invisible in AI (bad) or mentioned with wrong insurance networks, fabricated physician credentials, or outdated service descriptions (worse). Both cost you patients. The first means they never discover you. The second means they discover you with incorrect information that erodes trust &mdash; or worse, directs them to the wrong facility entirely.
-          </p>
-        </div>
-
-
-        <h2 id="patients-using-ai">Patients are already using AI for health decisions</h2>
-
-        <p>The adoption curve for AI in healthcare information-seeking is steeper than most providers realize:</p>
-
-        <ul>
-          <li><strong>42% of consumers</strong> have used generative AI tools for health-related questions (Accenture 2024 Digital Health Survey).</li>
-          <li><strong>32% of consumers</strong> have used AI chatbots for health information, double the rate from a year prior (Rock Health Consumer Adoption Survey, 2025).</li>
-          <li><strong>65% of Gen Z and Millennials</strong> say they trust AI-generated health information &ldquo;somewhat&rdquo; or &ldquo;a great deal&rdquo; (Deloitte 2024 Health Care Consumer Survey).</li>
-          <li><strong>Over 230 million people</strong> ask health and wellness questions on ChatGPT every week, with 40 million doing so daily (OpenAI, January 2026).</li>
-        </ul>
-
-        <p>The patient journey is changing in ways that directly threaten traditional provider discovery. Consider a typical path:</p>
-
-        <ol>
-          <li>Patient experiences symptoms &rarr; asks ChatGPT &ldquo;What could cause persistent headaches and fatigue?&rdquo;</li>
-          <li>AI provides differential diagnosis citing Mayo Clinic and WebMD</li>
-          <li>Patient asks follow-up: &ldquo;What kind of doctor should I see for this?&rdquo;</li>
-          <li>AI recommends a neurologist and/or endocrinologist, citing Cleveland Clinic as the authority</li>
-          <li>Patient asks: &ldquo;Who is the best neurologist near me?&rdquo;</li>
-          <li>AI either names nationally known specialists or provides generic advice to &ldquo;check Healthgrades or Zocdoc&rdquo; &mdash; <strong>your practice is never mentioned</strong></li>
-        </ol>
-
-        <p>That entire decision chain &mdash; from symptom awareness to provider selection &mdash; now happens within a single AI conversation. The patient never visits Google, never sees your SEO-optimized website, and never encounters your paid search ads.</p>
-
-        <div class="overflow-x-auto my-8">
-          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Patient Behavior</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">2020</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">2024</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">2026 (projected)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Search Google for health info</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">77%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">72%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~60%</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Use AI chatbot for health info</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">0%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">28%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~45%</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Use physician directory (Healthgrades, Zocdoc)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">34%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">38%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~35%</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Ask AI to recommend a provider</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">0%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">14%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~30%</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Use telehealth platform directly</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">11%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">37%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~42%</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p class="text-sm text-slate-muted"><em>Sources: Pew Research Center (2023); Rock Health (2024); Accenture (2024); McKinsey Digital Health Consumer Survey (2024); Metricus projections based on Gartner search decline forecast. Learn more about <a href="../ai-visibility-scores-explained/">how AI visibility is measured</a>.</em></p>
-
-
-        <h2 id="the-money">The $20 billion question: healthcare digital marketing spend</h2>
-
-        <p>The US healthcare industry spent an estimated <strong>$20.3 billion on digital advertising in 2024</strong> (eMarketer/Insider Intelligence). Healthcare and pharma is the fourth-largest digital ad spending vertical in the US, behind retail, financial services, and CPG. That spend includes:</p>
-
-        <ul>
-          <li><strong>Paid search:</strong> Healthcare is among the most expensive Google Ads categories, with average cost-per-click of <strong>$3&ndash;$12 for general health terms</strong> and <strong>$15&ndash;$65+ for high-intent procedure keywords</strong> like &ldquo;knee replacement surgeon near me&rdquo; or &ldquo;best oncologist in [city]&rdquo; (WordStream, 2024).</li>
-          <li><strong>Physician directory advertising:</strong> Healthgrades, Zocdoc, Vitals, and WebMD physician directories collectively generate over <strong>$2 billion annually</strong> from provider advertising and lead generation (IBISWorld, 2024).</li>
-          <li><strong>Hospital system marketing:</strong> The average mid-size hospital system (5&ndash;15 facilities) spends <strong>$5&ndash;15 million annually</strong> on digital marketing (SHSMD/AHA Benchmarking Study, 2024).</li>
-          <li><strong>Telehealth marketing:</strong> Teladoc Health alone spent <strong>$425 million on marketing</strong> in 2023 (Teladoc public filings). Competitors like Amwell, MDLIVE, and Hims &amp; Hers collectively spend hundreds of millions more.</li>
-        </ul>
-
-        <p>Almost none of this $20 billion is optimized for AI chatbot visibility.</p>
-
-        <p>Healthcare organizations have a <strong>$20 billion marketing machine pointed at channels that are declining in importance</strong>. Google search traffic for health queries is being absorbed by AI Overviews. Physician directory traffic is plateauing. And the fastest-growing patient discovery channel &mdash; AI chatbots &mdash; has zero paid ad slots to buy.</p>
-
-        <p>You can&rsquo;t buy your way into a ChatGPT recommendation. You have to earn it through authoritative, structured content and broad third-party citations. And right now, only a handful of institutions are earning it.</p>
-
-
-        <h2 id="telehealth-ai-convergence">Telehealth, healthtech, and the AI convergence</h2>
-
-        <p>The shift to AI-mediated healthcare discovery is colliding with two other megatrends that amplify its impact:</p>
-
-        <h3>Telehealth market explosion</h3>
-        <p>The global telehealth market was valued at <strong>$101.2 billion in 2023</strong> and is projected to reach <strong>$455.3 billion by 2030</strong>, growing at a 26.4% CAGR (Grand View Research, 2024). In the US, <strong>37% of adults</strong> used telehealth services in 2024, up from 11% pre-pandemic (McKinsey, 2024). Telehealth companies are inherently more dependent on digital discovery than traditional practices &mdash; patients find them online or not at all. When AI chatbots don&rsquo;t recommend your telehealth platform, you lose the only discovery channel that matters.</p>
-
-        <h3>Healthcare AI market growth</h3>
-        <p>The global healthcare AI market was valued at <strong>$20.9 billion in 2024</strong> and is projected to reach <strong>$148.4 billion by 2029</strong>, growing at a 48.1% CAGR (MarketsandMarkets, 2024). This includes AI-powered diagnostics, clinical decision support, and patient-facing AI tools. As healthcare companies integrate AI into their own products, they simultaneously become more dependent on external AI systems for patient discovery. The irony: healthtech companies building AI products are often invisible to consumer-facing AI chatbots.</p>
-
-        <h3>Patient expectations are shifting</h3>
-        <p>A 2024 Accenture study found that <strong>62% of patients expect their healthcare provider to offer digital-first experiences</strong>, including AI-powered symptom checkers, chatbot-based scheduling, and virtual triage. Patients who use AI tools in their daily lives increasingly expect healthcare organizations to be visible in those same AI tools. When ChatGPT doesn&rsquo;t know your health system exists, it signals to AI-native patients that you&rsquo;re behind the curve.</p>
-
-        <div class="overflow-x-auto my-8">
-          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Channel</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Visibility Slots</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Paid Option</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Local Provider Chance</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Google Search</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">10 organic + ads</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes (Google Ads)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Moderate &mdash; local pack helps</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Google AI Overviews</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">3&ndash;5 sources cited</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low &mdash; WebMD / Mayo dominate</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">ChatGPT</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">3&ndash;5 recommendations</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Very low &mdash; academic centers only</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Perplexity</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">5&ndash;8 cited sources</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low &mdash; favors high-DA medical sites</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Healthgrades / Zocdoc</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Provider listings within directory</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes (featured profiles)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">High &mdash; but on their platform</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>The convergence of telehealth growth, AI adoption, and shifting patient expectations creates a <strong>narrow window of advantage</strong> for healthcare organizations that address their AI visibility now. As the market grows and more competitors invest in AI visibility, the cost of catching up increases exponentially. The organizations that build AI authority today will compound that advantage as AI adoption accelerates.</p>
-
-
-        <h2 id="what-works">What we found: why some healthcare brands appear and others do not</h2>
-
-        <p>Metricus data across healthcare AI queries shows a stark divide. Organizations with structured clinical authority signals &mdash; published research, Healthgrades profiles with 50+ reviews, active physician directory listings, and Wikipedia entries &mdash; appear in AI responses at 5&ndash;10x the rate of practices without these markers.</p>
-
-        <p>The accuracy dimension compounds the visibility problem. AI chatbots frequently misstate accepted insurance plans, list outdated office hours, confuse providers within the same health system, and cite treatment capabilities that have changed. For healthcare, these are not minor inconveniences &mdash; they are patient safety and compliance concerns.</p>
-
-
-        <h2 id="case-for-auditing">The case for auditing your AI visibility now</h2>
-
-        <p>The global healthcare AI market is projected to reach <strong>$148.4 billion by 2029</strong> (MarketsandMarkets, 2024). The global telehealth market is projected to reach <strong>$455.3 billion by 2030</strong> (Grand View Research, 2024). McKinsey estimates generative AI could create <strong>$200&ndash;360 billion in annual value</strong> for the healthcare industry through clinical and administrative applications. Accenture projects that <strong>AI-augmented patient engagement tools will influence 50%+ of provider-selection decisions</strong> by 2028.</p>
-
-        <p>The healthcare organizations that understand their AI visibility now &mdash; while competitors are still focused exclusively on Google Ads, physician directory placements, and traditional SEO &mdash; will have a structural advantage that compounds over time. Every piece of authoritative clinical content you publish today enters the training data that shapes AI recommendations tomorrow.</p>
-
-        <p>The cost of waiting is measurable. In 2019, only 11% of adults used telehealth. By 2024, that number hit 37%. The adoption curve for AI in healthcare decision-making is following the same trajectory &mdash; and it&rsquo;s happening faster because the infrastructure (ChatGPT, Perplexity, Gemini) already exists and patients are already using it.</p>
-
-        <p>Healthcare is also uniquely vulnerable to the <strong>winner-take-all dynamics</strong> of AI recommendations. Because AI chatbots are trained to be conservative with medical information, they default to the most recognized, most-cited institutions. This creates a reinforcement loop: Mayo Clinic gets recommended, patients visit Mayo Clinic&rsquo;s content, that content gets more citations, AI recommends Mayo Clinic even more. For institutions not already in that loop, breaking in requires deliberate, structured effort. For a parallel case study in another industry, see our analysis of <a href="../b2b-saas-invisible-chatgpt/">why B2B SaaS brands are invisible in ChatGPT</a>.</p>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>The bottom line:</strong> If you&rsquo;re a hospital, health system, medical practice, telehealth platform, or healthtech company that depends on patient discovery &mdash; and in 2026, that&rsquo;s everyone &mdash; you need to know what AI is saying about you. Not next quarter. Now.
-          </p>
-        </div>
-
-
-        <p class="text-sm text-slate-muted mt-8"><strong>Sources:</strong> Pew Research Center (2023); Rock Health Digital Health Consumer Survey (2024); Accenture Digital Health Survey (2024); Deloitte Health Care Consumer Survey (2024); Gartner search prediction (Feb 2024); BrightEdge AI Overviews research (2024); JAMA Internal Medicine ChatGPT triage study (2023); Ben-Gurion University AI medical advice study (2024); JAMA Ophthalmology ChatGPT accuracy study (2023); Stanford HAI hallucination report (2024); WHO advisory on AI health information (Jan 2024); OpenAI usage data via The Information (2024); Similarweb traffic estimates (2024); eMarketer US healthcare digital ad spend (2024); WordStream CPC benchmarks (2024); Grand View Research telehealth market report (2024); MarketsandMarkets healthcare AI report (2024); McKinsey healthcare GenAI value estimate (2024); Definitive Healthcare hospital web traffic data (2024); SHSMD/AHA hospital marketing benchmarking (2024); Teladoc Health public filings (2023); IBISWorld physician directory market data (2024); Princeton/Georgia Tech GEO study (2023). AI mention rates based on Metricus internal testing across the major AI platforms (2026). Learn more about <a href="../ai-visibility-scores-explained/">how we measure AI visibility</a>.</p>
-
-        </div>
-      <!-- End Article Body -->
-
-      <p class="text-sm text-slate-muted mt-8 border-t border-[#E2E8F0] pt-6">Find out what AI is getting wrong about your healthcare brand. <a href="/ai-visibility-optimizer-tool/" class="text-primary hover:underline">Open the tool</a>. Or browse our <a href="/geo-knowledge-base/" class="text-primary hover:underline">GEO Knowledge Base</a> for 81 research clusters on AI visibility strategy.</p>
-
-      <!-- ========== ARTICLE CTA ========== -->
-      <div class="border-t border-outline-variant/30 mt-16 pt-10" data-cta="tool">
-        <h2 class="text-2xl font-semibold text-on-surface mb-2">Put in a page.</h2>
-        <p class="text-on-surface-variant mb-5 max-w-xl">See what an AI assistant answers about your page, which passages caused it, and a rewrite for each one. Free, no signup.</p>
-        <form class="flex flex-col sm:flex-row gap-2 max-w-xl" action="/ai-visibility-optimizer-tool/" method="get">
-          <label class="sr-only" for="cta-url">Address of the page to check</label>
-          <input id="cta-url" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="your-site.com/page" required class="flex-1 min-w-0 px-4 py-3 border border-outline-variant bg-white text-on-surface">
-          <button type="submit" class="bg-primary text-on-primary font-semibold px-6 py-3 hover:bg-primary-dim whitespace-nowrap">Start optimizing</button>
-        </form>
-      </div>
-
-      <!-- ========== CITE THIS ARTICLE ========== -->
-      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
-        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
-          <cite class="not-italic"><a href="https://metricusapp.com/blog/healthcare-ai-visibility/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; AI Visibility for Healthcare: Why ChatGPT Recommends Mayo Clinic While Your Practice Doesn&rsquo;t Exist</a></cite>
-        </p>
-      </footer>
-
-    </article>
-
-
-    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
-      <p class="text-xs text-slate-muted font-semibold mb-6">Go deeper</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <a href="/geo-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">GEO Knowledge Base</p>
-          <p class="text-sm text-on-surface-variant mt-1">81 research clusters on AI visibility and brand monitoring</p>
-        </a>
-        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
-          <p class="text-sm text-on-surface-variant mt-1">48 clusters on fixing AI accuracy issues and hallucinations</p>
-        </a>
-      </div>
-    </section>
-
-    <!-- ========== RELATED POSTS ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
-      <p class="text-xs text-slate-muted font-semibold mb-8">Related articles</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        <a href="../ai-visibility-action-plan/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Playbook</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            How to Turn AI Visibility Data Into an Action Plan
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            The 5-step framework for turning your AI audit findings into specific, prioritized actions.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../fix-ai-brand-hallucinations/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Research</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            AI Is Getting Facts Wrong About Your Brand
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            72% of brands have factual errors in AI responses. Here&rsquo;s a 4-step process to audit and fix them.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-                <a href="../ai-visibility-how-brands-show-up/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Research</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            What Is AI Visibility and Why Does It Matter?
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            How brands appear in AI chatbot responses &mdash; and what determines who gets recommended.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
 </div>
-    </section>
-
-  </main>
-
-
-  <!-- ========== FOOTER ========== -->
-  <!-- Site Footer -->
-  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-on-surface-variant">
-      <span class="text-on-surface font-semibold">Metricus</span>
-      <a href="/ai-visibility-optimizer-tool/" class="hover:text-on-surface">Open the tool</a>
-      <a href="/blog/" class="hover:text-on-surface">Learn</a>
-      <a href="/methodology/" class="hover:text-on-surface">How it works</a>
-      <a href="/results/" class="hover:text-on-surface">Results</a>
-      <a href="/for-agencies/" class="hover:text-on-surface">For agencies</a>
-      <a href="/about/" class="hover:text-on-surface">About</a>
-      <a href="/press/" class="hover:text-on-surface">Press</a>
-      <a href="/support/" class="hover:text-on-surface">Support</a>
-      <a href="/privacy-policy/" class="hover:text-on-surface">Privacy</a>
-      <a href="/terms-of-service/" class="hover:text-on-surface">Terms</a>
-      <a href="mailto:metricusapp@gmail.com" class="hover:text-on-surface">Contact</a>
-      <span class="ml-auto">&copy; 2026 Metricus</span>
-    </div>
-  </footer>
+<p><strong>Short answer:</strong> When patients ask AI for healthcare recommendations, WebMD, Healthline, and Mayo Clinic dominate the responses. Most private practices and regional health systems are invisible. Metricus shows the answer AI gives when patients ask for the care you offer, with every provider it names, for free.</p>
+<nav class="toc" aria-label="In this article"><p>In this article</p><ol>
+<li><a href="#the-shift">The shift: from “Dr. Google” to “ask the AI”</a></li>
+<li><a href="#who-ai-recommends">Who AI actually recommends in healthcare</a></li>
+<li><a href="#why-local-invisible">Why your practice is invisible to AI</a></li>
+<li><a href="#ai-health-accuracy">The accuracy problem: what AI gets wrong about healthcare</a></li>
+<li><a href="#patients-using-ai">Patients are already using AI for health decisions</a></li>
+<li><a href="#the-money">The $20 billion question: healthcare digital marketing spend</a></li>
+<li><a href="#telehealth-ai-convergence">Telehealth, healthtech, and the AI convergence</a></li>
+<li><a href="#what-works">Why some healthcare brands appear and others do not</a></li>
+<li><a href="#case-for-auditing">The case for auditing your AI visibility now</a></li>
+</ol></nav>
+<h2 id="the-shift">The shift: from “Dr. Google” to “ask the AI”</h2>
+<p>For two decades, the healthcare industry adapted to one reality: patients Google their symptoms, Google their doctors, and Google their treatment options before making decisions. The entire healthcare digital marketing ecosystem — SEO, paid search, physician directory listings, patient review management — was built around this behavior.</p>
+<p>That ecosystem is breaking.</p>
+<p>Gartner forecast in February 2024 that <strong>traditional search engine volume will drop 25% by 2026</strong> due to AI chatbots and virtual agents. ChatGPT surpassed 5.8 billion monthly visits by mid-2025, making it one of the top 10 most-visited sites on the planet (Similarweb, 2025). Perplexity AI grew to over 100 million monthly visits by Q4 2024. Google itself now shows AI Overviews for an estimated <strong>84% of informational queries</strong> (BrightEdge, 2024) — and health queries are among the most heavily affected categories, given their inherently informational nature.</p>
+<p>The healthcare implications are uniquely severe. Google has long classified health queries as YMYL (“Your Money or Your Life”) and applied higher quality standards. But AI chatbots have no such guardrails in practice. Rock Health’s 2025 Consumer Adoption Survey found that <strong>32% of consumers have used AI chatbots for health-related information</strong>, double the 16% from a year prior. Among Gen Z and Millennials, adoption exceeds 45% (Rock Health, 2025).</p>
+<p>When a patient asks ChatGPT “What’s the best hospital for knee replacement?” or “Who is the best cardiologist near me?”, the answer doesn’t link to your practice website. The traditional funnel — Google search → physician directory → practice website → appointment booking — is being bypassed entirely.</p>
+<h2 id="who-ai-recommends">Who AI actually recommends in healthcare</h2>
+<p>Ask the major AI platforms patient-intent questions like “What is the best hospital in the US?”, “Who should I see for back pain?”, and “Best telehealth services” and the same names dominate:</p>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Brand / Institution</th>
+<th>Monthly Visits (approx.)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Mayo Clinic</td>
+<td>~88 million</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Cleveland Clinic</td>
+<td>~40 million</td>
+</tr>
+<tr>
+<td>3</td>
+<td>WebMD</td>
+<td>~150 million</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Healthline</td>
+<td>~95 million</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Johns Hopkins Medicine</td>
+<td>~30 million</td>
+</tr>
+<tr>
+<td>6</td>
+<td>NIH / MedlinePlus</td>
+<td>~70 million (combined)</td>
+</tr>
+<tr>
+<td>—</td>
+<td>Avg. regional hospital / practice</td>
+<td>2,000–50,000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Local hospitals, clinics, and medical practices are almost never recommended</strong> unless the user specifically names a city and the institution has exceptional regional brand recognition — think Mass General in Boston or Cedars-Sinai in Los Angeles. Even then, they appear below the national heavyweights.</p>
+<p>For health information queries, the pattern is even more concentrated. AI leans heavily on WebMD, Healthline, Mayo Clinic’s patient education library, and NIH/MedlinePlus. These four sources account for the vast majority of AI-generated health information — leaving thousands of hospital content marketing teams producing material that AI never surfaces.</p>
+<p>This matters because patients don’t distinguish between “information queries” and “provider queries.” A patient who asks ChatGPT about symptoms naturally follows up with “Where should I go for this?” — and the AI recommends the same institutions it cited for the health information.</p>
+<div data-reader-pulse-b="" data-source="healthcare-ai-visibility"></div>
+<h2 id="why-local-invisible">Why your practice is invisible to AI</h2>
+<p>AI chatbots generate recommendations based on patterns in their training data — billions of web pages, medical literature, news articles, Reddit threads, review sites, and forum discussions. The brands that appear most frequently and authoritatively in that data are the ones AI recommends.</p>
+<p>Consider the math for healthcare:</p>
+<ul>
+<li><strong>Mayo Clinic</strong> has approximately <strong>88 million monthly website visits</strong> (Similarweb, 2024), is cited in over 170,000 PubMed-indexed research papers, and is mentioned across millions of web pages from news outlets, medical forums, and patient communities.</li>
+<li><strong>WebMD</strong> receives approximately <strong>150 million monthly visits</strong> and has published over 100,000 medically reviewed health articles since its founding in 1998.</li>
+<li><strong>The average regional hospital</strong> website receives <strong>20,000–200,000 monthly visits</strong> (Definitive Healthcare, 2024).</li>
+<li><strong>The average medical practice</strong> website receives <strong>2,000–20,000 monthly visits</strong>.</li>
+</ul>
+<p>That’s a 1,000x–50,000x gap in web presence. And web presence is what AI systems learn from.</p>
+<p>Four specific factors determine whether AI mentions your healthcare brand:</p>
+<ol>
+<li><strong>Corpus frequency:</strong> How often your institution appears across the web. Mayo Clinic has millions of mentions. A community hospital might have a few thousand. AI recommendation probability is roughly proportional to corpus mention frequency.</li>
+<li><strong>Medical authority signals:</strong> AI models are trained to be especially cautious with health information (what Google calls YMYL). This means they disproportionately favor institutions with strong medical credibility signals — academic affiliations, research citations, board certifications mentioned in structured data, and peer-reviewed publications.</li>
+<li><strong>Source authority:</strong> Mentions in the New England Journal of Medicine, JAMA, or the New York Times carry more weight than mentions on a local health blog. Academic medical centers have a structural advantage here that compounds over time.</li>
+<li><strong>Content structure:</strong> The Princeton/Georgia Tech GEO study (2023) found that content with statistical citations and clear factual claims was <strong>up to 40% more likely to be cited</strong> by generative AI systems (Aggarwal et al., “GEO: Generative Engine Optimization,” 2023). Most practice websites are built around “schedule an appointment” CTAs, not structured, data-rich health content that AI can extract and cite.</li>
+</ol>
+<p>Most healthcare websites — from solo practices to mid-size hospital systems — fail on all four. They have low corpus frequency, limited medical authority signals outside their immediate community, few authoritative third-party mentions, and marketing-heavy content with no structured claims.</p>
+<h2 id="ai-health-accuracy">The accuracy problem: what AI gets wrong about healthcare</h2>
+<p>The stakes of AI inaccuracy in healthcare are uniquely high. When AI gets a real estate commission wrong, it costs money. When AI gets medical information wrong, it can cost health outcomes.</p>
+<p>And AI gets healthcare information wrong frequently:</p>
+<ul>
+<li>A 2023 study published in <strong>JAMA Internal Medicine</strong> found that ChatGPT provided appropriate triage recommendations only <strong>51% of the time</strong> when presented with clinical vignettes, though the quality of its empathetic communication outperformed physician responses.</li>
+<li>Research from <strong>Ben-Gurion University</strong> (2024) found AI chatbots gave incorrect or potentially harmful medical advice in approximately <strong>30–40% of cases</strong> involving specific conditions and treatment recommendations.</li>
+<li>A study in <strong>JAMA Ophthalmology</strong> (2023) found ChatGPT answered ophthalmology board-style questions with only <strong>55.8% accuracy</strong>.</li>
+<li>The <strong>World Health Organization</strong> issued a January 2024 advisory warning that “AI-generated health information may be inaccurate or misleading” and urged caution in relying on chatbots for medical decisions.</li>
+</ul>
+<p>But the accuracy problem isn’t limited to medical advice. AI also gets basic <em>institutional facts</em> wrong — and this is where it directly harms healthcare businesses:</p>
+<h3>Insurance and network information</h3>
+<p>AI frequently provides <strong>outdated or fabricated insurance network details</strong>. If your hospital recently added or dropped an insurance plan, AI may not reflect the change for months or years. For a patient choosing a provider based on insurance coverage, this is make-or-break information — and AI gets it wrong often enough to redirect patients to competitors.</p>
+<h3>Physician credentials and specializations</h3>
+<p>AI chatbots can <strong>invent physician names</strong>, attribute wrong board certifications, list doctors as practicing at hospitals they left years ago, and merge credentials from different physicians with similar names. A Stanford study on AI hallucination found that medical entity hallucination rates exceeded <strong>20% across all major chatbots</strong> (Stanford HAI, 2024).</p>
+<h3>Service lines and capabilities</h3>
+<p>AI regularly describes hospital service lines that don’t exist, conflates capabilities of different facilities within the same health system, and provides outdated descriptions of telehealth services. If your health system recently launched a new robotic surgery program or specialty clinic, AI likely doesn’t know about it.</p>
+<h3>Location and access information</h3>
+<p>Especially problematic for multi-location health systems: AI may provide <strong>wrong addresses, phone numbers, or hours</strong> for specific clinic locations, or direct patients to closed facilities. Google Business Profile data helps, but AI training data often lags behind real-time directory information by 6–18 months.</p>
+<div class="note">
+<p>
+<strong>The compound problem:</strong> Your healthcare organization is either invisible in AI (bad) or mentioned with wrong insurance networks, fabricated physician credentials, or outdated service descriptions (worse). Both cost you patients. The first means they never discover you. The second means they discover you with incorrect information that erodes trust — or worse, directs them to the wrong facility entirely.
+          </p>
+</div>
+<h2 id="patients-using-ai">Patients are already using AI for health decisions</h2>
+<p>The adoption curve for AI in healthcare information-seeking is steeper than most providers realize:</p>
+<ul>
+<li><strong>42% of consumers</strong> have used generative AI tools for health-related questions (Accenture 2024 Digital Health Survey).</li>
+<li><strong>32% of consumers</strong> have used AI chatbots for health information, double the rate from a year prior (Rock Health Consumer Adoption Survey, 2025).</li>
+<li><strong>65% of Gen Z and Millennials</strong> say they trust AI-generated health information “somewhat” or “a great deal” (Deloitte 2024 Health Care Consumer Survey).</li>
+<li><strong>Over 230 million people</strong> ask health and wellness questions on ChatGPT every week, with 40 million doing so daily (OpenAI, January 2026).</li>
+</ul>
+<p>The patient journey is changing in ways that directly threaten traditional provider discovery. Consider a typical path:</p>
+<ol>
+<li>Patient experiences symptoms → asks ChatGPT “What could cause persistent headaches and fatigue?”</li>
+<li>AI provides differential diagnosis citing Mayo Clinic and WebMD</li>
+<li>Patient asks follow-up: “What kind of doctor should I see for this?”</li>
+<li>AI recommends a neurologist and/or endocrinologist, citing Cleveland Clinic as the authority</li>
+<li>Patient asks: “Who is the best neurologist near me?”</li>
+<li>AI either names nationally known specialists or provides generic advice to “check Healthgrades or Zocdoc” — <strong>your practice is never mentioned</strong></li>
+</ol>
+<p>That entire decision chain — from symptom awareness to provider selection — now happens within a single AI conversation. The patient never visits Google, never sees your SEO-optimized website, and never encounters your paid search ads.</p>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th>Patient Behavior</th>
+<th>2020</th>
+<th>2024</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Search Google for health info</td>
+<td>77%</td>
+<td>72%</td>
+</tr>
+<tr>
+<td>Use AI chatbot for health info</td>
+<td>0%</td>
+<td>28%</td>
+</tr>
+<tr>
+<td>Use physician directory (Healthgrades, Zocdoc)</td>
+<td>34%</td>
+<td>38%</td>
+</tr>
+<tr>
+<td>Ask AI to recommend a provider</td>
+<td>0%</td>
+<td>14%</td>
+</tr>
+<tr>
+<td>Use telehealth platform directly</td>
+<td>11%</td>
+<td>37%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Sources: Pew Research Center (2023); Rock Health (2024); Accenture (2024); McKinsey Digital Health Consumer Survey (2024). Learn more about <a href="../ai-visibility-scores-explained/">how AI visibility is measured</a>.</em></p>
+<h2 id="the-money">The $20 billion question: healthcare digital marketing spend</h2>
+<p>The US healthcare industry spent an estimated <strong>$20.3 billion on digital advertising in 2024</strong> (eMarketer/Insider Intelligence). Healthcare and pharma is the fourth-largest digital ad spending vertical in the US, behind retail, financial services, and CPG. That spend includes:</p>
+<ul>
+<li><strong>Paid search:</strong> Healthcare is among the most expensive Google Ads categories, with average cost-per-click of <strong>$3–$12 for general health terms</strong> and <strong>$15–$65+ for high-intent procedure keywords</strong> like “knee replacement surgeon near me” or “best oncologist in [city]” (WordStream, 2024).</li>
+<li><strong>Physician directory advertising:</strong> Healthgrades, Zocdoc, Vitals, and WebMD physician directories collectively generate over <strong>$2 billion annually</strong> from provider advertising and lead generation (IBISWorld, 2024).</li>
+<li><strong>Hospital system marketing:</strong> The average mid-size hospital system (5–15 facilities) spends <strong>$5–15 million annually</strong> on digital marketing (SHSMD/AHA Benchmarking Study, 2024).</li>
+<li><strong>Telehealth marketing:</strong> Teladoc Health alone spent <strong>$425 million on marketing</strong> in 2023 (Teladoc public filings). Competitors like Amwell, MDLIVE, and Hims &amp; Hers collectively spend hundreds of millions more.</li>
+</ul>
+<p>Almost none of this $20 billion is optimized for AI chatbot visibility.</p>
+<p>Healthcare organizations have a <strong>$20 billion marketing machine pointed at channels that are declining in importance</strong>. Google search traffic for health queries is being absorbed by AI Overviews. Physician directory traffic is plateauing. And the fastest-growing patient discovery channel — AI chatbots — has zero paid ad slots to buy.</p>
+<p>You can’t buy your way into a ChatGPT recommendation. You have to earn it through authoritative, structured content and broad third-party citations. And right now, only a handful of institutions are earning it.</p>
+<h2 id="telehealth-ai-convergence">Telehealth, healthtech, and the AI convergence</h2>
+<p>The shift to AI-mediated healthcare discovery is colliding with two other megatrends that amplify its impact:</p>
+<h3>Telehealth market explosion</h3>
+<p>The global telehealth market was valued at <strong>$101.2 billion in 2023</strong> and is projected to reach <strong>$455.3 billion by 2030</strong>, growing at a 26.4% CAGR (Grand View Research, 2024). In the US, <strong>37% of adults</strong> used telehealth services in 2024, up from 11% pre-pandemic (McKinsey, 2024). Telehealth companies are inherently more dependent on digital discovery than traditional practices — patients find them online or not at all. When AI chatbots don’t recommend your telehealth platform, you lose the only discovery channel that matters.</p>
+<h3>Healthcare AI market growth</h3>
+<p>The global healthcare AI market was valued at <strong>$20.9 billion in 2024</strong> and is projected to reach <strong>$148.4 billion by 2029</strong>, growing at a 48.1% CAGR (MarketsandMarkets, 2024). This includes AI-powered diagnostics, clinical decision support, and patient-facing AI tools. As healthcare companies integrate AI into their own products, they simultaneously become more dependent on external AI systems for patient discovery. The irony: healthtech companies building AI products are often invisible to consumer-facing AI chatbots.</p>
+<h3>Patient expectations are shifting</h3>
+<p>A 2024 Accenture study found that <strong>62% of patients expect their healthcare provider to offer digital-first experiences</strong>, including AI-powered symptom checkers, chatbot-based scheduling, and virtual triage. Patients who use AI tools in their daily lives increasingly expect healthcare organizations to be visible in those same AI tools. When ChatGPT doesn’t know your health system exists, it signals to AI-native patients that you’re behind the curve.</p>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Visibility Slots</th>
+<th>Paid Option</th>
+<th>Local Provider Chance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google Search</td>
+<td>10 organic + ads</td>
+<td>Yes (Google Ads)</td>
+<td>Moderate — local pack helps</td>
+</tr>
+<tr>
+<td>Google AI Overviews</td>
+<td>3–5 sources cited</td>
+<td>No</td>
+<td>Low — WebMD / Mayo dominate</td>
+</tr>
+<tr>
+<td>ChatGPT</td>
+<td>3–5 recommendations</td>
+<td>No</td>
+<td>Very low — academic centers only</td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td>5–8 cited sources</td>
+<td>No</td>
+<td>Low — favors high-DA medical sites</td>
+</tr>
+<tr>
+<td>Healthgrades / Zocdoc</td>
+<td>Provider listings within directory</td>
+<td>Yes (featured profiles)</td>
+<td>High — but on their platform</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The convergence of telehealth growth, AI adoption, and shifting patient expectations creates a <strong>narrow window of advantage</strong> for healthcare organizations that address their AI visibility now. As the market grows and more competitors invest in AI visibility, the cost of catching up increases exponentially. The organizations that build AI authority today will compound that advantage as AI adoption accelerates.</p>
+<h2 id="what-works">Why some healthcare brands appear and others do not</h2>
+<p>Organizations with structured clinical authority signals — published research, Healthgrades profiles with 50+ reviews, active physician directory listings, and Wikipedia entries — tend to appear in AI responses far more often than practices without these markers.</p>
+<p>The accuracy dimension compounds the visibility problem. AI chatbots frequently misstate accepted insurance plans, list outdated office hours, confuse providers within the same health system, and cite treatment capabilities that have changed. For healthcare, these are not minor inconveniences — they are patient safety and compliance concerns.</p>
+<h2 id="case-for-auditing">The case for auditing your AI visibility now</h2>
+<p>The global healthcare AI market is projected to reach <strong>$148.4 billion by 2029</strong> (MarketsandMarkets, 2024). The global telehealth market is projected to reach <strong>$455.3 billion by 2030</strong> (Grand View Research, 2024). McKinsey estimates generative AI could create <strong>$200–360 billion in annual value</strong> for the healthcare industry through clinical and administrative applications. Accenture projects that <strong>AI-augmented patient engagement tools will influence 50%+ of provider-selection decisions</strong> by 2028.</p>
+<p>The healthcare organizations that understand their AI visibility now — while competitors are still focused exclusively on Google Ads, physician directory placements, and traditional SEO — will have a structural advantage that compounds over time. Every piece of authoritative clinical content you publish today enters the training data that shapes AI recommendations tomorrow.</p>
+<p>The cost of waiting is measurable. In 2019, only 11% of adults used telehealth. By 2024, that number hit 37%. The adoption curve for AI in healthcare decision-making is following the same trajectory — and it’s happening faster because the infrastructure (ChatGPT, Perplexity, Gemini) already exists and patients are already using it.</p>
+<p>Healthcare is also uniquely vulnerable to the <strong>winner-take-all dynamics</strong> of AI recommendations. Because AI chatbots are trained to be conservative with medical information, they default to the most recognized, most-cited institutions. This creates a reinforcement loop: Mayo Clinic gets recommended, patients visit Mayo Clinic’s content, that content gets more citations, AI recommends Mayo Clinic even more. For institutions not already in that loop, breaking in requires deliberate, structured effort. For a parallel case study in another industry, see our analysis of <a href="../b2b-saas-invisible-chatgpt/">why B2B SaaS brands are invisible in ChatGPT</a>.</p>
+<div class="note">
+<p>
+<strong>The bottom line:</strong> If you’re a hospital, health system, medical practice, telehealth platform, or healthtech company that depends on patient discovery — and in 2026, that’s everyone — you need to know what AI is saying about you. Not next quarter. Now.
+          </p>
+</div>
+<p><strong>Sources:</strong> Pew Research Center (2023); Rock Health Digital Health Consumer Survey (2024); Accenture Digital Health Survey (2024); Deloitte Health Care Consumer Survey (2024); Gartner search prediction (Feb 2024); BrightEdge AI Overviews research (2024); JAMA Internal Medicine ChatGPT triage study (2023); Ben-Gurion University AI medical advice study (2024); JAMA Ophthalmology ChatGPT accuracy study (2023); Stanford HAI hallucination report (2024); WHO advisory on AI health information (Jan 2024); OpenAI usage data via The Information (2024); Similarweb traffic estimates (2024); eMarketer US healthcare digital ad spend (2024); WordStream CPC benchmarks (2024); Grand View Research telehealth market report (2024); MarketsandMarkets healthcare AI report (2024); McKinsey healthcare GenAI value estimate (2024); Definitive Healthcare hospital web traffic data (2024); SHSMD/AHA hospital marketing benchmarking (2024); Teladoc Health public filings (2023); IBISWorld physician directory market data (2024); Princeton/Georgia Tech GEO study (2023). Learn more about <a href="../ai-visibility-scores-explained/">how AI visibility is measured</a>.</p>
+<p>Browse our <a href="/geo-knowledge-base/">GEO Knowledge Base</a> for 81 research clusters on AI visibility strategy.</p>
+<h2 id="faq">Frequently asked questions</h2>
+<h3>Why does ChatGPT recommend Mayo Clinic and Cleveland Clinic instead of local medical practices?</h3>
+<p>AI chatbots like ChatGPT generate recommendations based on training data scraped from the web. Mayo Clinic receives approximately 88 million monthly visits and has millions of citations across medical literature, news, and forums. The average local medical practice receives 2,000-20,000 monthly visits. This 5,000x+ gap in web presence directly translates into AI 'mindshare' -- the brands with the most mentions, backlinks, and authoritative content across the training corpus are the ones AI recommends. Additionally, AI models are trained to prioritize medically conservative recommendations, which further favors nationally recognized academic medical centers.</p>
+<h3>How many patients use AI chatbots to find healthcare providers or get health information?</h3>
+<p>According to a 2024 Accenture survey, approximately 42% of consumers have used generative AI tools like ChatGPT for health-related questions. A Rock Health survey found that 28% of consumers used AI tools for health information in 2024, up from 11% in 2023. Younger demographics show even higher adoption: over 50% of adults aged 18-34 have tried AI chatbots for health queries. Gartner projects traditional search volume will drop 25% by 2026 due to AI chatbots, and healthcare informational queries are among the most affected categories.</p>
+<h3>Is it dangerous when patients use AI chatbots for medical information?</h3>
+<p>There are documented risks. A 2023 study published in JAMA Internal Medicine found that ChatGPT provided accurate triage advice only 51% of the time. Research from Ben-Gurion University (2024) found that AI chatbots gave incorrect medical advice in approximately 30-40% of cases when asked about specific conditions. The FDA does not regulate AI chatbots as medical devices in most conversational use cases. However, the bigger risk for healthcare providers is reputational: AI may cite outdated insurance networks, wrong specialties, fabricated physician credentials, or incorrect facility information -- directing patients elsewhere based on false data.</p>
+<h3>How can hospitals and medical practices improve their AI visibility?</h3>
+<p>Healthcare organizations can improve AI visibility by: (1) auditing what AI currently says about them across the major AI platforms, (2) publishing data-rich clinical content with specific statistics, outcomes data, and structured claims that AI can cite, (3) building citations on authoritative third-party sources like Healthgrades, Vitals, WebMD physician directories, and medical association listings, (4) implementing MedicalOrganization, Physician, and Hospital schema markup, and (5) correcting factual errors at their source.</p>
+<p class="cite">Cite as: <a href="https://metricusapp.com/blog/healthcare-ai-visibility/">Metricus — AI Visibility for Healthcare: Why ChatGPT Recommends Mayo Clinic While Your Practice Doesn’t Exist</a></p>
+<section class="related" aria-labelledby="related-knowledge-bases"><h2 id="related-knowledge-bases">Knowledge bases</h2><ul><li><a href="/geo-knowledge-base/">GEO Knowledge Base</a><p>81 research clusters on AI visibility and brand monitoring</p></li><li><a href="/brand-accuracy-knowledge-base/">AI Brand Accuracy Guide</a><p>48 clusters on fixing AI accuracy issues and hallucinations</p></li></ul></section>
+<section class="related" aria-labelledby="related-related-articles"><h2 id="related-related-articles">Related articles</h2><ul><li><a href="/blog/ai-visibility-action-plan/">How to Turn AI Visibility Data Into an Action Plan</a><p>The 5-step framework for turning your AI audit findings into specific, prioritized actions.</p></li><li><a href="/blog/fix-ai-brand-hallucinations/">AI Is Getting Facts Wrong About Your Brand</a><p>Why AI gets facts about brands wrong, and a 4-step process to audit and fix them.</p></li><li><a href="/blog/ai-visibility-how-brands-show-up/">What Is AI Visibility and Why Does It Matter?</a><p>How brands appear in AI chatbot responses — and what determines who gets recommended.</p></li></ul></section>
+<!-- metricus:ask -->
+<section class="ask-cta" aria-labelledby="ask-cta-h"><h2 id="ask-cta-h">What do your customers ask AI?</h2><form class="chatbox" action="/" method="get"><input class="input" type="text" name="q" maxlength="600" autocomplete="off" required placeholder="Type what people would ask AI&hellip;" aria-labelledby="ask-cta-h"><button class="send" type="submit" aria-label="Ask AI" title="Ask AI"><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V6M6 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form></section>
+<!-- /metricus:ask -->
+</main>
+<!-- metricus:footer -->
+<footer class="foot"><nav aria-label="Site"><a href="/blog/">Blog</a><a href="/geo-knowledge-base/">Knowledge base</a><a href="/results/">Results</a><a href="/about/">About</a><a href="/press/">Press</a><a href="/support/">Support</a><a href="/privacy-policy/">Privacy</a><a href="/terms-of-service/">Terms</a><a href="mailto:metricusapp@gmail.com">Contact</a></nav><p>&copy; 2026 Metricus</p></footer>
+<!-- /metricus:footer -->
+<script src="/js/reader-pulse-b.js" defer></script>
 </body>
 </html>

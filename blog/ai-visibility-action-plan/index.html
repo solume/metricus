@@ -1,651 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How to Turn AI Visibility Data Into an Actual Action Plan | Metricus</title>
-  <meta name="description" content="Most AI visibility tools give you a score and leave you stuck. Here's how to turn that data into actions that change how AI describes your brand.">
-  <meta property="og:title" content="How to Turn AI Visibility Data Into an Actual Action Plan">
-  <meta property="og:description" content="Most tools give you a score and leave you stuck. Here's the 5-step process to turn AI visibility data into actions that change how AI describes your brand.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://metricusapp.com/blog/ai-visibility-action-plan/">
-  <meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="How to Turn AI Visibility Data Into an Actual Action Plan | Metricus">
-  <meta name="twitter:description" content="Most AI visibility tools give you a score and leave you stuck. Here's how to turn that data into actions that change how AI describes your brand.">
-  <meta name="twitter:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <link rel="canonical" href="https://metricusapp.com/blog/ai-visibility-action-plan/">
-
-  <!-- Google Tag Manager -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w70oz7g1k3");
-  </script>
-
-
-  <!-- Google Fonts -->
-
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#515F74',
-            'primary-hover': '#1E293B',
-            'on-primary': '#f6f7ff',
-            'on-primary-fixed': '#324054',
-            'primary-dim': '#455368',
-            surface: '#f7f9fb',
-            'surface-container-low': '#f0f4f7',
-            'surface-container': '#e8eff3',
-            'surface-container-lowest': '#ffffff',
-            'surface-container-highest': '#d9e4ea',
-            'surface-container-high': '#e1e9ee',
-            'surface-variant': '#d9e4ea',
-            'on-surface': '#2a3439',
-            'on-surface-variant': '#566166',
-            outline: '#717c82',
-            'outline-variant': '#a9b4b9',
-            'slate-text': '#0F172A',
-            'slate-muted': '#64748B',
-            'slate-accent': '#475569',
-          },
-          fontFamily: {
-            display: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            body: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            headline: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            label: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-          },
-          borderRadius: {
-            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
-            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
-            full: '0.75rem',
-          },
-        },
-      },
-    }
-  </script>
-
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: #ffffff;
-      color: #0F172A;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .font-display { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-headline { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-body-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-
-    .editorial-btn {
-      transition: background-color 150ms ease-in-out, transform 150ms ease;
-    }
-    .editorial-btn:hover {
-      background-color: #1E293B;
-    }.blog-card {
-      transition: transform 200ms ease, background-color 200ms ease;
-    }
-    .blog-card:hover {
-      transform: translateY(-2px);
-      background-color: #f7f9fb;
-    }
-
-    .article-body h2 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.75rem;
-      line-height: 1.2;
-      color: #0F172A;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-    }
-    @media (min-width: 768px) {
-      .article-body h2 {
-        font-size: 2rem;
-      }
-    }
-    .article-body h3 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      line-height: 1.3;
-      color: #0F172A;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    .article-body p {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-    }
-    .article-body ul, .article-body ol {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-      padding-left: 1.5rem;
-    }
-    .article-body ul { list-style-type: disc; }
-    .article-body ol { list-style-type: decimal; }
-    .article-body li { margin-bottom: 0.5rem; }
-    .article-body blockquote {
-      border-left: 2px solid #334155;
-      padding-left: 1.5rem;
-      font-style: italic;
-      color: #475569;
-      font-size: 1.125rem;
-      line-height: 1.75;
-      margin: 2rem 0;
-    }
-    .article-body a {
-      color: #334155;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .article-body a:hover {
-      color: #1E293B;
-    }
-  </style>
-
-  <!-- JSON-LD BlogPosting -->
-  <script type="application/ld+json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Turn AI Visibility Data Into an Actual Action Plan | Metricus</title>
+<meta name="description" content="Most AI visibility tools give you a score and leave you stuck. Here&#x27;s how to turn that data into actions that change how AI describes your brand.">
+<link rel="canonical" href="https://metricusapp.com/blog/ai-visibility-action-plan/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Metricus">
+<meta property="og:url" content="https://metricusapp.com/blog/ai-visibility-action-plan/">
+<meta property="og:title" content="How to Turn AI Visibility Data Into an Actual Action Plan">
+<meta property="og:description" content="Most tools give you a score and leave you stuck. Here&#x27;s the 5-step process to turn AI visibility data into actions that change how AI describes your brand.">
+<meta property="og:image" content="https://metricusapp.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Metricus: see what AI answers when your customers ask for what you offer.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Turn AI Visibility Data Into an Actual Action Plan | Metricus">
+<meta name="twitter:description" content="Most AI visibility tools give you a score and leave you stuck. Here&#x27;s how to turn that data into actions that change how AI describes your brand.">
+<meta name="twitter:image" content="https://metricusapp.com/assets/og.png">
+<!-- metricus:head -->
+<link rel="stylesheet" href="/assets/metricus.css?v=20260927">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#FBFAF7">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w70oz7g1k3");</script>
+<!-- /metricus:head -->
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "How to Turn AI Visibility Data Into an Actual Action Plan",
+ "description": "A concrete 5-step action plan for turning AI visibility data into fixes. Correct factual errors, add structured data, update listings, create comparison content, and re-measure.",
+ "author": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "datePublished": "2026-03-01",
+ "dateModified": "2026-09-27",
+ "mainEntityOfPage": "https://metricusapp.com/blog/ai-visibility-action-plan/",
+ "image": "https://metricusapp.com/assets/og.png"
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
   {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "How to Turn AI Visibility Data Into an Actual Action Plan",
-    "description": "A concrete 5-step action plan for turning AI visibility data into fixes. Correct factual errors, add structured data, update listings, create comparison content, and re-measure.",
-    "author": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "datePublished": "2026-03-01",
-    "dateModified": "2026-09-04",
-    "mainEntityOfPage": "https://metricusapp.com/blog/ai-visibility-action-plan/",
-    "image": "https://metricusapp.com/landing/img/og.jpg"
-  }
-  </script>
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://metricusapp.com/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "AI Visibility Action Plan", "item": "https://metricusapp.com/blog/ai-visibility-action-plan/"}
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://metricusapp.com/blog/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What should I do once I have AI visibility data?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Follow a five-step sequence: fix factual errors first (highest impact, lowest effort), add structured data to your site, update third-party listings on G2/Capterra/TrustRadius, create comparison content that AI can cite, then monitor and re-audit after 4-6 weeks. Brands that follow this plan typically see visibility improve from 15-25% to 50-65% within 6-8 weeks."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does it take to fix AI visibility errors?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Source-level fixes (correcting outdated pricing or feature information on third-party listings) can show results within weeks because AI models pull from these sources in real time via RAG. Errors encoded in model training weights (parametric knowledge) take 2-3 months to resolve as they depend on model retraining cycles."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why does AI get my brand's pricing wrong?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI models pull pricing from third-party listings, review sites, and outdated blog posts. If your G2 listing says 'starting at $149/mo' but you now offer a $49 plan, AI will repeat the wrong price. The fix: update every third-party listing and ensure pricing on your own site is in plain HTML, not behind JavaScript."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the most impactful first step for AI visibility?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Fix factual errors. Research shows 72% of brands have at least one factual error in AI-generated responses. Correcting errors at their source (review sites, outdated listings, your own site) is the highest-impact, lowest-effort improvement and can shift AI recommendations within weeks."
-        }
-      }
-    ]
+   "@type": "ListItem",
+   "position": 3,
+   "name": "AI Visibility Action Plan",
+   "item": "https://metricusapp.com/blog/ai-visibility-action-plan/"
   }
-  </script>
-  <script src="/js/reader-pulse-b.js" defer></script>
+ ]
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What should I do once I have AI visibility data?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Follow a five-step sequence: fix factual errors first (highest impact, lowest effort), add structured data to your site, update third-party listings on G2/Capterra/TrustRadius, create comparison content that AI can cite, then monitor and re-audit after 4–6 weeks."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How long does it take to fix AI visibility errors?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Source-level fixes (correcting outdated pricing or feature information on third-party listings) can show results within weeks because AI models pull from these sources in real time via RAG. Errors encoded in model training weights (parametric knowledge) take 2–3 months to resolve as they depend on model retraining cycles."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why does AI get my brand's pricing wrong?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "AI models pull pricing from third-party listings, review sites, and outdated blog posts. If your G2 listing says “starting at $149/mo” but you now offer a $49 plan, AI will repeat the wrong price. The fix: update every third-party listing and ensure pricing on your own site is in plain HTML, not behind JavaScript."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the most impactful first step for AI visibility?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Fix factual errors. Correcting errors at their source (review sites, outdated listings, your own site) is the highest-impact, lowest-effort improvement and can shift AI recommendations within weeks."
+   }
+  }
+ ]
+}</script>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
-
-  <!-- Site Nav -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 gap-4">
-      <a href="/" class="text-on-surface font-semibold" aria-label="Metricus home">Metricus <span class="font-normal text-on-surface-variant">Optimizer</span></a>
-      <div class="flex items-center gap-5">
-        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface">Learn</a>
-        <a href="/ai-visibility-optimizer-tool/" class="bg-primary text-on-primary text-sm font-semibold px-4 py-2.5 hover:bg-primary-dim">Open the tool</a>
-      </div>
-    </div>
-  </header>
-
-
-
-  <!-- Mobile Menu Overlay -->
-
-
-
-  <main class="flex-grow flex flex-col relative overflow-x-hidden">
-
-    <div class="absolute inset-0 -z-10 pointer-events-none"></div>
-
-    <!-- ========== ARTICLE ========== -->
-    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
-
-      <!-- Breadcrumb -->
-      <nav class="mb-8">
-        <ol class="flex items-center gap-2 text-xs text-slate-muted">
-          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
-          <li class="select-none">/</li>
-          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
-          <li class="select-none">/</li>
-          <li class="text-slate-text">AI Visibility Action Plan</li>
-        </ol>
-      </nav>
-
-      <!-- Article Header -->
-      <header class="mb-12">
-        <p class="text-xs text-primary font-semibold mb-4">Playbook</p>
-        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
-          How to Turn AI Visibility Data Into an Actual Action Plan
-        </h1>
-        <p class="text-sm text-outline">Metricus Research &middot; March 14, 2026 &middot; 8 min read</p>
-        <p class="text-xs text-slate-muted mt-2">Last updated: September 2026</p>
-      </header>
-
-
-      <!-- LLM-Optimized Answer Block -->
-      <div class="bg-surface-container-low p-8 mb-12">
-        <p class="text-lg leading-relaxed text-on-surface">
-          Once they have AI visibility data, most brands stall because no tool tells them what to do next. Research shows 72% of brands have at least one factual error in AI-generated responses (Metricus brand accuracy analysis, 2026). This five-step action plan from Metricus turns that data into an ordered fix list: error correction first, then structured data, third-party listings, comparison content and re-measurement. The free Metricus optimizer shows, for one page, the answer an AI assistant gives, the passages behind that answer and a rewrite for each one.
+<body class="doc">
+<!-- metricus:header -->
+<header class="nav"><div class="in"><a class="logo" href="/" id="navhome">Metricus</a><span class="sp"></span><span class="muted" id="host"></span></div></header>
+<!-- /metricus:header -->
+<main class="doc-main" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <span aria-current="page">AI Visibility Action Plan</span></nav>
+<p class="kicker">Playbook</p>
+<h1>How to Turn AI Visibility Data Into an Actual Action Plan</h1>
+<p class="byline">Metricus Research · March 14, 2026 · 8 min read</p>
+<p class="updated">Last updated: September 2026</p>
+<div class="note">
+<p>
+          Once they have AI visibility data, most brands stall because no tool tells them what to do next. This five-step action plan from Metricus turns that data into an ordered fix list: error correction first, then structured data, third-party listings, comparison content and re-measurement. <a href="/">Metricus</a> shows the answer AI gives when your customers ask for what you sell, with every business it names, and gives new text for your website.
         </p>
-      </div>
-
-
-      <!-- Table of Contents Preview -->
-      <div class="border border-[#E2E8F0] p-8 mb-12">
-        <p class="text-xs text-slate-muted font-semibold mb-4">What the action plan covers</p>
-        <ol class="space-y-2 text-[15px] list-decimal list-inside">
-          <li class="text-on-surface">The execution gap</li>
-          <li class="text-on-surface">Step 1: Fix factual errors first (Week 1)</li>
-          <li class="text-on-surface">Step 2: Add structured data (Week 1&ndash;2)</li>
-          <li class="text-on-surface">Step 3: Update third-party listings (Week 2&ndash;3)</li>
-          <li class="text-on-surface">Step 4: Create comparison content (Week 3&ndash;4)</li>
-          <li class="text-on-surface">Step 5: Monitor and re-audit (Week 4+)</li>
-          <li class="text-on-surface">Full timeline with effort and expected impact</li>
-        </ol>
-      </div>
-
-
-      <!-- Article Body -->
-      <div class="article-body">
-
-        <h2 id="execution-gap">The execution gap</h2>
-
-        <p>Every AI visibility tool on the market tells you where you stand. None of them tell you what to do next. Knowing your visibility score is 23% is useless without a route to 60%.</p>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>72% of brands have at least one factual error</strong> in AI-generated responses about them. Most know it. Almost none have a plan to fix it.
+</div>
+<nav class="toc" aria-label="What the action plan covers"><p>What the action plan covers</p><ol>
+<li>The execution gap</li>
+<li>Step 1: Fix factual errors first (Week 1)</li>
+<li>Step 2: Add structured data (Week 1–2)</li>
+<li>Step 3: Update third-party listings (Week 2–3)</li>
+<li>Step 4: Create comparison content (Week 3–4)</li>
+<li>Step 5: Monitor and re-audit (Week 4+)</li>
+<li>Full timeline with effort and expected impact</li>
+</ol></nav>
+<h2 id="execution-gap">The execution gap</h2>
+<p>Every AI visibility tool on the market tells you where you stand. None of them tell you what to do next. Knowing your visibility score is 23% is useless without a route to 60%.</p>
+<div class="note">
+<p>
+<strong>Many brands have at least one factual error</strong> in AI-generated responses about them. Most know it. Almost none have a plan to fix it.
           </p>
-        </div>
-
-        <p>This plan provides the framework: five sequential steps, each with concrete actions and an expected outcome. The steps are ordered by impact relative to effort, so you start with what moves the needle fastest. It is written for founders evaluating their own AI presence, marketing teams building an optimization roadmap, and agencies presenting recommendations to clients.</p>
-
-
-        <h2 id="step-1">Step 1: Fix factual errors first (Week 1)</h2>
-
-        <p>Timeline: week 1. Effort: low to medium. Priority: critical. Expected impact: +10&ndash;15% visibility.</p>
-
-        <p>The objective is to eliminate every factual error AI is repeating about your brand. Errors are the highest-impact, lowest-effort fix. If AI is telling customers your product costs $149 when it actually costs $49, fixing that one error can change the entire recommendation.</p>
-
-        <h3>Actions</h3>
-        <ul>
-          <li>Go through every factual error your AI visibility data flagged</li>
-          <li>Trace each error to its likely source: review sites, outdated blog posts, your own site</li>
-          <li>Fix the source: update the listing, correct the page, or publish a correction</li>
-          <li>For errors on your own site, make sure pricing and features are in plain HTML, not behind JavaScript</li>
-          <li>Document each error and its source for your re-audit comparison</li>
-        </ul>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>Fixing source errors is usually the fastest path to improvement.</strong> Correcting outdated pricing or feature information on third-party listings can show results within weeks, because AI models pull from these sources in real time.
+</div>
+<p>This plan provides the framework: five sequential steps, each with concrete actions and an expected outcome. The steps are ordered by impact relative to effort, so you start with what moves the needle fastest. It is written for founders evaluating their own AI presence, marketing teams building an optimization roadmap, and agencies presenting recommendations to clients.</p>
+<h2 id="step-1">Step 1: Fix factual errors first (Week 1)</h2>
+<p>Timeline: week 1. Effort: low to medium. Priority: critical. Expected impact: +10–15% visibility.</p>
+<p>The objective is to eliminate every factual error AI is repeating about your brand. Errors are the highest-impact, lowest-effort fix. If AI is telling customers your product costs $149 when it actually costs $49, fixing that one error can change the entire recommendation.</p>
+<h3>Actions</h3>
+<ul>
+<li>Go through every factual error your AI visibility data flagged</li>
+<li>Trace each error to its likely source: review sites, outdated blog posts, your own site</li>
+<li>Fix the source: update the listing, correct the page, or publish a correction</li>
+<li>For errors on your own site, make sure pricing and features are in plain HTML, not behind JavaScript</li>
+<li>Document each error and its source for your re-audit comparison</li>
+</ul>
+<div class="note">
+<p>
+<strong>Fixing source errors is usually the fastest path to improvement.</strong> Correcting outdated pricing or feature information on third-party listings can show results within weeks, because AI models pull from these sources in real time.
           </p>
-        </div>
-
-        <p>Expected outcome: factual errors about your brand are corrected at the source. AI platforms that use real-time retrieval begin reflecting accurate information within days to weeks. Platforms relying on training data update in 2&ndash;3 months.</p>
-
-
-        <h2 id="step-2">Step 2: Add structured data (Week 1&ndash;2)</h2>
-
-        <p>Timeline: week 1 to 2. Effort: medium, and a developer is needed. Priority: high. Expected impact: +5&ndash;10% visibility.</p>
-
-        <p>The objective is to implement Schema.org structured data so AI can parse your content accurately. Pages with structured data tend to surface more often in AI-generated summaries.</p>
-
-        <h3>Actions</h3>
-        <ul>
-          <li>Add Organization schema: brand name, URL, description, contact information</li>
-          <li>Add Product and Offer schema: product name, description, pricing in plain numbers</li>
-          <li>Add FAQPage schema: common questions and answers about your product</li>
-          <li>Add Article schema to blog posts and content pages</li>
-          <li>Validate all structured data with Google's Rich Results Test</li>
-          <li>Make sure all pricing and feature data is in plain HTML, not rendered by JavaScript</li>
-        </ul>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>Structured data gives AI a machine-readable summary of your content.</strong> Even if AI never renders your page, it can parse JSON-LD schema directly. This makes structured data one of the most reliable ways to communicate accurate brand information to AI systems.
+</div>
+<p>Expected outcome: factual errors about your brand are corrected at the source. AI platforms that use real-time retrieval begin reflecting accurate information within days to weeks. Platforms relying on training data update in 2–3 months.</p>
+<h2 id="step-2">Step 2: Add structured data (Week 1–2)</h2>
+<p>Timeline: week 1 to 2. Effort: medium, and a developer is needed. Priority: high. Expected impact: +5–10% visibility.</p>
+<p>The objective is to implement Schema.org structured data so AI can parse your content accurately. Pages with structured data tend to surface more often in AI-generated summaries.</p>
+<h3>Actions</h3>
+<ul>
+<li>Add Organization schema: brand name, URL, description, contact information</li>
+<li>Add Product and Offer schema: product name, description, pricing in plain numbers</li>
+<li>Add FAQPage schema: common questions and answers about your product</li>
+<li>Add Article schema to blog posts and content pages</li>
+<li>Validate all structured data with Google's Rich Results Test</li>
+<li>Make sure all pricing and feature data is in plain HTML, not rendered by JavaScript</li>
+</ul>
+<div class="note">
+<p>
+<strong>Structured data gives AI a machine-readable summary of your content.</strong> Even if AI never renders your page, it can parse JSON-LD schema directly. This makes structured data one of the most reliable ways to communicate accurate brand information to AI systems.
           </p>
-        </div>
-
-        <p>Expected outcome: your site provides AI with unambiguous, machine-readable data about your brand, products and pricing. This increases the likelihood of accurate representation in AI-generated summaries and recommendations.</p>
-
-
-        <h2 id="step-3">Step 3: Update third-party listings (Week 2&ndash;3)</h2>
-
-        <p>Timeline: week 2 to 3. Effort: medium. Priority: high. Expected impact: +10&ndash;20% visibility.</p>
-
-        <p>The objective is to make sure every major third-party source AI draws from has current, accurate information about your brand. AI models weight third-party sources heavily, and many use retrieval-augmented generation (RAG) to pull live data from these listings.</p>
-
-        <h3>Actions</h3>
-        <ul>
-          <li>G2: update pricing, features, screenshots and description</li>
-          <li>Capterra: the same updates, plus verify category placement</li>
-          <li>TrustRadius: refresh the product profile and pricing</li>
-          <li>Industry blogs: contact the authors of comparison posts with updated information</li>
-          <li>Wikipedia, if applicable: correct any outdated information</li>
-          <li>Any other third-party source your data flagged as an error origin: update it</li>
-        </ul>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>If your listing on G2 says "starting at $149/mo" but you now offer a $49 plan, AI will repeat the wrong price.</strong> Third-party listings are among the most frequently cited sources in AI-generated responses.
+</div>
+<p>Expected outcome: your site provides AI with unambiguous, machine-readable data about your brand, products and pricing. This increases the likelihood of accurate representation in AI-generated summaries and recommendations.</p>
+<h2 id="step-3">Step 3: Update third-party listings (Week 2–3)</h2>
+<p>Timeline: week 2 to 3. Effort: medium. Priority: high. Expected impact: +10–20% visibility.</p>
+<p>The objective is to make sure every major third-party source AI draws from has current, accurate information about your brand. AI models weight third-party sources heavily, and many use retrieval-augmented generation (RAG) to pull live data from these listings.</p>
+<h3>Actions</h3>
+<ul>
+<li>G2: update pricing, features, screenshots and description</li>
+<li>Capterra: the same updates, plus verify category placement</li>
+<li>TrustRadius: refresh the product profile and pricing</li>
+<li>Industry blogs: contact the authors of comparison posts with updated information</li>
+<li>Wikipedia, if applicable: correct any outdated information</li>
+<li>Any other third-party source your data flagged as an error origin: update it</li>
+</ul>
+<div class="note">
+<p>
+<strong>If your listing on G2 says "starting at $149/mo" but you now offer a $49 plan, AI will repeat the wrong price.</strong> Third-party listings are among the most frequently cited sources in AI-generated responses.
           </p>
-        </div>
-
-        <p>Expected outcome: the external sources AI relies on all reflect your current pricing, features and positioning. This reduces the rate of factual errors in AI responses and improves your representation in recommendation queries.</p>
-
-
-        <h2 id="step-4">Step 4: Create comparison content (Week 3&ndash;4)</h2>
-
-        <p>Timeline: week 3 to 4. Effort: high. Priority: medium. Expected impact: +15&ndash;25% visibility.</p>
-
-        <p>The objective is to publish content that directly addresses the recommendation and comparison queries AI answers. Brands with their own comparison pages are significantly more likely to be cited. Without this content, competitors and third parties control your narrative.</p>
-
-        <h3>Actions</h3>
-        <ul>
-          <li>Create a "vs" comparison page for each top competitor, for example "Acme CRM vs HubSpot"</li>
-          <li>Create a "Best [your category]" roundup that honestly includes competitors</li>
-          <li>Build a clear pricing page with plain HTML tables and no JavaScript toggles or interactive calculators</li>
-          <li>Create a FAQ page answering the exact queries buyers ask AI</li>
-          <li>Give all new content structured data, Article schema at minimum</li>
-        </ul>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>AI trusts balanced content more than one-sided pitches.</strong> Include competitors in your roundup honestly. A "Best CRM tools" page that only mentions you will be ignored. One that fairly evaluates the market will be cited.
+</div>
+<p>Expected outcome: the external sources AI relies on all reflect your current pricing, features and positioning. This reduces the rate of factual errors in AI responses and improves your representation in recommendation queries.</p>
+<h2 id="step-4">Step 4: Create comparison content (Week 3–4)</h2>
+<p>Timeline: week 3 to 4. Effort: high. Priority: medium. Expected impact: +15–25% visibility.</p>
+<p>The objective is to publish content that directly addresses the recommendation and comparison queries AI answers. Brands with their own comparison pages are significantly more likely to be cited. Without this content, competitors and third parties control your narrative.</p>
+<h3>Actions</h3>
+<ul>
+<li>Create a "vs" comparison page for each top competitor, for example "Acme CRM vs HubSpot"</li>
+<li>Create a "Best [your category]" roundup that honestly includes competitors</li>
+<li>Build a clear pricing page with plain HTML tables and no JavaScript toggles or interactive calculators</li>
+<li>Create a FAQ page answering the exact queries buyers ask AI</li>
+<li>Give all new content structured data, Article schema at minimum</li>
+</ul>
+<div class="note">
+<p>
+<strong>AI trusts balanced content more than one-sided pitches.</strong> Include competitors in your roundup honestly. A "Best CRM tools" page that only mentions you will be ignored. One that fairly evaluates the market will be cited.
           </p>
-        </div>
-
-        <p>Expected outcome: your brand appears in recommendation queries where it was previously absent. AI can cite your own content for comparison queries instead of relying only on third-party sources you do not control.</p>
-
-
-        <h2 id="step-5">Step 5: Monitor and re-audit (Week 4+)</h2>
-
-        <p>Timeline: week 4 onward. Effort: low. Priority: ongoing. Expected impact: measure and iterate.</p>
-
-        <p>The objective is to verify that your fixes are reflected across AI platforms and to identify any remaining gaps. AI models update at different rates, so staggered re-testing is essential.</p>
-
-        <h3>What to re-test</h3>
-        <ul>
-          <li>Run the same queries that surfaced errors in your original data</li>
-          <li>Use the exact prompts, such as "What does [Brand] cost?" and "Is [Brand] good for [use case]?", so you can compare results directly</li>
-        </ul>
-
-        <h3>Where to check first</h3>
-        <ul>
-          <li>Platforms with live web search reflect source fixes fastest</li>
-          <li>Platforms with periodic training updates: if errors persist there, the training data may not have refreshed yet, which can take 2&ndash;3 months</li>
-          <li>Spot-check additional AI platforms for completeness</li>
-        </ul>
-
-        <h3>What good looks like at week 6</h3>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            Factual errors from your original data should be resolved on at least 2&ndash;3 platforms. Your brand should appear in recommendation queries where it was previously absent. If errors still show up across all platforms after 6 weeks, the source content has not been updated correctly. Go back to Steps 1 and 3 and verify the fixes actually went live.
+</div>
+<p>Expected outcome: your brand appears in recommendation queries where it was previously absent. AI can cite your own content for comparison queries instead of relying only on third-party sources you do not control.</p>
+<h2 id="step-5">Step 5: Monitor and re-audit (Week 4+)</h2>
+<p>Timeline: week 4 onward. Effort: low. Priority: ongoing. Expected impact: measure and iterate.</p>
+<p>The objective is to verify that your fixes are reflected across AI platforms and to identify any remaining gaps. AI models update at different rates, so staggered re-testing is essential.</p>
+<h3>What to re-test</h3>
+<ul>
+<li>Run the same queries that surfaced errors in your original data</li>
+<li>Use the exact prompts, such as "What does [Brand] cost?" and "Is [Brand] good for [use case]?", so you can compare results directly</li>
+</ul>
+<h3>Where to check first</h3>
+<ul>
+<li>Platforms with live web search reflect source fixes fastest</li>
+<li>Platforms with periodic training updates: if errors persist there, the training data may not have refreshed yet, which can take 2–3 months</li>
+<li>Spot-check additional AI platforms for completeness</li>
+</ul>
+<h3>What good looks like at week 6</h3>
+<div class="note">
+<p>
+            Factual errors from your original data should be resolved on at least 2–3 platforms. Your brand should appear in recommendation queries where it was previously absent. If errors still show up across all platforms after 6 weeks, the source content has not been updated correctly. Go back to Steps 1 and 3 and verify the fixes actually went live.
           </p>
-        </div>
-
-        <p>Expected outcome: you have a measurable before-and-after comparison. Remaining gaps are identified, and you know exactly which steps to revisit. This creates a repeatable optimization cycle.</p>
-
-
-        <h2 id="timeline">Full timeline with effort and expected impact</h2>
-
-        <div class="overflow-x-auto my-8">
-          <table class="w-full text-sm">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="text-left p-4 font-semibold text-slate-text">Action</th>
-                <th class="text-left p-4 font-semibold text-slate-text">Effort</th>
-                <th class="text-left p-4 font-semibold text-slate-text">Timeline</th>
-                <th class="text-left p-4 font-semibold text-slate-text">Expected impact</th>
-                <th class="text-left p-4 font-semibold text-slate-text">Priority</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="border-b border-[#E2E8F0]">
-                <td class="p-4 font-semibold text-slate-text">Fix factual errors</td>
-                <td class="p-4">Low to medium</td>
-                <td class="p-4">Week 1</td>
-                <td class="p-4">+10&ndash;15%</td>
-                <td class="p-4">Critical</td>
-              </tr>
-              <tr class="border-b border-[#E2E8F0]">
-                <td class="p-4 font-semibold text-slate-text">Add structured data</td>
-                <td class="p-4">Medium (developer needed)</td>
-                <td class="p-4">Week 1&ndash;2</td>
-                <td class="p-4">+5&ndash;10%</td>
-                <td class="p-4">High</td>
-              </tr>
-              <tr class="border-b border-[#E2E8F0]">
-                <td class="p-4 font-semibold text-slate-text">Update third-party listings</td>
-                <td class="p-4">Medium</td>
-                <td class="p-4">Week 2&ndash;3</td>
-                <td class="p-4">+10&ndash;20%</td>
-                <td class="p-4">High</td>
-              </tr>
-              <tr class="border-b border-[#E2E8F0]">
-                <td class="p-4 font-semibold text-slate-text">Create comparison content</td>
-                <td class="p-4">High</td>
-                <td class="p-4">Week 3&ndash;4</td>
-                <td class="p-4">+15&ndash;25%</td>
-                <td class="p-4">Medium</td>
-              </tr>
-              <tr class="border-b border-[#E2E8F0]">
-                <td class="p-4 font-semibold text-slate-text">Re-audit</td>
-                <td class="p-4">Low</td>
-                <td class="p-4">Week 6&ndash;8</td>
-                <td class="p-4">Measure and iterate</td>
-                <td class="p-4">Ongoing</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>Brands that follow the full action plan see visibility improve from 15&ndash;25% to 50&ndash;65%</strong> within 6&ndash;8 weeks. The biggest gains come from fixing errors (free) and updating third-party listings (free but time-consuming).
+</div>
+<p>Expected outcome: you have a measurable before-and-after comparison. Remaining gaps are identified, and you know exactly which steps to revisit. This creates a repeatable optimization cycle.</p>
+<h2 id="timeline">Full timeline with effort and expected impact</h2>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Effort</th>
+<th>Timeline</th>
+<th>Expected impact</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fix factual errors</td>
+<td>Low to medium</td>
+<td>Week 1</td>
+<td>+10–15%</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>Add structured data</td>
+<td>Medium (developer needed)</td>
+<td>Week 1–2</td>
+<td>+5–10%</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Update third-party listings</td>
+<td>Medium</td>
+<td>Week 2–3</td>
+<td>+10–20%</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Create comparison content</td>
+<td>High</td>
+<td>Week 3–4</td>
+<td>+15–25%</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Re-audit</td>
+<td>Low</td>
+<td>Week 6–8</td>
+<td>Measure and iterate</td>
+<td>Ongoing</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note">
+<p>
+<strong>The biggest gains come from fixing errors</strong> (free) and updating third-party listings (free but time-consuming).
           </p>
-        </div>
-
-      </div>
-
-
-      
-
-
-
-
-      <!-- Tool CTA -->
-      <div class="border border-outline-variant/50 bg-surface p-8 my-12">
-        <h2 class="text-2xl font-semibold text-on-surface mb-2">Put in a page.</h2>
-        <p class="text-on-surface-variant mb-5 max-w-xl">See what an AI assistant answers about your page, which passages caused it, and a rewrite for each one. Free, no signup.</p>
-        <a href="/ai-visibility-optimizer-tool/" class="inline-flex items-center gap-2 bg-primary text-on-primary text-sm font-semibold px-6 py-3 hover:bg-primary-dim transition-colors">
-          Open the tool <span aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
-
-
-      <!-- ========== FAQ SECTION ========== -->
-      <div class="article-body">
-        <h2>Frequently asked questions</h2>
-
-        <h3>What should I do once I have AI visibility data?</h3>
-        <p>Follow a five-step sequence: fix factual errors first (highest impact, lowest effort), add structured data to your site, update third-party listings on G2/Capterra/TrustRadius, create comparison content that AI can cite, then monitor and re-audit after 4&ndash;6 weeks. Brands that follow this plan typically see visibility improve from 15&ndash;25% to 50&ndash;65% within 6&ndash;8 weeks.</p>
-
-        <h3>How long does it take to fix AI visibility errors?</h3>
-        <p>Source-level fixes (correcting outdated pricing or feature information on third-party listings) can show results within weeks because AI models pull from these sources in real time via RAG. Errors encoded in model training weights (parametric knowledge) take 2&ndash;3 months to resolve as they depend on model retraining cycles.</p>
-
-        <h3>Why does AI get my brand's pricing wrong?</h3>
-        <p>AI models pull pricing from third-party listings, review sites, and outdated blog posts. If your G2 listing says &ldquo;starting at $149/mo&rdquo; but you now offer a $49 plan, AI will repeat the wrong price. The fix: update every third-party listing and ensure pricing on your own site is in plain HTML, not behind JavaScript.</p>
-
-        <h3>What is the most impactful first step for AI visibility?</h3>
-        <p>Fix factual errors. Research shows 72% of brands have at least one factual error in AI-generated responses. Correcting errors at their source (review sites, outdated listings, your own site) is the highest-impact, lowest-effort improvement and can shift AI recommendations within weeks.</p>
-      </div>
-
-
-      <!-- ========== CITE THIS ARTICLE ========== -->
-      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
-        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
-          <cite class="not-italic"><a href="https://metricusapp.com/blog/ai-visibility-action-plan/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus — How to Turn AI Visibility Data Into an Actual Action Plan</a></cite>
-        </p>
-      </footer>
-
-    </article>
-
-
-
-    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
-      <p class="text-xs text-slate-muted font-semibold mb-6">Go deeper</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <a href="/ai-brand-alignment-guide/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">Alignment Framework</p>
-          <p class="text-sm text-on-surface-variant mt-1">69 clusters on GEO strategy and optimization</p>
-        </a>
-        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
-          <p class="text-sm text-on-surface-variant mt-1">Fixing AI accuracy issues</p>
-        </a>
-      </div>
-    </section>
-
-<!-- ========== RELATED POSTS ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
-      <p class="text-xs text-slate-muted font-semibold mb-8">Related articles</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        <a href="../ai-hallucinations-brand-fix/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Research</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            AI Is Getting Facts Wrong About Your Brand
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            72% of brands have factual errors in AI responses. Here's a 4-step process to audit and fix them.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../ai-visibility-scores-explained/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Methodology</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            How AI Visibility Scores Actually Work
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            What goes into an AI visibility score? We explain the methodology and what a meaningful score looks like.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../ai-visibility-tools-no-subscription/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Buyer's Guide</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            AI Visibility Tools Without a Monthly Subscription
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            Not every business needs a $300/month monitoring subscription. Here are your one-time options.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
-  </main>
-
-
-  <!-- ========== FOOTER ========== -->
-  <!-- Site Footer -->
-  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-on-surface-variant">
-      <span class="text-on-surface font-semibold">Metricus</span>
-      <a href="/ai-visibility-optimizer-tool/" class="hover:text-on-surface">Open the tool</a>
-      <a href="/blog/" class="hover:text-on-surface">Learn</a>
-      <a href="/methodology/" class="hover:text-on-surface">How it works</a>
-      <a href="/results/" class="hover:text-on-surface">Results</a>
-      <a href="/for-agencies/" class="hover:text-on-surface">For agencies</a>
-      <a href="/about/" class="hover:text-on-surface">About</a>
-      <a href="/press/" class="hover:text-on-surface">Press</a>
-      <a href="/support/" class="hover:text-on-surface">Support</a>
-      <a href="/privacy-policy/" class="hover:text-on-surface">Privacy</a>
-      <a href="/terms-of-service/" class="hover:text-on-surface">Terms</a>
-      <a href="mailto:metricusapp@gmail.com" class="hover:text-on-surface">Contact</a>
-      <span class="ml-auto">&copy; 2026 Metricus</span>
-    </div>
-  </footer>
-
+</div>
+<h2>Frequently asked questions</h2>
+<h3>What should I do once I have AI visibility data?</h3>
+<p>Follow a five-step sequence: fix factual errors first (highest impact, lowest effort), add structured data to your site, update third-party listings on G2/Capterra/TrustRadius, create comparison content that AI can cite, then monitor and re-audit after 4–6 weeks.</p>
+<h3>How long does it take to fix AI visibility errors?</h3>
+<p>Source-level fixes (correcting outdated pricing or feature information on third-party listings) can show results within weeks because AI models pull from these sources in real time via RAG. Errors encoded in model training weights (parametric knowledge) take 2–3 months to resolve as they depend on model retraining cycles.</p>
+<h3>Why does AI get my brand's pricing wrong?</h3>
+<p>AI models pull pricing from third-party listings, review sites, and outdated blog posts. If your G2 listing says “starting at $149/mo” but you now offer a $49 plan, AI will repeat the wrong price. The fix: update every third-party listing and ensure pricing on your own site is in plain HTML, not behind JavaScript.</p>
+<h3>What is the most impactful first step for AI visibility?</h3>
+<p>Fix factual errors. Correcting errors at their source (review sites, outdated listings, your own site) is the highest-impact, lowest-effort improvement and can shift AI recommendations within weeks.</p>
+<p class="cite">Cite as: <a href="https://metricusapp.com/blog/ai-visibility-action-plan/">Metricus — How to Turn AI Visibility Data Into an Actual Action Plan</a></p>
+<section class="related" aria-labelledby="related-knowledge-bases"><h2 id="related-knowledge-bases">Knowledge bases</h2><ul><li><a href="/ai-brand-alignment-guide/">Alignment Framework</a><p>69 clusters on GEO strategy and optimization</p></li><li><a href="/brand-accuracy-knowledge-base/">AI Brand Accuracy Guide</a><p>Fixing AI accuracy issues</p></li></ul></section>
+<section class="related" aria-labelledby="related-related-articles"><h2 id="related-related-articles">Related articles</h2><ul><li><a href="/blog/fix-ai-brand-hallucinations/">AI Is Getting Facts Wrong About Your Brand</a><p>Why AI gets brand facts wrong, and a 4-step process to audit and fix them.</p></li><li><a href="/blog/ai-visibility-scores-explained/">How AI Visibility Scores Actually Work</a><p>What goes into an AI visibility score? How tools calculate it and what a meaningful score looks like.</p></li><li><a href="/blog/ai-visibility-tools-no-subscription/">AI Visibility Tools Without a Monthly Subscription</a><p>Not every business needs a $300/month monitoring subscription. Here are the options that do not bill monthly.</p></li></ul></section>
+<!-- metricus:ask -->
+<section class="ask-cta" aria-labelledby="ask-cta-h"><h2 id="ask-cta-h">What do your customers ask AI?</h2><form class="chatbox" action="/" method="get"><input class="input" type="text" name="q" maxlength="600" autocomplete="off" required placeholder="Type what people would ask AI&hellip;" aria-labelledby="ask-cta-h"><button class="send" type="submit" aria-label="Ask AI" title="Ask AI"><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V6M6 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form></section>
+<!-- /metricus:ask -->
+</main>
+<!-- metricus:footer -->
+<footer class="foot"><nav aria-label="Site"><a href="/blog/">Blog</a><a href="/geo-knowledge-base/">Knowledge base</a><a href="/results/">Results</a><a href="/about/">About</a><a href="/press/">Press</a><a href="/support/">Support</a><a href="/privacy-policy/">Privacy</a><a href="/terms-of-service/">Terms</a><a href="mailto:metricusapp@gmail.com">Contact</a></nav><p>&copy; 2026 Metricus</p></footer>
+<!-- /metricus:footer -->
 </body>
 </html>

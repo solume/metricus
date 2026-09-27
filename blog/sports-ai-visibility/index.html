@@ -1,385 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Why Doesn't AI Know About My Sports Team? Visibility Data for Leagues | Metricus</title>
-  <meta name="description" content="AI gets sports data wrong constantly. Training data lags 6-18 months. Data on which teams AI recommends and how smaller ones can compete.">
-  <meta property="og:title" content="Why Doesn't AI Know About My Sports Team? Visibility Data for Leagues">
-  <meta property="og:description" content="AI gets sports data wrong constantly. Training data lags 6-18 months. Data on which teams AI recommends and how smaller ones can compete.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://metricusapp.com/blog/sports-ai-visibility/">
-  <meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Why Doesn't AI Know About My Sports Team? Visibility Data for Leagues">
-  <meta name="twitter:description" content="AI gets sports data wrong constantly. Training data lags 6-18 months. Data on which teams AI recommends and how smaller ones can compete.">
-  <meta name="twitter:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <link rel="canonical" href="https://metricusapp.com/blog/sports-ai-visibility/">
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w70oz7g1k3");</script>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>tailwind.config={theme:{extend:{colors:{primary:'#515F74','primary-hover':'#1E293B','on-primary':'#f6f7ff','on-primary-fixed':'#324054','primary-dim':'#455368',surface:'#f7f9fb','surface-container-low':'#f0f4f7','surface-container':'#e8eff3','surface-container-lowest':'#ffffff','surface-container-highest':'#d9e4ea','surface-container-high':'#e1e9ee','surface-variant':'#d9e4ea','on-surface':'#2a3439','on-surface-variant':'#566166',outline:'#717c82','outline-variant':'#a9b4b9','slate-text':'#0F172A','slate-muted':'#64748B','slate-accent':'#475569'},fontFamily: {
-            display: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            body: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            headline: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            label: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-          },borderRadius:{none:'0px',sm:'0px',DEFAULT:'0px',md:'0px',lg:'0px',xl:'0px','2xl':'0px','3xl':'0px',full:'0.75rem'}}}}</script>
-  <style>body{font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;background-color:#fff;color:#0F172A;-webkit-font-smoothing:antialiased}.font-display,.font-headline{font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;background-size:24px 24px;opacity:.05}.article-body h2{font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-weight:700;font-size:1.75rem;line-height:1.2;color:#0F172A;margin-top:3rem;margin-bottom:1rem}@media(min-width:768px){.article-body h2{font-size:2rem}}.article-body h3{font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;font-weight:700;font-size:1.25rem;line-height:1.3;color:#0F172A;margin-top:2rem;margin-bottom:.75rem}.article-body p{font-size:1.125rem;line-height:1.75;color:#334155;margin-bottom:1.25rem}.article-body ul,.article-body ol{font-size:1.125rem;line-height:1.75;color:#334155;margin-bottom:1.25rem;padding-left:1.5rem}.article-body ul{list-style-type:disc}.article-body ol{list-style-type:decimal}.article-body li{margin-bottom:.5rem}.article-body blockquote{border-left:2px solid #334155;padding-left:1.5rem;font-style:italic;color:#475569;font-size:1.125rem;line-height:1.75;margin:2rem 0}.article-body a{color:#334155;text-decoration:underline;text-underline-offset:3px}.article-body a:hover{color:#1E293B}</style>
-
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Why Doesn't AI Know About My Sports Team? Visibility Data for Leagues","description":"AI gets sports data wrong constantly. Training data lags 6-18 months. Data on which teams AI recommends and how smaller ones can compete.","author":{"@type":"Organization","name":"Metricus","url":"https://metricusapp.com"},"publisher":{"@type":"Organization","name":"Metricus","url":"https://metricusapp.com"},"datePublished":"2026-04-06","dateModified":"2026-09-04","mainEntityOfPage":"https://metricusapp.com/blog/sports-ai-visibility/","image":"https://metricusapp.com/landing/img/og.jpg"}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://metricusapp.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://metricusapp.com/blog/"},{"@type":"ListItem","position":3,"name":"AI Visibility for Sports Teams","item":"https://metricusapp.com/blog/sports-ai-visibility/"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does AI only recommend big-market teams when fans ask about sports?","acceptedAnswer":{"@type":"Answer","text":"AI generates responses based on patterns in training data. Mega-market franchises generate tens of millions of monthly web mentions across major sports media, fan forums, and news outlets. A minor league team or mid-tier franchise might generate a fraction of that web corpus. This frequency gap directly determines which teams AI knows and recommends. The brands with the most digital footprint across authoritative sports media are the ones AI surfaces in fan queries about tickets, merchandise, and engagement."}},{"@type":"Question","name":"How much sports data does AI get wrong and how outdated is it?","acceptedAnswer":{"@type":"Answer","text":"AI training data typically lags real-world sports by 6 to 18 months depending on the model. In testing across the major AI platforms, approximately 40 to 55 percent of specific sports queries returned outdated or incorrect information. Common errors include wrong coaching staff after mid-season firings, outdated roster data post-trade-deadline, incorrect stadium or venue information after naming rights changes, fabricated ticket prices, wrong conference or division affiliations, and merged statistics from different seasons."}},{"@type":"Question","name":"How do I check what AI says when someone asks “best [sport] equipment”?","acceptedAnswer":{"@type":"Answer","text":"The step most sports brands miss is checking what AI actually says when someone asks best running shoes 2026 or best tennis racket for beginners. AI gives different answers every time and increasingly those answers do not include you. The Metricus optimizer shows this for one page at a time. You put in a URL, see what the major AI platforms answer when your page is the source, see the passages behind that answer marked on the page, and get a rewrite for each one."}},{"@type":"Question","name":"How does AI visibility affect sports sponsorship and merchandise revenue?","acceptedAnswer":{"@type":"Answer","text":"AI visibility increasingly affects both sponsorship valuation and merchandise discovery. When fans ask AI what merchandise should I buy or which teams have the best fan experience, AI responses drive purchase intent without the fan ever visiting a team website or seeing a sponsor logo. 67 percent of sports executives consider digital engagement metrics critical to sponsorship valuation. If AI consistently omits your brand from fan engagement discussions, sponsor-facing metrics suffer. The global licensed sports merchandise market reached 34.5 billion dollars in 2024, and AI-mediated discovery is becoming a meaningful channel."}},{"@type":"Question","name":"What is at stake financially if my sports brand is invisible to AI?","acceptedAnswer":{"@type":"Answer","text":"The global sports industry generated 512 billion dollars in 2024. If 5 percent of potential fans begin their discovery through AI and AI never mentions your brand, the impact is measurable in lost ticket revenue, merchandise sales, and sponsorship value. In our data the average brand's AI visibility gap widened by 10 percent every 90 days when left unaddressed, which means every quarter you wait the gap gets harder to close."}},{"@type":"Question","name":"What does the free Metricus optimizer show for a sports brand?","acceptedAnswer":{"@type":"Answer","text":"You put in a page URL, see what the major AI platforms answer when that page is the source, see the passages that shaped the answer marked on the page, and get a rewrite for each one. Free, no signup, no credit card."}}]}</script>
-  <script src="/js/reader-pulse-b.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why Doesn't AI Know About My Sports Team? Visibility Data for Leagues | Metricus</title>
+<meta name="description" content="AI gets sports data wrong constantly. Training data lags 6-18 months. Data on which teams AI recommends and how smaller ones can compete.">
+<link rel="canonical" href="https://metricusapp.com/blog/sports-ai-visibility/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Metricus">
+<meta property="og:url" content="https://metricusapp.com/blog/sports-ai-visibility/">
+<meta property="og:title" content="Why Doesn&#x27;t AI Know About My Sports Team? Visibility Data for Leagues">
+<meta property="og:description" content="AI gets sports data wrong constantly. Training data lags 6-18 months. Data on which teams AI recommends and how smaller ones can compete.">
+<meta property="og:image" content="https://metricusapp.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Metricus: see what AI answers when your customers ask for what you offer.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why Doesn&#x27;t AI Know About My Sports Team? Visibility Data for Leagues">
+<meta name="twitter:description" content="AI gets sports data wrong constantly. Training data lags 6-18 months. Data on which teams AI recommends and how smaller ones can compete.">
+<meta name="twitter:image" content="https://metricusapp.com/assets/og.png">
+<!-- metricus:head -->
+<link rel="stylesheet" href="/assets/metricus.css?v=20260927">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#FBFAF7">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w70oz7g1k3");</script>
+<!-- /metricus:head -->
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "Why Doesn't AI Know About My Sports Team? Visibility Data for Leagues",
+ "description": "AI gets sports data wrong constantly. Training data lags 6-18 months. Data on which teams AI recommends and how smaller ones can compete.",
+ "author": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "datePublished": "2026-04-06",
+ "dateModified": "2026-09-27",
+ "mainEntityOfPage": "https://metricusapp.com/blog/sports-ai-visibility/",
+ "image": "https://metricusapp.com/assets/og.png"
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://metricusapp.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://metricusapp.com/blog/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "AI Visibility for Sports Teams",
+   "item": "https://metricusapp.com/blog/sports-ai-visibility/"
+  }
+ ]
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Why does AI only recommend big-market teams when fans ask about sports?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "AI generates responses based on patterns in training data. Mega-market franchises generate tens of millions of monthly web mentions across major sports media, fan forums, and news outlets. A minor league team or mid-tier franchise might generate a fraction of that web corpus. This frequency gap directly determines which teams AI knows and recommends. The brands with the most digital footprint across authoritative sports media are the ones AI surfaces in fan queries about tickets, merchandise, and engagement."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much sports data does AI get wrong and how outdated is it?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "AI training data typically lags real-world sports by 6–18 months depending on the model. Common errors include wrong coaching staff after mid-season firings, outdated roster data post-trade-deadline, incorrect stadium or venue information after naming rights changes, fabricated ticket prices, wrong conference or division affiliations, and merged statistics from different seasons."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I check what AI says when someone asks “best [sport] equipment”?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The step most sports brands miss is checking what AI actually says when someone asks best running shoes 2026 or best tennis racket for beginners. AI gives different answers every time and increasingly those answers do not include you. Type the question into Metricus the way a buyer would ask it, and you see the answer AI gives, with every business it names."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How does AI visibility affect sports sponsorship and merchandise revenue?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "AI visibility increasingly affects both sponsorship valuation and merchandise discovery. When fans ask AI about merchandise or fan experiences, AI responses drive purchase intent without the fan ever visiting a team website or seeing a sponsor logo. 67% of sports executives consider digital engagement metrics critical to sponsorship valuation. If AI consistently omits your brand from fan engagement discussions, sponsor-facing metrics suffer. The global licensed sports merchandise market reached $34.5 billion in 2024, and AI-mediated discovery is becoming a meaningful channel."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is at stake financially if my sports brand is invisible to AI?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The global sports industry generated $512 billion in 2024. If 5% of potential fans begin their discovery through AI and AI never mentions your brand, the impact is measurable in lost ticket revenue, merchandise sales, and sponsorship value."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What does Metricus show for a sports brand?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Metricus shows the answer AI gives when your customers ask for what you sell, with every business it names. You pick your website, edit the answer into what you want AI to say, and get new text for your website. The AI Visibility Score shows how often AI mentions and recommends you, today and with the new text. It is free, with no signup."
+   }
+  }
+ ]
+}</script>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 gap-4">
-      <a href="/" class="text-on-surface font-semibold" aria-label="Metricus home">Metricus <span class="font-normal text-on-surface-variant">Optimizer</span></a>
-      <div class="flex items-center gap-5">
-        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface">Learn</a>
-        <a href="/ai-visibility-optimizer-tool/" class="bg-primary text-on-primary text-sm font-semibold px-4 py-2.5 hover:bg-primary-dim">Open the tool</a>
-      </div>
-    </div>
-  </header>
-
-
-
-  <main class="flex-grow flex flex-col relative overflow-x-hidden">
-    <div class="absolute inset-0 -z-10 pointer-events-none"></div>
-    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
-      <nav class="mb-8"><ol class="flex items-center gap-2 text-xs text-slate-muted"><li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li><li class="select-none">/</li><li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li><li class="select-none">/</li><li class="text-slate-text">Sports AI Visibility</li></ol></nav>
-
-      <header class="mb-12">
-        <p class="text-xs text-primary font-semibold mb-4">Industry Research</p>
-        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">Why Doesn't AI Know About My Sports Team?</h1>
-        <p class="text-sm text-outline">Metricus Research &middot; Last updated: September 2026 &middot; 16 min read</p>
-      </header>
-
-      <div class="bg-surface-container-low p-8 mb-12">
-        <p class="text-lg leading-relaxed text-on-surface"><strong>The global sports industry generated $512 billion in revenue in 2024</strong> (Statista, 2024). Fan engagement is increasingly digital-first. Yet when fans ask AI &ldquo;What&rsquo;s the best MLS team to follow?&rdquo; or &ldquo;Where should I buy NBA tickets?&rdquo; &mdash; AI recommends the same 5&ndash;6 mega-market franchises every time. Your team, your sponsors, your merchandise &mdash; invisible. Metricus has a free tool that shows what the major AI platforms answer when your page is the source, and what to rewrite. <a href="/ai-visibility-optimizer-tool/">Open the tool</a>.</p>
-      </div>
-
-      <div class="article-body">
-        <h2 id="the-fan-search-shift">The shift: from ESPN to &ldquo;ask the AI&rdquo;</h2>
-
-        <p>Sports fandom has always been driven by media. Radio, television, and the internet each reshaped how fans discovered, followed, and engaged with teams. Now AI is doing it again &mdash; and the implications for sports organizations are enormous.</p>
-
-        <p>Gartner forecast in February 2024 that <strong>traditional search engine volume will drop 25% by 2026</strong> due to AI. That prediction is materializing. Major AI platforms surpassed billions of monthly visits by mid-2025. Pew Research Center found that <strong>23% of US adults had used AI</strong> by early 2024 &mdash; rising to 43% among adults aged 18&ndash;29, the core sports fan demographic.</p>
-
-        <p>PwC&rsquo;s 2024 Sports Survey found that <strong>67% of sports executives consider digital fan engagement metrics critical to their business model</strong>. Deloitte&rsquo;s 2024 Sports Industry Outlook reported that <strong>sports organizations plan to increase digital engagement spending by 30&ndash;40% through 2027</strong>. The queries are changing. Instead of opening ESPN.com, a fan asks AI: &ldquo;Which NFL teams have the best fan experience?&rdquo; or &ldquo;What MLS team should I support if I&rsquo;m new to soccer?&rdquo; The AI responds with a narrative answer &mdash; mentioning specific teams and venues &mdash; and the fan follows that recommendation into a purchase decision without ever hitting your team&rsquo;s website.</p>
-
-        <div data-reader-pulse-b data-source="sports-ai-visibility"></div>
-
-        <p>The step most sports brands miss: checking what AI actually says when someone asks &ldquo;best [sport] equipment&rdquo; or &ldquo;best [team category] to follow.&rdquo; AI gives different answers every time, and increasingly those answers do not include you. In our data, the average brand&rsquo;s AI visibility gap widened by 10% every 90 days when left unaddressed. The Metricus optimizer shows this for one page at a time: put in a URL, see the answer an AI assistant gives about the page, see the passages behind that answer marked on the page, and get a rewrite for each one.</p>
-
-        <h2 id="comparison-query-positioning">The queries that matter most: &ldquo;best [sport] equipment&rdquo; comparisons</h2>
-
-        <p>When a fan asks AI &ldquo;best running shoes for marathon training&rdquo; or &ldquo;best tennis racket for intermediate players&rdquo; or &ldquo;best basketball for outdoor courts,&rdquo; AI generates a response that functions as the new product comparison page. These buyer-intent queries are where purchase decisions happen &mdash; and where most sports brands are completely absent.</p>
-
-        <p>The economics of comparison query positioning are stark. Buyers asking equipment comparison questions are further along in the purchase funnel than buyers asking general questions. They have already narrowed to a category. They are deciding between specific options. If AI does not include your brand in that comparison, you are excluded from the consideration set at the exact moment the buyer is ready to purchase.</p>
-
-        <p>In traditional search, you could at least appear on the results page for equipment queries even if you were not the top result. In AI-generated responses, there is no results page. There is a single synthesized answer, and you are either in it or you are not. The binary nature of AI inclusion makes equipment comparison query positioning the single highest-value surface for sports brands.</p>
-
-        <p>The challenge is that AI comparison responses are not static. Ask &ldquo;best golf clubs for beginners 2026&rdquo; five times and you may get five different lists. The brands that appear consistently are the ones with the strongest authority signals across the web &mdash; independent reviews, press coverage, structured comparison data, and third-party mentions. Brands that rely entirely on their own marketing copy rarely appear in comparison responses.</p>
-
-        <h2 id="who-ai-recommends">Who AI actually recommends across sports categories</h2>
-
-        <p>We tested extensively across the major AI platforms using fan-intent and buyer-intent prompts. The results are stark: the same brands appear over and over, whether the query is about teams, equipment, or experiences.</p>
-
-        <div class="overflow-x-auto my-8">
-          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Category</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Brands AI Recommends Most</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">AI Mention Rate</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Brands AI Rarely Mentions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Running shoes</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">3&ndash;4 dominant global brands</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">80&ndash;92% of responses</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Specialty and emerging performance brands</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Tennis rackets</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">3&ndash;4 legacy brands</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">75&ndash;88% of responses</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Boutique and tech-forward racket makers</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Golf equipment</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">4&ndash;5 established OEMs</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">70&ndash;85% of responses</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">DTC and component brands</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Cycling gear</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">3&ndash;5 dominant manufacturers</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">65&ndash;80% of responses</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Small-batch and regional builders</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Team merchandise</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Major-market franchise gear</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">75&ndash;90% of responses</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Minor league and college merchandise</td>
-              </tr>
-              <tr class="bg-surface-container-low">
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">&mdash;</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Avg. niche / emerging sports brand</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">&lt;5% of responses</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Almost all omitted entirely</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p class="text-sm text-slate-muted">AI mention rates based on Metricus internal testing across the major AI platforms using buyer-intent queries (2026). Rates represent percentage of relevant category responses that mention the brand.</p>
-
-        <p>The pattern is consistent. <strong>The same 3&ndash;5 brands dominate AI responses in every sports equipment category.</strong> Smaller brands, regardless of product quality, innovation, or customer satisfaction, are functionally invisible. This is not a quality judgment. It is a structural feature of how AI recommends proportional to web corpus frequency.</p>
-
-        <p>For sports teams and leagues, the same concentration applies. Mega-market franchises with tens of millions of monthly web mentions dominate AI responses for every fan-intent query &mdash; tickets, fan experience, merchandise, and team comparisons. Teams below the top tier of their league are absent.</p>
-
-        <h2 id="why-your-brand-invisible">Why your sports brand is invisible to AI</h2>
-
-        <p>AI generates recommendations based on patterns in training data &mdash; billions of web pages, news articles, forum discussions, review platforms, and product comparison sites. Three factors determine whether AI mentions your sports brand:</p>
-
-        <ul>
-          <li><strong>Corpus frequency:</strong> How often your brand appears across the web. There is a 100x&ndash;1,000,000x gap in web mentions between dominant sports brands and emerging ones. Content with statistical citations is up to 40% more likely to be cited by AI (Princeton / Georgia Tech GEO study).</li>
-          <li><strong>Source authority:</strong> AI weights authoritative third-party sources disproportionately &mdash; major sports media, independent review platforms, and equipment comparison sites carry far more weight than your own product pages. 95% of AI citations come from earned media and non-paid sources.</li>
-          <li><strong>Content structure:</strong> Most sports brand websites feature marketing-focused content with no structured data, no statistical performance claims, and no comparison content that AI can extract and cite. Pages with FAQ schema are 2.8x more likely to be cited in AI answers.</li>
-        </ul>
-
-        <p>The gap is not just about brand size. Even established sports brands with substantial web traffic remain invisible because their content is built for human browsers, not for AI extraction. Product hero images, promotional banners, and lifestyle photography do not give AI anything to cite. AI needs structured, factual, comparison-ready content &mdash; and most sports brand sites have none.</p>
-
-        <h3>The equipment brand paradox</h3>
-
-        <p>Sports equipment brands face a compounding problem. When buyers ask AI about equipment, AI almost never includes brands that lack extensive third-party review coverage. Your product may outperform the dominant brands in independent testing. You may have better materials, better engineering, better customer satisfaction scores. But if the web corpus that feeds AI training does not contain enough third-party mentions of your brand, AI has no basis to recommend you.</p>
-
-        <p>This means sports equipment brands must build authority signals that exist outside their own website. Independent reviews in major publications, mentions in comparison articles, structured product data that AI can parse, and presence on authoritative review platforms &mdash; these are the signals that bridge the gap between product quality and AI visibility.</p>
-
-        <h2 id="what-ai-gets-wrong">What AI gets wrong about sports brands</h2>
-
-        <p>Even when AI does mention a sports brand, there is a high probability it gets critical details wrong. AI training data lags reality by 6&ndash;18 months, and sports changes constantly &mdash; new product releases, roster changes, pricing updates, and venue modifications happen continuously.</p>
-
-        <p>The most common errors found in AI responses about sports organizations and brands:</p>
-
-        <h3>Product and pricing data</h3>
-        <p>AI frequently cites outdated product specifications, discontinued models as if they are current, and stale pricing. For equipment brands, AI may recommend a 2024 model when the 2026 version has significant improvements. For teams, AI cites last season&rsquo;s ticket prices as current, sometimes off by 20&ndash;40%. The global licensed sports merchandise market reached $34.5 billion in 2024 (Statista) &mdash; and AI-mediated discovery is increasingly where fans start their purchase journey with wrong price expectations.</p>
-
-        <h3>Roster and coaching data</h3>
-        <p>Professional sports rosters change dramatically from season to season. The NFL sees 30&ndash;40% roster turnover annually. NBA trade deadlines reshape teams mid-season. AI frequently cites players who have been traded, released, or retired, and coaching staffs that have been fired. When a fan asks about a team, AI may provide answers one or two seasons out of date.</p>
-
-        <h3>Venue and event information</h3>
-        <p>Stadium naming rights change frequently. AI may reference outdated stadium names, incorrect seating capacities after renovations, wrong addresses for relocated teams, or amenities that have been added or removed. For sports events, AI fabricates plausible but fictional scheduling details, incorrect venue assignments, and wrong start times.</p>
-
-        <h3>League structure and scheduling</h3>
-        <p>Conference realignment, expansion teams, scheduling format changes, and playoff structure modifications happen regularly. AI may provide outdated conference memberships, incorrect schedule information, or wrong playoff formats &mdash; particularly for college sports where structural changes have been rapid in 2024&ndash;2026.</p>
-
-        <h3>Equipment specifications and comparisons</h3>
-        <p>For sports equipment queries, AI frequently conflates specifications across model years, attributes one product&rsquo;s features to a competitor, invents performance claims that do not exist in any source, and recommends products that have been discontinued. A buyer asking &ldquo;best [sport] equipment for beginners&rdquo; may receive a list that includes products no longer available or that never had the features AI describes.</p>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>The compound problem:</strong> Your brand is either invisible in AI (bad) or mentioned with wrong specifications, outdated pricing, or incorrect details (worse). Both cost you customers. The first means buyers and fans never discover you. The second means they make decisions based on wrong information &mdash; or choose a competitor whose AI presence is more accurate.
+<body class="doc">
+<!-- metricus:header -->
+<header class="nav"><div class="in"><a class="logo" href="/" id="navhome">Metricus</a><span class="sp"></span><span class="muted" id="host"></span></div></header>
+<!-- /metricus:header -->
+<main class="doc-main" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <span aria-current="page">Sports AI Visibility</span></nav>
+<p class="kicker">Industry Research</p>
+<h1>Why Doesn't AI Know About My Sports Team?</h1>
+<p class="byline">Metricus Research · Last updated: September 2026 · 16 min read</p>
+<div class="note">
+<p><strong>The global sports industry generated $512 billion in revenue in 2024</strong> (Statista, 2024). Fan engagement is increasingly digital-first. Yet when fans ask AI “What’s the best MLS team to follow?” or “Where should I buy NBA tickets?” — AI recommends the same 5–6 mega-market franchises every time. Your team, your sponsors, your merchandise — invisible.</p>
+</div>
+<h2 id="the-fan-search-shift">The shift: from ESPN to “ask the AI”</h2>
+<p>Sports fandom has always been driven by media. Radio, television, and the internet each reshaped how fans discovered, followed, and engaged with teams. Now AI is doing it again — and the implications for sports organizations are enormous.</p>
+<p>Gartner forecast in February 2024 that <strong>traditional search engine volume will drop 25% by 2026</strong> due to AI. That prediction is materializing. Major AI platforms surpassed billions of monthly visits by mid-2025. Pew Research Center found that <strong>23% of US adults had used AI</strong> by early 2024 — rising to 43% among adults aged 18–29, the core sports fan demographic.</p>
+<p>PwC’s 2024 Sports Survey found that <strong>67% of sports executives consider digital fan engagement metrics critical to their business model</strong>. Deloitte’s 2024 Sports Industry Outlook reported that <strong>sports organizations plan to increase digital engagement spending by 30–40% through 2027</strong>. The queries are changing. Instead of opening ESPN.com, a fan asks AI: “Which NFL teams have the best fan experience?” or “What MLS team should I support if I’m new to soccer?” The AI responds with a narrative answer — mentioning specific teams and venues — and the fan follows that recommendation into a purchase decision without ever hitting your team’s website.</p>
+<div data-reader-pulse-b="" data-source="sports-ai-visibility"></div>
+<p>The step most sports brands miss: checking what AI actually says when someone asks “best [sport] equipment” or “best [team category] to follow.” AI gives different answers every time, and increasingly those answers do not include you.</p>
+<h2 id="comparison-query-positioning">The queries that matter most: “best [sport] equipment” comparisons</h2>
+<p>When a fan asks AI “best running shoes for marathon training” or “best tennis racket for intermediate players” or “best basketball for outdoor courts,” AI generates a response that functions as the new product comparison page. These buyer-intent queries are where purchase decisions happen — and where most sports brands are completely absent.</p>
+<p>The economics of comparison query positioning are stark. Buyers asking equipment comparison questions are further along in the purchase funnel than buyers asking general questions. They have already narrowed to a category. They are deciding between specific options. If AI does not include your brand in that comparison, you are excluded from the consideration set at the exact moment the buyer is ready to purchase.</p>
+<p>In traditional search, you could at least appear on the results page for equipment queries even if you were not the top result. In AI-generated responses, there is no results page. There is a single synthesized answer, and you are either in it or you are not. The binary nature of AI inclusion makes equipment comparison query positioning the single highest-value surface for sports brands.</p>
+<p>The challenge is that AI comparison responses are not static. Ask “best golf clubs for beginners 2026” five times and you may get five different lists. The brands that appear consistently are the ones with the strongest authority signals across the web — independent reviews, press coverage, structured comparison data, and third-party mentions. Brands that rely entirely on their own marketing copy rarely appear in comparison responses.</p>
+<h2 id="who-ai-recommends">Who AI actually recommends across sports categories</h2>
+<p>The same brands appear in AI answers over and over, whether the query is about teams, equipment, or experiences.</p>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Brands AI Recommends Most</th>
+<th>Brands AI Rarely Mentions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Running shoes</td>
+<td>3–4 dominant global brands</td>
+<td>Specialty and emerging performance brands</td>
+</tr>
+<tr>
+<td>Tennis rackets</td>
+<td>3–4 legacy brands</td>
+<td>Boutique and tech-forward racket makers</td>
+</tr>
+<tr>
+<td>Golf equipment</td>
+<td>4–5 established OEMs</td>
+<td>DTC and component brands</td>
+</tr>
+<tr>
+<td>Cycling gear</td>
+<td>3–5 dominant manufacturers</td>
+<td>Small-batch and regional builders</td>
+</tr>
+<tr>
+<td>Team merchandise</td>
+<td>Major-market franchise gear</td>
+<td>Minor league and college merchandise</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The pattern is consistent. <strong>The same 3–5 brands dominate AI responses in every sports equipment category.</strong> Smaller brands, regardless of product quality, innovation, or customer satisfaction, are functionally invisible. This is not a quality judgment. It is a structural feature of how AI recommends proportional to web corpus frequency.</p>
+<p>For sports teams and leagues, the same concentration applies. Mega-market franchises with tens of millions of monthly web mentions dominate AI responses for every fan-intent query — tickets, fan experience, merchandise, and team comparisons. Teams below the top tier of their league are absent.</p>
+<h2 id="why-your-brand-invisible">Why your sports brand is invisible to AI</h2>
+<p>AI generates recommendations based on patterns in training data — billions of web pages, news articles, forum discussions, review platforms, and product comparison sites. Three factors determine whether AI mentions your sports brand:</p>
+<ul>
+<li><strong>Corpus frequency:</strong> How often your brand appears across the web. There is a 100x–1,000,000x gap in web mentions between dominant sports brands and emerging ones. Content with statistical citations is up to 40% more likely to be cited by AI (Princeton / Georgia Tech GEO study).</li>
+<li><strong>Source authority:</strong> AI weights authoritative third-party sources disproportionately — major sports media, independent review platforms, and equipment comparison sites carry far more weight than your own product pages. 95% of AI citations come from earned media and non-paid sources.</li>
+<li><strong>Content structure:</strong> Most sports brand websites feature marketing-focused content with no structured data, no statistical performance claims, and no comparison content that AI can extract and cite. Pages with FAQ schema are 2.8x more likely to be cited in AI answers.</li>
+</ul>
+<p>The gap is not just about brand size. Even established sports brands with substantial web traffic remain invisible because their content is built for human browsers, not for AI extraction. Product hero images, promotional banners, and lifestyle photography do not give AI anything to cite. AI needs structured, factual, comparison-ready content — and most sports brand sites have none.</p>
+<h3>The equipment brand paradox</h3>
+<p>Sports equipment brands face a compounding problem. When buyers ask AI about equipment, AI almost never includes brands that lack extensive third-party review coverage. Your product may outperform the dominant brands in independent testing. You may have better materials, better engineering, better customer satisfaction scores. But if the web corpus that feeds AI training does not contain enough third-party mentions of your brand, AI has no basis to recommend you.</p>
+<p>This means sports equipment brands must build authority signals that exist outside their own website. Independent reviews in major publications, mentions in comparison articles, structured product data that AI can parse, and presence on authoritative review platforms — these are the signals that bridge the gap between product quality and AI visibility.</p>
+<h2 id="what-ai-gets-wrong">What AI gets wrong about sports brands</h2>
+<p>Even when AI does mention a sports brand, there is a high probability it gets critical details wrong. AI training data lags reality by 6–18 months, and sports changes constantly — new product releases, roster changes, pricing updates, and venue modifications happen continuously.</p>
+<p>The most common errors found in AI responses about sports organizations and brands:</p>
+<h3>Product and pricing data</h3>
+<p>AI frequently cites outdated product specifications, discontinued models as if they are current, and stale pricing. For equipment brands, AI may recommend a 2024 model when the 2026 version has significant improvements. For teams, AI cites last season’s ticket prices as current, sometimes off by 20–40%. The global licensed sports merchandise market reached $34.5 billion in 2024 (Statista) — and AI-mediated discovery is increasingly where fans start their purchase journey with wrong price expectations.</p>
+<h3>Roster and coaching data</h3>
+<p>Professional sports rosters change dramatically from season to season. The NFL sees 30–40% roster turnover annually. NBA trade deadlines reshape teams mid-season. AI frequently cites players who have been traded, released, or retired, and coaching staffs that have been fired. When a fan asks about a team, AI may provide answers one or two seasons out of date.</p>
+<h3>Venue and event information</h3>
+<p>Stadium naming rights change frequently. AI may reference outdated stadium names, incorrect seating capacities after renovations, wrong addresses for relocated teams, or amenities that have been added or removed. For sports events, AI fabricates plausible but fictional scheduling details, incorrect venue assignments, and wrong start times.</p>
+<h3>League structure and scheduling</h3>
+<p>Conference realignment, expansion teams, scheduling format changes, and playoff structure modifications happen regularly. AI may provide outdated conference memberships, incorrect schedule information, or wrong playoff formats — particularly for college sports where structural changes have been rapid in 2024–2026.</p>
+<h3>Equipment specifications and comparisons</h3>
+<p>For sports equipment queries, AI frequently conflates specifications across model years, attributes one product’s features to a competitor, invents performance claims that do not exist in any source, and recommends products that have been discontinued. A buyer asking “best [sport] equipment for beginners” may receive a list that includes products no longer available or that never had the features AI describes.</p>
+<div class="note">
+<p>
+<strong>The compound problem:</strong> Your brand is either invisible in AI (bad) or mentioned with wrong specifications, outdated pricing, or incorrect details (worse). Both cost you customers. The first means buyers and fans never discover you. The second means they make decisions based on wrong information — or choose a competitor whose AI presence is more accurate.
           </p>
-        </div>
-
-        
-
-        <h2 id="the-money">The $512 billion market AI is reshaping</h2>
-
-        <p>Professional and amateur sports represent one of the largest entertainment markets on Earth &mdash; and AI is reshaping how fans discover, engage with, and spend money on teams and equipment:</p>
-
-        <ul>
-          <li>The <strong>global sports market reached $512 billion in 2024</strong> (Statista, Global Sports Market Report, 2024), encompassing media rights, sponsorship, ticketing, and merchandise.</li>
-          <li><strong>North American sports revenue reached $83 billion in 2024</strong> (PwC Sports Outlook, 2024).</li>
-          <li>The <strong>global licensed sports merchandise market was valued at $34.5 billion in 2024</strong> (Statista), with North America representing approximately 40%.</li>
-          <li><strong>Sports sponsorship spending reached $97 billion globally in 2024</strong> (Sportico Sponsorship Index, 2024).</li>
-          <li>Deloitte estimated that <strong>digital fan engagement will represent 35&ndash;45% of total sports revenue by 2028</strong>, up from approximately 20% in 2022.</li>
-        </ul>
-
-        <p>The financial stakes are staggering. And unlike traditional media &mdash; where broadcast deals and local TV contracts guarantee exposure &mdash; AI-mediated fan and buyer discovery has no guaranteed distribution. You cannot buy your way into an AI recommendation. There are no ad slots in AI responses. You have to earn visibility through web presence, structured data, and authoritative content.</p>
-
-        <h3>The compounding loss</h3>
-
-        <p>Sports brands that do not address AI visibility face compounding losses. As more fans and buyers shift to AI-driven research, the brands invisible in AI lose top-of-funnel discovery. Fewer fans mean fewer ticket sales. Fewer buyers mean fewer equipment purchases. Fewer sales mean less revenue to invest in the visibility that might fix the problem. The feedback loop accelerates with every AI model update.</p>
-
-        <p>Meanwhile, the brands that do appear in AI responses capture not just the AI traffic but amplified traditional traffic as well. Brands cited inside AI Overviews earn 35% more organic clicks and 91% more paid clicks than brands on the same queries that are not cited (industry research, 2025). AI visibility is not a separate channel &mdash; it amplifies every other channel you invest in.</p>
-
-        <h2 id="minor-leagues-equipment">Minor leagues, niche sports, and the AI blind spot</h2>
-
-        <p>The AI visibility gap is most severe at the lower tiers of professional sports and in niche equipment categories &mdash; precisely where discovery matters most.</p>
-
-        <p><strong>Minor leagues</strong> collectively drew 40+ million fans in 2024, with several franchises averaging 7,000&ndash;10,000 fans per game. Yet in AI responses, minor league teams are functionally nonexistent. AI provides incorrect team names, wrong league affiliations, and outdated partnerships when asked about minor league sports in any given city.</p>
-
-        <p><strong>College sports</strong> represent an enormous AI blind spot. The NCAA encompasses over 1,100 member institutions. AI knows about the top programs but ignores the vast majority. Group of Five conferences representing 65 FBS programs are severely underrepresented in AI responses despite often providing excellent fan experiences and significantly lower ticket prices.</p>
-
-        <p><strong>Niche sports equipment</strong> faces the same dynamic. Ask AI about equipment for climbing, paddleboarding, pickleball, or any sport outside the mainstream, and responses are dominated by the 2&ndash;3 brands with the largest web footprint. Specialty manufacturers with superior products, passionate user communities, and strong customer loyalty are invisible because their web corpus does not match the volume of mass-market competitors.</p>
-
-        <div class="overflow-x-auto my-8">
-          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Sports Tier / Category</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">AI Mention Rate (top brands)</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">AI Mention Rate (mid-tier / niche)</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">AI Accuracy Rate</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Major league teams (top-market)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">75&ndash;92%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">&mdash;</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">55&ndash;70%</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Major league teams (small-market)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">&mdash;</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">25&ndash;50%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">40&ndash;55%</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Minor leagues / college (non-Power 4)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">&mdash;</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">2&ndash;10%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">15&ndash;35%</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Major equipment brands</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">70&ndash;92%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">&mdash;</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">50&ndash;65%</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Specialty / niche equipment brands</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">&mdash;</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">1&ndash;8%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">20&ndash;35%</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>The data reveals a consistent pattern: <strong>audience size, product quality, and customer satisfaction do not determine AI visibility. Web corpus frequency does.</strong> Minor league baseball drew 40 million fans &mdash; more than the NHL &mdash; yet receives a fraction of the AI visibility. Specialty equipment brands with superior products and passionate communities are invisible to AI because their web corpus does not match mass-market competitors.</p>
-
-        <h2 id="sponsorship-merchandise">Sponsorship visibility and merchandise discovery in AI</h2>
-
-        <p>AI visibility does not just affect fan and buyer discovery. It directly impacts two of the most important revenue streams for sports organizations: sponsorship value and merchandise sales.</p>
-
-        <h3>Sponsorship in the AI era</h3>
-
-        <p><strong>Global sports sponsorship spending reached $97 billion in 2024</strong> (Sportico Sponsorship Index). Sponsors evaluate their investment based on media exposure metrics. PwC&rsquo;s 2024 Sports Survey found that <strong>78% of sports sponsors now include digital engagement metrics in their ROI calculations</strong>.</p>
-
-        <p>When a fan asks AI about the best stadium or best fan experience and AI names specific venues, those naming-rights sponsors receive brand reinforcement at zero media cost. When AI omits your venue from the conversation, your naming-rights sponsor gets nothing. As AI-mediated discovery grows, savvy sponsors will begin asking: <strong>&ldquo;How often does AI mention our partnership with your brand?&rdquo;</strong></p>
-
-        <h3>Merchandise discovery shifting to AI</h3>
-
-        <p>The <strong>licensed sports merchandise market reached $34.5 billion globally in 2024</strong> (Statista). Fans increasingly use AI for purchasing decisions: &ldquo;What&rsquo;s the best jersey to buy?&rdquo; &ldquo;What gifts should I get for a sports fan?&rdquo; &ldquo;Where can I buy official team merchandise?&rdquo;</p>
-
-        <p>AI merchandise recommendations heavily favor brands with the largest digital presence. This creates a concentration effect: <strong>the brands AI recommends sell more merchandise, which generates more web content about that merchandise, which further reinforces AI recommendations</strong>. It is a flywheel that benefits already-visible brands and excludes smaller ones.</p>
-
-        <h2 id="authority-signals">The authority signals that drive AI recommendations in sports</h2>
-
-        <p>AI does not randomly choose which brands to recommend. It follows a consistent set of authority signals, and in sports those signals are specific:</p>
-
-        <h3>Third-party editorial coverage</h3>
-        <p>Independent sports publications, equipment review sites, and industry award mentions all create the third-party authority that AI trusts. AI weights independent mentions more heavily than anything on your own website. A single review in a respected sports publication can have more impact on AI recommendations than a complete website redesign.</p>
-
-        <h3>Structured comparison data</h3>
-        <p>When AI needs to answer a comparison query, it looks for structured data it can extract cleanly. Spec sheets with proper schema markup, feature comparison tables, and standardized performance data all make your content parseable. Most sports brand sites present this information as images or unstructured text that AI cannot extract.</p>
-
-        <h3>Review volume and consistency</h3>
-        <p>AI synthesizes review data across platforms. Brands with consistent ratings across multiple review sites send a stronger authority signal than brands with high ratings on one platform and no presence on others. The consistency matters as much as the score.</p>
-
-        <h3>Content freshness signals</h3>
-        <p>Because sports data changes rapidly &mdash; new product releases, roster changes, pricing updates &mdash; AI gives preference to content with clear freshness indicators. Dated comparison articles, regularly updated product pages, and time-stamped reviews all signal to AI that the information is current. Undated content gets treated as potentially stale.</p>
-
-        <h2 id="what-a-report-shows">What the Metricus optimizer shows for sports brands</h2>
-
-        <p>The optimizer shows what the major AI platforms answer when your page is the source. For a team, league, or equipment brand, that means:</p>
-
-        <ul>
-          <li>The exact answer AI gives when it reads your page and a fan or buyer asks about your category</li>
-          <li>Which passages on the page the answer draws on, and which it ignores</li>
-          <li>Rewrites for those passages that change the answer</li>
-        </ul>
-
-        <p>The optimizer runs in the browser on one URL at a time. Free, no signup, no credit card.</p>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>The bottom line:</strong> If you operate a sports brand, manage an athletic program, run a league, or sell sports equipment &mdash; you need to know what AI is saying about you. Not next season. Now.
+</div>
+<h2 id="the-money">The $512 billion market AI is reshaping</h2>
+<p>Professional and amateur sports represent one of the largest entertainment markets on Earth — and AI is reshaping how fans discover, engage with, and spend money on teams and equipment:</p>
+<ul>
+<li>The <strong>global sports market reached $512 billion in 2024</strong> (Statista, Global Sports Market Report, 2024), encompassing media rights, sponsorship, ticketing, and merchandise.</li>
+<li><strong>North American sports revenue reached $83 billion in 2024</strong> (PwC Sports Outlook, 2024).</li>
+<li>The <strong>global licensed sports merchandise market was valued at $34.5 billion in 2024</strong> (Statista), with North America representing approximately 40%.</li>
+<li><strong>Sports sponsorship spending reached $97 billion globally in 2024</strong> (Sportico Sponsorship Index, 2024).</li>
+<li>Deloitte estimated that <strong>digital fan engagement will represent 35–45% of total sports revenue by 2028</strong>, up from approximately 20% in 2022.</li>
+</ul>
+<p>The financial stakes are staggering. And unlike traditional media — where broadcast deals and local TV contracts guarantee exposure — AI-mediated fan and buyer discovery has no guaranteed distribution. You cannot buy your way into an AI recommendation. There are no ad slots in AI responses. You have to earn visibility through web presence, structured data, and authoritative content.</p>
+<h3>The compounding loss</h3>
+<p>Sports brands that do not address AI visibility face compounding losses. As more fans and buyers shift to AI-driven research, the brands invisible in AI lose top-of-funnel discovery. Fewer fans mean fewer ticket sales. Fewer buyers mean fewer equipment purchases. Fewer sales mean less revenue to invest in the visibility that might fix the problem. The feedback loop accelerates with every AI model update.</p>
+<p>Meanwhile, the brands that do appear in AI responses capture not just the AI traffic but amplified traditional traffic as well. Brands cited inside AI Overviews earn 35% more organic clicks and 91% more paid clicks than brands on the same queries that are not cited (industry research, 2025). AI visibility is not a separate channel — it amplifies every other channel you invest in.</p>
+<h2 id="minor-leagues-equipment">Minor leagues, niche sports, and the AI blind spot</h2>
+<p>The AI visibility gap is most severe at the lower tiers of professional sports and in niche equipment categories — precisely where discovery matters most.</p>
+<p><strong>Minor leagues</strong> collectively drew 40+ million fans in 2024, with several franchises averaging 7,000–10,000 fans per game. Yet in AI responses, minor league teams are functionally nonexistent. AI provides incorrect team names, wrong league affiliations, and outdated partnerships when asked about minor league sports in any given city.</p>
+<p><strong>College sports</strong> represent an enormous AI blind spot. The NCAA encompasses over 1,100 member institutions. AI knows about the top programs but ignores the vast majority. Group of Five conferences representing 65 FBS programs are severely underrepresented in AI responses despite often providing excellent fan experiences and significantly lower ticket prices.</p>
+<p><strong>Niche sports equipment</strong> faces the same dynamic. Ask AI about equipment for climbing, paddleboarding, pickleball, or any sport outside the mainstream, and responses are dominated by the 2–3 brands with the largest web footprint. Specialty manufacturers with superior products, passionate user communities, and strong customer loyalty are invisible because their web corpus does not match the volume of mass-market competitors.</p>
+<p>The pattern is the same at every tier: <strong>audience size, product quality, and customer satisfaction do not determine AI visibility. Web corpus frequency does.</strong> Minor league baseball drew 40 million fans — more than the NHL — yet receives a fraction of the AI visibility. Specialty equipment brands with superior products and passionate communities are invisible to AI because their web corpus does not match mass-market competitors.</p>
+<h2 id="sponsorship-merchandise">Sponsorship visibility and merchandise discovery in AI</h2>
+<p>AI visibility does not just affect fan and buyer discovery. It directly impacts two of the most important revenue streams for sports organizations: sponsorship value and merchandise sales.</p>
+<h3>Sponsorship in the AI era</h3>
+<p><strong>Global sports sponsorship spending reached $97 billion in 2024</strong> (Sportico Sponsorship Index). Sponsors evaluate their investment based on media exposure metrics. PwC’s 2024 Sports Survey found that <strong>78% of sports sponsors now include digital engagement metrics in their ROI calculations</strong>.</p>
+<p>When a fan asks AI about the best stadium or best fan experience and AI names specific venues, those naming-rights sponsors receive brand reinforcement at zero media cost. When AI omits your venue from the conversation, your naming-rights sponsor gets nothing. As AI-mediated discovery grows, savvy sponsors will begin asking: <strong>“How often does AI mention our partnership with your brand?”</strong></p>
+<h3>Merchandise discovery shifting to AI</h3>
+<p>The <strong>licensed sports merchandise market reached $34.5 billion globally in 2024</strong> (Statista). Fans increasingly use AI for purchasing decisions: “What’s the best jersey to buy?” “What gifts should I get for a sports fan?” “Where can I buy official team merchandise?”</p>
+<p>AI merchandise recommendations heavily favor brands with the largest digital presence. This creates a concentration effect: <strong>the brands AI recommends sell more merchandise, which generates more web content about that merchandise, which further reinforces AI recommendations</strong>. It is a flywheel that benefits already-visible brands and excludes smaller ones.</p>
+<h2 id="authority-signals">The authority signals that drive AI recommendations in sports</h2>
+<p>AI does not randomly choose which brands to recommend. It follows a consistent set of authority signals, and in sports those signals are specific:</p>
+<h3>Third-party editorial coverage</h3>
+<p>Independent sports publications, equipment review sites, and industry award mentions all create the third-party authority that AI trusts. AI weights independent mentions more heavily than anything on your own website. A single review in a respected sports publication can have more impact on AI recommendations than a complete website redesign.</p>
+<h3>Structured comparison data</h3>
+<p>When AI needs to answer a comparison query, it looks for structured data it can extract cleanly. Spec sheets with proper schema markup, feature comparison tables, and standardized performance data all make your content parseable. Most sports brand sites present this information as images or unstructured text that AI cannot extract.</p>
+<h3>Review volume and consistency</h3>
+<p>AI synthesizes review data across platforms. Brands with consistent ratings across multiple review sites send a stronger authority signal than brands with high ratings on one platform and no presence on others. The consistency matters as much as the score.</p>
+<h3>Content freshness signals</h3>
+<p>Because sports data changes rapidly — new product releases, roster changes, pricing updates — AI gives preference to content with clear freshness indicators. Dated comparison articles, regularly updated product pages, and time-stamped reviews all signal to AI that the information is current. Undated content gets treated as potentially stale.</p>
+<h2 id="what-a-report-shows">What Metricus shows for sports brands</h2>
+<p>Metricus shows the answer AI gives when a fan or buyer asks about your category, with every business it names, each with a link to its website. For a team, league, or equipment brand, you edit that answer into what you want AI to say about you, get new text for your website, and see how often AI mentions and recommends you, today and with the new text.</p>
+<div class="note">
+<p>
+<strong>The bottom line:</strong> If you operate a sports brand, manage an athletic program, run a league, or sell sports equipment — you need to know what AI is saying about you. Not next season. Now.
           </p>
-        </div>
-
-        <p class="text-sm text-slate-muted mt-8"><strong>Sources:</strong> Statista Global Sports Market Report (2024); PwC Sports Outlook and Sports Survey (2024); Deloitte Sports Industry Outlook (2024); Sportico franchise valuations, sponsorship index, and stadium naming rights data (2024); Gartner search prediction (Feb 2024); Pew Research Center AI adoption survey (2024); Princeton / Georgia Tech GEO study on AI citation factors (Aggarwal et al., 2023); an enterprise SEO platform AI citation click impact study, cross-industry (2025); industry research on AI Overview click-through rates and comparison query behavior (2025&ndash;2026). AI mention rates and accuracy data based on Metricus internal testing across the major AI platforms (2026).</p>
-
-        <h2>Related reading</h2>
-
-        <ul>
-          <li><a href="/blog/ai-visibility-action-plan/">How to Turn AI Visibility Data Into an Action Plan</a> &mdash; The 5-step framework for turning your AI visibility data into specific, prioritized actions.</li>
-          <li><a href="/blog/fix-ai-brand-hallucinations/">AI Is Getting Facts Wrong About Your Brand</a> &mdash; 72% of brands have factual errors in AI responses. The process to audit and fix them.</li>
-          <li><a href="/blog/ai-visibility-worth-paying-for/">Can You Just Check Yourself?</a> &mdash; What a single spot-check misses, and what a page-level tool shows instead.</li>
-        </ul>
-
-        <h2 id="faq">Frequently asked questions</h2>
-
-        <h3>Why does AI only recommend big-market teams when fans ask about sports?</h3>
-        <p>AI generates responses based on patterns in training data. Mega-market franchises generate tens of millions of monthly web mentions across major sports media, fan forums, and news outlets. A minor league team or mid-tier franchise might generate a fraction of that web corpus. This frequency gap directly determines which teams AI knows and recommends. The brands with the most digital footprint across authoritative sports media are the ones AI surfaces in fan queries about tickets, merchandise, and engagement.</p>
-
-        <h3>How much sports data does AI get wrong and how outdated is it?</h3>
-        <p>AI training data typically lags real-world sports by 6&ndash;18 months depending on the model. In testing across the major AI platforms, approximately 40&ndash;55% of specific sports queries returned outdated or incorrect information. Common errors include wrong coaching staff after mid-season firings, outdated roster data post-trade-deadline, incorrect stadium or venue information after naming rights changes, fabricated ticket prices, wrong conference or division affiliations, and merged statistics from different seasons.</p>
-
-        <h3>How do I check what AI says when someone asks &ldquo;best [sport] equipment&rdquo;?</h3>
-        <p>The step most sports brands miss is checking what AI actually says when someone asks best running shoes 2026 or best tennis racket for beginners. AI gives different answers every time and increasingly those answers do not include you. The Metricus optimizer shows this for one page at a time. You put in a URL, see what the major AI platforms answer when your page is the source, see the passages behind that answer marked on the page, and get a rewrite for each one.</p>
-
-        <h3>How does AI visibility affect sports sponsorship and merchandise revenue?</h3>
-        <p>AI visibility increasingly affects both sponsorship valuation and merchandise discovery. When fans ask AI about merchandise or fan experiences, AI responses drive purchase intent without the fan ever visiting a team website or seeing a sponsor logo. 67% of sports executives consider digital engagement metrics critical to sponsorship valuation. If AI consistently omits your brand from fan engagement discussions, sponsor-facing metrics suffer. The global licensed sports merchandise market reached $34.5 billion in 2024, and AI-mediated discovery is becoming a meaningful channel.</p>
-
-        <h3>What is at stake financially if my sports brand is invisible to AI?</h3>
-        <p>The global sports industry generated $512 billion in 2024. If 5% of potential fans begin their discovery through AI and AI never mentions your brand, the impact is measurable in lost ticket revenue, merchandise sales, and sponsorship value. In our data, the average brand&rsquo;s AI visibility gap widened by 10% every 90 days when left unaddressed &mdash; which means every quarter you wait, the gap gets harder to close.</p>
-
-        <h3>What does the free Metricus optimizer show for a sports brand?</h3>
-        <p>You put in a page URL, see what the major AI platforms answer when that page is the source, see the passages that shaped the answer marked on the page, and get a rewrite for each one. Free, no signup, no credit card.</p>
-      </div>
-
-      <div class="border-t border-outline-variant/30 mt-16 pt-10" data-cta="tool">
-        <h2 class="text-2xl font-semibold text-on-surface mb-2">Put in a page.</h2>
-        <p class="text-on-surface-variant mb-5 max-w-xl">See what an AI assistant answers about your page, which passages caused it, and a rewrite for each one. Free, no signup.</p>
-        <form class="flex flex-col sm:flex-row gap-2 max-w-xl" action="/ai-visibility-optimizer-tool/" method="get">
-          <label class="sr-only" for="cta-url">Address of the page to check</label>
-          <input id="cta-url" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="your-site.com/page" required class="flex-1 min-w-0 px-4 py-3 border border-outline-variant bg-white text-on-surface">
-          <button type="submit" class="bg-primary text-on-primary font-semibold px-6 py-3 hover:bg-primary-dim whitespace-nowrap">Start optimizing</button>
-        </form>
-      </div>
-      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40"><p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as: <cite class="not-italic"><a href="https://metricusapp.com/blog/sports-ai-visibility/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; Why Doesn&rsquo;t AI Know About My Sports Team? Visibility Data for Leagues</a></cite></p></footer>
-    </article>
-  </main>
-  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-on-surface-variant">
-      <span class="text-on-surface font-semibold">Metricus</span>
-      <a href="/ai-visibility-optimizer-tool/" class="hover:text-on-surface">Open the tool</a>
-      <a href="/blog/" class="hover:text-on-surface">Learn</a>
-      <a href="/methodology/" class="hover:text-on-surface">How it works</a>
-      <a href="/results/" class="hover:text-on-surface">Results</a>
-      <a href="/for-agencies/" class="hover:text-on-surface">For agencies</a>
-      <a href="/about/" class="hover:text-on-surface">About</a>
-      <a href="/press/" class="hover:text-on-surface">Press</a>
-      <a href="/support/" class="hover:text-on-surface">Support</a>
-      <a href="/privacy-policy/" class="hover:text-on-surface">Privacy</a>
-      <a href="/terms-of-service/" class="hover:text-on-surface">Terms</a>
-      <a href="mailto:metricusapp@gmail.com" class="hover:text-on-surface">Contact</a>
-      <span class="ml-auto">&copy; 2026 Metricus</span>
-    </div>
-  </footer>
-  <script src="/js/reader-pulse-b.js" defer></script>
+</div>
+<p><strong>Sources:</strong> Statista Global Sports Market Report (2024); PwC Sports Outlook and Sports Survey (2024); Deloitte Sports Industry Outlook (2024); Sportico franchise valuations, sponsorship index, and stadium naming rights data (2024); Gartner search prediction (Feb 2024); Pew Research Center AI adoption survey (2024); Princeton / Georgia Tech GEO study on AI citation factors (Aggarwal et al., 2023); an enterprise SEO platform AI citation click impact study, cross-industry (2025); industry research on AI Overview click-through rates and comparison query behavior (2025–2026).</p>
+<h2>Related reading</h2>
+<ul>
+<li><a href="/blog/ai-visibility-action-plan/">How to Turn AI Visibility Data Into an Action Plan</a> — The 5-step framework for turning your AI visibility data into specific, prioritized actions.</li>
+<li><a href="/blog/fix-ai-brand-hallucinations/">AI Is Getting Facts Wrong About Your Brand</a> — Why AI gets facts about brands wrong. The process to audit and fix them.</li>
+<li><a href="/blog/ai-visibility-worth-paying-for/">Can You Just Check Yourself?</a> — What a single spot-check misses.</li>
+</ul>
+<h2 id="faq">Frequently asked questions</h2>
+<h3>Why does AI only recommend big-market teams when fans ask about sports?</h3>
+<p>AI generates responses based on patterns in training data. Mega-market franchises generate tens of millions of monthly web mentions across major sports media, fan forums, and news outlets. A minor league team or mid-tier franchise might generate a fraction of that web corpus. This frequency gap directly determines which teams AI knows and recommends. The brands with the most digital footprint across authoritative sports media are the ones AI surfaces in fan queries about tickets, merchandise, and engagement.</p>
+<h3>How much sports data does AI get wrong and how outdated is it?</h3>
+<p>AI training data typically lags real-world sports by 6–18 months depending on the model. Common errors include wrong coaching staff after mid-season firings, outdated roster data post-trade-deadline, incorrect stadium or venue information after naming rights changes, fabricated ticket prices, wrong conference or division affiliations, and merged statistics from different seasons.</p>
+<h3>How do I check what AI says when someone asks “best [sport] equipment”?</h3>
+<p>The step most sports brands miss is checking what AI actually says when someone asks best running shoes 2026 or best tennis racket for beginners. AI gives different answers every time and increasingly those answers do not include you. Type the question into Metricus the way a buyer would ask it, and you see the answer AI gives, with every business it names.</p>
+<h3>How does AI visibility affect sports sponsorship and merchandise revenue?</h3>
+<p>AI visibility increasingly affects both sponsorship valuation and merchandise discovery. When fans ask AI about merchandise or fan experiences, AI responses drive purchase intent without the fan ever visiting a team website or seeing a sponsor logo. 67% of sports executives consider digital engagement metrics critical to sponsorship valuation. If AI consistently omits your brand from fan engagement discussions, sponsor-facing metrics suffer. The global licensed sports merchandise market reached $34.5 billion in 2024, and AI-mediated discovery is becoming a meaningful channel.</p>
+<h3>What is at stake financially if my sports brand is invisible to AI?</h3>
+<p>The global sports industry generated $512 billion in 2024. If 5% of potential fans begin their discovery through AI and AI never mentions your brand, the impact is measurable in lost ticket revenue, merchandise sales, and sponsorship value.</p>
+<h3>What does Metricus show for a sports brand?</h3>
+<p>Metricus shows the answer AI gives when your customers ask for what you sell, with every business it names. You pick your website, edit the answer into what you want AI to say, and get new text for your website. The AI Visibility Score shows how often AI mentions and recommends you, today and with the new text. It is free, with no signup.</p>
+<p class="cite">Cite as: <a href="https://metricusapp.com/blog/sports-ai-visibility/">Metricus — Why Doesn’t AI Know About My Sports Team? Visibility Data for Leagues</a></p>
+<!-- metricus:ask -->
+<section class="ask-cta" aria-labelledby="ask-cta-h"><h2 id="ask-cta-h">What do your customers ask AI?</h2><form class="chatbox" action="/" method="get"><input class="input" type="text" name="q" maxlength="600" autocomplete="off" required placeholder="Type what people would ask AI&hellip;" aria-labelledby="ask-cta-h"><button class="send" type="submit" aria-label="Ask AI" title="Ask AI"><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V6M6 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form></section>
+<!-- /metricus:ask -->
+</main>
+<!-- metricus:footer -->
+<footer class="foot"><nav aria-label="Site"><a href="/blog/">Blog</a><a href="/geo-knowledge-base/">Knowledge base</a><a href="/results/">Results</a><a href="/about/">About</a><a href="/press/">Press</a><a href="/support/">Support</a><a href="/privacy-policy/">Privacy</a><a href="/terms-of-service/">Terms</a><a href="mailto:metricusapp@gmail.com">Contact</a></nav><p>&copy; 2026 Metricus</p></footer>
+<!-- /metricus:footer -->
+<script src="/js/reader-pulse-b.js" defer></script>
 </body>
 </html>

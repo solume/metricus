@@ -1,493 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What Is AI Visibility? How Brands Show Up in ChatGPT, Perplexity and Gemini | Metricus</title>
-  <meta name="description" content="AI visibility is how often AI chatbots mention your brand. Covers GEO, AEO, how AI decides what to recommend, how to measure, and how to improve.">
-  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://metricusapp.com/blog/ai-visibility-how-brands-show-up/">
-  <meta property="og:title" content="What Is AI Visibility? How Brands Show Up in ChatGPT, Perplexity and Gemini">
-  <meta property="og:description" content="AI visibility is how often AI chatbots mention your brand. This guide covers GEO, AEO, how AI decides what to recommend, and how to improve.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://metricusapp.com/blog/ai-visibility-how-brands-show-up/">
-  <meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="What Is AI Visibility? How Brands Show Up in ChatGPT, Perplexity and Gemini">
-  <meta name="twitter:description" content="AI visibility is how often AI chatbots mention your brand. Covers GEO, AEO, how AI decides what to recommend, how to measure, and how to improve.">
-  <meta name="twitter:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w70oz7g1k3");
-  </script>
-
-
-  <!-- Google Fonts -->
-
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#515F74',
-            'primary-hover': '#1E293B',
-            'on-primary': '#f6f7ff',
-            'on-primary-fixed': '#324054',
-            'primary-dim': '#455368',
-            surface: '#f7f9fb',
-            'surface-container-low': '#f0f4f7',
-            'surface-container': '#e8eff3',
-            'surface-container-lowest': '#ffffff',
-            'surface-container-highest': '#d9e4ea',
-            'surface-container-high': '#e1e9ee',
-            'surface-variant': '#d9e4ea',
-            'on-surface': '#2a3439',
-            'on-surface-variant': '#566166',
-            outline: '#717c82',
-            'outline-variant': '#a9b4b9',
-            'slate-text': '#0F172A',
-            'slate-muted': '#64748B',
-            'slate-accent': '#475569',
-          },
-          fontFamily: {
-            display: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            body: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            headline: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            label: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-          },
-          borderRadius: {
-            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
-            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
-            full: '0.75rem',
-          },
-        },
-      },
-    }
-  </script>
-
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: #ffffff;
-      color: #0F172A;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .font-display { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-headline { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-body-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-
-    .editorial-btn {
-      transition: background-color 150ms ease-in-out, transform 150ms ease;
-    }
-    .editorial-btn:hover {
-      background-color: #1E293B;
-    }.blog-card {
-      transition: transform 200ms ease, background-color 200ms ease;
-    }
-    .blog-card:hover {
-      transform: translateY(-2px);
-      background-color: #f7f9fb;
-    }
-
-    /* Article prose styles */
-    .article-body h2 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.75rem;
-      line-height: 1.2;
-      color: #0F172A;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-    }
-    @media (min-width: 768px) {
-      .article-body h2 {
-        font-size: 2rem;
-      }
-    }
-    .article-body h3 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      line-height: 1.3;
-      color: #0F172A;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    .article-body p {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-    }
-    .article-body ul, .article-body ol {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-      padding-left: 1.5rem;
-    }
-    .article-body ul { list-style-type: disc; }
-    .article-body ol { list-style-type: decimal; }
-    .article-body li { margin-bottom: 0.5rem; }
-    .article-body blockquote {
-      border-left: 2px solid #334155;
-      padding-left: 1.5rem;
-      font-style: italic;
-      color: #475569;
-      font-size: 1.125rem;
-      line-height: 1.75;
-      margin: 2rem 0;
-    }
-    .article-body a {
-      color: #334155;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .article-body a:hover {
-      color: #1E293B;
-    }
-  </style>
-
-  <!-- JSON-LD BlogPosting -->
-  <script type="application/ld+json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Is AI Visibility? How Brands Show Up in ChatGPT, Perplexity and Gemini | Metricus</title>
+<meta name="description" content="AI visibility is how often AI chatbots mention your brand. Covers GEO, AEO, how AI decides what to recommend, how to measure, and how to improve.">
+<link rel="canonical" href="https://metricusapp.com/blog/ai-visibility-how-brands-show-up/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Metricus">
+<meta property="og:url" content="https://metricusapp.com/blog/ai-visibility-how-brands-show-up/">
+<meta property="og:title" content="What Is AI Visibility? How Brands Show Up in ChatGPT, Perplexity and Gemini">
+<meta property="og:description" content="AI visibility is how often AI chatbots mention your brand. This guide covers GEO, AEO, how AI decides what to recommend, and how to improve.">
+<meta property="og:image" content="https://metricusapp.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Metricus: see what AI answers when your customers ask for what you offer.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What Is AI Visibility? How Brands Show Up in ChatGPT, Perplexity and Gemini">
+<meta name="twitter:description" content="AI visibility is how often AI chatbots mention your brand. Covers GEO, AEO, how AI decides what to recommend, how to measure, and how to improve.">
+<meta name="twitter:image" content="https://metricusapp.com/assets/og.png">
+<!-- metricus:head -->
+<link rel="stylesheet" href="/assets/metricus.css?v=20260927">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#FBFAF7">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w70oz7g1k3");</script>
+<!-- /metricus:head -->
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "What Is AI Visibility? How Brands Show Up in ChatGPT, Perplexity and Gemini",
+ "description": "AI visibility is how often AI chatbots mention your brand. This guide covers GEO, AEO, how AI decides what to recommend, how to measure it, and how to improve.",
+ "author": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "datePublished": "2026-03-01",
+ "dateModified": "2026-09-27",
+ "mainEntityOfPage": "https://metricusapp.com/blog/ai-visibility-how-brands-show-up/",
+ "image": "https://metricusapp.com/assets/og.png"
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
   {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "What Is AI Visibility? How Brands Show Up in ChatGPT, Perplexity and Gemini",
-    "description": "AI visibility is how often AI chatbots mention your brand. This guide covers GEO, AEO, how AI decides what to recommend, how to measure it, and how to improve.",
-    "author": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "datePublished": "2026-03-01",
-    "dateModified": "2026-09-04",
-    "mainEntityOfPage": "https://metricusapp.com/blog/ai-visibility-how-brands-show-up/",
-    "image": "https://metricusapp.com/landing/img/og.jpg"
-  }
-  </script>
-
-  <!-- JSON-LD BreadcrumbList -->
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://metricusapp.com/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "What Is AI Visibility? How Brands Show Up in ChatGPT, Perplexity and Gemini", "item": "https://metricusapp.com/blog/ai-visibility-how-brands-show-up/"}
-    ]
-  }
-  </script>
-
-  <!-- JSON-LD FAQPage -->
-
-    <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://metricusapp.com/blog/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Can I control what AI says about my brand?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Not directly. Unlike paid search, you cannot buy placement in AI-generated answers. However, you can influence what AI says by strengthening your presence on the authoritative sources that AI models reference, including review sites, industry publications, and structured data."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the difference between GEO and AEO?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "GEO (Generative Engine Optimization) focuses on AI chatbots like ChatGPT and Perplexity. AEO (Answer Engine Optimization) focuses on traditional answer boxes in search engines like Google featured snippets. GEO is about AI recommendations in conversational responses; AEO targets structured answers in search results."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How often should I measure AI visibility?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "At minimum quarterly. AI models update frequently and competitive landscapes shift as other brands invest in their own GEO strategies. A first measurement gives you a baseline, and later measurements show the effect of changes."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do AI visibility tools work?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI visibility tools query chatbots with buyer-intent prompts and analyze whether your brand appears. The best tools simulate real user sessions, run queries multiple times to account for nondeterminism, and trace which sources AI used to form its answer."
-        }
-      }
-    ]
+   "@type": "ListItem",
+   "position": 3,
+   "name": "What Is AI Visibility? How Brands Show Up in ChatGPT, Perplexity and Gemini",
+   "item": "https://metricusapp.com/blog/ai-visibility-how-brands-show-up/"
   }
-  </script>
-  <script src="/js/reader-pulse-b.js" defer></script>
+ ]
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Can I control what AI says about my brand?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Not directly. Unlike paid search, you cannot buy placement in AI-generated answers. However, you can influence what AI says by strengthening your presence on the authoritative sources that AI models reference, including review sites, industry publications, and structured data."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the difference between GEO and AEO?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "GEO (Generative Engine Optimization) focuses on AI chatbots like ChatGPT and Perplexity. AEO (Answer Engine Optimization) focuses on traditional answer boxes in search engines like Google featured snippets. GEO is about AI recommendations in conversational responses; AEO targets structured answers in search results."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How often should I measure AI visibility?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "At minimum quarterly. AI models update frequently and competitive landscapes shift as other brands invest in their own GEO strategies. A first measurement gives you a baseline, and later measurements show the effect of changes."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do AI visibility tools work?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "AI visibility tools query chatbots with buyer-intent prompts and analyze whether your brand appears. The best tools simulate real user sessions, run queries multiple times to account for nondeterminism, and trace which sources AI used to form its answer."
+   }
+  }
+ ]
+}</script>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
-
-  <!-- Site Nav -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 gap-4">
-      <a href="/" class="text-on-surface font-semibold" aria-label="Metricus home">Metricus <span class="font-normal text-on-surface-variant">Optimizer</span></a>
-      <div class="flex items-center gap-5">
-        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface">Learn</a>
-        <a href="/ai-visibility-optimizer-tool/" class="bg-primary text-on-primary text-sm font-semibold px-4 py-2.5 hover:bg-primary-dim">Open the tool</a>
-      </div>
-    </div>
-  </header>
-
-
-
-  <!-- Mobile Menu Overlay -->
-
-
-
-  <main class="flex-grow flex flex-col relative overflow-x-hidden">
-
-    <!-- Background dot grid -->
-    <div class="absolute inset-0 -z-10 pointer-events-none"></div>
-
-
-    <!-- ========== ARTICLE ========== -->
-    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
-
-      <!-- Breadcrumb -->
-      <nav class="mb-8">
-        <ol class="flex items-center gap-2 text-xs text-slate-muted">
-          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
-          <li class="select-none">/</li>
-          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
-          <li class="select-none">/</li>
-          <li class="text-slate-text">What Is AI Visibility?</li>
-        </ol>
-      </nav>
-
-      <!-- Article Header -->
-      <header class="mb-12">
-        <p class="text-xs text-primary font-semibold mb-4">Guide</p>
-        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
-          What Is AI Visibility? How Brands Show Up in ChatGPT, Perplexity and Gemini
-        </h1>
-        <p class="text-sm text-outline">Metricus &middot; March 14, 2026 &middot; 10 min read</p>
-      </header>
-
-
-      <!-- Definition Box -->
-      <div class="bg-surface-container-low p-8 mb-12">
-        <p class="text-lg leading-relaxed text-on-surface">
-          <strong>AI visibility</strong> is the degree to which AI chatbots &mdash; ChatGPT, Claude, Perplexity, Gemini, and others &mdash; mention, recommend, and accurately describe a brand, product, or service when users ask questions in that category.
+<body class="doc">
+<!-- metricus:header -->
+<header class="nav"><div class="in"><a class="logo" href="/" id="navhome">Metricus</a><span class="sp"></span><span class="muted" id="host"></span></div></header>
+<!-- /metricus:header -->
+<main class="doc-main" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <span aria-current="page">What Is AI Visibility?</span></nav>
+<p class="kicker">Guide</p>
+<h1>What Is AI Visibility? How Brands Show Up in ChatGPT, Perplexity and Gemini</h1>
+<p class="byline">Metricus · March 14, 2026 · 10 min read</p>
+<div class="note">
+<p>
+<strong>AI visibility</strong> is the degree to which AI chatbots — ChatGPT, Claude, Perplexity, Gemini, and others — mention, recommend, and accurately describe a brand, product, or service when users ask questions in that category.
         </p>
-      </div>
-
-      
-
-      <!-- Table of Contents -->
-      <div class="border border-[#E2E8F0] p-8 mb-12">
-        <p class="text-xs text-slate-muted font-semibold mb-4">In this guide</p>
-        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
-          <li><a href="#what-is-ai-visibility" class="hover:text-primary-hover underline underline-offset-2">What is AI visibility?</a></li>
-          <li><a href="#why-it-matters" class="hover:text-primary-hover underline underline-offset-2">Why does AI visibility matter?</a></li>
-          <li><a href="#geo-vs-seo" class="hover:text-primary-hover underline underline-offset-2">GEO vs SEO: What's the difference?</a></li>
-          <li><a href="#how-chatbots-decide" class="hover:text-primary-hover underline underline-offset-2">How do AI chatbots decide what to recommend?</a></li>
-          <li><a href="#how-to-measure" class="hover:text-primary-hover underline underline-offset-2">How to measure AI visibility</a></li>
-          <li><a href="#how-to-improve" class="hover:text-primary-hover underline underline-offset-2">How to improve AI visibility</a></li>
-          <li><a href="#faq" class="hover:text-primary-hover underline underline-offset-2">Frequently asked questions</a></li>
-        </ol>
-      </div>
-
-
-<!-- Article Body -->
-      <div class="article-body">
-
-        <h2 id="what-is-ai-visibility">What is AI visibility?</h2>
-
-        <p>AI visibility is how prominently a brand appears when someone asks an AI chatbot a question related to its industry. When a user asks ChatGPT or Claude for a product recommendation, the brands that appear in the answer have AI visibility. The ones that do not are invisible to a growing segment of buyers. Metricus shows this at page level: the answer an AI assistant gives about a page, and the passages on that page that caused it.</p>
-
-        <p>Unlike traditional search, where rankings are transparent and measurable, AI visibility is opaque. There is no &ldquo;position one.&rdquo; AI models synthesize information from training data, retrieved documents, and internal reasoning to produce a single conversational answer. Your brand is either part of that answer, or it is not. The term is sometimes used interchangeably with <em>AI mindshare</em>, <em>LLM share of voice</em>, or <em>generative engine presence</em>.</p>
-
-
-        <h2 id="why-it-matters">Why does AI visibility matter?</h2>
-
-        <p>Research from Gartner projects that by 2026, traditional search engine volume will drop 25% as users shift to AI chatbots. What we found in our own data is that 37% of B2B buyers already consult AI before Google when researching purchases. This is not a future trend &mdash; it is current behavior reshaping how brands get discovered.</p>
-
-        <p>The shift changes the competitive landscape in a fundamental way. In traditional search, ten blue links give multiple brands a chance to be seen. In AI, the chatbot typically recommends two to four brands in a single synthesized answer. If you are not among them, you do not exist in that buyer&rsquo;s consideration set.</p>
-
-
-        <h2 id="geo-vs-seo">GEO vs SEO: what is the difference?</h2>
-
-        <p><strong>SEO</strong> (Search Engine Optimization) focuses on ranking in Google&rsquo;s results pages. <strong>GEO</strong> (Generative Engine Optimization) focuses on appearing in AI-generated answers from the major AI platforms. <strong>AEO</strong> (Answer Engine Optimization) targets structured answer boxes in search engines like Google&rsquo;s featured snippets.</p>
-
-        <p>What we found is that strong Google rankings do not automatically translate to AI visibility. A brand can rank #1 for a keyword on Google and still be absent from AI recommendations for the same query. The optimization signals are different: AI models weight third-party citations, factual consistency across sources, and vocabulary alignment with buyer language more heavily than traditional SEO factors like backlinks and keyword density.</p>
-
-
-        <h2 id="how-chatbots-decide">How do AI chatbots decide what to recommend?</h2>
-
-        <p>AI chatbots use two mechanisms to generate answers. <strong>Parametric knowledge</strong> comes from the model&rsquo;s training data &mdash; patterns compressed from billions of web pages during training. <strong>RAG (retrieval-augmented generation)</strong> is when the model searches the web in real time, retrieves relevant passages, and synthesizes an answer with citations. In our testing, roughly 79% of B2B SaaS queries relied on training data and 21% triggered web search.</p>
-
-        <p>Several factors determine which brands appear: presence across authoritative third-party sources (G2, Gartner, industry publications), factual consistency across all indexed sources, vocabulary alignment between brand messaging and buyer queries, and recency of information. AI models treat third-party validation as more authoritative than first-party claims.</p>
-
-
-        <h2 id="what-determines">What determines AI visibility in practice</h2>
-
-        <p>What Metricus sees across runs of the tool is that five factors consistently predict whether a brand appears in AI recommendations. First, <strong>multi-source presence</strong>: brands mentioned across five or more independent domains appeared 3x more often than brands with a single strong presence. Second, <strong>vocabulary alignment</strong>: when a brand&rsquo;s messaging uses the same language buyers use in their AI queries, visibility increases dramatically. Third, <strong>factual consistency</strong>: conflicting information across sources causes AI to deprioritize or omit the brand entirely. Fourth, <strong>recency</strong>: content updated within 90 days is cited more frequently. Fifth, <strong>sentiment signals</strong>: brands with neutral-to-positive third-party mentions outperform those with mixed or outdated reviews.</p>
-
-        <p>None of these factors map directly to traditional SEO metrics. A brand can have excellent domain authority and strong backlink profiles while failing on every AI visibility signal. This is why dedicated AI visibility measurement &mdash; separate from SEO tracking &mdash; has become essential for brands competing in categories where buyers consult AI.</p>
-
-
-        <h2 id="faq">The measurement challenge</h2>
-
-        <p>AI visibility is harder to measure than traditional search rankings because AI responses are nondeterministic &mdash; asking the same question twice can produce different answers. In our testing, running the same query 10 times produced mention rates ranging from 20% to 80% for the same brand. Meaningful measurement requires testing dozens of prompts multiple times across multiple platforms.</p>
-
-        <p class="text-sm text-slate-muted mt-8">Last updated: September 2026</p>
-
-      </div>
-      <!-- End Article Body -->
-
-
-
-
-    
-      <!-- ========== ARTICLE CTA ========== -->
-      <section class="mt-16 bg-on-surface text-surface">
-        <div class="border-t border-outline-variant/30 mt-16 pt-10" data-cta="tool">
-        <h2 class="text-2xl font-semibold text-on-surface mb-2">Put in a page.</h2>
-        <p class="text-on-surface-variant mb-5 max-w-xl">See what an AI assistant answers about your page, which passages caused it, and a rewrite for each one. Free, no signup.</p>
-        <form class="flex flex-col sm:flex-row gap-2 max-w-xl" action="/ai-visibility-optimizer-tool/" method="get">
-          <label class="sr-only" for="cta-url">Address of the page to check</label>
-          <input id="cta-url" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="your-site.com/page" required class="flex-1 min-w-0 px-4 py-3 border border-outline-variant bg-white text-on-surface">
-          <button type="submit" class="bg-primary text-on-primary font-semibold px-6 py-3 hover:bg-primary-dim whitespace-nowrap">Start optimizing</button>
-        </form>
-      </div>
-      </section>
-
-      <!-- ========== CITE THIS ARTICLE ========== -->
-      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
-        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
-          <cite class="not-italic"><a href="https://metricusapp.com/blog/ai-visibility-how-brands-show-up/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; What Is AI Visibility? How Brands Show Up in ChatGPT, Perplexity and Gemini</a></cite>
-        </p>
-      </footer>
-
-    </article>
-
-
-    
-    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
-      <p class="text-xs text-slate-muted font-semibold mb-6">Go deeper</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
-          <p class="text-sm text-on-surface-variant mt-1">How AI represents brands</p>
-        </a>
-        <a href="/ai-brand-alignment-guide/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">Alignment Framework</p>
-          <p class="text-sm text-on-surface-variant mt-1">GEO strategies and optimization</p>
-        </a>
-        <a href="/ai-platform-comparison-brands/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">Platform Intelligence Guide</p>
-          <p class="text-sm text-on-surface-variant mt-1">How AI platforms work</p>
-        </a>
-        <a href="/ai-buyer-behavior-research/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">Buyer Behavior Research</p>
-          <p class="text-sm text-on-surface-variant mt-1">How buyers use AI</p>
-        </a>
-      </div>
-    </section>
-
-<!-- ========== RELATED POSTS ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
-      <p class="text-xs text-slate-muted font-semibold mb-8">Related articles</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        <a href="../ai-visibility-scores-explained/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Methodology</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            How AI Visibility Scores Actually Work
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            What goes into an AI visibility score? We explain the methodology behind AI visibility scores.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../ai-visibility-action-plan/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Playbook</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            How to Turn AI Visibility Data Into an Actual Action Plan
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            Most AI visibility tools give you a score and leave you stuck. How to turn that data into actions that change how AI describes your brand.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../seo-ignoring-buyers/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Strategy</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            Your SEO Strategy Is Ignoring 37% of Buyers
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            A growing share of product research now starts in an AI chatbot, not a search engine.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
-  </main>
-
-
-  <!-- ========== FOOTER ========== -->
-  <!-- Site Footer -->
-  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-on-surface-variant">
-      <span class="text-on-surface font-semibold">Metricus</span>
-      <a href="/ai-visibility-optimizer-tool/" class="hover:text-on-surface">Open the tool</a>
-      <a href="/blog/" class="hover:text-on-surface">Learn</a>
-      <a href="/methodology/" class="hover:text-on-surface">How it works</a>
-      <a href="/results/" class="hover:text-on-surface">Results</a>
-      <a href="/for-agencies/" class="hover:text-on-surface">For agencies</a>
-      <a href="/about/" class="hover:text-on-surface">About</a>
-      <a href="/press/" class="hover:text-on-surface">Press</a>
-      <a href="/support/" class="hover:text-on-surface">Support</a>
-      <a href="/privacy-policy/" class="hover:text-on-surface">Privacy</a>
-      <a href="/terms-of-service/" class="hover:text-on-surface">Terms</a>
-      <a href="mailto:metricusapp@gmail.com" class="hover:text-on-surface">Contact</a>
-      <span class="ml-auto">&copy; 2026 Metricus</span>
-    </div>
-  </footer>
-
+</div>
+<nav class="toc" aria-label="In this guide"><p>In this guide</p><ol>
+<li><a href="#what-is-ai-visibility">What is AI visibility?</a></li>
+<li><a href="#why-it-matters">Why does AI visibility matter?</a></li>
+<li><a href="#geo-vs-seo">GEO vs SEO: what is the difference?</a></li>
+<li><a href="#how-chatbots-decide">How do AI chatbots decide what to recommend?</a></li>
+<li><a href="#what-determines">What determines AI visibility in practice</a></li>
+<li><a href="#the-measurement-challenge">The measurement challenge</a></li>
+<li><a href="#faq">Frequently asked questions</a></li>
+</ol></nav>
+<h2 id="what-is-ai-visibility">What is AI visibility?</h2>
+<p>AI visibility is how prominently a brand appears when someone asks an AI chatbot a question related to its industry. When a user asks ChatGPT or Claude for a product recommendation, the brands that appear in the answer have AI visibility. The ones that do not are invisible to a growing segment of buyers. <a href="/">Metricus</a> shows this for your customers’ questions: the answer AI gives, with every business it names.</p>
+<p>Unlike traditional search, where rankings are transparent and measurable, AI visibility is opaque. There is no “position one.” AI models synthesize information from training data, retrieved documents, and internal reasoning to produce a single conversational answer. Your brand is either part of that answer, or it is not. The term is sometimes used interchangeably with <em>AI mindshare</em>, <em>LLM share of voice</em>, or <em>generative engine presence</em>.</p>
+<h2 id="why-it-matters">Why does AI visibility matter?</h2>
+<p>Research from Gartner projects that by 2026, traditional search engine volume will drop 25% as users shift to AI chatbots. This is not a future trend — it is current behavior reshaping how brands get discovered.</p>
+<p>The shift changes the competitive landscape in a fundamental way. In traditional search, ten blue links give multiple brands a chance to be seen. In AI, the chatbot typically recommends two to four brands in a single synthesized answer. If you are not among them, you do not exist in that buyer’s consideration set.</p>
+<h2 id="geo-vs-seo">GEO vs SEO: what is the difference?</h2>
+<p><strong>SEO</strong> (Search Engine Optimization) focuses on ranking in Google’s results pages. <strong>GEO</strong> (Generative Engine Optimization) focuses on appearing in AI-generated answers from the major AI platforms. <strong>AEO</strong> (Answer Engine Optimization) targets structured answer boxes in search engines like Google’s featured snippets.</p>
+<p>Strong Google rankings do not automatically translate to AI visibility. A brand can rank #1 for a keyword on Google and still be absent from AI recommendations for the same query. The optimization signals are different: AI models weight third-party citations, factual consistency across sources, and vocabulary alignment with buyer language more heavily than traditional SEO factors like backlinks and keyword density.</p>
+<h2 id="how-chatbots-decide">How do AI chatbots decide what to recommend?</h2>
+<p>AI chatbots use two mechanisms to generate answers. <strong>Parametric knowledge</strong> comes from the model’s training data — patterns compressed from billions of web pages during training. <strong>RAG (retrieval-augmented generation)</strong> is when the model searches the web in real time, retrieves relevant passages, and synthesizes an answer with citations.</p>
+<p>Several factors determine which brands appear: presence across authoritative third-party sources (G2, Gartner, industry publications), factual consistency across all indexed sources, vocabulary alignment between brand messaging and buyer queries, and recency of information. AI models treat third-party validation as more authoritative than first-party claims.</p>
+<h2 id="what-determines">What determines AI visibility in practice</h2>
+<p>Five factors consistently predict whether a brand appears in AI recommendations. First, <strong>multi-source presence</strong>: brands mentioned across many independent domains appear more often than brands with a single strong presence. Second, <strong>vocabulary alignment</strong>: when a brand’s messaging uses the same language buyers use in their AI queries, visibility increases dramatically. Third, <strong>factual consistency</strong>: conflicting information across sources causes AI to deprioritize or omit the brand entirely. Fourth, <strong>recency</strong>: recently updated content is cited more frequently. Fifth, <strong>sentiment signals</strong>: brands with neutral-to-positive third-party mentions outperform those with mixed or outdated reviews.</p>
+<p>None of these factors map directly to traditional SEO metrics. A brand can have excellent domain authority and strong backlink profiles while failing on every AI visibility signal. This is why dedicated AI visibility measurement — separate from SEO tracking — has become essential for brands competing in categories where buyers consult AI.</p>
+<h2 id="the-measurement-challenge">The measurement challenge</h2>
+<p>AI visibility is harder to measure than traditional search rankings because AI responses are nondeterministic — asking the same question twice can produce different answers. Meaningful measurement requires testing dozens of prompts multiple times across multiple platforms.</p>
+<h2 id="faq">Frequently asked questions</h2>
+<h3>Can I control what AI says about my brand?</h3>
+<p>Not directly. Unlike paid search, you cannot buy placement in AI-generated answers. However, you can influence what AI says by strengthening your presence on the authoritative sources that AI models reference, including review sites, industry publications, and structured data.</p>
+<h3>What is the difference between GEO and AEO?</h3>
+<p>GEO (Generative Engine Optimization) focuses on AI chatbots like ChatGPT and Perplexity. AEO (Answer Engine Optimization) focuses on traditional answer boxes in search engines like Google featured snippets. GEO is about AI recommendations in conversational responses; AEO targets structured answers in search results.</p>
+<h3>How often should I measure AI visibility?</h3>
+<p>At minimum quarterly. AI models update frequently and competitive landscapes shift as other brands invest in their own GEO strategies. A first measurement gives you a baseline, and later measurements show the effect of changes.</p>
+<h3>How do AI visibility tools work?</h3>
+<p>AI visibility tools query chatbots with buyer-intent prompts and analyze whether your brand appears. The best tools simulate real user sessions, run queries multiple times to account for nondeterminism, and trace which sources AI used to form its answer.</p>
+<p>Last updated: September 2026</p>
+<p class="cite">Cite as: <a href="https://metricusapp.com/blog/ai-visibility-how-brands-show-up/">Metricus — What Is AI Visibility? How Brands Show Up in ChatGPT, Perplexity and Gemini</a></p>
+<section class="related" aria-labelledby="related-knowledge-bases"><h2 id="related-knowledge-bases">Knowledge bases</h2><ul><li><a href="/brand-accuracy-knowledge-base/">AI Brand Accuracy Guide</a><p>How AI represents brands</p></li><li><a href="/ai-brand-alignment-guide/">Alignment Framework</a><p>GEO strategies and optimization</p></li><li><a href="/ai-platform-comparison-brands/">Platform Intelligence Guide</a><p>How AI platforms work</p></li><li><a href="/ai-buyer-behavior-research/">Buyer Behavior Research</a><p>How buyers use AI</p></li></ul></section>
+<section class="related" aria-labelledby="related-related-articles"><h2 id="related-related-articles">Related articles</h2><ul><li><a href="/blog/ai-visibility-scores-explained/">How AI Visibility Scores Actually Work</a><p>What goes into an AI visibility score? We explain the methodology behind AI visibility scores.</p></li><li><a href="/blog/ai-visibility-action-plan/">How to Turn AI Visibility Data Into an Actual Action Plan</a><p>Most AI visibility tools give you a score and leave you stuck. How to turn that data into actions that change how AI describes your brand.</p></li><li><a href="/blog/b2b-buyers-use-ai-before-google/">Your SEO Strategy Is Ignoring 37% of Buyers</a><p>A growing share of product research now starts in an AI chatbot, not a search engine.</p></li></ul></section>
+<!-- metricus:ask -->
+<section class="ask-cta" aria-labelledby="ask-cta-h"><h2 id="ask-cta-h">What do your customers ask AI?</h2><form class="chatbox" action="/" method="get"><input class="input" type="text" name="q" maxlength="600" autocomplete="off" required placeholder="Type what people would ask AI&hellip;" aria-labelledby="ask-cta-h"><button class="send" type="submit" aria-label="Ask AI" title="Ask AI"><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V6M6 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form></section>
+<!-- /metricus:ask -->
+</main>
+<!-- metricus:footer -->
+<footer class="foot"><nav aria-label="Site"><a href="/blog/">Blog</a><a href="/geo-knowledge-base/">Knowledge base</a><a href="/results/">Results</a><a href="/about/">About</a><a href="/press/">Press</a><a href="/support/">Support</a><a href="/privacy-policy/">Privacy</a><a href="/terms-of-service/">Terms</a><a href="mailto:metricusapp@gmail.com">Contact</a></nav><p>&copy; 2026 Metricus</p></footer>
+<!-- /metricus:footer -->
 </body>
 </html>

@@ -1,515 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Does AI Even Know Your Brand Exists? How to Check in 5 Minutes | Metricus</title>
-  <meta name="description" content="Most businesses have never checked whether ChatGPT, Perplexity, or Gemini recommend them. Here is what a real check reveals and why it matters now.">
-  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://metricusapp.com/blog/how-to-check-if-ai-recommends-your-brand/">
-  <meta property="og:title" content="Does AI Even Know Your Brand Exists? How to Check in 5 Minutes">
-  <meta property="og:description" content="Most businesses have never checked whether ChatGPT, Perplexity, or Gemini recommend them. Here is what a real check reveals and why it matters now.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://metricusapp.com/blog/how-to-check-if-ai-recommends-your-brand/">
-  <meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Does AI Even Know Your Brand Exists? How to Check in 5 Minutes">
-  <meta name="twitter:description" content="Most businesses have never checked whether ChatGPT, Perplexity, or Gemini recommend them. Here is what a real check reveals and why it matters now.">
-  <meta name="twitter:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w70oz7g1k3");
-  </script>
-
-
-  <!-- Google Fonts -->
-
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#515F74',
-            'primary-hover': '#1E293B',
-            'on-primary': '#f6f7ff',
-            'on-primary-fixed': '#324054',
-            'primary-dim': '#455368',
-            surface: '#f7f9fb',
-            'surface-container-low': '#f0f4f7',
-            'surface-container': '#e8eff3',
-            'surface-container-lowest': '#ffffff',
-            'surface-container-highest': '#d9e4ea',
-            'surface-container-high': '#e1e9ee',
-            'surface-variant': '#d9e4ea',
-            'on-surface': '#2a3439',
-            'on-surface-variant': '#566166',
-            outline: '#717c82',
-            'outline-variant': '#a9b4b9',
-            'slate-text': '#0F172A',
-            'slate-muted': '#64748B',
-            'slate-accent': '#475569',
-          },
-          fontFamily: {
-            display: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            body: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            headline: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            label: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-          },
-          borderRadius: {
-            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
-            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
-            full: '0.75rem',
-          },
-        },
-      },
-    }
-  </script>
-
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: #ffffff;
-      color: #0F172A;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .font-display { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-headline { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-body-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-
-    .editorial-btn {
-      transition: background-color 150ms ease-in-out, transform 150ms ease;
-    }
-    .editorial-btn:hover {
-      background-color: #1E293B;
-    }.blog-card {
-      transition: transform 200ms ease, background-color 200ms ease;
-    }
-    .blog-card:hover {
-      transform: translateY(-2px);
-      background-color: #f7f9fb;
-    }
-
-    /* Article prose styles */
-    .article-body h2 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.75rem;
-      line-height: 1.2;
-      color: #0F172A;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-    }
-    @media (min-width: 768px) {
-      .article-body h2 {
-        font-size: 2rem;
-      }
-    }
-    .article-body h3 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      line-height: 1.3;
-      color: #0F172A;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    .article-body p {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-    }
-    .article-body ul, .article-body ol {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-      padding-left: 1.5rem;
-    }
-    .article-body ul { list-style-type: disc; }
-    .article-body ol { list-style-type: decimal; }
-    .article-body li { margin-bottom: 0.5rem; }
-    .article-body blockquote {
-      border-left: 2px solid #334155;
-      padding-left: 1.5rem;
-      font-style: italic;
-      color: #475569;
-      font-size: 1.125rem;
-      line-height: 1.75;
-      margin: 2rem 0;
-    }
-    .article-body a {
-      color: #334155;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .article-body a:hover {
-      color: #1E293B;
-    }
-  </style>
-
-  <!-- JSON-LD BlogPosting -->
-  <script type="application/ld+json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Does AI Even Know Your Brand Exists? How to Check in 5 Minutes | Metricus</title>
+<meta name="description" content="Most businesses have never checked whether ChatGPT, Perplexity, or Gemini recommend them. Here is what a real check reveals and why it matters now.">
+<link rel="canonical" href="https://metricusapp.com/blog/how-to-check-if-ai-recommends-your-brand/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Metricus">
+<meta property="og:url" content="https://metricusapp.com/blog/how-to-check-if-ai-recommends-your-brand/">
+<meta property="og:title" content="Does AI Even Know Your Brand Exists? How to Check in 5 Minutes">
+<meta property="og:description" content="Most businesses have never checked whether ChatGPT, Perplexity, or Gemini recommend them. Here is what a real check reveals and why it matters now.">
+<meta property="og:image" content="https://metricusapp.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Metricus: see what AI answers when your customers ask for what you offer.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Does AI Even Know Your Brand Exists? How to Check in 5 Minutes">
+<meta name="twitter:description" content="Most businesses have never checked whether ChatGPT, Perplexity, or Gemini recommend them. Here is what a real check reveals and why it matters now.">
+<meta name="twitter:image" content="https://metricusapp.com/assets/og.png">
+<!-- metricus:head -->
+<link rel="stylesheet" href="/assets/metricus.css?v=20260927">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#FBFAF7">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w70oz7g1k3");</script>
+<!-- /metricus:head -->
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "Does AI Even Know Your Brand Exists? How to Check in 5 Minutes",
+ "description": "Most businesses have never checked whether ChatGPT, Perplexity, or Gemini recommend them. Here is what a real check reveals and why it matters now.",
+ "author": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "datePublished": "2026-04-10",
+ "dateModified": "2026-09-27",
+ "mainEntityOfPage": "https://metricusapp.com/blog/how-to-check-if-ai-recommends-your-brand/",
+ "image": "https://metricusapp.com/assets/og.png"
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
   {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Does AI Even Know Your Brand Exists? How to Check in 5 Minutes",
-    "description": "Most businesses have never checked whether ChatGPT, Perplexity, or Gemini recommend them. Here is what a real check reveals and why it matters now.",
-    "author": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "datePublished": "2026-04-10",
-    "dateModified": "2026-09-04",
-    "mainEntityOfPage": "https://metricusapp.com/blog/how-to-check-if-ai-recommends-your-brand/",
-    "image": "https://metricusapp.com/landing/img/og.jpg"
-  }
-  </script>
-
-  <!-- JSON-LD BreadcrumbList -->
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://metricusapp.com/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "Does AI Even Know Your Brand Exists?", "item": "https://metricusapp.com/blog/how-to-check-if-ai-recommends-your-brand/"}
-    ]
-  }
-  </script>
-
-  <!-- JSON-LD FAQPage -->
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://metricusapp.com/blog/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I check if AI recommends my brand?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ask the major AI platforms the questions your buyers ask and note whether your brand appears. A single manual check is unreliable because AI responses change every time, so repeat the questions and compare. A page-level tool that shows what an AI assistant answers with your page as the source, and which passages caused that answer, gives a repeatable view."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does ChatGPT mention my company?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It might, sometimes. AI responses are nondeterministic, meaning the same question can produce different brand recommendations each time. The only way to know your actual visibility is to test the same prompts many times and measure the rate at which your brand appears."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why does AI recommend my competitor instead of me?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI models pull from training data and live web sources. Brands that appear across multiple authoritative third-party sites, maintain consistent information, and use language that matches how buyers actually ask questions tend to appear more frequently."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I check AI visibility for free?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Asking an AI assistant about your brand by hand costs nothing, but a single response captures less than 15% of the actual pattern, because AI answers change every time. The Metricus optimizer is also free: put in a page and see the answer an AI assistant gives about it, with the passages behind that answer marked on the page and a rewrite for each one."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does it take to check AI visibility?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A manual check takes as long as it takes to ask each question in each platform and record the answers. The free Metricus optimizer runs on one URL in the browser in a few minutes and shows what the major AI platforms answer when that page is the source."
-        }
-      }
-    ]
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Does AI Even Know Your Brand Exists?",
+   "item": "https://metricusapp.com/blog/how-to-check-if-ai-recommends-your-brand/"
   }
-  </script>
-  <script src="/js/reader-pulse-b.js" defer></script>
+ ]
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How do I check if AI recommends my brand?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ask the major AI platforms the questions your buyers ask and note whether your brand appears. A single manual check is unreliable because AI responses change every time, so repeat the questions and compare."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does ChatGPT mention my company?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It might, sometimes. AI responses are nondeterministic, meaning the same question can produce different brand recommendations each time. The only way to know your actual visibility is to test the same prompts many times and measure the rate at which your brand appears."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why does AI recommend my competitor instead of me?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "AI models pull from training data and live web sources. Brands that appear across multiple authoritative third-party sites, maintain consistent information, and use language that matches how buyers actually ask questions tend to appear more frequently."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I check AI visibility for free?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Asking an AI assistant about your brand by hand costs nothing, but a single response captures only a small part of the actual pattern, because AI answers change every time. Metricus is also free: it shows the answer AI gives when your customers ask for what you sell, with every business it names, and gives new text for your website."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How long does it take to check AI visibility?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A manual check takes as long as it takes to ask each question in each platform and record the answers."
+   }
+  }
+ ]
+}</script>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
-
-  <!-- Site Nav -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 gap-4">
-      <a href="/" class="text-on-surface font-semibold" aria-label="Metricus home">Metricus <span class="font-normal text-on-surface-variant">Optimizer</span></a>
-      <div class="flex items-center gap-5">
-        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface">Learn</a>
-        <a href="/ai-visibility-optimizer-tool/" class="bg-primary text-on-primary text-sm font-semibold px-4 py-2.5 hover:bg-primary-dim">Open the tool</a>
-      </div>
-    </div>
-  </header>
-
-
-
-  <!-- Mobile Menu Overlay -->
-
-
-
-  <main class="flex-grow flex flex-col relative overflow-x-hidden">
-
-    <!-- Background dot grid -->
-    <div class="absolute inset-0 -z-10 pointer-events-none"></div>
-
-
-    <!-- ========== ARTICLE ========== -->
-    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
-
-      <!-- Breadcrumb -->
-      <nav class="mb-8">
-        <ol class="flex items-center gap-2 text-xs text-slate-muted">
-          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
-          <li class="select-none">/</li>
-          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
-          <li class="select-none">/</li>
-          <li class="text-slate-text">Does AI Know Your Brand?</li>
-        </ol>
-      </nav>
-
-      <!-- Article Header -->
-      <header class="mb-12">
-        <p class="text-xs text-primary font-semibold mb-4">AI Visibility</p>
-        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
-          Does AI Even Know Your Brand Exists? How to Check in 5 Minutes
-        </h1>
-        <p class="text-sm text-outline">Metricus &middot; April 10, 2026 &middot; 6 min read</p>
-      </header>
-
-
-      <!-- Answer Box -->
-      <div class="bg-surface-container-low p-8 mb-12">
-        <p class="text-lg leading-relaxed text-on-surface">
-          Most businesses have never checked whether AI recommends them. The free Metricus optimizer shows what the major AI platforms answer when your page is the source, which passages matter, and what to rewrite. <a href="/ai-visibility-optimizer-tool/">Open the tool</a>.
+<body class="doc">
+<!-- metricus:header -->
+<header class="nav"><div class="in"><a class="logo" href="/" id="navhome">Metricus</a><span class="sp"></span><span class="muted" id="host"></span></div></header>
+<!-- /metricus:header -->
+<main class="doc-main" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <span aria-current="page">Does AI Know Your Brand?</span></nav>
+<p class="kicker">AI Visibility</p>
+<h1>Does AI Even Know Your Brand Exists? How to Check in 5 Minutes</h1>
+<p class="byline">Metricus · April 10, 2026 · 6 min read</p>
+<div class="note">
+<p>
+          Most businesses have never checked whether AI recommends them.
         </p>
-      </div>
-
-
-      <!-- Table of Contents -->
-      <div class="border border-[#E2E8F0] p-8 mb-12">
-        <p class="text-xs text-slate-muted font-semibold mb-4">In this article</p>
-        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
-          <li><a href="#the-question" class="hover:text-primary-hover underline underline-offset-2">The question no one is asking</a></li>
-          <li><a href="#why-one-check-fails" class="hover:text-primary-hover underline underline-offset-2">Why checking once tells you almost nothing</a></li>
-          <li><a href="#what-report-reveals" class="hover:text-primary-hover underline underline-offset-2">What a real check reveals</a></li>
-          <li><a href="#invisible-brands" class="hover:text-primary-hover underline underline-offset-2">What happens to brands AI doesn't mention</a></li>
-          <li><a href="#competitor-gap" class="hover:text-primary-hover underline underline-offset-2">The competitor you didn't know about</a></li>
-          <li><a href="#faq" class="hover:text-primary-hover underline underline-offset-2">Frequently asked questions</a></li>
-        </ol>
-      </div>
-
-
-      <!-- Article Body -->
-      <div class="article-body">
-
-        <h2 id="the-question">The question no one is asking</h2>
-
-        <p>Right now, someone is asking ChatGPT for a recommendation in your industry. Maybe they typed &ldquo;best accounting software for small businesses&rdquo; or &ldquo;top wedding photographers in Austin&rdquo; or &ldquo;which CRM should a 20-person sales team use.&rdquo; The AI answered. It listed specific brands by name. Yours may not have been one of them.</p>
-
-        <p>You would never know. There is no notification, no analytics dashboard pinging you, no ranking report that flags it. Unlike Google, where you can check your position for any keyword in seconds, AI recommendations happen inside private conversations that are completely invisible to the brands being discussed&mdash;or being left out.</p>
-
-        <p>This is the new reality of brand discovery. Gartner projected that traditional search volume would drop 25% by 2026 as users moved to AI. That shift has arrived. Buyers are asking AI chatbots before they ask Google, and the brands that appear in those AI answers are capturing attention that used to flow through search engines. The brands that don&rsquo;t appear are losing deals they will never know they lost.</p>
-
-
-        <h2 id="why-one-check-fails">Why checking once tells you almost nothing</h2>
-
-        <p>The first instinct is reasonable: open ChatGPT, ask about your category, and see if your brand shows up. The problem is that AI responses are nondeterministic. Ask the same question ten times and you will get different brand recommendations each time. SparkToro research across nearly 3,000 queries found that <a href="../chatgpt-different-answers-every-time/">AI recommendation lists repeat less than 1% of the time</a>. A single check captures a fraction of the real picture.</p>
-
-        <p>You might ask today and see your brand mentioned. Tomorrow, the same question returns a completely different list. Or you might ask and see your competitor mentioned, panic, then ask again and see yourself. Neither snapshot is the truth. The truth is a pattern that only emerges across many prompts, many repetitions, and many platforms.</p>
-
-        <p>This is the core difficulty. Checking AI visibility is not like checking a Google ranking. It requires statistical coverage&mdash;testing the same buyer-intent prompts repeatedly across ChatGPT, Claude, Perplexity, Gemini, and others, then measuring the <em>rate</em> at which your brand appears. Anything less gives you a coin flip disguised as a data point.</p>
-
-
-        <h2 id="what-report-reveals">What a real check reveals</h2>
-
-        <p>Monitoring subscriptions track a <a href="../ai-visibility-scores-explained/">visibility score</a>, meaning how often AI mentions your brand across a set of buyer prompts, and follow it over time. Checking by hand in a chat window gives you one sample. A page-level tool shows the answer an AI assistant gives about one page and which passages of the page caused that answer, and it is free.</p>
-
-        <p>The results tend to surprise people. Brands that dominate Google often assume they dominate AI, but the two are disconnected. Strong SEO rankings do not guarantee AI visibility because AI models weigh different signals: third-party citations across authoritative sites, factual consistency, vocabulary alignment with how buyers phrase questions, and recency of information. A brand can rank #1 on Google and be completely absent from AI answers for the same query.</p>
-
-        <p>Checking also surfaces accuracy problems. When AI does mention your brand, it may describe your product incorrectly, cite outdated pricing, or position you in the wrong category. These errors reach buyers before your website does, shaping perception in ways you cannot see or correct without first knowing they exist.</p>
-
-
-        <h2 id="invisible-brands">What happens to brands AI doesn&rsquo;t mention</h2>
-
-        <p>When AI skips your brand, buyers never see you. There is no second page to scroll to, no ad slot to purchase, no organic listing to click. The AI gives its answer&mdash;typically two to four brand recommendations&mdash;and the conversation moves on. The buyer either picks from that list or refines their question. Either way, brands that were not mentioned never enter the consideration set.</p>
-
-        <p>This is different from ranking low on Google. A #15 ranking still means you exist in the results. In AI, you are either named or you are not. There is no middle ground, and unlike search ads, there is no paid placement to buy your way into the answer. Visibility in AI is earned through signals these models trust, and most brands have no idea whether they have those signals.</p>
-
-        <p>The downstream impact is already showing up in pipeline data. Businesses are seeing qualified leads decline while their SEO metrics hold steady&mdash;a pattern that only makes sense when you account for the share of buyer research that has shifted to AI. The leads are not disappearing. They are going to the brands that AI recommends.</p>
-
-
-        <h2 id="competitor-gap">The competitor you didn&rsquo;t know about</h2>
-
-        <p>One of the most common findings in AI visibility research is competitors that brands did not consider threats. In Google, you know your competitive set because you can see who ranks for your keywords. In AI, the competitive landscape is hidden. The brands AI recommends may not be your traditional competitors&mdash;they may be smaller companies with stronger third-party coverage, or adjacent players whose messaging aligns more closely with how buyers phrase questions.</p>
-
-        <p>This blind spot is the real danger of not checking. It is not just that you might be invisible. It is that you have no way of knowing who is visible in your place.</p>
-
-        <p>The gap between brands that have checked and brands that have not is growing every quarter. Every month without data is a month of making decisions about content, positioning, and investment without knowing whether any of it is reaching the fastest-growing discovery channel in the market.</p>
-
-
-        <h2 id="faq">Frequently asked questions</h2>
-
-        <h3>How do I check if AI recommends my brand?</h3>
-        <p>Ask the major AI platforms the questions your buyers ask and note whether your brand appears. A single manual check is unreliable because AI responses change every time, so repeat the questions and compare. A page-level tool that shows what an AI assistant answers with your page as the source, and which passages caused that answer, gives a repeatable view.</p>
-
-        <h3>Does ChatGPT mention my company?</h3>
-        <p>It might, sometimes. AI responses are nondeterministic, meaning the same question can produce different brand recommendations each time. The only way to know your actual visibility is to test the same prompts many times and measure the rate at which your brand appears.</p>
-
-        <h3>Why does AI recommend my competitor instead of me?</h3>
-        <p>AI models pull from training data and live web sources. Brands that appear across multiple authoritative third-party sites, maintain consistent information, and use language that matches how buyers actually ask questions tend to appear more frequently.</p>
-
-        <h3>Can I check AI visibility for free?</h3>
-        <p>Yes. Asking an AI assistant about your brand by hand costs nothing, but a single response captures less than 15% of the actual pattern, because AI answers change every time. The Metricus optimizer is also free: put in a page and see the answer an AI assistant gives about it, with the passages behind that answer marked on the page and a rewrite for each one.</p>
-
-        <h3>How long does it take to check AI visibility?</h3>
-        <p>A manual check takes as long as it takes to ask each question in each platform and record the answers. The free Metricus optimizer runs on one URL in the browser in a few minutes and shows what the major AI platforms answer when that page is the source.</p>
-
-        <p class="text-sm text-slate-muted mt-8">Last updated: September 2026</p>
-
-      </div>
-      <!-- End Article Body -->
-
-
-      <!-- ========== ARTICLE CTA ========== -->
-      <div class="border-t border-outline-variant/30 mt-16 pt-10" data-cta="tool">
-        <h2 class="text-2xl font-semibold text-on-surface mb-2">Put in a page.</h2>
-        <p class="text-on-surface-variant mb-5 max-w-xl">See what an AI assistant answers about your page, which passages caused it, and a rewrite for each one. Free, no signup.</p>
-        <form class="flex flex-col sm:flex-row gap-2 max-w-xl" action="/ai-visibility-optimizer-tool/" method="get">
-          <label class="sr-only" for="cta-url">Address of the page to check</label>
-          <input id="cta-url" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="your-site.com/page" required class="flex-1 min-w-0 px-4 py-3 border border-outline-variant bg-white text-on-surface">
-          <button type="submit" class="bg-primary text-on-primary font-semibold px-6 py-3 hover:bg-primary-dim whitespace-nowrap">Start optimizing</button>
-        </form>
-      </div>
-
-      <!-- ========== CITE THIS ARTICLE ========== -->
-      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
-        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
-          <cite class="not-italic"><a href="https://metricusapp.com/blog/how-to-check-if-ai-recommends-your-brand/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; Does AI Even Know Your Brand Exists? How to Check in 5 Minutes</a></cite>
-        </p>
-      </footer>
-
-    </article>
-
-
-    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
-      <p class="text-xs text-slate-muted font-semibold mb-6">Go deeper</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
-          <p class="text-sm text-on-surface-variant mt-1">How AI represents brands</p>
-        </a>
-        <a href="/ai-brand-alignment-guide/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">Alignment Framework</p>
-          <p class="text-sm text-on-surface-variant mt-1">GEO strategies and optimization</p>
-        </a>
-        <a href="/ai-platform-comparison-brands/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">Platform Intelligence Guide</p>
-          <p class="text-sm text-on-surface-variant mt-1">How AI platforms work</p>
-        </a>
-        <a href="/ai-buyer-behavior-research/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">Buyer Behavior Research</p>
-          <p class="text-sm text-on-surface-variant mt-1">How buyers use AI</p>
-        </a>
-      </div>
-    </section>
-
-    <!-- ========== RELATED POSTS ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
-      <p class="text-xs text-slate-muted font-semibold mb-8">Related articles</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        <a href="../ai-visibility-how-brands-show-up/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Guide</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            What Is AI Visibility? How Brands Show Up in ChatGPT, Perplexity and Gemini
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            AI visibility is how often AI chatbots mention your brand. Covers GEO, AEO, and how AI decides what to recommend.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../ai-visibility-scores-explained/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Methodology</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            How AI Visibility Scores Actually Work
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            What goes into an AI visibility score? We explain the methodology behind the score.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../chatgpt-different-answers-every-time/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Research</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            Why ChatGPT Gives Different Answers Every Time
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            AI recommendation lists repeat less than 1% of the time. A single spot-check captures a fraction of the real pattern.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>April 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
-  </main>
-
-
-  <!-- ========== FOOTER ========== -->
-  <!-- Site Footer -->
-  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-on-surface-variant">
-      <span class="text-on-surface font-semibold">Metricus</span>
-      <a href="/ai-visibility-optimizer-tool/" class="hover:text-on-surface">Open the tool</a>
-      <a href="/blog/" class="hover:text-on-surface">Learn</a>
-      <a href="/methodology/" class="hover:text-on-surface">How it works</a>
-      <a href="/results/" class="hover:text-on-surface">Results</a>
-      <a href="/for-agencies/" class="hover:text-on-surface">For agencies</a>
-      <a href="/about/" class="hover:text-on-surface">About</a>
-      <a href="/press/" class="hover:text-on-surface">Press</a>
-      <a href="/support/" class="hover:text-on-surface">Support</a>
-      <a href="/privacy-policy/" class="hover:text-on-surface">Privacy</a>
-      <a href="/terms-of-service/" class="hover:text-on-surface">Terms</a>
-      <a href="mailto:metricusapp@gmail.com" class="hover:text-on-surface">Contact</a>
-      <span class="ml-auto">&copy; 2026 Metricus</span>
-    </div>
-  </footer>
-
+</div>
+<nav class="toc" aria-label="In this article"><p>In this article</p><ol>
+<li><a href="#the-question">The question no one is asking</a></li>
+<li><a href="#why-one-check-fails">Why checking once tells you almost nothing</a></li>
+<li><a href="#what-report-reveals">What a real check reveals</a></li>
+<li><a href="#invisible-brands">What happens to brands AI doesn't mention</a></li>
+<li><a href="#competitor-gap">The competitor you didn't know about</a></li>
+<li><a href="#faq">Frequently asked questions</a></li>
+</ol></nav>
+<h2 id="the-question">The question no one is asking</h2>
+<p>Right now, someone is asking ChatGPT for a recommendation in your industry. Maybe they typed “best accounting software for small businesses” or “top wedding photographers in Austin” or “which CRM should a 20-person sales team use.” The AI answered. It listed specific brands by name. Yours may not have been one of them.</p>
+<p>You would never know. There is no notification, no analytics dashboard pinging you, no ranking report that flags it. Unlike Google, where you can check your position for any keyword in seconds, AI recommendations happen inside private conversations that are completely invisible to the brands being discussed—or being left out.</p>
+<p>This is the new reality of brand discovery. Gartner projected that traditional search volume would drop 25% by 2026 as users moved to AI. That shift has arrived. Buyers are asking AI chatbots before they ask Google, and the brands that appear in those AI answers are capturing attention that used to flow through search engines. The brands that don’t appear are losing deals they will never know they lost.</p>
+<h2 id="why-one-check-fails">Why checking once tells you almost nothing</h2>
+<p>The first instinct is reasonable: open ChatGPT, ask about your category, and see if your brand shows up. The problem is that AI responses are nondeterministic. Ask the same question ten times and you will get different brand recommendations each time. SparkToro research across nearly 3,000 queries found that <a href="../chatgpt-different-answers-every-time/">AI recommendation lists repeat less than 1% of the time</a>. A single check captures a fraction of the real picture.</p>
+<p>You might ask today and see your brand mentioned. Tomorrow, the same question returns a completely different list. Or you might ask and see your competitor mentioned, panic, then ask again and see yourself. Neither snapshot is the truth. The truth is a pattern that only emerges across many prompts, many repetitions, and many platforms.</p>
+<p>This is the core difficulty. Checking AI visibility is not like checking a Google ranking. It requires statistical coverage—testing the same buyer-intent prompts repeatedly across ChatGPT, Claude, Perplexity, Gemini, and others, then measuring the <em>rate</em> at which your brand appears. Anything less gives you a coin flip disguised as a data point.</p>
+<h2 id="what-report-reveals">What a real check reveals</h2>
+<p>Monitoring subscriptions track a <a href="../ai-visibility-scores-explained/">visibility score</a>, meaning how often AI mentions your brand across a set of buyer prompts, and follow it over time. Checking by hand in a chat window gives you one sample. <a href="/">Metricus</a> shows the answer AI gives to your customers' question and what to change on your website, for free.</p>
+<p>The results tend to surprise people. Brands that dominate Google often assume they dominate AI, but the two are disconnected. Strong SEO rankings do not guarantee AI visibility because AI models weigh different signals: third-party citations across authoritative sites, factual consistency, vocabulary alignment with how buyers phrase questions, and recency of information. A brand can rank #1 on Google and be completely absent from AI answers for the same query.</p>
+<p>Checking also surfaces accuracy problems. When AI does mention your brand, it may describe your product incorrectly, cite outdated pricing, or position you in the wrong category. These errors reach buyers before your website does, shaping perception in ways you cannot see or correct without first knowing they exist.</p>
+<h2 id="invisible-brands">What happens to brands AI doesn’t mention</h2>
+<p>When AI skips your brand, buyers never see you. There is no second page to scroll to, no ad slot to purchase, no organic listing to click. The AI gives its answer—typically two to four brand recommendations—and the conversation moves on. The buyer either picks from that list or refines their question. Either way, brands that were not mentioned never enter the consideration set.</p>
+<p>This is different from ranking low on Google. A #15 ranking still means you exist in the results. In AI, you are either named or you are not. There is no middle ground, and unlike search ads, there is no paid placement to buy your way into the answer. Visibility in AI is earned through signals these models trust, and most brands have no idea whether they have those signals.</p>
+<p>The downstream impact is already showing up in pipeline data. Businesses are seeing qualified leads decline while their SEO metrics hold steady—a pattern that only makes sense when you account for the share of buyer research that has shifted to AI. The leads are not disappearing. They are going to the brands that AI recommends.</p>
+<h2 id="competitor-gap">The competitor you didn’t know about</h2>
+<p>One of the most common findings in AI visibility research is competitors that brands did not consider threats. In Google, you know your competitive set because you can see who ranks for your keywords. In AI, the competitive landscape is hidden. The brands AI recommends may not be your traditional competitors—they may be smaller companies with stronger third-party coverage, or adjacent players whose messaging aligns more closely with how buyers phrase questions.</p>
+<p>This blind spot is the real danger of not checking. It is not just that you might be invisible. It is that you have no way of knowing who is visible in your place.</p>
+<p>The gap between brands that have checked and brands that have not is growing every quarter. Every month without data is a month of making decisions about content, positioning, and investment without knowing whether any of it is reaching the fastest-growing discovery channel in the market.</p>
+<h2 id="faq">Frequently asked questions</h2>
+<h3>How do I check if AI recommends my brand?</h3>
+<p>Ask the major AI platforms the questions your buyers ask and note whether your brand appears. A single manual check is unreliable because AI responses change every time, so repeat the questions and compare.</p>
+<h3>Does ChatGPT mention my company?</h3>
+<p>It might, sometimes. AI responses are nondeterministic, meaning the same question can produce different brand recommendations each time. The only way to know your actual visibility is to test the same prompts many times and measure the rate at which your brand appears.</p>
+<h3>Why does AI recommend my competitor instead of me?</h3>
+<p>AI models pull from training data and live web sources. Brands that appear across multiple authoritative third-party sites, maintain consistent information, and use language that matches how buyers actually ask questions tend to appear more frequently.</p>
+<h3>Can I check AI visibility for free?</h3>
+<p>Yes. Asking an AI assistant about your brand by hand costs nothing, but a single response captures only a small part of the actual pattern, because AI answers change every time. Metricus is also free: it shows the answer AI gives when your customers ask for what you sell, with every business it names, and gives new text for your website.</p>
+<h3>How long does it take to check AI visibility?</h3>
+<p>A manual check takes as long as it takes to ask each question in each platform and record the answers.</p>
+<p>Last updated: September 2026</p>
+<p class="cite">Cite as: <a href="https://metricusapp.com/blog/how-to-check-if-ai-recommends-your-brand/">Metricus — Does AI Even Know Your Brand Exists? How to Check in 5 Minutes</a></p>
+<section class="related" aria-labelledby="related-knowledge-bases"><h2 id="related-knowledge-bases">Knowledge bases</h2><ul><li><a href="/brand-accuracy-knowledge-base/">AI Brand Accuracy Guide</a><p>How AI represents brands</p></li><li><a href="/ai-brand-alignment-guide/">Alignment Framework</a><p>GEO strategies and optimization</p></li><li><a href="/ai-platform-comparison-brands/">Platform Intelligence Guide</a><p>How AI platforms work</p></li><li><a href="/ai-buyer-behavior-research/">Buyer Behavior Research</a><p>How buyers use AI</p></li></ul></section>
+<section class="related" aria-labelledby="related-related-articles"><h2 id="related-related-articles">Related articles</h2><ul><li><a href="/blog/ai-visibility-how-brands-show-up/">What Is AI Visibility? How Brands Show Up in ChatGPT, Perplexity and Gemini</a><p>AI visibility is how often AI chatbots mention your brand. Covers GEO, AEO, and how AI decides what to recommend.</p></li><li><a href="/blog/ai-visibility-scores-explained/">How AI Visibility Scores Actually Work</a><p>What goes into an AI visibility score? How tools calculate it and why scores vary.</p></li><li><a href="/blog/chatgpt-different-answers-every-time/">Why ChatGPT Gives Different Answers Every Time</a><p>AI recommendation lists repeat less than 1% of the time. A single spot-check captures a fraction of the real pattern.</p></li></ul></section>
+<!-- metricus:ask -->
+<section class="ask-cta" aria-labelledby="ask-cta-h"><h2 id="ask-cta-h">What do your customers ask AI?</h2><form class="chatbox" action="/" method="get"><input class="input" type="text" name="q" maxlength="600" autocomplete="off" required placeholder="Type what people would ask AI&hellip;" aria-labelledby="ask-cta-h"><button class="send" type="submit" aria-label="Ask AI" title="Ask AI"><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V6M6 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form></section>
+<!-- /metricus:ask -->
+</main>
+<!-- metricus:footer -->
+<footer class="foot"><nav aria-label="Site"><a href="/blog/">Blog</a><a href="/geo-knowledge-base/">Knowledge base</a><a href="/results/">Results</a><a href="/about/">About</a><a href="/press/">Press</a><a href="/support/">Support</a><a href="/privacy-policy/">Privacy</a><a href="/terms-of-service/">Terms</a><a href="mailto:metricusapp@gmail.com">Contact</a></nav><p>&copy; 2026 Metricus</p></footer>
+<!-- /metricus:footer -->
 </body>
 </html>

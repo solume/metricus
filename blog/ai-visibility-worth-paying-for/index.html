@@ -1,597 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Visibility: What Is Worth Paying For When a Page-Level Tool Is Free | Metricus</title>
-  <meta name="description" content="A check by hand is free and gives one sample. A free page-level tool shows the answer for one page and what caused it. Monitoring is worth paying for when you need a trend.">
-  <meta property="og:title" content="AI Visibility: What Is Worth Paying For When a Page-Level Tool Is Free">
-  <meta property="og:description" content="A check by hand is free and gives one sample. A free page-level tool shows the answer for one page and what caused it. Monitoring is worth paying for when you need a trend.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://metricusapp.com/blog/ai-visibility-worth-paying-for/">
-  <meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AI Visibility: What Is Worth Paying For When a Page-Level Tool Is Free | Metricus">
-  <meta name="twitter:description" content="A check by hand is free and gives one sample. A free page-level tool shows the answer for one page and what caused it. Monitoring is worth paying for when you need a trend.">
-  <meta name="twitter:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <link rel="canonical" href="https://metricusapp.com/blog/ai-visibility-worth-paying-for/">
-
-  <!-- Google Tag Manager -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w70oz7g1k3");
-  </script>
-
-
-  <!-- Google Fonts -->
-
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#515F74',
-            'primary-hover': '#1E293B',
-            'on-primary': '#f6f7ff',
-            'on-primary-fixed': '#324054',
-            'primary-dim': '#455368',
-            surface: '#f7f9fb',
-            'surface-container-low': '#f0f4f7',
-            'surface-container': '#e8eff3',
-            'surface-container-lowest': '#ffffff',
-            'surface-container-highest': '#d9e4ea',
-            'surface-container-high': '#e1e9ee',
-            'surface-variant': '#d9e4ea',
-            'on-surface': '#2a3439',
-            'on-surface-variant': '#566166',
-            outline: '#717c82',
-            'outline-variant': '#a9b4b9',
-            'slate-text': '#0F172A',
-            'slate-muted': '#64748B',
-            'slate-accent': '#475569',
-          },
-          fontFamily: {
-            display: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            body: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            headline: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            label: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-          },
-          borderRadius: {
-            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
-            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
-            full: '0.75rem',
-          },
-        },
-      },
-    }
-  </script>
-
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: #ffffff;
-      color: #0F172A;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .font-display { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-headline { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-body-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-
-    .editorial-btn {
-      transition: background-color 150ms ease-in-out, transform 150ms ease;
-    }
-    .editorial-btn:hover {
-      background-color: #1E293B;
-    }.blog-card {
-      transition: transform 200ms ease, background-color 200ms ease;
-    }
-    .blog-card:hover {
-      transform: translateY(-2px);
-      background-color: #f7f9fb;
-    }
-
-    .article-body h2 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.75rem;
-      line-height: 1.2;
-      color: #0F172A;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-    }
-    @media (min-width: 768px) {
-      .article-body h2 {
-        font-size: 2rem;
-      }
-    }
-    .article-body h3 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      line-height: 1.3;
-      color: #0F172A;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    .article-body p {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-    }
-    .article-body ul, .article-body ol {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-      padding-left: 1.5rem;
-    }
-    .article-body ul { list-style-type: disc; }
-    .article-body ol { list-style-type: decimal; }
-    .article-body li { margin-bottom: 0.5rem; }
-    .article-body blockquote {
-      border-left: 2px solid #334155;
-      padding-left: 1.5rem;
-      font-style: italic;
-      color: #475569;
-      font-size: 1.125rem;
-      line-height: 1.75;
-      margin: 2rem 0;
-    }
-    .article-body a {
-      color: #334155;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .article-body a:hover {
-      color: #1E293B;
-    }
-  </style>
-
-  <!-- JSON-LD BlogPosting -->
-  <script type="application/ld+json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Visibility: What Is Worth Paying For | Metricus</title>
+<meta name="description" content="A check by hand is free and gives one sample. Metricus shows what AI tells your customers, free. Monitoring is worth paying for when you need a trend.">
+<link rel="canonical" href="https://metricusapp.com/blog/ai-visibility-worth-paying-for/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Metricus">
+<meta property="og:url" content="https://metricusapp.com/blog/ai-visibility-worth-paying-for/">
+<meta property="og:title" content="AI Visibility: What Is Worth Paying For and What Is Free">
+<meta property="og:description" content="A check by hand is free and gives one sample. Metricus shows what AI tells your customers, free. Monitoring is worth paying for when you need a trend.">
+<meta property="og:image" content="https://metricusapp.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Metricus: see what AI answers when your customers ask for what you offer.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Visibility: What Is Worth Paying For | Metricus">
+<meta name="twitter:description" content="A check by hand is free and gives one sample. Metricus shows what AI tells your customers, free. Monitoring is worth paying for when you need a trend.">
+<meta name="twitter:image" content="https://metricusapp.com/assets/og.png">
+<!-- metricus:head -->
+<link rel="stylesheet" href="/assets/metricus.css?v=20260927">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#FBFAF7">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w70oz7g1k3");</script>
+<!-- /metricus:head -->
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "AI Visibility: What Is Worth Paying For and What Is Free",
+ "description": "A check by hand is free and gives one sample. Metricus shows what AI tells your customers, free. Monitoring is worth paying for when you need a trend.",
+ "author": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "datePublished": "2026-04-10",
+ "dateModified": "2026-09-27",
+ "mainEntityOfPage": "https://metricusapp.com/blog/ai-visibility-worth-paying-for/",
+ "image": "https://metricusapp.com/assets/og.png"
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
   {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "AI Visibility: What Is Worth Paying For When a Page-Level Tool Is Free",
-    "description": "A check by hand is free and gives one sample. A free page-level tool shows the answer for one page and what caused it. Monitoring is worth paying for when you need a trend.",
-    "author": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "datePublished": "2026-04-10",
-    "dateModified": "2026-09-04",
-    "mainEntityOfPage": "https://metricusapp.com/blog/ai-visibility-worth-paying-for/",
-    "image": "https://metricusapp.com/landing/img/og.jpg"
-  }
-  </script>
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://metricusapp.com/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "What Is Worth Paying For", "item": "https://metricusapp.com/blog/ai-visibility-worth-paying-for/"}
-    ]
-  }
-  </script>
-
-    <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://metricusapp.com/blog/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Can I check my AI visibility myself for free?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Open any of the major AI platforms and type questions your customers would ask. You will see whether your brand appears and how it is described. This takes about 15 minutes for a basic pass or 2 hours for a fuller review across several platforms and prompts. The limitation is that each check captures a single response from a non-deterministic system, so you cannot tell whether that result represents 5% or 80% of what users actually see."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What does a page-level tool show that a check by hand misses?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A check by hand shows what an AI assistant said. A page-level tool shows the answer the assistant gives about one page, the passages on that page the answer came from, and a rewrite for each one, and it lets you ask again after a change. It does not sample many runs per prompt and it does not track your brand over time. Those are what monitoring subscriptions do."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much time does checking by hand take?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A basic pass through three platforms with 20 prompts takes roughly 2 hours, giving you about 60 data points. To cover more platforms, repeat each prompt for variance, and keep a record of where each answer came from, you would need 10 to 15 hours per quarter. That time is the hidden cost of the free approach: it trades money for a significant part of your workweek."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is it worth paying for anything if you have never checked AI visibility?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Not at first. A check by hand and a page-level tool are both free, and together they give you a baseline: whether an AI assistant mentions you, whether the facts are right, and what on your key pages causes the answer. That baseline decides every later choice, including whether monitoring is worth paying for."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "When should I not pay for AI visibility monitoring?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Skip it if your brand is new with minimal web presence (AI systems have nothing to get right or wrong yet), if you only need to verify a single factual claim (check it yourself), or if you look at AI visibility quarterly or less. In those cases a subscription pays for months of a dashboard nobody opens, and the free steps cover what you need."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does a free page-level tool compare to a $300/month monitoring subscription?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "They solve different problems. The page-level tool shows what one page makes an AI assistant say and what to change on that page. A monitoring subscription shows trend data across a fixed prompt set on a dashboard. Most brands should start with the free steps to establish a baseline. If those show gaps worth tracking over time and you have the team to act on weekly data, monitoring may be the next step. If you check quarterly or less, rerunning the free steps costs nothing."
-        }
-      }
-    ]
+   "@type": "ListItem",
+   "position": 3,
+   "name": "What Is Worth Paying For",
+   "item": "https://metricusapp.com/blog/ai-visibility-worth-paying-for/"
   }
-  </script>
-  <script src="/js/reader-pulse-b.js" defer></script>
+ ]
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Can I check my AI visibility myself for free?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Open any of the major AI platforms and type questions your customers would ask. You will see whether your brand appears and how it is described. This takes about 15 minutes for a basic pass or 2 hours for a fuller review across several platforms and prompts. The limitation is that each check captures a single response from a non-deterministic system, so you cannot tell whether that result represents 5% or 80% of what users actually see."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What does Metricus show that a check by hand misses?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A check by hand shows what an AI assistant said. Metricus shows the answer AI gives when your customers ask for what you sell, with every business it names. You pick your website, edit the answer into what you want AI to say, and get new text for your website. The AI Visibility Score shows how often AI mentions and recommends you, today and with the new text. It is free, with no signup. It does not track your brand week after week. That is what monitoring subscriptions do."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much time does checking by hand take?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A basic pass through three platforms with 20 prompts takes roughly 2 hours, giving you about 60 data points. To cover more platforms, repeat each prompt for variance, and keep a record of where each answer came from, you would need 10 to 15 hours per quarter. That time is the hidden cost of the free approach: it trades money for a significant part of your workweek."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is it worth paying for anything if you have never checked AI visibility?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Not at first. A check by hand and Metricus are both free, and together they give you a baseline: whether an AI assistant mentions you, whether the facts are right, and what to change on your website. That baseline decides every later choice, including whether monitoring is worth paying for."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "When should I not pay for AI visibility monitoring?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Skip it if your brand is new with minimal web presence (AI systems have nothing to get right or wrong yet), if you only need to verify a single factual claim (check it yourself), or if you look at AI visibility quarterly or less. In those cases a subscription pays for months of a dashboard nobody opens, and the free steps cover what you need."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How does Metricus compare to a $300/month monitoring subscription?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "They solve different problems. Metricus shows the answer AI gives to your customers' question and what to change on your website. A monitoring subscription shows trend data across a fixed prompt set on a dashboard. Most brands should start with the free steps to establish a baseline. If those show gaps worth tracking over time and you have the team to act on weekly data, monitoring may be the next step. If you check quarterly or less, rerunning the free steps costs nothing."
+   }
+  }
+ ]
+}</script>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
-
-  <!-- Site Nav -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 gap-4">
-      <a href="/" class="text-on-surface font-semibold" aria-label="Metricus home">Metricus <span class="font-normal text-on-surface-variant">Optimizer</span></a>
-      <div class="flex items-center gap-5">
-        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface">Learn</a>
-        <a href="/ai-visibility-optimizer-tool/" class="bg-primary text-on-primary text-sm font-semibold px-4 py-2.5 hover:bg-primary-dim">Open the tool</a>
-      </div>
-    </div>
-  </header>
-
-
-
-  <!-- Mobile Menu Overlay -->
-
-
-
-  <main class="flex-grow flex flex-col relative overflow-x-hidden">
-
-    <div class="absolute inset-0 -z-10 pointer-events-none"></div>
-
-    <!-- ========== ARTICLE ========== -->
-    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
-
-      <!-- Breadcrumb -->
-      <nav class="mb-8">
-        <ol class="flex items-center gap-2 text-xs text-slate-muted">
-          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
-          <li class="select-none">/</li>
-          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
-          <li class="select-none">/</li>
-          <li class="text-slate-text">What Is Worth Paying For</li>
-        </ol>
-      </nav>
-
-      <!-- Article Header -->
-      <header class="mb-12">
-        <p class="text-xs text-primary font-semibold mb-4">Buyer's Guide</p>
-        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
-          AI Visibility: What Is Worth Paying For When a Page-Level Tool Is Free
-        </h1>
-        <p class="text-sm text-outline">Metricus Research &middot; April 10, 2026 &middot; 9 min read</p>
-      </header>
-
-
-      <!-- Definition Box -->
-      <div class="bg-surface-container-low p-8 mb-12">
-        <p class="text-lg leading-relaxed text-on-surface">
-          <strong>You can check what an AI assistant says about your brand yourself, for free, right now.</strong> Type your brand name, read what comes back. That takes five minutes. The open question is whether one such check tells you enough to act on, or whether its gaps leave you deciding on incomplete information. This guide covers what a check by hand captures and misses, what a page-level tool shows for one page and what it costs, which is nothing, and when a monitoring subscription is worth paying for.
+<body class="doc">
+<!-- metricus:header -->
+<header class="nav"><div class="in"><a class="logo" href="/" id="navhome">Metricus</a><span class="sp"></span><span class="muted" id="host"></span></div></header>
+<!-- /metricus:header -->
+<main class="doc-main" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <span aria-current="page">What Is Worth Paying For</span></nav>
+<p class="kicker">Buyer's Guide</p>
+<h1>AI Visibility: What Is Worth Paying For and What Is Free</h1>
+<p class="byline">Metricus Research · April 10, 2026 · 9 min read</p>
+<div class="note">
+<p>
+<strong>You can check what an AI assistant says about your brand yourself, for free, right now.</strong> Type your brand name, read what comes back. That takes five minutes. The open question is whether one such check tells you enough to act on, or whether its gaps leave you deciding on incomplete information. This guide covers what a check by hand captures and misses, what you can see for free, and when a monitoring subscription is worth paying for.
         </p>
-      </div>
-
-
-      <!-- Table of Contents -->
-      <div class="border border-[#E2E8F0] p-8 mb-12">
-        <p class="text-xs text-slate-muted font-semibold mb-4">In this article</p>
-        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
-          <li><a href="#diy-check" class="hover:text-primary-hover underline underline-offset-2">What a check by hand gives you</a></li>
-          <li><a href="#variance-problem" class="hover:text-primary-hover underline underline-offset-2">The variance problem nobody mentions</a></li>
-          <li><a href="#what-audit-adds" class="hover:text-primary-hover underline underline-offset-2">What a page-level tool adds</a></li>
-          <li><a href="#side-by-side" class="hover:text-primary-hover underline underline-offset-2">Side-by-side: by hand, page-level tool, monitoring</a></li>
-          <li><a href="#when-diy-enough" class="hover:text-primary-hover underline underline-offset-2">When checking by hand is enough</a></li>
-          <li><a href="#when-audit-makes-sense" class="hover:text-primary-hover underline underline-offset-2">When monitoring is worth paying for</a></li>
-          <li><a href="#faq" class="hover:text-primary-hover underline underline-offset-2">Frequently asked questions</a></li>
-        </ol>
-      </div>
-
-
-<!-- Article Body -->
-      <div class="article-body">
-
-        <h2 id="diy-check">What a check by hand gives you</h2>
-
-        <p>Checking by hand works like this: open an AI assistant, type a question someone in your category would ask, and see whether your brand appears in the response. Then do the same on the other major AI platforms. If you are thorough, you write down what you find in a spreadsheet.</p>
-
-        <p>This is not a bad idea. It takes about two hours if you test 20 prompts across three platforms, and it gives you something most brands still do not have: a baseline. You will learn whether the assistant mentions your brand at all, how it describes you when it does, and which competitors show up alongside you.</p>
-
-        <p>For brands that have never looked at this before, that two-hour exercise can be genuinely revealing. Some discover that an AI assistant describes their product with outdated pricing. Others find that it recommends a competitor they did not know existed. The act of looking, even informally, surfaces information you did not have yesterday.</p>
-
-        <h3>What checking by hand covers</h3>
-
-        <ul>
-          <li>Whether your brand appears at all for key queries</li>
-          <li>How AI frames your product or service in natural language</li>
-          <li>Which competitors AI mentions in the same response</li>
-          <li>Whether the basic facts (pricing, features, positioning) are accurate</li>
-        </ul>
-
-        <p>If all you need is a quick gut check, this is a legitimate way to get one. The problems start when you try to use it as a basis for decisions.</p>
-
-
-        <h2 id="variance-problem">The variance problem nobody mentions</h2>
-
-        <p>Here is the fact that makes spot-checking by hand unreliable for anything beyond curiosity: AI responses are non-deterministic. An AI assistant does not return the same brand list twice for the same prompt. There is less than a 1-in-100 chance of getting identical output on consecutive runs of the same query.</p>
-
-        <p>This means your single manual check captures one data point from a constantly shifting distribution. You might ask "best project management tools for small teams" and see your brand mentioned. You might ask the same question ten minutes later and see an entirely different list. Both are real outputs. Neither is the complete picture.</p>
-
-        <p>The practical consequence: if you check by hand on a Tuesday afternoon and your brand appears, you might conclude that your AI visibility is fine. But you have no way of knowing whether that response represents 80% of the outputs for that query or 5%. Without multiple runs and statistical aggregation, you cannot distinguish between "the assistant consistently recommends us" and "we got lucky once."</p>
-
-        <h3>What variance means in practice</h3>
-
-        <ul>
-          <li><strong>False confidence:</strong> Your brand appeared once, so you assume it always appears. It may not.</li>
-          <li><strong>False alarm:</strong> Your brand was missing once, so you assume it never appears. It may appear frequently.</li>
-          <li><strong>Invisible competitor shifts:</strong> A competitor that appeared in 70% of responses last month now appears in 30%. A single check on either side of that shift tells you nothing about the trend.</li>
-        </ul>
-
-        <p>This is not a theoretical concern. It is the central limitation of any approach that checks AI output once per prompt instead of sampling across multiple runs.</p>
-
-
-        <h2 id="what-audit-adds">What a page-level tool adds</h2>
-
-        <p>A check by hand tells you what the assistant said. It does not tell you what on your page made it say that, and it hands you nothing to change. A page-level tool covers that part, for one page at a time.</p>
-
-        <h3>What you see for one page</h3>
-
-        <p>Put in a URL. You see the answer an AI assistant gives about that page, the passages on the page that answer came from, marked where they sit, and a rewrite for each of those passages. Change any passage and the assistant is asked again, so you can see whether the answer moved. You leave with the changes in a file. The Metricus optimizer does this. It is free and there is no signup.</p>
-
-        <h3>What it does not do</h3>
-
-        <p>It looks at one page per run. It does not sample a prompt many times to measure how often your brand appears across the whole market, and it does not track anything over time. You can run any URL through it, but the rewrites are only useful on pages you can edit.</p>
-
-        <h3>What monitoring subscriptions add</h3>
-
-        <p>Monitoring tools run a fixed set of prompts on a schedule across the major AI platforms and show how often your brand and your competitors appear, week by week, on a dashboard with alerts. That is the difference between reading the temperature once and looking at a month of readings. They cost from about $29 to $489 a month depending on the tool and the number of prompts. What they do not do is show you what on a given page caused an answer, or hand you a rewrite.</p>
-
-
-        <h2 id="side-by-side">Side-by-side: by hand, page-level tool, monitoring</h2>
-
-        <div class="border border-[#E2E8F0] my-8 overflow-x-auto">
-          <table class="w-full text-sm">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="text-left p-4 font-semibold text-slate-text">Dimension</th>
-                <th class="text-left p-4 font-semibold text-slate-text">By hand</th>
-                <th class="text-left p-4 font-semibold text-slate-text">Page-level tool</th>
-                <th class="text-left p-4 font-semibold text-slate-text">Monitoring subscription</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-[#E2E8F0]">
-              <tr><td class="p-4 font-medium">Cost</td><td class="p-4">Free</td><td class="p-4">Free</td><td class="p-4">$29 to $489 a month</td></tr>
-              <tr><td class="p-4 font-medium">Time investment</td><td class="p-4">~2 hours per round</td><td class="p-4">One run per page</td><td class="p-4">Ongoing; someone has to read the dashboard</td></tr>
-              <tr><td class="p-4 font-medium">Scope</td><td class="p-4">The prompts you type</td><td class="p-4">One page per run</td><td class="p-4">A fixed prompt set on a schedule</td></tr>
-              <tr><td class="p-4 font-medium">Variance sampling</td><td class="p-4">Single run per prompt</td><td class="p-4">Ask again after each change</td><td class="p-4">Repeated runs over time</td></tr>
-              <tr><td class="p-4 font-medium">Why the answer came out that way</td><td class="p-4">Your own guess</td><td class="p-4">Passages marked on the page</td><td class="p-4">Cited sources in some tools</td></tr>
-              <tr><td class="p-4 font-medium">Rewrites</td><td class="p-4">None</td><td class="p-4">One per marked passage</td><td class="p-4">None</td></tr>
-              <tr><td class="p-4 font-medium">Competitor comparison</td><td class="p-4">Ad hoc</td><td class="p-4">Not the focus</td><td class="p-4">Share of voice over time</td></tr>
-              <tr><td class="p-4 font-medium">Trend over time</td><td class="p-4">Manual re-run each quarter</td><td class="p-4">Rerun any time</td><td class="p-4">Built in</td></tr>
-              <tr><td class="p-4 font-medium">What you leave with</td><td class="p-4">A spreadsheet</td><td class="p-4">The changes in a file</td><td class="p-4">A dashboard and alerts</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>The table above is not an argument that checking by hand is worthless. The three answer different questions. A check by hand answers whether an AI assistant mentions you today. A page-level tool answers what one of your pages makes the assistant say and what to change on it. Monitoring answers how that changes over weeks and against competitors.</p>
-
-
-        <h2 id="when-diy-enough">When checking by hand is enough</h2>
-
-        <p>There are situations where a check by hand is the right call and paying for anything would be premature.</p>
-
-        <ul>
-          <li>You have never looked at this before. Spend 15 minutes asking an AI assistant about your brand and read what comes back. That first look is free, fast, and usually enough to decide whether you want to go deeper.</li>
-          <li>You are verifying a single claim. If someone told you an AI assistant says your product is discontinued and you just need to confirm that one thing, ask it. You do not need anything more for one factual question.</li>
-          <li>Your brand is new with minimal web presence. If you launched last month and have a five-page website, AI systems have very little to work with. Build your digital footprint first.</li>
-          <li>You already run a monitoring subscription. If you get weekly dashboard updates across several platforms, another check by hand adds little.</li>
-        </ul>
-
-        <p>In all four cases, the right answer is either checking by hand or tools you already have. No need to spend money you do not need to spend.</p>
-
-
-        <h2 id="when-audit-makes-sense">When monitoring is worth paying for</h2>
-
-        <p>A monitoring subscription earns its cost when any of the following are true. Before any of them, the free steps come first: check by hand, then run your key pages through a page-level tool. Those give you the baseline. Monitoring tells you how it moves.</p>
-
-        <h3>You are changing pages and need to know whether the change held</h3>
-
-        <p>A page-level tool shows whether a rewrite moved the answer at the moment you made it. It does not tell you whether the answer stayed moved three weeks later, after the AI platforms refreshed. If you are running an ongoing optimization program and acting on the results weekly, a scheduled prompt set is the only way to see that.</p>
-
-        <h3>You are presenting to stakeholders</h3>
-
-        <p>A spreadsheet of notes from an afternoon of checking by hand does not carry weight in a meeting. A trend line over three months, with competitors on the same chart, does. If you need to make the case for AI visibility work to a manager, a client or a board, the record over time matters as much as any single answer.</p>
-
-        <h3>You suspect the assistant is getting facts wrong across many prompts</h3>
-
-        <p>Factual errors in AI responses (wrong pricing, discontinued products, incorrect descriptions) cause real damage when prospects rely on those answers. A check by hand spots an error if you happen to ask the right question. A page-level tool shows which passage on your own page produced a wrong answer, so you can fix the page. Monitoring is worth it when the errors keep coming back from sources you do not control and you need to know how often prospects see them.</p>
-
-        <h3>You want the competitive picture</h3>
-
-        <p>An AI assistant does not describe your brand in isolation. It ranks, compares and recommends. A check by hand might reveal that a competitor shows up alongside you, but it cannot tell you how consistently or across how many query types. That count, who the assistant favors, for which kinds of questions, on which platforms, is what a monitoring dashboard is built to keep.</p>
-
-        <h3>You are deciding whether monitoring is worth it at all</h3>
-
-        <p>The free steps settle this. If checking by hand and a run on your key pages show strong, accurate representation, you may not need monitoring. If they show significant gaps, you have the evidence to justify a subscription and a list of what to track. Either way, you decide with data instead of guessing.</p>
-
-        <p class="text-sm text-slate-muted mt-8">Last updated: September 2026</p>
-
-      </div>
-      <!-- End Article Body -->
-
-
-      <!-- FAQ Section -->
-      <div class="article-body">
-        <h2 id="faq">Frequently asked questions</h2>
-
-        <h3>Can I check my AI visibility myself for free?</h3>
-        <p>Yes. Open any of the major AI platforms and type questions your customers would ask. You will see whether your brand appears and how it is described. This takes about 15 minutes for a basic pass or 2 hours for a fuller review across several platforms and prompts. The limitation is that each check captures a single response from a non-deterministic system, so you cannot tell whether that result represents 5% or 80% of what users actually see.</p>
-
-        <h3>What does a page-level tool show that a check by hand misses?</h3>
-        <p>A check by hand shows what an AI assistant said. A page-level tool shows the answer the assistant gives about one page, the passages on that page the answer came from, and a rewrite for each one, and it lets you ask again after a change. It does not sample many runs per prompt and it does not track your brand over time. Those are what monitoring subscriptions do.</p>
-
-        <h3>How much time does checking by hand take?</h3>
-        <p>A basic pass through three platforms with 20 prompts takes roughly 2 hours, giving you about 60 data points. To cover more platforms, repeat each prompt for variance, and keep a record of where each answer came from, you would need 10 to 15 hours per quarter. That time is the hidden cost of the free approach: it trades money for a significant part of your workweek.</p>
-
-        <h3>Is it worth paying for anything if you have never checked AI visibility?</h3>
-        <p>Not at first. A check by hand and a page-level tool are both free, and together they give you a baseline: whether an AI assistant mentions you, whether the facts are right, and what on your key pages causes the answer. That baseline decides every later choice, including whether monitoring is worth paying for.</p>
-
-        <h3>When should I not pay for AI visibility monitoring?</h3>
-        <p>Skip it if your brand is new with minimal web presence (AI systems have nothing to get right or wrong yet), if you only need to verify a single factual claim (check it yourself), or if you look at AI visibility quarterly or less. In those cases a subscription pays for months of a dashboard nobody opens, and the free steps cover what you need.</p>
-
-        <h3>How does a free page-level tool compare to a $300/month monitoring subscription?</h3>
-        <p>They solve different problems. The page-level tool shows what one page makes an AI assistant say and what to change on that page. A monitoring subscription shows trend data across a fixed prompt set on a dashboard. Most brands should start with the free steps to establish a baseline. If those show gaps worth tracking over time and you have the team to act on weekly data, monitoring may be the next step. If you check quarterly or less, rerunning the free steps costs nothing.</p>
-      </div>
-
-
-
-
-      <!-- ========== ARTICLE CTA ========== -->
-      <div class="border-t border-outline-variant/30 mt-16 pt-10" data-cta="tool">
-        <h2 class="text-2xl font-semibold text-on-surface mb-2">Put in a page.</h2>
-        <p class="text-on-surface-variant mb-5 max-w-xl">See what an AI assistant answers about your page, which passages caused it, and a rewrite for each one. Free, no signup.</p>
-        <form class="flex flex-col sm:flex-row gap-2 max-w-xl" action="/ai-visibility-optimizer-tool/" method="get">
-          <label class="sr-only" for="cta-url">Address of the page to check</label>
-          <input id="cta-url" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="your-site.com/page" required class="flex-1 min-w-0 px-4 py-3 border border-outline-variant bg-white text-on-surface">
-          <button type="submit" class="bg-primary text-on-primary font-semibold px-6 py-3 hover:bg-primary-dim whitespace-nowrap">Start optimizing</button>
-        </form>
-      </div>
-
-      <!-- ========== CITE THIS ARTICLE ========== -->
-      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
-        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
-          <cite class="not-italic"><a href="https://metricusapp.com/blog/ai-visibility-worth-paying-for/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; AI Visibility: What Is Worth Paying For When a Page-Level Tool Is Free</a></cite>
-        </p>
-      </footer>
-
-    </article>
-
-
-
-    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
-      <p class="text-xs text-slate-muted font-semibold mb-6">Go deeper</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <a href="/ai-platform-comparison-brands/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">Platform Intelligence Guide</p>
-          <p class="text-sm text-on-surface-variant mt-1">How AI platforms update and refresh</p>
-        </a>
-        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
-          <p class="text-sm text-on-surface-variant mt-1">Monitoring accuracy over time</p>
-        </a>
-      </div>
-    </section>
-
-<!-- ========== RELATED POSTS ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
-      <p class="text-xs text-slate-muted font-semibold mb-8">Related articles</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        <a href="../ai-visibility-monitoring-vs-one-time-audits/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Buyer's Guide</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            AI Visibility Monitoring vs a Check You Run Yourself on One Page
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            Monitoring subscriptions cost $348 to $6,000+ a year. Compare them with a free optimizer on one page on cost, depth and fit.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../ai-visibility-tools-worth-it-2026/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Buyer's Guide</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            12 AI Visibility Tools Compared: Which One Is Worth Your Money in 2026
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            We compare 12+ AI visibility platforms by coverage, accuracy audits, action plans, and pricing.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../ai-visibility-cheapest-way-to-check/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Buyer's Guide</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            The Cheapest Way to Check What AI Says About Your Brand in 2026
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            Every option from checking by hand to free tools, a page-level tool and monitoring, by what you learn per dollar spent.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>April 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
-  </main>
-
-
-  <!-- ========== FOOTER ========== -->
-  <!-- Site Footer -->
-  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-on-surface-variant">
-      <span class="text-on-surface font-semibold">Metricus</span>
-      <a href="/ai-visibility-optimizer-tool/" class="hover:text-on-surface">Open the tool</a>
-      <a href="/blog/" class="hover:text-on-surface">Learn</a>
-      <a href="/methodology/" class="hover:text-on-surface">How it works</a>
-      <a href="/results/" class="hover:text-on-surface">Results</a>
-      <a href="/for-agencies/" class="hover:text-on-surface">For agencies</a>
-      <a href="/about/" class="hover:text-on-surface">About</a>
-      <a href="/press/" class="hover:text-on-surface">Press</a>
-      <a href="/support/" class="hover:text-on-surface">Support</a>
-      <a href="/privacy-policy/" class="hover:text-on-surface">Privacy</a>
-      <a href="/terms-of-service/" class="hover:text-on-surface">Terms</a>
-      <a href="mailto:metricusapp@gmail.com" class="hover:text-on-surface">Contact</a>
-      <span class="ml-auto">&copy; 2026 Metricus</span>
-    </div>
-  </footer>
-
+</div>
+<nav class="toc" aria-label="In this article"><p>In this article</p><ol>
+<li><a href="#diy-check">What a check by hand gives you</a></li>
+<li><a href="#variance-problem">The variance problem nobody mentions</a></li>
+<li><a href="#what-audit-adds">What a check by hand leaves out</a></li>
+<li><a href="#side-by-side">Side-by-side: by hand and monitoring</a></li>
+<li><a href="#when-diy-enough">When checking by hand is enough</a></li>
+<li><a href="#when-audit-makes-sense">When monitoring is worth paying for</a></li>
+<li><a href="#faq">Frequently asked questions</a></li>
+</ol></nav>
+<h2 id="diy-check">What a check by hand gives you</h2>
+<p>Checking by hand works like this: open an AI assistant, type a question someone in your category would ask, and see whether your brand appears in the response. Then do the same on the other major AI platforms. If you are thorough, you write down what you find in a spreadsheet.</p>
+<p>This is not a bad idea. It takes about two hours if you test 20 prompts across three platforms, and it gives you something most brands still do not have: a baseline. You will learn whether the assistant mentions your brand at all, how it describes you when it does, and which competitors show up alongside you.</p>
+<p>For brands that have never looked at this before, that two-hour exercise can be genuinely revealing. Some discover that an AI assistant describes their product with outdated pricing. Others find that it recommends a competitor they did not know existed. The act of looking, even informally, surfaces information you did not have yesterday.</p>
+<h3>What checking by hand covers</h3>
+<ul>
+<li>Whether your brand appears at all for key queries</li>
+<li>How AI frames your product or service in natural language</li>
+<li>Which competitors AI mentions in the same response</li>
+<li>Whether the basic facts (pricing, features, positioning) are accurate</li>
+</ul>
+<p>If all you need is a quick gut check, this is a legitimate way to get one. The problems start when you try to use it as a basis for decisions.</p>
+<h2 id="variance-problem">The variance problem nobody mentions</h2>
+<p>Here is the fact that makes spot-checking by hand unreliable for anything beyond curiosity: AI responses are non-deterministic. An AI assistant does not return the same brand list twice for the same prompt. There is less than a 1-in-100 chance of getting identical output on consecutive runs of the same query.</p>
+<p>This means your single manual check captures one data point from a constantly shifting distribution. You might ask "best project management tools for small teams" and see your brand mentioned. You might ask the same question ten minutes later and see an entirely different list. Both are real outputs. Neither is the complete picture.</p>
+<p>The practical consequence: if you check by hand on a Tuesday afternoon and your brand appears, you might conclude that your AI visibility is fine. But you have no way of knowing whether that response represents 80% of the outputs for that query or 5%. Without multiple runs and statistical aggregation, you cannot distinguish between "the assistant consistently recommends us" and "we got lucky once."</p>
+<h3>What variance means in practice</h3>
+<ul>
+<li><strong>False confidence:</strong> Your brand appeared once, so you assume it always appears. It may not.</li>
+<li><strong>False alarm:</strong> Your brand was missing once, so you assume it never appears. It may appear frequently.</li>
+<li><strong>Invisible competitor shifts:</strong> A competitor that appeared in 70% of responses last month now appears in 30%. A single check on either side of that shift tells you nothing about the trend.</li>
+</ul>
+<p>This is not a theoretical concern. It is the central limitation of any approach that checks AI output once per prompt instead of sampling across multiple runs.</p>
+<h2 id="what-audit-adds">What a check by hand leaves out</h2>
+<p>A check by hand tells you what the assistant said. It does not tell you what to change on your website, and it hands you nothing to publish. Metricus covers that part for free: you type the question a customer would ask, see the answer AI gives with every business it names, and get new text for your website, with the answer AI gives to the rewritten website next to today's. Its AI Visibility Score shows how often AI mentions and recommends you across your customers' questions.</p>
+<h3>What monitoring subscriptions add</h3>
+<p>Monitoring tools run a fixed set of prompts on a schedule across the major AI platforms and show how often your brand and your competitors appear, week by week, on a dashboard with alerts. That is the difference between reading the temperature once and looking at a month of readings. They cost from about $29 to $489 a month depending on the tool and the number of prompts. What they do not do is hand you new text for your website.</p>
+<h2 id="side-by-side">Side-by-side: by hand and monitoring</h2>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>By hand</th>
+<th>Monitoring subscription</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Cost</td><td>Free</td><td>$29 to $489 a month</td></tr>
+<tr><td>Time investment</td><td>~2 hours per round</td><td>Ongoing; someone has to read the dashboard</td></tr>
+<tr><td>Scope</td><td>The prompts you type</td><td>A fixed prompt set on a schedule</td></tr>
+<tr><td>Variance sampling</td><td>Single run per prompt</td><td>Repeated runs over time</td></tr>
+<tr><td>Why the answer came out that way</td><td>Your own guess</td><td>Cited sources in some tools</td></tr>
+<tr><td>Competitor comparison</td><td>Ad hoc</td><td>Share of voice over time</td></tr>
+<tr><td>Trend over time</td><td>Manual re-run each quarter</td><td>Built in</td></tr>
+<tr><td>What you leave with</td><td>A spreadsheet</td><td>A dashboard and alerts</td></tr>
+</tbody>
+</table>
+</div>
+<p>The table above is not an argument that checking by hand is worthless. The two answer different questions. A check by hand answers whether an AI assistant mentions you today. Monitoring answers how that changes over weeks and against competitors.</p>
+<h2 id="when-diy-enough">When checking by hand is enough</h2>
+<p>There are situations where a check by hand is the right call and paying for anything would be premature.</p>
+<ul>
+<li>You have never looked at this before. Spend 15 minutes asking an AI assistant about your brand and read what comes back. That first look is free, fast, and usually enough to decide whether you want to go deeper.</li>
+<li>You are verifying a single claim. If someone told you an AI assistant says your product is discontinued and you just need to confirm that one thing, ask it. You do not need anything more for one factual question.</li>
+<li>Your brand is new with minimal web presence. If you launched last month and have a five-page website, AI systems have very little to work with. Build your digital footprint first.</li>
+<li>You already run a monitoring subscription. If you get weekly dashboard updates across several platforms, another check by hand adds little.</li>
+</ul>
+<p>In all four cases, the right answer is either checking by hand or tools you already have. No need to spend money you do not need to spend.</p>
+<h2 id="when-audit-makes-sense">When monitoring is worth paying for</h2>
+<p>A monitoring subscription earns its cost when any of the following are true. Before any of them, the free steps above come first. Those give you the baseline. Monitoring tells you how it moves.</p>
+<h3>You are changing pages and need to know whether the change held</h3>
+<p>Seeing the answer move once, right after you change your website, does not tell you whether it stayed moved three weeks later, after the AI platforms refreshed. If you are running an ongoing optimization program and acting on the results weekly, a scheduled prompt set is the only way to see that.</p>
+<h3>You are presenting to stakeholders</h3>
+<p>A spreadsheet of notes from an afternoon of checking by hand does not carry weight in a meeting. A trend line over three months, with competitors on the same chart, does. If you need to make the case for AI visibility work to a manager, a client or a board, the record over time matters as much as any single answer.</p>
+<h3>You suspect the assistant is getting facts wrong across many prompts</h3>
+<p>Factual errors in AI responses (wrong pricing, discontinued products, incorrect descriptions) cause real damage when prospects rely on those answers. A check by hand spots an error if you happen to ask the right question. Monitoring is worth it when the errors keep coming back from sources you do not control and you need to know how often prospects see them.</p>
+<h3>You want the competitive picture</h3>
+<p>An AI assistant does not describe your brand in isolation. It ranks, compares and recommends. A check by hand might reveal that a competitor shows up alongside you, but it cannot tell you how consistently or across how many query types. That count, who the assistant favors, for which kinds of questions, on which platforms, is what a monitoring dashboard is built to keep.</p>
+<h3>You are deciding whether monitoring is worth it at all</h3>
+<p>The free steps settle this. If they show strong, accurate representation, you may not need monitoring. If they show significant gaps, you have the evidence to justify a subscription and a list of what to track. Either way, you decide with data instead of guessing.</p>
+<h2 id="faq">Frequently asked questions</h2>
+<h3>Can I check my AI visibility myself for free?</h3>
+<p>Yes. Open any of the major AI platforms and type questions your customers would ask. You will see whether your brand appears and how it is described. This takes about 15 minutes for a basic pass or 2 hours for a fuller review across several platforms and prompts. The limitation is that each check captures a single response from a non-deterministic system, so you cannot tell whether that result represents 5% or 80% of what users actually see.</p>
+<h3>What does Metricus show that a check by hand misses?</h3>
+<p>A check by hand shows what an AI assistant said. Metricus shows the answer AI gives when your customers ask for what you sell, with every business it names. You pick your website, edit the answer into what you want AI to say, and get new text for your website. The AI Visibility Score shows how often AI mentions and recommends you, today and with the new text. It is free, with no signup. It does not track your brand week after week. That is what monitoring subscriptions do.</p>
+<h3>How much time does checking by hand take?</h3>
+<p>A basic pass through three platforms with 20 prompts takes roughly 2 hours, giving you about 60 data points. To cover more platforms, repeat each prompt for variance, and keep a record of where each answer came from, you would need 10 to 15 hours per quarter. That time is the hidden cost of the free approach: it trades money for a significant part of your workweek.</p>
+<h3>Is it worth paying for anything if you have never checked AI visibility?</h3>
+<p>Not at first. A check by hand and Metricus are both free, and together they give you a baseline: whether an AI assistant mentions you, whether the facts are right, and what to change on your website. That baseline decides every later choice, including whether monitoring is worth paying for.</p>
+<h3>When should I not pay for AI visibility monitoring?</h3>
+<p>Skip it if your brand is new with minimal web presence (AI systems have nothing to get right or wrong yet), if you only need to verify a single factual claim (check it yourself), or if you look at AI visibility quarterly or less. In those cases a subscription pays for months of a dashboard nobody opens, and the free steps cover what you need.</p>
+<h3>How does Metricus compare to a $300/month monitoring subscription?</h3>
+<p>They solve different problems. Metricus shows the answer AI gives to your customers' question and what to change on your website. A monitoring subscription shows trend data across a fixed prompt set on a dashboard. Most brands should start with the free steps to establish a baseline. If those show gaps worth tracking over time and you have the team to act on weekly data, monitoring may be the next step. If you check quarterly or less, rerunning the free steps costs nothing.</p>
+<p>Last updated: September 2026</p>
+<p class="cite">Cite as: <a href="https://metricusapp.com/blog/ai-visibility-worth-paying-for/">Metricus — AI Visibility: What Is Worth Paying For and What Is Free</a></p>
+<section class="related" aria-labelledby="related-knowledge-bases"><h2 id="related-knowledge-bases">Knowledge bases</h2><ul><li><a href="/ai-platform-comparison-brands/">Platform Intelligence Guide</a><p>How AI platforms update and refresh</p></li><li><a href="/brand-accuracy-knowledge-base/">AI Brand Accuracy Guide</a><p>Monitoring accuracy over time</p></li></ul></section>
+<section class="related" aria-labelledby="related-related-articles"><h2 id="related-related-articles">Related articles</h2><ul><li><a href="/blog/ai-visibility-monitoring-vs-one-time-audits/">AI Visibility Monitoring vs a Check You Run Yourself on One Page</a><p>Monitoring subscriptions cost $348 to $6,000+ a year. Compare them with a check you run yourself on cost, depth and fit.</p></li><li><a href="/blog/ai-visibility-tools-worth-it-2026/">12 AI Visibility Tools Compared: Which One Is Worth Your Money in 2026</a><p>We compare 12+ AI visibility platforms by coverage, accuracy audits, action plans, and pricing.</p></li><li><a href="/blog/ai-visibility-cheapest-way-to-check/">The Cheapest Way to Check What AI Says About Your Brand in 2026</a><p>Every option from checking by hand to free tools and monitoring, by what you learn per dollar spent.</p></li></ul></section>
+<!-- metricus:ask -->
+<section class="ask-cta" aria-labelledby="ask-cta-h"><h2 id="ask-cta-h">What do your customers ask AI?</h2><form class="chatbox" action="/" method="get"><input class="input" type="text" name="q" maxlength="600" autocomplete="off" required placeholder="Type what people would ask AI&hellip;" aria-labelledby="ask-cta-h"><button class="send" type="submit" aria-label="Ask AI" title="Ask AI"><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V6M6 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form></section>
+<!-- /metricus:ask -->
+</main>
+<!-- metricus:footer -->
+<footer class="foot"><nav aria-label="Site"><a href="/blog/">Blog</a><a href="/geo-knowledge-base/">Knowledge base</a><a href="/results/">Results</a><a href="/about/">About</a><a href="/press/">Press</a><a href="/support/">Support</a><a href="/privacy-policy/">Privacy</a><a href="/terms-of-service/">Terms</a><a href="mailto:metricusapp@gmail.com">Contact</a></nav><p>&copy; 2026 Metricus</p></footer>
+<!-- /metricus:footer -->
 </body>
 </html>

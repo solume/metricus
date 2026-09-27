@@ -1,776 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How Can My Hotel Get Recommended by AI? Travel Visibility Data | Metricus</title>
-  <meta name="description" content="74% of travelers research online. When they ask AI to plan a trip, it sends them to Booking.com and Airbnb. OTA dependency data inside.">
-  <meta property="og:title" content="How Can My Hotel Get Recommended by AI? Travel Visibility Data">
-  <meta property="og:description" content="74% of travelers research online. When they ask AI to plan a trip, it sends them to Booking.com and Airbnb. OTA dependency data inside.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://metricusapp.com/blog/travel-ai-visibility/">
-  <meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="How Can My Hotel Get Recommended by AI? Travel Visibility Data">
-  <meta name="twitter:description" content="74% of travelers research online. When they ask AI to plan a trip, it sends them to Booking.com and Airbnb. OTA dependency data inside.">
-  <meta name="twitter:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <link rel="canonical" href="https://metricusapp.com/blog/travel-ai-visibility/">
-
-  <!-- Google Tag Manager -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w70oz7g1k3");
-  </script>
-
-  <!-- Google Fonts -->
-
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#515F74',
-            'primary-hover': '#1E293B',
-            'on-primary': '#f6f7ff',
-            'on-primary-fixed': '#324054',
-            'primary-dim': '#455368',
-            surface: '#f7f9fb',
-            'surface-container-low': '#f0f4f7',
-            'surface-container': '#e8eff3',
-            'surface-container-lowest': '#ffffff',
-            'surface-container-highest': '#d9e4ea',
-            'surface-container-high': '#e1e9ee',
-            'surface-variant': '#d9e4ea',
-            'on-surface': '#2a3439',
-            'on-surface-variant': '#566166',
-            outline: '#717c82',
-            'outline-variant': '#a9b4b9',
-            'slate-text': '#0F172A',
-            'slate-muted': '#64748B',
-            'slate-accent': '#475569',
-          },
-          fontFamily: {
-            display: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            body: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            headline: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            label: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-          },
-          borderRadius: {
-            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
-            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
-            full: '0.75rem',
-          },
-        },
-      },
-    }
-  </script>
-
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: #ffffff;
-      color: #0F172A;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .font-display { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-headline { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-body-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-
-    .editorial-btn {
-      transition: background-color 150ms ease-in-out, transform 150ms ease;
-    }
-    .editorial-btn:hover {
-      background-color: #1E293B;
-    }.blog-card {
-      transition: transform 200ms ease, background-color 200ms ease;
-    }
-    .blog-card:hover {
-      transform: translateY(-2px);
-      background-color: #f7f9fb;
-    }
-
-    .article-body h2 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.75rem;
-      line-height: 1.2;
-      color: #0F172A;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-    }
-    @media (min-width: 768px) {
-      .article-body h2 {
-        font-size: 2rem;
-      }
-    }
-    .article-body h3 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      line-height: 1.3;
-      color: #0F172A;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    .article-body p {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-    }
-    .article-body ul, .article-body ol {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-      padding-left: 1.5rem;
-    }
-    .article-body ul { list-style-type: disc; }
-    .article-body ol { list-style-type: decimal; }
-    .article-body li { margin-bottom: 0.5rem; }
-    .article-body blockquote {
-      border-left: 2px solid #334155;
-      padding-left: 1.5rem;
-      font-style: italic;
-      color: #475569;
-      font-size: 1.125rem;
-      line-height: 1.75;
-      margin: 2rem 0;
-    }
-    .article-body a {
-      color: #334155;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .article-body a:hover {
-      color: #1E293B;
-    }
-  </style>
-
-  <!-- JSON-LD BlogPosting -->
-  <script type="application/ld+json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Can My Hotel Get Recommended by AI? Travel Visibility Data | Metricus</title>
+<meta name="description" content="74% of travelers research online. When they ask AI to plan a trip, it sends them to Booking.com and Airbnb. OTA dependency data inside.">
+<link rel="canonical" href="https://metricusapp.com/blog/travel-ai-visibility/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Metricus">
+<meta property="og:url" content="https://metricusapp.com/blog/travel-ai-visibility/">
+<meta property="og:title" content="How Can My Hotel Get Recommended by AI? Travel Visibility Data">
+<meta property="og:description" content="74% of travelers research online. When they ask AI to plan a trip, it sends them to Booking.com and Airbnb. OTA dependency data inside.">
+<meta property="og:image" content="https://metricusapp.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Metricus: see what AI answers when your customers ask for what you offer.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How Can My Hotel Get Recommended by AI? Travel Visibility Data">
+<meta name="twitter:description" content="74% of travelers research online. When they ask AI to plan a trip, it sends them to Booking.com and Airbnb. OTA dependency data inside.">
+<meta name="twitter:image" content="https://metricusapp.com/assets/og.png">
+<!-- metricus:head -->
+<link rel="stylesheet" href="/assets/metricus.css?v=20260927">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#FBFAF7">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w70oz7g1k3");</script>
+<!-- /metricus:head -->
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "AI Visibility for Travel: Why ChatGPT Plans Trips With Booking.com and Airbnb but Not Your Hotel",
+ "description": "Travel is one of the top use cases for AI chatbots. When travelers ask ChatGPT to plan a trip, AI recommends the same 5 OTAs. Independent hotels, tour operators, and travel agencies are invisible.",
+ "author": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "datePublished": "2026-04-05",
+ "dateModified": "2026-09-27",
+ "mainEntityOfPage": "https://metricusapp.com/blog/travel-ai-visibility/",
+ "image": "https://metricusapp.com/assets/og.png"
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
   {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "AI Visibility for Travel: Why ChatGPT Plans Trips With Booking.com and Airbnb but Not Your Hotel",
-    "description": "Travel is one of the top use cases for AI chatbots. When travelers ask ChatGPT to plan a trip, AI recommends the same 5 OTAs. Independent hotels, tour operators, and travel agencies are invisible.",
-    "author": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "datePublished": "2026-04-05",
-    "dateModified": "2026-09-04",
-    "mainEntityOfPage": "https://metricusapp.com/blog/travel-ai-visibility/",
-    "image": "https://metricusapp.com/landing/img/og.jpg"
-  }
-  </script>
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://metricusapp.com/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "AI Visibility for Travel", "item": "https://metricusapp.com/blog/travel-ai-visibility/"}
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://metricusapp.com/blog/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Why doesn't AI recommend my hotel or tour company?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI recommendations reflect training data concentration. Booking.com alone has indexed data on 29+ million properties. TripAdvisor has 1+ billion reviews. An independent hotel with a few hundred web mentions cannot compete for AI mindshare without targeted visibility strategies."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What does AI get wrong about travel brands?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Common errors include fabricated property details like inventing specific room types, outdated or invented pricing, tour itinerary fabrication, confused star ratings and review scores, and location errors that misplace properties in wrong neighborhoods or cities."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How is AI changing travel booking behavior?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI is becoming a trip-planning concierge. Instead of browsing OTA listings, travelers describe their ideal trip to ChatGPT or Perplexity and receive curated recommendations. This bypasses traditional search entirely, and properties not in AI training data are excluded."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How can my travel brand check its AI visibility?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Metricus has a free tool for this. Put in a property, tour, or destination page URL, see what the major AI platforms answer when that page is the source, which passages they use, and get rewrites that change the answer. Free, no signup, no credit card."
-        }
-      }
-    ]
+   "@type": "ListItem",
+   "position": 3,
+   "name": "AI Visibility for Travel",
+   "item": "https://metricusapp.com/blog/travel-ai-visibility/"
   }
-  </script>
-  <script src="/js/reader-pulse-b.js" defer></script>
+ ]
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Why doesn't AI recommend my hotel or tour company?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "AI recommendations reflect training data concentration. Booking.com alone has indexed data on 29+ million properties. TripAdvisor has 1+ billion reviews. An independent hotel with a few hundred web mentions cannot compete for AI mindshare without targeted visibility strategies."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What does AI get wrong about travel brands?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Common errors include fabricated property details like inventing specific room types, outdated or invented pricing, tour itinerary fabrication, confused star ratings and review scores, and location errors that misplace properties in wrong neighborhoods or cities."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How is AI changing travel booking behavior?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "AI is becoming a trip-planning concierge. Instead of browsing OTA listings, travelers describe their ideal trip to ChatGPT or Perplexity and receive curated recommendations. This bypasses traditional search entirely, and properties not in AI training data are excluded."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How can my travel brand check its AI visibility?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Type the question into Metricus the way a traveler would ask it, and you see the answer AI gives, with every business it names. You can then edit the answer into what you want AI to say about you and get new text for your website. It is free, with no signup."
+   }
+  }
+ ]
+}</script>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
-
-  <!-- Site Nav -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 gap-4">
-      <a href="/" class="text-on-surface font-semibold" aria-label="Metricus home">Metricus <span class="font-normal text-on-surface-variant">Optimizer</span></a>
-      <div class="flex items-center gap-5">
-        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface">Learn</a>
-        <a href="/ai-visibility-optimizer-tool/" class="bg-primary text-on-primary text-sm font-semibold px-4 py-2.5 hover:bg-primary-dim">Open the tool</a>
-      </div>
-    </div>
-  </header>
-
-
-
-  <!-- Mobile Menu Overlay -->
-
-
-
-  <main class="flex-grow flex flex-col relative overflow-x-hidden">
-
-    <div class="absolute inset-0 -z-10 pointer-events-none"></div>
-
-    <!-- ========== ARTICLE ========== -->
-    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
-
-      <!-- Breadcrumb -->
-      <nav class="mb-8">
-        <ol class="flex items-center gap-2 text-xs text-slate-muted">
-          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
-          <li class="select-none">/</li>
-          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
-          <li class="select-none">/</li>
-          <li class="text-slate-text">Travel AI Visibility</li>
-        </ol>
-      </nav>
-
-      <!-- Article Header -->
-      <header class="mb-12">
-        <p class="text-xs text-primary font-semibold mb-4">Industry Research</p>
-        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
-          How Can My Hotel Get Recommended by AI?
-        </h1>
-        <p class="text-sm text-outline">Metricus Research &middot; April 5, 2026 &middot; 8 min read</p>
-        <p class="text-sm text-outline mt-2">Last updated: September 2026</p>
-      </header>
-
-
-      <!-- Tension Stat -->
-      <div class="bg-surface-container-low p-8 mb-12">
-        <p class="text-lg leading-relaxed text-on-surface">
-          <strong>Travel planning is one of the top use cases for AI chatbots.</strong> A BCG survey found 60% of consumers are comfortable using generative AI for travel inspiration and planning. When travelers ask ChatGPT &ldquo;plan me a 7-day trip to Italy,&rdquo; it recommends the same 4&ndash;5 OTAs and mega-brands every time &mdash; and your hotel, tour company, or travel agency doesn&rsquo;t exist.
+<body class="doc">
+<!-- metricus:header -->
+<header class="nav"><div class="in"><a class="logo" href="/" id="navhome">Metricus</a><span class="sp"></span><span class="muted" id="host"></span></div></header>
+<!-- /metricus:header -->
+<main class="doc-main" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <span aria-current="page">Travel AI Visibility</span></nav>
+<p class="kicker">Industry Research</p>
+<h1>How Can My Hotel Get Recommended by AI?</h1>
+<p class="byline">Metricus Research · April 5, 2026 · 8 min read</p>
+<p class="updated">Last updated: September 2026</p>
+<div class="note">
+<p>
+<strong>Travel planning is one of the top use cases for AI chatbots.</strong> A BCG survey found 60% of consumers are comfortable using generative AI for travel inspiration and planning. When travelers ask ChatGPT “plan me a 7-day trip to Italy,” it recommends the same 4–5 OTAs and mega-brands every time — and your hotel, tour company, or travel agency doesn’t exist.
         </p>
-      </div>
-
-
-      
-<p><strong>Short answer:</strong> 74% of travelers research online before booking, and AI chatbots are becoming their first stop. When travelers ask AI to plan a trip, Booking.com, Airbnb, and TripAdvisor dominate every response. Independent hotels, tour operators, and DMOs are invisible. Metricus has a free tool that shows what the major AI platforms answer when your page is the source, and what to rewrite. <a href="/ai-visibility-optimizer-tool/">Open the tool</a>.</p>
-
-
-      <!-- Table of Contents -->
-      <div class="border border-[#E2E8F0] p-8 mb-12">
-        <p class="text-xs text-slate-muted font-semibold mb-4">In this article</p>
-        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
-          <li><a href="#trillion-dollar-shift" class="hover:underline">A $2 trillion industry meets AI-first discovery</a></li>
-          <li><a href="#travel-ai-use-case" class="hover:underline">Why travel is the killer use case for AI chatbots</a></li>
-          <li><a href="#who-ai-recommends" class="hover:underline">Who AI actually recommends for travel</a></li>
-          <li><a href="#why-invisible" class="hover:underline">Why independent hotels and tour operators are invisible</a></li>
-          <li><a href="#what-ai-gets-wrong" class="hover:underline">What AI gets wrong about travel brands</a></li>
-          <li><a href="#ota-dependency" class="hover:underline">The OTA dependency trap deepens</a></li>
-          <li><a href="#winner-take-all" class="hover:underline">Winner-take-all dynamics in AI travel recommendations</a></li>
-          <li><a href="#what-works" class="hover:underline">What we found</a></li>
-          <li><a href="#case-for-auditing" class="hover:underline">The case for auditing your AI visibility now</a></li>
-        </ol>
-      </div>
-
-      <!-- Article Body -->
-      <div class="article-body">
-
-        <h2 id="trillion-dollar-shift">A $2 trillion industry meets AI-first discovery</h2>
-
-        <p>The global travel and tourism industry generated <strong>$2.29 trillion in revenue in 2023</strong>, according to the World Travel &amp; Tourism Council (WTTC). In the United States alone, total travel spending reached <strong>$1.35 trillion</strong> (U.S. Travel Association, 2025). Online travel bookings account for a rapidly growing share: Statista estimates global online travel sales hit <strong>$755 billion in 2024</strong>, up from $475 billion in 2019.</p>
-
-        <p>For decades, the travel discovery funnel was straightforward: Google search &rarr; OTA or hotel website &rarr; compare &rarr; book. Travelers searched &ldquo;best hotels in Bali,&rdquo; clicked through the results, and eventually converted. <strong>85% of leisure travelers use online resources to plan trips</strong> before booking (Google/Ipsos, Think with Google). The industry optimized for this funnel with an estimated <strong>$18.5 billion in digital advertising spend</strong> in the U.S. travel category in 2024 (eMarketer).</p>
-
-        <p>That funnel is fracturing.</p>
-
-        <p>Gartner forecast in February 2024 that <strong>traditional search engine volume will drop 25% by 2026</strong> due to AI chatbots and virtual agents. ChatGPT surpassed 5.8 billion monthly visits by mid-2025, making it one of the top 10 most-visited sites globally. Google itself now shows AI Overviews for an estimated <strong>84% of informational queries</strong> (BrightEdge, 2024) &mdash; and travel informational queries (&ldquo;best time to visit Japan,&rdquo; &ldquo;what to do in Lisbon for 3 days,&rdquo; &ldquo;family-friendly resorts in Cancun&rdquo;) are among the most affected categories.</p>
-
-        <p>The shift is already measurable. Expedia reported that its ChatGPT-powered trip planning feature generated <strong>over 7 million conversations in its first year</strong> (Expedia Group earnings call, 2024). Tripadvisor launched an AI-powered itinerary builder. Google integrated Gemini into Google Travel. Kayak, Trip.com, and Skyscanner all released AI planning tools. The entire travel discovery experience is being rebuilt around conversational AI &mdash; and the brands that are visible in those conversations are winning.</p>
-
-
-        <h2 id="travel-ai-use-case">Why travel is the killer use case for AI chatbots</h2>
-
-        <p>Travel planning isn&rsquo;t just &ldquo;one of&rdquo; the top use cases for AI chatbots. It is arguably <strong>the</strong> top consumer use case. Here&rsquo;s why:</p>
-
-        <ul>
-          <li><strong>Complexity:</strong> A typical vacation involves flights, hotels, activities, restaurants, transportation, and visa requirements &mdash; across multiple days and sometimes multiple countries. This is exactly the kind of multi-step research task that AI excels at synthesizing.</li>
-          <li><strong>High information volume:</strong> The average traveler visits <strong>38 websites before booking a trip</strong> (Expedia Media Solutions). AI condenses that research into a single conversation.</li>
-          <li><strong>Personalization need:</strong> &ldquo;Plan a 10-day Italy trip for a couple with a $5,000 budget who love wine and history&rdquo; is a prompt that would require hours of Google searching &mdash; and takes ChatGPT about 15 seconds to answer.</li>
-          <li><strong>Emotional stakes:</strong> A vacation is often the largest discretionary purchase a household makes. People want confidence in their choices, and AI delivers curated, authoritative-sounding recommendations.</li>
-        </ul>
-
-        <p>The data confirms this. A BCG survey found that <strong>60% of consumers are comfortable using generative AI for travel planning</strong> (BCG, 2024). An Oliver Wyman Forum study found that <strong>47% of millennial and Gen-Z travelers have already used AI tools</strong> to help plan trips. A Booking.com survey of 27,000+ travelers across 33 countries found <strong>45% would be open to using AI to plan trips</strong>, with even higher rates among younger demographics.</p>
-
-        <p>McKinsey estimates that generative AI could create <strong>$400 billion&ndash;$700 billion in value</strong> for the travel, transport, and logistics sector (McKinsey Global Institute, 2023). Much of that value comes from exactly this: AI replacing the traditional research and discovery phase of trip planning.</p>
-
-        <p>For travel companies, this means the question isn&rsquo;t whether AI will reshape how travelers find and choose providers. It already has. The question is <strong>whether your brand is part of the AI-generated itinerary or invisible in it</strong>.</p>
-
-
-        <h2 id="who-ai-recommends">Who AI actually recommends for travel</h2>
-
-        <p>We tested this extensively. Across the major AI platforms &mdash; using prompts like &ldquo;plan me a trip to Barcelona,&rdquo; &ldquo;best hotels in Kyoto,&rdquo; &ldquo;where should I book a safari in Tanzania,&rdquo; and &ldquo;best platform to book vacation rentals&rdquo; &mdash; the same brands dominate:</p>
-
-        <div class="overflow-x-auto my-8">
-          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Rank</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Brand</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Monthly Visits (approx.)</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">AI Mention Rate *</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">1</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Booking.com</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~500 million</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in 85%+ of hotel/booking responses</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">2</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Airbnb</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~270 million</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in 80%+ of responses</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">3</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Expedia Group (Expedia, Hotels.com, Vrbo)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~190 million (combined)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~70% of responses</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">4</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">TripAdvisor</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~150 million</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~60% of responses</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">5</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Google Travel / Google Hotels</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">N/A (integrated into search)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~45% of responses</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">6</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Kayak / Skyscanner</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~80 million (combined)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~35% of responses</td>
-              </tr>
-              <tr class="bg-surface-container-low">
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">&mdash;</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Avg. independent hotel / tour operator</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">5,000&ndash;100,000</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">&lt;2% of responses</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>The pattern is stark. When a traveler asks ChatGPT &ldquo;where should I stay in Rome,&rdquo; the response recommends neighborhoods and then says &ldquo;you can book through Booking.com or Airbnb.&rdquo; When asked &ldquo;plan a Thailand itinerary,&rdquo; the AI generates a detailed day-by-day plan &mdash; and links to Booking.com, Viator, and GetYourGuide for bookings.</p>
-
-        <p><strong>Individual hotels, resorts, tour operators, and travel agencies are almost never mentioned by name</strong> unless the user specifically asks about a well-known luxury brand (Four Seasons, Marriott, Hilton) or a famous individual property. Even then, the AI typically follows up with &ldquo;you can compare prices on Booking.com or Expedia.&rdquo;</p>
-
-        <p>For the vast majority of travel companies &mdash; boutique hotels, independent resorts, regional tour operators, local travel agencies, vacation rental managers, DMOs &mdash; <strong>they simply do not exist in AI-generated travel advice</strong>. To understand what this means, read our explainer on <a href="../ai-visibility-how-brands-show-up/">how brands actually appear in AI responses</a>.</p>
-        <!-- METRICUS_MID_CTA -->
-        
-
-
-
-        <div data-reader-pulse-b data-source="travel-ai-visibility"></div>
-
-        <h2 id="why-invisible">Why independent hotels and tour operators are invisible</h2>
-
-        <p>AI chatbots generate recommendations based on patterns in their training data &mdash; billions of web pages, review sites, travel blogs, Reddit threads, news articles, and forum discussions. The brands that appear most frequently, authoritatively, and consistently in that data are the ones AI recommends.</p>
-
-        <p>The math is brutal for independent travel companies:</p>
-
-        <ul>
-          <li><strong>Booking.com</strong> lists over <strong>28 million accommodation options</strong> across 228 countries and generates ~500 million monthly visits (Booking Holdings annual report, 2024).</li>
-          <li><strong>Airbnb</strong> has <strong>7.7 million active listings</strong> and ~270 million monthly visits (Airbnb SEC filing, 2024).</li>
-          <li><strong>TripAdvisor</strong> hosts <strong>over 1 billion reviews</strong> across 8 million businesses (TripAdvisor, 2024).</li>
-          <li><strong>The average independent hotel website</strong> receives <strong>5,000&ndash;50,000 monthly visits</strong>.</li>
-          <li><strong>The average tour operator website</strong> receives <strong>10,000&ndash;80,000 monthly visits</strong>.</li>
-        </ul>
-
-        <p>That&rsquo;s a <strong>5,000x&ndash;100,000x gap</strong> in web presence. And web presence is what AI systems learn from.</p>
-
-        <p>Three specific factors determine whether AI mentions your travel brand:</p>
-
-        <ol>
-          <li><strong>Corpus frequency:</strong> How often your brand appears across the web. Booking.com has billions of indexed pages. An independent hotel in Tuscany might have a few hundred mentions. The GEO research from Princeton/Georgia Tech (2023) found that content with statistical citations and clear factual claims was <strong>up to 40% more likely to be cited</strong> by generative AI systems (Aggarwal et al., &ldquo;GEO: Generative Engine Optimization,&rdquo; 2023) &mdash; and OTAs are packed with structured data.</li>
-          <li><strong>Source authority:</strong> AI weights authoritative sources more heavily. A mention in Cond&eacute; Nast Traveler, Lonely Planet, or Travel + Leisure carries more weight than a mention on a personal travel blog. OTAs dominate high-authority travel content because travel journalists link to them constantly.</li>
-          <li><strong>Content structure:</strong> OTAs have highly structured data: property names, star ratings, prices, amenities, guest ratings, location coordinates. Independent hotel websites often have beautiful photography but very little structured, extractable content that AI can parse and cite.</li>
-        </ol>
-
-        <p>For a deeper look at how this visibility gap works and what drives it, see our guide on <a href="../ai-visibility-scores-explained/">how AI visibility scores are measured</a>.</p>
-
-
-        <h2 id="what-ai-gets-wrong">What AI gets wrong about travel brands</h2>
-
-        <p>When AI does mention a travel brand, there&rsquo;s a significant chance the information is wrong. AI chatbots <a href="../fix-ai-brand-hallucinations/">hallucinate facts about brands</a> frequently, and travel is especially prone to errors because of seasonal pricing, property renovations, changing ownership, and the sheer volume of similar-sounding properties.</p>
-
-        <p>The most common errors we find in AI responses about travel companies:</p>
-
-        <h3>Fabricated property details</h3>
-        <p>ChatGPT confidently describes hotel amenities that don&rsquo;t exist. We&rsquo;ve seen AI claim a hotel has a &ldquo;rooftop infinity pool with city views&rdquo; when the property has no pool at all. It invents restaurant names, spa services, and room categories. For boutique hotels with limited web content, <strong>the hallucination rate on specific amenity claims exceeds 50%</strong>.</p>
-
-        <h3>Outdated and fabricated pricing</h3>
-        <p>AI cannot access real-time pricing. When asked &ldquo;how much does it cost to stay at [hotel],&rdquo; chatbots frequently <strong>confabulate specific nightly rates</strong> that are months or years out of date &mdash; or entirely invented. A traveler making a $3,000+ booking decision based on AI-provided pricing is working with unreliable data.</p>
-
-        <h3>Tour itinerary invention</h3>
-        <p>For tour operators, AI often <strong>generates entirely fabricated itineraries</strong>. It will describe a &ldquo;7-day safari with Operator X&rdquo; including specific lodges, activities, and day-by-day plans that the operator has never offered. This creates customer service problems when travelers arrive expecting an itinerary that doesn&rsquo;t exist.</p>
-
-        <h3>Star rating and review confusion</h3>
-        <p>AI frequently <strong>mixes up official star classifications with user review ratings</strong>. A 3-star hotel with a 4.5/5 TripAdvisor rating may be described as a &ldquo;4.5-star luxury hotel.&rdquo; In markets like Europe where official star ratings carry regulatory weight, this creates genuine misrepresentation.</p>
-
-        <h3>Location errors</h3>
-        <p>Properties with similar names in different cities or countries get merged. &ldquo;Hotel Navi&rdquo; in Mumbai and &ldquo;Hotel Navi&rdquo; in Barcelona may have their descriptions blended. AI also frequently misrepresents distances to landmarks, airports, and beaches.</p>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>The compound problem:</strong> Your travel company is either invisible in AI (bad) or mentioned with fabricated amenities, wrong pricing, and invented itineraries (worse). Both cost you bookings. The first means travelers never discover you. The second means they arrive with expectations you can&rsquo;t meet &mdash; leading to complaints, refund requests, and negative reviews that further damage your AI visibility.
+</div>
+<p><strong>Short answer:</strong> 74% of travelers research online before booking, and AI chatbots are becoming their first stop. When travelers ask AI to plan a trip, Booking.com, Airbnb, and TripAdvisor dominate every response. Independent hotels, tour operators, and DMOs are invisible.</p>
+<nav class="toc" aria-label="In this article"><p>In this article</p><ol>
+<li><a href="#trillion-dollar-shift">A $2 trillion industry meets AI-first discovery</a></li>
+<li><a href="#travel-ai-use-case">Why travel is the killer use case for AI chatbots</a></li>
+<li><a href="#who-ai-recommends">Who AI actually recommends for travel</a></li>
+<li><a href="#why-invisible">Why independent hotels and tour operators are invisible</a></li>
+<li><a href="#what-ai-gets-wrong">What AI gets wrong about travel brands</a></li>
+<li><a href="#ota-dependency">The OTA dependency trap deepens</a></li>
+<li><a href="#winner-take-all">Winner-take-all dynamics in AI travel recommendations</a></li>
+<li><a href="#what-works">The citation architecture behind travel brand visibility</a></li>
+<li><a href="#case-for-auditing">The case for auditing your AI visibility now</a></li>
+</ol></nav>
+<h2 id="trillion-dollar-shift">A $2 trillion industry meets AI-first discovery</h2>
+<p>The global travel and tourism industry generated <strong>$2.29 trillion in revenue in 2023</strong>, according to the World Travel &amp; Tourism Council (WTTC). In the United States alone, total travel spending reached <strong>$1.35 trillion</strong> (U.S. Travel Association, 2025). Online travel bookings account for a rapidly growing share: Statista estimates global online travel sales hit <strong>$755 billion in 2024</strong>, up from $475 billion in 2019.</p>
+<p>For decades, the travel discovery funnel was straightforward: Google search → OTA or hotel website → compare → book. Travelers searched “best hotels in Bali,” clicked through the results, and eventually converted. <strong>85% of leisure travelers use online resources to plan trips</strong> before booking (Google/Ipsos, Think with Google). The industry optimized for this funnel with an estimated <strong>$18.5 billion in digital advertising spend</strong> in the U.S. travel category in 2024 (eMarketer).</p>
+<p>That funnel is fracturing.</p>
+<p>Gartner forecast in February 2024 that <strong>traditional search engine volume will drop 25% by 2026</strong> due to AI chatbots and virtual agents. ChatGPT surpassed 5.8 billion monthly visits by mid-2025, making it one of the top 10 most-visited sites globally. Google itself now shows AI Overviews for an estimated <strong>84% of informational queries</strong> (BrightEdge, 2024) — and travel informational queries (“best time to visit Japan,” “what to do in Lisbon for 3 days,” “family-friendly resorts in Cancun”) are among the most affected categories.</p>
+<p>The shift is already measurable. Expedia reported that its ChatGPT-powered trip planning feature generated <strong>over 7 million conversations in its first year</strong> (Expedia Group earnings call, 2024). Tripadvisor launched an AI-powered itinerary builder. Google integrated Gemini into Google Travel. Kayak, Trip.com, and Skyscanner all released AI planning tools. The entire travel discovery experience is being rebuilt around conversational AI — and the brands that are visible in those conversations are winning.</p>
+<h2 id="travel-ai-use-case">Why travel is the killer use case for AI chatbots</h2>
+<p>Travel planning isn’t just “one of” the top use cases for AI chatbots. It is arguably <strong>the</strong> top consumer use case. Here’s why:</p>
+<ul>
+<li><strong>Complexity:</strong> A typical vacation involves flights, hotels, activities, restaurants, transportation, and visa requirements — across multiple days and sometimes multiple countries. This is exactly the kind of multi-step research task that AI excels at synthesizing.</li>
+<li><strong>High information volume:</strong> The average traveler visits <strong>38 websites before booking a trip</strong> (Expedia Media Solutions). AI condenses that research into a single conversation.</li>
+<li><strong>Personalization need:</strong> “Plan a 10-day Italy trip for a couple with a $5,000 budget who love wine and history” is a prompt that would require hours of Google searching — and takes ChatGPT about 15 seconds to answer.</li>
+<li><strong>Emotional stakes:</strong> A vacation is often the largest discretionary purchase a household makes. People want confidence in their choices, and AI delivers curated, authoritative-sounding recommendations.</li>
+</ul>
+<p>The data confirms this. A BCG survey found that <strong>60% of consumers are comfortable using generative AI for travel planning</strong> (BCG, 2024). An Oliver Wyman Forum study found that <strong>47% of millennial and Gen-Z travelers have already used AI tools</strong> to help plan trips. A Booking.com survey of 27,000+ travelers across 33 countries found <strong>45% would be open to using AI to plan trips</strong>, with even higher rates among younger demographics.</p>
+<p>McKinsey estimates that generative AI could create <strong>$400 billion–$700 billion in value</strong> for the travel, transport, and logistics sector (McKinsey Global Institute, 2023). Much of that value comes from exactly this: AI replacing the traditional research and discovery phase of trip planning.</p>
+<p>For travel companies, this means the question isn’t whether AI will reshape how travelers find and choose providers. It already has. The question is <strong>whether your brand is part of the AI-generated itinerary or invisible in it</strong>.</p>
+<h2 id="who-ai-recommends">Who AI actually recommends for travel</h2>
+<p>Ask AI “plan me a trip to Barcelona,” “best hotels in Kyoto,” “where should I book a safari in Tanzania,” or “best platform to book vacation rentals,” and the same brands dominate:</p>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th>Brand</th>
+<th>Monthly Visits (approx.)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Booking.com</td>
+<td>~500 million</td>
+</tr>
+<tr>
+<td>Airbnb</td>
+<td>~270 million</td>
+</tr>
+<tr>
+<td>Expedia Group (Expedia, Hotels.com, Vrbo)</td>
+<td>~190 million (combined)</td>
+</tr>
+<tr>
+<td>TripAdvisor</td>
+<td>~150 million</td>
+</tr>
+<tr>
+<td>Google Travel / Google Hotels</td>
+<td>N/A (integrated into search)</td>
+</tr>
+<tr>
+<td>Kayak / Skyscanner</td>
+<td>~80 million (combined)</td>
+</tr>
+<tr>
+<td>Avg. independent hotel / tour operator</td>
+<td>5,000–100,000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The pattern is stark. When a traveler asks ChatGPT “where should I stay in Rome,” the response recommends neighborhoods and then says “you can book through Booking.com or Airbnb.” When asked “plan a Thailand itinerary,” the AI generates a detailed day-by-day plan — and links to Booking.com, Viator, and GetYourGuide for bookings.</p>
+<p><strong>Individual hotels, resorts, tour operators, and travel agencies are almost never mentioned by name</strong> unless the user specifically asks about a well-known luxury brand (Four Seasons, Marriott, Hilton) or a famous individual property. Even then, the AI typically follows up with “you can compare prices on Booking.com or Expedia.”</p>
+<p>For the vast majority of travel companies — boutique hotels, independent resorts, regional tour operators, local travel agencies, vacation rental managers, DMOs — <strong>they simply do not exist in AI-generated travel advice</strong>. To understand what this means, read our explainer on <a href="../ai-visibility-how-brands-show-up/">how brands actually appear in AI responses</a>.</p>
+<div data-reader-pulse-b="" data-source="travel-ai-visibility"></div>
+<h2 id="why-invisible">Why independent hotels and tour operators are invisible</h2>
+<p>AI chatbots generate recommendations based on patterns in their training data — billions of web pages, review sites, travel blogs, Reddit threads, news articles, and forum discussions. The brands that appear most frequently, authoritatively, and consistently in that data are the ones AI recommends.</p>
+<p>The math is brutal for independent travel companies:</p>
+<ul>
+<li><strong>Booking.com</strong> lists over <strong>28 million accommodation options</strong> across 228 countries and generates ~500 million monthly visits (Booking Holdings annual report, 2024).</li>
+<li><strong>Airbnb</strong> has <strong>7.7 million active listings</strong> and ~270 million monthly visits (Airbnb SEC filing, 2024).</li>
+<li><strong>TripAdvisor</strong> hosts <strong>over 1 billion reviews</strong> across 8 million businesses (TripAdvisor, 2024).</li>
+<li><strong>The average independent hotel website</strong> receives <strong>5,000–50,000 monthly visits</strong>.</li>
+<li><strong>The average tour operator website</strong> receives <strong>10,000–80,000 monthly visits</strong>.</li>
+</ul>
+<p>That’s a <strong>5,000x–100,000x gap</strong> in web presence. And web presence is what AI systems learn from.</p>
+<p>Three specific factors determine whether AI mentions your travel brand:</p>
+<ol>
+<li><strong>Corpus frequency:</strong> How often your brand appears across the web. Booking.com has billions of indexed pages. An independent hotel in Tuscany might have a few hundred mentions. The GEO research from Princeton/Georgia Tech (2023) found that content with statistical citations and clear factual claims was <strong>up to 40% more likely to be cited</strong> by generative AI systems (Aggarwal et al., “GEO: Generative Engine Optimization,” 2023) — and OTAs are packed with structured data.</li>
+<li><strong>Source authority:</strong> AI weights authoritative sources more heavily. A mention in Condé Nast Traveler, Lonely Planet, or Travel + Leisure carries more weight than a mention on a personal travel blog. OTAs dominate high-authority travel content because travel journalists link to them constantly.</li>
+<li><strong>Content structure:</strong> OTAs have highly structured data: property names, star ratings, prices, amenities, guest ratings, location coordinates. Independent hotel websites often have beautiful photography but very little structured, extractable content that AI can parse and cite.</li>
+</ol>
+<p>For a deeper look at how this visibility gap works and what drives it, see our guide on <a href="../ai-visibility-scores-explained/">how AI visibility scores are measured</a>.</p>
+<h2 id="what-ai-gets-wrong">What AI gets wrong about travel brands</h2>
+<p>When AI does mention a travel brand, there’s a significant chance the information is wrong. AI chatbots <a href="../fix-ai-brand-hallucinations/">hallucinate facts about brands</a> frequently, and travel is especially prone to errors because of seasonal pricing, property renovations, changing ownership, and the sheer volume of similar-sounding properties.</p>
+<p>The most common errors in AI responses about travel companies:</p>
+<h3>Fabricated property details</h3>
+<p>ChatGPT confidently describes hotel amenities that don’t exist. AI can claim a hotel has a “rooftop infinity pool with city views” when the property has no pool at all. It invents restaurant names, spa services, and room categories.</p>
+<h3>Outdated and fabricated pricing</h3>
+<p>AI cannot access real-time pricing. When asked “how much does it cost to stay at [hotel],” chatbots frequently <strong>confabulate specific nightly rates</strong> that are months or years out of date — or entirely invented. A traveler making a $3,000+ booking decision based on AI-provided pricing is working with unreliable data.</p>
+<h3>Tour itinerary invention</h3>
+<p>For tour operators, AI often <strong>generates entirely fabricated itineraries</strong>. It will describe a “7-day safari with Operator X” including specific lodges, activities, and day-by-day plans that the operator has never offered. This creates customer service problems when travelers arrive expecting an itinerary that doesn’t exist.</p>
+<h3>Star rating and review confusion</h3>
+<p>AI frequently <strong>mixes up official star classifications with user review ratings</strong>. A 3-star hotel with a 4.5/5 TripAdvisor rating may be described as a “4.5-star luxury hotel.” In markets like Europe where official star ratings carry regulatory weight, this creates genuine misrepresentation.</p>
+<h3>Location errors</h3>
+<p>Properties with similar names in different cities or countries get merged. “Hotel Navi” in Mumbai and “Hotel Navi” in Barcelona may have their descriptions blended. AI also frequently misrepresents distances to landmarks, airports, and beaches.</p>
+<div class="note">
+<p>
+<strong>The compound problem:</strong> Your travel company is either invisible in AI (bad) or mentioned with fabricated amenities, wrong pricing, and invented itineraries (worse). Both cost you bookings. The first means travelers never discover you. The second means they arrive with expectations you can’t meet — leading to complaints, refund requests, and negative reviews that further damage your AI visibility.
           </p>
-        </div>
-
-
-        <h2 id="ota-dependency">The OTA dependency trap deepens</h2>
-
-        <p>The travel industry already has an OTA dependency problem. And AI is making it dramatically worse.</p>
-
-        <p>Consider the current state of hotel distribution:</p>
-
-        <ul>
-          <li><strong>OTA commission rates</strong> range from <strong>15&ndash;30% per booking</strong> (Phocuswright, 2024). For a $200/night hotel room, that&rsquo;s $30&ndash;$60 per night going to Booking.com or Expedia.</li>
-          <li><strong>Only 29% of hotel bookings globally are direct</strong> (Phocuswright Global Online Travel Overview, 2024). The rest go through OTAs, metasearch, and other intermediaries.</li>
-          <li>Hotels spend an estimated <strong>$6.3 billion annually on OTA commissions</strong> in the US alone (AHLA, American Hotel &amp; Lodging Association estimates).</li>
-          <li>The &ldquo;direct booking wars&rdquo; that Marriott launched in 2016 with &ldquo;It Pays to Book Direct&rdquo; have had <strong>limited lasting impact</strong>. OTA share has remained roughly flat or increased for independent hotels without loyalty programs.</li>
-        </ul>
-
-        <p>Now layer AI on top of this. When a traveler asks ChatGPT to plan a trip, the AI doesn&rsquo;t say &ldquo;book directly at the hotel&rsquo;s website.&rdquo; It says &ldquo;book through Booking.com&rdquo; or &ldquo;check Airbnb for options.&rdquo; <strong>AI is becoming a new layer of intermediation</strong> &mdash; and unlike Google, where hotels could at least buy ads or compete organically, there are no paid placements in ChatGPT recommendations.</p>
-
-        <div class="overflow-x-auto my-8">
-          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Metric</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Independent Hotels</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Major Hotel Chains</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">OTAs</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Direct booking share</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~15&ndash;20%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~35&ndash;50%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">N/A (they are the intermediary)</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Avg. OTA commission</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">18&ndash;25%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">12&ndash;18% (volume negotiated)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">&mdash;</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">AI mention rate</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">&lt;2%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~15&ndash;30% (Marriott, Hilton, IHG)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">70&ndash;85%</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Monthly web visits</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">5K&ndash;100K</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">50M&ndash;150M</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">150M&ndash;500M</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Google organic visibility</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Moderate (local SEO)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">High</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Dominant</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>For tour operators, the dynamic is similar but even more severe. Viator (owned by TripAdvisor/Tripadvisor) and GetYourGuide dominate AI recommendations for activities and experiences. Local operators who create the actual experiences are invisible &mdash; while paying <strong>20&ndash;30% commissions</strong> to the platforms that AI recommends.</p>
-
-        <p>Vacation rental managers face the same squeeze. Airbnb and Vrbo (Expedia) are the only vacation rental platforms AI consistently mentions. Property management companies running 50, 100, or 500 rentals &mdash; with their own websites, direct booking engines, and lower prices &mdash; are nowhere in AI responses.</p>
-
-
-        <h2 id="winner-take-all">Winner-take-all dynamics in AI travel recommendations</h2>
-
-        <p>In Google search, travel companies can still compete. You can buy Google Ads. You can rank for long-tail keywords. A boutique hotel with good SEO can appear on page 1 for &ldquo;boutique hotel in Santorini with caldera view.&rdquo; There are 10 organic slots and unlimited ad slots.</p>
-
-        <p>In AI chatbot responses, there are typically <strong>3&ndash;5 platform recommendations</strong>. No ads. No page 2. And the same brands appear in nearly every response:</p>
-
-        <div class="overflow-x-auto my-8">
-          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Channel</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Visibility Slots</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Paid Option</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Independent Travel Co. Chance</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Google Search</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">10 organic + ads + hotel pack</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes (Google Ads, Hotel Ads)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Moderate &mdash; can rank locally</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Google AI Overviews</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">3&ndash;5 sources cited</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low &mdash; OTAs and media dominate</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">ChatGPT</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">3&ndash;5 recommendations</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Very low &mdash; OTAs + hotel chains</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Perplexity</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">5&ndash;8 cited sources</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low &mdash; favors high-DA travel sites</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">OTA platforms</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Listing within marketplace</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes (sponsored placements, 15&ndash;30% commission)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">High &mdash; but you&rsquo;re on their platform</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">AI trip planners (Expedia, Tripadvisor)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Within platform only</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Indirect (OTA listing required)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Only if listed on that OTA</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>This creates a dangerous feedback loop. As more travelers shift to AI for trip planning, the travel companies that are invisible in AI lose an increasing share of top-of-funnel discovery. Fewer direct visitors means less web content, fewer reviews, and lower brand authority &mdash; which makes them even less visible in future AI training data. Meanwhile, OTAs capture an even larger share of bookings and commissions.</p>
-
-        <p>For <strong>DMOs (Destination Marketing Organizations)</strong>, the dynamic is slightly different but equally concerning. When a traveler asks &ldquo;should I visit Portugal or Greece,&rdquo; the AI&rsquo;s response shapes destination choice before any DMO marketing reaches the traveler. Portugal&rsquo;s tourism board and Greece&rsquo;s tourism authority are competing for AI mindshare they didn&rsquo;t know existed. The destinations with more structured, data-rich content across authoritative travel media will win more AI recommendations &mdash; and more visitors.</p>
-
-
-        <h2 id="what-works">What we found: the citation architecture behind travel brand visibility</h2>
-
-        <p>Metricus data across hundreds of travel-related AI queries shows that properties and destinations appearing in AI recommendations share specific traits: comprehensive OTA listings (Booking.com, Expedia) with high review volumes, TripAdvisor profiles with 500+ reviews, editorial mentions in authoritative travel publications (Cond&eacute; Nast Traveler, Travel + Leisure), and structured data markup including Hotel, TouristAttraction, and Event schema.</p>
-
-        <p>Independent hotels and boutique tour operators are structurally invisible. Booking.com alone has indexed data on 29+ million properties. TripAdvisor has 1+ billion reviews. An independent hotel with 200 reviews cannot compete for AI mindshare through review volume alone. The OTA dependency trap deepens as AI drives more travelers toward the same aggregators, further concentrating booking commissions.</p>
-
-
-        <h2 id="case-for-auditing">The case for auditing your AI visibility now</h2>
-
-        <p>The global travel technology market is projected to reach <strong>$28.5 billion by 2030</strong>, growing at 8.6% CAGR (Allied Market Research). Phocuswright projects that <strong>AI-influenced bookings will account for 30%+ of online travel transactions by 2027</strong>. Amadeus, the travel technology backbone, reports that <strong>AI queries related to travel planning grew 3x year-over-year</strong> in 2024.</p>
-
-        <p>The travel companies that understand their AI visibility now &mdash; while competitors are still focused exclusively on OTA optimization, Google Ads, and Instagram &mdash; will have a structural advantage that compounds over time. Every piece of authoritative, data-rich content you publish today enters the training data that shapes AI recommendations tomorrow.</p>
-
-        <p>The cost of waiting is measurable. Booking Holdings (Booking.com parent) generated <strong>$21.4 billion in revenue in 2023</strong> (Booking Holdings annual report). That revenue comes from commissions on bookings that travelers increasingly discover through AI-powered channels. Every booking that flows through an OTA because AI recommended it instead of your direct website costs you 15&ndash;30% in commission.</p>
-
-        <p>For a 100-room hotel with an average nightly rate of $200 and 75% occupancy, the math is straightforward: <strong>that&rsquo;s approximately $1.1 million in annual room revenue</strong>. If OTA share increases from 70% to 80% due to AI-driven discovery (a conservative estimate), that&rsquo;s an additional $22,000&ndash;$33,000 per year in OTA commissions &mdash; on top of the $2.3&ndash;$4.6 million already being paid. For a hotel group with 10 properties, that compounds to $220,000&ndash;$330,000 in incremental annual cost.</p>
-
-        <p>The same economics apply to tour operators. If AI recommends Viator and GetYourGuide instead of your direct website, and those platforms charge 20&ndash;30% commission, the margin erosion from AI-driven intermediation is existential for operators running on thin margins.</p>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>The bottom line:</strong> If you&rsquo;re a hotel, resort, tour operator, vacation rental manager, travel agency, or DMO that depends on digital discovery &mdash; and in 2026, that&rsquo;s everyone &mdash; you need to know what AI is saying about you. Not next quarter. Now.
+</div>
+<h2 id="ota-dependency">The OTA dependency trap deepens</h2>
+<p>The travel industry already has an OTA dependency problem. And AI is making it dramatically worse.</p>
+<p>Consider the current state of hotel distribution:</p>
+<ul>
+<li><strong>OTA commission rates</strong> range from <strong>15–30% per booking</strong> (Phocuswright, 2024). For a $200/night hotel room, that’s $30–$60 per night going to Booking.com or Expedia.</li>
+<li><strong>Only 29% of hotel bookings globally are direct</strong> (Phocuswright Global Online Travel Overview, 2024). The rest go through OTAs, metasearch, and other intermediaries.</li>
+<li>Hotels spend an estimated <strong>$6.3 billion annually on OTA commissions</strong> in the US alone (AHLA, American Hotel &amp; Lodging Association estimates).</li>
+<li>The “direct booking wars” that Marriott launched in 2016 with “It Pays to Book Direct” have had <strong>limited lasting impact</strong>. OTA share has remained roughly flat or increased for independent hotels without loyalty programs.</li>
+</ul>
+<p>Now layer AI on top of this. When a traveler asks ChatGPT to plan a trip, the AI doesn’t say “book directly at the hotel’s website.” It says “book through Booking.com” or “check Airbnb for options.” <strong>AI is becoming a new layer of intermediation</strong> — and unlike Google, where hotels could at least buy ads or compete organically, there are no paid placements in ChatGPT recommendations.</p>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Independent Hotels</th>
+<th>Major Hotel Chains</th>
+<th>OTAs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Direct booking share</td>
+<td>~15–20%</td>
+<td>~35–50%</td>
+<td>N/A (they are the intermediary)</td>
+</tr>
+<tr>
+<td>Avg. OTA commission</td>
+<td>18–25%</td>
+<td>12–18% (volume negotiated)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Monthly web visits</td>
+<td>5K–100K</td>
+<td>50M–150M</td>
+<td>150M–500M</td>
+</tr>
+<tr>
+<td>Google organic visibility</td>
+<td>Moderate (local SEO)</td>
+<td>High</td>
+<td>Dominant</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>For tour operators, the dynamic is similar but even more severe. Viator (owned by TripAdvisor/Tripadvisor) and GetYourGuide dominate AI recommendations for activities and experiences. Local operators who create the actual experiences are invisible — while paying <strong>20–30% commissions</strong> to the platforms that AI recommends.</p>
+<p>Vacation rental managers face the same squeeze. Airbnb and Vrbo (Expedia) are the only vacation rental platforms AI consistently mentions. Property management companies running 50, 100, or 500 rentals — with their own websites, direct booking engines, and lower prices — are nowhere in AI responses.</p>
+<h2 id="winner-take-all">Winner-take-all dynamics in AI travel recommendations</h2>
+<p>In Google search, travel companies can still compete. You can buy Google Ads. You can rank for long-tail keywords. A boutique hotel with good SEO can appear on page 1 for “boutique hotel in Santorini with caldera view.” There are 10 organic slots and unlimited ad slots.</p>
+<p>In AI chatbot responses, there are typically <strong>3–5 platform recommendations</strong>. No ads. No page 2. And the same brands appear in nearly every response:</p>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Visibility Slots</th>
+<th>Paid Option</th>
+<th>Independent Travel Co. Chance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google Search</td>
+<td>10 organic + ads + hotel pack</td>
+<td>Yes (Google Ads, Hotel Ads)</td>
+<td>Moderate — can rank locally</td>
+</tr>
+<tr>
+<td>Google AI Overviews</td>
+<td>3–5 sources cited</td>
+<td>No</td>
+<td>Low — OTAs and media dominate</td>
+</tr>
+<tr>
+<td>ChatGPT</td>
+<td>3–5 recommendations</td>
+<td>No</td>
+<td>Very low — OTAs + hotel chains</td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td>5–8 cited sources</td>
+<td>No</td>
+<td>Low — favors high-DA travel sites</td>
+</tr>
+<tr>
+<td>OTA platforms</td>
+<td>Listing within marketplace</td>
+<td>Yes (sponsored placements, 15–30% commission)</td>
+<td>High — but you’re on their platform</td>
+</tr>
+<tr>
+<td>AI trip planners (Expedia, Tripadvisor)</td>
+<td>Within platform only</td>
+<td>Indirect (OTA listing required)</td>
+<td>Only if listed on that OTA</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>This creates a dangerous feedback loop. As more travelers shift to AI for trip planning, the travel companies that are invisible in AI lose an increasing share of top-of-funnel discovery. Fewer direct visitors means less web content, fewer reviews, and lower brand authority — which makes them even less visible in future AI training data. Meanwhile, OTAs capture an even larger share of bookings and commissions.</p>
+<p>For <strong>DMOs (Destination Marketing Organizations)</strong>, the dynamic is slightly different but equally concerning. When a traveler asks “should I visit Portugal or Greece,” the AI’s response shapes destination choice before any DMO marketing reaches the traveler. Portugal’s tourism board and Greece’s tourism authority are competing for AI mindshare they didn’t know existed. The destinations with more structured, data-rich content across authoritative travel media will win more AI recommendations — and more visitors.</p>
+<h2 id="what-works">The citation architecture behind travel brand visibility</h2>
+<p>Properties and destinations that appear in AI recommendations tend to share specific traits: comprehensive OTA listings (Booking.com, Expedia) with high review volumes, well-reviewed TripAdvisor profiles, editorial mentions in authoritative travel publications (Condé Nast Traveler, Travel + Leisure), and structured data markup including Hotel, TouristAttraction, and Event schema.</p>
+<p>Independent hotels and boutique tour operators are structurally invisible. Booking.com alone has indexed data on 29+ million properties. TripAdvisor has 1+ billion reviews. An independent hotel with 200 reviews cannot compete for AI mindshare through review volume alone. The OTA dependency trap deepens as AI drives more travelers toward the same aggregators, further concentrating booking commissions.</p>
+<h2 id="case-for-auditing">The case for auditing your AI visibility now</h2>
+<p>The global travel technology market is projected to reach <strong>$28.5 billion by 2030</strong>, growing at 8.6% CAGR (Allied Market Research). Phocuswright projects that <strong>AI-influenced bookings will account for 30%+ of online travel transactions by 2027</strong>. Amadeus, the travel technology backbone, reports that <strong>AI queries related to travel planning grew 3x year-over-year</strong> in 2024.</p>
+<p>The travel companies that understand their AI visibility now — while competitors are still focused exclusively on OTA optimization, Google Ads, and Instagram — will have a structural advantage that compounds over time. Every piece of authoritative, data-rich content you publish today enters the training data that shapes AI recommendations tomorrow.</p>
+<p>The cost of waiting is measurable. Booking Holdings (Booking.com parent) generated <strong>$21.4 billion in revenue in 2023</strong> (Booking Holdings annual report). That revenue comes from commissions on bookings that travelers increasingly discover through AI-powered channels. Every booking that flows through an OTA because AI recommended it instead of your direct website costs you 15–30% in commission.</p>
+<p>For a 100-room hotel with an average nightly rate of $200 and 75% occupancy, the math is straightforward: <strong>that’s approximately $1.1 million in annual room revenue</strong>. If OTA share increases from 70% to 80% due to AI-driven discovery (a conservative estimate), that’s an additional $22,000–$33,000 per year in OTA commissions — on top of the $2.3–$4.6 million already being paid. For a hotel group with 10 properties, that compounds to $220,000–$330,000 in incremental annual cost.</p>
+<p>The same economics apply to tour operators. If AI recommends Viator and GetYourGuide instead of your direct website, and those platforms charge 20–30% commission, the margin erosion from AI-driven intermediation is existential for operators running on thin margins.</p>
+<div class="note">
+<p>
+<strong>The bottom line:</strong> If you’re a hotel, resort, tour operator, vacation rental manager, travel agency, or DMO that depends on digital discovery — and in 2026, that’s everyone — you need to know what AI is saying about you. Not next quarter. Now.
           </p>
-        </div>
-
-        <p class="text-sm text-slate-muted mt-8"><strong>Sources:</strong> WTTC Economic Impact Report (2024); U.S. Travel Association (2024); Statista Global Online Travel Market (2024); Google/Ipsos Think with Google travel research; Gartner search prediction (Feb 2024); BrightEdge AI Overviews research (2024); BCG generative AI travel survey (2024); Oliver Wyman Forum traveler AI adoption study (2024); Booking.com traveler survey (27,000+ respondents, 2024); Booking Holdings annual report (2023); Airbnb SEC filing (2024); TripAdvisor (2024); Expedia Group earnings call (2024); Phocuswright Global Online Travel Overview (2024); AHLA commission estimates; eMarketer US digital ad spend travel category (2024); McKinsey Global Institute GenAI valuation (2023); Princeton/Georgia Tech GEO study (2023); Allied Market Research travel tech forecast; Amadeus AI travel data (2024); Similarweb traffic estimates (2024). AI mention rates based on Metricus internal testing across the major AI platforms (2026). Learn more about <a href="../ai-visibility-scores-explained/">how we measure AI visibility</a>.</p>
-
-        </div>
-      <!-- End Article Body -->
-
-      <p class="text-sm text-slate-muted mt-8 border-t border-[#E2E8F0] pt-6">Browse our <a href="/geo-knowledge-base/" class="text-primary hover:underline">GEO Knowledge Base</a> for 81 research clusters on AI visibility strategy.</p>
-
-            <!-- ========== FAQ SECTION ========== -->
-      <div class="article-body">
-        <h2 id="faq">Frequently Asked Questions</h2>
-
-        <div class="space-y-8 mt-6">
-          <div>
-            <h3>Why doesn't AI recommend my hotel or tour company?</h3>
-            <p>AI recommendations reflect training data concentration. Booking.com alone has indexed data on 29+ million properties. TripAdvisor has 1+ billion reviews. An independent hotel with a few hundred web mentions cannot compete for AI mindshare without targeted visibility strategies.</p>
-          </div>
-
-          <div>
-            <h3>What does AI get wrong about travel brands?</h3>
-            <p>Common errors include fabricated property details like inventing specific room types, outdated or invented pricing, tour itinerary fabrication, confused star ratings and review scores, and location errors that misplace properties in wrong neighborhoods or cities.</p>
-          </div>
-
-          <div>
-            <h3>How is AI changing travel booking behavior?</h3>
-            <p>AI is becoming a trip-planning concierge. Instead of browsing OTA listings, travelers describe their ideal trip to ChatGPT or Perplexity and receive curated recommendations. This bypasses traditional search entirely, and properties not in AI training data are excluded.</p>
-          </div>
-
-          <div>
-            <h3>How can my travel brand check its AI visibility?</h3>
-            <p>Metricus has a free tool for this. Put in a property, tour, or destination page URL, see what the major AI platforms answer when that page is the source, which passages they use, and get rewrites that change the answer. Free, no signup, no credit card.</p>
-          </div>
-
-        </div>
-      </div>
-
-
-      <!-- ========== ARTICLE CTA ========== -->
-      <div class="border-t border-outline-variant/30 mt-16 pt-10" data-cta="tool">
-        <h2 class="text-2xl font-semibold text-on-surface mb-2">Put in a page.</h2>
-        <p class="text-on-surface-variant mb-5 max-w-xl">See what an AI assistant answers about your page, which passages caused it, and a rewrite for each one. Free, no signup.</p>
-        <form class="flex flex-col sm:flex-row gap-2 max-w-xl" action="/ai-visibility-optimizer-tool/" method="get">
-          <label class="sr-only" for="cta-url">Address of the page to check</label>
-          <input id="cta-url" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="your-site.com/page" required class="flex-1 min-w-0 px-4 py-3 border border-outline-variant bg-white text-on-surface">
-          <button type="submit" class="bg-primary text-on-primary font-semibold px-6 py-3 hover:bg-primary-dim whitespace-nowrap">Start optimizing</button>
-        </form>
-      </div>
-
-      <!-- ========== CITE THIS ARTICLE ========== -->
-      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
-        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
-          <cite class="not-italic"><a href="https://metricusapp.com/blog/travel-ai-visibility/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; AI Visibility for Travel: Why ChatGPT Plans Trips With Booking.com and Airbnb but Not Your Hotel</a></cite>
-        </p>
-      </footer>
-
-    </article>
-
-
-    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
-      <p class="text-xs text-slate-muted font-semibold mb-6">Go deeper</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <a href="/geo-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">GEO Knowledge Base</p>
-          <p class="text-sm text-on-surface-variant mt-1">81 research clusters on AI visibility and brand monitoring</p>
-        </a>
-        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
-          <p class="text-sm text-on-surface-variant mt-1">48 clusters on fixing AI accuracy issues and hallucinations</p>
-        </a>
-      </div>
-    </section>
-
-    <!-- ========== RELATED POSTS ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
-      <p class="text-xs text-slate-muted font-semibold mb-8">Related articles</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        <a href="../ai-visibility-action-plan/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Playbook</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            How to Turn AI Visibility Data Into an Action Plan
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            The 5-step framework for turning your AI visibility data into specific, prioritized actions.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../fix-ai-brand-hallucinations/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Research</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            AI Is Getting Facts Wrong About Your Brand
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            72% of brands have factual errors in AI responses. Here&rsquo;s a 4-step process to audit and fix them.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../ai-visibility-how-brands-show-up/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Explainer</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            What Is AI Visibility? How Brands Show Up in ChatGPT
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            The complete guide to how brands appear (or don&rsquo;t) in AI-generated responses.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
-  </main>
-
-
-  <!-- ========== FOOTER ========== -->
-  <!-- Site Footer -->
-  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-on-surface-variant">
-      <span class="text-on-surface font-semibold">Metricus</span>
-      <a href="/ai-visibility-optimizer-tool/" class="hover:text-on-surface">Open the tool</a>
-      <a href="/blog/" class="hover:text-on-surface">Learn</a>
-      <a href="/methodology/" class="hover:text-on-surface">How it works</a>
-      <a href="/results/" class="hover:text-on-surface">Results</a>
-      <a href="/for-agencies/" class="hover:text-on-surface">For agencies</a>
-      <a href="/about/" class="hover:text-on-surface">About</a>
-      <a href="/press/" class="hover:text-on-surface">Press</a>
-      <a href="/support/" class="hover:text-on-surface">Support</a>
-      <a href="/privacy-policy/" class="hover:text-on-surface">Privacy</a>
-      <a href="/terms-of-service/" class="hover:text-on-surface">Terms</a>
-      <a href="mailto:metricusapp@gmail.com" class="hover:text-on-surface">Contact</a>
-      <span class="ml-auto">&copy; 2026 Metricus</span>
-    </div>
-  </footer>
-
+</div>
+<p><strong>Sources:</strong> WTTC Economic Impact Report (2024); U.S. Travel Association (2024); Statista Global Online Travel Market (2024); Google/Ipsos Think with Google travel research; Gartner search prediction (Feb 2024); BrightEdge AI Overviews research (2024); BCG generative AI travel survey (2024); Oliver Wyman Forum traveler AI adoption study (2024); Booking.com traveler survey (27,000+ respondents, 2024); Booking Holdings annual report (2023); Airbnb SEC filing (2024); TripAdvisor (2024); Expedia Group earnings call (2024); Phocuswright Global Online Travel Overview (2024); AHLA commission estimates; eMarketer US digital ad spend travel category (2024); McKinsey Global Institute GenAI valuation (2023); Princeton/Georgia Tech GEO study (2023); Allied Market Research travel tech forecast; Amadeus AI travel data (2024); Similarweb traffic estimates (2024). Learn more about <a href="../ai-visibility-scores-explained/">how AI visibility scores work</a>.</p>
+<p>Browse our <a href="/geo-knowledge-base/">GEO Knowledge Base</a> for 81 research clusters on AI visibility strategy.</p>
+<h2 id="faq">Frequently Asked Questions</h2>
+<h3>Why doesn't AI recommend my hotel or tour company?</h3>
+<p>AI recommendations reflect training data concentration. Booking.com alone has indexed data on 29+ million properties. TripAdvisor has 1+ billion reviews. An independent hotel with a few hundred web mentions cannot compete for AI mindshare without targeted visibility strategies.</p>
+<h3>What does AI get wrong about travel brands?</h3>
+<p>Common errors include fabricated property details like inventing specific room types, outdated or invented pricing, tour itinerary fabrication, confused star ratings and review scores, and location errors that misplace properties in wrong neighborhoods or cities.</p>
+<h3>How is AI changing travel booking behavior?</h3>
+<p>AI is becoming a trip-planning concierge. Instead of browsing OTA listings, travelers describe their ideal trip to ChatGPT or Perplexity and receive curated recommendations. This bypasses traditional search entirely, and properties not in AI training data are excluded.</p>
+<h3>How can my travel brand check its AI visibility?</h3>
+<p>Type the question into Metricus the way a traveler would ask it, and you see the answer AI gives, with every business it names. You can then edit the answer into what you want AI to say about you and get new text for your website. It is free, with no signup.</p>
+<p class="cite">Cite as: <a href="https://metricusapp.com/blog/travel-ai-visibility/">Metricus — AI Visibility for Travel: Why ChatGPT Plans Trips With Booking.com and Airbnb but Not Your Hotel</a></p>
+<section class="related" aria-labelledby="related-knowledge-bases"><h2 id="related-knowledge-bases">Knowledge bases</h2><ul><li><a href="/geo-knowledge-base/">GEO Knowledge Base</a><p>81 research clusters on AI visibility and brand monitoring</p></li><li><a href="/brand-accuracy-knowledge-base/">AI Brand Accuracy Guide</a><p>48 clusters on fixing AI accuracy issues and hallucinations</p></li></ul></section>
+<section class="related" aria-labelledby="related-related-articles"><h2 id="related-related-articles">Related articles</h2><ul><li><a href="/blog/ai-visibility-action-plan/">How to Turn AI Visibility Data Into an Action Plan</a><p>The 5-step framework for turning your AI visibility data into specific, prioritized actions.</p></li><li><a href="/blog/fix-ai-brand-hallucinations/">AI Is Getting Facts Wrong About Your Brand</a><p>Why AI gets facts about brands wrong, and a 4-step process to audit and fix them.</p></li><li><a href="/blog/ai-visibility-how-brands-show-up/">What Is AI Visibility? How Brands Show Up in ChatGPT</a><p>The complete guide to how brands appear (or don’t) in AI-generated responses.</p></li></ul></section>
+<!-- metricus:ask -->
+<section class="ask-cta" aria-labelledby="ask-cta-h"><h2 id="ask-cta-h">What do your customers ask AI?</h2><form class="chatbox" action="/" method="get"><input class="input" type="text" name="q" maxlength="600" autocomplete="off" required placeholder="Type what people would ask AI&hellip;" aria-labelledby="ask-cta-h"><button class="send" type="submit" aria-label="Ask AI" title="Ask AI"><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V6M6 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form></section>
+<!-- /metricus:ask -->
+</main>
+<!-- metricus:footer -->
+<footer class="foot"><nav aria-label="Site"><a href="/blog/">Blog</a><a href="/geo-knowledge-base/">Knowledge base</a><a href="/results/">Results</a><a href="/about/">About</a><a href="/press/">Press</a><a href="/support/">Support</a><a href="/privacy-policy/">Privacy</a><a href="/terms-of-service/">Terms</a><a href="mailto:metricusapp@gmail.com">Contact</a></nav><p>&copy; 2026 Metricus</p></footer>
+<!-- /metricus:footer -->
+<script src="/js/reader-pulse-b.js" defer></script>
 </body>
 </html>

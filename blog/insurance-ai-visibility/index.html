@@ -1,649 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Why Doesn't AI Recommend My Insurance Company? Carrier Visibility Data | Metricus</title>
-  <meta name="description" content="Geico and Progressive appear in 90%+ of AI insurance answers. Most carriers are invisible. $1.7T market data on who AI recommends.">
-  <meta property="og:title" content="Why Doesn't AI Recommend My Insurance Company? Carrier Visibility Data">
-  <meta property="og:description" content="Geico and Progressive appear in 90%+ of AI insurance answers. Most carriers are invisible. $1.7T market data on who AI recommends.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://metricusapp.com/blog/insurance-ai-visibility/">
-  <meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Why Doesn't AI Recommend My Insurance Company? Carrier Visibility Data">
-  <meta name="twitter:description" content="Geico and Progressive appear in 90%+ of AI insurance answers. Most carriers are invisible. $1.7T market data on who AI recommends.">
-  <meta name="twitter:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <link rel="canonical" href="https://metricusapp.com/blog/insurance-ai-visibility/">
-
-  <!-- Google Tag Manager -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w70oz7g1k3");
-  </script>
-
-  <!-- Google Fonts -->
-
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#515F74',
-            'primary-hover': '#1E293B',
-            'on-primary': '#f6f7ff',
-            'on-primary-fixed': '#324054',
-            'primary-dim': '#455368',
-            surface: '#f7f9fb',
-            'surface-container-low': '#f0f4f7',
-            'surface-container': '#e8eff3',
-            'surface-container-lowest': '#ffffff',
-            'surface-container-highest': '#d9e4ea',
-            'surface-container-high': '#e1e9ee',
-            'surface-variant': '#d9e4ea',
-            'on-surface': '#2a3439',
-            'on-surface-variant': '#566166',
-            outline: '#717c82',
-            'outline-variant': '#a9b4b9',
-            'slate-text': '#0F172A',
-            'slate-muted': '#64748B',
-            'slate-accent': '#475569',
-          },
-          fontFamily: {
-            display: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            body: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            headline: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            label: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-          },
-          borderRadius: {
-            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
-            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
-            full: '0.75rem',
-          },
-        },
-      },
-    }
-  </script>
-
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: #ffffff;
-      color: #0F172A;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .font-display { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-headline { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-body-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-
-    .editorial-btn {
-      transition: background-color 150ms ease-in-out, transform 150ms ease;
-    }
-    .editorial-btn:hover {
-      background-color: #1E293B;
-    }.blog-card {
-      transition: transform 200ms ease, background-color 200ms ease;
-    }
-    .blog-card:hover {
-      transform: translateY(-2px);
-      background-color: #f7f9fb;
-    }
-
-    .article-body h2 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.75rem;
-      line-height: 1.2;
-      color: #0F172A;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-    }
-    @media (min-width: 768px) {
-      .article-body h2 {
-        font-size: 2rem;
-      }
-    }
-    .article-body h3 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      line-height: 1.3;
-      color: #0F172A;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    .article-body p {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-    }
-    .article-body ul, .article-body ol {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-      padding-left: 1.5rem;
-    }
-    .article-body ul { list-style-type: disc; }
-    .article-body ol { list-style-type: decimal; }
-    .article-body li { margin-bottom: 0.5rem; }
-    .article-body blockquote {
-      border-left: 2px solid #334155;
-      padding-left: 1.5rem;
-      font-style: italic;
-      color: #475569;
-      font-size: 1.125rem;
-      line-height: 1.75;
-      margin: 2rem 0;
-    }
-    .article-body a {
-      color: #334155;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .article-body a:hover {
-      color: #1E293B;
-    }
-  </style>
-
-  <!-- JSON-LD BlogPosting -->
-  <script type="application/ld+json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why Doesn't AI Recommend My Insurance Company? Carrier Visibility Data | Metricus</title>
+<meta name="description" content="Geico and Progressive dominate AI insurance answers. Most carriers are invisible. $1.7T market data on who AI recommends.">
+<link rel="canonical" href="https://metricusapp.com/blog/insurance-ai-visibility/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Metricus">
+<meta property="og:url" content="https://metricusapp.com/blog/insurance-ai-visibility/">
+<meta property="og:title" content="Why Doesn&#x27;t AI Recommend My Insurance Company? Carrier Visibility Data">
+<meta property="og:description" content="Geico and Progressive dominate AI insurance answers. Most carriers are invisible. $1.7T market data on who AI recommends.">
+<meta property="og:image" content="https://metricusapp.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Metricus: see what AI answers when your customers ask for what you offer.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why Doesn&#x27;t AI Recommend My Insurance Company? Carrier Visibility Data">
+<meta name="twitter:description" content="Geico and Progressive dominate AI insurance answers. Most carriers are invisible. $1.7T market data on who AI recommends.">
+<meta name="twitter:image" content="https://metricusapp.com/assets/og.png">
+<!-- metricus:head -->
+<link rel="stylesheet" href="/assets/metricus.css?v=20260927">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#FBFAF7">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w70oz7g1k3");</script>
+<!-- /metricus:head -->
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "Why Doesn't AI Recommend My Insurance Company? Carrier Visibility Data",
+ "description": "A few top insurance brands dominate AI answers. Most carriers, agencies, and MGAs are invisible. Data on the $1.7T market AI is reshaping, what it gets wrong about coverage and pricing, and what to do about it.",
+ "author": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "datePublished": "2026-04-05",
+ "dateModified": "2026-09-27",
+ "mainEntityOfPage": "https://metricusapp.com/blog/insurance-ai-visibility/",
+ "image": "https://metricusapp.com/assets/og.png"
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
   {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Why Doesn't AI Recommend My Insurance Company? Carrier Visibility Data",
-    "description": "The top 5 insurance brands appear in 90%+ of AI answers. Most carriers, agencies, and MGAs are invisible. Data on the $1.7T market AI is reshaping, what it gets wrong about coverage and pricing, and what to do about it.",
-    "author": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "datePublished": "2026-04-05",
-    "dateModified": "2026-05-17",
-    "mainEntityOfPage": "https://metricusapp.com/blog/insurance-ai-visibility/",
-    "image": "https://metricusapp.com/landing/img/og.jpg"
-  }
-  </script>
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://metricusapp.com/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "AI Visibility for Insurance", "item": "https://metricusapp.com/blog/insurance-ai-visibility/"}
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://metricusapp.com/blog/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Why does AI always recommend the same insurance companies?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI generates recommendations from patterns in training data -- billions of web pages, news articles, reviews, and forum discussions. The top insurance advertisers spend billions annually on campaigns that generate enormous web coverage. This corpus dominance translates directly into AI recommendation frequency. Smaller carriers, regional insurers, and independent agents have a fraction of this web presence, so AI rarely surfaces them regardless of their actual coverage quality or pricing."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What does AI get wrong about insurance quotes and coverage?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI makes frequent errors about insurance because coverage is regulated at the state level, priced individually, and changes constantly. Common errors include fabricated premium ranges that don't reflect actual underwriting, incorrect coverage descriptions, wrong state availability information, outdated claims process details, and invented discount programs. Insurance is one of the most error-prone categories for AI because no two policies are alike and pricing is never public."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does AI distort the insurance market for smaller carriers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Insurtech companies with less than 1% market share appear in AI responses far more often than their actual size justifies, because they generate disproportionate tech press and digital content. Meanwhile, regional carriers with superior claims ratios and financial strength ratings are invisible. AI does not surface financial strength differences, state-specific expertise, or claims service quality -- it surfaces web footprint."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How can insurance companies and agents see what AI says about them?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The first step is seeing what AI currently says. Put a page from your site into the free Metricus optimizer. It shows what the major AI platforms answer when that page is the source, marks the passages that shape the answer, and proposes rewrites. It runs in the browser. No signup, no credit card."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How quickly can insurance brands see results after addressing AI visibility?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "After a page changes, answers on the major AI platforms typically update within a few weeks. For insurance companies, the highest-impact fixes typically address coverage and pricing accuracy gaps, structured data, and third-party citation deficits on authoritative industry sources."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do insurance companies need ongoing AI monitoring?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Not necessarily. Most carriers and agencies need to know what to fix and how to fix it. A one-time check identifies the specific issues. Once the critical gaps are addressed, a re-check confirms the change."
-        }
-      }
-    ]
+   "@type": "ListItem",
+   "position": 3,
+   "name": "AI Visibility for Insurance",
+   "item": "https://metricusapp.com/blog/insurance-ai-visibility/"
   }
-  </script>
-
+ ]
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Why does AI always recommend the same insurance companies?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "AI generates recommendations from patterns in training data — billions of web pages, news articles, reviews, and forum discussions. The top insurance advertisers spend billions annually on campaigns that generate enormous web coverage. This corpus dominance translates directly into AI recommendation frequency. Smaller carriers, regional insurers, and independent agents have a fraction of this web presence, so AI rarely surfaces them regardless of their actual coverage quality or pricing."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What does AI get wrong about insurance quotes and coverage?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "AI makes frequent errors about insurance because coverage is regulated at the state level, priced individually, and changes constantly. Common errors include fabricated premium ranges that don't reflect actual underwriting, incorrect coverage descriptions, wrong state availability information, outdated claims process details, and invented discount programs. Insurance is one of the most error-prone categories for AI because no two policies are alike and pricing is never public."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How does AI distort the insurance market for smaller carriers?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Insurtech companies with less than 1% market share appear in AI responses far more often than their actual size justifies, because they generate disproportionate tech press and digital content. Meanwhile, regional carriers with superior claims ratios and financial strength ratings are invisible. AI does not surface financial strength differences, state-specific expertise, or claims service quality — it surfaces web footprint."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How can insurance companies and agents see what AI says about them?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The first step is seeing what AI currently says. Type the question into Metricus the way a customer would ask it, and you see the answer AI gives, with every business it names. It is free, with no signup."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How quickly can insurance brands see results after addressing AI visibility?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "After a page changes, answers on the major AI platforms typically update within a few weeks. For insurance companies, the highest-impact fixes typically address coverage and pricing accuracy gaps, structured data, and third-party citation deficits on authoritative industry sources."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do insurance companies need ongoing AI monitoring?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Not necessarily. Most carriers and agencies need to know what to fix and how to fix it. Seeing what AI answers to your customers' questions shows the specific issues. Once the critical gaps are addressed, a re-check confirms the change."
+   }
+  }
+ ]
+}</script>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
-
-  <!-- Site Nav -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 gap-4">
-      <a href="/" class="text-on-surface font-semibold" aria-label="Metricus home">Metricus <span class="font-normal text-on-surface-variant">Optimizer</span></a>
-      <div class="flex items-center gap-5">
-        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface">Learn</a>
-        <a href="/ai-visibility-optimizer-tool/" class="bg-primary text-on-primary text-sm font-semibold px-4 py-2.5 hover:bg-primary-dim">Open the tool</a>
-      </div>
-    </div>
-  </header>
-
-
-
-  <!-- Mobile Menu Overlay -->
-
-
-
-  <main class="flex-grow flex flex-col relative overflow-x-hidden">
-
-    <div class="absolute inset-0 -z-10 pointer-events-none"></div>
-
-    <!-- ========== ARTICLE ========== -->
-    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
-
-      <!-- Breadcrumb -->
-      <nav class="mb-8">
-        <ol class="flex items-center gap-2 text-xs text-slate-muted">
-          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
-          <li class="select-none">/</li>
-          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
-          <li class="select-none">/</li>
-          <li class="text-slate-text">Insurance AI Visibility</li>
-        </ol>
-      </nav>
-
-      <!-- Article Header -->
-      <header class="mb-12">
-        <p class="text-xs text-primary font-semibold mb-4">Industry Research</p>
-        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
-          Why Doesn't AI Recommend My Insurance Company?
-        </h1>
-        <p class="text-sm text-outline">Metricus Research &middot; April 5, 2026 &middot; 14 min read</p>
-        <p class="text-sm text-outline mt-2">Last updated: April 2026</p>
-      </header>
-
-
-      <!-- Tension Stat -->
-      <div class="bg-surface-container-low p-8 mb-12">
-        <p class="text-lg leading-relaxed text-on-surface">
-          <strong>The US insurance industry generates $1.7 trillion in annual premiums</strong> (NAIC, 2025). When consumers ask AI assistants for insurance advice, the same 5&ndash;6 brands appear in nearly every response. The other 5,900+ insurance companies writing policies in America are functionally invisible. Here&rsquo;s the data on who AI recommends, what it gets wrong about coverage and pricing, and why it matters for the most regulated consumer product in the country.
+<body class="doc">
+<!-- metricus:header -->
+<header class="nav"><div class="in"><a class="logo" href="/" id="navhome">Metricus</a><span class="sp"></span><span class="muted" id="host"></span></div></header>
+<!-- /metricus:header -->
+<main class="doc-main" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <span aria-current="page">Insurance AI Visibility</span></nav>
+<p class="kicker">Industry Research</p>
+<h1>Why Doesn't AI Recommend My Insurance Company?</h1>
+<p class="byline">Metricus Research · April 5, 2026 · 14 min read</p>
+<p class="updated">Last updated: September 2026</p>
+<div class="note">
+<p>
+<strong>The US insurance industry generates $1.7 trillion in annual premiums</strong> (NAIC, 2025). When consumers ask AI assistants for insurance advice, the same 5–6 brands appear in nearly every response. The other 5,900+ insurance companies writing policies in America are functionally invisible. Here’s the data on who AI recommends, what it gets wrong about coverage and pricing, and why it matters for the most regulated consumer product in the country.
         </p>
-      </div>
-
-
-<p><strong>Short answer:</strong> When consumers ask AI about insurance, the top national brands appear in 90%+ of responses. Most carriers, agencies, and MGAs are invisible. The free Metricus optimizer shows what the major AI platforms answer when a page from your site is the source, and what factual errors it carries. <a href="/ai-visibility-optimizer-tool/">Open the tool</a>.</p>
-
-
-      <!-- Table of Contents -->
-      <div class="border border-[#E2E8F0] p-8 mb-12">
-        <p class="text-xs text-slate-muted font-semibold mb-4">In this article</p>
-        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
-          <li><a href="#the-insurance-search-shift" class="hover:underline">The shift: from &ldquo;get a quote&rdquo; to &ldquo;ask the AI&rdquo;</a></li>
-          <li><a href="#who-ai-recommends" class="hover:underline">Who AI actually recommends for insurance</a></li>
-          <li><a href="#coverage-pricing-accuracy" class="hover:underline">The coverage and pricing accuracy problem</a></li>
-          <li><a href="#why-invisible" class="hover:underline">Why most insurers are invisible to AI</a></li>
-          <li><a href="#what-ai-gets-wrong" class="hover:underline">What AI gets wrong about insurance</a></li>
-          <li><a href="#the-money" class="hover:underline">The $1.7 trillion market AI is reshaping</a></li>
-          <li><a href="#insurtech-distortion" class="hover:underline">The insurtech distortion</a></li>
-          <li><a href="#distribution-shift" class="hover:underline">Comparison sites and the distribution shift</a></li>
-          <li><a href="#compounding-gap" class="hover:underline">The compounding visibility gap</a></li>
-          <li><a href="#faq" class="hover:underline">Frequently asked questions</a></li>
-        </ol>
-      </div>
-
-      <!-- Article Body -->
-      <div class="article-body">
-
-        <h2 id="the-insurance-search-shift">The shift: from &ldquo;get a quote&rdquo; to &ldquo;ask the AI&rdquo;</h2>
-
-        <p>Insurance purchasing has always been a research-heavy process. Consumers compare carriers, coverage types, deductibles, and premiums before committing &mdash; and they increasingly start that process online. J.D. Power&rsquo;s 2024 US Insurance Shopping Study found that <strong>82% of auto insurance shoppers research online before purchasing</strong>, and the Insurance Information Institute (III) reports that <strong>digital channels now influence 67% of all insurance purchase decisions</strong>.</p>
-
-        <p>That online research is now shifting from search engines to AI &mdash; rapidly.</p>
-
-        <p>Gartner forecast in February 2024 that <strong>traditional search engine volume will drop 25% by 2026</strong> due to AI chatbots and virtual agents. The nature of insurance queries makes them particularly suited to AI. Instead of comparing rate tables across six insurer websites, a consumer asks: &ldquo;What&rsquo;s the best car insurance for a young driver with a clean record?&rdquo; or &ldquo;Should I get term or whole life insurance?&rdquo; or &ldquo;What homeowners insurance covers flood damage in Florida?&rdquo; The AI responds with a narrative recommendation &mdash; naming specific brands &mdash; and the consumer follows that path.</p>
-
-        <p>The traditional funnel &mdash; search engine, comparison site, quote, purchase &mdash; is being compressed into a single AI conversation. And carriers that aren&rsquo;t part of that conversation are losing the sale before it starts.</p>
-
-        <div data-benchmark-quiz="insurance" data-source="insurance-ai-visibility"></div>
-
-
-        <h2 id="who-ai-recommends">Who AI actually recommends for insurance</h2>
-
-        <p>Across the major AI platforms &mdash; using consumer-intent prompts like &ldquo;What is the best car insurance?&rdquo; &ldquo;Who has the cheapest homeowners insurance?&rdquo; and &ldquo;Which insurance company has the best claims process?&rdquo; &mdash; the results are strikingly concentrated. The same 5&ndash;6 national brands appear in nearly every response, regardless of the consumer&rsquo;s location, risk profile, or specific coverage needs.</p>
-
-        <p>The concentration is extreme. The top carriers benefit from billions of dollars in cumulative advertising spend that generates enormous web coverage &mdash; media articles, blog posts, social media discussions, review content, and comparison features. All of that enters AI training data. Meanwhile, <strong>regional carriers that carry top financial strength ratings and consistently lead customer satisfaction rankings barely register in AI responses</strong>. Independent insurance agents, who still account for approximately 36% of personal lines premium and 83% of commercial lines premium (IIABA, 2024), are almost never recommended.</p>
-
-        <p>This isn&rsquo;t because the top national brands offer better coverage. It&rsquo;s because they&rsquo;re louder online &mdash; by orders of magnitude. AI does not assess claims ratios, financial strength, or coverage breadth. It assesses web footprint.</p>
-        <!-- Cite-to-Recommend Framework -->
-        <div class="bg-surface-container-low p-8 my-12 border border-outline-variant/50" style="border-left:4px solid #515F74;">
-          <p class="text-lg leading-relaxed text-on-surface">
-            <strong>The step most insurance brands miss:</strong> checking what AI actually says when someone asks about &ldquo;best insurance providers.&rdquo; AI gives different answers every time &mdash; and increasingly, those answers don&rsquo;t include you. In our data, the average brand&rsquo;s AI visibility gap widened by 10% every 90 days when left unaddressed. Checking this by hand means asking the same questions repeatedly and comparing answers. A page-level check that shows what the major AI platforms answer with your page as the source does the same job in the browser.
-          </p>
-          <a href="/ai-visibility-optimizer-tool/" class="inline-flex items-center gap-2 bg-primary text-on-primary text-sm font-semibold tracking-tight px-6 py-3 mt-4 hover:bg-primary-dim transition-colors" style="background-color:#515F74;color:#f6f7ff;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;font-size:14px;font-weight:600;">
-            See what AI says about your carrier <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
-
-
-        <h2 id="coverage-pricing-accuracy">The coverage and pricing accuracy problem</h2>
-
-        <p>Insurance is arguably the single worst category for AI accuracy. AI gives <strong>incorrect or misleading information in approximately 40&ndash;55% of insurance-specific queries</strong>. In an industry regulated at the state level with individualized pricing, the error rate is structurally high &mdash; and the consequences for consumers are material.</p>
-
-        <h3>Premium ranges AI fabricates</h3>
-
-        <p>This is where AI fails most for insurance. <strong>Insurance pricing is never public.</strong> Premiums are individually underwritten based on dozens of variables: driving record, credit score (in states that allow it), vehicle type, location, coverage limits, deductibles, claims history, and more. When a consumer asks AI how much insurance costs, AI fabricates a range &mdash; often citing figures pulled from comparison site averages that may be years old.</p>
-
-        <p>The NAIC reports that the <strong>average auto insurance premium in the US was $1,771 in 2023</strong> &mdash; but this average conceals a range from $864 in Maine to $3,274 in Florida. Within any given state, individual premiums can vary by 300% or more based on risk factors. AI presents pricing as if it&rsquo;s a known quantity, when in reality it&rsquo;s the most variable aspect of the product. A consumer who is told by AI that a competitor is cheaper &mdash; based on fabricated data &mdash; never requests your quote.</p>
-
-        <h3>Coverage details AI confuses</h3>
-
-        <p>AI frequently confuses or oversimplifies coverage types. Common errors include: conflating different homeowners policy forms, describing the wrong type of life insurance when asked about another, misrepresenting what &ldquo;full coverage&rdquo; auto insurance actually includes (it&rsquo;s not a real policy type), and incorrectly explaining umbrella policy trigger conditions. These errors can lead consumers to purchase inadequate coverage based on AI&rsquo;s confident but wrong explanation.</p>
-
-        <h3>State-specific regulations AI ignores</h3>
-
-        <p>Insurance is regulated by 50 different state departments of insurance, each with their own requirements. AI routinely ignores or misrepresents state-specific rules:</p>
-        <ul>
-          <li><strong>Minimum coverage requirements</strong> vary enormously by state. AI frequently cites wrong minimums for the consumer&rsquo;s location.</li>
-          <li><strong>No-fault vs. tort states</strong> &mdash; 12 states plus DC operate under no-fault auto insurance systems with PIP requirements. AI often recommends coverage structures that don&rsquo;t apply in the consumer&rsquo;s state.</li>
-          <li><strong>State-specific carriers and pools</strong> &mdash; Some states have unique insurance structures that are critical options AI rarely mentions.</li>
-          <li><strong>Rate approval processes</strong> differ by state. AI treats insurance pricing as if it operates under one national system, when in reality it varies fundamentally by jurisdiction.</li>
-        </ul>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>Why this matters more for insurance than most industries:</strong> An AI error in most markets means a consumer buys the wrong product and returns it. An AI error in insurance means a consumer buys inadequate coverage and discovers the gap at claim time &mdash; when it&rsquo;s too late. The accuracy stakes in insurance are among the highest of any consumer product.
-          </p>
-        </div>
-
-
-        <h2 id="why-invisible">Why most insurers are invisible to AI</h2>
-
-        <p>AI generates recommendations based on patterns in training data &mdash; billions of web pages, news articles, forum discussions, review sites, and industry publications. The brands that appear most frequently and authoritatively in that data are the ones AI recommends.</p>
-
-        <p>Three specific factors determine whether AI mentions an insurance brand:</p>
-
-        <h3>Advertising-driven corpus dominance</h3>
-
-        <p>Insurance is the most heavily advertised financial product in America. The <strong>top 5 auto insurers alone spent $7.8 billion on advertising in 2023</strong> (S&amp;P Global Market Intelligence). That spending doesn&rsquo;t just generate TV commercials &mdash; it generates web content. Every ad campaign spawns media coverage, blog posts, social media discussions, review articles, and comparison content. All of that enters AI training data.</p>
-
-        <p>A regional carrier spending $5 million annually on marketing generates perhaps 1/400th of the web content that the top national brands do. That ratio maps almost directly to AI mention rates.</p>
-
-        <h3>Comparison content that reinforces the same brands</h3>
-
-        <p>The insurance comparison ecosystem generates enormous volumes of content that AI trains on. But comparison sites primarily feature the same national brands because those are the carriers consumers search for (driven by advertising) and the carriers that offer affiliate commissions. The result is a self-reinforcing loop: comparison sites rank well on search engines, AI trains on those comparison sites, and AI reproduces their brand lists. Carriers not featured on comparison sites become doubly invisible &mdash; absent from both search results and AI recommendations.</p>
-
-        <h3>Unstructured, compliance-heavy web content</h3>
-
-        <p>Insurance company websites are notoriously difficult for AI to extract useful information from. Legal compliance requirements lead to dense, jargon-heavy policy language. Many carrier sites require quote forms before displaying any pricing information. Coverage details are buried behind interactive tools rather than published as crawlable content. Research has shown that content with statistical citations and clear factual claims is significantly more likely to be cited by generative AI. Most insurance websites do the opposite &mdash; hiding useful data behind forms and wrapping it in legal disclaimers.</p>
-
-        <!-- METRICUS_MID_CTA -->
-        
-
-
-        <h2 id="what-ai-gets-wrong">What AI gets wrong about insurance</h2>
-
-        <p>Beyond coverage and pricing accuracy, AI makes systematic errors that affect how consumers perceive your insurance brand:</p>
-
-        <h3>Claims processes and timelines</h3>
-
-        <p>When consumers ask about claims handling, AI generates generic descriptions that miss carrier-specific differences and state-mandated timelines. Most states require insurers to acknowledge claims within <strong>15 days</strong> and pay or deny within <strong>30&ndash;45 days</strong> (NAIC model regulations), but actual processes vary significantly by carrier, claim type, and state. AI invents timelines, fabricates specific steps, and frequently confuses first-party and third-party claims processes. A carrier known for fast claims resolution gets no differentiation in AI because AI doesn&rsquo;t reflect actual claims performance.</p>
-
-        <h3>Agent vs. direct-to-consumer availability</h3>
-
-        <p>AI rarely distinguishes between carriers that sell through independent agents, captive agents, and direct-to-consumer channels. This distinction matters enormously for how a consumer actually buys a policy. When AI recommends &ldquo;getting a quote&rdquo; from a carrier that only sells through independent agents, it doesn&rsquo;t explain that the consumer needs to find an agent &mdash; they can&rsquo;t buy direct. The consumer&rsquo;s experience doesn&rsquo;t match AI&rsquo;s implied simplicity, which erodes trust in the recommended carrier.</p>
-
-        <h3>Financial strength and stability</h3>
-
-        <p>AM Best ratings, which measure an insurer&rsquo;s ability to meet its ongoing obligations to policyholders, are among the most important factors in choosing a carrier &mdash; especially for long-tail coverage like life insurance or homeowners insurance in catastrophe-prone states. AI almost never surfaces financial strength differences. A carrier rated A++ (Superior) by AM Best looks identical in AI responses to one rated B++ (Good), despite the material difference in claims-paying ability and long-term stability.</p>
-
-        <h3>Discount programs and underwriting criteria</h3>
-
-        <p>AI frequently invents or misattributes discount programs. Multi-policy bundling, safe driver discounts, homeowner discounts on auto &mdash; these vary significantly by carrier and state. AI presents generic discount lists as if they apply universally. A consumer who asks about your company&rsquo;s discounts and gets AI-generated misinformation forms expectations your agent then has to correct, starting the relationship on a negative note.</p>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>The compound problem:</strong> Your carrier or agency is either invisible in AI responses (consumers never discover you) or mentioned with fabricated premium ranges, wrong coverage descriptions, and incorrect availability information (consumers form wrong expectations). Both cost you policies.
-          </p>
-        </div>
-
-
-        <h2 id="the-money">The $1.7 trillion market AI is reshaping</h2>
-
-        <p>The US insurance industry is one of the largest financial sectors in the world &mdash; and it&rsquo;s being reshaped by AI-driven distribution faster than most carriers realize:</p>
-
-        <ul>
-          <li>The <strong>US property and casualty (P&amp;C) insurance industry wrote $849.3 billion in net premiums in 2023</strong> (NAIC) &mdash; up from $781.6 billion in 2022.</li>
-          <li>The <strong>US life and annuity sector generated $604 billion in premiums in 2023</strong> (ACLI, 2024), bringing total US insurance premiums to approximately <strong>$1.45 trillion</strong>.</li>
-          <li><strong>Auto insurance</strong> alone is a <strong>$327 billion annual market</strong> (III, 2024) &mdash; and it&rsquo;s the insurance product consumers shop for most actively.</li>
-          <li><strong>Homeowners insurance premiums hit $152 billion in 2023</strong> (NAIC), with premiums rising 20&ndash;40% in catastrophe-prone states, making comparison shopping more important than ever.</li>
-        </ul>
-
-        <p>The carriers investing billions in AI for internal operations &mdash; underwriting, claims, fraud detection &mdash; are simultaneously blind to how consumer-facing AI is redirecting their potential customers to competitors. The advertising math tells the story. The top national carriers collectively spend <strong>over $10 billion annually on advertising</strong> (S&amp;P Global). That spending historically drove consumers to call an 800 number or visit a website. Now it primarily generates the web content that AI trains on &mdash; making advertising spend an indirect but powerful driver of AI visibility.</p>
-
-        <p>Carriers that never spent heavily on advertising are now doubly disadvantaged: they missed the direct-response era and they&rsquo;re missing the AI era. You can&rsquo;t buy your way into an AI recommendation. There are no ad slots. But your historical advertising and content investment determines whether AI knows you exist.</p>
-
-
-        <h2 id="insurtech-distortion">The insurtech distortion</h2>
-
-        <p>One of the most striking patterns in insurance AI visibility is the outsized presence of insurtech companies. Digital-first insurance startups appear in AI recommendations far more frequently than their actual market share would justify.</p>
-
-        <p>Insurtechs with less than 1% market share appear in the majority of AI responses about their coverage categories. On a per-dollar-of-premium basis, some insurtechs are roughly <strong>100x overrepresented</strong> in AI recommendations compared to traditional carriers.</p>
-
-        <p>Why? Insurtechs generate disproportionate web content through a different mechanism than traditional carriers:</p>
-
-        <ul>
-          <li><strong>Tech press coverage:</strong> Every funding round, product launch, and quarterly earnings report generates articles in tech and fintech publications. IPOs alone generate thousands of articles.</li>
-          <li><strong>VC and investment commentary:</strong> Venture capital discussions, investment analyses, and &ldquo;future of insurance&rdquo; thought pieces consistently name insurtechs as examples of disruption.</li>
-          <li><strong>Digital-first content:</strong> Insurtechs typically produce more consumer-friendly, search-optimized content than traditional carriers, which ranks well and gets cited frequently.</li>
-          <li><strong>Social media and forums:</strong> Tech-savvy early adopters discuss insurtechs heavily on forums and product review sites &mdash; all prime AI training data sources.</li>
-        </ul>
-
-        <p>The result is a distorted picture. AI recommends digital-first insurers for complex coverage scenarios they may not be equipped for &mdash; in states they may not serve, with financial strength ratings materially different from established carriers with decades of claims-paying history. AI doesn&rsquo;t surface these crucial differences.</p>
-
-        <p>For traditional carriers, the insurtech distortion creates a specific competitive threat: AI doesn&rsquo;t just fail to mention you &mdash; it actively recommends a less-established competitor with narrower coverage, fewer states, and lower financial strength ratings. Because the insurtech has better AI visibility.</p>
-
-
-        <h2 id="distribution-shift">Comparison sites and the distribution shift</h2>
-
-        <p>Insurance comparison and aggregator sites play a unique role in the AI visibility ecosystem. Major comparison platforms collectively generate hundreds of millions of monthly pageviews on insurance content. This content feeds directly into AI training data and creates a secondary visibility channel.</p>
-
-        <p>The shift from comparison sites to AI compresses the consideration set even further. On a comparison site, a consumer might see quotes from 8&ndash;12 carriers including some regional options. In an AI conversation, they get 3&ndash;5 names &mdash; always the same ones. The comparison site at least shows the consumer there are choices. AI presents its handful of recommendations as if they&rsquo;re the complete market.</p>
-
-        <p>For independent agents, the threat is existential. If a consumer&rsquo;s first touchpoint is AI saying the best insurance options are 5 national brands and 2 insurtechs, the consumer has no reason to seek out an independent agent who might place them with a regional carrier that offers better rates, better claims service, and higher financial strength ratings for their specific risk profile.</p>
-
-        <p>Independent agents still account for approximately 36% of personal lines premium and 83% of commercial lines premium (IIABA, 2024). But the consumers who would have found an independent agent through a search engine are increasingly going directly to the carriers AI recommended &mdash; bypassing the agent channel entirely.</p>
-
-
-        <h2 id="compounding-gap">The compounding visibility gap</h2>
-
-        <p>The economics make the case clearly. The <strong>average auto insurance policy generates approximately $1,771 in annual premium</strong> (NAIC, 2023). A mid-size carrier where even 5% of new customer acquisition is influenced by AI recommendations is looking at significant premium volume where AI is shaping the consideration set &mdash; and the 5% figure is conservative given the trajectory of AI adoption.</p>
-
-        <p>For independent agents, the math is different but equally compelling. An average independent agency places roughly 500&ndash;1,500 personal lines policies. If 5% of local consumers now start their insurance journey with AI instead of a search engine, and AI recommends direct carriers and insurtechs rather than pointing consumers to an independent agent, that agent loses potential clients every year &mdash; revenue that bypasses the independent channel entirely.</p>
-
-        <p>In our data, the average brand&rsquo;s AI visibility gap widened by 10% every 90 days when left unaddressed. The cost of waiting rises every quarter. Every piece of authoritative, data-rich content your competitors publish today enters the training data that shapes AI recommendations tomorrow. The carriers already investing in AI visibility &mdash; even if they don&rsquo;t call it that &mdash; are building a compounding advantage.</p>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>The bottom line:</strong> If you&rsquo;re an insurance carrier, managing general agent, independent agency, or insurtech that depends on consumers finding your products &mdash; and in 2026, that&rsquo;s the entire industry &mdash; you need to know what AI is saying about you. Not next quarter. Now.
-          </p>
-        </div>
-
-
-        <h2 id="faq">Frequently Asked Questions</h2>
-
-        <h3>Why does AI always recommend the same insurance companies?</h3>
-        <p>AI generates recommendations from patterns in training data &mdash; billions of web pages, news articles, reviews, and forum discussions. The top insurance advertisers spend billions annually on campaigns that generate enormous web coverage. This corpus dominance translates directly into AI recommendation frequency. Smaller carriers, regional insurers, and independent agents have a fraction of this web presence, so AI rarely surfaces them regardless of their actual coverage quality or pricing.</p>
-
-        <h3>What does AI get wrong about insurance quotes and coverage?</h3>
-        <p>AI makes frequent errors about insurance because coverage is regulated at the state level, priced individually, and changes constantly. Common errors include fabricated premium ranges that don&rsquo;t reflect actual underwriting, incorrect coverage descriptions, wrong state availability information, outdated claims process details, and invented discount programs. Insurance is one of the most error-prone categories for AI because no two policies are alike and pricing is never public.</p>
-
-        <h3>How does AI distort the insurance market for smaller carriers?</h3>
-        <p>Insurtech companies with less than 1% market share appear in AI responses far more often than their actual size justifies, because they generate disproportionate tech press and digital content. Meanwhile, regional carriers with superior claims ratios and financial strength ratings are invisible. AI does not surface financial strength differences, state-specific expertise, or claims service quality &mdash; it surfaces web footprint.</p>
-
-        <h3>How can insurance companies and agents see what AI says about them?</h3>
-        <p>The first step is seeing what AI currently says. Put a page from your site into the free Metricus optimizer. It shows what the major AI platforms answer when that page is the source, marks the passages that shape the answer, and proposes rewrites. It runs in the browser. No signup, no credit card.</p>
-
-        <h3>How quickly can insurance brands see results after addressing AI visibility?</h3>
-        <p>After a page changes, answers on the major AI platforms typically update within a few weeks. For insurance companies, the highest-impact fixes typically address coverage and pricing accuracy gaps, structured data, and third-party citation deficits on authoritative industry sources.</p>
-
-        <h3>Do insurance companies need ongoing AI monitoring?</h3>
-        <p>Not necessarily. Most carriers and agencies need to know what to fix and how to fix it. A one-time check identifies the specific issues. Once the critical gaps are addressed, a re-check confirms the change.</p>
-
-        <p class="text-sm text-slate-muted mt-8"><strong>Sources:</strong> National Association of Insurance Commissioners (NAIC) annual report and market data (2023, 2025); Insurance Information Institute (III, 2024); J.D. Power US Insurance Shopping Study (2024); S&amp;P Global Market Intelligence advertising spend data (2023); American Council of Life Insurers (ACLI, 2024); Independent Insurance Agents &amp; Brokers of America (IIABA, 2024); Gartner search prediction (Feb 2024).</p>
-
-        </div>
-      <!-- End Article Body -->
-
-      <p class="text-sm text-slate-muted mt-8 border-t border-[#E2E8F0] pt-6">See what an AI assistant says about your insurance brand, then change it: <a href="/ai-visibility-optimizer-tool/" class="text-primary hover:underline">open the tool</a>.</p>
-
-      <!-- ========== ARTICLE CTA ========== -->
-      <div class="border-t border-outline-variant/30 mt-16 pt-10" data-cta="tool">
-        <h2 class="text-2xl font-semibold text-on-surface mb-2">Put in a page.</h2>
-        <p class="text-on-surface-variant mb-5 max-w-xl">See what an AI assistant answers about your page, which passages caused it, and a rewrite for each one. Free, no signup.</p>
-        <form class="flex flex-col sm:flex-row gap-2 max-w-xl" action="/ai-visibility-optimizer-tool/" method="get">
-          <label class="sr-only" for="cta-url">Address of the page to check</label>
-          <input id="cta-url" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="your-site.com/page" required class="flex-1 min-w-0 px-4 py-3 border border-outline-variant bg-white text-on-surface">
-          <button type="submit" class="bg-primary text-on-primary font-semibold px-6 py-3 hover:bg-primary-dim whitespace-nowrap">Start optimizing</button>
-        </form>
-      </div>
-
-      <!-- ========== CITE THIS ARTICLE ========== -->
-      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
-        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
-          <cite class="not-italic"><a href="https://metricusapp.com/blog/insurance-ai-visibility/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; Why Doesn&rsquo;t AI Recommend My Insurance Company? Carrier Visibility Data</a></cite>
-        </p>
-      </footer>
-
-    </article>
-
-
-    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
-      <p class="text-xs text-slate-muted font-semibold mb-6">Go deeper</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <a href="/geo-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">GEO Knowledge Base</p>
-          <p class="text-sm text-on-surface-variant mt-1">81 research clusters on AI visibility and brand monitoring</p>
-        </a>
-        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
-          <p class="text-sm text-on-surface-variant mt-1">48 clusters on fixing AI accuracy issues and hallucinations</p>
-        </a>
-      </div>
-    </section>
-
-    <!-- ========== RELATED POSTS ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
-      <p class="text-xs text-slate-muted font-semibold mb-8">Related articles</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        <a href="../ai-visibility-action-plan/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Playbook</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            How to Turn AI Visibility Data Into an Action Plan
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            The 5-step framework for turning your AI audit findings into specific, prioritized actions.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../fix-ai-brand-hallucinations/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Research</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            AI Is Getting Facts Wrong About Your Brand
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            72% of brands have factual errors in AI responses. Here&rsquo;s a 4-step process to audit and fix them.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-                <a href="../ai-visibility-how-brands-show-up/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Research</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            What Is AI Visibility and Why Does It Matter?
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            How brands appear in AI chatbot responses &mdash; and what determines who gets recommended.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
 </div>
-    </section>
-
-  </main>
-
-
-  <!-- ========== FOOTER ========== -->
-  <!-- Site Footer -->
-  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-on-surface-variant">
-      <span class="text-on-surface font-semibold">Metricus</span>
-      <a href="/ai-visibility-optimizer-tool/" class="hover:text-on-surface">Open the tool</a>
-      <a href="/blog/" class="hover:text-on-surface">Learn</a>
-      <a href="/methodology/" class="hover:text-on-surface">How it works</a>
-      <a href="/results/" class="hover:text-on-surface">Results</a>
-      <a href="/for-agencies/" class="hover:text-on-surface">For agencies</a>
-      <a href="/about/" class="hover:text-on-surface">About</a>
-      <a href="/press/" class="hover:text-on-surface">Press</a>
-      <a href="/support/" class="hover:text-on-surface">Support</a>
-      <a href="/privacy-policy/" class="hover:text-on-surface">Privacy</a>
-      <a href="/terms-of-service/" class="hover:text-on-surface">Terms</a>
-      <a href="mailto:metricusapp@gmail.com" class="hover:text-on-surface">Contact</a>
-      <span class="ml-auto">&copy; 2026 Metricus</span>
-    </div>
-  </footer>
-
-  <script src="/js/benchmark-quiz-engine.js" defer></script>
-  <script src="/js/insurance-benchmark-quiz.js" defer></script>
-<script src="/js/reader-pulse-b.js" defer></script>
+<p><strong>Short answer:</strong> When consumers ask AI about insurance, the top national brands dominate the responses. Most carriers, agencies, and MGAs are invisible.</p>
+<nav class="toc" aria-label="In this article"><p>In this article</p><ol>
+<li><a href="#the-insurance-search-shift">The shift: from “get a quote” to “ask the AI”</a></li>
+<li><a href="#who-ai-recommends">Who AI actually recommends for insurance</a></li>
+<li><a href="#coverage-pricing-accuracy">The coverage and pricing accuracy problem</a></li>
+<li><a href="#why-invisible">Why most insurers are invisible to AI</a></li>
+<li><a href="#what-ai-gets-wrong">What AI gets wrong about insurance</a></li>
+<li><a href="#the-money">The $1.7 trillion market AI is reshaping</a></li>
+<li><a href="#insurtech-distortion">The insurtech distortion</a></li>
+<li><a href="#distribution-shift">Comparison sites and the distribution shift</a></li>
+<li><a href="#compounding-gap">The compounding visibility gap</a></li>
+<li><a href="#faq">Frequently asked questions</a></li>
+</ol></nav>
+<h2 id="the-insurance-search-shift">The shift: from “get a quote” to “ask the AI”</h2>
+<p>Insurance purchasing has always been a research-heavy process. Consumers compare carriers, coverage types, deductibles, and premiums before committing — and they increasingly start that process online. J.D. Power’s 2024 US Insurance Shopping Study found that <strong>82% of auto insurance shoppers research online before purchasing</strong>, and the Insurance Information Institute (III) reports that <strong>digital channels now influence 67% of all insurance purchase decisions</strong>.</p>
+<p>That online research is now shifting from search engines to AI — rapidly.</p>
+<p>Gartner forecast in February 2024 that <strong>traditional search engine volume will drop 25% by 2026</strong> due to AI chatbots and virtual agents. The nature of insurance queries makes them particularly suited to AI. Instead of comparing rate tables across six insurer websites, a consumer asks: “What’s the best car insurance for a young driver with a clean record?” or “Should I get term or whole life insurance?” or “What homeowners insurance covers flood damage in Florida?” The AI responds with a narrative recommendation — naming specific brands — and the consumer follows that path.</p>
+<p>The traditional funnel — search engine, comparison site, quote, purchase — is being compressed into a single AI conversation. And carriers that aren’t part of that conversation are losing the sale before it starts.</p>
+<h2 id="who-ai-recommends">Who AI actually recommends for insurance</h2>
+<p>Ask AI consumer-intent questions like “What is the best car insurance?” “Who has the cheapest homeowners insurance?” and “Which insurance company has the best claims process?” and the answers are strikingly concentrated. The same 5–6 national brands appear in nearly every response, regardless of the consumer’s location, risk profile, or specific coverage needs.</p>
+<p>The concentration is extreme. The top carriers benefit from billions of dollars in cumulative advertising spend that generates enormous web coverage — media articles, blog posts, social media discussions, review content, and comparison features. All of that enters AI training data. Meanwhile, <strong>regional carriers that carry top financial strength ratings and consistently lead customer satisfaction rankings barely register in AI responses</strong>. Independent insurance agents, who still account for approximately 36% of personal lines premium and 83% of commercial lines premium (IIABA, 2024), are almost never recommended.</p>
+<p>This isn’t because the top national brands offer better coverage. It’s because they’re louder online — by orders of magnitude. AI does not assess claims ratios, financial strength, or coverage breadth. It assesses web footprint.</p>
+<div class="note">
+<p>
+<strong>The step most insurance brands miss:</strong> checking what AI actually says when someone asks about “best insurance providers.” AI gives different answers every time — and increasingly, those answers don’t include you. Checking this by hand means asking the same questions repeatedly and comparing answers. Metricus shows the answer AI gives to a customer's question, with every business it names. Its AI Visibility Score shows how often AI mentions and recommends you across your customers' questions.
+          </p>
+</div>
+<h2 id="coverage-pricing-accuracy">The coverage and pricing accuracy problem</h2>
+<p>Insurance is arguably the single worst category for AI accuracy. AI often gives <strong>incorrect or misleading information for insurance questions</strong>. In an industry regulated at the state level with individualized pricing, the error rate is structurally high — and the consequences for consumers are material.</p>
+<h3>Premium ranges AI fabricates</h3>
+<p>This is where AI fails most for insurance. <strong>Insurance pricing is never public.</strong> Premiums are individually underwritten based on dozens of variables: driving record, credit score (in states that allow it), vehicle type, location, coverage limits, deductibles, claims history, and more. When a consumer asks AI how much insurance costs, AI fabricates a range — often citing figures pulled from comparison site averages that may be years old.</p>
+<p>The NAIC reports that the <strong>average auto insurance premium in the US was $1,771 in 2023</strong> — but this average conceals a range from $864 in Maine to $3,274 in Florida. Within any given state, individual premiums can vary by 300% or more based on risk factors. AI presents pricing as if it’s a known quantity, when in reality it’s the most variable aspect of the product. A consumer who is told by AI that a competitor is cheaper — based on fabricated data — never requests your quote.</p>
+<h3>Coverage details AI confuses</h3>
+<p>AI frequently confuses or oversimplifies coverage types. Common errors include: conflating different homeowners policy forms, describing the wrong type of life insurance when asked about another, misrepresenting what “full coverage” auto insurance actually includes (it’s not a real policy type), and incorrectly explaining umbrella policy trigger conditions. These errors can lead consumers to purchase inadequate coverage based on AI’s confident but wrong explanation.</p>
+<h3>State-specific regulations AI ignores</h3>
+<p>Insurance is regulated by 50 different state departments of insurance, each with their own requirements. AI routinely ignores or misrepresents state-specific rules:</p>
+<ul>
+<li><strong>Minimum coverage requirements</strong> vary enormously by state. AI frequently cites wrong minimums for the consumer’s location.</li>
+<li><strong>No-fault vs. tort states</strong> — 12 states plus DC operate under no-fault auto insurance systems with PIP requirements. AI often recommends coverage structures that don’t apply in the consumer’s state.</li>
+<li><strong>State-specific carriers and pools</strong> — Some states have unique insurance structures that are critical options AI rarely mentions.</li>
+<li><strong>Rate approval processes</strong> differ by state. AI treats insurance pricing as if it operates under one national system, when in reality it varies fundamentally by jurisdiction.</li>
+</ul>
+<div class="note">
+<p>
+<strong>Why this matters more for insurance than most industries:</strong> An AI error in most markets means a consumer buys the wrong product and returns it. An AI error in insurance means a consumer buys inadequate coverage and discovers the gap at claim time — when it’s too late. The accuracy stakes in insurance are among the highest of any consumer product.
+          </p>
+</div>
+<h2 id="why-invisible">Why most insurers are invisible to AI</h2>
+<p>AI generates recommendations based on patterns in training data — billions of web pages, news articles, forum discussions, review sites, and industry publications. The brands that appear most frequently and authoritatively in that data are the ones AI recommends.</p>
+<p>Three specific factors determine whether AI mentions an insurance brand:</p>
+<h3>Advertising-driven corpus dominance</h3>
+<p>Insurance is the most heavily advertised financial product in America. The <strong>top 5 auto insurers alone spent $7.8 billion on advertising in 2023</strong> (S&amp;P Global Market Intelligence). That spending doesn’t just generate TV commercials — it generates web content. Every ad campaign spawns media coverage, blog posts, social media discussions, review articles, and comparison content. All of that enters AI training data.</p>
+<p>A regional carrier spending $5 million annually on marketing generates perhaps 1/400th of the web content that the top national brands do. That ratio maps almost directly to AI mention rates.</p>
+<h3>Comparison content that reinforces the same brands</h3>
+<p>The insurance comparison ecosystem generates enormous volumes of content that AI trains on. But comparison sites primarily feature the same national brands because those are the carriers consumers search for (driven by advertising) and the carriers that offer affiliate commissions. The result is a self-reinforcing loop: comparison sites rank well on search engines, AI trains on those comparison sites, and AI reproduces their brand lists. Carriers not featured on comparison sites become doubly invisible — absent from both search results and AI recommendations.</p>
+<h3>Unstructured, compliance-heavy web content</h3>
+<p>Insurance company websites are notoriously difficult for AI to extract useful information from. Legal compliance requirements lead to dense, jargon-heavy policy language. Many carrier sites require quote forms before displaying any pricing information. Coverage details are buried behind interactive tools rather than published as crawlable content. Research has shown that content with statistical citations and clear factual claims is significantly more likely to be cited by generative AI. Most insurance websites do the opposite — hiding useful data behind forms and wrapping it in legal disclaimers.</p>
+<h2 id="what-ai-gets-wrong">What AI gets wrong about insurance</h2>
+<p>Beyond coverage and pricing accuracy, AI makes systematic errors that affect how consumers perceive your insurance brand:</p>
+<h3>Claims processes and timelines</h3>
+<p>When consumers ask about claims handling, AI generates generic descriptions that miss carrier-specific differences and state-mandated timelines. Most states require insurers to acknowledge claims within <strong>15 days</strong> and pay or deny within <strong>30–45 days</strong> (NAIC model regulations), but actual processes vary significantly by carrier, claim type, and state. AI invents timelines, fabricates specific steps, and frequently confuses first-party and third-party claims processes. A carrier known for fast claims resolution gets no differentiation in AI because AI doesn’t reflect actual claims performance.</p>
+<h3>Agent vs. direct-to-consumer availability</h3>
+<p>AI rarely distinguishes between carriers that sell through independent agents, captive agents, and direct-to-consumer channels. This distinction matters enormously for how a consumer actually buys a policy. When AI recommends “getting a quote” from a carrier that only sells through independent agents, it doesn’t explain that the consumer needs to find an agent — they can’t buy direct. The consumer’s experience doesn’t match AI’s implied simplicity, which erodes trust in the recommended carrier.</p>
+<h3>Financial strength and stability</h3>
+<p>AM Best ratings, which measure an insurer’s ability to meet its ongoing obligations to policyholders, are among the most important factors in choosing a carrier — especially for long-tail coverage like life insurance or homeowners insurance in catastrophe-prone states. AI almost never surfaces financial strength differences. A carrier rated A++ (Superior) by AM Best looks identical in AI responses to one rated B++ (Good), despite the material difference in claims-paying ability and long-term stability.</p>
+<h3>Discount programs and underwriting criteria</h3>
+<p>AI frequently invents or misattributes discount programs. Multi-policy bundling, safe driver discounts, homeowner discounts on auto — these vary significantly by carrier and state. AI presents generic discount lists as if they apply universally. A consumer who asks about your company’s discounts and gets AI-generated misinformation forms expectations your agent then has to correct, starting the relationship on a negative note.</p>
+<div class="note">
+<p>
+<strong>The compound problem:</strong> Your carrier or agency is either invisible in AI responses (consumers never discover you) or mentioned with fabricated premium ranges, wrong coverage descriptions, and incorrect availability information (consumers form wrong expectations). Both cost you policies.
+          </p>
+</div>
+<h2 id="the-money">The $1.7 trillion market AI is reshaping</h2>
+<p>The US insurance industry is one of the largest financial sectors in the world — and it’s being reshaped by AI-driven distribution faster than most carriers realize:</p>
+<ul>
+<li>The <strong>US property and casualty (P&amp;C) insurance industry wrote $849.3 billion in net premiums in 2023</strong> (NAIC) — up from $781.6 billion in 2022.</li>
+<li>The <strong>US life and annuity sector generated $604 billion in premiums in 2023</strong> (ACLI, 2024), bringing total US insurance premiums to approximately <strong>$1.45 trillion</strong>.</li>
+<li><strong>Auto insurance</strong> alone is a <strong>$327 billion annual market</strong> (III, 2024) — and it’s the insurance product consumers shop for most actively.</li>
+<li><strong>Homeowners insurance premiums hit $152 billion in 2023</strong> (NAIC), with premiums rising 20–40% in catastrophe-prone states, making comparison shopping more important than ever.</li>
+</ul>
+<p>The carriers investing billions in AI for internal operations — underwriting, claims, fraud detection — are simultaneously blind to how consumer-facing AI is redirecting their potential customers to competitors. The advertising math tells the story. The top national carriers collectively spend <strong>over $10 billion annually on advertising</strong> (S&amp;P Global). That spending historically drove consumers to call an 800 number or visit a website. Now it primarily generates the web content that AI trains on — making advertising spend an indirect but powerful driver of AI visibility.</p>
+<p>Carriers that never spent heavily on advertising are now doubly disadvantaged: they missed the direct-response era and they’re missing the AI era. You can’t buy your way into an AI recommendation. There are no ad slots. But your historical advertising and content investment determines whether AI knows you exist.</p>
+<h2 id="insurtech-distortion">The insurtech distortion</h2>
+<p>One of the most striking patterns in insurance AI visibility is the outsized presence of insurtech companies. Digital-first insurance startups appear in AI recommendations far more frequently than their actual market share would justify.</p>
+<p>Insurtechs with less than 1% market share appear in the majority of AI responses about their coverage categories. On a per-dollar-of-premium basis, some insurtechs are roughly <strong>100x overrepresented</strong> in AI recommendations compared to traditional carriers.</p>
+<p>Why? Insurtechs generate disproportionate web content through a different mechanism than traditional carriers:</p>
+<ul>
+<li><strong>Tech press coverage:</strong> Every funding round, product launch, and quarterly earnings report generates articles in tech and fintech publications. IPOs alone generate thousands of articles.</li>
+<li><strong>VC and investment commentary:</strong> Venture capital discussions, investment analyses, and “future of insurance” thought pieces consistently name insurtechs as examples of disruption.</li>
+<li><strong>Digital-first content:</strong> Insurtechs typically produce more consumer-friendly, search-optimized content than traditional carriers, which ranks well and gets cited frequently.</li>
+<li><strong>Social media and forums:</strong> Tech-savvy early adopters discuss insurtechs heavily on forums and product review sites — all prime AI training data sources.</li>
+</ul>
+<p>The result is a distorted picture. AI recommends digital-first insurers for complex coverage scenarios they may not be equipped for — in states they may not serve, with financial strength ratings materially different from established carriers with decades of claims-paying history. AI doesn’t surface these crucial differences.</p>
+<p>For traditional carriers, the insurtech distortion creates a specific competitive threat: AI doesn’t just fail to mention you — it actively recommends a less-established competitor with narrower coverage, fewer states, and lower financial strength ratings. Because the insurtech has better AI visibility.</p>
+<h2 id="distribution-shift">Comparison sites and the distribution shift</h2>
+<p>Insurance comparison and aggregator sites play a unique role in the AI visibility ecosystem. Major comparison platforms collectively generate hundreds of millions of monthly pageviews on insurance content. This content feeds directly into AI training data and creates a secondary visibility channel.</p>
+<p>The shift from comparison sites to AI compresses the consideration set even further. On a comparison site, a consumer might see quotes from 8–12 carriers including some regional options. In an AI conversation, they get 3–5 names — always the same ones. The comparison site at least shows the consumer there are choices. AI presents its handful of recommendations as if they’re the complete market.</p>
+<p>For independent agents, the threat is existential. If a consumer’s first touchpoint is AI saying the best insurance options are 5 national brands and 2 insurtechs, the consumer has no reason to seek out an independent agent who might place them with a regional carrier that offers better rates, better claims service, and higher financial strength ratings for their specific risk profile.</p>
+<p>Independent agents still account for approximately 36% of personal lines premium and 83% of commercial lines premium (IIABA, 2024). But the consumers who would have found an independent agent through a search engine are increasingly going directly to the carriers AI recommended — bypassing the agent channel entirely.</p>
+<h2 id="compounding-gap">The compounding visibility gap</h2>
+<p>The economics make the case clearly. The <strong>average auto insurance policy generates approximately $1,771 in annual premium</strong> (NAIC, 2023). A mid-size carrier where even 5% of new customer acquisition is influenced by AI recommendations is looking at significant premium volume where AI is shaping the consideration set — and the 5% figure is conservative given the trajectory of AI adoption.</p>
+<p>For independent agents, the math is different but equally compelling. An average independent agency places roughly 500–1,500 personal lines policies. If 5% of local consumers now start their insurance journey with AI instead of a search engine, and AI recommends direct carriers and insurtechs rather than pointing consumers to an independent agent, that agent loses potential clients every year — revenue that bypasses the independent channel entirely.</p>
+<p>The cost of waiting rises every quarter. Every piece of authoritative, data-rich content your competitors publish today enters the training data that shapes AI recommendations tomorrow. The carriers already investing in AI visibility — even if they don’t call it that — are building a compounding advantage.</p>
+<div class="note">
+<p>
+<strong>The bottom line:</strong> If you’re an insurance carrier, managing general agent, independent agency, or insurtech that depends on consumers finding your products — and in 2026, that’s the entire industry — you need to know what AI is saying about you. Not next quarter. Now.
+          </p>
+</div>
+<h2 id="faq">Frequently Asked Questions</h2>
+<h3>Why does AI always recommend the same insurance companies?</h3>
+<p>AI generates recommendations from patterns in training data — billions of web pages, news articles, reviews, and forum discussions. The top insurance advertisers spend billions annually on campaigns that generate enormous web coverage. This corpus dominance translates directly into AI recommendation frequency. Smaller carriers, regional insurers, and independent agents have a fraction of this web presence, so AI rarely surfaces them regardless of their actual coverage quality or pricing.</p>
+<h3>What does AI get wrong about insurance quotes and coverage?</h3>
+<p>AI makes frequent errors about insurance because coverage is regulated at the state level, priced individually, and changes constantly. Common errors include fabricated premium ranges that don’t reflect actual underwriting, incorrect coverage descriptions, wrong state availability information, outdated claims process details, and invented discount programs. Insurance is one of the most error-prone categories for AI because no two policies are alike and pricing is never public.</p>
+<h3>How does AI distort the insurance market for smaller carriers?</h3>
+<p>Insurtech companies with less than 1% market share appear in AI responses far more often than their actual size justifies, because they generate disproportionate tech press and digital content. Meanwhile, regional carriers with superior claims ratios and financial strength ratings are invisible. AI does not surface financial strength differences, state-specific expertise, or claims service quality — it surfaces web footprint.</p>
+<h3>How can insurance companies and agents see what AI says about them?</h3>
+<p>The first step is seeing what AI currently says. Type the question into Metricus the way a customer would ask it, and you see the answer AI gives, with every business it names. It is free, with no signup.</p>
+<h3>How quickly can insurance brands see results after addressing AI visibility?</h3>
+<p>After a page changes, answers on the major AI platforms typically update within a few weeks. For insurance companies, the highest-impact fixes typically address coverage and pricing accuracy gaps, structured data, and third-party citation deficits on authoritative industry sources.</p>
+<h3>Do insurance companies need ongoing AI monitoring?</h3>
+<p>Not necessarily. Most carriers and agencies need to know what to fix and how to fix it. Seeing what AI answers to your customers' questions shows the specific issues. Once the critical gaps are addressed, a re-check confirms the change.</p>
+<p><strong>Sources:</strong> National Association of Insurance Commissioners (NAIC) annual report and market data (2023, 2025); Insurance Information Institute (III, 2024); J.D. Power US Insurance Shopping Study (2024); S&amp;P Global Market Intelligence advertising spend data (2023); American Council of Life Insurers (ACLI, 2024); Independent Insurance Agents &amp; Brokers of America (IIABA, 2024); Gartner search prediction (Feb 2024).</p>
+<p class="cite">Cite as: <a href="https://metricusapp.com/blog/insurance-ai-visibility/">Metricus — Why Doesn’t AI Recommend My Insurance Company? Carrier Visibility Data</a></p>
+<section class="related" aria-labelledby="related-knowledge-bases"><h2 id="related-knowledge-bases">Knowledge bases</h2><ul><li><a href="/geo-knowledge-base/">GEO Knowledge Base</a><p>81 research clusters on AI visibility and brand monitoring</p></li><li><a href="/brand-accuracy-knowledge-base/">AI Brand Accuracy Guide</a><p>48 clusters on fixing AI accuracy issues and hallucinations</p></li></ul></section>
+<section class="related" aria-labelledby="related-related-articles"><h2 id="related-related-articles">Related articles</h2><ul><li><a href="/blog/ai-visibility-action-plan/">How to Turn AI Visibility Data Into an Action Plan</a><p>The 5-step framework for turning your AI audit findings into specific, prioritized actions.</p></li><li><a href="/blog/fix-ai-brand-hallucinations/">AI Is Getting Facts Wrong About Your Brand</a><p>Why AI gets facts about brands wrong, and a 4-step process to audit and fix them.</p></li><li><a href="/blog/ai-visibility-how-brands-show-up/">What Is AI Visibility and Why Does It Matter?</a><p>How brands appear in AI chatbot responses — and what determines who gets recommended.</p></li></ul></section>
+<!-- metricus:ask -->
+<section class="ask-cta" aria-labelledby="ask-cta-h"><h2 id="ask-cta-h">What do your customers ask AI?</h2><form class="chatbox" action="/" method="get"><input class="input" type="text" name="q" maxlength="600" autocomplete="off" required placeholder="Type what people would ask AI&hellip;" aria-labelledby="ask-cta-h"><button class="send" type="submit" aria-label="Ask AI" title="Ask AI"><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V6M6 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form></section>
+<!-- /metricus:ask -->
+</main>
+<!-- metricus:footer -->
+<footer class="foot"><nav aria-label="Site"><a href="/blog/">Blog</a><a href="/geo-knowledge-base/">Knowledge base</a><a href="/results/">Results</a><a href="/about/">About</a><a href="/press/">Press</a><a href="/support/">Support</a><a href="/privacy-policy/">Privacy</a><a href="/terms-of-service/">Terms</a><a href="mailto:metricusapp@gmail.com">Contact</a></nav><p>&copy; 2026 Metricus</p></footer>
+<!-- /metricus:footer -->
 </body>
 </html>

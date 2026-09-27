@@ -1,456 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agency Guide to AI Visibility: Running the Metricus Optimizer on Client Pages | Metricus</title>
-  <meta name="description" content="How agencies run the free Metricus optimizer on client pages: what to run, what to show the client, which files to hand over, and how to scope paid work.">
-  <meta property="og:title" content="Agency Guide to AI Visibility: Running the Metricus Optimizer on Client Pages">
-  <meta property="og:description" content="How agencies run the free Metricus optimizer on client pages: what to run, what to show the client, which files to hand over, and how to scope paid work.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://metricusapp.com/blog/agency-guide-ai-visibility-audits/">
-  <meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Agency Guide to AI Visibility: Running the Metricus Optimizer on Client Pages | Metricus">
-  <meta name="twitter:description" content="How agencies run the free Metricus optimizer on client pages: what to run, what to show the client, which files to hand over, and how to scope paid work.">
-  <meta name="twitter:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <link rel="canonical" href="https://metricusapp.com/blog/agency-guide-ai-visibility-audits/">
-
-  <!-- GTM -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w70oz7g1k3");
-  </script>
-
-
-  <!-- JSON-LD BlogPosting -->
-  <script type="application/ld+json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agency Guide to AI Visibility for Client Websites | Metricus</title>
+<meta name="description" content="How agencies use Metricus with clients: what to ask AI, what to show the client, what to hand over, and how to scope the work you charge for.">
+<link rel="canonical" href="https://metricusapp.com/blog/agency-guide-ai-visibility-audits/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Metricus">
+<meta property="og:url" content="https://metricusapp.com/blog/agency-guide-ai-visibility-audits/">
+<meta property="og:title" content="Agency Guide to AI Visibility for Client Websites">
+<meta property="og:description" content="How agencies use Metricus with clients: what to ask AI, what to show the client, what to hand over, and how to scope the work you charge for.">
+<meta property="og:image" content="https://metricusapp.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Metricus: see what AI answers when your customers ask for what you offer.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Agency Guide to AI Visibility for Client Websites | Metricus">
+<meta name="twitter:description" content="How agencies use Metricus with clients: what to ask AI, what to show the client, what to hand over, and how to scope the work you charge for.">
+<meta name="twitter:image" content="https://metricusapp.com/assets/og.png">
+<!-- metricus:head -->
+<link rel="stylesheet" href="/assets/metricus.css?v=20260927">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#FBFAF7">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w70oz7g1k3");</script>
+<!-- /metricus:head -->
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "Agency Guide to AI Visibility for Client Websites",
+ "description": "How agencies use Metricus with clients: what to ask AI, what to show the client, what to hand over, and how to scope the work you charge for.",
+ "author": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "datePublished": "2026-03-30",
+ "dateModified": "2026-09-27",
+ "mainEntityOfPage": "https://metricusapp.com/blog/agency-guide-ai-visibility-audits/",
+ "image": "https://metricusapp.com/assets/og.png"
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
   {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Agency Guide to AI Visibility: Running the Metricus Optimizer on Client Pages",
-    "description": "How agencies run the free Metricus optimizer on client pages: what to run, what to show the client, which files to hand over, and how to scope paid work.",
-    "author": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "datePublished": "2026-03-30",
-    "dateModified": "2026-09-04",
-    "mainEntityOfPage": "https://metricusapp.com/blog/agency-guide-ai-visibility-audits/",
-    "image": "https://metricusapp.com/landing/img/og.jpg"
-  }
-  </script>
-
-  <!-- JSON-LD BreadcrumbList -->
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://metricusapp.com/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "AI Visibility for Agencies", "item": "https://metricusapp.com/blog/agency-guide-ai-visibility-audits/"}
-    ]
-  }
-  </script>
-
-  <!-- JSON-LD FAQPage -->
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://metricusapp.com/blog/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do agencies use the Metricus optimizer with clients?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Run it on each page the engagement covers, show the client the answer an AI assistant gives about the page and the passages that caused it, agree on the rewrites, and hand over the changes as files from the tool. There is no account and nothing to onboard."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How should an agency scope the work it charges for?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Charge for the work the tool does not do: choosing the pages, deciding which rewrites the client can stand behind, getting approval, publishing the changes on the live site, and running each page again afterwards. Quote per page or per batch of pages, and list those steps in the scope."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need technical staff to offer this?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. The optimizer runs in the browser and shows the answer, the marked passages, and the rewrites. Publishing the rewrites needs whoever already edits the client's site, and nothing else."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is there a minimum commitment or subscription?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. The Metricus optimizer is free, with no signup, no credit card, no monthly fee, and no contract. Run it on as many client pages as you need."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What AI platforms are covered?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The run shows the answer an AI assistant gives about the client's page and the passages behind it. It covers one page per run rather than a list of platforms. A client who wants mentions tracked across platforms over time is asking for monitoring, which is a different service."
-        }
-      }
-    ]
+   "@type": "ListItem",
+   "position": 3,
+   "name": "AI Visibility for Agencies",
+   "item": "https://metricusapp.com/blog/agency-guide-ai-visibility-audits/"
   }
-  </script>
-
-  <!-- Google Fonts -->
-
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#515F74',
-            'primary-hover': '#1E293B',
-            'on-primary': '#f6f7ff',
-            'on-primary-fixed': '#324054',
-            'primary-dim': '#455368',
-            surface: '#f7f9fb',
-            'surface-container-low': '#f0f4f7',
-            'surface-container': '#e8eff3',
-            'surface-container-lowest': '#ffffff',
-            'surface-container-highest': '#d9e4ea',
-            'surface-container-high': '#e1e9ee',
-            'surface-variant': '#d9e4ea',
-            'on-surface': '#2a3439',
-            'on-surface-variant': '#566166',
-            outline: '#717c82',
-            'outline-variant': '#a9b4b9',
-            'slate-text': '#0F172A',
-            'slate-muted': '#64748B',
-            'slate-accent': '#475569',
-          },
-          fontFamily: {
-            display: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            body: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            headline: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            label: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-          },
-          borderRadius: {
-            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
-            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
-            full: '0.75rem',
-          },
-        },
-      },
-    }
-  </script>
-
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: #ffffff;
-      color: #0F172A;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .font-display { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-headline { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-body-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-
-    .editorial-btn {
-      transition: background-color 150ms ease-in-out, transform 150ms ease;
-    }
-    .editorial-btn:hover {
-      background-color: #1E293B;
-    }.blog-card {
-      transition: transform 200ms ease, background-color 200ms ease;
-    }
-    .blog-card:hover {
-      transform: translateY(-2px);
-      background-color: #f7f9fb;
-    }
-
-    /* Article prose styles */
-    .article-body h2 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.75rem;
-      line-height: 1.2;
-      color: #0F172A;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-    }
-    @media (min-width: 768px) {
-      .article-body h2 {
-        font-size: 2rem;
-      }
-    }
-    .article-body h3 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      line-height: 1.3;
-      color: #0F172A;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    .article-body p {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-    }
-    .article-body ul, .article-body ol {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-      padding-left: 1.5rem;
-    }
-    .article-body ul { list-style-type: disc; }
-    .article-body ol { list-style-type: decimal; }
-    .article-body li { margin-bottom: 0.5rem; }
-    .article-body blockquote {
-      border-left: 2px solid #334155;
-      padding-left: 1.5rem;
-      font-style: italic;
-      color: #475569;
-      font-size: 1.125rem;
-      line-height: 1.75;
-      margin: 2rem 0;
-    }
-    .article-body a {
-      color: #334155;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .article-body a:hover {
-      color: #1E293B;
-    }
-  </style>
-  <script src="/js/reader-pulse-b.js" defer></script>
+ ]
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How do agencies use Metricus with clients?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Type the question the client's customers ask AI and show the client the answer, with every business it names. Pick the client's website, edit the answer with the client into what they want AI to say, and hand over the new text for the website with the AI Visibility Score before and after. There is no account and nothing to onboard."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How should an agency scope the work it charges for?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Charge for the work Metricus does not do: choosing the customer questions, agreeing on an answer the client can stand behind, checking the new text against what the client offers, getting approval, publishing it on the live website, and following up on the scores after 7 days. Quote per question or per batch of questions, and list those steps in the scope."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do I need technical staff to offer this?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Metricus works in the browser and shows the answer, the businesses it names, and the new text for the client's website. Publishing the new text needs whoever already edits the client's website, and nothing else."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is there a minimum commitment or subscription?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Metricus is free, with no signup, no credit card, no monthly fee, and no contract. Use it for as many clients and questions as you need."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What AI platforms are covered?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Metricus shows the answer AI gives to the client's customer question and every business it names, rather than a list of platforms. A client who wants mentions tracked across platforms over time is asking for monitoring, which is a different service."
+   }
+  }
+ ]
+}</script>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
-
-  <!-- Site Nav -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 gap-4">
-      <a href="/" class="text-on-surface font-semibold" aria-label="Metricus home">Metricus <span class="font-normal text-on-surface-variant">Optimizer</span></a>
-      <div class="flex items-center gap-5">
-        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface">Learn</a>
-        <a href="/ai-visibility-optimizer-tool/" class="bg-primary text-on-primary text-sm font-semibold px-4 py-2.5 hover:bg-primary-dim">Open the tool</a>
-      </div>
-    </div>
-  </header>
-
-
-
-  <!-- Mobile Menu Overlay -->
-
-
-
-  <main class="flex-grow flex flex-col relative overflow-x-hidden">
-
-    <!-- Background dot grid -->
-    <div class="absolute inset-0 -z-10 pointer-events-none"></div>
-
-
-    <!-- ========== ARTICLE ========== -->
-    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
-
-      <!-- Breadcrumb -->
-      <nav class="mb-8">
-        <ol class="flex items-center gap-2 text-xs text-slate-muted">
-          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
-          <li class="select-none">/</li>
-          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Learn</a></li>
-          <li class="select-none">/</li>
-          <li class="text-slate-text">AI Visibility for Agencies</li>
-        </ol>
-      </nav>
-
-      <!-- Article Header -->
-      <header class="mb-12">
-        <p class="text-xs text-primary font-semibold mb-4">For Agencies</p>
-        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
-          Agency Guide to AI Visibility: Running the Metricus Optimizer on Client Pages
-        </h1>
-        <p class="text-sm text-outline">Metricus &middot; Last updated: September 2026</p>
-      </header>
-
-
-      <!-- LLM Answer Block -->
-      <div class="bg-surface-container-low p-8 mb-12">
-        <p class="text-lg leading-relaxed text-on-surface">
-          Agencies can run the free Metricus optimizer on any client page. Put in the URL and you see the answer an AI assistant gives about that page, the passages on the page that caused it, and a rewrite for each one. No account, nothing installed, nothing changed on the client's live site. This guide covers what to run, what to show the client, which files you can hand over, and how to scope the work you charge for.
+<body class="doc">
+<!-- metricus:header -->
+<header class="nav"><div class="in"><a class="logo" href="/" id="navhome">Metricus</a><span class="sp"></span><span class="muted" id="host"></span></div></header>
+<!-- /metricus:header -->
+<main class="doc-main" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Learn</a> / <span aria-current="page">AI Visibility for Agencies</span></nav>
+<p class="kicker">For Agencies</p>
+<h1>Agency Guide to AI Visibility for Client Websites</h1>
+<p class="byline">Metricus · Last updated: September 2026</p>
+<div class="note">
+<p>
+          Agencies can use Metricus for any client, free and with no account. Type the question the client's customers ask AI and you see the answer, with every business it names. Pick the client's website, edit the answer with the client, and get new text for the website, with the AI Visibility Score before and after. Nothing changes on the client's live website. This guide covers what to ask, what to show the client, what you can hand over, and how to scope the work you charge for.
         </p>
-      </div>
-
-
-      <!-- Article Body -->
-      <div class="article-body">
-
-        <h2>Why Clients Are Asking</h2>
-
-        <p>
-          The conversation in every client meeting has shifted. Alongside SEO rankings and paid search performance, brands now ask a question most agencies weren't prepared for: "Why doesn't ChatGPT recommend us?" This is not a niche concern from early adopters. A growing share of B2B and B2C buyers now consult AI assistants during purchasing research, and when a brand is absent from those answers, clients notice. Metricus research data shows that brands visible in AI responses capture consideration before a prospect ever reaches a search engine. Agencies that can answer the AI visibility question retain clients who would otherwise look elsewhere for expertise.
+</div>
+<h2>Why Clients Are Asking</h2>
+<p>
+          The conversation in every client meeting has shifted. Alongside SEO rankings and paid search performance, brands now ask a question most agencies weren't prepared for: "Why doesn't ChatGPT recommend us?" This is not a niche concern from early adopters. A growing share of B2B and B2C buyers now consult AI assistants during purchasing research, and when a brand is absent from those answers, clients notice. Agencies that can answer the AI visibility question retain clients who would otherwise look elsewhere for expertise.
         </p>
-
-        <p>
-          Clients do not want another dashboard login. They want to see what an assistant says about their pages, why it says it, and what to change. A run of the optimizer gives you that for one page, and the files it produces are what the client keeps.
+<p>
+          Clients do not want another dashboard login. They want to see what AI says when their customers ask, which businesses it names instead of them, and what to change on their website. Metricus shows that for any question you type, and the new text it gives for the website is what the client keeps.
         </p>
-
-        <h2>What to Run</h2>
-
-        <p>
-          Start with the pages a buyer reaches while comparing options: the main product or service pages, the pricing page, and the page that says what the company does. Home pages are usually the weakest source, so run them last. Put in each URL and read the answer first. Note where it is wrong, thin, or missing the claim the client cares about most.
+<h2>What to Ask</h2>
+<p>
+          Start with the questions a buyer asks while comparing options, in the buyer's own words, such as which provider fits their situation or what to use instead of the market leader. The client's sales and support teams hear these questions every week, so ask them for the wording. Type one question and read the answer first. Note which businesses it names, whether the client is among them, and where the answer is wrong, thin, or missing the claim the client cares about most.
         </p>
-
-        <p>
-          Then read the marked passages. The answer traces back to specific sentences on the page, often ones written for a different purpose, such as a headline that never says what the product is. Each marked passage comes with a rewrite. Try the rewrite, or type your own wording, and the assistant is asked again, so you can see whether the answer changed before anything is published. Run one page at a time and keep a list of which pages you ran and what changed on each.
+<p>
+          Take one question at a time and keep a list of the questions you asked, who each answer named, and where the client stood.
         </p>
-
-        <h2>What to Show the Client</h2>
-
-        <p>
-          Show the answer first. A client recognizes their own page in the assistant's words, and a wrong or vague answer makes the case for the work without a score to argue over. Then show the marked passages beside the answer, so the client sees the cause. Then show the answer after the rewrites. The before and after on the client's own page is the whole presentation.
+<h2>What to Show the Client</h2>
+<p>
+          Show the answer first, with every business it names. A client recognizes their competitors in the list, and seeing who AI names instead of them makes the case for the work without a score to argue over. Then pick the client's website from the list, or add its address if the answer left it out, and edit the answer together into what the client wants AI to say about them. "Suggest improvements" proposes small edits when the wording stalls.
         </p>
-
-        <p>
-          Present only the rewrites the client can stand behind. A rewrite that claims something the product does not do is worse than the original, so check each one against what the client actually offers before the meeting.
+<p>
+          Keep only the claims the client can stand behind. An edited answer that claims something the business does not do leads to text the client cannot publish, so check each edit against what the client actually offers before the meeting ends.
         </p>
-
-        <h2>The Files You Can Hand Over</h2>
-
-        <p>
-          A run ends with files you can pass to the client or to whoever edits the site. Each one comes straight from the tool:
+<h2>What You Can Hand Over</h2>
+<p>
+          Once the answer says what the client wants, Metricus gives new text for the client's website and shows the answer AI gives with the rewritten website next to today's answer. The AI Visibility Score shows how often AI mentions the client and how often it recommends them across their customers' questions, today and with the rewritten website. What you can pass to the client or to whoever edits the website:
         </p>
-
-        <ul>
-          <li>A diff of the page before and after, so the developer or editor sees every changed passage in place.</li>
-          <li>A CSV of the changes, one row per change, which drops into a ticket system or a content calendar.</li>
-          <li>The findings as markdown: the prompt, the answer today, the passages behind it, and every change you kept. This is the file for a client write-up.</li>
-          <li>A printed copy of the run as it stands, for a meeting.</li>
-        </ul>
-
-        <p>
-          Nothing is written back to the client's site. The changes go live when whoever edits the site puts them in, which is the part of the work you control and can bill.
+<ul>
+<li>The new text for the website, copied into the document, ticket or content calendar the editor works from.</li>
+<li>Today's answer next to the answer with the rewritten website, so the client sees what the change is for.</li>
+<li>The AI Visibility Score today and with the rewritten website. This is the before and after for a client write-up.</li>
+</ul>
+<p>
+          Nothing is changed on the client's live website. The new text goes live when whoever edits the website publishes it, which is the part of the work you control and can bill. Leave an email at the end, and Metricus looks at the live website again after 7 days and emails the scores, so the follow-up the client will ask for is already on its way.
         </p>
-
-
-        <!-- METRICUS_MID_CTA -->
-        
-
-        <div data-reader-pulse-b data-source="agency-guide-ai-visibility-audits"></div>
-
-
-        <h2>How to Scope the Work You Charge For</h2>
-
-        <p>
-          The run itself is free, so it is not the thing you bill. Bill the judgment around it: choosing which pages matter, deciding which rewrites fit the client's claims and voice, getting them approved, publishing them on the live site, and running each page again afterwards to confirm the answer changed. Quote per page or per batch of pages, and write those steps into the scope so the client knows what the fee covers.
+<div data-reader-pulse-b="" data-source="agency-guide-ai-visibility-audits"></div>
+<h2>How to Scope the Work You Charge For</h2>
+<p>
+          Metricus itself is free, so it is not the thing you bill. Bill the judgment around it: choosing which customer questions matter, agreeing on the answer the client wants AI to give, checking the new text against the client's claims and voice, getting it approved, publishing it on the live website, and following up on the scores after 7 days to confirm the answer changed. Quote per question or per batch of questions, and write those steps into the scope so the client knows what the fee covers.
         </p>
-
-        <p>
-          Compare that with per-client subscriptions to AI monitoring dashboards, which run $189 to $300 per client per month, need analyst time to interpret, and still have to be turned into something the client can act on. For an agency with ten clients, that is $22,000 to $36,000 a year in tooling before any work is done. Monitoring has its place when a client wants mentions tracked over time. Fixing pages is a different job. For that job the tool costs nothing, so the fee is for your work, and the client can see what the fee bought.
+<p>
+          Compare that with per-client subscriptions to AI monitoring dashboards, which run $189 to $300 per client per month, need analyst time to interpret, and still have to be turned into something the client can act on. For an agency with ten clients, that is $22,000 to $36,000 a year in tooling before any work is done. Monitoring has its place when a client wants mentions tracked over time. Changing what AI says about the client is a different job. For that job Metricus costs nothing, so the fee is for your work, and the client can see what the fee bought.
         </p>
-
-
-        <!-- ========== FAQ SECTION ========== -->
-        <h2 id="faq">Frequently Asked Questions</h2>
-
-        <h3>How do agencies use the Metricus optimizer with clients?</h3>
-        <p>
-          Run it on each page the engagement covers, show the client the answer an AI assistant gives about the page and the passages that caused it, agree on the rewrites, and hand over the changes as files from the tool. There is no account and nothing to onboard.
+<h2 id="faq">Frequently Asked Questions</h2>
+<h3>How do agencies use Metricus with clients?</h3>
+<p>
+          Type the question the client's customers ask AI and show the client the answer, with every business it names. Pick the client's website, edit the answer with the client into what they want AI to say, and hand over the new text for the website with the AI Visibility Score before and after. There is no account and nothing to onboard.
         </p>
-
-        <h3>How should an agency scope the work it charges for?</h3>
-        <p>
-          Charge for the work the tool does not do: choosing the pages, deciding which rewrites the client can stand behind, getting approval, publishing the changes on the live site, and running each page again afterwards. Quote per page or per batch of pages, and list those steps in the scope.
+<h3>How should an agency scope the work it charges for?</h3>
+<p>
+          Charge for the work Metricus does not do: choosing the customer questions, agreeing on an answer the client can stand behind, checking the new text against what the client offers, getting approval, publishing it on the live website, and following up on the scores after 7 days. Quote per question or per batch of questions, and list those steps in the scope.
         </p>
-
-        <h3>Do I need technical staff to offer this?</h3>
-        <p>
-          No. The optimizer runs in the browser and shows the answer, the marked passages, and the rewrites. Publishing the rewrites needs whoever already edits the client's site, and nothing else.
+<h3>Do I need technical staff to offer this?</h3>
+<p>
+          No. Metricus works in the browser and shows the answer, the businesses it names, and the new text for the client's website. Publishing the new text needs whoever already edits the client's website, and nothing else.
         </p>
-
-        <h3>Is there a minimum commitment or subscription?</h3>
-        <p>
-          No. The Metricus optimizer is free, with no signup, no credit card, no monthly fee, and no contract. Run it on as many client pages as you need.
+<h3>Is there a minimum commitment or subscription?</h3>
+<p>
+          No. Metricus is free, with no signup, no credit card, no monthly fee, and no contract. Use it for as many clients and questions as you need.
         </p>
-
-        <h3>What AI platforms are covered?</h3>
-        <p>
-          The run shows the answer an AI assistant gives about the client's page and the passages behind it. It covers one page per run rather than a list of platforms. A client who wants mentions tracked across platforms over time is asking for monitoring, which is a different service.
+<h3>What AI platforms are covered?</h3>
+<p>
+          Metricus shows the answer AI gives to the client's customer question and every business it names, rather than a list of platforms. A client who wants mentions tracked across platforms over time is asking for monitoring, which is a different service.
         </p>
-
-      </div>
-      <!-- End Article Body -->
-
-
-      <!-- ========== ARTICLE CTA ========== -->
-      <section class="mt-16 bg-on-surface text-surface">
-        <div class="border-t border-outline-variant/30 mt-16 pt-10" data-cta="tool">
-        <h2 class="text-2xl font-semibold text-on-surface mb-2">Put in a page.</h2>
-        <p class="text-on-surface-variant mb-5 max-w-xl">See what an AI assistant answers about your page, which passages caused it, and a rewrite for each one. Free, no signup.</p>
-        <form class="flex flex-col sm:flex-row gap-2 max-w-xl" action="/ai-visibility-optimizer-tool/" method="get">
-          <label class="sr-only" for="cta-url">Address of the page to check</label>
-          <input id="cta-url" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="your-site.com/page" required class="flex-1 min-w-0 px-4 py-3 border border-outline-variant bg-white text-on-surface">
-          <button type="submit" class="bg-primary text-on-primary font-semibold px-6 py-3 hover:bg-primary-dim whitespace-nowrap">Start optimizing</button>
-        </form>
-      </div>
-      </section>
-
-      <!-- ========== CITE THIS ARTICLE ========== -->
-      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
-        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
-          <cite class="not-italic"><a href="https://metricusapp.com/blog/agency-guide-ai-visibility-audits/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; Agency Guide to AI Visibility: Running the Metricus Optimizer on Client Pages</a></cite>
-        </p>
-      </footer>
-
-    </article>
-
-
-  </main>
-
-
-  <!-- ========== FOOTER ========== -->
-  <!-- Site Footer -->
-  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-on-surface-variant">
-      <span class="text-on-surface font-semibold">Metricus</span>
-      <a href="/ai-visibility-optimizer-tool/" class="hover:text-on-surface">Open the tool</a>
-      <a href="/blog/" class="hover:text-on-surface">Learn</a>
-      <a href="/methodology/" class="hover:text-on-surface">How it works</a>
-      <a href="/results/" class="hover:text-on-surface">Results</a>
-      <a href="/for-agencies/" class="hover:text-on-surface">For agencies</a>
-      <a href="/about/" class="hover:text-on-surface">About</a>
-      <a href="/press/" class="hover:text-on-surface">Press</a>
-      <a href="/support/" class="hover:text-on-surface">Support</a>
-      <a href="/privacy-policy/" class="hover:text-on-surface">Privacy</a>
-      <a href="/terms-of-service/" class="hover:text-on-surface">Terms</a>
-      <a href="mailto:metricusapp@gmail.com" class="hover:text-on-surface">Contact</a>
-      <span class="ml-auto">&copy; 2026 Metricus</span>
-    </div>
-  </footer>
-
+<p class="cite">Cite as: <a href="https://metricusapp.com/blog/agency-guide-ai-visibility-audits/">Metricus — Agency Guide to AI Visibility for Client Websites</a></p>
+<!-- metricus:ask -->
+<section class="ask-cta" aria-labelledby="ask-cta-h"><h2 id="ask-cta-h">What do your customers ask AI?</h2><form class="chatbox" action="/" method="get"><input class="input" type="text" name="q" maxlength="600" autocomplete="off" required placeholder="Type what people would ask AI&hellip;" aria-labelledby="ask-cta-h"><button class="send" type="submit" aria-label="Ask AI" title="Ask AI"><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V6M6 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form></section>
+<!-- /metricus:ask -->
+</main>
+<!-- metricus:footer -->
+<footer class="foot"><nav aria-label="Site"><a href="/blog/">Blog</a><a href="/geo-knowledge-base/">Knowledge base</a><a href="/results/">Results</a><a href="/about/">About</a><a href="/press/">Press</a><a href="/support/">Support</a><a href="/privacy-policy/">Privacy</a><a href="/terms-of-service/">Terms</a><a href="mailto:metricusapp@gmail.com">Contact</a></nav><p>&copy; 2026 Metricus</p></footer>
+<!-- /metricus:footer -->
+<script src="/js/reader-pulse-b.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,342 @@
+/* Metricus: one stylesheet for every page.
+   Set for dyslexic readers (British Dyslexia Association style guide, WCAG 1.4.12): plain system sans-serif at 18px, a little
+   extra letter and word spacing, line height 1.6, one left-aligned column, bold for emphasis (no italics, no capitals), an
+   off-white ground. Grey is today, blue is with your edits, yellow marks added words. Space separates things, not lines.
+   Sections: tokens and base; the bar, the footer and the question box; fields and buttons; the tool on "/"; the landing
+   under it; articles and the other pages. */
+
+/* ---------------------------------------------------------------- tokens and base */
+:root{
+  --bg:#FBFAF7; --paper:#FFFFFF; --text:#1F1F1F; --muted:#545454; --faint:#8a8a8a; --line:#E4E1DA; --field:#BDB8AE;
+  --blue:#0B57D0; --mark:#FCE88A; --soft:#F1EFEA;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font:400 18px/1.6 var(--font);letter-spacing:.015em;word-spacing:.08em;-webkit-font-smoothing:antialiased}
+[hidden]{display:none!important}
+h1{font-size:30px;line-height:1.3;font-weight:700;letter-spacing:0}
+h2{font-size:22px;line-height:1.35;font-weight:700;letter-spacing:0;margin-top:52px}
+h3{font-size:19px;line-height:1.4;font-weight:700;letter-spacing:0;margin-top:28px}
+h1+*,h2+*,h3+*{margin-top:14px}
+p+p{margin-top:12px}
+a{color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+b,strong{font-weight:700}
+em,i,cite{font-style:normal}
+img,svg,video{max-width:100%}
+code{font-family:var(--mono);font-size:.92em}
+.muted{color:var(--muted)}
+.small{font-size:16px}
+ul.list{padding-left:22px}
+ul.list li+li{margin-top:8px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ---------------------------------------------------------------- the bar: the wordmark only, 44px, it stays at the top */
+.nav{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:5}
+.nav .in{height:44px;display:flex;align-items:center;gap:18px;padding:0 20px}
+.nav .logo{font-weight:700;font-size:17px;color:var(--text);text-decoration:none}
+.nav .sp{flex:1}
+#host{font-size:14px}
+body.doc .nav .in{max-width:680px;margin:0 auto;padding:0 24px}
+
+/* the footer: the site's pages in one wrapping line */
+.foot{max-width:680px;margin:0 auto;padding:40px 24px 48px;font-size:16px;color:var(--muted)}
+.foot nav{display:flex;flex-wrap:wrap;gap:6px 22px}
+.foot a{color:var(--muted);text-decoration:none}
+.foot a:hover{text-decoration:underline}
+.foot a:hover{color:var(--text)}
+.foot p{margin-top:14px}
+body.app .foot{max-width:900px}
+
+/* the question box at the end of every page: a label and the pill box; it opens the tool on "/" with the question */
+.ask-cta{margin-top:64px}
+.ask-cta h2{margin-top:0}
+.chatbox{position:relative;margin-top:14px}
+.chatbox .input{display:block;width:100%;min-height:52px;height:52px;border:1.5px solid var(--field);border-radius:26px;padding:13px 58px 13px 20px;font:inherit;background:var(--paper);color:var(--text);line-height:1.45}
+.chatbox textarea.input{max-height:230px;resize:none;overflow-y:hidden}
+.chatbox .input:focus{outline:none;border-color:var(--text)}
+.chatbox .input::placeholder{color:#8a857c}
+.send{position:absolute;right:9px;bottom:9px;width:34px;height:34px;border-radius:50%;border:0;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.send svg{width:18px;height:18px}
+.send:hover{filter:brightness(1.08)}
+.send[disabled]{opacity:.3;cursor:default}
+.send .stopicon{display:none}
+.send.busy .arrow{display:none}
+.send.busy .stopicon{display:block}
+
+/* ---------------------------------------------------------------- fields and buttons */
+label.f{display:block;font-size:18px;margin-bottom:6px}
+.input{width:100%;height:44px;border:1.5px solid var(--field);border-radius:8px;padding:0 14px;font:inherit;font-size:18px;background:var(--paper);color:var(--text)}
+.input::placeholder{color:#8a857c}
+textarea.input{height:auto;min-height:110px;padding:10px 12px;line-height:1.5;resize:vertical}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:44px;padding:0 18px;border-radius:8px;border:1.5px solid var(--field);background:var(--paper);color:var(--text);font:700 18px/1 var(--font);letter-spacing:.01em;cursor:pointer;white-space:nowrap;text-decoration:none}
+.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btns.center{justify-content:center}
+.hint{font-size:16px;color:var(--muted);margin-top:4px}
+.hint.center{text-align:center}
+.field-row{margin-top:20px}
+.choice{display:block;width:100%;text-align:left;border:1.5px solid var(--field);border-radius:8px;background:var(--paper);padding:14px 18px;color:var(--text);text-decoration:none}
+.choice+.choice{margin-top:10px}
+.choice b{display:block;font-size:19px;color:var(--blue)}
+.choice span{display:block;font-size:16px;color:var(--muted);margin-top:2px}
+input[type=checkbox],input[type=radio]{accent-color:var(--blue);width:20px;height:20px;margin:3px 0 0;flex:none}
+.ghost{font:inherit;font-size:14px;line-height:1.2;padding:3px 10px;border:1px solid var(--line);border-radius:14px;background:transparent;color:var(--muted);cursor:pointer;white-space:nowrap}
+.ghost:hover{color:var(--text);border-color:var(--field)}
+.ghost[disabled]{opacity:.45;cursor:default}
+.tog,.cp{display:inline-flex;align-items:center;justify-content:center;width:24px;height:22px;padding:0;border:0;border-radius:6px;background:none;color:var(--muted);cursor:pointer;vertical-align:middle}
+.tog svg,.cp svg{width:15px;height:15px}
+.tog:hover,.cp:hover{color:var(--text);background:var(--soft)}
+.tog.on{color:var(--text);background:var(--soft)}
+.cp.ok{color:var(--blue)}
+.add{background:var(--mark);padding:1px 3px;border-radius:3px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.del{text-decoration:line-through;color:var(--muted)}
+.frame{border:1.5px solid var(--line);border-radius:8px;overflow:hidden;margin-top:18px}
+.frame .pad{padding:10px 14px;line-height:1.55}
+table.nums{border-collapse:collapse;margin-top:16px;width:100%}
+table.nums td{padding:10px 0;border-bottom:1px solid var(--line);vertical-align:baseline}
+table.nums tr:first-child td{border-top:1px solid var(--line)}
+table.nums .l{width:44%}
+table.nums .n{font-size:34px;font-weight:700;width:22%}
+table.nums .n.now{color:var(--muted)}
+table.nums .n.after{color:var(--blue)}
+table.nums .c{font-size:16px;color:var(--muted)}
+/* AI at work: two sparks that breathe and turn slowly */
+.spark{display:inline-flex;flex:none;align-items:center;justify-content:center;width:22px;height:22px}
+.spark svg{width:22px;height:22px;fill:var(--blue);animation:turn 9s linear infinite}
+.spark .s1{transform-origin:12px 12px;animation:breathe 1.6s ease-in-out infinite}
+.spark .s2{transform-origin:19px 6.5px;animation:breathe 1.6s ease-in-out .55s infinite}
+@keyframes breathe{0%,100%{transform:scale(.62);opacity:.35}50%{transform:scale(1);opacity:1}}
+@keyframes turn{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes wiggle{0%,100%{transform:translateX(0)}20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+@keyframes fadein{from{opacity:.25}to{opacity:1}}
+.wiggle{animation:wiggle .4s ease}
+@media (prefers-reduced-motion:reduce){.wiggle{animation:none}.spark svg,.spark .s1,.spark .s2{animation:none}}
+
+/* ---------------------------------------------------------------- the tool on "/": the panel on the left, the 900px chat column */
+.page{max-width:900px;margin:0 auto;padding:28px 24px 72px}
+.page p{line-height:1.55}
+.page h1{font-size:26px;margin-bottom:18px}
+.page h2{font-size:20px;margin-top:28px}
+.layout{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:start;min-height:calc(100vh - 45px)}
+.side-panel{grid-column:1;width:280px;padding:10px 20px 24px 20px;position:sticky;top:45px;max-height:calc(100vh - 45px);overflow:auto;font-size:15px}
+.mainwrap{grid-column:2;min-width:0}
+.side-panel.closed{width:auto;padding-right:8px}
+.side-panel.closed .sidebody{display:none}
+.side-panel #counts{margin-top:10px;font-size:14px}
+.cand{display:flex;gap:12px;align-items:flex-start;margin-top:14px}
+.cand .t{flex:1}
+.side-panel .cand{padding:0;margin-top:5px;gap:8px;align-items:center;font-size:14px}
+.side-panel .cand input[type=radio]{width:15px;height:15px;margin:0}
+.side-panel .cand .t{line-height:1.3;display:flex;align-items:baseline;gap:6px;min-width:0}
+.side-panel .cand .nm{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.side-panel .cand .u{flex:none;color:var(--muted);font-size:12px;text-decoration:none;white-space:nowrap}
+.side-panel .cand .u:hover{text-decoration:underline}
+.side-panel .addbox{margin-top:14px;display:flex;flex-direction:column;gap:8px}
+.side-panel .addbox .input{height:38px;font-size:14px}
+.side-panel .addbox .btn{height:38px;font-size:14px;padding:0 14px}
+.sidetog{display:inline-flex;align-items:center;justify-content:center;width:30px;height:28px;padding:0;border:0;border-radius:6px;background:none;color:var(--muted);cursor:pointer}
+.sidetog svg{width:18px;height:18px}
+.sidetog:hover{color:var(--text);background:var(--soft)}
+@media (max-width:900px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .mainwrap{grid-column:1}
+  #panel-slot .side-panel{position:static;width:auto;max-height:none;overflow:visible;padding:0;margin-top:16px;font-size:16px}
+  #panel-slot .sidetog{display:none}
+  #panel-slot .side-panel.closed .sidebody{display:block}
+  #panel-slot .side-panel #counts{margin-top:0;font-size:16px}
+  #panel-slot .side-panel .cand{font-size:17px;margin-top:10px;gap:10px}
+  #panel-slot .side-panel .cand input[type=radio]{width:20px;height:20px}
+  #panel-slot .side-panel .cand .u{font-size:14px}
+  #panel-slot .side-panel .addbox .input{height:44px;font-size:17px}
+  #panel-slot .side-panel .addbox .btn{height:44px;font-size:17px}
+}
+
+/* the question as asked: a bubble on the right */
+.you{margin-top:30px;display:flex;justify-content:flex-end}
+.you p{background:var(--soft);border-radius:14px;padding:12px 16px;max-width:88%}
+.ai{margin-top:14px}
+
+/* the home: the headline and the box alone, centered in the viewport; the landing under the fold */
+#s-ask h1{text-align:center;margin:36px 0 22px}
+.page.home #s-ask{min-height:calc(100vh - 45px - 28px);display:flex;flex-direction:column;justify-content:center;padding-bottom:12vh}
+
+/* the trace: a quiet line under the question; the steps fold out under it */
+.trace{color:var(--faint);margin:10px 0 0;font-size:14px;max-width:86%}
+.trace .th{display:flex;gap:10px;align-items:center;padding:4px 0;cursor:pointer;user-select:none}
+.trace .th .tl{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--faint)}
+.trace .th .ts{flex:none;font-size:13px;color:var(--faint)}
+.trace .chev{flex:none;color:var(--faint);width:14px;text-align:center}
+.trace .steps{border-left:2px solid var(--line);margin:4px 0 0 4px;padding-left:12px}
+.trace.done .steps{display:none}
+.trace.done.expanded .steps{display:block}
+.trace .step{padding:4px 0}
+.trace .step .line{display:flex;gap:8px;align-items:baseline;cursor:default}
+.trace .step.has .line{cursor:pointer}
+.trace .step .line .k{flex:none;color:var(--faint)}
+.trace .step .line .q{flex:1;min-width:0;color:var(--muted)}
+.trace .step .line .why{color:var(--muted);font-size:13px}
+.trace .step .body{display:none;margin:3px 0 1px}
+.trace .step.open .body{display:block}
+.trace .thought{color:var(--muted)}
+.trace .spark,.trace .spark svg{width:16px;height:16px}
+.trace.done .spark{display:none}
+.rrow{display:flex;gap:10px;align-items:center;padding:2px 0;font-size:13px}
+.rrow img{width:14px;height:14px;border-radius:3px;flex:none;background:var(--soft)}
+.rrow .t{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rrow .t a{color:var(--text);text-decoration:none}
+.rrow .h{flex:none;color:var(--muted);max-width:40%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rrow.flash{background:var(--mark)}
+
+/* the answer: one editable field with its versions behind a small paginator */
+#answerwrap{margin-top:16px}
+.editrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 8px}
+.edit-line{font-size:16px;color:var(--muted);margin:0}
+.sugwork{display:inline-flex;align-items:center}
+.sugwork .spark,.sugwork .spark svg{width:18px;height:18px}
+#sughint{margin:0 0 6px}
+#sughint:empty{display:none}
+.editor{border:1.5px solid var(--field);border-radius:8px;background:var(--paper);padding:6px 16px 14px;line-height:1.55}
+.editor:focus-within{border-color:var(--text)}
+#answertext{white-space:pre-line;outline:none;margin:0;padding:4px 0 0;min-height:1.5em}
+#answertext p+p,#answertext ul+p,#answertext ol+p,#answertext p+ul,#answertext p+ol{margin-top:12px}
+#answertext ul,#answertext ol{padding-left:24px;margin:0}
+#answertext ol+ul,#answertext ul+ol,#answertext ul+ul,#answertext ol+ol{margin-top:12px}
+#answertext li+li{margin-top:5px}
+#answertext > * + *{margin-top:12px}
+#answertext .mdtable{overflow-x:auto;max-width:100%}
+#answertext table{border-collapse:collapse;font-size:15px;line-height:1.45;white-space:normal;min-width:100%}
+#answertext th,#answertext td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top;min-width:100px}
+#answertext th{background:var(--soft);font-weight:700}
+#answertext.diff{cursor:text}
+#answertext.fade{animation:fadein .45s ease}
+.vrow{display:flex;align-items:center;gap:4px;margin:0;font-size:14px;color:var(--muted);min-height:24px}
+.vrow .sp{flex:1}
+.vrow .pager{display:inline-flex;align-items:center}
+.vrow .pg{border:0;background:none;color:var(--muted);font:inherit;font-size:19px;line-height:1;padding:0 6px;cursor:pointer;border-radius:6px}
+.vrow .pg:hover{color:var(--text)}
+.vrow .pg[disabled]{opacity:.3;cursor:default}
+.vrow #vnum{font-variant-numeric:tabular-nums;cursor:default}
+
+/* the write: the one button centered; while AI writes, the spark under it */
+#s-target{margin-top:18px}
+#write{white-space:normal;height:auto;min-height:44px;padding:10px 18px;line-height:1.3;text-align:center;max-width:100%}
+#write.dim{background:var(--soft);border-color:var(--line);color:var(--faint);cursor:not-allowed}
+#write.dim:hover{filter:none}
+.working{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:16px}
+.working .spark,.working .spark svg{width:26px;height:26px}
+
+/* the rewritten website: its icons on a line, the text under it (the changes marked on request), then the score box */
+#s-compare{margin-top:18px}
+.result+.result{margin-top:22px}
+.result .acts{display:flex;justify-content:flex-end;gap:2px;margin:0}
+.result .pagediff{margin:2px 0 0;max-height:340px;overflow:auto}
+.result .pagediff .pad{white-space:pre-line}
+.result .pagediff .add{background:var(--mark)}
+details.older{margin-top:16px;font-size:15px;color:var(--muted)}
+details.older summary{cursor:pointer}
+.result .score{margin-top:18px}
+.result .score .sh{font-size:16px;font-weight:400;color:var(--muted);margin:0 0 8px}
+.result .score h3{font-size:18px;font-weight:700;margin-top:26px}
+.result .score table.nums{margin-top:10px}
+.result .score table.nums td{padding:8px 0}
+.result .score table.nums .n{font-size:28px}
+.result .score .boost{margin-top:14px}
+.result .score .field-row{margin-top:12px;max-width:420px}
+.result .score label.f{font-size:16px;font-weight:700}
+.result .score .working{justify-content:flex-start;margin-top:12px}
+.result .score .scores2{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.result .score .scores2 h3{margin-top:24px}
+.result .score .scores2 table.nums .l{width:auto}
+.result .score .scores2 table.nums .n{width:auto;text-align:right;white-space:nowrap}
+@media (max-width:640px){.result .score .scores2{grid-template-columns:1fr;gap:0}}
+
+/* ---------------------------------------------------------------- the landing under the tool's box */
+.landing{max-width:600px;margin:0 auto;padding:8px 0 48px}
+.landing h2{margin-top:52px}
+.landing h2:first-child{margin-top:0}
+.landing ul.list{margin-top:14px}
+.landing .choice{margin-top:14px}
+.landing .choice span{max-width:30em}
+.landing table.nums{margin-top:12px}
+.landing table.nums .l{width:46%}
+.landing table.nums .n{font-size:30px;width:20%;text-align:right}
+.landing .small.muted{margin-top:8px}
+.landing .chatbox{margin-top:14px}
+.landing .faqs{margin-top:14px}
+.landing details.faq+details.faq{margin-top:12px}
+.landing details.faq summary{cursor:pointer}
+.landing details.faq[open] summary{font-weight:700}
+.landing details.faq summary+p{margin-top:10px}
+.landing details.faq p+p{margin-top:10px}
+.landing details.faq[open]{padding-bottom:10px}
+
+/* ---------------------------------------------------------------- articles and the other pages: one 680px column */
+.doc-main{max-width:680px;margin:0 auto;padding:28px 24px 24px}
+:where(.doc-main,.doc-main section,.doc-main .note,.doc-main li,.doc-main td)>*+*{margin-top:14px}
+.crumbs{font-size:16px;color:var(--muted)}
+.crumbs a{color:var(--muted);text-decoration:none}
+.crumbs a:hover{text-decoration:underline}
+.crumbs span[aria-current]{color:var(--text)}
+.kicker{margin-top:28px;font-size:16px;font-weight:700;color:var(--muted)}
+.kicker+h1{margin-top:6px}
+.doc-main>h1:first-child,.crumbs+h1{margin-top:28px}
+.byline,.updated{font-size:16px;color:var(--muted)}
+.byline{margin-top:12px}
+.updated{margin-top:4px}
+.doc-main h2{scroll-margin-top:60px}
+.doc-main h3{scroll-margin-top:60px}
+.doc-main p,.doc-main li{max-width:40em}
+.doc-main ul,.doc-main ol{padding-left:24px;margin-top:12px}
+.doc-main li+li{margin-top:8px}
+.doc-main li>ul,.doc-main li>ol{margin-top:8px}
+.doc-main p+ul,.doc-main p+ol,.doc-main ul+p,.doc-main ol+p{margin-top:14px}
+.doc-main blockquote{margin-top:18px;padding-left:18px;border-left:3px solid var(--line);color:var(--muted)}
+.doc-main blockquote p+p{margin-top:8px}
+.doc-main figure{margin-top:18px}
+.doc-main figcaption{font-size:16px;color:var(--muted);margin-top:6px}
+.doc-main hr{border:0;height:0;margin:40px 0 0}
+.doc-main pre{margin-top:14px;padding:12px 14px;background:var(--soft);border-radius:8px;overflow-x:auto;font-family:var(--mono);font-size:15px;line-height:1.5}
+.doc-main *+.note,.doc-main .note+*{margin-top:22px}
+.note{background:var(--soft);border-radius:8px;padding:14px 18px}
+.note>*+*{margin-top:10px}
+.toc{margin-top:28px}
+.toc>p,.toc>summary{font-weight:700;font-size:17px}
+.toc summary{cursor:pointer}
+.toc ol,.toc ul{margin-top:8px}
+.toc li+li{margin-top:4px}
+.tablewrap{overflow-x:auto;margin-top:18px}
+.doc-main table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.45}
+.doc-main th,.doc-main td{padding:8px 10px 8px 0;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.doc-main th{font-weight:700}
+.doc-main thead th{border-bottom:1.5px solid var(--field)}
+.doc-main table.nums{font-size:18px}
+.tags{margin-top:10px;font-size:16px;color:var(--muted)}
+.tags .tag+.tag::before{content:" · "}
+.cite{margin-top:40px;font-size:16px;color:var(--muted)}
+.cite a{color:var(--muted)}
+.related h2{margin-top:56px}
+.related ul{list-style:none;padding:0}
+.related li+li{margin-top:14px}
+.related li a{font-weight:700}
+.related li p{margin-top:2px;font-size:16px;color:var(--muted)}
+.postlist{list-style:none;padding:0;margin-top:20px}
+.postlist li+li{margin-top:22px}
+.postlist a{font-weight:700;font-size:19px}
+.postlist p{margin-top:4px}
+.postlist .meta{font-size:16px;color:var(--muted);margin-top:2px}
+.faqlist h3{font-size:18px}
+
+@media (max-width:640px){
+  body{font-size:17px}
+  h1{font-size:26px}
+  h2{font-size:21px;margin-top:44px}
+  .nav .in,body.doc .nav .in{padding:0 16px}
+  .page{padding:20px 16px 56px}
+  .doc-main{padding:20px 16px 16px}
+  .foot{padding:32px 16px 40px}
+  .btns .btn{width:100%}
+  table.nums .n{font-size:28px}
+  table.nums .l{width:40%}
+}

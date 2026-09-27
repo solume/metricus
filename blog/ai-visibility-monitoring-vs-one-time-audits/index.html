@@ -1,514 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Visibility Monitoring vs a Check You Run Yourself on One Page | Metricus</title>
-  <meta name="description" content="Monitoring subscriptions run $348 to $6,000+ a year and track mentions over time. A check you run yourself on one page shows what an AI assistant says and why, free.">
-  <meta property="og:title" content="AI Visibility Monitoring vs a Check You Run Yourself on One Page">
-  <meta property="og:description" content="Monitoring subscriptions run $348 to $6,000+ a year and track mentions over time. A check you run yourself on one page shows what an AI assistant says and why, free.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://metricusapp.com/blog/ai-visibility-monitoring-vs-one-time-audits/">
-  <meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AI Visibility Monitoring vs a Check You Run Yourself on One Page | Metricus">
-  <meta name="twitter:description" content="Monitoring subscriptions run $348 to $6,000+ a year and track mentions over time. A check you run yourself on one page shows what an AI assistant says and why, free.">
-  <meta name="twitter:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <link rel="canonical" href="https://metricusapp.com/blog/ai-visibility-monitoring-vs-one-time-audits/">
-
-  <!-- Google Tag Manager -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w70oz7g1k3");
-  </script>
-
-
-  <!-- Google Fonts -->
-
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#515F74',
-            'primary-hover': '#1E293B',
-            'on-primary': '#f6f7ff',
-            'on-primary-fixed': '#324054',
-            'primary-dim': '#455368',
-            surface: '#f7f9fb',
-            'surface-container-low': '#f0f4f7',
-            'surface-container': '#e8eff3',
-            'surface-container-lowest': '#ffffff',
-            'surface-container-highest': '#d9e4ea',
-            'surface-container-high': '#e1e9ee',
-            'surface-variant': '#d9e4ea',
-            'on-surface': '#2a3439',
-            'on-surface-variant': '#566166',
-            outline: '#717c82',
-            'outline-variant': '#a9b4b9',
-            'slate-text': '#0F172A',
-            'slate-muted': '#64748B',
-            'slate-accent': '#475569',
-          },
-          fontFamily: {
-            display: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            body: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            headline: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            label: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-          },
-          borderRadius: {
-            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
-            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
-            full: '0.75rem',
-          },
-        },
-      },
-    }
-  </script>
-
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: #ffffff;
-      color: #0F172A;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .font-display { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-headline { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-body-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-
-    .editorial-btn {
-      transition: background-color 150ms ease-in-out, transform 150ms ease;
-    }
-    .editorial-btn:hover {
-      background-color: #1E293B;
-    }.blog-card {
-      transition: transform 200ms ease, background-color 200ms ease;
-    }
-    .blog-card:hover {
-      transform: translateY(-2px);
-      background-color: #f7f9fb;
-    }
-
-    .article-body h2 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.75rem;
-      line-height: 1.2;
-      color: #0F172A;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-    }
-    @media (min-width: 768px) {
-      .article-body h2 {
-        font-size: 2rem;
-      }
-    }
-    .article-body h3 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      line-height: 1.3;
-      color: #0F172A;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    .article-body p {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-    }
-    .article-body ul, .article-body ol {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-      padding-left: 1.5rem;
-    }
-    .article-body ul { list-style-type: disc; }
-    .article-body ol { list-style-type: decimal; }
-    .article-body li { margin-bottom: 0.5rem; }
-    .article-body blockquote {
-      border-left: 2px solid #334155;
-      padding-left: 1.5rem;
-      font-style: italic;
-      color: #475569;
-      font-size: 1.125rem;
-      line-height: 1.75;
-      margin: 2rem 0;
-    }
-    .article-body a {
-      color: #334155;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .article-body a:hover {
-      color: #1E293B;
-    }
-  </style>
-
-  <!-- JSON-LD BlogPosting -->
-  <script type="application/ld+json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Visibility Monitoring vs a Single Check | Metricus</title>
+<meta name="description" content="Monitoring subscriptions run $348 to $6,000+ a year and track mentions over time. A single check shows what AI says about you today, and costs nothing.">
+<link rel="canonical" href="https://metricusapp.com/blog/ai-visibility-monitoring-vs-one-time-audits/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Metricus">
+<meta property="og:url" content="https://metricusapp.com/blog/ai-visibility-monitoring-vs-one-time-audits/">
+<meta property="og:title" content="AI Visibility Monitoring vs a Single Check">
+<meta property="og:description" content="Monitoring subscriptions run $348 to $6,000+ a year and track mentions over time. A single check shows what AI says about you today, and costs nothing.">
+<meta property="og:image" content="https://metricusapp.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Metricus: see what AI answers when your customers ask for what you offer.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Visibility Monitoring vs a Single Check | Metricus">
+<meta name="twitter:description" content="Monitoring subscriptions run $348 to $6,000+ a year and track mentions over time. A single check shows what AI says about you today, and costs nothing.">
+<meta name="twitter:image" content="https://metricusapp.com/assets/og.png">
+<!-- metricus:head -->
+<link rel="stylesheet" href="/assets/metricus.css?v=20260927">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#FBFAF7">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w70oz7g1k3");</script>
+<!-- /metricus:head -->
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "AI Visibility Monitoring vs a Single Check",
+ "description": "Monitoring subscriptions run $348 to $6,000+ a year and track mentions over time. A single check shows what AI says about you today, and costs nothing.",
+ "author": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "datePublished": "2026-03-31",
+ "dateModified": "2026-09-27",
+ "mainEntityOfPage": "https://metricusapp.com/blog/ai-visibility-monitoring-vs-one-time-audits/",
+ "image": "https://metricusapp.com/assets/og.png"
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
   {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "AI Visibility Monitoring vs a Check You Run Yourself on One Page",
-    "description": "Monitoring subscriptions run $348 to $6,000+ a year and track mentions over time. A check you run yourself on one page shows what an AI assistant says and why, free.",
-    "author": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "datePublished": "2026-03-31",
-    "dateModified": "2026-09-04",
-    "mainEntityOfPage": "https://metricusapp.com/blog/ai-visibility-monitoring-vs-one-time-audits/",
-    "image": "https://metricusapp.com/landing/img/og.jpg"
-  }
-  </script>
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://metricusapp.com/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "AI Visibility Monitoring vs a Check You Run Yourself", "item": "https://metricusapp.com/blog/ai-visibility-monitoring-vs-one-time-audits/"}
-    ]
-  }
-  </script>
-
-    <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://metricusapp.com/blog/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is the difference between AI visibility monitoring and a check you run yourself?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Monitoring tools track how often your brand appears across a fixed set of prompts, on a schedule, through dashboards and alerts on a monthly subscription. You get trend data and can watch scores change over time. A check you run yourself on one page shows the answer an AI assistant gives about that page, the passages the answer came from, and a rewrite for each one. Monitoring answers what changed. A check on one page answers what that page makes the assistant say and what to change on it."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does AI visibility monitoring cost per year?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Subscription monitoring tools typically cost $348 to $6,000+ per year depending on the plan and provider. Otterly AI ranges from $29/month (Lite) to $489/month (Premium). Scrunch AI runs about $300/month. Peec AI starts at EUR 89/month. By comparison, a check you run yourself on one page is free, so running it quarterly costs nothing."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Should I start with monitoring or a check on one page?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Start with a check on one page. You need a baseline before monitoring makes sense. It tells you what an AI assistant says about your key pages, what it gets wrong, and what to change first. Once you have made those changes, you can judge whether ongoing monitoring adds enough to justify the subscription."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How often should I check AI visibility?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Quarterly is enough for most brands. That cadence gives AI systems time to pick up the changes you made between checks. Check again after major events: a rebrand, a product launch, a large content push, or a competitive shift. Brands in fast-moving categories with aggressive competitors may benefit from monthly checks or a monitoring tool."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "When should I switch from checks to monitoring?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Consider switching when three conditions are met: you are actively running AI optimization campaigns and need weekly feedback on what is working, your competitive landscape changes fast enough that quarterly checks miss important shifts, and you have a team member who can read dashboard data and turn it into action. If you check AI visibility less than weekly, a check you run yourself stays the cheaper option."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can agencies use a check on one page instead of monitoring subscriptions?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, and many do. Running a client's key pages through the tool works for onboarding (showing on day one what an AI assistant says about their pages), competitive pitches (showing a prospect what their pages cause), and quarterly business reviews. It avoids accumulating monthly subscriptions across a client portfolio. For retained clients with active AI optimization campaigns, some agencies add monitoring for those accounts and use the tool for the rest."
-        }
-      }
-    ]
+   "@type": "ListItem",
+   "position": 3,
+   "name": "AI Visibility Monitoring vs a Single Check",
+   "item": "https://metricusapp.com/blog/ai-visibility-monitoring-vs-one-time-audits/"
   }
-  </script>
-  <script src="/js/reader-pulse-b.js" defer></script>
+ ]
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is the difference between AI visibility monitoring and a single check?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Monitoring tools track how often your brand appears across a fixed set of prompts, on a schedule, through dashboards and alerts on a monthly subscription. You get trend data and can watch scores change over time. A single check shows what AI answers today when you ask the questions your customers ask: which businesses it names and what it says about yours. Monitoring answers what changed. A single check answers where you stand today."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much does AI visibility monitoring cost per year?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Subscription monitoring tools typically cost $348 to $6,000+ per year depending on the plan and provider. Otterly AI ranges from $29/month (Lite) to $489/month (Premium). Scrunch AI runs about $300/month. Peec AI starts at EUR 89/month. By comparison, checking by hand is free, so doing it quarterly costs nothing."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Should I start with monitoring or a single check?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Start with a single check. You need a baseline before monitoring makes sense. It tells you what AI says about your business when customers ask, what it gets wrong, and what to change first. Once you have made those changes, you can judge whether ongoing monitoring adds enough to justify the subscription."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How often should I check AI visibility?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Quarterly is enough for most brands. That cadence gives AI systems time to pick up the changes you made between checks. Check again after major events: a rebrand, a product launch, a large content push, or a competitive shift. Brands in fast-moving categories with aggressive competitors may benefit from monthly checks or a monitoring tool."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "When should I switch from checks to monitoring?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Consider switching when three conditions are met: you are actively running AI optimization campaigns and need weekly feedback on what is working, your competitive landscape changes fast enough that quarterly checks miss important shifts, and you have a team member who can read dashboard data and turn it into action. If you check AI visibility less than weekly, checking by hand stays the cheaper option."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can agencies use single checks instead of monitoring subscriptions?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, and many do. Checking the questions a client's customers ask works for onboarding (showing on day one what AI says about the client), competitive pitches (showing a prospect which businesses AI names instead), and quarterly business reviews. It avoids accumulating monthly subscriptions across a client portfolio. For retained clients with active AI optimization campaigns, some agencies add monitoring for those accounts and use single checks for the rest."
+   }
+  }
+ ]
+}</script>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
-
-  <!-- Site Nav -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 gap-4">
-      <a href="/" class="text-on-surface font-semibold" aria-label="Metricus home">Metricus <span class="font-normal text-on-surface-variant">Optimizer</span></a>
-      <div class="flex items-center gap-5">
-        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface">Learn</a>
-        <a href="/ai-visibility-optimizer-tool/" class="bg-primary text-on-primary text-sm font-semibold px-4 py-2.5 hover:bg-primary-dim">Open the tool</a>
-      </div>
-    </div>
-  </header>
-
-
-
-  <!-- Mobile Menu Overlay -->
-
-
-
-  <main class="flex-grow flex flex-col relative overflow-x-hidden">
-
-    <div class="absolute inset-0 -z-10 pointer-events-none"></div>
-
-    <!-- ========== ARTICLE ========== -->
-    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
-
-      <!-- Breadcrumb -->
-      <nav class="mb-8">
-        <ol class="flex items-center gap-2 text-xs text-slate-muted">
-          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
-          <li class="select-none">/</li>
-          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
-          <li class="select-none">/</li>
-          <li class="text-slate-text">Monitoring vs a Check on One Page</li>
-        </ol>
-      </nav>
-
-      <!-- Article Header -->
-      <header class="mb-12">
-        <p class="text-xs text-primary font-semibold mb-4">Buyer's Guide</p>
-        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
-          AI Visibility Monitoring vs a Check You Run Yourself on One Page
-        </h1>
-        <p class="text-sm text-outline">Metricus Research &middot; March 31, 2026 &middot; 10 min read</p>
-      </header>
-
-
-      <!-- Definition Box -->
-      <div class="bg-surface-container-low p-8 mb-12">
-        <p class="text-lg leading-relaxed text-on-surface">
-          <strong>AI visibility tools fall into two categories:</strong> subscription monitoring dashboards that track how often your brand is mentioned over time, and a check you run yourself on one page that shows the answer an AI assistant gives about that page and what on the page caused it. This guide compares the two on cost, depth and fit, so you can decide which one matches how your team works.
+<body class="doc">
+<!-- metricus:header -->
+<header class="nav"><div class="in"><a class="logo" href="/" id="navhome">Metricus</a><span class="sp"></span><span class="muted" id="host"></span></div></header>
+<!-- /metricus:header -->
+<main class="doc-main" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <span aria-current="page">Monitoring vs a Single Check</span></nav>
+<p class="kicker">Buyer's Guide</p>
+<h1>AI Visibility Monitoring vs a Single Check</h1>
+<p class="byline">Metricus Research · March 31, 2026 · 10 min read</p>
+<div class="note">
+<p>
+<strong>AI visibility tools fall into two categories:</strong> subscription monitoring dashboards that track how often your brand is mentioned over time, and a single check that shows what AI says about you today. This guide compares the two on cost, depth and fit, so you can decide which one matches how your team works.
         </p>
-      </div>
-
-
-      <!-- Table of Contents -->
-      <div class="border border-[#E2E8F0] p-8 mb-12">
-        <p class="text-xs text-slate-muted font-semibold mb-4">In this article</p>
-        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
-          <li><a href="#what-ai-visibility-tools-do" class="hover:text-primary-hover underline underline-offset-2">What AI visibility tools actually do</a></li>
-          <li><a href="#real-cost-comparison" class="hover:text-primary-hover underline underline-offset-2">The real cost comparison</a></li>
-          <li><a href="#five-scenarios" class="hover:text-primary-hover underline underline-offset-2">When each approach fits</a></li>
-          <li><a href="#faq" class="hover:text-primary-hover underline underline-offset-2">Frequently asked questions</a></li>
-        </ol>
-      </div>
-
-
-<!-- Article Body -->
-      <div class="article-body">
-
-        <h2 id="what-ai-visibility-tools-do">What AI visibility tools actually do</h2>
-
-        <p>The AI visibility market has split into two product models, and the difference matters more than most buyers realize. One model sells ongoing dashboard access on a monthly subscription. The other is a tool you run yourself on one page, with no subscription. They solve different problems, serve different workflows, and cost very different amounts over time.</p>
-
-        <h3>Monitoring tools (ongoing subscription)</h3>
-
-        <p>Subscription monitoring tools track how your brand appears in AI responses over time via dashboards and alerts. You pick prompts, and the tool runs them against AI platforms on a regular cadence. The main players: <strong>Otterly AI</strong> ($29&ndash;$489/month), <strong>Scrunch AI</strong> (~$300/month), <strong>Peec AI</strong> (EUR 89+/month). These tools are useful for teams running active AI optimization campaigns who need weekly feedback loops.</p>
-
-        <h3>A check you run yourself on one page (no subscription)</h3>
-
-        <p><strong>Metricus</strong> takes the other approach with a tool you run yourself on one page. Put in a URL and you see the answer an AI assistant gives about that page, the passages on the page that answer came from, marked where they sit, and a rewrite for each one. Change anything and the assistant is asked again. You leave with the changes in a file. It is free, with no signup and no credit card.</p>
-
-
-        <h2 id="real-cost-comparison">The real cost comparison</h2>
-
-        <div class="border border-[#E2E8F0] my-8 overflow-x-auto">
-          <table class="w-full text-sm">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="text-left p-4 font-semibold text-slate-text">Approach</th>
-                <th class="text-left p-4 font-semibold text-slate-text">Annual Cost</th>
-                <th class="text-left p-4 font-semibold text-slate-text">What You Get</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-[#E2E8F0]">
-              <tr><td class="p-4 font-medium">Otterly Lite</td><td class="p-4">$348/yr</td><td class="p-4 text-slate-muted">15 prompts/mo dashboard</td></tr>
-              <tr><td class="p-4 font-medium">Otterly Premium</td><td class="p-4">$5,868/yr</td><td class="p-4 text-slate-muted">400 prompts/mo dashboard</td></tr>
-              <tr><td class="p-4 font-medium">Scrunch AI</td><td class="p-4">$3,600/yr</td><td class="p-4 text-slate-muted">Standard monitoring</td></tr>
-              <tr><td class="p-4 font-medium">Metricus optimizer</td><td class="p-4">$0/yr</td><td class="p-4 text-slate-muted">One page per run, rerun any time</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>What we found when comparing these models: most brands check their AI visibility quarterly at most. Paying $300/month for a dashboard you log into four times per year means paying $900 per check. A check you run yourself costs nothing, so there are no wasted months.</p>
-
-
-        <h2 id="five-scenarios">When each approach fits</h2>
-
-        <p>Monitoring subscriptions make sense when you are running active AI optimization campaigns and need weekly feedback, when your competitive landscape changes rapidly, or when you have a dedicated team member interpreting dashboard data. A check you run yourself on one page fits a first baseline, a quarterly review, agency client onboarding, a competitive pitch, and any team that checks AI visibility less than weekly.</p>
-
-        <p>Most brands do better to run their key pages through the tool first and establish a baseline before deciding whether ongoing monitoring is worth the money. Without knowing where you stand, you cannot tell whether a monitoring subscription will show you anything you can act on.</p>
-
-        <p class="text-sm text-slate-muted mt-8">Last updated: September 2026</p>
-
-      </div>
-      <!-- End Article Body -->
-
-
-      <!-- FAQ Section -->
-      <div class="article-body">
-        <h2 id="faq">Frequently asked questions</h2>
-
-        <h3>What is the difference between AI visibility monitoring and a check you run yourself?</h3>
-        <p>Monitoring tools track how often your brand appears across a fixed set of prompts, on a schedule, through dashboards and alerts on a monthly subscription. You get trend data and can watch scores change over time. A check you run yourself on one page shows the answer an AI assistant gives about that page, the passages the answer came from, and a rewrite for each one. Monitoring answers what changed. A check on one page answers what that page makes the assistant say and what to change on it.</p>
-
-        <h3>How much does AI visibility monitoring cost per year?</h3>
-        <p>Subscription monitoring tools typically cost $348 to $6,000+ per year depending on the plan and provider. Otterly AI ranges from $29/month (Lite) to $489/month (Premium). Scrunch AI runs about $300/month. Peec AI starts at EUR 89/month. By comparison, a check you run yourself on one page is free, so running it quarterly costs nothing.</p>
-
-        <h3>Should I start with monitoring or a check on one page?</h3>
-        <p>Start with a check on one page. You need a baseline before monitoring makes sense. It tells you what an AI assistant says about your key pages, what it gets wrong, and what to change first. Once you have made those changes, you can judge whether ongoing monitoring adds enough to justify the subscription.</p>
-
-        <h3>How often should I check AI visibility?</h3>
-        <p>Quarterly is enough for most brands. That cadence gives AI systems time to pick up the changes you made between checks. Check again after major events: a rebrand, a product launch, a large content push, or a competitive shift. Brands in fast-moving categories with aggressive competitors may benefit from monthly checks or a monitoring tool.</p>
-
-        <h3>When should I switch from checks to monitoring?</h3>
-        <p>Consider switching when three conditions are met: you are actively running AI optimization campaigns and need weekly feedback on what is working, your competitive landscape changes fast enough that quarterly checks miss important shifts, and you have a team member who can read dashboard data and turn it into action. If you check AI visibility less than weekly, a check you run yourself stays the cheaper option.</p>
-
-        <h3>Can agencies use a check on one page instead of monitoring subscriptions?</h3>
-        <p>Yes, and many do. Running a client's key pages through the tool works for onboarding (showing on day one what an AI assistant says about their pages), competitive pitches (showing a prospect what their pages cause), and quarterly business reviews. It avoids accumulating monthly subscriptions across a client portfolio. For retained clients with active AI optimization campaigns, some agencies add monitoring for those accounts and use the tool for the rest.</p>
-      </div>
-
-
-
-
-    
-      <!-- ========== ARTICLE CTA ========== -->
-      <div class="border-t border-outline-variant/30 mt-16 pt-10" data-cta="tool">
-        <h2 class="text-2xl font-semibold text-on-surface mb-2">Put in a page.</h2>
-        <p class="text-on-surface-variant mb-5 max-w-xl">See what an AI assistant answers about your page, which passages caused it, and a rewrite for each one. Free, no signup.</p>
-        <form class="flex flex-col sm:flex-row gap-2 max-w-xl" action="/ai-visibility-optimizer-tool/" method="get">
-          <label class="sr-only" for="cta-url">Address of the page to check</label>
-          <input id="cta-url" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="your-site.com/page" required class="flex-1 min-w-0 px-4 py-3 border border-outline-variant bg-white text-on-surface">
-          <button type="submit" class="bg-primary text-on-primary font-semibold px-6 py-3 hover:bg-primary-dim whitespace-nowrap">Start optimizing</button>
-        </form>
-      </div>
-
-      <!-- ========== CITE THIS ARTICLE ========== -->
-      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
-        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
-          <cite class="not-italic"><a href="https://metricusapp.com/blog/ai-visibility-monitoring-vs-one-time-audits/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; AI Visibility Monitoring vs a Check You Run Yourself on One Page</a></cite>
-        </p>
-      </footer>
-
-    </article>
-
-
-    
-    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
-      <p class="text-xs text-slate-muted font-semibold mb-6">Go deeper</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <a href="/ai-platform-comparison-brands/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">Platform Intelligence Guide</p>
-          <p class="text-sm text-on-surface-variant mt-1">How AI platforms update and refresh</p>
-        </a>
-        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
-          <p class="text-sm text-on-surface-variant mt-1">Monitoring accuracy over time</p>
-        </a>
-      </div>
-    </section>
-
-<!-- ========== RELATED POSTS ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
-      <p class="text-xs text-slate-muted font-semibold mb-8">Related articles</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        <a href="../ai-visibility-tools-compared/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Buyer's Guide</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            AI Visibility Tools Compared: A Buyer's Guide for 2026
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            We compare 15+ AI visibility platforms by coverage, accuracy audits, action plans, and pricing.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../ai-visibility-tools-no-subscription/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Buyer's Guide</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            AI Visibility Tools Without a Monthly Subscription
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            Not every business needs a $300/month monitoring subscription. Here are the options without one.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../ai-visibility-for-agencies/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">For Agencies</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            Agency Guide to AI Visibility
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            Pricing models and tools for agency client work.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
-  </main>
-
-
-  <!-- ========== FOOTER ========== -->
-  <!-- Site Footer -->
-  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-on-surface-variant">
-      <span class="text-on-surface font-semibold">Metricus</span>
-      <a href="/ai-visibility-optimizer-tool/" class="hover:text-on-surface">Open the tool</a>
-      <a href="/blog/" class="hover:text-on-surface">Learn</a>
-      <a href="/methodology/" class="hover:text-on-surface">How it works</a>
-      <a href="/results/" class="hover:text-on-surface">Results</a>
-      <a href="/for-agencies/" class="hover:text-on-surface">For agencies</a>
-      <a href="/about/" class="hover:text-on-surface">About</a>
-      <a href="/press/" class="hover:text-on-surface">Press</a>
-      <a href="/support/" class="hover:text-on-surface">Support</a>
-      <a href="/privacy-policy/" class="hover:text-on-surface">Privacy</a>
-      <a href="/terms-of-service/" class="hover:text-on-surface">Terms</a>
-      <a href="mailto:metricusapp@gmail.com" class="hover:text-on-surface">Contact</a>
-      <span class="ml-auto">&copy; 2026 Metricus</span>
-    </div>
-  </footer>
-
+</div>
+<nav class="toc" aria-label="In this article"><p>In this article</p><ol>
+<li><a href="#what-ai-visibility-tools-do">What AI visibility tools actually do</a></li>
+<li><a href="#real-cost-comparison">The real cost comparison</a></li>
+<li><a href="#five-scenarios">When each approach fits</a></li>
+<li><a href="#faq">Frequently asked questions</a></li>
+</ol></nav>
+<h2 id="what-ai-visibility-tools-do">What AI visibility tools actually do</h2>
+<p>The AI visibility market has split into two product models, and the difference matters more than most buyers realize. One model sells ongoing dashboard access on a monthly subscription. The other is a single check you run when you need it, with no subscription. They solve different problems, serve different workflows, and cost very different amounts over time.</p>
+<h3>Monitoring tools (ongoing subscription)</h3>
+<p>Subscription monitoring tools track how your brand appears in AI responses over time via dashboards and alerts. You pick prompts, and the tool runs them against AI platforms on a regular cadence. The main players: <strong>Otterly AI</strong> ($29–$489/month), <strong>Scrunch AI</strong> (~$300/month), <strong>Peec AI</strong> (EUR 89+/month). These tools are useful for teams running active AI optimization campaigns who need weekly feedback loops.</p>
+<h3>A single check (no subscription)</h3>
+<p>A single check means asking AI the questions your customers ask, in their words, and noting which businesses the answer names and what it says about yours. Done by hand, it costs nothing. It gives you one sample: what one AI platform said to one question at one point in time. That is enough for a baseline, but not for tracking change.</p>
+<h2 id="real-cost-comparison">The real cost comparison</h2>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Annual Cost</th>
+<th>What You Get</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Otterly Lite</td><td>$348/yr</td><td>15 prompts/mo dashboard</td></tr>
+<tr><td>Otterly Premium</td><td>$5,868/yr</td><td>400 prompts/mo dashboard</td></tr>
+<tr><td>Scrunch AI</td><td>$3,600/yr</td><td>Standard monitoring</td></tr>
+<tr><td>Checking by hand</td><td>$0/yr</td><td>One sample per check</td></tr>
+</tbody>
+</table>
+</div>
+<p>If your team checks AI visibility quarterly, paying $300/month for a dashboard you log into four times per year means paying $900 per check. Checking by hand costs nothing, so there are no wasted months.</p>
+<h2 id="five-scenarios">When each approach fits</h2>
+<p>Monitoring subscriptions make sense when you are running active AI optimization campaigns and need weekly feedback, when your competitive landscape changes rapidly, or when you have a dedicated team member interpreting dashboard data. A single check fits a first baseline, a quarterly review, agency client onboarding, a competitive pitch, and any team that checks AI visibility less than weekly.</p>
+<p>Most brands do better to check the questions their customers ask first and establish a baseline before deciding whether ongoing monitoring is worth the money. Without knowing where you stand, you cannot tell whether a monitoring subscription will show you anything you can act on.</p>
+<h2 id="faq">Frequently asked questions</h2>
+<h3>What is the difference between AI visibility monitoring and a single check?</h3>
+<p>Monitoring tools track how often your brand appears across a fixed set of prompts, on a schedule, through dashboards and alerts on a monthly subscription. You get trend data and can watch scores change over time. A single check shows what AI answers today when you ask the questions your customers ask: which businesses it names and what it says about yours. Monitoring answers what changed. A single check answers where you stand today.</p>
+<h3>How much does AI visibility monitoring cost per year?</h3>
+<p>Subscription monitoring tools typically cost $348 to $6,000+ per year depending on the plan and provider. Otterly AI ranges from $29/month (Lite) to $489/month (Premium). Scrunch AI runs about $300/month. Peec AI starts at EUR 89/month. By comparison, checking by hand is free, so doing it quarterly costs nothing.</p>
+<h3>Should I start with monitoring or a single check?</h3>
+<p>Start with a single check. You need a baseline before monitoring makes sense. It tells you what AI says about your business when customers ask, what it gets wrong, and what to change first. Once you have made those changes, you can judge whether ongoing monitoring adds enough to justify the subscription.</p>
+<h3>How often should I check AI visibility?</h3>
+<p>Quarterly is enough for most brands. That cadence gives AI systems time to pick up the changes you made between checks. Check again after major events: a rebrand, a product launch, a large content push, or a competitive shift. Brands in fast-moving categories with aggressive competitors may benefit from monthly checks or a monitoring tool.</p>
+<h3>When should I switch from checks to monitoring?</h3>
+<p>Consider switching when three conditions are met: you are actively running AI optimization campaigns and need weekly feedback on what is working, your competitive landscape changes fast enough that quarterly checks miss important shifts, and you have a team member who can read dashboard data and turn it into action. If you check AI visibility less than weekly, checking by hand stays the cheaper option.</p>
+<h3>Can agencies use single checks instead of monitoring subscriptions?</h3>
+<p>Yes, and many do. Checking the questions a client's customers ask works for onboarding (showing on day one what AI says about the client), competitive pitches (showing a prospect which businesses AI names instead), and quarterly business reviews. It avoids accumulating monthly subscriptions across a client portfolio. For retained clients with active AI optimization campaigns, some agencies add monitoring for those accounts and use single checks for the rest.</p>
+<p>Last updated: September 2026</p>
+<p class="cite">Cite as: <a href="https://metricusapp.com/blog/ai-visibility-monitoring-vs-one-time-audits/">Metricus — AI Visibility Monitoring vs a Single Check</a></p>
+<section class="related" aria-labelledby="related-knowledge-bases"><h2 id="related-knowledge-bases">Knowledge bases</h2><ul><li><a href="/ai-platform-comparison-brands/">Platform Intelligence Guide</a><p>How AI platforms update and refresh</p></li><li><a href="/brand-accuracy-knowledge-base/">AI Brand Accuracy Guide</a><p>Monitoring accuracy over time</p></li></ul></section>
+<section class="related" aria-labelledby="related-related-articles"><h2 id="related-related-articles">Related articles</h2><ul><li><a href="/blog/ai-visibility-tools-worth-it-2026/">AI Visibility Tools Compared: A Buyer&#x27;s Guide for 2026</a><p>We compare 15+ AI visibility platforms by coverage, accuracy audits, action plans, and pricing.</p></li><li><a href="/blog/ai-visibility-tools-no-subscription/">AI Visibility Tools Without a Monthly Subscription</a><p>Not every business needs a $300/month monitoring subscription. Here are the options without one.</p></li><li><a href="/blog/agency-guide-ai-visibility-audits/">Agency Guide to AI Visibility</a><p>Pricing models and tools for agency client work.</p></li></ul></section>
+<!-- metricus:ask -->
+<section class="ask-cta" aria-labelledby="ask-cta-h"><h2 id="ask-cta-h">What do your customers ask AI?</h2><form class="chatbox" action="/" method="get"><input class="input" type="text" name="q" maxlength="600" autocomplete="off" required placeholder="Type what people would ask AI&hellip;" aria-labelledby="ask-cta-h"><button class="send" type="submit" aria-label="Ask AI" title="Ask AI"><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V6M6 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form></section>
+<!-- /metricus:ask -->
+</main>
+<!-- metricus:footer -->
+<footer class="foot"><nav aria-label="Site"><a href="/blog/">Blog</a><a href="/geo-knowledge-base/">Knowledge base</a><a href="/results/">Results</a><a href="/about/">About</a><a href="/press/">Press</a><a href="/support/">Support</a><a href="/privacy-policy/">Privacy</a><a href="/terms-of-service/">Terms</a><a href="mailto:metricusapp@gmail.com">Contact</a></nav><p>&copy; 2026 Metricus</p></footer>
+<!-- /metricus:footer -->
 </body>
 </html>

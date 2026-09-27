@@ -1,479 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How AI Visibility Scores Actually Work | Metricus</title>
-  <meta name="description" content="AI visibility scores vary wildly between tools. How they're calculated, why nondeterminism matters, and what a meaningful score actually looks like.">
-  <meta property="og:title" content="How AI Visibility Scores Actually Work">
-  <meta property="og:description" content="Most AI visibility scores are meaningless. Here's how they're calculated and what to look for.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://metricusapp.com/blog/ai-visibility-scores-explained/">
-  <meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="How AI Visibility Scores Actually Work | Metricus">
-  <meta name="twitter:description" content="AI visibility scores vary wildly between tools. How they're calculated, why nondeterminism matters, and what a meaningful score actually looks like.">
-  <meta name="twitter:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <link rel="canonical" href="https://metricusapp.com/blog/ai-visibility-scores-explained/">
-
-  <!-- Google Tag Manager -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w70oz7g1k3");
-  </script>
-
-
-  <!-- Google Fonts -->
-
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#515F74',
-            'primary-hover': '#1E293B',
-            'on-primary': '#f6f7ff',
-            'on-primary-fixed': '#324054',
-            'primary-dim': '#455368',
-            surface: '#f7f9fb',
-            'surface-container-low': '#f0f4f7',
-            'surface-container': '#e8eff3',
-            'surface-container-lowest': '#ffffff',
-            'surface-container-highest': '#d9e4ea',
-            'surface-container-high': '#e1e9ee',
-            'surface-variant': '#d9e4ea',
-            'on-surface': '#2a3439',
-            'on-surface-variant': '#566166',
-            outline: '#717c82',
-            'outline-variant': '#a9b4b9',
-            'slate-text': '#0F172A',
-            'slate-muted': '#64748B',
-            'slate-accent': '#475569',
-          },
-          fontFamily: {
-            display: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            body: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            headline: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            label: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-          },
-          borderRadius: {
-            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
-            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
-            full: '0.75rem',
-          },
-        },
-      },
-    }
-  </script>
-
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: #ffffff;
-      color: #0F172A;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .font-display { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-headline { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-body-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-
-    .editorial-btn {
-      transition: background-color 150ms ease-in-out, transform 150ms ease;
-    }
-    .editorial-btn:hover {
-      background-color: #1E293B;
-    }.blog-card {
-      transition: transform 200ms ease, background-color 200ms ease;
-    }
-    .blog-card:hover {
-      transform: translateY(-2px);
-      background-color: #f7f9fb;
-    }
-
-    .article-body h2 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.75rem;
-      line-height: 1.2;
-      color: #0F172A;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-    }
-    @media (min-width: 768px) {
-      .article-body h2 {
-        font-size: 2rem;
-      }
-    }
-    .article-body h3 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      line-height: 1.3;
-      color: #0F172A;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    .article-body p {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-    }
-    .article-body ul, .article-body ol {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-      padding-left: 1.5rem;
-    }
-    .article-body ul { list-style-type: disc; }
-    .article-body ol { list-style-type: decimal; }
-    .article-body li { margin-bottom: 0.5rem; }
-    .article-body blockquote {
-      border-left: 2px solid #334155;
-      padding-left: 1.5rem;
-      font-style: italic;
-      color: #475569;
-      font-size: 1.125rem;
-      line-height: 1.75;
-      margin: 2rem 0;
-    }
-    .article-body a {
-      color: #334155;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .article-body a:hover {
-      color: #1E293B;
-    }
-  </style>
-
-  <!-- JSON-LD BlogPosting -->
-  <script type="application/ld+json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How AI Visibility Scores Actually Work | Metricus</title>
+<meta name="description" content="AI visibility scores vary wildly between tools. How they&#x27;re calculated, why nondeterminism matters, and what a meaningful score actually looks like.">
+<link rel="canonical" href="https://metricusapp.com/blog/ai-visibility-scores-explained/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Metricus">
+<meta property="og:url" content="https://metricusapp.com/blog/ai-visibility-scores-explained/">
+<meta property="og:title" content="How AI Visibility Scores Actually Work">
+<meta property="og:description" content="Most AI visibility scores are meaningless. Here&#x27;s how they&#x27;re calculated and what to look for.">
+<meta property="og:image" content="https://metricusapp.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Metricus: see what AI answers when your customers ask for what you offer.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How AI Visibility Scores Actually Work | Metricus">
+<meta name="twitter:description" content="AI visibility scores vary wildly between tools. How they&#x27;re calculated, why nondeterminism matters, and what a meaningful score actually looks like.">
+<meta name="twitter:image" content="https://metricusapp.com/assets/og.png">
+<!-- metricus:head -->
+<link rel="stylesheet" href="/assets/metricus.css?v=20260927">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#FBFAF7">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w70oz7g1k3");</script>
+<!-- /metricus:head -->
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "How AI Visibility Scores Actually Work",
+ "description": "AI visibility scores vary wildly between tools. We explain how they're calculated, why nondeterminism matters, and what a meaningful score actually looks like.",
+ "author": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "datePublished": "2026-03-01",
+ "dateModified": "2026-09-27",
+ "mainEntityOfPage": "https://metricusapp.com/blog/ai-visibility-scores-explained/",
+ "image": "https://metricusapp.com/assets/og.png"
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
   {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "How AI Visibility Scores Actually Work",
-    "description": "AI visibility scores vary wildly between tools. We explain how they're calculated, why nondeterminism matters, and what a meaningful score actually looks like.",
-    "author": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "datePublished": "2026-03-01",
-    "dateModified": "2026-09-04",
-    "mainEntityOfPage": "https://metricusapp.com/blog/ai-visibility-scores-explained/",
-    "image": "https://metricusapp.com/landing/img/og.jpg"
-  }
-  </script>
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://metricusapp.com/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "How AI Visibility Scores Actually Work", "item": "https://metricusapp.com/blog/ai-visibility-scores-explained/"}
-    ]
-  }
-  </script>
-
-  <!-- JSON-LD FAQPage -->
-
-    <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://metricusapp.com/blog/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Why do different tools report different AI visibility scores?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Different tools use different measurement methods. API-based tools query through developer interfaces that return different results than real user sessions. Different prompt sets, timing, and scoring methodologies all contribute to score variation."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What metrics matter most when evaluating AI visibility?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Five key metrics: mention rate, positioning within the response, recommendation quality, factual accuracy, and citation sources. The breakdown by query type matters more than any single headline number."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is a good AI visibility score?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It depends on your category. In Metricus testing of B2B SaaS brands, scores ranged from 50% to 83%. Above 60% is competitive in most categories. But a brand might score 90% on broad queries and 0% on industry-specific ones."
-        }
-      }
-    ]
+   "@type": "ListItem",
+   "position": 3,
+   "name": "How AI Visibility Scores Actually Work",
+   "item": "https://metricusapp.com/blog/ai-visibility-scores-explained/"
   }
-  </script>
-  <script src="/js/reader-pulse-b.js" defer></script>
+ ]
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Why do different tools report different AI visibility scores?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Different tools use different measurement methods. API-based tools query through developer interfaces that return different results than real user sessions. Different prompt sets, timing, and scoring methodologies all contribute to score variation."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What metrics matter most when evaluating AI visibility?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Five key metrics: mention rate, positioning within the response, recommendation quality, factual accuracy, and citation sources. The breakdown by query type matters more than any single headline number."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is a good AI visibility score?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It depends on your category: niche categories with fewer competitors tend to produce higher scores, while crowded categories like CRM or project management produce lower scores even for market leaders. A brand might score 90% on broad queries and 0% on industry-specific ones."
+   }
+  }
+ ]
+}</script>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
-
-  <!-- Site Nav -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 gap-4">
-      <a href="/" class="text-on-surface font-semibold" aria-label="Metricus home">Metricus <span class="font-normal text-on-surface-variant">Optimizer</span></a>
-      <div class="flex items-center gap-5">
-        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface">Learn</a>
-        <a href="/ai-visibility-optimizer-tool/" class="bg-primary text-on-primary text-sm font-semibold px-4 py-2.5 hover:bg-primary-dim">Open the tool</a>
-      </div>
-    </div>
-  </header>
-
-
-
-  <!-- Mobile Menu Overlay -->
-
-
-
-  <main class="flex-grow flex flex-col relative overflow-x-hidden">
-
-    <div class="absolute inset-0 -z-10 pointer-events-none"></div>
-
-    <!-- ========== ARTICLE ========== -->
-    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
-
-      <!-- Breadcrumb -->
-      <nav class="mb-8">
-        <ol class="flex items-center gap-2 text-xs text-slate-muted">
-          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
-          <li class="select-none">/</li>
-          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
-          <li class="select-none">/</li>
-          <li class="text-slate-text">AI Visibility Scores Explained</li>
-        </ol>
-      </nav>
-
-      <!-- Article Header -->
-      <header class="mb-12">
-        <p class="text-xs text-primary font-semibold mb-4">Methodology</p>
-        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
-          How AI Visibility Scores Actually Work
-        </h1>
-        <p class="text-sm text-outline">Metricus Research &middot; March 14, 2026 &middot; 7 min read</p>
-      </header>
-
-
-      <!-- Definition Box -->
-      <div class="bg-surface-container-low p-8 mb-12">
-        <p class="text-lg leading-relaxed text-on-surface">
-          <strong>An AI visibility score</strong> is a metric that quantifies how often and how prominently AI chatbots mention a specific brand when users ask recommendation queries in that brand's category. Scores typically range from 0% (never mentioned) to 100% (mentioned in every query on every platform).
+<body class="doc">
+<!-- metricus:header -->
+<header class="nav"><div class="in"><a class="logo" href="/" id="navhome">Metricus</a><span class="sp"></span><span class="muted" id="host"></span></div></header>
+<!-- /metricus:header -->
+<main class="doc-main" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <span aria-current="page">AI Visibility Scores Explained</span></nav>
+<p class="kicker">Methodology</p>
+<h1>How AI Visibility Scores Actually Work</h1>
+<p class="byline">Metricus Research · March 14, 2026 · 7 min read</p>
+<div class="note">
+<p>
+<strong>An AI visibility score</strong> is a metric that quantifies how often and how prominently AI chatbots mention a specific brand when users ask recommendation queries in that brand's category. Scores typically range from 0% (never mentioned) to 100% (mentioned in every query on every platform).
         </p>
-      </div>
-
-      
-
-      <!-- Table of Contents -->
-      <div class="border border-[#E2E8F0] p-8 mb-12">
-        <p class="text-xs text-slate-muted font-semibold mb-4">In this article</p>
-        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
-          <li><a href="#problem" class="hover:text-primary-hover underline underline-offset-2">Why most scores are unreliable</a></li>
-          <li><a href="#nondeterminism" class="hover:text-primary-hover underline underline-offset-2">The nondeterminism problem</a></li>
-          <li><a href="#methodology" class="hover:text-primary-hover underline underline-offset-2">How a meaningful score is calculated</a></li>
-          <li><a href="#metrics" class="hover:text-primary-hover underline underline-offset-2">The 5 metrics that matter</a></li>
-          <li><a href="#benchmarks" class="hover:text-primary-hover underline underline-offset-2">What's a "good" score?</a></li>
-        </ol>
-      </div>
-
-
-<!-- Article Body -->
-      <div class="article-body">
-
-        <h2 id="problem">Why most scores are unreliable</h2>
-
-        <p>AI chatbots are nondeterministic &mdash; they do not give the same response every time. What Metricus found in testing is that running the same query 10 times on one platform produced mention rates ranging from 20% to 80% for the same brand. Any tool that runs a query once and reports a score is giving you noise, not signal. You need 50+ queries per platform to get a statistically meaningful result.</p>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>The problem in numbers:</strong> A single query captures less than 15% of the actual pattern. Different tools report different scores because they use different measurement methods, prompt sets, timing, and scoring methodologies.
+</div>
+<nav class="toc" aria-label="In this article"><p>In this article</p><ol>
+<li><a href="#problem">Why most scores are unreliable</a></li>
+<li><a href="#api-vs-ui">API vs. real UI measurement</a></li>
+<li><a href="#metrics">The 5 metrics that matter</a></li>
+<li><a href="#cross-platform">Cross-platform score variation</a></li>
+<li><a href="#score-movement">How scores change over time</a></li>
+<li><a href="#benchmarks">What is a “good” score?</a></li>
+<li><a href="#faq">Frequently asked questions</a></li>
+</ol></nav>
+<h2 id="problem">Why most scores are unreliable</h2>
+<p>AI chatbots are nondeterministic — they do not give the same response every time. Any tool that runs a query once and reports a score is giving you noise, not signal. You need 50+ queries per platform to get a statistically meaningful result.</p>
+<div class="note">
+<p>
+<strong>The problem in numbers:</strong> A single query captures only a small part of the pattern. Different tools report different scores because they use different measurement methods, prompt sets, timing, and scoring methodologies.
           </p>
-        </div>
-
-
-        <h2 id="api-vs-ui">API vs. real UI measurement</h2>
-
-        <p>The biggest variable between tools is API vs real UI measurement. Many tools query AI models through developer APIs, which return different results than what users see in the actual ChatGPT or Perplexity interface. API responses often lack the web-search grounding that real sessions include, producing a completely different set of recommendations. What we found is that tools simulating actual user sessions &mdash; opening a browser, typing a query, reading the response &mdash; capture what buyers actually experience.</p>
-
-
-        <h2 id="metrics">The 5 metrics that matter</h2>
-
-        <p>Five metrics provide a meaningful picture of AI visibility:</p>
-
-        <ul>
-          <li><strong>Mention rate:</strong> How often your brand appears across all tested queries and platforms.</li>
-          <li><strong>Positioning:</strong> Where your brand appears in the response &mdash; first recommendation, listed among alternatives, or mentioned as an afterthought.</li>
-          <li><strong>Recommendation quality:</strong> Whether you are actively recommended versus merely listed or compared unfavorably.</li>
-          <li><strong>Factual accuracy:</strong> Whether AI gets your details right &mdash; pricing, features, positioning, founding date.</li>
-          <li><strong>Citation sources:</strong> Which URLs and sources feed the AI&rsquo;s answer about your brand.</li>
-        </ul>
-
-        <p>The overall score hides what matters. A brand might score 90% on broad queries and 0% on industry-specific ones. The breakdown by query type matters more than the headline number.</p>
-
-
-        
-        <h2 id="cross-platform">Cross-platform score variation</h2>
-
-        <p>What we found when testing the same brand across multiple AI platforms is that scores vary significantly. A brand might score 75% visibility on ChatGPT and 40% on Perplexity for identical queries. This happens because each platform uses different training data, different retrieval mechanisms, and different synthesis logic. Perplexity, which relies heavily on real-time web search, tends to surface brands with strong recent web presence. ChatGPT, which leans more on training data, favors brands with established parametric presence.</p>
-
-        <p>This cross-platform variation is why any meaningful AI visibility assessment must test across all major platforms rather than relying on a single one. A score from ChatGPT alone tells you less than half the story. The free Metricus optimizer shows answers from the major AI platforms specifically because buyer behavior is distributed: different buyers use different AI tools, and your visibility needs to be consistent across all of them.</p>
-
-
-        <h2 id="score-movement">How scores change over time</h2>
-
-        <p>AI visibility scores are not static. Model updates, competitor content changes, and shifts in the AI&rsquo;s retrieval behavior can move your score by 20+ points between quarters. What we found is that the most common cause of score drops is competitor activity &mdash; when a competitor publishes strong new content or earns significant third-party coverage, AI models shift their recommendations accordingly. Conversely, Metricus has seen brands increase their scores by 15 to 30 points after addressing the specific gaps a first measurement identified.</p>
-
-        <h2 id="benchmarks">What is a &ldquo;good&rdquo; score?</h2>
-
-        <p>In Metricus testing of B2B SaaS brands, scores ranged from 50% to 83%. Above 60% is competitive in most categories. But what we found is that the category matters enormously: niche categories with fewer competitors tend to produce higher scores, while crowded categories like CRM or project management produce lower scores even for market leaders. The free Metricus optimizer shows what the major AI platforms answer when one of your pages is the source, so you can see where the gaps on that page are.</p>
-
-        <p>What we also found is that scores should be interpreted in the context of query type distribution. A brand scoring 80% overall might achieve that by dominating broad queries while being invisible for the industry-specific and use-case-specific queries that often represent the highest-intent buyers. Conversely, a brand scoring 55% overall might be the top recommendation for the most commercially valuable queries in its category. The score breakdown by query type &mdash; broad, comparative, use-case-specific, and industry-specific &mdash; reveals where the real opportunities and risks lie.</p>
-
-        <p class="text-sm text-slate-muted mt-8">Last updated: September 2026</p>
-
-      </div>
-      <!-- End Article Body -->
-
-
-
-
-    
-      <!-- ========== ARTICLE CTA ========== -->
-      <section class="mt-16 bg-on-surface text-surface">
-        <div class="border-t border-outline-variant/30 mt-16 pt-10" data-cta="tool">
-        <h2 class="text-2xl font-semibold text-on-surface mb-2">Put in a page.</h2>
-        <p class="text-on-surface-variant mb-5 max-w-xl">See what an AI assistant answers about your page, which passages caused it, and a rewrite for each one. Free, no signup.</p>
-        <form class="flex flex-col sm:flex-row gap-2 max-w-xl" action="/ai-visibility-optimizer-tool/" method="get">
-          <label class="sr-only" for="cta-url">Address of the page to check</label>
-          <input id="cta-url" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="your-site.com/page" required class="flex-1 min-w-0 px-4 py-3 border border-outline-variant bg-white text-on-surface">
-          <button type="submit" class="bg-primary text-on-primary font-semibold px-6 py-3 hover:bg-primary-dim whitespace-nowrap">Start optimizing</button>
-        </form>
-      </div>
-      </section>
-
-      <!-- ========== CITE THIS ARTICLE ========== -->
-      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
-        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
-          <cite class="not-italic"><a href="https://metricusapp.com/blog/ai-visibility-scores-explained/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; How AI Visibility Scores Actually Work</a></cite>
-        </p>
-      </footer>
-
-    </article>
-
-
-    
-    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
-      <p class="text-xs text-slate-muted font-semibold mb-6">Go deeper</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <a href="/ai-platform-comparison-brands/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">Platform Intelligence Guide</p>
-          <p class="text-sm text-on-surface-variant mt-1">How AI platforms score and rank content</p>
-        </a>
-        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
-          <p class="text-sm text-on-surface-variant mt-1">Accuracy patterns across AI platforms</p>
-        </a>
-      </div>
-    </section>
-
-<!-- ========== RELATED POSTS ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
-      <p class="text-xs text-slate-muted font-semibold mb-8">Related articles</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        <a href="../ai-visibility-tools-compared/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Buyer's Guide</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            AI Visibility Tools Compared: A Buyer's Guide for 2026
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            We compare 15+ GEO platforms by coverage, accuracy audits, action plans, and pricing.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../ai-visibility-action-plan/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Playbook</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            How to Turn AI Visibility Data Into an Actual Action Plan
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            Most AI visibility tools give you a score and leave you stuck. How to turn that data into actions that change how AI describes your brand.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../what-is-ai-visibility/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Guide</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            What Is AI Visibility? A Complete Guide for 2026
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            AI visibility is how often AI chatbots mention your brand. This guide covers GEO, AEO, and how to measure it.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
-  </main>
-
-
-  <!-- ========== FOOTER ========== -->
-  <!-- Site Footer -->
-  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-on-surface-variant">
-      <span class="text-on-surface font-semibold">Metricus</span>
-      <a href="/ai-visibility-optimizer-tool/" class="hover:text-on-surface">Open the tool</a>
-      <a href="/blog/" class="hover:text-on-surface">Learn</a>
-      <a href="/methodology/" class="hover:text-on-surface">How it works</a>
-      <a href="/results/" class="hover:text-on-surface">Results</a>
-      <a href="/for-agencies/" class="hover:text-on-surface">For agencies</a>
-      <a href="/about/" class="hover:text-on-surface">About</a>
-      <a href="/press/" class="hover:text-on-surface">Press</a>
-      <a href="/support/" class="hover:text-on-surface">Support</a>
-      <a href="/privacy-policy/" class="hover:text-on-surface">Privacy</a>
-      <a href="/terms-of-service/" class="hover:text-on-surface">Terms</a>
-      <a href="mailto:metricusapp@gmail.com" class="hover:text-on-surface">Contact</a>
-      <span class="ml-auto">&copy; 2026 Metricus</span>
-    </div>
-  </footer>
-
+</div>
+<h2 id="api-vs-ui">API vs. real UI measurement</h2>
+<p>The biggest variable between tools is API vs real UI measurement. Many tools query AI models through developer APIs, which return different results than what users see in the actual ChatGPT or Perplexity interface. API responses often lack the web-search grounding that real sessions include, producing a completely different set of recommendations. Tools simulating actual user sessions — opening a browser, typing a query, reading the response — capture what buyers actually experience.</p>
+<h2 id="metrics">The 5 metrics that matter</h2>
+<p>Five metrics provide a meaningful picture of AI visibility:</p>
+<ul>
+<li><strong>Mention rate:</strong> How often your brand appears across all tested queries and platforms.</li>
+<li><strong>Positioning:</strong> Where your brand appears in the response — first recommendation, listed among alternatives, or mentioned as an afterthought.</li>
+<li><strong>Recommendation quality:</strong> Whether you are actively recommended versus merely listed or compared unfavorably.</li>
+<li><strong>Factual accuracy:</strong> Whether AI gets your details right — pricing, features, positioning, founding date.</li>
+<li><strong>Citation sources:</strong> Which URLs and sources feed the AI’s answer about your brand.</li>
+</ul>
+<p>The overall score hides what matters. A brand might score 90% on broad queries and 0% on industry-specific ones. The breakdown by query type matters more than the headline number.</p>
+<h2 id="cross-platform">Cross-platform score variation</h2>
+<p>Scores for the same brand vary significantly across AI platforms. A brand might score 75% visibility on ChatGPT and 40% on Perplexity for identical queries. This happens because each platform uses different training data, different retrieval mechanisms, and different synthesis logic. Perplexity, which relies heavily on real-time web search, tends to surface brands with strong recent web presence. ChatGPT, which leans more on training data, favors brands with established parametric presence.</p>
+<p>This cross-platform variation is why any meaningful AI visibility assessment must test across all major platforms rather than relying on a single one. A score from ChatGPT alone tells you less than half the story.</p>
+<h2 id="score-movement">How scores change over time</h2>
+<p>AI visibility scores are not static. Model updates, competitor content changes, and shifts in the AI’s retrieval behavior can move your score by 20+ points between quarters. The most common cause of score drops is competitor activity — when a competitor publishes strong new content or earns significant third-party coverage, AI models shift their recommendations accordingly.</p>
+<h2 id="benchmarks">What is a “good” score?</h2>
+<p>It depends on your category: niche categories with fewer competitors tend to produce higher scores, while crowded categories like CRM or project management produce lower scores even for market leaders. The AI Visibility Score in <a href="/">Metricus</a> is free and shows how often AI mentions you and how often it recommends you across your customers’ questions, today and with new text for your website.</p>
+<p>Scores should also be interpreted in the context of query type distribution. A brand scoring 80% overall might achieve that by dominating broad queries while being invisible for the industry-specific and use-case-specific queries that often represent the highest-intent buyers. Conversely, a brand scoring 55% overall might be the top recommendation for the most commercially valuable queries in its category. The score breakdown by query type — broad, comparative, use-case-specific, and industry-specific — reveals where the real opportunities and risks lie.</p>
+<h2 id="faq">Frequently asked questions</h2>
+<h3>Why do different tools report different AI visibility scores?</h3>
+<p>Different tools use different measurement methods. API-based tools query through developer interfaces that return different results than real user sessions. Different prompt sets, timing, and scoring methodologies all contribute to score variation.</p>
+<h3>What metrics matter most when evaluating AI visibility?</h3>
+<p>Five key metrics: mention rate, positioning within the response, recommendation quality, factual accuracy, and citation sources. The breakdown by query type matters more than any single headline number.</p>
+<h3>What is a good AI visibility score?</h3>
+<p>It depends on your category: niche categories with fewer competitors tend to produce higher scores, while crowded categories like CRM or project management produce lower scores even for market leaders. A brand might score 90% on broad queries and 0% on industry-specific ones.</p>
+<p>Last updated: September 2026</p>
+<p class="cite">Cite as: <a href="https://metricusapp.com/blog/ai-visibility-scores-explained/">Metricus — How AI Visibility Scores Actually Work</a></p>
+<section class="related" aria-labelledby="related-knowledge-bases"><h2 id="related-knowledge-bases">Knowledge bases</h2><ul><li><a href="/ai-platform-comparison-brands/">Platform Intelligence Guide</a><p>How AI platforms score and rank content</p></li><li><a href="/brand-accuracy-knowledge-base/">AI Brand Accuracy Guide</a><p>Accuracy patterns across AI platforms</p></li></ul></section>
+<section class="related" aria-labelledby="related-related-articles"><h2 id="related-related-articles">Related articles</h2><ul><li><a href="/blog/ai-visibility-tools-worth-it-2026/">AI Visibility Tools Compared: A Buyer&#x27;s Guide for 2026</a><p>We compare 15+ GEO platforms by coverage, accuracy audits, action plans, and pricing.</p></li><li><a href="/blog/ai-visibility-action-plan/">How to Turn AI Visibility Data Into an Actual Action Plan</a><p>Most AI visibility tools give you a score and leave you stuck. How to turn that data into actions that change how AI describes your brand.</p></li><li><a href="/blog/ai-visibility-how-brands-show-up/">What Is AI Visibility? A Complete Guide for 2026</a><p>AI visibility is how often AI chatbots mention your brand. This guide covers GEO, AEO, and how to measure it.</p></li></ul></section>
+<!-- metricus:ask -->
+<section class="ask-cta" aria-labelledby="ask-cta-h"><h2 id="ask-cta-h">What do your customers ask AI?</h2><form class="chatbox" action="/" method="get"><input class="input" type="text" name="q" maxlength="600" autocomplete="off" required placeholder="Type what people would ask AI&hellip;" aria-labelledby="ask-cta-h"><button class="send" type="submit" aria-label="Ask AI" title="Ask AI"><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V6M6 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form></section>
+<!-- /metricus:ask -->
+</main>
+<!-- metricus:footer -->
+<footer class="foot"><nav aria-label="Site"><a href="/blog/">Blog</a><a href="/geo-knowledge-base/">Knowledge base</a><a href="/results/">Results</a><a href="/about/">About</a><a href="/press/">Press</a><a href="/support/">Support</a><a href="/privacy-policy/">Privacy</a><a href="/terms-of-service/">Terms</a><a href="mailto:metricusapp@gmail.com">Contact</a></nav><p>&copy; 2026 Metricus</p></footer>
+<!-- /metricus:footer -->
 </body>
 </html>

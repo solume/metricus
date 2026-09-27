@@ -1,87 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<title>See What AI Says About Your Page, Then Change It | Metricus</title>
-<meta name="description" content="Check AI responses and the passages that influence them. Free, no registration.">
-<link rel="canonical" href="https://metricusapp.com/ai-visibility-optimizer-tool/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="See What AI Says About Your Page, Then Change It | Metricus">
-<meta property="og:description" content="Check AI responses and the passages that influence them. Free, no registration.">
-<meta property="og:url" content="https://metricusapp.com/ai-visibility-optimizer-tool/">
-<meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="alternate" type="application/rss+xml" title="Metricus, AI visibility learn center" href="https://metricusapp.com/feed.xml">
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-<script type="text/javascript">
-(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "w70oz7g1k3");
-</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Metricus Optimizer", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "url": "https://metricusapp.com/ai-visibility-optimizer-tool/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Put in a URL. See the answer an AI assistant gives about your page, the passages behind that answer, and a rewrite for each one. Free, no signup.", "publisher": {"@type": "Organization", "name": "Metricus", "url": "https://metricusapp.com"}}</script>
-<link rel="stylesheet" href="/ai-visibility-optimizer-tool/style.css?v=18">
+<title>Metricus</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://metricusapp.com/">
+<meta http-equiv="refresh" content="0; url=/">
 </head>
 <body>
-<header class="top" id="top">
-  <a class="wordmark" href="/">Metricus <span>Optimizer</span></a>
-  <form id="urlform" class="urlform">
-    <input id="url" type="text" placeholder="your-site.com/page" autocomplete="off" spellcheck="false" required>
-    <button type="submit" class="btn primary" id="runbtn">Start optimizing</button>
-  </form>
-</header>
-
-<div class="trace" id="trace">
-  <button type="button" class="tracehead" id="tracetoggle" aria-expanded="false" title="Show the full log">
-    <svg class="loop" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><circle class="ring" cx="10" cy="10" r="8.2"/><path class="star" d="M10 3.6Q10.9 9.1 16.4 10Q10.9 10.9 10 16.4Q9.1 10.9 3.6 10Q9.1 9.1 10 3.6Z"/><circle class="sat" cx="18.2" cy="10" r="1.7"/></svg>
-    <span id="statetext">Enter a page above.</span><span class="prog" id="prog"></span><span class="chev"><span class="chevtxt"></span><span class="arrow">&#9662;</span></span>
-  </button>
-  <ol class="steps" id="steps">
-    <li data-s="why">read</li><li data-s="answers">search</li><li data-s="answers">answer</li><li data-s="why">measure</li><li data-s="why">rewrite</li><li data-s="answers">steer</li>
-  </ol>
-  <ol class="tracelist hidden" id="log"></ol>
-</div>
-
-<main class="page" id="page">
-  <section class="intro" id="intro">
-    <h1>See what AI says about your page. Then change it.</h1>
-    <p>Today's answer, the passages behind it, and rewrites that move it toward what you want said.</p>
-  </section>
-
-  <section class="block hidden" id="s-answers">
-    <div class="controls">
-      <label>The prompt<select id="qselect"></select><input id="ownq" type="text" class="hidden" placeholder="Type your prompt and press Enter" autocomplete="off"></label>
-      <label>What the assistant should say<input id="want" type="text" placeholder="e.g. recommend us and compare with two other tools"></label>
-      <button type="button" class="btn sm" id="updatebtn">Update</button>
-    </div>
-    <p class="sub">As is reads your page as it is today. Steered reads it with your changes.</p>
-  </section>
-
-  <section class="work hidden" id="s-work">
-    <div class="left">
-      <div class="col" id="card-asis"><h3>As is</h3><p class="status" id="status-asis"></p><div class="answer" id="ans-asis"></div></div>
-      <div class="block" id="s-why">
-        <div class="row"><h2>Your page</h2><span class="grow"></span><button type="button" class="btn primary sm hidden" id="replaceall">Apply all rewrites</button><button type="button" class="btn sm" id="rewriteall">Rewrite the whole page</button><button type="button" class="btn sm" id="undoall">Undo all</button></div>
-        <div class="mono small muted" id="meta-path"></div>
-        <p class="sub" id="why-sub"><i class="sw hp"></i> the assistant draws on it and says what you want, <i class="sw hn"></i> draws on it and does not, <i class="sw hc"></i> changed. Click into a passage to edit it.</p>
-        <div id="segments" class="docbody"></div>
-      </div>
-    </div>
-    <div class="right"><div class="col stick" id="card-steer"><h3>Steered</h3><p class="status" id="status-steer"></p><div class="answer" id="ans-steer"></div></div></div>
-  </section>
-</main>
-
-<div class="floatbar hidden" id="floatbar">
-  <span id="float-summary"></span>
-  <div class="menu"><button type="button" class="btn sm" id="exportbtn">Export &#9662;</button>
-    <div class="menuitems hidden" id="exportmenu"><button type="button" data-f="diff">Before and after (diff file)</button><button type="button" data-f="csv">CSV of the changes</button><button type="button" data-f="md">Markdown findings</button><button type="button" data-f="pdf">PDF</button><button type="button" data-f="email">Send the findings to my email</button></div>
-    <form class="mailrow hidden" id="mailrow"><input type="email" id="mailto" placeholder="you@company.com" autocomplete="email" required><button type="submit" class="btn sm">Send</button></form>
-  </div>
-</div>
-<script src="/ai-visibility-optimizer-tool/app.js?v=18" data-api="https://metricus-optimizer-api.slate-harbor-75f9.workers.dev"></script>
-<script src="/js/reader-pulse-b.js" defer></script>
+<p><a href="/">Metricus</a></p>
+<script>location.replace("/" + location.search + location.hash);</script>
 </body>
 </html>

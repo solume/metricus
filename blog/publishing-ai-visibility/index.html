@@ -1,723 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Why Doesn't AI Cite My Publication? Visibility Data for Publishers | Metricus</title>
-  <meta name="description" content="AI citation accuracy fails 60%+ of the time. Syndicated versions get cited over originals. Data on how publishers can reclaim attribution.">
-  <meta property="og:title" content="Why Doesn't AI Cite My Publication? Visibility Data for Publishers">
-  <meta property="og:description" content="AI citation accuracy fails 60%+ of the time. Syndicated versions get cited over originals. Data on how publishers can reclaim attribution.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://metricusapp.com/blog/publishing-ai-visibility/">
-  <meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Why Doesn't AI Cite My Publication? Visibility Data for Publishers">
-  <meta name="twitter:description" content="AI citation accuracy fails 60%+ of the time. Syndicated versions get cited over originals. Data on how publishers can reclaim attribution.">
-  <meta name="twitter:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <link rel="canonical" href="https://metricusapp.com/blog/publishing-ai-visibility/">
-
-  <!-- GTM -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w70oz7g1k3");
-  </script>
-
-  <!-- JSON-LD BlogPosting -->
-  <script type="application/ld+json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why Doesn't AI Cite My Publication? Visibility Data for Publishers | Metricus</title>
+<meta name="description" content="AI citation accuracy fails 60%+ of the time. Syndicated versions get cited over originals. Data on how publishers can reclaim attribution.">
+<link rel="canonical" href="https://metricusapp.com/blog/publishing-ai-visibility/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Metricus">
+<meta property="og:url" content="https://metricusapp.com/blog/publishing-ai-visibility/">
+<meta property="og:title" content="Why Doesn&#x27;t AI Cite My Publication? Visibility Data for Publishers">
+<meta property="og:description" content="AI citation accuracy fails 60%+ of the time. Syndicated versions get cited over originals. Data on how publishers can reclaim attribution.">
+<meta property="og:image" content="https://metricusapp.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Metricus: see what AI answers when your customers ask for what you offer.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why Doesn&#x27;t AI Cite My Publication? Visibility Data for Publishers">
+<meta name="twitter:description" content="AI citation accuracy fails 60%+ of the time. Syndicated versions get cited over originals. Data on how publishers can reclaim attribution.">
+<meta name="twitter:image" content="https://metricusapp.com/assets/og.png">
+<!-- metricus:head -->
+<link rel="stylesheet" href="/assets/metricus.css?v=20260927">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#FBFAF7">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w70oz7g1k3");</script>
+<!-- /metricus:head -->
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "Why Doesn't AI Cite My Publication? AI Visibility for Publishers and Media Companies",
+ "description": "AI citation accuracy fails 60%+ of the time. Syndicated versions get cited over originals. Data on how publishers can reclaim AI attribution.",
+ "author": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "datePublished": "2026-04-06",
+ "dateModified": "2026-09-27",
+ "mainEntityOfPage": "https://metricusapp.com/blog/publishing-ai-visibility/",
+ "image": "https://metricusapp.com/assets/og.png"
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
   {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Why Doesn't AI Cite My Publication? AI Visibility for Publishers and Media Companies",
-    "description": "AI citation accuracy fails 60%+ of the time. Syndicated versions get cited over originals. Data on how publishers can reclaim AI attribution.",
-    "author": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "datePublished": "2026-04-06",
-    "dateModified": "2026-05-17",
-    "mainEntityOfPage": "https://metricusapp.com/blog/publishing-ai-visibility/",
-    "image": "https://metricusapp.com/landing/img/og.jpg"
-  }
-  </script>
-
-  <!-- JSON-LD BreadcrumbList -->
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://metricusapp.com/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "AI Visibility for Publishers & Media", "item": "https://metricusapp.com/blog/publishing-ai-visibility/"}
-    ]
-  }
-  </script>
-
-  <!-- JSON-LD FAQPage -->
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://metricusapp.com/blog/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Why does AI cite syndicated versions of my article instead of the original?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI systems learn from the entire web corpus, not editorial intent. When your original reporting is syndicated to aggregator sites, the syndicated version often accumulates more backlinks, social shares, and third-party references than your original URL. A single investigation republished on 40+ partner sites creates 40x the corpus frequency for the syndicated URLs compared to the original. AI models weight frequency and authority signals from these copies equally or higher than the source. The result: AI may cite an aggregator reprint of your exclusive rather than your own domain."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does blocking AI crawlers with robots.txt affect my publication's visibility?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Blocking AI crawlers via robots.txt prevents those systems from indexing your current content for retrieval and future training. However, blocking creates a paradox: your content still exists in older training data snapshots, but new reporting becomes invisible to AI. Publishers who block one AI crawler but not others may still appear on some platforms while disappearing from others entirely. The strategic calculus depends on whether your publication monetizes through subscriptions or advertising. There is no one-size-fits-all answer, but publishers should understand that blocking is not consequence-free for discoverability."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does asking AI 'best books on [topic]' reveal attribution accuracy problems for publishers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "When someone asks an AI chatbot for the best books on a topic, the AI generates a recommendation list that reveals how it handles publisher attribution. In many cases, AI recommends a title but credits the wrong publisher, names a different edition, or attributes the book to an imprint that no longer exists. For publishers, this query pattern is a direct test of attribution accuracy because book recommendations require the AI to connect a title to a specific publisher, and that connection breaks frequently. Publisher brands that appear inaccurately in these responses lose the attribution value of their editorial curation and brand reputation."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What can local and regional publishers do to improve their AI visibility?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Local and regional publishers face the steepest AI visibility challenge because they have the smallest web corpus footprint relative to national outlets. Practical areas to address include publishing structured, data-rich content that AI can cite, implementing schema markup on every story, building citations on authoritative aggregators and databases, creating evergreen local reference content that AI surfaces for informational queries, and auditing what AI currently says about their coverage area."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can licensing deals with AI companies protect my publication's visibility?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Licensing deals provide financial compensation and, in some cases, preferred citation treatment within the licensed platform. However, licensing with one AI provider does not guarantee visibility across all AI systems. A publication licensed to one platform may still be invisible or misattributed on every other platform. Moreover, licensing terms vary significantly and most deals benefit large publishers while mid-tier and local publications lack the negotiating leverage to secure meaningful terms. Licensing is one piece of the strategy but does not replace the need for broad AI visibility across all platforms."
-        }
-      }
-    ]
+   "@type": "ListItem",
+   "position": 3,
+   "name": "AI Visibility for Publishers & Media",
+   "item": "https://metricusapp.com/blog/publishing-ai-visibility/"
   }
-  </script>
-
-  <!-- Google Fonts -->
-
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#515F74',
-            'primary-hover': '#1E293B',
-            'on-primary': '#f6f7ff',
-            'on-primary-fixed': '#324054',
-            'primary-dim': '#455368',
-            surface: '#f7f9fb',
-            'surface-container-low': '#f0f4f7',
-            'surface-container': '#e8eff3',
-            'surface-container-lowest': '#ffffff',
-            'surface-container-highest': '#d9e4ea',
-            'surface-container-high': '#e1e9ee',
-            'surface-variant': '#d9e4ea',
-            'on-surface': '#2a3439',
-            'on-surface-variant': '#566166',
-            outline: '#717c82',
-            'outline-variant': '#a9b4b9',
-            'slate-text': '#0F172A',
-            'slate-muted': '#64748B',
-            'slate-accent': '#475569',
-          },
-          fontFamily: {
-            display: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            body: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            headline: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            label: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-          },
-          borderRadius: {
-            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
-            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
-            full: '0.75rem',
-          },
-        },
-      },
-    }
-  </script>
-
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: #ffffff;
-      color: #0F172A;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .font-display { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-headline { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-body-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-
-    .editorial-btn {
-      transition: background-color 150ms ease-in-out, transform 150ms ease;
-    }
-    .editorial-btn:hover {
-      background-color: #1E293B;
-    }.blog-card {
-      transition: transform 200ms ease, background-color 200ms ease;
-    }
-    .blog-card:hover {
-      transform: translateY(-2px);
-      background-color: #f7f9fb;
-    }
-
-    /* Article prose styles */
-    .article-body h2 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.75rem;
-      line-height: 1.2;
-      color: #0F172A;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-    }
-    @media (min-width: 768px) {
-      .article-body h2 {
-        font-size: 2rem;
-      }
-    }
-    .article-body h3 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      line-height: 1.3;
-      color: #0F172A;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    .article-body p {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-    }
-    .article-body ul, .article-body ol {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-      padding-left: 1.5rem;
-    }
-    .article-body ul { list-style-type: disc; }
-    .article-body ol { list-style-type: decimal; }
-    .article-body li { margin-bottom: 0.5rem; }
-    .article-body blockquote {
-      border-left: 2px solid #334155;
-      padding-left: 1.5rem;
-      font-style: italic;
-      color: #475569;
-      font-size: 1.125rem;
-      line-height: 1.75;
-      margin: 2rem 0;
-    }
-    .article-body a {
-      color: #334155;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .article-body a:hover {
-      color: #1E293B;
-    }
-  </style>
-  <script src="/js/reader-pulse-b.js" defer></script>
+ ]
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Why does AI cite syndicated versions of my article instead of the original?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "AI systems learn from the entire web corpus, not editorial intent. When your original reporting is syndicated to aggregator sites, the syndicated version often accumulates more backlinks, social shares, and third-party references than your original URL. A single investigation republished on 40+ partner sites creates 40x the corpus frequency for the syndicated URLs compared to the original. AI models weight frequency and authority signals from these copies equally or higher than the source."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How does blocking AI crawlers with robots.txt affect my publication’s visibility?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Blocking AI crawlers via robots.txt prevents those systems from indexing your current content for retrieval and future training. However, blocking creates a paradox: your content still exists in older training data snapshots, but new reporting becomes invisible to AI. The strategic calculus depends on whether your publication monetizes through subscriptions or advertising. There is no one-size-fits-all answer, but publishers should understand that blocking is not consequence-free for discoverability."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How does the “best books on [topic]” query reveal attribution accuracy problems?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "When AI recommends books on a topic, it must connect titles to publishers — a direct test of attribution accuracy. In practice, AI frequently credits the wrong publisher, confuses editions, or cites aggregator sites instead of the publisher’s own catalog. For publishers whose brand is built on editorial curation in a specific topic area, these errors erase the publisher from the very recommendation where their brand should be strongest."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What can local and regional publishers do to improve their AI visibility?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Local and regional publishers face the steepest AI visibility challenge because they have the smallest web corpus footprint relative to national outlets. Practical areas to address include publishing structured, data-rich content, implementing schema markup on every story, building citations on authoritative aggregators and databases, creating evergreen local reference content, and auditing what AI currently says about their coverage area."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can licensing deals with AI companies protect my publication’s visibility?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Licensing deals provide financial compensation and in some cases preferred citation treatment within the licensed platform. However, licensing with one AI provider does not guarantee visibility across all AI systems. A publication licensed to one platform may still be invisible or misattributed on every other platform. Most deals benefit large publishers while mid-tier and local publications lack the negotiating leverage to secure meaningful terms."
+   }
+  }
+ ]
+}</script>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
-
-  <!-- Site Nav -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 gap-4">
-      <a href="/" class="text-on-surface font-semibold" aria-label="Metricus home">Metricus <span class="font-normal text-on-surface-variant">Optimizer</span></a>
-      <div class="flex items-center gap-5">
-        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface">Learn</a>
-        <a href="/ai-visibility-optimizer-tool/" class="bg-primary text-on-primary text-sm font-semibold px-4 py-2.5 hover:bg-primary-dim">Open the tool</a>
-      </div>
-    </div>
-  </header>
-
-
-
-  <!-- Mobile Menu Overlay -->
-
-
-
-  <main class="flex-grow flex flex-col relative overflow-x-hidden">
-
-    <!-- Background dot grid -->
-    <div class="absolute inset-0 -z-10 pointer-events-none"></div>
-
-
-    <!-- ========== ARTICLE ========== -->
-    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
-
-      <!-- Breadcrumb -->
-      <nav class="mb-8">
-        <ol class="flex items-center gap-2 text-xs text-slate-muted">
-          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
-          <li class="select-none">/</li>
-          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
-          <li class="select-none">/</li>
-          <li class="text-slate-text">Publishing AI Visibility</li>
-        </ol>
-      </nav>
-
-      <!-- Article Header -->
-      <header class="mb-12">
-        <p class="text-xs text-primary font-semibold mb-4">Industry Research</p>
-        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
-          Why Doesn't AI Cite My Publication?
-        </h1>
-        <p class="text-sm text-outline">Metricus Research &middot; April 6, 2026 &middot; 16 min read</p>
-        <p class="text-sm text-outline mt-2">Last updated: April 2026</p>
-      </header>
-
-
-      <!-- Tension Stat -->
-      <div class="bg-surface-container-low p-8 mb-12">
-        <p class="text-lg leading-relaxed text-on-surface">
-          <strong>AI citation accuracy for news publishers fails more than 60% of the time.</strong> When AI chatbots reference a news story, they frequently cite the syndicated version, a reprint, or a secondary aggregator &mdash; not the original publication that broke the story. Meanwhile, the majority of top publishers have blocked AI crawlers entirely (Press Gazette, 2024), creating an unprecedented visibility paradox: your journalism either gets cited without credit or disappears from AI altogether.
+<body class="doc">
+<!-- metricus:header -->
+<header class="nav"><div class="in"><a class="logo" href="/" id="navhome">Metricus</a><span class="sp"></span><span class="muted" id="host"></span></div></header>
+<!-- /metricus:header -->
+<main class="doc-main" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <span aria-current="page">Publishing AI Visibility</span></nav>
+<p class="kicker">Industry Research</p>
+<h1>Why Doesn't AI Cite My Publication?</h1>
+<p class="byline">Metricus Research · April 6, 2026 · 16 min read</p>
+<p class="updated">Last updated: September 2026</p>
+<div class="note">
+<p>
+<strong>AI citation accuracy for news publishers fails more than 60% of the time.</strong> When AI chatbots reference a news story, they frequently cite the syndicated version, a reprint, or a secondary aggregator — not the original publication that broke the story. Meanwhile, the majority of top publishers have blocked AI crawlers entirely (Press Gazette, 2024), creating an unprecedented visibility paradox: your journalism either gets cited without credit or disappears from AI altogether.
         </p>
-      </div>
-
-<p><strong>Short answer:</strong> AI chatbots cite syndicated versions of reporting over original sources more than 60% of the time. Most publishers are losing attribution &mdash; and the traffic that comes with it &mdash; to aggregators and content farms. The free Metricus optimizer shows what the major AI platforms answer when your page is the source, and which passages drive that answer. <a href="/ai-visibility-optimizer-tool/">Open the tool</a>.</p>
-
-
-      <!-- Table of Contents -->
-      <div class="border border-[#E2E8F0] p-8 mb-12">
-        <p class="text-xs text-slate-muted font-semibold mb-4">In this article</p>
-        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
-          <li><a href="#the-attribution-crisis" class="hover:text-primary-hover underline underline-offset-2">The attribution crisis: AI cites everyone except the source</a></li>
-          <li><a href="#best-books-on-topic" class="hover:text-primary-hover underline underline-offset-2">The &ldquo;best books on [topic]&rdquo; query and what it reveals about attribution accuracy</a></li>
-          <li><a href="#who-ai-cites" class="hover:text-primary-hover underline underline-offset-2">Who AI actually cites &mdash; and who it ignores</a></li>
-          <li><a href="#robots-txt-paradox" class="hover:text-primary-hover underline underline-offset-2">The robots.txt paradox: publishers blocking AI crawlers</a></li>
-          <li><a href="#licensing-deals" class="hover:text-primary-hover underline underline-offset-2">Licensing deals: who has them, what they actually protect</a></li>
-          <li><a href="#syndication-trap" class="hover:text-primary-hover underline underline-offset-2">The syndication trap: when your reporting promotes someone else&rsquo;s domain</a></li>
-          <li><a href="#local-news-crisis" class="hover:text-primary-hover underline underline-offset-2">Local news and the AI visibility desert</a></li>
-          <li><a href="#substack-medium" class="hover:text-primary-hover underline underline-offset-2">Substack, Medium, and the independent publisher question</a></li>
-          <li><a href="#what-works-publishers" class="hover:text-primary-hover underline underline-offset-2">What we found</a></li>
-          <li><a href="#case-for-auditing" class="hover:text-primary-hover underline underline-offset-2">The case for auditing your publication&rsquo;s AI visibility now</a></li>
-          <li><a href="#faq" class="hover:text-primary-hover underline underline-offset-2">Frequently asked questions</a></li>
-        </ol>
-      </div>
-
-      <!-- Article Body -->
-      <div class="article-body">
-
-        <h2 id="the-attribution-crisis">The attribution crisis: AI cites everyone except the source</h2>
-
-        <p>Publishing has always depended on attribution. The byline, the masthead, the &ldquo;as first reported by&rdquo; credit &mdash; these are the currency of journalism. When a newsroom breaks a story, the expectation is that the original source gets cited. AI has shattered that expectation.</p>
-
-        <p>The problem is structural, not malicious. AI language models learn from the entire web corpus &mdash; billions of pages scraped across years. When a major publication investigates a story and it gets syndicated, reprinted, quoted in hundreds of blog posts, and discussed across Reddit threads, the AI &ldquo;sees&rdquo; the same information from dozens of sources. <strong>It has no reliable mechanism for identifying the original.</strong></p>
-
-        <p>The Reuters Institute for the Study of Journalism at Oxford documented this in their 2024 Digital News Report: AI systems &ldquo;struggle to distinguish original reporting from aggregation and commentary,&rdquo; creating a landscape where <strong>the publication that invested in the journalism receives the least AI attribution</strong> (Reuters Institute, 2024). The Columbia Journalism Review (CJR) described the situation as &ldquo;a crisis of attribution at scale&rdquo; (CJR, 2025).</p>
-
-        <p>This is not a future problem. Ask an AI chatbot about a breaking news event, and it will synthesize information from multiple sources into a single narrative paragraph. Ask a retrieval-augmented AI the same question, and it will cite 5&ndash;8 sources &mdash; but frequently those sources are aggregators, not the originating newsroom. The Tow Center for Digital Journalism at Columbia University found that AI-generated news summaries <strong>correctly attributed the original source less than 40% of the time</strong> across a sample of 500 recent news queries (Tow Center, 2025).</p>
-
-        <p>For publishers, this means the most expensive part of their business &mdash; original reporting &mdash; is the part AI values least. The economics of journalism are being inverted.</p>
-
-        <div data-reader-pulse-b data-source="publishing-ai-visibility"></div>
-
-
-        <!-- CITE-TO-RECOMMEND SECTION -->
-        <h2 id="best-books-on-topic">The &ldquo;best books on [topic]&rdquo; query and what it reveals about attribution accuracy</h2>
-
-        <p>The &ldquo;best books on [topic]&rdquo; query pattern is one of the most revealing tests of how AI handles publisher attribution. When someone asks an AI chatbot for the best books on behavioral economics, the best books on climate science, or the best books on leadership, the AI must do something that directly tests attribution accuracy: connect a title to a publisher.</p>
-
-        <p>In practice, this connection breaks frequently. AI recommendation lists for books regularly contain attribution errors that reveal the same structural problems affecting news publishers at a broader scale:</p>
-
-        <ul>
-          <li><strong>Wrong publisher credited:</strong> AI names a publishing house that did not publish the title, or attributes a book to an imprint that no longer exists or was absorbed into a larger house. When a buyer sees &ldquo;published by [wrong publisher]&rdquo; in an AI recommendation, the correct publisher loses the brand association entirely.</li>
-          <li><strong>Edition confusion:</strong> AI may recommend a specific edition that is out of print while ignoring the current edition from a different publisher. This is especially common for academic and reference titles that change publishers between editions.</li>
-          <li><strong>Author-publisher conflation:</strong> For independent authors or those who have published with multiple houses, AI often attributes all of an author&rsquo;s works to one publisher &mdash; typically the one with the most web mentions &mdash; regardless of which house actually published each title.</li>
-          <li><strong>Aggregator citation over publisher citation:</strong> When AI cites its source for a book recommendation, it frequently points to an aggregator (a bookseller site, a review aggregator, or a reading community platform) rather than the publisher&rsquo;s own catalog page. The publisher&rsquo;s editorial curation and brand are invisible in the recommendation chain.</li>
-        </ul>
-
-        <h3>Why &ldquo;best books on [topic]&rdquo; matters for publisher brand</h3>
-
-        <p>Publisher brands historically differentiated through editorial curation. A reader who trusts a specific imprint&rsquo;s judgment on science writing, business books, or literary fiction uses that brand as a filter. When AI recommends books without accurate publisher attribution &mdash; or attributes them to the wrong house &mdash; the curation value of the publisher brand disappears from the discovery layer.</p>
-
-        <p>This matters commercially. A publisher that has built a reputation for authoritative books on a specific topic should benefit when AI recommends titles in that topic area. If AI consistently names the titles but credits them to aggregators or wrong publishers, the real publisher sees zero brand lift from the recommendation, even when their books dominate the list.</p>
-
-        <h3>What AI looks for when recommending books on a topic</h3>
-
-        <p>AI models assemble book recommendation lists from a combination of signals. Understanding these signals explains why attribution breaks:</p>
-
-        <ul>
-          <li><strong>Review aggregation dominance:</strong> Book recommendation queries pull heavily from review aggregator content because those sites have the highest volume of book-specific structured content. The publisher&rsquo;s own catalog page typically has far fewer backlinks and less structured data than the aggregator listing for the same title.</li>
-          <li><strong>Social reading platform weight:</strong> Community reading platforms generate enormous volumes of reader reviews, shelving data, and discussion content. AI treats this as high-authority topic-specific content. Publisher websites rarely compete on this volume.</li>
-          <li><strong>Bookseller metadata:</strong> Major bookseller sites carry detailed metadata &mdash; ISBNs, publisher names, edition histories, cover images. But AI may pull this metadata inconsistently, mixing edition data across entries.</li>
-          <li><strong>Absence of publisher-hosted recommendation content:</strong> Most publishers do not create their own &ldquo;best books on [topic]&rdquo; content pages. The content that directly answers the query comes from third parties, giving AI no reason to cite the publisher&rsquo;s domain.</li>
-        </ul>
-
-        <p>The result: publishers whose titles consistently appear in &ldquo;best books on [topic]&rdquo; AI recommendations often receive no attribution benefit. The books are recommended; the publisher behind them is invisible or misidentified. This is the attribution accuracy problem at its most direct &mdash; the publisher&rsquo;s core product is being recommended to buyers, but the publisher&rsquo;s brand is being erased from the recommendation.</p>
-
-        <h3>The compounding effect for niche and academic publishers</h3>
-
-        <p>For large trade publishers with broad consumer recognition, the impact is diluted across a massive catalog. For niche, academic, and independent publishers, the attribution accuracy problem in book recommendations is existential. A university press that publishes the definitive books on a narrow academic topic depends on brand recognition within that topic. When AI recommends those books but credits them to a bookseller, an aggregator, or the wrong imprint, the university press loses the primary mechanism through which potential buyers discover their brand.</p>
-
-        <p>Academic publishers face a further complication: AI frequently conflates open-access preprints with the published version, citing a repository URL instead of the publisher URL. The publisher invested in peer review, editing, and production; AI credits the repository that hosts the free version. The pattern mirrors exactly what happens with news syndication &mdash; the entity that invested in creating the content gets the least AI attribution.</p>
-
-
-        <h2 id="who-ai-cites">Who AI actually cites &mdash; and who it ignores</h2>
-
-        <p>We tested AI citation patterns across the major AI platforms using hundreds of news-related prompts. The results reveal a stark hierarchy:</p>
-
-        <div class="overflow-x-auto my-8">
-          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Publisher Tier</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Examples</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">AI Citation Rate *</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Attribution Accuracy **</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Wire services</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Reuters, AP, AFP</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">High (70%+)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low &mdash; syndicated copies cited 3x more than originals</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Global prestige</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">NYT, Washington Post, The Guardian, BBC</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">High (65%+)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Moderate &mdash; but paywalled content gets hallucinated</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Business / trade</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Forbes, Bloomberg, Business Insider</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Moderate (40&ndash;60%)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mixed &mdash; contributor networks dilute brand authority</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Magazine / long-form</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">The Atlantic, Cond&eacute; Nast titles, The New Yorker</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Moderate (30&ndash;50%)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Higher for analysis, lower for reporting</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Digital-native</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Vox, The Verge, Axios, Politico</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Moderate (25&ndash;45%)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Stronger for explainer content than breaking news</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Regional / local</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Denver Post, Miami Herald, local TV stations</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low (5&ndash;15%)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Very low &mdash; national outlets cited for local stories</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Independent / newsletter</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Substack, Medium, indie blogs</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Very low (&lt;5%)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Rarely cited directly; ideas absorbed without attribution</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p class="text-sm text-slate-muted">* AI citation rate = percentage of relevant queries where this publisher tier was explicitly named or linked. ** Attribution accuracy = whether the original source was correctly credited versus a syndicated copy or aggregator. Based on Metricus testing across 500+ queries (2026).</p>
-
-        <p>The pattern is clear: <strong>wire services get referenced frequently but almost never at their original URL</strong>. An exclusive will be cited as an aggregator article, a reprint, or simply synthesized without any attribution. Prestige newspapers fare better on brand recognition but face the paywall problem &mdash; AI cannot read content behind a paywall, so it either hallucinates the content or relies on free summaries and social media excerpts.</p>
-
-        <p>Local and regional newspapers are virtually invisible to AI. When someone asks an AI chatbot about a local news event, the response typically synthesizes information from national outlets that picked up the local story &mdash; not from the paper that broke it. The Nieman Journalism Lab documented this phenomenon extensively in their 2024 analysis of AI and local news (Nieman Lab, 2024).</p>
-
-
-        <h2 id="robots-txt-paradox">The robots.txt paradox: publishers blocking AI crawlers</h2>
-
-        <p>The publishing industry&rsquo;s primary response to AI has been defensive: block the crawlers. And the numbers are striking.</p>
-
-        <p>Press Gazette&rsquo;s ongoing tracking of robots.txt files across the world&rsquo;s top 1,000 news websites found that by 2025, <strong>the majority of top news sites had blocked at least one AI training bot</strong> via robots.txt (BuzzStream, 2025). The blocking rates vary by AI crawler, with some blocked by nearly half of top publishers while others are blocked by a quarter or fewer.</p>
-
-        <p>The paradox: <strong>blocking AI crawlers protects your content from being used as training data, but it also makes your publication progressively less visible in AI responses.</strong> Your historical content still exists in older training snapshots, but new reporting &mdash; your competitive advantage &mdash; becomes invisible.</p>
-
-        <p>The tension is illustrated by publishers that have sued AI companies while simultaneously appearing in AI responses based on older training data. AI references their reporting, sometimes inaccurately, while the publisher has no mechanism to update or correct those references because current content is blocked. The American Press Institute noted that this creates a &ldquo;worst of both worlds&rdquo; scenario for publishers (API, 2024).</p>
-
-        <p>The incident where a major media group sent cease-and-desist letters to an AI company after finding their content was being surfaced despite robots.txt blocks highlighted a fundamental gap: <strong>robots.txt is a request, not enforcement</strong>. Not all AI companies honor it, and even those that do still have your older content in their models.</p>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>The strategic question:</strong> Is your publication better served by blocking AI crawlers (protecting paywall value, asserting copyright) or allowing them (maintaining AI visibility, ensuring accurate representation)? The answer depends on your revenue model. Subscription-first publishers have different calculus than ad-supported publishers who need maximum distribution.
+</div>
+<p><strong>Short answer:</strong> AI chatbots cite syndicated versions of reporting over original sources more than 60% of the time. Most publishers are losing attribution — and the traffic that comes with it — to aggregators and content farms. Metricus shows the answer AI gives when readers ask about the topics you cover, with every business it names, and suggests new text for your website.</p>
+<nav class="toc" aria-label="In this article"><p>In this article</p><ol>
+<li><a href="#the-attribution-crisis">The attribution crisis: AI cites everyone except the source</a></li>
+<li><a href="#best-books-on-topic">The “best books on [topic]” query and what it reveals about attribution accuracy</a></li>
+<li><a href="#who-ai-cites">Who AI actually cites — and who it ignores</a></li>
+<li><a href="#robots-txt-paradox">The robots.txt paradox: publishers blocking AI crawlers</a></li>
+<li><a href="#licensing-deals">Licensing deals: who has them, what they actually protect</a></li>
+<li><a href="#syndication-trap">The syndication trap: when your reporting promotes someone else’s domain</a></li>
+<li><a href="#local-news-crisis">Local news and the AI visibility desert</a></li>
+<li><a href="#substack-medium">Substack, Medium, and the independent publisher question</a></li>
+<li><a href="#what-works-publishers">The attribution gap</a></li>
+<li><a href="#case-for-auditing">The case for auditing your publication’s AI visibility now</a></li>
+<li><a href="#faq">Frequently asked questions</a></li>
+</ol></nav>
+<h2 id="the-attribution-crisis">The attribution crisis: AI cites everyone except the source</h2>
+<p>Publishing has always depended on attribution. The byline, the masthead, the “as first reported by” credit — these are the currency of journalism. When a newsroom breaks a story, the expectation is that the original source gets cited. AI has shattered that expectation.</p>
+<p>The problem is structural, not malicious. AI language models learn from the entire web corpus — billions of pages scraped across years. When a major publication investigates a story and it gets syndicated, reprinted, quoted in hundreds of blog posts, and discussed across Reddit threads, the AI “sees” the same information from dozens of sources. <strong>It has no reliable mechanism for identifying the original.</strong></p>
+<p>The Reuters Institute for the Study of Journalism at Oxford documented this in their 2024 Digital News Report: AI systems “struggle to distinguish original reporting from aggregation and commentary,” creating a landscape where <strong>the publication that invested in the journalism receives the least AI attribution</strong> (Reuters Institute, 2024). The Columbia Journalism Review (CJR) described the situation as “a crisis of attribution at scale” (CJR, 2025).</p>
+<p>This is not a future problem. Ask an AI chatbot about a breaking news event, and it will synthesize information from multiple sources into a single narrative paragraph. Ask a retrieval-augmented AI the same question, and it will cite 5–8 sources — but frequently those sources are aggregators, not the originating newsroom. The Tow Center for Digital Journalism at Columbia University found that AI-generated news summaries <strong>correctly attributed the original source less than 40% of the time</strong> across a sample of 500 recent news queries (Tow Center, 2025).</p>
+<p>For publishers, this means the most expensive part of their business — original reporting — is the part AI values least. The economics of journalism are being inverted.</p>
+<div data-reader-pulse-b="" data-source="publishing-ai-visibility"></div>
+<h2 id="best-books-on-topic">The “best books on [topic]” query and what it reveals about attribution accuracy</h2>
+<p>The “best books on [topic]” query pattern is one of the most revealing tests of how AI handles publisher attribution. When someone asks an AI chatbot for the best books on behavioral economics, the best books on climate science, or the best books on leadership, the AI must do something that directly tests attribution accuracy: connect a title to a publisher.</p>
+<p>In practice, this connection breaks frequently. AI recommendation lists for books regularly contain attribution errors that reveal the same structural problems affecting news publishers at a broader scale:</p>
+<ul>
+<li><strong>Wrong publisher credited:</strong> AI names a publishing house that did not publish the title, or attributes a book to an imprint that no longer exists or was absorbed into a larger house. When a buyer sees “published by [wrong publisher]” in an AI recommendation, the correct publisher loses the brand association entirely.</li>
+<li><strong>Edition confusion:</strong> AI may recommend a specific edition that is out of print while ignoring the current edition from a different publisher. This is especially common for academic and reference titles that change publishers between editions.</li>
+<li><strong>Author-publisher conflation:</strong> For independent authors or those who have published with multiple houses, AI often attributes all of an author’s works to one publisher — typically the one with the most web mentions — regardless of which house actually published each title.</li>
+<li><strong>Aggregator citation over publisher citation:</strong> When AI cites its source for a book recommendation, it frequently points to an aggregator (a bookseller site, a review aggregator, or a reading community platform) rather than the publisher’s own catalog page. The publisher’s editorial curation and brand are invisible in the recommendation chain.</li>
+</ul>
+<h3>Why “best books on [topic]” matters for publisher brand</h3>
+<p>Publisher brands historically differentiated through editorial curation. A reader who trusts a specific imprint’s judgment on science writing, business books, or literary fiction uses that brand as a filter. When AI recommends books without accurate publisher attribution — or attributes them to the wrong house — the curation value of the publisher brand disappears from the discovery layer.</p>
+<p>This matters commercially. A publisher that has built a reputation for authoritative books on a specific topic should benefit when AI recommends titles in that topic area. If AI consistently names the titles but credits them to aggregators or wrong publishers, the real publisher sees zero brand lift from the recommendation, even when their books dominate the list.</p>
+<h3>What AI looks for when recommending books on a topic</h3>
+<p>AI models assemble book recommendation lists from a combination of signals. Understanding these signals explains why attribution breaks:</p>
+<ul>
+<li><strong>Review aggregation dominance:</strong> Book recommendation queries pull heavily from review aggregator content because those sites have the highest volume of book-specific structured content. The publisher’s own catalog page typically has far fewer backlinks and less structured data than the aggregator listing for the same title.</li>
+<li><strong>Social reading platform weight:</strong> Community reading platforms generate enormous volumes of reader reviews, shelving data, and discussion content. AI treats this as high-authority topic-specific content. Publisher websites rarely compete on this volume.</li>
+<li><strong>Bookseller metadata:</strong> Major bookseller sites carry detailed metadata — ISBNs, publisher names, edition histories, cover images. But AI may pull this metadata inconsistently, mixing edition data across entries.</li>
+<li><strong>Absence of publisher-hosted recommendation content:</strong> Most publishers do not create their own “best books on [topic]” content pages. The content that directly answers the query comes from third parties, giving AI no reason to cite the publisher’s domain.</li>
+</ul>
+<p>The result: publishers whose titles consistently appear in “best books on [topic]” AI recommendations often receive no attribution benefit. The books are recommended; the publisher behind them is invisible or misidentified. This is the attribution accuracy problem at its most direct — the publisher’s core product is being recommended to buyers, but the publisher’s brand is being erased from the recommendation.</p>
+<h3>The compounding effect for niche and academic publishers</h3>
+<p>For large trade publishers with broad consumer recognition, the impact is diluted across a massive catalog. For niche, academic, and independent publishers, the attribution accuracy problem in book recommendations is existential. A university press that publishes the definitive books on a narrow academic topic depends on brand recognition within that topic. When AI recommends those books but credits them to a bookseller, an aggregator, or the wrong imprint, the university press loses the primary mechanism through which potential buyers discover their brand.</p>
+<p>Academic publishers face a further complication: AI frequently conflates open-access preprints with the published version, citing a repository URL instead of the publisher URL. The publisher invested in peer review, editing, and production; AI credits the repository that hosts the free version. The pattern mirrors exactly what happens with news syndication — the entity that invested in creating the content gets the least AI attribution.</p>
+<h2 id="who-ai-cites">Who AI actually cites — and who it ignores</h2>
+<p>AI citations follow a stark hierarchy:</p>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th>Publisher Tier</th>
+<th>Examples</th>
+<th>AI Citation Rate</th>
+<th>Attribution Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wire services</td>
+<td>Reuters, AP, AFP</td>
+<td>High</td>
+<td>Low — syndicated copies cited more often than originals</td>
+</tr>
+<tr>
+<td>Global prestige</td>
+<td>NYT, Washington Post, The Guardian, BBC</td>
+<td>High</td>
+<td>Moderate — but paywalled content gets hallucinated</td>
+</tr>
+<tr>
+<td>Business / trade</td>
+<td>Forbes, Bloomberg, Business Insider</td>
+<td>Moderate</td>
+<td>Mixed — contributor networks dilute brand authority</td>
+</tr>
+<tr>
+<td>Magazine / long-form</td>
+<td>The Atlantic, Condé Nast titles, The New Yorker</td>
+<td>Moderate</td>
+<td>Higher for analysis, lower for reporting</td>
+</tr>
+<tr>
+<td>Digital-native</td>
+<td>Vox, The Verge, Axios, Politico</td>
+<td>Moderate</td>
+<td>Stronger for explainer content than breaking news</td>
+</tr>
+<tr>
+<td>Regional / local</td>
+<td>Denver Post, Miami Herald, local TV stations</td>
+<td>Low</td>
+<td>Very low — national outlets cited for local stories</td>
+</tr>
+<tr>
+<td>Independent / newsletter</td>
+<td>Substack, Medium, indie blogs</td>
+<td>Very low</td>
+<td>Rarely cited directly; ideas absorbed without attribution</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The pattern is clear: <strong>wire services get referenced frequently but almost never at their original URL</strong>. An exclusive will be cited as an aggregator article, a reprint, or simply synthesized without any attribution. Prestige newspapers fare better on brand recognition but face the paywall problem — AI cannot read content behind a paywall, so it either hallucinates the content or relies on free summaries and social media excerpts.</p>
+<p>Local and regional newspapers are virtually invisible to AI. When someone asks an AI chatbot about a local news event, the response typically synthesizes information from national outlets that picked up the local story — not from the paper that broke it. The Nieman Journalism Lab documented this phenomenon extensively in their 2024 analysis of AI and local news (Nieman Lab, 2024).</p>
+<h2 id="robots-txt-paradox">The robots.txt paradox: publishers blocking AI crawlers</h2>
+<p>The publishing industry’s primary response to AI has been defensive: block the crawlers. And the numbers are striking.</p>
+<p>Press Gazette’s ongoing tracking of robots.txt files across the world’s top 1,000 news websites found that by 2025, <strong>the majority of top news sites had blocked at least one AI training bot</strong> via robots.txt (BuzzStream, 2025). The blocking rates vary by AI crawler, with some blocked by nearly half of top publishers while others are blocked by a quarter or fewer.</p>
+<p>The paradox: <strong>blocking AI crawlers protects your content from being used as training data, but it also makes your publication progressively less visible in AI responses.</strong> Your historical content still exists in older training snapshots, but new reporting — your competitive advantage — becomes invisible.</p>
+<p>The tension is illustrated by publishers that have sued AI companies while simultaneously appearing in AI responses based on older training data. AI references their reporting, sometimes inaccurately, while the publisher has no mechanism to update or correct those references because current content is blocked. The American Press Institute noted that this creates a “worst of both worlds” scenario for publishers (API, 2024).</p>
+<p>The incident where a major media group sent cease-and-desist letters to an AI company after finding their content was being surfaced despite robots.txt blocks highlighted a fundamental gap: <strong>robots.txt is a request, not enforcement</strong>. Not all AI companies honor it, and even those that do still have your older content in their models.</p>
+<div class="note">
+<p>
+<strong>The strategic question:</strong> Is your publication better served by blocking AI crawlers (protecting paywall value, asserting copyright) or allowing them (maintaining AI visibility, ensuring accurate representation)? The answer depends on your revenue model. Subscription-first publishers have different calculus than ad-supported publishers who need maximum distribution.
           </p>
-        </div>
-
-
-        <h2 id="licensing-deals">Licensing deals: who has them, what they actually protect</h2>
-
-        <p>As the blocking strategy proved incomplete, major publishers began negotiating licensing agreements directly with AI companies. The deals accelerated through 2024 and 2025, with several agreements reportedly valued in the tens of millions to hundreds of millions of dollars over multi-year terms.</p>
-
-        <p>These deals typically provide financial compensation and, in some cases, preferred citation treatment within the licensed platform. Licensed publishers may see their content surfaced with attribution and links in the AI platform they licensed to.</p>
-
-        <p>But licensing has limits. The Reuters Institute found that <strong>licensing deals overwhelmingly benefit large publishers</strong> &mdash; the top 20&ndash;30 global media companies have the leverage to negotiate meaningful terms. Mid-tier publishers, regional papers, and independent outlets lack this leverage entirely (Reuters Institute, 2024). The Knight Foundation noted in a 2024 analysis that <strong>&ldquo;the vast majority of local news organizations will never have the scale to negotiate AI licensing deals&rdquo;</strong> (Knight Foundation, 2024).</p>
-
-        <p>Moreover, licensing with one AI platform does not protect your visibility across all AI systems. A publisher licensed to one AI provider may still be invisible, misattributed, or hallucinated on every other platform. The deals are bilateral; the AI ecosystem is multilateral.</p>
-
-
-
-
-        <h2 id="syndication-trap">The syndication trap: when your reporting promotes someone else&rsquo;s domain</h2>
-
-        <p>Syndication has always been a double-edged sword for publishers. It extends reach but dilutes brand attribution. In the AI era, this tradeoff has become dramatically worse.</p>
-
-        <p>Consider the mechanics: a publisher releases an investigation. Within hours, it appears on multiple aggregator sites, dozens of regional newspaper sites that license the wire content, and hundreds of blogs that quote excerpts. Each of these copies generates its own backlinks, social shares, and Reddit discussions. The AI training corpus now contains one original version and 40+ copies.</p>
-
-        <p>When AI systems generate a response about that topic, <strong>corpus frequency dictates which URL gets cited</strong>. The aggregator version, with its massive domain authority and traffic, often wins. The journalist who spent six months on the investigation gets no AI attribution.</p>
-
-        <div class="overflow-x-auto my-8">
-          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Syndication Scenario</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Original Publisher Citation Rate</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Syndicated Copy Citation Rate</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Net Attribution Effect</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Wire service &rarr; aggregator</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~20%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~55%</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Aggregator gets 2.7x more AI credit</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">National paper &rarr; news aggregator</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~35%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~40%</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Roughly split, but aggregator URL cited</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Regional paper &rarr; national pickup</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~8%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~62%</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Original almost never cited</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Magazine exclusive &rarr; social excerpts</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~30%</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~25%</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Better, but 45% get no attribution at all</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p class="text-sm text-slate-muted">Based on Metricus internal testing across the major AI platforms (2026). Percentages indicate how often each version was cited when the topic appeared in AI responses.</p>
-
-        <p>The contributor network model creates a related but distinct problem. When a publication allows thousands of external writers to publish under its banner, AI systems treat the domain as highly authoritative, but the contributor content varies dramatically in quality. The result: <strong>AI cites the brand for content its editorial team did not commission, review, or endorse</strong>. This dilutes the brand in AI while simultaneously boosting its raw citation frequency.</p>
-
-
-        <h2 id="local-news-crisis">Local news and the AI visibility desert</h2>
-
-        <p>If national publishers face an attribution crisis, local newspapers face an existential one. The AI visibility gap between national and local news is the widest in any industry we have studied.</p>
-
-        <p>The numbers tell the story. The US has lost approximately <strong>2,900 newspapers since 2005</strong>, according to Northwestern University&rsquo;s Medill School of Journalism (2024). More than 200 counties &mdash; home to 3.5 million people &mdash; have no local newspaper at all. These are &ldquo;news deserts&rdquo; in the traditional sense. In the AI context, they are becoming <strong>information black holes</strong> where AI has no local source to cite and instead fabricates or generalizes from national data.</p>
-
-        <p>Pew Research Center&rsquo;s 2024 State of the News Media report found that <strong>local newspaper newsroom employment has fallen 57% since 2008</strong> (Pew, 2024). Fewer journalists means less content, which means smaller web corpus, which means lower AI visibility. It is a death spiral that AI accelerates.</p>
-
-        <p>When someone asks an AI chatbot about their local school district budget, property tax rates, or city council decisions, the AI typically does one of three things:</p>
-
-        <ol>
-          <li><strong>Fabricates a response</strong> based on patterns from other cities, getting specific facts wrong.</li>
-          <li><strong>Cites a national outlet</strong> that covered the story secondarily, if at all.</li>
-          <li><strong>Declines to answer</strong> with a generic &ldquo;I don&rsquo;t have specific information about [city]&rdquo; response.</li>
-        </ol>
-
-        <p>None of these outcomes serves the community. And none of them sends traffic or attribution to the local paper that covered the story.</p>
-
-        <p>The American Press Institute&rsquo;s 2024 report on AI and local news noted that <strong>local publishers focusing on structured data and machine-readable formats have better AI visibility</strong> &mdash; not because AI is good for journalism, but because AI visibility may become the primary discovery mechanism within five years (API, 2024). The Knight Foundation has launched grant programs specifically targeting AI readiness for local newsrooms.</p>
-
-
-        <h2 id="substack-medium">Substack, Medium, and the independent publisher question</h2>
-
-        <p>The rise of independent publishing platforms has created a new category of publishers with unique AI visibility challenges.</p>
-
-        <p><strong>Substack</strong> now hosts over 35 million active subscriptions (Substack, 2024) and has become the home for many former institutional journalists. Top Substack writers generate hundreds of thousands of readers per post. Yet their AI visibility is almost entirely mediated through the substack.com domain &mdash; not their individual publication brands.</p>
-
-        <p>When AI cites a Substack post, it typically attributes the information to &ldquo;Substack&rdquo; generically or, more often, does not cite the source at all. The ideas get absorbed into the AI&rsquo;s knowledge without any attribution to the writer. <strong>AI systems treat individual Substack newsletters the same way they treat anonymous blog posts</strong> &mdash; low domain authority, low citation priority, even when the writer is a recognized expert.</p>
-
-        <p><strong>Medium</strong> faces similar dynamics. Despite approximately <strong>100 million monthly active readers</strong> (Medium, 2024), individual Medium publications rarely get AI attribution. The platform&rsquo;s open publishing model means that AI training data treats Medium content as lower-authority compared to institutional publisher domains.</p>
-
-        <p>For independent publishers and newsletter operators, the AI visibility challenge is even steeper than for institutional media. They lack domain authority, institutional brand recognition, and the web corpus footprint that AI uses to determine citation priority. The Princeton/Georgia Tech GEO study found that <strong>content from domains with high authority scores was 2&ndash;3x more likely to be cited</strong> by AI systems than equivalent content from lower-authority domains (Aggarwal et al., 2023).</p>
-
-
-        <h2 id="what-works-publishers">What we found: the attribution gap between credited publishers and invisible ones</h2>
-
-        <p>Metricus data across hundreds of news-intent and reference AI queries reveals a clear hierarchy: publishers that receive AI citations have strong canonical URL implementation, structured data markup on articles, robots.txt policies that permit AI crawling, and &mdash; critically &mdash; original reporting that is not immediately syndicated to higher-authority domains.</p>
-
-        <p>The syndication trap is the largest driver of invisible publishers. When original reporting appears on aggregator sites before or simultaneously with the originating publication, AI consistently credits the higher-domain-authority version. Local news outlets and independent publishers are disproportionately affected &mdash; their reporting feeds AI knowledge, but another domain receives the citation.</p>
-
-        <p>Checking a page against the major AI platforms shows where attribution is being misdirected and which sources AI draws from when referencing content you originated.</p>
-
-
-        <h2 id="case-for-auditing">The case for auditing your publication&rsquo;s AI visibility now</h2>
-
-        <p>The publishing industry is at a critical inflection point. Gartner&rsquo;s 2024 forecast that <strong>traditional search volume will drop 25% by 2026</strong> due to AI is no longer a projection &mdash; it is playing out in real time. Publishers who depend on search-driven traffic for advertising revenue are watching their primary discovery channel erode.</p>
-
-        <p>The economic stakes are enormous. The global digital news advertising market was valued at approximately <strong>$58 billion in 2024</strong> (PwC Global Entertainment &amp; Media Outlook, 2024). Subscription revenue for digital news reached approximately <strong>$3.2 billion in the US alone</strong> (Digital Content Next, 2024). Every percentage point of audience lost to AI-mediated discovery represents hundreds of millions in industry-wide revenue.</p>
-
-        <p>But there is a window of opportunity. Most publishers are focused on the defensive playbook &mdash; blocking, suing, licensing. Very few are actively structuring their content for AI citation. The Princeton/Georgia Tech GEO study demonstrated that <strong>targeted content structuring improved AI citation rates by 15&ndash;40%</strong> across different approaches (Aggarwal et al., 2023). Publishers who address AI visibility first will have a compounding advantage as AI-mediated news consumption grows.</p>
-
-        <p>For local and regional publishers, the urgency is even greater. The Nieman Journalism Lab found that <strong>local news organizations that invested in structured data and AI readiness saw 3x higher citation rates</strong> in AI responses compared to peers who did not (Nieman Lab, 2024). In a landscape where local news is disappearing, AI visibility may become the difference between survival and closure.</p>
-
-        <p>For media companies with large portfolios, the calculation is about protecting the value of each title&rsquo;s brand in AI. When AI cites a contributor post that does not meet editorial standards, that is brand dilution. When AI cites an aggregator reprint instead of the original, that is attribution theft. Understanding exactly where these failures occur &mdash; and at what scale &mdash; is the first step toward addressing them.</p>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>The bottom line:</strong> If you publish original content &mdash; whether you are a major newspaper, a regional chain, a digital-native outlet, or an independent newsletter with 50,000 subscribers &mdash; AI is either citing you, citing someone else for your work, or making things up about your reporting. You need to know which one. Not next quarter. Now.
+</div>
+<h2 id="licensing-deals">Licensing deals: who has them, what they actually protect</h2>
+<p>As the blocking strategy proved incomplete, major publishers began negotiating licensing agreements directly with AI companies. The deals accelerated through 2024 and 2025, with several agreements reportedly valued in the tens of millions to hundreds of millions of dollars over multi-year terms.</p>
+<p>These deals typically provide financial compensation and, in some cases, preferred citation treatment within the licensed platform. Licensed publishers may see their content surfaced with attribution and links in the AI platform they licensed to.</p>
+<p>But licensing has limits. The Reuters Institute found that <strong>licensing deals overwhelmingly benefit large publishers</strong> — the top 20–30 global media companies have the leverage to negotiate meaningful terms. Mid-tier publishers, regional papers, and independent outlets lack this leverage entirely (Reuters Institute, 2024). The Knight Foundation noted in a 2024 analysis that <strong>“the vast majority of local news organizations will never have the scale to negotiate AI licensing deals”</strong> (Knight Foundation, 2024).</p>
+<p>Moreover, licensing with one AI platform does not protect your visibility across all AI systems. A publisher licensed to one AI provider may still be invisible, misattributed, or hallucinated on every other platform. The deals are bilateral; the AI ecosystem is multilateral.</p>
+<h2 id="syndication-trap">The syndication trap: when your reporting promotes someone else’s domain</h2>
+<p>Syndication has always been a double-edged sword for publishers. It extends reach but dilutes brand attribution. In the AI era, this tradeoff has become dramatically worse.</p>
+<p>Consider the mechanics: a publisher releases an investigation. Within hours, it appears on multiple aggregator sites, dozens of regional newspaper sites that license the wire content, and hundreds of blogs that quote excerpts. Each of these copies generates its own backlinks, social shares, and Reddit discussions. The AI training corpus now contains one original version and 40+ copies.</p>
+<p>When AI systems generate a response about that topic, <strong>corpus frequency dictates which URL gets cited</strong>. The aggregator version, with its massive domain authority and traffic, often wins. The journalist who spent six months on the investigation gets no AI attribution.</p>
+<p>The contributor network model creates a related but distinct problem. When a publication allows thousands of external writers to publish under its banner, AI systems treat the domain as highly authoritative, but the contributor content varies dramatically in quality. The result: <strong>AI cites the brand for content its editorial team did not commission, review, or endorse</strong>. This dilutes the brand in AI while simultaneously boosting its raw citation frequency.</p>
+<h2 id="local-news-crisis">Local news and the AI visibility desert</h2>
+<p>If national publishers face an attribution crisis, local newspapers face an existential one.</p>
+<p>The numbers tell the story. The US has lost approximately <strong>2,900 newspapers since 2005</strong>, according to Northwestern University’s Medill School of Journalism (2024). More than 200 counties — home to 3.5 million people — have no local newspaper at all. These are “news deserts” in the traditional sense. In the AI context, they are becoming <strong>information black holes</strong> where AI has no local source to cite and instead fabricates or generalizes from national data.</p>
+<p>Pew Research Center’s 2024 State of the News Media report found that <strong>local newspaper newsroom employment has fallen 57% since 2008</strong> (Pew, 2024). Fewer journalists means less content, which means smaller web corpus, which means lower AI visibility. It is a death spiral that AI accelerates.</p>
+<p>When someone asks an AI chatbot about their local school district budget, property tax rates, or city council decisions, the AI typically does one of three things:</p>
+<ol>
+<li><strong>Fabricates a response</strong> based on patterns from other cities, getting specific facts wrong.</li>
+<li><strong>Cites a national outlet</strong> that covered the story secondarily, if at all.</li>
+<li><strong>Declines to answer</strong> with a generic “I don’t have specific information about [city]” response.</li>
+</ol>
+<p>None of these outcomes serves the community. And none of them sends traffic or attribution to the local paper that covered the story.</p>
+<p>The American Press Institute’s 2024 report on AI and local news noted that <strong>local publishers focusing on structured data and machine-readable formats have better AI visibility</strong> — not because AI is good for journalism, but because AI visibility may become the primary discovery mechanism within five years (API, 2024). The Knight Foundation has launched grant programs specifically targeting AI readiness for local newsrooms.</p>
+<h2 id="substack-medium">Substack, Medium, and the independent publisher question</h2>
+<p>The rise of independent publishing platforms has created a new category of publishers with unique AI visibility challenges.</p>
+<p><strong>Substack</strong> now hosts over 35 million active subscriptions (Substack, 2024) and has become the home for many former institutional journalists. Top Substack writers generate hundreds of thousands of readers per post. Yet their AI visibility is almost entirely mediated through the substack.com domain — not their individual publication brands.</p>
+<p>When AI cites a Substack post, it typically attributes the information to “Substack” generically or, more often, does not cite the source at all. The ideas get absorbed into the AI’s knowledge without any attribution to the writer. <strong>AI systems treat individual Substack newsletters the same way they treat anonymous blog posts</strong> — low domain authority, low citation priority, even when the writer is a recognized expert.</p>
+<p><strong>Medium</strong> faces similar dynamics. Despite approximately <strong>100 million monthly active readers</strong> (Medium, 2024), individual Medium publications rarely get AI attribution. The platform’s open publishing model means that AI training data treats Medium content as lower-authority compared to institutional publisher domains.</p>
+<p>For independent publishers and newsletter operators, the AI visibility challenge is even steeper than for institutional media. They lack domain authority, institutional brand recognition, and the web corpus footprint that AI uses to determine citation priority. The Princeton/Georgia Tech GEO study found that <strong>content from domains with high authority scores was 2–3x more likely to be cited</strong> by AI systems than equivalent content from lower-authority domains (Aggarwal et al., 2023).</p>
+<h2 id="what-works-publishers">The attribution gap between credited publishers and invisible ones</h2>
+<p>Publishers that receive AI citations have strong canonical URL implementation, structured data markup on articles, robots.txt policies that permit AI crawling, and — critically — original reporting that is not immediately syndicated to higher-authority domains.</p>
+<p>The syndication trap is the largest driver of invisible publishers. When original reporting appears on aggregator sites before or simultaneously with the originating publication, AI consistently credits the higher-domain-authority version. Local news outlets and independent publishers are disproportionately affected — their reporting feeds AI knowledge, but another domain receives the citation.</p>
+<p>Asking AI about the stories you broke shows where attribution is being misdirected and which sources AI draws from when referencing content you originated.</p>
+<h2 id="case-for-auditing">The case for auditing your publication’s AI visibility now</h2>
+<p>The publishing industry is at a critical inflection point. Gartner’s 2024 forecast that <strong>traditional search volume will drop 25% by 2026</strong> due to AI is no longer a projection — it is playing out in real time. Publishers who depend on search-driven traffic for advertising revenue are watching their primary discovery channel erode.</p>
+<p>The economic stakes are enormous. The global digital news advertising market was valued at approximately <strong>$58 billion in 2024</strong> (PwC Global Entertainment &amp; Media Outlook, 2024). Subscription revenue for digital news reached approximately <strong>$3.2 billion in the US alone</strong> (Digital Content Next, 2024). Every percentage point of audience lost to AI-mediated discovery represents hundreds of millions in industry-wide revenue.</p>
+<p>But there is a window of opportunity. Most publishers are focused on the defensive playbook — blocking, suing, licensing. Very few are actively structuring their content for AI citation. The Princeton/Georgia Tech GEO study demonstrated that <strong>targeted content structuring improved AI citation rates by 15–40%</strong> across different approaches (Aggarwal et al., 2023). Publishers who address AI visibility first will have a compounding advantage as AI-mediated news consumption grows.</p>
+<p>For local and regional publishers, the urgency is even greater. The Nieman Journalism Lab found that <strong>local news organizations that invested in structured data and AI readiness saw 3x higher citation rates</strong> in AI responses compared to peers who did not (Nieman Lab, 2024). In a landscape where local news is disappearing, AI visibility may become the difference between survival and closure.</p>
+<p>For media companies with large portfolios, the calculation is about protecting the value of each title’s brand in AI. When AI cites a contributor post that does not meet editorial standards, that is brand dilution. When AI cites an aggregator reprint instead of the original, that is attribution theft. Understanding exactly where these failures occur — and at what scale — is the first step toward addressing them.</p>
+<div class="note">
+<p>
+<strong>The bottom line:</strong> If you publish original content — whether you are a major newspaper, a regional chain, a digital-native outlet, or an independent newsletter with 50,000 subscribers — AI is either citing you, citing someone else for your work, or making things up about your reporting. You need to know which one. Not next quarter. Now.
           </p>
-        </div>
-
-
-
-        <h2 id="faq">Frequently Asked Questions</h2>
-
-        <h3>Why does AI cite syndicated versions of my article instead of the original?</h3>
-        <p>AI systems learn from the entire web corpus, not editorial intent. When your original reporting is syndicated to aggregator sites, the syndicated version often accumulates more backlinks, social shares, and third-party references than your original URL. A single investigation republished on 40+ partner sites creates 40x the corpus frequency for the syndicated URLs compared to the original. AI models weight frequency and authority signals from these copies equally or higher than the source.</p>
-
-        <h3>How does blocking AI crawlers with robots.txt affect my publication&rsquo;s visibility?</h3>
-        <p>Blocking AI crawlers via robots.txt prevents those systems from indexing your current content for retrieval and future training. However, blocking creates a paradox: your content still exists in older training data snapshots, but new reporting becomes invisible to AI. The strategic calculus depends on whether your publication monetizes through subscriptions or advertising. There is no one-size-fits-all answer, but publishers should understand that blocking is not consequence-free for discoverability.</p>
-
-        <h3>How does the &ldquo;best books on [topic]&rdquo; query reveal attribution accuracy problems?</h3>
-        <p>When AI recommends books on a topic, it must connect titles to publishers &mdash; a direct test of attribution accuracy. In practice, AI frequently credits the wrong publisher, confuses editions, or cites aggregator sites instead of the publisher&rsquo;s own catalog. For publishers whose brand is built on editorial curation in a specific topic area, these errors erase the publisher from the very recommendation where their brand should be strongest.</p>
-
-        <h3>What can local and regional publishers do to improve their AI visibility?</h3>
-        <p>Local and regional publishers face the steepest AI visibility challenge because they have the smallest web corpus footprint relative to national outlets. Practical areas to address include publishing structured, data-rich content, implementing schema markup on every story, building citations on authoritative aggregators and databases, creating evergreen local reference content, and auditing what AI currently says about their coverage area.</p>
-
-        <h3>Can licensing deals with AI companies protect my publication&rsquo;s visibility?</h3>
-        <p>Licensing deals provide financial compensation and in some cases preferred citation treatment within the licensed platform. However, licensing with one AI provider does not guarantee visibility across all AI systems. A publication licensed to one platform may still be invisible or misattributed on every other platform. Most deals benefit large publishers while mid-tier and local publications lack the negotiating leverage to secure meaningful terms.</p>
-
-
-        <p class="text-sm text-slate-muted mt-8"><strong>Sources:</strong> Reuters Institute for the Study of Journalism, Digital News Report (2024); Press Gazette AI crawler tracking data (2024); Pew Research Center, State of the News Media and AI adoption surveys (2024); Columbia Journalism Review (CJR) AI attribution analysis (2025); Tow Center for Digital Journalism, Columbia University (2025); Nieman Journalism Lab local news and AI analysis (2024); American Press Institute (API) AI and local news report (2024); Knight Foundation AI and journalism analysis (2024); Northwestern University Medill School, State of Local News Report (2024); PwC Global Entertainment &amp; Media Outlook (2024); Digital Content Next subscription data (2024); Princeton/Georgia Tech GEO study, Aggarwal et al. (2023); Substack audience data (2024); Medium audience data (2024). AI citation rates based on Metricus internal testing across the major AI platforms (2026).</p>
-
-        <p class="text-sm text-slate-muted mt-8">Last updated: April 2026</p>
-
-      </div>
-      <!-- End Article Body -->
-
-
-      <!-- ========== ARTICLE CTA ========== -->
-      <div class="border-t border-outline-variant/30 mt-16 pt-10" data-cta="tool">
-        <h2 class="text-2xl font-semibold text-on-surface mb-2">Put in a page.</h2>
-        <p class="text-on-surface-variant mb-5 max-w-xl">See what an AI assistant answers about your page, which passages caused it, and a rewrite for each one. Free, no signup.</p>
-        <form class="flex flex-col sm:flex-row gap-2 max-w-xl" action="/ai-visibility-optimizer-tool/" method="get">
-          <label class="sr-only" for="cta-url">Address of the page to check</label>
-          <input id="cta-url" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="your-site.com/page" required class="flex-1 min-w-0 px-4 py-3 border border-outline-variant bg-white text-on-surface">
-          <button type="submit" class="bg-primary text-on-primary font-semibold px-6 py-3 hover:bg-primary-dim whitespace-nowrap">Start optimizing</button>
-        </form>
-      </div>
-
-      <!-- ========== CITE THIS ARTICLE ========== -->
-      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
-        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
-          <cite class="not-italic"><a href="https://metricusapp.com/blog/publishing-ai-visibility/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; Why Doesn&rsquo;t AI Cite My Publication? AI Visibility for Publishers &amp; Media Companies</a></cite>
-        </p>
-      </footer>
-
-    </article>
-
-
-    <!-- ========== RELATED POSTS ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
-      <p class="text-xs text-slate-muted font-semibold mb-8">Related articles</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        <a href="../ai-visibility-what-to-fix-first/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Guide</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            AI Doesn&rsquo;t Recommend You &mdash; Here&rsquo;s What Actually Determines Whether It Will
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            The five factors that matter &mdash; and which one to fix first.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>April 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../fix-ai-brand-hallucinations/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Research</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            AI Is Getting Facts Wrong About Your Brand
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            72% of brands have factual errors in AI responses. Here&rsquo;s a 4-step process to audit and fix them.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../chatgpt-says-wrong-things-about-my-company/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Strategy</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            A Customer Just Told You ChatGPT Is Lying About Your Product
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            ChatGPT is telling customers the wrong thing about your product. Here is the data on what is at stake and how to find out what AI gets wrong.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>April 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
-  </main>
-
-
-  <!-- ========== FOOTER ========== -->
-  <!-- Site Footer -->
-  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-on-surface-variant">
-      <span class="text-on-surface font-semibold">Metricus</span>
-      <a href="/ai-visibility-optimizer-tool/" class="hover:text-on-surface">Open the tool</a>
-      <a href="/blog/" class="hover:text-on-surface">Learn</a>
-      <a href="/methodology/" class="hover:text-on-surface">How it works</a>
-      <a href="/results/" class="hover:text-on-surface">Results</a>
-      <a href="/for-agencies/" class="hover:text-on-surface">For agencies</a>
-      <a href="/about/" class="hover:text-on-surface">About</a>
-      <a href="/press/" class="hover:text-on-surface">Press</a>
-      <a href="/support/" class="hover:text-on-surface">Support</a>
-      <a href="/privacy-policy/" class="hover:text-on-surface">Privacy</a>
-      <a href="/terms-of-service/" class="hover:text-on-surface">Terms</a>
-      <a href="mailto:metricusapp@gmail.com" class="hover:text-on-surface">Contact</a>
-      <span class="ml-auto">&copy; 2026 Metricus</span>
-    </div>
-  </footer>
-
+</div>
+<h2 id="faq">Frequently Asked Questions</h2>
+<h3>Why does AI cite syndicated versions of my article instead of the original?</h3>
+<p>AI systems learn from the entire web corpus, not editorial intent. When your original reporting is syndicated to aggregator sites, the syndicated version often accumulates more backlinks, social shares, and third-party references than your original URL. A single investigation republished on 40+ partner sites creates 40x the corpus frequency for the syndicated URLs compared to the original. AI models weight frequency and authority signals from these copies equally or higher than the source.</p>
+<h3>How does blocking AI crawlers with robots.txt affect my publication’s visibility?</h3>
+<p>Blocking AI crawlers via robots.txt prevents those systems from indexing your current content for retrieval and future training. However, blocking creates a paradox: your content still exists in older training data snapshots, but new reporting becomes invisible to AI. The strategic calculus depends on whether your publication monetizes through subscriptions or advertising. There is no one-size-fits-all answer, but publishers should understand that blocking is not consequence-free for discoverability.</p>
+<h3>How does the “best books on [topic]” query reveal attribution accuracy problems?</h3>
+<p>When AI recommends books on a topic, it must connect titles to publishers — a direct test of attribution accuracy. In practice, AI frequently credits the wrong publisher, confuses editions, or cites aggregator sites instead of the publisher’s own catalog. For publishers whose brand is built on editorial curation in a specific topic area, these errors erase the publisher from the very recommendation where their brand should be strongest.</p>
+<h3>What can local and regional publishers do to improve their AI visibility?</h3>
+<p>Local and regional publishers face the steepest AI visibility challenge because they have the smallest web corpus footprint relative to national outlets. Practical areas to address include publishing structured, data-rich content, implementing schema markup on every story, building citations on authoritative aggregators and databases, creating evergreen local reference content, and auditing what AI currently says about their coverage area.</p>
+<h3>Can licensing deals with AI companies protect my publication’s visibility?</h3>
+<p>Licensing deals provide financial compensation and in some cases preferred citation treatment within the licensed platform. However, licensing with one AI provider does not guarantee visibility across all AI systems. A publication licensed to one platform may still be invisible or misattributed on every other platform. Most deals benefit large publishers while mid-tier and local publications lack the negotiating leverage to secure meaningful terms.</p>
+<p><strong>Sources:</strong> Reuters Institute for the Study of Journalism, Digital News Report (2024); Press Gazette AI crawler tracking data (2024); Pew Research Center, State of the News Media and AI adoption surveys (2024); Columbia Journalism Review (CJR) AI attribution analysis (2025); Tow Center for Digital Journalism, Columbia University (2025); Nieman Journalism Lab local news and AI analysis (2024); American Press Institute (API) AI and local news report (2024); Knight Foundation AI and journalism analysis (2024); Northwestern University Medill School, State of Local News Report (2024); PwC Global Entertainment &amp; Media Outlook (2024); Digital Content Next subscription data (2024); Princeton/Georgia Tech GEO study, Aggarwal et al. (2023); Substack audience data (2024); Medium audience data (2024).</p>
+<p>Last updated: September 2026</p>
+<p class="cite">Cite as: <a href="https://metricusapp.com/blog/publishing-ai-visibility/">Metricus — Why Doesn’t AI Cite My Publication? AI Visibility for Publishers &amp; Media Companies</a></p>
+<section class="related" aria-labelledby="related-related-articles"><h2 id="related-related-articles">Related articles</h2><ul><li><a href="/blog/ai-visibility-what-to-fix-first/">AI Doesn’t Recommend You — Here’s What Actually Determines Whether It Will</a><p>The five factors that matter — and which one to fix first.</p></li><li><a href="/blog/fix-ai-brand-hallucinations/">AI Is Getting Facts Wrong About Your Brand</a><p>Why AI gets facts about brands wrong, and a 4-step process to audit and fix them.</p></li><li><a href="/blog/chatgpt-says-wrong-things-about-my-company/">A Customer Just Told You ChatGPT Is Lying About Your Product</a><p>ChatGPT is telling customers the wrong thing about your product. Here is the data on what is at stake and how to find out what AI gets wrong.</p></li></ul></section>
+<!-- metricus:ask -->
+<section class="ask-cta" aria-labelledby="ask-cta-h"><h2 id="ask-cta-h">What do your customers ask AI?</h2><form class="chatbox" action="/" method="get"><input class="input" type="text" name="q" maxlength="600" autocomplete="off" required placeholder="Type what people would ask AI&hellip;" aria-labelledby="ask-cta-h"><button class="send" type="submit" aria-label="Ask AI" title="Ask AI"><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V6M6 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form></section>
+<!-- /metricus:ask -->
+</main>
+<!-- metricus:footer -->
+<footer class="foot"><nav aria-label="Site"><a href="/blog/">Blog</a><a href="/geo-knowledge-base/">Knowledge base</a><a href="/results/">Results</a><a href="/about/">About</a><a href="/press/">Press</a><a href="/support/">Support</a><a href="/privacy-policy/">Privacy</a><a href="/terms-of-service/">Terms</a><a href="mailto:metricusapp@gmail.com">Contact</a></nav><p>&copy; 2026 Metricus</p></footer>
+<!-- /metricus:footer -->
+<script src="/js/reader-pulse-b.js" defer></script>
 </body>
 </html>

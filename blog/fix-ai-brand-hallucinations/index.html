@@ -1,479 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fix AI Brand Hallucinations: Why ChatGPT Describes Your Company Incorrectly | Metricus</title>
-  <meta name="description" content="ChatGPT is telling prospects the wrong thing about your company. Here's why AI hallucinations happen to brands — and the exact steps to fix them.">
-  <meta property="og:title" content="Fix AI Brand Hallucinations: Why ChatGPT Describes Your Company Incorrectly">
-  <meta property="og:description" content="ChatGPT is telling your prospects the wrong thing. Here's why AI hallucinations happen to brands and the exact steps to fix them.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://metricusapp.com/blog/fix-ai-brand-hallucinations/">
-  <meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Fix AI Brand Hallucinations: Why ChatGPT Describes Your Company Incorrectly | Metricus">
-  <meta name="twitter:description" content="ChatGPT is telling prospects the wrong thing about your company. Here's why AI hallucinations happen to brands — and the exact steps to fix them.">
-  <meta name="twitter:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <link rel="canonical" href="https://metricusapp.com/blog/fix-ai-brand-hallucinations/">
-
-  <!-- Google Tag Manager -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w70oz7g1k3");
-  </script>
-
-
-  <!-- Google Fonts -->
-
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#515F74',
-            'primary-hover': '#1E293B',
-            'on-primary': '#f6f7ff',
-            'on-primary-fixed': '#324054',
-            'primary-dim': '#455368',
-            surface: '#f7f9fb',
-            'surface-container-low': '#f0f4f7',
-            'surface-container': '#e8eff3',
-            'surface-container-lowest': '#ffffff',
-            'surface-container-highest': '#d9e4ea',
-            'surface-container-high': '#e1e9ee',
-            'surface-variant': '#d9e4ea',
-            'on-surface': '#2a3439',
-            'on-surface-variant': '#566166',
-            outline: '#717c82',
-            'outline-variant': '#a9b4b9',
-            'slate-text': '#0F172A',
-            'slate-muted': '#64748B',
-            'slate-accent': '#475569',
-          },
-          fontFamily: {
-            display: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            body: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            headline: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            label: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-          },
-          borderRadius: {
-            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
-            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
-            full: '0.75rem',
-          },
-        },
-      },
-    }
-  </script>
-
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: #ffffff;
-      color: #0F172A;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .font-display { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-headline { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-body-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-
-    .editorial-btn {
-      transition: background-color 150ms ease-in-out, transform 150ms ease;
-    }
-    .editorial-btn:hover {
-      background-color: #1E293B;
-    }.blog-card {
-      transition: transform 200ms ease, background-color 200ms ease;
-    }
-    .blog-card:hover {
-      transform: translateY(-2px);
-      background-color: #f7f9fb;
-    }
-
-    .article-body h2 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.75rem;
-      line-height: 1.2;
-      color: #0F172A;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-    }
-    @media (min-width: 768px) {
-      .article-body h2 {
-        font-size: 2rem;
-      }
-    }
-    .article-body h3 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      line-height: 1.3;
-      color: #0F172A;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    .article-body p {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-    }
-    .article-body ul, .article-body ol {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-      padding-left: 1.5rem;
-    }
-    .article-body ul { list-style-type: disc; }
-    .article-body ol { list-style-type: decimal; }
-    .article-body li { margin-bottom: 0.5rem; }
-    .article-body blockquote {
-      border-left: 2px solid #334155;
-      padding-left: 1.5rem;
-      font-style: italic;
-      color: #475569;
-      font-size: 1.125rem;
-      line-height: 1.75;
-      margin: 2rem 0;
-    }
-    .article-body a {
-      color: #334155;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .article-body a:hover {
-      color: #1E293B;
-    }
-  </style>
-
-  <!-- JSON-LD BlogPosting -->
-  <script type="application/ld+json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fix AI Brand Hallucinations: Why ChatGPT Describes Your Company Incorrectly | Metricus</title>
+<meta name="description" content="ChatGPT is telling prospects the wrong thing about your company. Here&#x27;s why AI hallucinations happen to brands — and the exact steps to fix them.">
+<link rel="canonical" href="https://metricusapp.com/blog/fix-ai-brand-hallucinations/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Metricus">
+<meta property="og:url" content="https://metricusapp.com/blog/fix-ai-brand-hallucinations/">
+<meta property="og:title" content="Fix AI Brand Hallucinations: Why ChatGPT Describes Your Company Incorrectly">
+<meta property="og:description" content="ChatGPT is telling your prospects the wrong thing. Here&#x27;s why AI hallucinations happen to brands and the exact steps to fix them.">
+<meta property="og:image" content="https://metricusapp.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Metricus: see what AI answers when your customers ask for what you offer.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fix AI Brand Hallucinations: Why ChatGPT Describes Your Company Incorrectly | Metricus">
+<meta name="twitter:description" content="ChatGPT is telling prospects the wrong thing about your company. Here&#x27;s why AI hallucinations happen to brands — and the exact steps to fix them.">
+<meta name="twitter:image" content="https://metricusapp.com/assets/og.png">
+<!-- metricus:head -->
+<link rel="stylesheet" href="/assets/metricus.css?v=20260927">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#FBFAF7">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w70oz7g1k3");</script>
+<!-- /metricus:head -->
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "Why Does AI Get Your Brand Description Wrong? (And How to Fix It)",
+ "description": "Most brands have factual errors in AI responses. Wrong pricing, outdated features, false comparisons. Here's a 4-step process to audit and fix AI hallucinations about your brand.",
+ "author": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "datePublished": "2026-03-01",
+ "dateModified": "2026-09-27",
+ "mainEntityOfPage": "https://metricusapp.com/blog/fix-ai-brand-hallucinations/",
+ "image": "https://metricusapp.com/assets/og.png"
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
   {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Why Does AI Get Your Brand Description Wrong? (And How to Fix It)",
-    "description": "Most brands have factual errors in AI responses. Wrong pricing, outdated features, false comparisons. Here's a 4-step process to audit and fix AI hallucinations about your brand.",
-    "author": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "datePublished": "2026-03-01",
-    "dateModified": "2026-09-04",
-    "mainEntityOfPage": "https://metricusapp.com/blog/fix-ai-brand-hallucinations/",
-    "image": "https://metricusapp.com/landing/img/og.jpg"
-  }
-  </script>
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://metricusapp.com/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "AI Is Getting Facts Wrong About Your Brand — Here's How to Fix It", "item": "https://metricusapp.com/blog/fix-ai-brand-hallucinations/"}
-    ]
-  }
-  </script>
-    <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://metricusapp.com/blog/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How common are AI hallucinations about brands?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "72% of brands have at least one factual error in AI-generated responses, according to Metricus research. The error rate increases with brand complexity, frequent pricing changes, and recent rebrands."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What are the most common AI errors about brands?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The five most common: wrong pricing from stale review sites, feature conflation across product tiers, fabricated details with no basis in any source, outdated information about discontinued products, and competitive misattribution from comparison articles."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why does AI make up facts about my company?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI hallucinations stem from conflicting information across indexed sources, information gaps the model fills with fabrications, and stale training data. The more inconsistent your brand information is across the web, the more likely errors become."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I find out what AI gets wrong about my brand?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Ask the major AI platforms about your brand and compare the answers against your own facts. The Metricus optimizer shows what the major AI platforms answer with your page as the source and marks the passages behind the answer, which makes the errors and their causes on the page visible."
-        }
-      }
-    ]
+   "@type": "ListItem",
+   "position": 3,
+   "name": "AI Is Getting Facts Wrong About Your Brand — Here's How to Fix It",
+   "item": "https://metricusapp.com/blog/fix-ai-brand-hallucinations/"
   }
-  </script>
-  <script src="/js/reader-pulse-b.js" defer></script>
+ ]
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How common are AI hallucinations about brands?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Many brands have at least one factual error in AI-generated responses. The error rate increases with brand complexity, frequent pricing changes, and recent rebrands."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What are the most common AI errors about brands?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The five most common: wrong pricing from stale review sites, feature conflation across product tiers, fabricated details with no basis in any source, outdated information about discontinued products, and competitive misattribution from comparison articles."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why does AI make up facts about my company?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "AI hallucinations stem from conflicting information across indexed sources, information gaps the model fills with fabrications, and stale training data. The more inconsistent your brand information is across the web, the more likely errors become."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I find out what AI gets wrong about my brand?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Ask the major AI platforms about your brand and compare the answers against your own facts. Metricus shows, for free, the answer AI gives when your customers ask for what you offer; you can edit it into what you want AI to say and get new text for your website."
+   }
+  }
+ ]
+}</script>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
-
-  <!-- Site Nav -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 gap-4">
-      <a href="/" class="text-on-surface font-semibold" aria-label="Metricus home">Metricus <span class="font-normal text-on-surface-variant">Optimizer</span></a>
-      <div class="flex items-center gap-5">
-        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface">Learn</a>
-        <a href="/ai-visibility-optimizer-tool/" class="bg-primary text-on-primary text-sm font-semibold px-4 py-2.5 hover:bg-primary-dim">Open the tool</a>
-      </div>
-    </div>
-  </header>
-
-
-
-  <!-- Mobile Menu Overlay -->
-
-
-
-  <main class="flex-grow flex flex-col relative overflow-x-hidden">
-
-    <div class="absolute inset-0 -z-10 pointer-events-none"></div>
-
-    <!-- ========== ARTICLE ========== -->
-    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
-
-      <!-- Breadcrumb -->
-      <nav class="mb-8">
-        <ol class="flex items-center gap-2 text-xs text-slate-muted">
-          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
-          <li class="select-none">/</li>
-          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
-          <li class="select-none">/</li>
-          <li class="text-slate-text">AI Hallucinations Brand Fix</li>
-        </ol>
-      </nav>
-
-      <!-- Article Header -->
-      <header class="mb-12">
-        <p class="text-xs text-primary font-semibold mb-4">Research</p>
-        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
-          Fix AI Brand Hallucinations: Why ChatGPT Describes Your Company Incorrectly
-        </h1>
-        <p class="text-sm text-outline">Metricus Research &middot; March 14, 2026 &middot; 6 min read</p>
-      </header>
-
-
-      <!-- Definition Box -->
-      <div class="bg-surface-container-low p-8 mb-12">
-        <p class="text-lg leading-relaxed text-on-surface">
-          <strong><a href="../../geo-knowledge-base/" class="underline underline-offset-2 hover:text-primary-hover">AI hallucination</a></strong> is when an AI chatbot generates factually incorrect information about a brand &mdash; wrong pricing, discontinued products listed as current, incorrect feature comparisons, or fabricated claims &mdash; and presents it to users as fact.
+<body class="doc">
+<!-- metricus:header -->
+<header class="nav"><div class="in"><a class="logo" href="/" id="navhome">Metricus</a><span class="sp"></span><span class="muted" id="host"></span></div></header>
+<!-- /metricus:header -->
+<main class="doc-main" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <span aria-current="page">AI Hallucinations Brand Fix</span></nav>
+<p class="kicker">Research</p>
+<h1>Fix AI Brand Hallucinations: Why ChatGPT Describes Your Company Incorrectly</h1>
+<p class="byline">Metricus Research · March 14, 2026 · 6 min read</p>
+<div class="note">
+<p>
+<strong><a href="../../geo-knowledge-base/">AI hallucination</a></strong> is when an AI chatbot generates factually incorrect information about a brand — wrong pricing, discontinued products listed as current, incorrect feature comparisons, or fabricated claims — and presents it to users as fact.
         </p>
-      </div>
-
-
-      <!-- Table of Contents -->
-      <div class="border border-[#E2E8F0] p-8 mb-12">
-        <p class="text-xs text-slate-muted font-semibold mb-4">In this article</p>
-        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
-          <li><a href="#problem" class="hover:text-primary-hover underline underline-offset-2">How big is the problem?</a></li>
-          <li><a href="#errors" class="hover:text-primary-hover underline underline-offset-2">The 5 most common AI errors about brands</a></li>
-          <li><a href="#impact" class="hover:text-primary-hover underline underline-offset-2">The business impact of AI hallucinations</a></li>
-          <li><a href="#which-brands" class="hover:text-primary-hover underline underline-offset-2">Which brands are most at risk</a></li>
-          <li><a href="#why" class="hover:text-primary-hover underline underline-offset-2">Why hallucinations happen to brands</a></li>
-        </ol>
-      </div>
-
-
-<!-- Article Body -->
-      <div class="article-body">
-
-        <h2 id="problem">How big is the problem?</h2>
-
-        <p>In Metricus research across brands, 72% have at least one factual error in AI-generated responses. These are not subtle interpretive differences &mdash; they are demonstrably wrong facts: incorrect founding dates, wrong pricing, discontinued products listed as current, features attributed to the wrong product tier, and fabricated company details that never existed.</p>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>What we found:</strong> The error rate increases with brand complexity. Companies with multiple product lines, frequent pricing changes, or recent rebrands have the highest hallucination rates. The most common errors involve pricing (cited from stale review sites) and feature descriptions (conflated across product tiers).
+</div>
+<nav class="toc" aria-label="In this article"><p>In this article</p><ol>
+<li><a href="#problem">How big is the problem?</a></li>
+<li><a href="#errors">The 5 most common AI errors about brands</a></li>
+<li><a href="#impact">The business impact of AI hallucinations</a></li>
+<li><a href="#which-brands">Which brands are most at risk</a></li>
+<li><a href="#why">Why hallucinations happen to brands</a></li>
+</ol></nav>
+<h2 id="problem">How big is the problem?</h2>
+<p>Many brands have at least one factual error in AI-generated responses. These are not subtle interpretive differences — they are demonstrably wrong facts: incorrect founding dates, wrong pricing, discontinued products listed as current, features attributed to the wrong product tier, and fabricated company details that never existed.</p>
+<div class="note">
+<p>
+<strong>The pattern:</strong> The error rate increases with brand complexity. Companies with multiple product lines, frequent pricing changes, or recent rebrands have the highest hallucination rates. The most common errors involve pricing (cited from stale review sites) and feature descriptions (conflated across product tiers).
           </p>
-        </div>
-
-
-        <h2 id="errors">The 5 most common AI errors about brands</h2>
-
-        <ul>
-          <li><strong>Wrong pricing:</strong> AI cites prices from 12&ndash;24 months ago, typically sourced from cached G2 or Capterra listings. This is the most common error we find.</li>
-          <li><strong>Feature conflation:</strong> AI merges features from different tiers or product lines into a single description, misrepresenting what each plan includes.</li>
-          <li><strong>Fabricated details:</strong> AI invents founding dates, employee counts, or headquarters locations that have no basis in any indexed source. These are pure hallucinations.</li>
-          <li><strong>Outdated information:</strong> AI recommends discontinued products, cites old partnerships, or describes deprecated features as current.</li>
-          <li><strong>Competitive misattribution:</strong> AI attributes a competitor&rsquo;s feature or product to your brand, or vice versa, typically sourced from comparison articles.</li>
-        </ul>
-
-        <p>What we also found is that error types cluster by platform. ChatGPT tends toward feature conflation and fabricated details because it relies more heavily on training data. Perplexity, which uses more real-time web search, tends toward outdated pricing errors because it pulls from whatever stale sources rank well. Gemini shows higher rates of competitive misattribution, possibly due to how it synthesizes information from multiple comparison articles. Understanding which platform produces which errors is valuable because it indicates which source types are feeding the misinformation.</p>
-
-
-        <h2 id="impact">The business impact of AI hallucinations</h2>
-
-        <p>What we found when measuring the downstream effects of AI hallucinations is that the damage extends beyond inaccuracy. When AI fabricates a founding date or employee count, it undermines trust with buyers who fact-check. When AI conflates pricing tiers, it creates mismatched expectations that sales teams must correct. When AI cites a discontinued product, it generates leads for something you no longer sell. Each type of error has a different cost profile, but all share one characteristic: they are invisible to you unless you actively audit what AI says about your brand.</p>
-
-        <p>The compounding effect is particularly concerning. What we found is that AI hallucinations about a brand tend to persist across model updates unless actively corrected. A fabricated detail embedded in one model&rsquo;s training data can propagate to newer models, to AI-generated content on third-party sites, and from there back into future training data. Without intervention, hallucinations become self-reinforcing.</p>
-
-        <h2 id="which-brands">Which brands are most at risk</h2>
-
-        <p>What we found is that certain brand characteristics correlate with higher hallucination rates. Brands that have undergone recent name changes, mergers, or acquisitions see the highest error rates because AI&rsquo;s training data contains both old and new information. Brands with complex pricing structures (usage-based, tiered, or custom enterprise pricing) are more frequently misrepresented because AI models simplify variable pricing into static numbers. Brands with limited web presence outside their own domain have higher fabrication rates because AI fills information gaps with plausible-sounding but invented details.</p>
-
-        <h2 id="why">Why hallucinations happen to brands</h2>
-
-        <p>What we found is that AI hallucinations about brands stem from three sources: conflicting information across indexed sources (your pricing page says one thing, a review site says another, and AI picks the wrong one), information gaps that the model fills with plausible-sounding fabrications, and stale training data that reflects your brand as it was months or years ago rather than as it is today. The more inconsistent your brand information is across the web, the more likely AI is to get something wrong.</p>
-
-        <p>Understanding what AI gets wrong about your brand and which sources are feeding the errors is the prerequisite to any correction strategy. The free Metricus optimizer shows what the major AI platforms answer when your page is the source and marks the passages that shape the answer. <a href="/ai-visibility-optimizer-tool/">Open the tool</a>.</p>
-
-        <p class="text-sm text-slate-muted mt-8">Last updated: September 2026</p>
-
-      </div>
-      <!-- End Article Body -->
-
-      <p class="text-sm text-slate-muted mt-8 border-t border-[#E2E8F0] pt-6">Evaluating AI visibility tools? Read our <a href="../ai-visibility-tools-compared/" class="text-primary hover:underline">full comparison of AI visibility tools in 2026</a>.</p>
-
-
-      <!-- ========== ARTICLE CTA ========== -->
-      <div class="border-t border-outline-variant/30 mt-16 pt-10" data-cta="tool">
-        <h2 class="text-2xl font-semibold text-on-surface mb-2">Put in a page.</h2>
-        <p class="text-on-surface-variant mb-5 max-w-xl">See what an AI assistant answers about your page, which passages caused it, and a rewrite for each one. Free, no signup.</p>
-        <form class="flex flex-col sm:flex-row gap-2 max-w-xl" action="/ai-visibility-optimizer-tool/" method="get">
-          <label class="sr-only" for="cta-url">Address of the page to check</label>
-          <input id="cta-url" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="your-site.com/page" required class="flex-1 min-w-0 px-4 py-3 border border-outline-variant bg-white text-on-surface">
-          <button type="submit" class="bg-primary text-on-primary font-semibold px-6 py-3 hover:bg-primary-dim whitespace-nowrap">Start optimizing</button>
-        </form>
-      </div>
-
-      <!-- ========== CITE THIS ARTICLE ========== -->
-      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
-        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
-          <cite class="not-italic"><a href="https://metricusapp.com/blog/fix-ai-brand-hallucinations/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; Fix AI Brand Hallucinations: Why ChatGPT Describes Your Company Incorrectly</a></cite>
-        </p>
-      </footer>
-
-    </article>
-
-
-    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
-      <p class="text-xs text-slate-muted font-semibold mb-6">Go deeper</p>
-      <div class="grid grid-cols-1 gap-4">
-        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
-          <p class="text-sm text-on-surface-variant mt-1">48 clusters on AI hallucinations, factual errors, and correction strategies</p>
-        </a>
-      </div>
-    </section>
-
-<!-- ========== RELATED POSTS ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
-      <p class="text-xs text-slate-muted font-semibold mb-8">Related articles</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <a href="../ai-getting-pricing-wrong/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Research</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            AI Is Getting Your Pricing Wrong
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            41% of brands have incorrect pricing in AI responses. Here's why it happens and how to fix it.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../ai-visibility-action-plan/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Playbook</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            How to Turn AI Visibility Data Into an Actual Action Plan
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            Most AI visibility tools give you a score and leave you stuck. Here's how to turn that data into actions that change how AI describes your brand.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../ai-chatbot-recommendations/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Strategy</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            How AI Chatbot Recommendations Work
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            Understanding the mechanics behind AI recommendations so you can influence them.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../ai-visibility-playbook/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Playbook</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            The 90-Day AI Visibility Playbook
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            A structured 90-day plan to improve how AI platforms represent your brand.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
-  </main>
-
-
-  <!-- ========== FOOTER ========== -->
-  <!-- Site Footer -->
-  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-on-surface-variant">
-      <span class="text-on-surface font-semibold">Metricus</span>
-      <a href="/ai-visibility-optimizer-tool/" class="hover:text-on-surface">Open the tool</a>
-      <a href="/blog/" class="hover:text-on-surface">Learn</a>
-      <a href="/methodology/" class="hover:text-on-surface">How it works</a>
-      <a href="/results/" class="hover:text-on-surface">Results</a>
-      <a href="/for-agencies/" class="hover:text-on-surface">For agencies</a>
-      <a href="/about/" class="hover:text-on-surface">About</a>
-      <a href="/press/" class="hover:text-on-surface">Press</a>
-      <a href="/support/" class="hover:text-on-surface">Support</a>
-      <a href="/privacy-policy/" class="hover:text-on-surface">Privacy</a>
-      <a href="/terms-of-service/" class="hover:text-on-surface">Terms</a>
-      <a href="mailto:metricusapp@gmail.com" class="hover:text-on-surface">Contact</a>
-      <span class="ml-auto">&copy; 2026 Metricus</span>
-    </div>
-  </footer>
-
+</div>
+<h2 id="errors">The 5 most common AI errors about brands</h2>
+<ul>
+<li><strong>Wrong pricing:</strong> AI cites prices from 12–24 months ago, typically sourced from cached G2 or Capterra listings. This is the most common error.</li>
+<li><strong>Feature conflation:</strong> AI merges features from different tiers or product lines into a single description, misrepresenting what each plan includes.</li>
+<li><strong>Fabricated details:</strong> AI invents founding dates, employee counts, or headquarters locations that have no basis in any indexed source. These are pure hallucinations.</li>
+<li><strong>Outdated information:</strong> AI recommends discontinued products, cites old partnerships, or describes deprecated features as current.</li>
+<li><strong>Competitive misattribution:</strong> AI attributes a competitor’s feature or product to your brand, or vice versa, typically sourced from comparison articles.</li>
+</ul>
+<p>Error types also cluster by platform. ChatGPT tends toward feature conflation and fabricated details because it relies more heavily on training data. Perplexity, which uses more real-time web search, tends toward outdated pricing errors because it pulls from whatever stale sources rank well. Gemini shows higher rates of competitive misattribution, possibly due to how it synthesizes information from multiple comparison articles. Understanding which platform produces which errors is valuable because it indicates which source types are feeding the misinformation.</p>
+<h2 id="impact">The business impact of AI hallucinations</h2>
+<p>The damage from AI hallucinations extends beyond inaccuracy. When AI fabricates a founding date or employee count, it undermines trust with buyers who fact-check. When AI conflates pricing tiers, it creates mismatched expectations that sales teams must correct. When AI cites a discontinued product, it generates leads for something you no longer sell. Each type of error has a different cost profile, but all share one characteristic: they are invisible to you unless you actively audit what AI says about your brand.</p>
+<p>The compounding effect is particularly concerning. AI hallucinations about a brand tend to persist across model updates unless actively corrected. A fabricated detail embedded in one model’s training data can propagate to newer models, to AI-generated content on third-party sites, and from there back into future training data. Without intervention, hallucinations become self-reinforcing.</p>
+<h2 id="which-brands">Which brands are most at risk</h2>
+<p>Certain brand characteristics correlate with higher hallucination rates. Brands that have undergone recent name changes, mergers, or acquisitions see the highest error rates because AI’s training data contains both old and new information. Brands with complex pricing structures (usage-based, tiered, or custom enterprise pricing) are more frequently misrepresented because AI models simplify variable pricing into static numbers. Brands with limited web presence outside their own domain have higher fabrication rates because AI fills information gaps with plausible-sounding but invented details.</p>
+<h2 id="why">Why hallucinations happen to brands</h2>
+<p>AI hallucinations about brands stem from three sources: conflicting information across indexed sources (your pricing page says one thing, a review site says another, and AI picks the wrong one), information gaps that the model fills with plausible-sounding fabrications, and stale training data that reflects your brand as it was months or years ago rather than as it is today. The more inconsistent your brand information is across the web, the more likely AI is to get something wrong.</p>
+<p>Understanding what AI gets wrong about your brand and which sources are feeding the errors is the prerequisite to any correction strategy. <a href="/">Metricus</a> shows the answer AI gives to your customers’ question, free: you pick your website, edit the answer into what you want AI to say about you, and get new text for your website.</p>
+<p>Last updated: September 2026</p>
+<p>Evaluating AI visibility tools? Read our <a href="/blog/ai-visibility-tools-worth-it-2026/">full comparison of AI visibility tools in 2026</a>.</p>
+<h2 id="faq">Frequently asked questions</h2>
+<h3>How common are AI hallucinations about brands?</h3>
+<p>Many brands have at least one factual error in AI-generated responses. The error rate increases with brand complexity, frequent pricing changes, and recent rebrands.</p>
+<h3>What are the most common AI errors about brands?</h3>
+<p>The five most common: wrong pricing from stale review sites, feature conflation across product tiers, fabricated details with no basis in any source, outdated information about discontinued products, and competitive misattribution from comparison articles.</p>
+<h3>Why does AI make up facts about my company?</h3>
+<p>AI hallucinations stem from conflicting information across indexed sources, information gaps the model fills with fabrications, and stale training data. The more inconsistent your brand information is across the web, the more likely errors become.</p>
+<h3>Can I find out what AI gets wrong about my brand?</h3>
+<p>Yes. Ask the major AI platforms about your brand and compare the answers against your own facts. Metricus shows, for free, the answer AI gives when your customers ask for what you offer; you can edit it into what you want AI to say and get new text for your website.</p>
+<p class="cite">Cite as: <a href="https://metricusapp.com/blog/fix-ai-brand-hallucinations/">Metricus — Fix AI Brand Hallucinations: Why ChatGPT Describes Your Company Incorrectly</a></p>
+<section class="related" aria-labelledby="related-knowledge-bases"><h2 id="related-knowledge-bases">Knowledge bases</h2><ul><li><a href="/brand-accuracy-knowledge-base/">AI Brand Accuracy Guide</a><p>48 clusters on AI hallucinations, factual errors, and correction strategies</p></li></ul></section>
+<section class="related" aria-labelledby="related-related-articles"><h2 id="related-related-articles">Related articles</h2><ul><li><a href="/blog/ai-wrong-price-fix/">AI Is Getting Your Pricing Wrong</a><p>Many brands have incorrect pricing in AI responses. Here&#x27;s why it happens and how to fix it.</p></li><li><a href="/blog/ai-visibility-action-plan/">How to Turn AI Visibility Data Into an Actual Action Plan</a><p>Most AI visibility tools give you a score and leave you stuck. Here&#x27;s how to turn that data into actions that change how AI describes your brand.</p></li><li><a href="/blog/90-day-ai-visibility-plan/">The 90-Day AI Visibility Playbook</a><p>A structured 90-day plan to improve how AI platforms represent your brand.</p></li></ul></section>
+<!-- metricus:ask -->
+<section class="ask-cta" aria-labelledby="ask-cta-h"><h2 id="ask-cta-h">What do your customers ask AI?</h2><form class="chatbox" action="/" method="get"><input class="input" type="text" name="q" maxlength="600" autocomplete="off" required placeholder="Type what people would ask AI&hellip;" aria-labelledby="ask-cta-h"><button class="send" type="submit" aria-label="Ask AI" title="Ask AI"><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V6M6 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form></section>
+<!-- /metricus:ask -->
+</main>
+<!-- metricus:footer -->
+<footer class="foot"><nav aria-label="Site"><a href="/blog/">Blog</a><a href="/geo-knowledge-base/">Knowledge base</a><a href="/results/">Results</a><a href="/about/">About</a><a href="/press/">Press</a><a href="/support/">Support</a><a href="/privacy-policy/">Privacy</a><a href="/terms-of-service/">Terms</a><a href="mailto:metricusapp@gmail.com">Contact</a></nav><p>&copy; 2026 Metricus</p></footer>
+<!-- /metricus:footer -->
 </body>
 </html>

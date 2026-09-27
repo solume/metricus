@@ -1,757 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How Can My Game Studio Get Recommended by AI? Visibility Data | Metricus</title>
-  <meta name="description" content="The gaming industry is worth $187B. When players ask AI for recommendations, the same 10 titles win. Indie discovery crisis meets AI.">
-  <meta property="og:title" content="How Can My Game Studio Get Recommended by AI? Visibility Data">
-  <meta property="og:description" content="The gaming industry is worth $187B. When players ask AI for recommendations, the same 10 titles win. Indie discovery crisis meets AI.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://metricusapp.com/blog/gaming-ai-visibility/">
-  <meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="How Can My Game Studio Get Recommended by AI? Visibility Data">
-  <meta name="twitter:description" content="The gaming industry is worth $187B. When players ask AI for recommendations, the same 10 titles win. Indie discovery crisis meets AI.">
-  <meta name="twitter:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <link rel="canonical" href="https://metricusapp.com/blog/gaming-ai-visibility/">
-
-  <!-- Google Tag Manager -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w70oz7g1k3");
-  </script>
-
-  <!-- Google Fonts -->
-
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#515F74',
-            'primary-hover': '#1E293B',
-            'on-primary': '#f6f7ff',
-            'on-primary-fixed': '#324054',
-            'primary-dim': '#455368',
-            surface: '#f7f9fb',
-            'surface-container-low': '#f0f4f7',
-            'surface-container': '#e8eff3',
-            'surface-container-lowest': '#ffffff',
-            'surface-container-highest': '#d9e4ea',
-            'surface-container-high': '#e1e9ee',
-            'surface-variant': '#d9e4ea',
-            'on-surface': '#2a3439',
-            'on-surface-variant': '#566166',
-            outline: '#717c82',
-            'outline-variant': '#a9b4b9',
-            'slate-text': '#0F172A',
-            'slate-muted': '#64748B',
-            'slate-accent': '#475569',
-          },
-          fontFamily: {
-            display: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            body: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            headline: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            label: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-          },
-          borderRadius: {
-            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
-            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
-            full: '0.75rem',
-          },
-        },
-      },
-    }
-  </script>
-
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: #ffffff;
-      color: #0F172A;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .font-display { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-headline { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-body-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-
-    .editorial-btn {
-      transition: background-color 150ms ease-in-out, transform 150ms ease;
-    }
-    .editorial-btn:hover {
-      background-color: #1E293B;
-    }.blog-card {
-      transition: transform 200ms ease, background-color 200ms ease;
-    }
-    .blog-card:hover {
-      transform: translateY(-2px);
-      background-color: #f7f9fb;
-    }
-
-    .article-body h2 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.75rem;
-      line-height: 1.2;
-      color: #0F172A;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-    }
-    @media (min-width: 768px) {
-      .article-body h2 {
-        font-size: 2rem;
-      }
-    }
-    .article-body h3 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      line-height: 1.3;
-      color: #0F172A;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    .article-body p {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-    }
-    .article-body ul, .article-body ol {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-      padding-left: 1.5rem;
-    }
-    .article-body ul { list-style-type: disc; }
-    .article-body ol { list-style-type: decimal; }
-    .article-body li { margin-bottom: 0.5rem; }
-    .article-body blockquote {
-      border-left: 2px solid #334155;
-      padding-left: 1.5rem;
-      font-style: italic;
-      color: #475569;
-      font-size: 1.125rem;
-      line-height: 1.75;
-      margin: 2rem 0;
-    }
-    .article-body a {
-      color: #334155;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .article-body a:hover {
-      color: #1E293B;
-    }
-  </style>
-
-  <!-- JSON-LD BlogPosting -->
-  <script type="application/ld+json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Can My Game Studio Get Recommended by AI? Visibility Data | Metricus</title>
+<meta name="description" content="The gaming industry is worth $187B. When players ask AI for recommendations, the same 10 titles win. Indie discovery crisis meets AI.">
+<link rel="canonical" href="https://metricusapp.com/blog/gaming-ai-visibility/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Metricus">
+<meta property="og:url" content="https://metricusapp.com/blog/gaming-ai-visibility/">
+<meta property="og:title" content="How Can My Game Studio Get Recommended by AI? Visibility Data">
+<meta property="og:description" content="The gaming industry is worth $187B. When players ask AI for recommendations, the same 10 titles win. Indie discovery crisis meets AI.">
+<meta property="og:image" content="https://metricusapp.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Metricus: see what AI answers when your customers ask for what you offer.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How Can My Game Studio Get Recommended by AI? Visibility Data">
+<meta name="twitter:description" content="The gaming industry is worth $187B. When players ask AI for recommendations, the same 10 titles win. Indie discovery crisis meets AI.">
+<meta name="twitter:image" content="https://metricusapp.com/assets/og.png">
+<!-- metricus:head -->
+<link rel="stylesheet" href="/assets/metricus.css?v=20260927">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#FBFAF7">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w70oz7g1k3");</script>
+<!-- /metricus:head -->
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "AI Visibility for Gaming: Why ChatGPT Recommends the Same 10 Games and Your Studio Doesn't Exist",
+ "description": "The gaming industry generates $187 billion annually. When players ask AI chatbots for game recommendations, the same 10 titles dominate every response. Data on why indie studios and mid-size publishers are invisible in AI, and how to fix it.",
+ "author": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "datePublished": "2026-04-05",
+ "dateModified": "2026-09-27",
+ "mainEntityOfPage": "https://metricusapp.com/blog/gaming-ai-visibility/",
+ "image": "https://metricusapp.com/assets/og.png"
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
   {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "AI Visibility for Gaming: Why ChatGPT Recommends the Same 10 Games and Your Studio Doesn't Exist",
-    "description": "The gaming industry generates $187 billion annually. When players ask AI chatbots for game recommendations, the same 10 titles dominate every response. Data on why indie studios and mid-size publishers are invisible in AI, and how to fix it.",
-    "author": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "datePublished": "2026-04-05",
-    "dateModified": "2026-05-17",
-    "mainEntityOfPage": "https://metricusapp.com/blog/gaming-ai-visibility/",
-    "image": "https://metricusapp.com/landing/img/og.jpg"
-  }
-  </script>
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://metricusapp.com/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "AI Visibility for Gaming", "item": "https://metricusapp.com/blog/gaming-ai-visibility/"}
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://metricusapp.com/blog/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Why does ChatGPT keep recommending the same games like Elden Ring, Baldur's Gate 3, and Zelda?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI chatbots generate recommendations based on training data scraped from the web. Games with massive media coverage, millions of Reddit discussions, and extensive Wikipedia entries dominate the training corpus. Elden Ring sold over 25 million copies and generated hundreds of thousands of articles and forum posts. An indie game with 50,000 sales and a few dozen reviews simply does not have enough web presence to register in AI training data. The result: AI recommends the same 10-15 AAA titles regardless of the player's actual preferences."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How are gamers using AI chatbots to discover new games?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Research from Newzoo and Bain & Company shows that an increasing share of gamers — particularly those under 35 — are using ChatGPT, Perplexity, and Google Gemini to ask questions like 'What are the best indie roguelikes on Steam?' or 'What game should I play if I liked Hades?' This mirrors a broader shift: Gartner projected traditional search volume would drop 25% by 2026 due to AI chatbots. For gaming, this means Steam search, YouTube algorithms, and Google are no longer the only discovery funnels that matter."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What does AI get wrong about gaming companies and studios?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Common AI errors in gaming include: attributing games to the wrong studio or publisher, citing incorrect release dates, confusing game franchises (e.g., mixing up entries in a series), fabricating review scores, stating wrong platform availability, and generating outdated pricing. AI also frequently misidentifies indie studios as subsidiaries of larger publishers, or merges information from similarly-named studios. These errors erode trust and misdirect potential players."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How can indie game studios and smaller publishers improve their AI visibility?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Indie studios can improve AI visibility by: (1) auditing what AI currently says about their games and studio across the major AI platforms, (2) publishing data-rich content with specific player counts, review scores, and award mentions on their website, (3) building citations on authoritative third-party sites like Wikipedia, PC Gaming Wiki, IGDB, and Metacritic, (4) engaging in community discussions on Reddit, Steam forums, and Discord where AI training data is sourced, and (5) implementing structured data markup including VideoGame and Organization schema."
-        }
-      }
-    ]
+   "@type": "ListItem",
+   "position": 3,
+   "name": "AI Visibility for Gaming",
+   "item": "https://metricusapp.com/blog/gaming-ai-visibility/"
   }
-  </script>
-  <script src="/js/reader-pulse-b.js" defer></script>
+ ]
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Why does ChatGPT keep recommending the same games like Elden Ring, Baldur's Gate 3, and Zelda?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "AI chatbots generate recommendations based on training data scraped from the web. Games with massive media coverage, millions of Reddit discussions, and extensive Wikipedia entries dominate the training corpus. Elden Ring sold over 25 million copies and generated hundreds of thousands of articles and forum posts. An indie game with 50,000 sales and a few dozen reviews simply does not have enough web presence to register in AI training data. The result: AI recommends the same 10-15 AAA titles regardless of the player's actual preferences."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How are gamers using AI chatbots to discover new games?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Research from Newzoo and Bain & Company shows that an increasing share of gamers — particularly those under 35 — are using ChatGPT, Perplexity, and Google Gemini to ask questions like 'What are the best indie roguelikes on Steam?' or 'What game should I play if I liked Hades?' This mirrors a broader shift: Gartner projected traditional search volume would drop 25% by 2026 due to AI chatbots. For gaming, this means Steam search, YouTube algorithms, and Google are no longer the only discovery funnels that matter."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What does AI get wrong about gaming companies and studios?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Common AI errors in gaming include: attributing games to the wrong studio or publisher, citing incorrect release dates, confusing game franchises (e.g., mixing up entries in a series), fabricating review scores, stating wrong platform availability, and generating outdated pricing. AI also frequently misidentifies indie studios as subsidiaries of larger publishers, or merges information from similarly-named studios. These errors erode trust and misdirect potential players."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How can indie game studios and smaller publishers improve their AI visibility?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Indie studios can improve AI visibility by: (1) auditing what AI currently says about their games and studio across the major AI platforms, (2) publishing data-rich content with specific player counts, review scores, and award mentions on their website, (3) building citations on authoritative third-party sites like Wikipedia, PC Gaming Wiki, IGDB, and Metacritic, (4) engaging in community discussions on Reddit, Steam forums, and Discord where AI training data is sourced, and (5) implementing structured data markup including VideoGame and Organization schema."
+   }
+  }
+ ]
+}</script>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
-
-  <!-- Site Nav -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 gap-4">
-      <a href="/" class="text-on-surface font-semibold" aria-label="Metricus home">Metricus <span class="font-normal text-on-surface-variant">Optimizer</span></a>
-      <div class="flex items-center gap-5">
-        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface">Learn</a>
-        <a href="/ai-visibility-optimizer-tool/" class="bg-primary text-on-primary text-sm font-semibold px-4 py-2.5 hover:bg-primary-dim">Open the tool</a>
-      </div>
-    </div>
-  </header>
-
-
-
-  <!-- Mobile Menu Overlay -->
-
-
-
-  <main class="flex-grow flex flex-col relative overflow-x-hidden">
-
-    <div class="absolute inset-0 -z-10 pointer-events-none"></div>
-
-    <!-- ========== ARTICLE ========== -->
-    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
-
-      <!-- Breadcrumb -->
-      <nav class="mb-8">
-        <ol class="flex items-center gap-2 text-xs text-slate-muted">
-          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
-          <li class="select-none">/</li>
-          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
-          <li class="select-none">/</li>
-          <li class="text-slate-text">Gaming AI Visibility</li>
-        </ol>
-      </nav>
-
-      <!-- Article Header -->
-      <header class="mb-12">
-        <p class="text-xs text-primary font-semibold mb-4">Industry Research</p>
-        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
-          How Can My Game Studio Get Recommended by AI?
-        </h1>
-        <p class="text-sm text-outline">Metricus Research &middot; April 5, 2026 &middot; 8 min read</p>
-        <p class="text-sm text-outline mt-2">Last updated: April 2026</p>
-      </header>
-
-
-      <!-- Tension Stat -->
-      <div class="bg-surface-container-low p-8 mb-12">
-        <p class="text-lg leading-relaxed text-on-surface">
-          <strong>The global gaming industry generated $187.7 billion in revenue in 2024</strong> (Newzoo Global Games Market Report). Over 14,000 games launched on Steam that same year. When players ask ChatGPT &ldquo;What game should I play?&rdquo; they get the same 10 titles every time &mdash; and 99.9% of studios don&rsquo;t exist in the answer.
+<body class="doc">
+<!-- metricus:header -->
+<header class="nav"><div class="in"><a class="logo" href="/" id="navhome">Metricus</a><span class="sp"></span><span class="muted" id="host"></span></div></header>
+<!-- /metricus:header -->
+<main class="doc-main" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <span aria-current="page">Gaming AI Visibility</span></nav>
+<p class="kicker">Industry Research</p>
+<h1>How Can My Game Studio Get Recommended by AI?</h1>
+<p class="byline">Metricus Research · April 5, 2026 · 8 min read</p>
+<p class="updated">Last updated: September 2026</p>
+<div class="note">
+<p>
+<strong>The global gaming industry generated $187.7 billion in revenue in 2024</strong> (Newzoo Global Games Market Report). Over 14,000 games launched on Steam that same year. When players ask ChatGPT “What game should I play?” they get the same 10 titles every time — and 99.9% of studios don’t exist in the answer.
         </p>
-      </div>
-
-
-<p><strong>Short answer:</strong> Most game studios are invisible in AI recommendations. When players asking AI assistants for game suggestions, the same 10 AAA titles appear in 80%+ of responses. The free Metricus optimizer shows what the major AI platforms answer when your studio&rsquo;s page is the source, and which passages shape that answer. <a href="/ai-visibility-optimizer-tool/">Open the tool</a>.</p>
-
-
-      <!-- Table of Contents -->
-      <div class="border border-[#E2E8F0] p-8 mb-12">
-        <p class="text-xs text-slate-muted font-semibold mb-4">In this article</p>
-        <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
-          <li><a href="#the-shift" class="hover:underline">The shift: from Steam search to &ldquo;ask the AI&rdquo;</a></li>
-          <li><a href="#who-ai-recommends" class="hover:underline">Who AI actually recommends in gaming</a></li>
-          <li><a href="#indie-discovery-crisis" class="hover:underline">The indie discovery crisis, amplified</a></li>
-          <li><a href="#what-ai-gets-wrong" class="hover:underline">What AI gets wrong about gaming brands</a></li>
-          <li><a href="#the-money" class="hover:underline">The $200 billion discovery problem</a></li>
-          <li><a href="#mobile-esports" class="hover:underline">Mobile gaming and esports: separate AI blind spots</a></li>
-          <li><a href="#winner-take-all" class="hover:underline">Winner-take-all dynamics in AI game recommendations</a></li>
-          <li><a href="#what-works" class="hover:underline">What we found</a></li>
-          <li><a href="#case-for-auditing" class="hover:underline">The case for auditing your AI visibility now</a></li>
-        </ol>
-      </div>
-
-      <!-- Article Body -->
-      <div class="article-body">
-
-        <h2 id="the-shift">The shift: from Steam search to &ldquo;ask the AI&rdquo;</h2>
-
-        <p>For two decades, game discovery followed a predictable funnel: gaming press coverage, YouTube trailers, Steam browse and search, word of mouth, and curated storefronts. Studios optimized for these channels. They bought Steam featured placements, sent review codes to IGN and Kotaku, paid streamers, and ran social campaigns.</p>
-
-        <p>That funnel is fracturing.</p>
-
-        <p>Gartner forecast in February 2024 that <strong>traditional search engine volume will drop 25% by 2026</strong> due to AI chatbots and virtual agents. ChatGPT surpassed 5.8 billion monthly visits by mid-2025, making it one of the top 10 most-visited sites globally (Similarweb). Perplexity AI grew to over 100 million monthly visits by Q4 2024. Google now shows AI Overviews for an estimated <strong>84% of informational queries</strong> (BrightEdge, 2024) &mdash; and gaming queries (&ldquo;best roguelike 2025,&rdquo; &ldquo;games like Elden Ring,&rdquo; &ldquo;what to play on Switch&rdquo;) are heavily affected.</p>
-
-        <p>The behavioral shift is already underway. A 2024 Bain &amp; Company gaming consumer survey found that <strong>62% of gamers aged 18&ndash;34 use AI tools at least monthly</strong>, and game discovery is among the top use cases after general Q&amp;A and content creation. Players are asking ChatGPT to recommend games tailored to their preferences &mdash; &ldquo;What&rsquo;s the best co-op game for two people who liked It Takes Two?&rdquo; &mdash; instead of scrolling Steam&rsquo;s algorithm or watching 30-minute YouTube reviews.</p>
-
-        <p>When a player asks that question, the answer is not your game. It&rsquo;s Baldur&rsquo;s Gate 3. It&rsquo;s Stardew Valley. It&rsquo;s a title that already sold millions. The traditional discovery funnel &mdash; press &rarr; platform algorithm &rarr; purchase &mdash; is being bypassed by a direct conversation with an AI that has never heard of your studio.</p>
-
-
-        <h2 id="who-ai-recommends">Who AI actually recommends in gaming</h2>
-
-        <p>We tested this. Across the major AI platforms, using gamer-intent prompts like &ldquo;What are the best games of the last 3 years?&rdquo;, &ldquo;What indie games should I play?&rdquo;, and &ldquo;Best platform for buying PC games&rdquo; &mdash; the same names appear with striking consistency:</p>
-
-        <div class="overflow-x-auto my-8">
-          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Rank</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Platform / Brand</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Monthly Visits (approx.)</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">AI Mention Rate *</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">1</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Steam (Valve)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~1.6 billion</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in 95%+ of responses</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">2</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">PlayStation (Sony)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~350 million</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~80% of responses</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">3</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Xbox (Microsoft)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~300 million</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~75% of responses</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">4</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Nintendo</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~250 million</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~70% of responses</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">5</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Epic Games Store</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~80 million</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~45% of responses</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">6</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">GOG.com (CD Projekt)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">~25 million</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Mentioned in ~20% of responses</td>
-              </tr>
-              <tr class="bg-surface-container-low">
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">&mdash;</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Avg. indie studio website</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">1,000&ndash;30,000</td>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">&lt;1% of responses</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>When it comes to specific game recommendations, the concentration is even more extreme. We tracked the 20 most-frequently recommended games across all AI chatbots:</p>
-
-        <ul>
-          <li><strong>Elden Ring</strong> (FromSoftware) &mdash; recommended in 85%+ of &ldquo;best RPG&rdquo; queries. Sold over 25 million copies (Bandai Namco, 2024).</li>
-          <li><strong>Baldur&rsquo;s Gate 3</strong> (Larian Studios) &mdash; recommended in 80%+ of &ldquo;best RPG&rdquo; queries. Over 15 million copies sold (Larian, 2024).</li>
-          <li><strong>The Legend of Zelda: Tears of the Kingdom</strong> (Nintendo) &mdash; appears in 75%+ of &ldquo;best adventure game&rdquo; queries. Over 20 million copies sold (Nintendo earnings, 2024).</li>
-          <li><strong>Stardew Valley</strong> (ConcernedApe) &mdash; appears in 70%+ of &ldquo;best indie game&rdquo; queries. Over 30 million copies sold across all platforms (ConcernedApe, 2023).</li>
-          <li><strong>Hades</strong> (Supergiant Games) &mdash; appears in 65%+ of &ldquo;best roguelike&rdquo; queries despite launching in 2020.</li>
-        </ul>
-
-        <p>Notice the pattern: these are games with <strong>tens of millions of data points</strong> in the AI training corpus &mdash; reviews, Reddit threads, YouTube transcripts, news articles, forum discussions, and wiki entries. A game with 5,000 sales and 50 reviews has essentially zero corpus presence by comparison.</p>
-
-        <p>This isn&rsquo;t bias. It&rsquo;s math. And it&rsquo;s the same math that makes <a href="../ai-visibility-how-brands-show-up/">AI visibility</a> so critical for brands in every industry.</p>
-
-
-        <div data-reader-pulse-b data-source="gaming-ai-visibility"></div>
-
-        <h2 id="indie-discovery-crisis">The indie discovery crisis, amplified</h2>
-
-        <p>The game discovery problem for indie developers is not new. It&rsquo;s been called &ldquo;the indiepocalypse&rdquo; since 2014, when the volume of Steam releases began its exponential climb. But AI is making it measurably worse.</p>
-
-        <p>Consider the numbers:</p>
-
-        <ul>
-          <li><strong>Steam released 14,532 games in 2024</strong> (SteamDB), up from 10,963 in 2022 and just 2,964 in 2017.</li>
-          <li><strong>The median Steam game earns under $1,000 in its first month</strong> (VG Insights, 2024). The top 1% of releases capture roughly 50% of total revenue.</li>
-          <li><strong>Only 21% of games on Steam have more than 10 user reviews</strong> (SteamSpy data). Without reviews, a game has almost no footprint in AI training data.</li>
-          <li>Chris Zukowski&rsquo;s widely cited research (howtomarketagame.com) found that <strong>the average indie game sells just 1,500 copies in its first year</strong>.</li>
-        </ul>
-
-        <p>Before AI, indie developers could still break through via Steam&rsquo;s algorithm. Steam&rsquo;s Discovery Queue, curator system, and &ldquo;Similar Games&rdquo; recommendations gave smaller titles some exposure. YouTube and Twitch algorithms occasionally surfaced surprising games to large audiences.</p>
-
-        <p>AI chatbots have none of these serendipity mechanisms. They have no Discovery Queue. They don&rsquo;t surface hidden gems based on behavioral signals. They recommend what they know &mdash; and what they know is what was written about most extensively on the internet before their training cutoff.</p>
-
-        <p>The result: <strong>AI is a discovery channel that structurally favors incumbents</strong>. It reinforces the success of games that are already successful and makes invisible the games that need discovery the most. This is the same dynamic we documented in <a href="../b2b-saas-invisible-chatgpt/">B2B SaaS AI visibility</a>, but in gaming the volume of competitors makes the problem orders of magnitude worse.</p>
-        <!-- METRICUS_MID_CTA -->
-        
-
-
-        <h2 id="what-ai-gets-wrong">What AI gets wrong about gaming brands</h2>
-
-        <p>Even when AI does mention a gaming brand, there&rsquo;s a high chance it gets the facts wrong. AI hallucination rates for gaming-specific queries are particularly high because the space moves fast &mdash; new releases, patches, studio acquisitions, and platform changes happen constantly, but AI training data lags months to years behind.</p>
-
-        <p>The most common errors we find in AI responses about gaming companies:</p>
-
-        <h3>Studio and publisher attribution</h3>
-        <p>AI frequently attributes games to the wrong studio or publisher. This is especially common after acquisitions: Bethesda games may be attributed to &ldquo;Bethesda&rdquo; or &ldquo;Microsoft&rdquo; or &ldquo;ZeniMax&rdquo; depending on which training data the model draws from. Indie studios that changed names or were acquired are routinely misidentified.</p>
-
-        <h3>Platform availability</h3>
-        <p>ChatGPT and other models regularly state that games are available on platforms where they are not, or fail to mention recent port releases. A game that was PC-exclusive at launch but later came to PlayStation may still be described as &ldquo;PC only&rdquo; in AI responses &mdash; costing the publisher console sales.</p>
-
-        <h3>Review scores and awards</h3>
-        <p>AI frequently <strong>fabricates or misquotes Metacritic scores</strong>. We&rsquo;ve seen chatbots cite specific review scores (e.g., &ldquo;92 on Metacritic&rdquo;) for games where the actual score is materially different, or for games that have no Metacritic score at all. Award claims (&ldquo;Game of the Year winner&rdquo;) are similarly unreliable, with AI sometimes confusing nominees with winners. For strategies on fixing these errors, see our guide on <a href="../fix-ai-brand-hallucinations/">correcting AI hallucinations about your brand</a>.</p>
-
-        <h3>Pricing and business model</h3>
-        <p>Free-to-play games are described as paid, paid games are listed at incorrect price points, and subscription status (Game Pass, PS Plus) is frequently outdated or wrong. For a player deciding whether to try a game, incorrect pricing is an immediate conversion killer.</p>
-
-        <h3>Gameplay descriptions</h3>
-        <p>AI sometimes merges information from different entries in a franchise (describing Civilization VI with features from Civilization V) or confuses similarly-named games from different studios entirely.</p>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>The compound problem:</strong> Your game studio is either invisible in AI (bad) or mentioned with wrong information (worse). Both cost you players. The first means gamers never discover your title. The second means they discover it with incorrect platform info, fabricated review scores, or wrong pricing that kills the sale before they ever visit your Steam page.
+</div>
+<p><strong>Short answer:</strong> Most game studios are invisible in AI recommendations. When players ask AI assistants for game suggestions, the same 10 AAA titles keep appearing.</p>
+<nav class="toc" aria-label="In this article"><p>In this article</p><ol>
+<li><a href="#the-shift">The shift: from Steam search to “ask the AI”</a></li>
+<li><a href="#who-ai-recommends">Who AI actually recommends in gaming</a></li>
+<li><a href="#indie-discovery-crisis">The indie discovery crisis, amplified</a></li>
+<li><a href="#what-ai-gets-wrong">What AI gets wrong about gaming brands</a></li>
+<li><a href="#the-money">The $200 billion discovery problem</a></li>
+<li><a href="#mobile-esports">Mobile gaming and esports: separate AI blind spots</a></li>
+<li><a href="#winner-take-all">Winner-take-all dynamics in AI game recommendations</a></li>
+<li><a href="#what-works">Patterns that separate visible studios from invisible ones</a></li>
+<li><a href="#case-for-auditing">The case for auditing your AI visibility now</a></li>
+<li><a href="#faq">Frequently asked questions</a></li>
+</ol></nav>
+<h2 id="the-shift">The shift: from Steam search to “ask the AI”</h2>
+<p>For two decades, game discovery followed a predictable funnel: gaming press coverage, YouTube trailers, Steam browse and search, word of mouth, and curated storefronts. Studios optimized for these channels. They bought Steam featured placements, sent review codes to IGN and Kotaku, paid streamers, and ran social campaigns.</p>
+<p>That funnel is fracturing.</p>
+<p>Gartner forecast in February 2024 that <strong>traditional search engine volume will drop 25% by 2026</strong> due to AI chatbots and virtual agents. ChatGPT surpassed 5.8 billion monthly visits by mid-2025, making it one of the top 10 most-visited sites globally (Similarweb). Perplexity AI grew to over 100 million monthly visits by Q4 2024. Google now shows AI Overviews for an estimated <strong>84% of informational queries</strong> (BrightEdge, 2024) — and gaming queries (“best roguelike 2025,” “games like Elden Ring,” “what to play on Switch”) are heavily affected.</p>
+<p>The behavioral shift is already underway. A 2024 Bain &amp; Company gaming consumer survey found that <strong>62% of gamers aged 18–34 use AI tools at least monthly</strong>, and game discovery is among the top use cases after general Q&amp;A and content creation. Players are asking ChatGPT to recommend games tailored to their preferences — “What’s the best co-op game for two people who liked It Takes Two?” — instead of scrolling Steam’s algorithm or watching 30-minute YouTube reviews.</p>
+<p>When a player asks that question, the answer is not your game. It’s Baldur’s Gate 3. It’s Stardew Valley. It’s a title that already sold millions. The traditional discovery funnel — press → platform algorithm → purchase — is being bypassed by a direct conversation with an AI that has never heard of your studio.</p>
+<h2 id="who-ai-recommends">Who AI actually recommends in gaming</h2>
+<p>For gamer-intent prompts like “What are the best games of the last 3 years?”, “What indie games should I play?”, and “Best platform for buying PC games” the same names appear with striking consistency:</p>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Platform / Brand</th>
+<th>Monthly Visits (approx.)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Steam (Valve)</td>
+<td>~1.6 billion</td>
+</tr>
+<tr>
+<td>2</td>
+<td>PlayStation (Sony)</td>
+<td>~350 million</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Xbox (Microsoft)</td>
+<td>~300 million</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Nintendo</td>
+<td>~250 million</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Epic Games Store</td>
+<td>~80 million</td>
+</tr>
+<tr>
+<td>6</td>
+<td>GOG.com (CD Projekt)</td>
+<td>~25 million</td>
+</tr>
+<tr>
+<td>—</td>
+<td>Avg. indie studio website</td>
+<td>1,000–30,000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>When it comes to specific game recommendations, the concentration is even more extreme. The same few games come up again and again:</p>
+<ul>
+<li><strong>Elden Ring</strong> (FromSoftware) — recommended in “best RPG” queries. Sold over 25 million copies (Bandai Namco, 2024).</li>
+<li><strong>Baldur’s Gate 3</strong> (Larian Studios) — recommended in “best RPG” queries. Over 15 million copies sold (Larian, 2024).</li>
+<li><strong>The Legend of Zelda: Tears of the Kingdom</strong> (Nintendo) — appears in “best adventure game” queries. Over 20 million copies sold (Nintendo earnings, 2024).</li>
+<li><strong>Stardew Valley</strong> (ConcernedApe) — appears in “best indie game” queries. Over 30 million copies sold across all platforms (ConcernedApe, 2023).</li>
+<li><strong>Hades</strong> (Supergiant Games) — appears in “best roguelike” queries despite launching in 2020.</li>
+</ul>
+<p>Notice the pattern: these are games with <strong>tens of millions of data points</strong> in the AI training corpus — reviews, Reddit threads, YouTube transcripts, news articles, forum discussions, and wiki entries. A game with 5,000 sales and 50 reviews has essentially zero corpus presence by comparison.</p>
+<p>This isn’t bias. It’s math. And it’s the same math that makes <a href="../ai-visibility-how-brands-show-up/">AI visibility</a> so critical for brands in every industry.</p>
+<div data-reader-pulse-b="" data-source="gaming-ai-visibility"></div>
+<h2 id="indie-discovery-crisis">The indie discovery crisis, amplified</h2>
+<p>The game discovery problem for indie developers is not new. It’s been called “the indiepocalypse” since 2014, when the volume of Steam releases began its exponential climb. But AI is making it measurably worse.</p>
+<p>Consider the numbers:</p>
+<ul>
+<li><strong>Steam released 14,532 games in 2024</strong> (SteamDB), up from 10,963 in 2022 and just 2,964 in 2017.</li>
+<li><strong>The median Steam game earns under $1,000 in its first month</strong> (VG Insights, 2024). The top 1% of releases capture roughly 50% of total revenue.</li>
+<li><strong>Only 21% of games on Steam have more than 10 user reviews</strong> (SteamSpy data). Without reviews, a game has almost no footprint in AI training data.</li>
+<li>Chris Zukowski’s widely cited research (howtomarketagame.com) found that <strong>the average indie game sells just 1,500 copies in its first year</strong>.</li>
+</ul>
+<p>Before AI, indie developers could still break through via Steam’s algorithm. Steam’s Discovery Queue, curator system, and “Similar Games” recommendations gave smaller titles some exposure. YouTube and Twitch algorithms occasionally surfaced surprising games to large audiences.</p>
+<p>AI chatbots have none of these serendipity mechanisms. They have no Discovery Queue. They don’t surface hidden gems based on behavioral signals. They recommend what they know — and what they know is what was written about most extensively on the internet before their training cutoff.</p>
+<p>The result: <strong>AI is a discovery channel that structurally favors incumbents</strong>. It reinforces the success of games that are already successful and makes invisible the games that need discovery the most. This is the same dynamic covered in <a href="../b2b-saas-invisible-chatgpt/">B2B SaaS AI visibility</a>, but in gaming the volume of competitors makes the problem orders of magnitude worse.</p>
+<h2 id="what-ai-gets-wrong">What AI gets wrong about gaming brands</h2>
+<p>Even when AI does mention a gaming brand, there’s a high chance it gets the facts wrong. AI hallucination rates for gaming-specific queries are particularly high because the space moves fast — new releases, patches, studio acquisitions, and platform changes happen constantly, but AI training data lags months to years behind.</p>
+<p>The most common errors in AI responses about gaming companies:</p>
+<h3>Studio and publisher attribution</h3>
+<p>AI frequently attributes games to the wrong studio or publisher. This is especially common after acquisitions: Bethesda games may be attributed to “Bethesda” or “Microsoft” or “ZeniMax” depending on which training data the model draws from. Indie studios that changed names or were acquired are routinely misidentified.</p>
+<h3>Platform availability</h3>
+<p>ChatGPT and other models regularly state that games are available on platforms where they are not, or fail to mention recent port releases. A game that was PC-exclusive at launch but later came to PlayStation may still be described as “PC only” in AI responses — costing the publisher console sales.</p>
+<h3>Review scores and awards</h3>
+<p>AI frequently <strong>fabricates or misquotes Metacritic scores</strong>. Chatbots can cite specific review scores (e.g., “92 on Metacritic”) for games where the actual score is materially different, or for games that have no Metacritic score at all. Award claims (“Game of the Year winner”) are similarly unreliable, with AI sometimes confusing nominees with winners. For strategies on fixing these errors, see our guide on <a href="../fix-ai-brand-hallucinations/">correcting AI hallucinations about your brand</a>.</p>
+<h3>Pricing and business model</h3>
+<p>Free-to-play games are described as paid, paid games are listed at incorrect price points, and subscription status (Game Pass, PS Plus) is frequently outdated or wrong. For a player deciding whether to try a game, incorrect pricing is an immediate conversion killer.</p>
+<h3>Gameplay descriptions</h3>
+<p>AI sometimes merges information from different entries in a franchise (describing Civilization VI with features from Civilization V) or confuses similarly-named games from different studios entirely.</p>
+<div class="note">
+<p>
+<strong>The compound problem:</strong> Your game studio is either invisible in AI (bad) or mentioned with wrong information (worse). Both cost you players. The first means gamers never discover your title. The second means they discover it with incorrect platform info, fabricated review scores, or wrong pricing that kills the sale before they ever visit your Steam page.
           </p>
-        </div>
-
-
-        <h2 id="the-money">The $200 billion discovery problem</h2>
-
-        <p>The gaming industry&rsquo;s marketing spend is enormous &mdash; and almost entirely pointed at channels that are declining in relative importance:</p>
-
-        <ul>
-          <li><strong>Global gaming market revenue: $187.7 billion in 2024</strong> (Newzoo). Expected to surpass $200 billion by 2027.</li>
-          <li><strong>Gaming digital ad spend: $8.6 billion in the US alone in 2024</strong> (eMarketer/Insider Intelligence), making gaming one of the top entertainment advertising categories.</li>
-          <li><strong>Influencer and streamer marketing:</strong> The gaming influencer market reached an estimated $4.4 billion globally in 2024 (Influencer Marketing Hub). <strong>83% of Gen Z gamers discover games through YouTube and Twitch</strong> (Newzoo Consumer Insights, 2024).</li>
-          <li><strong>Steam marketing:</strong> Valve takes a 30% revenue share (dropping to 25% above $10M and 20% above $50M in revenue). For most developers, this is effectively their largest &ldquo;marketing cost&rdquo; &mdash; access to Steam&rsquo;s 132 million monthly active users (Valve, 2024).</li>
-          <li><strong>User acquisition (mobile):</strong> The average cost per install (CPI) for a mobile game in the US was $3.40&ndash;$5.50 in 2024 (Liftoff/AppsFlyer), with hyper-casual games at the low end and RPGs exceeding $8.00 CPI.</li>
-        </ul>
-
-        <p>None of this spend is optimized for AI chatbot visibility.</p>
-
-        <p>The industry has a marketing machine worth billions pointed at YouTube, Steam algorithms, app store optimization, and social media &mdash; <strong>channels that are losing ground to AI-powered discovery</strong>. And the fastest-growing discovery channel &mdash; AI chatbots &mdash; has zero paid ad slots to buy. You can&rsquo;t pay ChatGPT to recommend your game. You have to earn it through web presence, and that&rsquo;s a fundamentally different optimization problem than what studios are used to.</p>
-
-        <div class="overflow-x-auto my-8">
-          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Gaming Segment</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">2024 Revenue</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Key Discovery Channel</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">AI Disruption Risk</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">PC gaming</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">$42.7B (Newzoo)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Steam, YouTube, Reddit</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">High &mdash; AI directly replaces search</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Console gaming</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">$53.9B (Newzoo)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">PlayStation Store, Xbox Store, YouTube</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Medium &mdash; platform stores still dominate</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Mobile gaming</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">$90.4B (data.ai)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">App Store/Play Store, social ads</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">High &mdash; AI replaces &ldquo;best game&rdquo; searches</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Esports</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">$1.87B (Newzoo)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Twitch, YouTube, social media</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Medium &mdash; live events buffer impact</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Cloud gaming</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">$6.3B (Grand View Research)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Direct platform marketing</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">High &mdash; &ldquo;best cloud gaming&rdquo; is an AI query</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-
-        <h2 id="mobile-esports">Mobile gaming and esports: separate AI blind spots</h2>
-
-        <h3>Mobile gaming: $90 billion, invisible in English-language AI</h3>
-
-        <p>Mobile gaming is the largest segment of the gaming industry, generating <strong>$90.4 billion in 2024</strong> (data.ai State of Mobile Gaming report). Yet AI chatbots dramatically underrepresent mobile titles in recommendations.</p>
-
-        <p>When users ask &ldquo;What are the best mobile games?&rdquo;, AI chatbots recommend a narrow list of legacy titles: Clash Royale, Genshin Impact, Monument Valley, Among Us, and occasionally PUBG Mobile. The thousands of mobile games generating significant revenue &mdash; like the <strong>top 100 mobile games that collectively earn over $1 million per day each</strong> (Sensor Tower, 2024) &mdash; are almost entirely absent from AI recommendations.</p>
-
-        <p>Why? Western-language AI training data skews heavily toward PC and console gaming coverage. IGN, Kotaku, PC Gamer, and Reddit &mdash; the major English-language sources in AI training corpora &mdash; cover mobile gaming as an afterthought. A mobile RPG earning $500 million per year in Asia might have one-tenth the English-language web presence of a $50 million console game.</p>
-
-        <p>For mobile game publishers, this creates a specific AI visibility gap: your game may be a massive commercial success but functionally invisible when an English-speaking user asks an AI chatbot for recommendations.</p>
-
-        <h3>Esports: $1.87 billion market, fragmented AI understanding</h3>
-
-        <p>The global esports industry generated approximately <strong>$1.87 billion in revenue in 2024</strong> (Newzoo Global Esports &amp; Live Streaming Market Report). The audience reached <strong>577 million viewers globally</strong> (Statista, 2024). Yet AI chatbot knowledge of esports is patchy and often outdated.</p>
-
-        <p>When asked about esports organizations, AI chatbots consistently name Team Liquid, Fnatic, Cloud9, T1, and TSM &mdash; but struggle with the post-2023 landscape of team buyouts, league restructuring, and org dissolutions that have reshaped competitive gaming. AI models trained before or during major structural changes (like the collapse of several Overwatch League franchises or LEC rebranding) provide outdated information with high confidence.</p>
-
-        <p>For esports organizations, tournament operators, and endemic brands, AI visibility is both a reputation risk (wrong information) and a discovery opportunity (becoming the brand AI recommends when asked &ldquo;What esports events should I watch?&rdquo;).</p>
-
-
-        <h2 id="winner-take-all">Winner-take-all dynamics in AI game recommendations</h2>
-
-        <p>In traditional game discovery, there were at least some mechanisms for surfacing smaller titles. Steam&rsquo;s algorithm could push a niche game to the right audience. A single Twitch streamer could make an unknown game go viral overnight. YouTube&rsquo;s recommendation engine occasionally served unexpected content.</p>
-
-        <p>AI chatbot recommendations have none of these properties. There are typically <strong>3&ndash;5 recommendations</strong> per response. No algorithm personalization. No serendipity. And the same games appear in nearly every answer:</p>
-
-        <div class="overflow-x-auto my-8">
-          <table class="w-full border-collapse border border-[#E2E8F0] text-sm">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Channel</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Visibility Slots</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Paid Option</th>
-                <th class="p-4 text-left font-semibold text-slate-text border border-[#E2E8F0]">Indie / Mid-Tier Chance</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Steam Discovery Queue</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">12 games per queue</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes (featured placement)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Moderate &mdash; algorithm-personalized</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">YouTube / Twitch</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Algorithmic + creator choice</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes (sponsorships, ads)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Moderate &mdash; viral potential exists</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Google Search</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">10 organic + ads</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Yes (Google Ads)</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Moderate &mdash; long-tail keywords</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Google AI Overviews</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">3&ndash;5 sources cited</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low &mdash; aggregator sites dominate</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">ChatGPT</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">3&ndash;5 recommendations</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Very low &mdash; AAA titles dominate</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-medium text-slate-text border border-[#E2E8F0]">Perplexity</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">5&ndash;8 cited sources</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">No</td>
-                <td class="p-4 text-slate-muted border border-[#E2E8F0]">Low &mdash; cites review aggregators</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>The structural difference is important: in Steam&rsquo;s algorithm, your game competes for visibility among a personalized set based on the player&rsquo;s play history, wishlists, and tags. In AI chatbots, your game competes against the entire corpus of human knowledge about gaming &mdash; and the games with the most web footprint win regardless of the player&rsquo;s taste.</p>
-
-        <p>This creates a dangerous feedback loop. Games that AI recommends get more players, more reviews, more Reddit threads, and more coverage &mdash; which makes them even more likely to be recommended by AI in the future. Games that AI ignores stay invisible, generating fewer data points, which ensures they remain invisible. Understanding the mechanics of this cycle is the first step &mdash; we break down the framework in our <a href="../ai-visibility-scores-explained/">AI visibility scores explained</a> guide.</p>
-
-        <p>For streamers and influencers, the impact compounds further. <strong>Streamers account for approximately 20% of new game purchases among Gen Z players</strong> (Newzoo, 2024). But when a viewer asks ChatGPT &ldquo;What game should I play that&rsquo;s like what [streamer] played?&rdquo;, the AI recommendation may not be the indie title the streamer was showcasing &mdash; it will be the AAA game with the most corpus mentions in that genre.</p>
-
-
-        <h2 id="what-works">What we found: patterns that separate visible studios from invisible ones</h2>
-
-        <p>Across hundreds of AI queries in the gaming vertical, Metricus data reveals consistent patterns. Studios that appear in AI recommendations share three traits: extensive third-party citation density (Wikipedia, Metacritic, IGDB entries), structured data markup on their official sites, and a measurable Reddit/forum discussion footprint that enters AI training corpora.</p>
-
-        <p>Studios without these signals are not just underrepresented &mdash; they are entirely absent. The median indie studio with fewer than 50 reviews and no Wikipedia entry appeared in zero AI responses across our testing. This is not a content quality problem. It is a citation architecture problem, and it is measurable.</p>
-
-
-        <h2 id="case-for-auditing">The case for auditing your AI visibility now</h2>
-
-        <p>The gaming industry is projected to reach <strong>$205 billion by 2027</strong> (Mordor Intelligence). PwC estimates the global gaming market will grow at a <strong>7.3% CAGR through 2028</strong>. Meanwhile, the number of games competing for attention continues to accelerate &mdash; Steam alone is on pace to release over 16,000 titles in 2026.</p>
-
-        <p>At the same time, AI chatbot usage is compounding. <strong>ChatGPT added its fastest 100 million users in history during 2024</strong>, growing from roughly 200 million to over 400 million weekly active users by early 2025 (OpenAI). Every one of those users is a potential gamer asking &ldquo;What should I play next?&rdquo;</p>
-
-        <p>The studios that understand their AI visibility now &mdash; while competitors are still focused exclusively on Steam optimization, streamer deals, and social campaigns &mdash; will have a structural advantage that compounds over time. Every piece of authoritative, data-rich content you publish today enters the training data that shapes AI recommendations tomorrow.</p>
-
-        <p>This is especially true for:</p>
-
-        <ul>
-          <li><strong>Indie studios</strong> launching new titles into an increasingly crowded market where traditional discovery is failing.</li>
-          <li><strong>Mid-size publishers</strong> whose catalog of 20&ndash;50 titles should generate ongoing revenue but is invisible in AI recommendations.</li>
-          <li><strong>Mobile game publishers</strong> whose hit titles are commercially massive but absent from English-language AI responses.</li>
-          <li><strong>Esports organizations</strong> that need accurate AI representation as fans increasingly ask chatbots about teams, events, and competitive scenes.</li>
-          <li><strong>Gaming platforms</strong> competing for mindshare in &ldquo;where should I buy games&rdquo; and &ldquo;which subscription service is best&rdquo; queries.</li>
-        </ul>
-
-        <p>The cost of waiting is measurable. The top gaming discovery channels of 2015 &mdash; gaming magazine reviews, dedicated gaming websites &mdash; are now fractions of their former influence. The same disruption is happening to Steam search and YouTube recommendations as AI chatbots absorb an increasing share of discovery intent. The question isn&rsquo;t whether this shift happens, but whether you&rsquo;re visible when it does.</p>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>The bottom line:</strong> If you&rsquo;re a game studio, publisher, or gaming platform that depends on players discovering your products &mdash; and in 2026, that&rsquo;s everyone &mdash; you need to know what AI is saying about you. Not next quarter. Now.
+</div>
+<h2 id="the-money">The $200 billion discovery problem</h2>
+<p>The gaming industry’s marketing spend is enormous — and almost entirely pointed at channels that are declining in relative importance:</p>
+<ul>
+<li><strong>Global gaming market revenue: $187.7 billion in 2024</strong> (Newzoo). Expected to surpass $200 billion by 2027.</li>
+<li><strong>Gaming digital ad spend: $8.6 billion in the US alone in 2024</strong> (eMarketer/Insider Intelligence), making gaming one of the top entertainment advertising categories.</li>
+<li><strong>Influencer and streamer marketing:</strong> The gaming influencer market reached an estimated $4.4 billion globally in 2024 (Influencer Marketing Hub). <strong>83% of Gen Z gamers discover games through YouTube and Twitch</strong> (Newzoo Consumer Insights, 2024).</li>
+<li><strong>Steam marketing:</strong> Valve takes a 30% revenue share (dropping to 25% above $10M and 20% above $50M in revenue). For most developers, this is effectively their largest “marketing cost” — access to Steam’s 132 million monthly active users (Valve, 2024).</li>
+<li><strong>User acquisition (mobile):</strong> The average cost per install (CPI) for a mobile game in the US was $3.40–$5.50 in 2024 (Liftoff/AppsFlyer), with hyper-casual games at the low end and RPGs exceeding $8.00 CPI.</li>
+</ul>
+<p>None of this spend is optimized for AI chatbot visibility.</p>
+<p>The industry has a marketing machine worth billions pointed at YouTube, Steam algorithms, app store optimization, and social media — <strong>channels that are losing ground to AI-powered discovery</strong>. And the fastest-growing discovery channel — AI chatbots — has zero paid ad slots to buy. You can’t pay ChatGPT to recommend your game. You have to earn it through web presence, and that’s a fundamentally different optimization problem than what studios are used to.</p>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th>Gaming Segment</th>
+<th>2024 Revenue</th>
+<th>Key Discovery Channel</th>
+<th>AI Disruption Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PC gaming</td>
+<td>$42.7B (Newzoo)</td>
+<td>Steam, YouTube, Reddit</td>
+<td>High — AI directly replaces search</td>
+</tr>
+<tr>
+<td>Console gaming</td>
+<td>$53.9B (Newzoo)</td>
+<td>PlayStation Store, Xbox Store, YouTube</td>
+<td>Medium — platform stores still dominate</td>
+</tr>
+<tr>
+<td>Mobile gaming</td>
+<td>$90.4B (data.ai)</td>
+<td>App Store/Play Store, social ads</td>
+<td>High — AI replaces “best game” searches</td>
+</tr>
+<tr>
+<td>Esports</td>
+<td>$1.87B (Newzoo)</td>
+<td>Twitch, YouTube, social media</td>
+<td>Medium — live events buffer impact</td>
+</tr>
+<tr>
+<td>Cloud gaming</td>
+<td>$6.3B (Grand View Research)</td>
+<td>Direct platform marketing</td>
+<td>High — “best cloud gaming” is an AI query</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="mobile-esports">Mobile gaming and esports: separate AI blind spots</h2>
+<h3>Mobile gaming: $90 billion, invisible in English-language AI</h3>
+<p>Mobile gaming is the largest segment of the gaming industry, generating <strong>$90.4 billion in 2024</strong> (data.ai State of Mobile Gaming report). Yet AI chatbots dramatically underrepresent mobile titles in recommendations.</p>
+<p>When users ask “What are the best mobile games?”, AI chatbots recommend a narrow list of legacy titles: Clash Royale, Genshin Impact, Monument Valley, Among Us, and occasionally PUBG Mobile. The thousands of mobile games generating significant revenue — like the <strong>top 100 mobile games that collectively earn over $1 million per day each</strong> (Sensor Tower, 2024) — are almost entirely absent from AI recommendations.</p>
+<p>Why? Western-language AI training data skews heavily toward PC and console gaming coverage. IGN, Kotaku, PC Gamer, and Reddit — the major English-language sources in AI training corpora — cover mobile gaming as an afterthought. A mobile RPG earning $500 million per year in Asia might have one-tenth the English-language web presence of a $50 million console game.</p>
+<p>For mobile game publishers, this creates a specific AI visibility gap: your game may be a massive commercial success but functionally invisible when an English-speaking user asks an AI chatbot for recommendations.</p>
+<h3>Esports: $1.87 billion market, fragmented AI understanding</h3>
+<p>The global esports industry generated approximately <strong>$1.87 billion in revenue in 2024</strong> (Newzoo Global Esports &amp; Live Streaming Market Report). The audience reached <strong>577 million viewers globally</strong> (Statista, 2024). Yet AI chatbot knowledge of esports is patchy and often outdated.</p>
+<p>When asked about esports organizations, AI chatbots consistently name Team Liquid, Fnatic, Cloud9, T1, and TSM — but struggle with the post-2023 landscape of team buyouts, league restructuring, and org dissolutions that have reshaped competitive gaming. AI models trained before or during major structural changes (like the collapse of several Overwatch League franchises or LEC rebranding) provide outdated information with high confidence.</p>
+<p>For esports organizations, tournament operators, and endemic brands, AI visibility is both a reputation risk (wrong information) and a discovery opportunity (becoming the brand AI recommends when asked “What esports events should I watch?”).</p>
+<h2 id="winner-take-all">Winner-take-all dynamics in AI game recommendations</h2>
+<p>In traditional game discovery, there were at least some mechanisms for surfacing smaller titles. Steam’s algorithm could push a niche game to the right audience. A single Twitch streamer could make an unknown game go viral overnight. YouTube’s recommendation engine occasionally served unexpected content.</p>
+<p>AI chatbot recommendations have none of these properties. There are typically <strong>3–5 recommendations</strong> per response. No algorithm personalization. No serendipity. And the same games appear in nearly every answer:</p>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Visibility Slots</th>
+<th>Paid Option</th>
+<th>Indie / Mid-Tier Chance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steam Discovery Queue</td>
+<td>12 games per queue</td>
+<td>Yes (featured placement)</td>
+<td>Moderate — algorithm-personalized</td>
+</tr>
+<tr>
+<td>YouTube / Twitch</td>
+<td>Algorithmic + creator choice</td>
+<td>Yes (sponsorships, ads)</td>
+<td>Moderate — viral potential exists</td>
+</tr>
+<tr>
+<td>Google Search</td>
+<td>10 organic + ads</td>
+<td>Yes (Google Ads)</td>
+<td>Moderate — long-tail keywords</td>
+</tr>
+<tr>
+<td>Google AI Overviews</td>
+<td>3–5 sources cited</td>
+<td>No</td>
+<td>Low — aggregator sites dominate</td>
+</tr>
+<tr>
+<td>ChatGPT</td>
+<td>3–5 recommendations</td>
+<td>No</td>
+<td>Very low — AAA titles dominate</td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td>5–8 cited sources</td>
+<td>No</td>
+<td>Low — cites review aggregators</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The structural difference is important: in Steam’s algorithm, your game competes for visibility among a personalized set based on the player’s play history, wishlists, and tags. In AI chatbots, your game competes against the entire corpus of human knowledge about gaming — and the games with the most web footprint win regardless of the player’s taste.</p>
+<p>This creates a dangerous feedback loop. Games that AI recommends get more players, more reviews, more Reddit threads, and more coverage — which makes them even more likely to be recommended by AI in the future. Games that AI ignores stay invisible, generating fewer data points, which ensures they remain invisible. Understanding the mechanics of this cycle is the first step — we break down the framework in our <a href="../ai-visibility-scores-explained/">AI visibility scores explained</a> guide.</p>
+<p>For streamers and influencers, the impact compounds further. <strong>Streamers account for approximately 20% of new game purchases among Gen Z players</strong> (Newzoo, 2024). But when a viewer asks ChatGPT “What game should I play that’s like what [streamer] played?”, the AI recommendation may not be the indie title the streamer was showcasing — it will be the AAA game with the most corpus mentions in that genre.</p>
+<h2 id="what-works">Patterns that separate visible studios from invisible ones</h2>
+<p>Studios that appear in AI recommendations share three traits: extensive third-party citation density (Wikipedia, Metacritic, IGDB entries), structured data markup on their official sites, and a measurable Reddit/forum discussion footprint that enters AI training corpora.</p>
+<p>Studios without these signals are not just underrepresented — they are entirely absent. This is not a content quality problem. It is a citation architecture problem, and it is measurable.</p>
+<h2 id="case-for-auditing">The case for auditing your AI visibility now</h2>
+<p>The gaming industry is projected to reach <strong>$205 billion by 2027</strong> (Mordor Intelligence). PwC estimates the global gaming market will grow at a <strong>7.3% CAGR through 2028</strong>. Meanwhile, the number of games competing for attention continues to accelerate — Steam alone is on pace to release over 16,000 titles in 2026.</p>
+<p>At the same time, AI chatbot usage is compounding. <strong>ChatGPT added its fastest 100 million users in history during 2024</strong>, growing from roughly 200 million to over 400 million weekly active users by early 2025 (OpenAI). Every one of those users is a potential gamer asking “What should I play next?”</p>
+<p>The studios that understand their AI visibility now — while competitors are still focused exclusively on Steam optimization, streamer deals, and social campaigns — will have a structural advantage that compounds over time. Every piece of authoritative, data-rich content you publish today enters the training data that shapes AI recommendations tomorrow.</p>
+<p>This is especially true for:</p>
+<ul>
+<li><strong>Indie studios</strong> launching new titles into an increasingly crowded market where traditional discovery is failing.</li>
+<li><strong>Mid-size publishers</strong> whose catalog of 20–50 titles should generate ongoing revenue but is invisible in AI recommendations.</li>
+<li><strong>Mobile game publishers</strong> whose hit titles are commercially massive but absent from English-language AI responses.</li>
+<li><strong>Esports organizations</strong> that need accurate AI representation as fans increasingly ask chatbots about teams, events, and competitive scenes.</li>
+<li><strong>Gaming platforms</strong> competing for mindshare in “where should I buy games” and “which subscription service is best” queries.</li>
+</ul>
+<p>The cost of waiting is measurable. The top gaming discovery channels of 2015 — gaming magazine reviews, dedicated gaming websites — are now fractions of their former influence. The same disruption is happening to Steam search and YouTube recommendations as AI chatbots absorb an increasing share of discovery intent. The question isn’t whether this shift happens, but whether you’re visible when it does.</p>
+<div class="note">
+<p>
+<strong>The bottom line:</strong> If you’re a game studio, publisher, or gaming platform that depends on players discovering your products — and in 2026, that’s everyone — you need to know what AI is saying about you. Not next quarter. Now.
           </p>
-        </div>
-
-
-        <p class="text-sm text-slate-muted mt-8"><strong>Sources:</strong> Newzoo Global Games Market Report (2024); Newzoo Global Esports &amp; Live Streaming Market Report (2024); Newzoo Consumer Insights (2024); data.ai State of Mobile Gaming (2024); SteamDB release statistics (2024); Valve monthly active user disclosures (2024); Similarweb traffic estimates (2024); Gartner search prediction (Feb 2024); BrightEdge AI Overviews research (2024); Bain &amp; Company gaming consumer survey (2024); eMarketer US digital ad spend (2024); Influencer Marketing Hub gaming report (2024); Sensor Tower mobile gaming data (2024); Liftoff/AppsFlyer CPI benchmarks (2024); VG Insights Steam revenue data (2024); Chris Zukowski indie sales research (2024); Statista esports viewership (2024); Grand View Research cloud gaming report (2024); Mordor Intelligence gaming market forecast (2024); PwC Global Entertainment &amp; Media Outlook (2024); OpenAI usage disclosures (2025); Princeton/Georgia Tech GEO study (2023); Bandai Namco, Larian Studios, Nintendo earnings reports (2024); ConcernedApe Stardew Valley sales (2023). AI mention rates based on Metricus internal testing across the major AI platforms (2026). Learn more about <a href="../ai-visibility-scores-explained/">how we measure AI visibility</a>.</p>
-
-        </div>
-      <!-- End Article Body -->
-
-      <p class="text-sm text-slate-muted mt-8 border-t border-[#E2E8F0] pt-6">Find out what AI is getting wrong about your gaming brand. <a href="/ai-visibility-optimizer-tool/" class="text-primary hover:underline">Open the tool</a>. Or browse our <a href="/geo-knowledge-base/" class="text-primary hover:underline">GEO Knowledge Base</a> for 81 research clusters on AI visibility strategy.</p>
-
-      <!-- ========== ARTICLE CTA ========== -->
-      <div class="border-t border-outline-variant/30 mt-16 pt-10" data-cta="tool">
-        <h2 class="text-2xl font-semibold text-on-surface mb-2">Put in a page.</h2>
-        <p class="text-on-surface-variant mb-5 max-w-xl">See what an AI assistant answers about your page, which passages caused it, and a rewrite for each one. Free, no signup.</p>
-        <form class="flex flex-col sm:flex-row gap-2 max-w-xl" action="/ai-visibility-optimizer-tool/" method="get">
-          <label class="sr-only" for="cta-url">Address of the page to check</label>
-          <input id="cta-url" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="your-site.com/page" required class="flex-1 min-w-0 px-4 py-3 border border-outline-variant bg-white text-on-surface">
-          <button type="submit" class="bg-primary text-on-primary font-semibold px-6 py-3 hover:bg-primary-dim whitespace-nowrap">Start optimizing</button>
-        </form>
-      </div>
-
-      <!-- ========== CITE THIS ARTICLE ========== -->
-      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
-        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
-          <cite class="not-italic"><a href="https://metricusapp.com/blog/gaming-ai-visibility/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; AI Visibility for Gaming: Why ChatGPT Recommends the Same 10 Games and Your Studio Doesn&rsquo;t Exist</a></cite>
-        </p>
-      </footer>
-
-    </article>
-
-
-    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
-      <p class="text-xs text-slate-muted font-semibold mb-6">Go deeper</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <a href="/geo-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">GEO Knowledge Base</p>
-          <p class="text-sm text-on-surface-variant mt-1">81 research clusters on AI visibility and brand monitoring</p>
-        </a>
-        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
-          <p class="text-sm text-on-surface-variant mt-1">48 clusters on fixing AI accuracy issues and hallucinations</p>
-        </a>
-      </div>
-    </section>
-
-    <!-- ========== RELATED POSTS ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
-      <p class="text-xs text-slate-muted font-semibold mb-8">Related articles</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        <a href="../ai-visibility-action-plan/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Playbook</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            How to Turn AI Visibility Data Into an Action Plan
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            The 5-step framework for turning your AI audit findings into specific, prioritized actions.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../fix-ai-brand-hallucinations/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Research</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            AI Is Getting Facts Wrong About Your Brand
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            72% of brands have factual errors in AI responses. Here&rsquo;s a 4-step process to audit and fix them.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../b2b-saas-invisible-chatgpt/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Industry Research</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            Why B2B SaaS Brands Are Invisible in ChatGPT
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            The same visibility dynamics, different industry. Transferable strategies for any brand.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
-  </main>
-
-
-  <!-- ========== FOOTER ========== -->
-  <!-- Site Footer -->
-  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-on-surface-variant">
-      <span class="text-on-surface font-semibold">Metricus</span>
-      <a href="/ai-visibility-optimizer-tool/" class="hover:text-on-surface">Open the tool</a>
-      <a href="/blog/" class="hover:text-on-surface">Learn</a>
-      <a href="/methodology/" class="hover:text-on-surface">How it works</a>
-      <a href="/results/" class="hover:text-on-surface">Results</a>
-      <a href="/for-agencies/" class="hover:text-on-surface">For agencies</a>
-      <a href="/about/" class="hover:text-on-surface">About</a>
-      <a href="/press/" class="hover:text-on-surface">Press</a>
-      <a href="/support/" class="hover:text-on-surface">Support</a>
-      <a href="/privacy-policy/" class="hover:text-on-surface">Privacy</a>
-      <a href="/terms-of-service/" class="hover:text-on-surface">Terms</a>
-      <a href="mailto:metricusapp@gmail.com" class="hover:text-on-surface">Contact</a>
-      <span class="ml-auto">&copy; 2026 Metricus</span>
-    </div>
-  </footer>
-
+</div>
+<p><strong>Sources:</strong> Newzoo Global Games Market Report (2024); Newzoo Global Esports &amp; Live Streaming Market Report (2024); Newzoo Consumer Insights (2024); data.ai State of Mobile Gaming (2024); SteamDB release statistics (2024); Valve monthly active user disclosures (2024); Similarweb traffic estimates (2024); Gartner search prediction (Feb 2024); BrightEdge AI Overviews research (2024); Bain &amp; Company gaming consumer survey (2024); eMarketer US digital ad spend (2024); Influencer Marketing Hub gaming report (2024); Sensor Tower mobile gaming data (2024); Liftoff/AppsFlyer CPI benchmarks (2024); VG Insights Steam revenue data (2024); Chris Zukowski indie sales research (2024); Statista esports viewership (2024); Grand View Research cloud gaming report (2024); Mordor Intelligence gaming market forecast (2024); PwC Global Entertainment &amp; Media Outlook (2024); OpenAI usage disclosures (2025); Princeton/Georgia Tech GEO study (2023); Bandai Namco, Larian Studios, Nintendo earnings reports (2024); ConcernedApe Stardew Valley sales (2023).</p>
+<p>Metricus shows the answer AI gives when players ask for a game like yours, with every business it names, and gives you new text for your website. Browse our <a href="/geo-knowledge-base/">GEO Knowledge Base</a> for 81 research clusters on AI visibility strategy.</p>
+<h2 id="faq">Frequently asked questions</h2>
+<h3>Why does ChatGPT keep recommending the same games like Elden Ring, Baldur's Gate 3, and Zelda?</h3>
+<p>AI chatbots generate recommendations based on training data scraped from the web. Games with massive media coverage, millions of Reddit discussions, and extensive Wikipedia entries dominate the training corpus. Elden Ring sold over 25 million copies and generated hundreds of thousands of articles and forum posts. An indie game with 50,000 sales and a few dozen reviews simply does not have enough web presence to register in AI training data. The result: AI recommends the same 10-15 AAA titles regardless of the player's actual preferences.</p>
+<h3>How are gamers using AI chatbots to discover new games?</h3>
+<p>Research from Newzoo and Bain &amp; Company shows that an increasing share of gamers — particularly those under 35 — are using ChatGPT, Perplexity, and Google Gemini to ask questions like 'What are the best indie roguelikes on Steam?' or 'What game should I play if I liked Hades?' This mirrors a broader shift: Gartner projected traditional search volume would drop 25% by 2026 due to AI chatbots. For gaming, this means Steam search, YouTube algorithms, and Google are no longer the only discovery funnels that matter.</p>
+<h3>What does AI get wrong about gaming companies and studios?</h3>
+<p>Common AI errors in gaming include: attributing games to the wrong studio or publisher, citing incorrect release dates, confusing game franchises (e.g., mixing up entries in a series), fabricating review scores, stating wrong platform availability, and generating outdated pricing. AI also frequently misidentifies indie studios as subsidiaries of larger publishers, or merges information from similarly-named studios. These errors erode trust and misdirect potential players.</p>
+<h3>How can indie game studios and smaller publishers improve their AI visibility?</h3>
+<p>Indie studios can improve AI visibility by: (1) auditing what AI currently says about their games and studio across the major AI platforms, (2) publishing data-rich content with specific player counts, review scores, and award mentions on their website, (3) building citations on authoritative third-party sites like Wikipedia, PC Gaming Wiki, IGDB, and Metacritic, (4) engaging in community discussions on Reddit, Steam forums, and Discord where AI training data is sourced, and (5) implementing structured data markup including VideoGame and Organization schema.</p>
+<p class="cite">Cite as: <a href="https://metricusapp.com/blog/gaming-ai-visibility/">Metricus — AI Visibility for Gaming: Why ChatGPT Recommends the Same 10 Games and Your Studio Doesn’t Exist</a></p>
+<section class="related" aria-labelledby="related-knowledge-bases"><h2 id="related-knowledge-bases">Knowledge bases</h2><ul><li><a href="/geo-knowledge-base/">GEO Knowledge Base</a><p>81 research clusters on AI visibility and brand monitoring</p></li><li><a href="/brand-accuracy-knowledge-base/">AI Brand Accuracy Guide</a><p>48 clusters on fixing AI accuracy issues and hallucinations</p></li></ul></section>
+<section class="related" aria-labelledby="related-related-articles"><h2 id="related-related-articles">Related articles</h2><ul><li><a href="/blog/ai-visibility-action-plan/">How to Turn AI Visibility Data Into an Action Plan</a><p>The 5-step framework for turning your AI visibility data into specific, prioritized actions.</p></li><li><a href="/blog/fix-ai-brand-hallucinations/">AI Is Getting Facts Wrong About Your Brand</a><p>Here’s a 4-step process to audit and fix factual errors in AI responses.</p></li><li><a href="/blog/b2b-saas-invisible-chatgpt/">Why B2B SaaS Brands Are Invisible in ChatGPT</a><p>The same visibility dynamics, different industry. Transferable strategies for any brand.</p></li></ul></section>
+<!-- metricus:ask -->
+<section class="ask-cta" aria-labelledby="ask-cta-h"><h2 id="ask-cta-h">What do your customers ask AI?</h2><form class="chatbox" action="/" method="get"><input class="input" type="text" name="q" maxlength="600" autocomplete="off" required placeholder="Type what people would ask AI&hellip;" aria-labelledby="ask-cta-h"><button class="send" type="submit" aria-label="Ask AI" title="Ask AI"><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V6M6 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form></section>
+<!-- /metricus:ask -->
+</main>
+<!-- metricus:footer -->
+<footer class="foot"><nav aria-label="Site"><a href="/blog/">Blog</a><a href="/geo-knowledge-base/">Knowledge base</a><a href="/results/">Results</a><a href="/about/">About</a><a href="/press/">Press</a><a href="/support/">Support</a><a href="/privacy-policy/">Privacy</a><a href="/terms-of-service/">Terms</a><a href="mailto:metricusapp@gmail.com">Contact</a></nav><p>&copy; 2026 Metricus</p></footer>
+<!-- /metricus:footer -->
+<script src="/js/reader-pulse-b.js" defer></script>
 </body>
 </html>

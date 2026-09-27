@@ -1,521 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Good Reviews but Empty Tables: Why Independent Restaurants Are Losing to Chains Online | Metricus</title>
-  <meta name="description" content="Independent restaurants lost 9,500+ locations in 2025 while chains grew 1.4%. AI recommends restaurants with 3.6x more reviews. 83% of restaurants are invisible to ChatGPT. Data on what changed.">
-  <meta property="og:title" content="Good Reviews but Empty Tables: Why Independent Restaurants Are Losing to Chains Online">
-  <meta property="og:description" content="Independent restaurants lost 9,500+ locations in 2025 while chains grew 1.4%. AI recommends restaurants with 3.6x more reviews. 83% of restaurants are invisible to ChatGPT. Data on what changed.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://metricusapp.com/blog/independent-restaurant-losing-customers-online/">
-  <meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Good Reviews but Empty Tables: Why Independent Restaurants Are Losing to Chains Online">
-  <meta name="twitter:description" content="Independent restaurants lost 9,500+ locations in 2025 while chains grew 1.4%. AI recommends restaurants with 3.6x more reviews. 83% of restaurants are invisible to ChatGPT.">
-  <meta name="twitter:image" content="https://metricusapp.com/landing/img/og.jpg">
-  <link rel="canonical" href="https://metricusapp.com/blog/independent-restaurant-losing-customers-online/">
-
-  <!-- Google Tag Manager -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w70oz7g1k3");
-  </script>
-
-  <!-- Google Fonts -->
-
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#515F74',
-            'primary-hover': '#1E293B',
-            'on-primary': '#f6f7ff',
-            'on-primary-fixed': '#324054',
-            'primary-dim': '#455368',
-            surface: '#f7f9fb',
-            'surface-container-low': '#f0f4f7',
-            'surface-container': '#e8eff3',
-            'surface-container-lowest': '#ffffff',
-            'surface-container-highest': '#d9e4ea',
-            'surface-container-high': '#e1e9ee',
-            'surface-variant': '#d9e4ea',
-            'on-surface': '#2a3439',
-            'on-surface-variant': '#566166',
-            outline: '#717c82',
-            'outline-variant': '#a9b4b9',
-            'slate-text': '#0F172A',
-            'slate-muted': '#64748B',
-            'slate-accent': '#475569',
-          },
-          fontFamily: {
-            display: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            body: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            headline: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-            label: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-          },
-          borderRadius: {
-            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
-            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
-            full: '0.75rem',
-          },
-        },
-      },
-    }
-  </script>
-
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: #ffffff;
-      color: #0F172A;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .font-display { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-headline { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    .font-body-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-
-    .editorial-btn {
-      transition: background-color 150ms ease-in-out, transform 150ms ease;
-    }
-    .editorial-btn:hover {
-      background-color: #1E293B;
-    }.blog-card {
-      transition: transform 200ms ease, background-color 200ms ease;
-    }
-    .blog-card:hover {
-      transform: translateY(-2px);
-      background-color: #f7f9fb;
-    }
-
-    .article-body h2 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.75rem;
-      line-height: 1.2;
-      color: #0F172A;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-    }
-    @media (min-width: 768px) {
-      .article-body h2 {
-        font-size: 2rem;
-      }
-    }
-    .article-body h3 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      line-height: 1.3;
-      color: #0F172A;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    .article-body p {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-    }
-    .article-body ul, .article-body ol {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #334155;
-      margin-bottom: 1.25rem;
-      padding-left: 1.5rem;
-    }
-    .article-body ul { list-style-type: disc; }
-    .article-body ol { list-style-type: decimal; }
-    .article-body li { margin-bottom: 0.5rem; }
-    .article-body blockquote {
-      border-left: 2px solid #334155;
-      padding-left: 1.5rem;
-      font-style: italic;
-      color: #475569;
-      font-size: 1.125rem;
-      line-height: 1.75;
-      margin: 2rem 0;
-    }
-    .article-body a {
-      color: #334155;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .article-body a:hover {
-      color: #1E293B;
-    }
-  </style>
-
-  <!-- JSON-LD BlogPosting -->
-  <script type="application/ld+json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Good Reviews but Empty Tables: Why Independent Restaurants Are Losing to Chains Online | Metricus</title>
+<meta name="description" content="Independent restaurants lost 9,500+ locations in 2025 while chains grew 1.4%. AI recommends restaurants with 3.6x more reviews. 83% of restaurants are invisible to ChatGPT. Data on what changed.">
+<link rel="canonical" href="https://metricusapp.com/blog/independent-restaurant-losing-customers-online/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Metricus">
+<meta property="og:url" content="https://metricusapp.com/blog/independent-restaurant-losing-customers-online/">
+<meta property="og:title" content="Good Reviews but Empty Tables: Why Independent Restaurants Are Losing to Chains Online">
+<meta property="og:description" content="Independent restaurants lost 9,500+ locations in 2025 while chains grew 1.4%. AI recommends restaurants with 3.6x more reviews. 83% of restaurants are invisible to ChatGPT. Data on what changed.">
+<meta property="og:image" content="https://metricusapp.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Metricus: see what AI answers when your customers ask for what you offer.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Good Reviews but Empty Tables: Why Independent Restaurants Are Losing to Chains Online">
+<meta name="twitter:description" content="Independent restaurants lost 9,500+ locations in 2025 while chains grew 1.4%. AI recommends restaurants with 3.6x more reviews. 83% of restaurants are invisible to ChatGPT.">
+<meta name="twitter:image" content="https://metricusapp.com/assets/og.png">
+<!-- metricus:head -->
+<link rel="stylesheet" href="/assets/metricus.css?v=20260927">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#FBFAF7">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w70oz7g1k3");</script>
+<!-- /metricus:head -->
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "Good Reviews but Empty Tables: Why Independent Restaurants Are Losing to Chains Online",
+ "description": "Independent restaurants lost 9,500+ locations in 2025 while chains grew 1.4%. AI recommends restaurants with 3.6x more reviews. 83% of restaurants are invisible to ChatGPT. Data on what changed and what to do.",
+ "author": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Metricus",
+  "url": "https://metricusapp.com"
+ },
+ "datePublished": "2026-04-10",
+ "dateModified": "2026-09-27",
+ "mainEntityOfPage": "https://metricusapp.com/blog/independent-restaurant-losing-customers-online/",
+ "image": "https://metricusapp.com/assets/og.png"
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
   {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Good Reviews but Empty Tables: Why Independent Restaurants Are Losing to Chains Online",
-    "description": "Independent restaurants lost 9,500+ locations in 2025 while chains grew 1.4%. AI recommends restaurants with 3.6x more reviews. 83% of restaurants are invisible to ChatGPT. Data on what changed and what to do.",
-    "author": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Metricus",
-      "url": "https://metricusapp.com"
-    },
-    "datePublished": "2026-04-10",
-    "dateModified": "2026-05-17",
-    "mainEntityOfPage": "https://metricusapp.com/blog/independent-restaurant-losing-customers-online/",
-    "image": "https://metricusapp.com/landing/img/og.jpg"
-  }
-  </script>
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://metricusapp.com/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://metricusapp.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://metricusapp.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "Independent Restaurant Losing Customers Online", "item": "https://metricusapp.com/blog/independent-restaurant-losing-customers-online/"}
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://metricusapp.com/blog/"
+  },
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Why is my restaurant losing customers to chains despite better reviews?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Star ratings above 4.4 have minimal impact on AI recommendations. AI platforms recommend restaurants with 3.6x more Google reviews than non-recommended ones. Chains generate thousands of reviews per location through volume alone, while independent restaurants with 200-500 reviews rarely cross the visibility threshold regardless of rating quality."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do diners find restaurants in 2026?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "85% of consumers search for restaurants on Google, 74% use social media, and 45% now use AI tools like ChatGPT, Perplexity, or DoorDash Zesty. Traditional search volume is dropping 25% as AI chatbots replace Google for dining queries. Diners ask AI for specific requests like 'quiet Italian dinner near me' and AI generates narrative answers naming specific restaurants."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What percentage of restaurants are invisible to AI?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "83% of restaurants are invisible on ChatGPT, compared to only 14% invisible on Google. SOCi's 2026 Local Visibility Index found ChatGPT recommends just 1.2% of local business locations. AI visibility is 3 to 30 times harder to achieve than ranking in traditional local search."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can an independent restaurant compete with chains in AI search?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, but not by doing more of what already is not working. AI visibility requires structured data, consistent citations, review volume above the 1,000-review threshold, and content that AI can extract and cite. The first step is checking what AI currently says about you across the major AI platforms."
-        }
-      }
-    ]
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Independent Restaurant Losing Customers Online",
+   "item": "https://metricusapp.com/blog/independent-restaurant-losing-customers-online/"
   }
-  </script>
-  <script src="/js/reader-pulse-b.js" defer></script>
+ ]
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Why is my restaurant losing customers to chains despite better reviews?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Star ratings above 4.4 have minimal impact on AI recommendations. AI platforms recommend restaurants with 3.6x more Google reviews than non-recommended ones. Chains generate thousands of reviews per location through volume alone, while independent restaurants with 200–500 reviews rarely cross the visibility threshold regardless of rating quality."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do diners find restaurants in 2026?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "85% of consumers search for restaurants on Google, 74% use social media, and 45% now use AI tools like ChatGPT, Perplexity, or DoorDash Zesty. Traditional search volume is dropping 25% as AI chatbots replace Google for dining queries. Diners ask AI for specific requests like “quiet Italian dinner near me” and AI generates narrative answers naming specific restaurants."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What percentage of restaurants are invisible to AI?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "83% of restaurants are invisible on ChatGPT, compared to only 14% invisible on Google. SOCi's 2026 Local Visibility Index found ChatGPT recommends just 1.2% of local business locations. AI visibility is 3 to 30 times harder to achieve than ranking in traditional local search."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can an independent restaurant compete with chains in AI search?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, but not by doing more of what already is not working. AI visibility requires structured data, consistent citations, review volume above the 1,000-review threshold, and content that AI can extract and cite. The first step is checking what AI currently says about you across the major AI platforms."
+   }
+  }
+ ]
+}</script>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
-
-  <!-- Site Nav -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 gap-4">
-      <a href="/" class="text-on-surface font-semibold" aria-label="Metricus home">Metricus <span class="font-normal text-on-surface-variant">Optimizer</span></a>
-      <div class="flex items-center gap-5">
-        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface">Learn</a>
-        <a href="/ai-visibility-optimizer-tool/" class="bg-primary text-on-primary text-sm font-semibold px-4 py-2.5 hover:bg-primary-dim">Open the tool</a>
-      </div>
-    </div>
-  </header>
-
-
-
-  <!-- Mobile Menu Overlay -->
-
-
-
-  <main class="flex-grow flex flex-col relative overflow-x-hidden">
-
-    <div class="absolute inset-0 -z-10 pointer-events-none"></div>
-
-    <!-- ========== ARTICLE ========== -->
-    <article class="w-full max-w-3xl mx-auto px-6 pt-12 pb-24">
-
-      <!-- Breadcrumb -->
-      <nav class="mb-8">
-        <ol class="flex items-center gap-2 text-xs text-slate-muted">
-          <li><a href="/" class="hover:text-slate-text transition-colors">Home</a></li>
-          <li class="select-none">/</li>
-          <li><a href="/blog/" class="hover:text-slate-text transition-colors">Blog</a></li>
-          <li class="select-none">/</li>
-          <li class="text-slate-text">Independent Restaurant Losing Customers Online</li>
-        </ol>
-      </nav>
-
-      <!-- Article Header -->
-      <header class="mb-12">
-        <p class="text-xs text-primary font-semibold mb-4">Industry Research</p>
-        <h1 class="font-display font-bold text-4xl md:text-5xl text-slate-text tracking-tight mb-6 leading-[1.1]">
-          Good Reviews but Empty Tables: Why Independent Restaurants Are Losing to Chains Online
-        </h1>
-        <p class="text-sm text-outline">Metricus Research &middot; April 10, 2026 &middot; 7 min read</p>
-        <p class="text-sm text-outline mt-2">Last updated: April 2026</p>
-      </header>
-
-
-      <!-- Tension Stat -->
-      <div class="bg-surface-container-low p-8 mb-12">
-        <p class="text-lg leading-relaxed text-on-surface">
-          <strong>The US independent restaurant sector lost more than 9,500 locations in 2025</strong> &mdash; a 2.3% contraction &mdash; while chain restaurant locations grew 1.4% to over 263,000 units. A 4.6-star rating with 340 reviews used to mean a packed dining room. In 2026, it means you are invisible in the discovery channels where 45% of consumers now start their search for where to eat.
+<body class="doc">
+<!-- metricus:header -->
+<header class="nav"><div class="in"><a class="logo" href="/" id="navhome">Metricus</a><span class="sp"></span><span class="muted" id="host"></span></div></header>
+<!-- /metricus:header -->
+<main class="doc-main" id="main">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <span aria-current="page">Independent Restaurant Losing Customers Online</span></nav>
+<p class="kicker">Industry Research</p>
+<h1>Good Reviews but Empty Tables: Why Independent Restaurants Are Losing to Chains Online</h1>
+<p class="byline">Metricus Research · April 10, 2026 · 7 min read</p>
+<p class="updated">Last updated: September 2026</p>
+<div class="note">
+<p>
+<strong>The US independent restaurant sector lost more than 9,500 locations in 2025</strong> — a 2.3% contraction — while chain restaurant locations grew 1.4% to over 263,000 units. A 4.6-star rating with 340 reviews used to mean a packed dining room. In 2026, it means you are invisible in the discovery channels where 45% of consumers now start their search for where to eat.
         </p>
-      </div>
-
-<p><strong>Short answer:</strong> Independent restaurants are losing customers to chains because the discovery layer has shifted from Google and Yelp to AI chatbots, and AI recommends restaurants with 3.6x more reviews regardless of star rating. 83% of restaurants are invisible on ChatGPT. The free <a href="/ai-visibility-optimizer-tool/">Metricus optimizer</a> shows what the major AI platforms answer when your restaurant&rsquo;s page is the source, so you can see what diners see before they never walk through your door.</p>
-
-
-      <!-- Table of Contents -->
-      <div class="border border-[#E2E8F0] p-8 mb-12">
-        <p class="text-xs text-slate-muted font-semibold mb-4">In this article</p>
-                <ol class="space-y-2 text-[15px] text-primary list-decimal list-inside">
-          <li><a href="#the-discovery-shift" class="hover:text-primary-hover underline underline-offset-2">The discovery shift: how diners find restaurants in 2026</a></li>
-          <li><a href="#the-data" class="hover:text-primary-hover underline underline-offset-2">The data: what AI actually recommends</a></li>
-          <li><a href="#why-reviews-arent-enough" class="hover:text-primary-hover underline underline-offset-2">Why great reviews are no longer enough</a></li>
-          <li><a href="#the-errors" class="hover:text-primary-hover underline underline-offset-2">What AI gets wrong about your restaurant</a></li>
-          <li><a href="#whats-at-stake" class="hover:text-primary-hover underline underline-offset-2">What is at stake for independent restaurants</a></li>
-          <li><a href="#the-case-for-auditing" class="hover:text-primary-hover underline underline-offset-2">The case for checking your AI visibility</a></li>
-          <li><a href="#faq" class="hover:text-primary-hover underline underline-offset-2">Frequently asked questions</a></li>
-        </ol>
-      </div>
-
-      <!-- Article Body -->
-      <div class="article-body">
-
-        <h2 id="the-discovery-shift">The discovery shift: how diners find restaurants in 2026</h2>
-
-        <p>The way diners choose where to eat has fundamentally changed. Gartner forecast that traditional search engine volume would drop 25% by 2026 due to AI chatbots and virtual agents. That prediction is playing out in real time. 45% of consumers now use AI tools to find local services &mdash; up from 6% one year ago (SOCi, 2026). ChatGPT surpassed 5.8 billion monthly visits by mid-2025.</p>
-
-        <p>Meanwhile, DoorDash launched Zesty, an AI-powered discovery app that aggregates data from Google Maps, TikTok, and reviews to generate personalized restaurant recommendations. Diners type prompts like &ldquo;a low-key dinner in Williamsburg that&rsquo;s actually good for introverts&rdquo; and get narrative answers naming specific restaurants. 85% of consumers still search for restaurants on Google and 74% use social media &mdash; but the AI channel is the fastest-growing discovery surface in restaurant history, and it is not optional.</p>
-
-        <p>The problem: AI does not recommend the same restaurants that Google does. SOCi&rsquo;s 2026 Local Visibility Index found that fewer than half of the brands that lead in Google local visibility also appear among the most visible brands in AI results. Your Google Maps ranking and your AI visibility are two different games with different rules.</p>
-
-
-        <div data-reader-pulse-b data-source="independent-restaurant-losing-customers-online"></div>
-
-        <h2 id="the-data">The data: what AI actually recommends</h2>
-
-        <p>A 2026 study by MyPlace analyzed restaurant recommendations across ChatGPT, Google Gemini, and Perplexity. The findings quantify what independent restaurant owners already feel:</p>
-
-        <p><strong>AI-recommended restaurants average 3,424 Google reviews. Non-recommended restaurants average 955. That is a 3.6x gap.</strong></p>
-
-        <p>Star ratings above 4.4 had minimal impact on whether AI recommended a restaurant. The 2,000-review mark represents a critical visibility threshold &mdash; restaurants below it rarely appear in AI suggestions regardless of how good the food is.</p>
-
-        <p>SOCi&rsquo;s analysis of 350,000+ business locations across 2,751 brands found that ChatGPT recommends just 1.2% of all local business locations. Gemini recommends 11%. Perplexity recommends 7.4%. The same businesses appeared in Google&rsquo;s local 3-pack 35.9% of the time. AI local visibility is 3 to 30 times harder to achieve than traditional local search.</p>
-
-        <p>83% of restaurants are completely invisible on ChatGPT &mdash; while only 14% are invisible on Google (Local Falcon, 2026). Independent restaurants appear in fewer than 3% of AI dining recommendation responses despite representing over 60% of US restaurant locations.</p>
+</div>
+<p><strong>Short answer:</strong> Independent restaurants are losing customers to chains because the discovery layer has shifted from Google and Yelp to AI chatbots, and AI recommends restaurants with 3.6x more reviews regardless of star rating. 83% of restaurants are invisible on ChatGPT. <a href="/">Metricus</a> shows the answer AI gives when diners ask where to eat, with every business it names, so you can see what diners see before they never walk through your door.</p>
+<nav class="toc" aria-label="In this article"><p>In this article</p><ol>
+<li><a href="#the-discovery-shift">The discovery shift: how diners find restaurants in 2026</a></li>
+<li><a href="#the-data">The data: what AI actually recommends</a></li>
+<li><a href="#why-reviews-arent-enough">Why great reviews are no longer enough</a></li>
+<li><a href="#the-errors">What AI gets wrong about your restaurant</a></li>
+<li><a href="#whats-at-stake">What is at stake for independent restaurants</a></li>
+<li><a href="#the-case-for-auditing">The case for checking your AI visibility</a></li>
+<li><a href="#faq">Frequently asked questions</a></li>
+</ol></nav>
+<h2 id="the-discovery-shift">The discovery shift: how diners find restaurants in 2026</h2>
+<p>The way diners choose where to eat has fundamentally changed. Gartner forecast that traditional search engine volume would drop 25% by 2026 due to AI chatbots and virtual agents. That prediction is playing out in real time. 45% of consumers now use AI tools to find local services — up from 6% one year ago (SOCi, 2026). ChatGPT surpassed 5.8 billion monthly visits by mid-2025.</p>
+<p>Meanwhile, DoorDash launched Zesty, an AI-powered discovery app that aggregates data from Google Maps, TikTok, and reviews to generate personalized restaurant recommendations. Diners type prompts like “a low-key dinner in Williamsburg that’s actually good for introverts” and get narrative answers naming specific restaurants. 85% of consumers still search for restaurants on Google and 74% use social media — but the AI channel is the fastest-growing discovery surface in restaurant history, and it is not optional.</p>
+<p>The problem: AI does not recommend the same restaurants that Google does. SOCi’s 2026 Local Visibility Index found that fewer than half of the brands that lead in Google local visibility also appear among the most visible brands in AI results. Your Google Maps ranking and your AI visibility are two different games with different rules.</p>
+<div data-reader-pulse-b="" data-source="independent-restaurant-losing-customers-online"></div>
+<h2 id="the-data">The data: what AI actually recommends</h2>
+<p>A 2026 study by MyPlace analyzed restaurant recommendations across ChatGPT, Google Gemini, and Perplexity. The findings quantify what independent restaurant owners already feel:</p>
+<p><strong>AI-recommended restaurants average 3,424 Google reviews. Non-recommended restaurants average 955. That is a 3.6x gap.</strong></p>
+<p>Star ratings above 4.4 had minimal impact on whether AI recommended a restaurant. The 2,000-review mark represents a critical visibility threshold — restaurants below it rarely appear in AI suggestions regardless of how good the food is.</p>
+<p>SOCi’s analysis of 350,000+ business locations across 2,751 brands found that ChatGPT recommends just 1.2% of all local business locations. Gemini recommends 11%. Perplexity recommends 7.4%. The same businesses appeared in Google’s local 3-pack 35.9% of the time. AI local visibility is 3 to 30 times harder to achieve than traditional local search.</p>
+<p>83% of restaurants are completely invisible on ChatGPT — while only 14% are invisible on Google (Local Falcon, 2026). Independent restaurants rarely appear in AI dining recommendation responses despite representing over 60% of US restaurant locations.</p>
 <h2 id="why-reviews-arent-enough">Why great reviews are no longer enough</h2>
-
-        <p>A 4.6-star rating with 340 reviews is excellent by any human standard. It is not enough for AI. Three structural factors determine whether AI mentions your restaurant:</p>
-
-        <ul>
-          <li><strong>Corpus frequency:</strong> How often your restaurant appears across the entire web &mdash; review platforms, news articles, Reddit threads, food blogs, forum discussions. Chains generate thousands of mentions per location through national press, social media, and corporate content operations. An independent restaurant with a single-location web presence is outmatched by orders of magnitude in the training data.</li>
-          <li><strong>Review volume thresholds:</strong> AI systems treat review count as a confidence signal. Below approximately 1,000 Google reviews, restaurants rarely surface in AI recommendations. A chain location in the same neighborhood accumulates reviews faster through sheer transaction volume &mdash; not because the food is better.</li>
-          <li><strong>Structured data and citations:</strong> Most independent restaurant websites are brochure-style pages with no structured data, no schema markup, and no statistical claims AI can extract and cite. The Princeton/Georgia Tech GEO study found that content with statistical citations was up to 40% more likely to be cited by generative AI. Chains have centralized teams building exactly this infrastructure.</li>
-        </ul>
-
-        <p>The chain two blocks away with 3.8 stars and mediocre carbonara is packed because it has 4,200 reviews, structured menu data across every platform, and a national content footprint that AI treats as authoritative. Your 4.6 stars and 340 reviews exist in a data layer that AI does not weight highly enough to surface.</p>
-
-
-        <!-- METRICUS_MID_CTA -->
-        
-
-
-        <h2 id="the-errors">What AI gets wrong about your restaurant</h2>
-
-        <p>Even when AI does mention an independent restaurant, there is a significant chance it delivers wrong information. The most common errors Metricus finds in AI responses about restaurants:</p>
-
-        <p><strong>Outdated menus and prices, wrong hours, fabricated dishes that do not exist on your menu, confused locations for multi-unit restaurants, stale health inspection data, and incorrect cuisine categorization.</strong></p>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>The compound problem:</strong> Your restaurant is either invisible in AI (diners never discover you) or mentioned with wrong information (diners discover you with incorrect data that erodes trust before they ever walk in). A diner who asks ChatGPT for your hours, gets told you close at 9 PM when you close at 11, and drives to the chain instead &mdash; that is a customer you lost to a hallucination.
+<p>A 4.6-star rating with 340 reviews is excellent by any human standard. It is not enough for AI. Three structural factors determine whether AI mentions your restaurant:</p>
+<ul>
+<li><strong>Corpus frequency:</strong> How often your restaurant appears across the entire web — review platforms, news articles, Reddit threads, food blogs, forum discussions. Chains generate thousands of mentions per location through national press, social media, and corporate content operations. An independent restaurant with a single-location web presence is outmatched by orders of magnitude in the training data.</li>
+<li><strong>Review volume thresholds:</strong> AI systems treat review count as a confidence signal. Below approximately 1,000 Google reviews, restaurants rarely surface in AI recommendations. A chain location in the same neighborhood accumulates reviews faster through sheer transaction volume — not because the food is better.</li>
+<li><strong>Structured data and citations:</strong> Most independent restaurant websites are brochure-style pages with no structured data, no schema markup, and no statistical claims AI can extract and cite. The Princeton/Georgia Tech GEO study found that content with statistical citations was up to 40% more likely to be cited by generative AI. Chains have centralized teams building exactly this infrastructure.</li>
+</ul>
+<p>The chain two blocks away with 3.8 stars and mediocre carbonara is packed because it has 4,200 reviews, structured menu data across every platform, and a national content footprint that AI treats as authoritative. Your 4.6 stars and 340 reviews exist in a data layer that AI does not weight highly enough to surface.</p>
+<h2 id="the-errors">What AI gets wrong about your restaurant</h2>
+<p>Even when AI does mention an independent restaurant, there is a significant chance it delivers wrong information. The most common errors in AI responses about restaurants:</p>
+<p><strong>Outdated menus and prices, wrong hours, fabricated dishes that do not exist on your menu, confused locations for multi-unit restaurants, stale health inspection data, and incorrect cuisine categorization.</strong></p>
+<div class="note">
+<p>
+<strong>The compound problem:</strong> Your restaurant is either invisible in AI (diners never discover you) or mentioned with wrong information (diners discover you with incorrect data that erodes trust before they ever walk in). A diner who asks ChatGPT for your hours, gets told you close at 9 PM when you close at 11, and drives to the chain instead — that is a customer you lost to a hallucination.
           </p>
-        </div>
-
-
-        <h2 id="whats-at-stake">What is at stake for independent restaurants</h2>
-
-        <p>The independent restaurant sector finished 2025 at 412,498 locations, down from 422,001 in 2024. Chain locations grew to over 263,000. Chain sales rose 3.1%, with the top 1,500 chains generating over $480 billion in cumulative sales (NRN, 2026). 9% of all full-service restaurant units are at risk for closure in 2026 (Black Box Intelligence).</p>
-
-        <p>More than 6 in 10 operators said their traffic declined in 2025. 40% of consumers are cutting their restaurant frequency. When those remaining diners do choose where to eat, the discovery channel they increasingly use &mdash; AI &mdash; does not show independent restaurants.</p>
-
-        <p>The feedback loop accelerates: fewer customers means fewer reviews, fewer reviews means lower AI visibility, lower AI visibility means fewer customers. Every quarter you are invisible in AI, the gap between your restaurant and the chain widens in the training data. The next model update makes it worse.</p>
-
-        <div class="bg-surface-container-low p-6 my-8">
-          <p class="text-lg text-on-surface leading-relaxed">
-            <strong>The bottom line:</strong> The 20% cover decline you are seeing is not a temporary dip. It is a structural shift in how diners discover restaurants. The restaurants that understand this shift and act on it will survive. The ones waiting for the old channels to start working again will join the 9,500 that closed last year.
+</div>
+<h2 id="whats-at-stake">What is at stake for independent restaurants</h2>
+<p>The independent restaurant sector finished 2025 at 412,498 locations, down from 422,001 in 2024. Chain locations grew to over 263,000. Chain sales rose 3.1%, with the top 1,500 chains generating over $480 billion in cumulative sales (NRN, 2026). 9% of all full-service restaurant units are at risk for closure in 2026 (Black Box Intelligence).</p>
+<p>More than 6 in 10 operators said their traffic declined in 2025. 40% of consumers are cutting their restaurant frequency. When those remaining diners do choose where to eat, the discovery channel they increasingly use — AI — does not show independent restaurants.</p>
+<p>The feedback loop accelerates: fewer customers means fewer reviews, fewer reviews means lower AI visibility, lower AI visibility means fewer customers. Every quarter you are invisible in AI, the gap between your restaurant and the chain widens in the training data. The next model update makes it worse.</p>
+<div class="note">
+<p>
+<strong>The bottom line:</strong> The 20% cover decline you are seeing is not a temporary dip. It is a structural shift in how diners discover restaurants. The restaurants that understand this shift and act on it will survive. The ones waiting for the old channels to start working again will join the 9,500 that closed last year.
           </p>
-        </div>
-
-
-        <h2 id="the-case-for-auditing">The case for checking your AI visibility</h2>
-
-        <p>You cannot fix what you cannot see. Most independent restaurant owners have never asked ChatGPT, Gemini, or Perplexity to recommend their type of restaurant in their city. The ones who have are often shocked by what comes back &mdash; either silence or wrong information.</p>
-
-        <p>Checking your AI visibility means asking the major AI platforms the diner-intent questions that matter for your restaurant and reading what they answer: whether you appear, what they get wrong, and which chains and independents in your market they name instead. That is the data you need to understand your actual competitive position in the discovery layer that now drives restaurant traffic.</p>
-
-        <p>This is not an SEO audit. Your Google rankings may be fine. The problem is that AI and Google are different systems with different signals, and 83% of restaurants that are visible on Google are invisible on ChatGPT.</p>
-
-
-        <h2 id="faq">Frequently Asked Questions</h2>
-
-        <h3>Why is my restaurant losing customers to chains despite better reviews?</h3>
-        <p>Star ratings above 4.4 have minimal impact on AI recommendations. AI platforms recommend restaurants with 3.6x more Google reviews than non-recommended ones. Chains generate thousands of reviews per location through volume alone, while independent restaurants with 200&ndash;500 reviews rarely cross the visibility threshold regardless of rating quality.</p>
-
-        <h3>How do diners find restaurants in 2026?</h3>
-        <p>85% of consumers search for restaurants on Google, 74% use social media, and 45% now use AI tools like ChatGPT, Perplexity, or DoorDash Zesty. Traditional search volume is dropping 25% as AI chatbots replace Google for dining queries. Diners ask AI for specific requests like &ldquo;quiet Italian dinner near me&rdquo; and AI generates narrative answers naming specific restaurants.</p>
-
-        <h3>What percentage of restaurants are invisible to AI?</h3>
-        <p>83% of restaurants are invisible on ChatGPT, compared to only 14% invisible on Google. SOCi&rsquo;s 2026 Local Visibility Index found ChatGPT recommends just 1.2% of local business locations. AI visibility is 3 to 30 times harder to achieve than ranking in traditional local search.</p>
-
-
-        <h3>Can an independent restaurant compete with chains in AI search?</h3>
-        <p>Yes, but not by doing more of what already is not working. AI visibility requires structured data, consistent citations, review volume above the 1,000-review threshold, and content that AI can extract and cite. The first step is checking what AI currently says about you across the major AI platforms.</p>
-
-      </div>
-      <!-- End Article Body -->
-
-      <p class="text-sm text-slate-muted mt-8 border-t border-[#E2E8F0] pt-6">See what an AI assistant says about your restaurant, then change it: <a href="/ai-visibility-optimizer-tool/" class="text-primary hover:underline">open the tool</a>.</p>
-
-      <!-- ========== ARTICLE CTA ========== -->
-      <div class="border-t border-outline-variant/30 mt-16 pt-10" data-cta="tool">
-        <h2 class="text-2xl font-semibold text-on-surface mb-2">Put in a page.</h2>
-        <p class="text-on-surface-variant mb-5 max-w-xl">See what an AI assistant answers about your page, which passages caused it, and a rewrite for each one. Free, no signup.</p>
-        <form class="flex flex-col sm:flex-row gap-2 max-w-xl" action="/ai-visibility-optimizer-tool/" method="get">
-          <label class="sr-only" for="cta-url">Address of the page to check</label>
-          <input id="cta-url" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="your-site.com/page" required class="flex-1 min-w-0 px-4 py-3 border border-outline-variant bg-white text-on-surface">
-          <button type="submit" class="bg-primary text-on-primary font-semibold px-6 py-3 hover:bg-primary-dim whitespace-nowrap">Start optimizing</button>
-        </form>
-      </div>
-
-      <!-- ========== CITE THIS ARTICLE ========== -->
-      <footer class="citation mt-10 pt-4 border-t border-[#E2E8F0]/40">
-        <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed">Cite as:
-          <cite class="not-italic"><a href="https://metricusapp.com/blog/independent-restaurant-losing-customers-online/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; Good Reviews but Empty Tables: Why Independent Restaurants Are Losing to Chains Online</a></cite>
-        </p>
-      </footer>
-
-    </article>
-
-
-    <!-- ========== RELATED KNOWLEDGE BASES ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-12">
-      <p class="text-xs text-slate-muted font-semibold mb-6">Go deeper</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <a href="/geo-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">GEO Knowledge Base</p>
-          <p class="text-sm text-on-surface-variant mt-1">81 research clusters on AI visibility and brand monitoring</p>
-        </a>
-        <a href="/brand-accuracy-knowledge-base/" class="block border border-primary/20 bg-surface-container-lowest p-6 hover:bg-slate-50 transition-colors group">
-          <p class="text-xs text-primary font-semibold mb-2">Knowledge Base</p>
-          <p class="text-on-surface font-semibold group-hover:text-primary transition-colors">AI Brand Accuracy Guide</p>
-          <p class="text-sm text-on-surface-variant mt-1">48 clusters on fixing AI accuracy issues and hallucinations</p>
-        </a>
-      </div>
-    </section>
-
-    <!-- ========== RELATED POSTS ========== -->
-    <section class="w-full max-w-[1200px] mx-auto px-6 pb-24">
-      <p class="text-xs text-slate-muted font-semibold mb-8">Related articles</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        <a href="../food-brand-ai-visibility/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Research</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            Why Doesn&rsquo;t AI Recommend My Restaurant?
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            AI recommends the same national chains in 85%+ of dining queries. Data on who gets recommended and why.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>April 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../retail-ai-visibility/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Research</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            Why Is My E-Commerce Store Invisible to AI?
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            58% of consumers replaced Google with AI for product discovery. Data on which retail brands AI recommends.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>April 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-        <a href="../ai-visibility-how-brands-show-up/" class="blog-card block bg-surface-container-lowest border border-[#E2E8F0] p-8 group">
-          <p class="text-xs text-primary font-semibold mb-3">Guide</p>
-          <h3 class="font-display font-bold text-xl text-slate-text tracking-tight mb-3 group-hover:text-primary transition-colors">
-            What Is AI Visibility? How Brands Show Up in ChatGPT
-          </h3>
-          <p class="text-sm text-slate-muted leading-relaxed mb-6">
-            How AI decides what to recommend, how to measure it, and how to improve your brand&rsquo;s position.
-          </p>
-          <div class="flex items-center justify-between text-sm text-outline">
-            <span>March 2026</span>
-            <span class="font-medium group-hover:text-primary transition-colors">Read &rarr;</span>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
-  </main>
-
-
-  <!-- ========== FOOTER ========== -->
-  <!-- Site Footer -->
-  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-on-surface-variant">
-      <span class="text-on-surface font-semibold">Metricus</span>
-      <a href="/ai-visibility-optimizer-tool/" class="hover:text-on-surface">Open the tool</a>
-      <a href="/blog/" class="hover:text-on-surface">Learn</a>
-      <a href="/methodology/" class="hover:text-on-surface">How it works</a>
-      <a href="/results/" class="hover:text-on-surface">Results</a>
-      <a href="/for-agencies/" class="hover:text-on-surface">For agencies</a>
-      <a href="/about/" class="hover:text-on-surface">About</a>
-      <a href="/press/" class="hover:text-on-surface">Press</a>
-      <a href="/support/" class="hover:text-on-surface">Support</a>
-      <a href="/privacy-policy/" class="hover:text-on-surface">Privacy</a>
-      <a href="/terms-of-service/" class="hover:text-on-surface">Terms</a>
-      <a href="mailto:metricusapp@gmail.com" class="hover:text-on-surface">Contact</a>
-      <span class="ml-auto">&copy; 2026 Metricus</span>
-    </div>
-  </footer>
-
+</div>
+<h2 id="the-case-for-auditing">The case for checking your AI visibility</h2>
+<p>You cannot fix what you cannot see. Most independent restaurant owners have never asked ChatGPT, Gemini, or Perplexity to recommend their type of restaurant in their city. The ones who have are often shocked by what comes back — either silence or wrong information.</p>
+<p>Checking your AI visibility means asking the major AI platforms the diner-intent questions that matter for your restaurant and reading what they answer: whether you appear, what they get wrong, and which chains and independents in your market they name instead. That is the data you need to understand your actual competitive position in the discovery layer that now drives restaurant traffic.</p>
+<p>This is not an SEO audit. Your Google rankings may be fine. The problem is that AI and Google are different systems with different signals, and 83% of restaurants that are visible on Google are invisible on ChatGPT.</p>
+<h2 id="faq">Frequently Asked Questions</h2>
+<h3>Why is my restaurant losing customers to chains despite better reviews?</h3>
+<p>Star ratings above 4.4 have minimal impact on AI recommendations. AI platforms recommend restaurants with 3.6x more Google reviews than non-recommended ones. Chains generate thousands of reviews per location through volume alone, while independent restaurants with 200–500 reviews rarely cross the visibility threshold regardless of rating quality.</p>
+<h3>How do diners find restaurants in 2026?</h3>
+<p>85% of consumers search for restaurants on Google, 74% use social media, and 45% now use AI tools like ChatGPT, Perplexity, or DoorDash Zesty. Traditional search volume is dropping 25% as AI chatbots replace Google for dining queries. Diners ask AI for specific requests like “quiet Italian dinner near me” and AI generates narrative answers naming specific restaurants.</p>
+<h3>What percentage of restaurants are invisible to AI?</h3>
+<p>83% of restaurants are invisible on ChatGPT, compared to only 14% invisible on Google. SOCi’s 2026 Local Visibility Index found ChatGPT recommends just 1.2% of local business locations. AI visibility is 3 to 30 times harder to achieve than ranking in traditional local search.</p>
+<h3>Can an independent restaurant compete with chains in AI search?</h3>
+<p>Yes, but not by doing more of what already is not working. AI visibility requires structured data, consistent citations, review volume above the 1,000-review threshold, and content that AI can extract and cite. The first step is checking what AI currently says about you across the major AI platforms.</p>
+<p class="cite">Cite as: <a href="https://metricusapp.com/blog/independent-restaurant-losing-customers-online/">Metricus — Good Reviews but Empty Tables: Why Independent Restaurants Are Losing to Chains Online</a></p>
+<section class="related" aria-labelledby="related-knowledge-bases"><h2 id="related-knowledge-bases">Knowledge bases</h2><ul><li><a href="/geo-knowledge-base/">GEO Knowledge Base</a><p>81 research clusters on AI visibility and brand monitoring</p></li><li><a href="/brand-accuracy-knowledge-base/">AI Brand Accuracy Guide</a><p>48 clusters on fixing AI accuracy issues and hallucinations</p></li></ul></section>
+<section class="related" aria-labelledby="related-related-articles"><h2 id="related-related-articles">Related articles</h2><ul><li><a href="/blog/food-brand-ai-visibility/">Why Doesn’t AI Recommend My Restaurant?</a><p>AI recommends the same national chains in most dining queries. Data on who gets recommended and why.</p></li><li><a href="/blog/retail-ai-visibility/">Why Is My E-Commerce Store Invisible to AI?</a><p>58% of consumers replaced Google with AI for product discovery. Data on which retail brands AI recommends.</p></li><li><a href="/blog/ai-visibility-how-brands-show-up/">What Is AI Visibility? How Brands Show Up in ChatGPT</a><p>How AI decides what to recommend, how to measure it, and how to improve your brand’s position.</p></li></ul></section>
+<!-- metricus:ask -->
+<section class="ask-cta" aria-labelledby="ask-cta-h"><h2 id="ask-cta-h">What do your customers ask AI?</h2><form class="chatbox" action="/" method="get"><input class="input" type="text" name="q" maxlength="600" autocomplete="off" required placeholder="Type what people would ask AI&hellip;" aria-labelledby="ask-cta-h"><button class="send" type="submit" aria-label="Ask AI" title="Ask AI"><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V6M6 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form></section>
+<!-- /metricus:ask -->
+</main>
+<!-- metricus:footer -->
+<footer class="foot"><nav aria-label="Site"><a href="/blog/">Blog</a><a href="/geo-knowledge-base/">Knowledge base</a><a href="/results/">Results</a><a href="/about/">About</a><a href="/press/">Press</a><a href="/support/">Support</a><a href="/privacy-policy/">Privacy</a><a href="/terms-of-service/">Terms</a><a href="mailto:metricusapp@gmail.com">Contact</a></nav><p>&copy; 2026 Metricus</p></footer>
+<!-- /metricus:footer -->
+<script src="/js/reader-pulse-b.js" defer></script>
 </body>
 </html>
