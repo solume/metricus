@@ -38,6 +38,10 @@ ul.list li+li{margin-top:8px}
 .nav .logo{font-weight:700;font-size:17px;color:var(--text);text-decoration:none}
 .nav .sp{flex:1}
 #host{font-size:14px}
+.navcta{display:inline-flex;align-items:center;flex:none;height:32px;padding:0 14px;border-radius:8px;background:var(--blue);color:#fff;font:700 15px/1 var(--font);letter-spacing:.01em;text-decoration:none;white-space:nowrap}
+.navcta:hover{background:#0842A0}
+.navcta:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.navcta .short{display:none}
 body.doc .nav .in{max-width:680px;margin:0 auto;padding:0 24px}
 
 /* the footer: the site's pages in one wrapping line */
@@ -332,7 +336,9 @@ details.older summary{cursor:pointer}
   body{font-size:17px}
   h1{font-size:26px}
   h2{font-size:21px;margin-top:44px}
-  .nav .in,body.doc .nav .in{padding:0 16px}
+  .nav .in,body.doc .nav .in{padding:0 16px;gap:12px}
+  #host{display:none}
+  .navcta{padding:0 11px;font-size:14px}
   .page{padding:20px 16px 56px}
   .doc-main{padding:20px 16px 16px}
   .foot{padding:32px 16px 40px}
@@ -340,3 +346,4 @@ details.older summary{cursor:pointer}
   table.nums .n{font-size:28px}
   table.nums .l{width:40%}
 }
+@media (max-width:400px){.navcta .long{display:none}.navcta .short{display:inline}}

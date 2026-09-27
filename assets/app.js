@@ -566,6 +566,12 @@ function route() {
     openFromLink(id);
     return;
   }
+  if (h === "#q") {                                                 // the bar's button on any other page: "/" with the box ready to type
+    history.replaceState(null, "", location.pathname);
+    if (S.job !== "ask") { S.view = "ask"; render(); }
+    focusQ();
+    return;
+  }
   if (S.job === "ask") return;
   S.view = "ask"; render();
 }
@@ -1101,6 +1107,7 @@ document.addEventListener("click", (e) => {
   else if ((el = hit("#choice-ask, #choice-score"))) logEvent("METRICUS_LANDING_CHOICE", {which: el.id === "choice-ask" ? "Ask" : "AI Visibility Score"});
   else if ((el = hit("details.faq summary"))) logEvent("METRICUS_FAQ_OPEN", {question: el.textContent.trim().slice(0, 200)});
   else if (hit("#navhome")) logEvent("METRICUS_HOME_CLICK", logState());
+  else if (hit("#navcta")) logEvent("METRICUS_NAV_CTA", Object.assign(logState(), {label: ($("navcta").innerText || "").trim().slice(0, 60)}));
   else if ((el = hit("a[href]"))) {
     const href = el.getAttribute("href") || "";
     if (/^https?:/.test(href)) logEvent("METRICUS_LINK_OUT", Object.assign(logState(), {url: href.slice(0, 300), where: el.closest("#entities, #added") ? "panel" : (el.closest("#tracesteps") ? "research" : (el.closest("#answertext") ? "answer" : "page"))}));
@@ -1117,6 +1124,19 @@ $("answertext").addEventListener("input", () => {
 });
 logEvent("METRICUS_VIEW", {path: location.pathname + location.search + location.hash, ref: document.referrer.slice(0, 300), width: window.innerWidth, height: window.innerHeight});
 
+function focusQ() {                                                // the question box, the cursor in it
+  window.scrollTo({top: 0, behavior: "instant"});
+  const q = $("q");
+  q.focus({preventScroll: true});
+  const n = q.value.length;
+  try { q.setSelectionRange(n, n); } catch (e) { /* not a text field */ }
+}
+if ($("navcta")) $("navcta").addEventListener("click", (e) => {    // the bar's button on "/" itself: the box, focused in the click
+  e.preventDefault();
+  if (location.hash) history.replaceState(null, "", location.pathname);
+  if (!S.job) { S.view = "ask"; S.sess = null; S.session = null; render(); }
+  focusQ();
+});
 window.addEventListener("hashchange", route);
 window.scrollTo(0, 0);                                              // every load starts at the top (the view is built after the load)
 (() => {
