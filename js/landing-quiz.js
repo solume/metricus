@@ -292,8 +292,7 @@
               (state.emailSent ? '<p class="m-bq__thanks">Thanks &mdash; we&rsquo;ll be in touch.</p>' : '') +
             '</div>' +
             '<div class="m-bq__ctaSet">' +
-              '<a class="m-bq__linkBtn" data-lq-action="other-report" href="/get-report/?source=landing-quiz-other">See what AI actually says about my brand</a>' +
-              '<a class="m-bq__linkBtn m-bq__linkBtn--secondary" data-lq-action="other-sample" href="/sample-ai-visibility-report/">See a sample report</a>' +
+              '<a class="m-bq__linkBtn" data-lq-action="other-report" href="/ai-visibility-optimizer-tool/">See what AI actually says about my brand</a>' +
             '</div>' +
           '</div>';
       }

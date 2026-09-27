@@ -1,540 +1,206 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Metricus Forager — Free AI Visibility Checker &amp; Page Optimizer</title>
-  <meta name="description" content="Forager is a free AI visibility checker and page-level optimizer that rewrites and re-tests your copy so ChatGPT, Perplexity and Google's AI cite you. Free, no card.">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://metricusapp.com/">
-  <link rel="alternate" type="application/rss+xml" title="Metricus — AI Visibility Learn Center" href="https://metricusapp.com/feed.xml">
-  <meta property="og:title" content="Would AI recommend your page? — Metricus">
-  <meta property="og:description" content="Paste a URL and see where AI skips your page for a competitor — free. Plus the one-time Snapshot audit of your whole brand: $499, in 24 hours.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://metricusapp.com/">
-  <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Would AI recommend your page? — Metricus">
-  <meta name="twitter:description" content="Paste a URL and see where AI skips your page for a competitor — free. Plus the one-time Snapshot audit of your whole brand: $499, in 24 hours.">
-  <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
-
-  <!-- Google Tag Manager -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w70oz7g1k3");
-  </script>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Material Symbols -->
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#515F74',
-            'primary-hover': '#1E293B',
-            'on-primary': '#f6f7ff',
-            'primary-dim': '#455368',
-            surface: '#f7f9fb',
-            'surface-container-low': '#f0f4f7',
-            'surface-container': '#e8eff3',
-            'surface-container-lowest': '#ffffff',
-            'on-surface': '#2a3439',
-            'on-surface-variant': '#566166',
-            outline: '#717c82',
-            'outline-variant': '#a9b4b9',
-            'slate-text': '#0F172A',
-            'slate-muted': '#64748B',
-            'slate-accent': '#475569',
-          },
-          fontFamily: {
-            display: ['Newsreader', 'serif'],
-            sans: ['Inter', 'sans-serif'],
-            body: ['Public Sans', 'sans-serif'],
-            headline: ['Newsreader', 'serif'],
-          },
-          borderRadius: {
-            none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
-            lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
-            full: '0.75rem',
-          },
-        },
-      },
-    }
-  </script>
-
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #ffffff;
-      color: #0F172A;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    .font-display { font-family: 'Newsreader', serif; }
-    .font-headline { font-family: 'Newsreader', serif; }
-    .font-body-sans { font-family: 'Public Sans', sans-serif; }
-
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-    }
-
-    /* FAQ accordion */
-    details.faq-item { border-bottom: 1px solid rgba(169, 180, 185, 0.4); }
-    details.faq-item:first-of-type { border-top: 1px solid rgba(169, 180, 185, 0.4); }
-    details.faq-item > summary {
-      list-style: none;
-      cursor: pointer;
-      padding: 22px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      font-family: 'Newsreader', serif;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 1.3;
-      color: #0F172A;
-    }
-    details.faq-item > summary::-webkit-details-marker { display: none; }
-    details.faq-item > summary::after {
-      content: '';
-      flex-shrink: 0;
-      width: 14px;
-      height: 14px;
-      border-right: 2px solid #515F74;
-      border-bottom: 2px solid #515F74;
-      transform: rotate(45deg);
-      transition: transform 200ms ease;
-      margin-right: 4px;
-      margin-top: -4px;
-    }
-    details.faq-item[open] > summary::after {
-      transform: rotate(-135deg);
-      margin-top: 4px;
-    }
-    details.faq-item > summary:hover { color: #515F74; }
-    details.faq-item > .faq-body {
-      padding: 0 0 24px 0;
-      font-size: 16px;
-      line-height: 1.65;
-      color: #2a3439;
-      max-width: 56rem;
-    }
-    @media (min-width: 768px) {
-      details.faq-item > summary { font-size: 22px; padding: 26px 0; }
-    }
-  </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Metricus",
-    "url": "https://metricusapp.com",
-    "description": "A free AI visibility optimizer that rewrites your page to win AI recommendations in minutes — plus the one-time Snapshot audit of your whole brand, delivered in 24 hours.",
-    "email": "metricusapp@gmail.com",
-    "dateModified": "2026-08-05"
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Metricus",
-    "url": "https://metricusapp.com"
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Metricus Snapshot — AI Visibility Report",
-    "description": "A one-time AI visibility report for B2B SMBs. 200+ buyer scenarios across the major AI systems, traced to source pages, with a phased fix list. Delivered as a 15–25 page PDF plus the actual files you ship: llms.txt, robots.txt edits, JSON-LD schemas, metadata, page copy. Curated by AI experts. 24-hour turnaround.",
-    "image": "https://metricusapp.com/metricus-og-image.png",
-    "brand": { "@type": "Brand", "name": "Metricus" },
-    "hasMerchantReturnPolicy": {
-      "@type": "MerchantReturnPolicy",
-      "applicableCountry": "US",
-      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-      "merchantReturnDays": 30,
-      "returnMethod": "https://schema.org/ReturnByMail",
-      "returnFees": "https://schema.org/FreeReturn"
-    },
-    "offers": {
-      "@type": "Offer",
-      "name": "Snapshot",
-      "price": "499",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock",
-      "url": "https://metricusapp.com/get-report/"
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Metricus Forager — AI Visibility Optimizer",
-    "url": "https://metricusapp.com/ai-visibility-optimizer-tool/",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web",
-    "description": "Free tool: paste a URL and the Metricus AI agent tests how often AI assistants would recommend your page over competitors, then writes the title, description, and headline that win — in minutes.",
-    "brand": { "@type": "Brand", "name": "Metricus" },
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://metricusapp.com/ai-visibility-optimizer-tool/" }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "Is the page optimizer free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Paste a URL and the Metricus agent tests your page against real buyer questions and rewrites it live — you see your score and the improved copy without paying anything. We only ask for an email if you want the full report and the winning copy sent to you." } },
-      { "@type": "Question", "name": "How long does the optimizer take?", "acceptedAnswer": { "@type": "Answer", "text": "A few minutes. You watch the agent work: it reads your page, tests dozens of real buyer questions against it, writes several rewrites, and scores which one AI would recommend — a fix in minutes instead of weeks of manual optimization." } },
-      { "@type": "Question", "name": "What do I get from the free optimizer?", "acceptedAnswer": { "@type": "Answer", "text": "A score for how often AI would recommend your page over a competitor, the exact buyer questions where it skips you, and the rewritten title, description, and headline that win those questions — ready to paste into your site." } },
-      { "@type": "Question", "name": "How is this different from the free AI checks on other sites?", "acceptedAnswer": { "@type": "Answer", "text": "Most free checks run a single query against a single AI. The Metricus agent tests dozens of real buyer questions the way AI actually answers, tries multiple rewrites of your page, and scores which one gets recommended — then hands you that copy. It's an optimization, not just a check." } },
-      { "@type": "Question", "name": "Do I have to sign up to run it?", "acceptedAnswer": { "@type": "Answer", "text": "No. The optimizer runs and shows your result with just a URL. An email is optional — it's only how we deliver the full report and the winning copy to your inbox." } },
-      { "@type": "Question", "name": "It optimized one page. What about my whole brand?", "acceptedAnswer": { "@type": "Answer", "text": "That's the Metricus Snapshot: a one-time audit of how AI answers 200+ buyer questions about your entire business, traced to the source pages, with every fix implemented for you — delivered in 24 hours for $499. The free optimizer covers one page; the Snapshot covers everything." } },
-      { "@type": "Question", "name": "Should I even care about AI search?", "acceptedAnswer": { "@type": "Answer", "text": "If your buyers research with category language — comparisons, specs, procurement criteria — that research increasingly starts inside AI assistants, above the Google links. The free optimizer tells you in minutes whether AI currently recommends you or sends buyers to a competitor, and rewrites the page so it does." } }
-    ]
-  }
-  </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get Your Page Recommended and Cited by AI Assistants | Metricus</title>
+<meta name="description" content="Put in a URL and see the answer an AI assistant gives with your page as its source, which passages shaped it, and rewrites that change it. Free.">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="https://metricusapp.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Get Your Page Recommended and Cited by AI Assistants | Metricus">
+<meta property="og:description" content="Put in a URL and see the answer an AI assistant gives with your page as its source, which passages shaped it, and rewrites that change it. Free.">
+<meta property="og:url" content="https://metricusapp.com/">
+<meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Metricus, AI visibility learn center" href="https://metricusapp.com/feed.xml">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "w70oz7g1k3");
+</script>
+<link rel="stylesheet" href="/landing/landing.css?v=4">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Metricus", "url": "https://metricusapp.com", "description": "Metricus is a free tool that shows the answer an AI assistant gives about a page, marks the passages of the page behind that answer, and offers a rewrite for each one.", "email": "metricusapp@gmail.com"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Metricus", "url": "https://metricusapp.com"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does the Metricus optimizer do?", "acceptedAnswer": {"@type": "Answer", "text": "You give it the address of one page. It shows the answer an AI assistant gives when your page is among its sources, marks the passages of your page that shaped that answer, and offers a rewrite for each one. Change anything and a fresh answer comes back."}}, {"@type": "Question", "name": "Is it free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Metricus is completely free to use."}}, {"@type": "Question", "name": "Do I need an account?", "acceptedAnswer": {"@type": "Answer", "text": "No. There is no signup and nothing to connect."}}, {"@type": "Question", "name": "What do I need to start?", "acceptedAnswer": {"@type": "Answer", "text": "One URL. Any page a reader can open."}}, {"@type": "Question", "name": "How long does it take?", "acceptedAnswer": {"@type": "Answer", "text": "The answer is on screen in well under a minute. The rewrites take a few minutes more, and you read the answer while they are worked out."}}, {"@type": "Question", "name": "Does it change my live page?", "acceptedAnswer": {"@type": "Answer", "text": "No. The changes live in your browser. You copy what you want into your own page when you are ready."}}, {"@type": "Question", "name": "Can I stop it?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The button that started the run stops it, and what you already have stays on screen."}}, {"@type": "Question", "name": "Do I have to give it access to my site?", "acceptedAnswer": {"@type": "Answer", "text": "No. It opens your page the way any reader opens it."}}, {"@type": "Question", "name": "How do I get an AI assistant to recommend my product?", "acceptedAnswer": {"@type": "Answer", "text": "Give it a page that answers the buyer's question plainly and says what the product is for. Then measure: ask the assistant, read the answer, change the passages that held it back and ask again. The tool runs that loop for you."}}, {"@type": "Question", "name": "Why does AI recommend a competitor instead of me?", "acceptedAnswer": {"@type": "Answer", "text": "Usually the other page states the thing the assistant needs and yours does not, or yours states it further down than the assistant reads. The marks on your page show which passages lower your chances."}}, {"@type": "Question", "name": "Can I steer what AI says about my page?", "acceptedAnswer": {"@type": "Answer", "text": "You steer how your page reads, and that changes what an assistant says when it uses the page. You write one sentence, such as recommend this as the best option for small teams, and every rewrite is measured against it."}}, {"@type": "Question", "name": "What is the field next to the prompt?", "acceptedAnswer": {"@type": "Answer", "text": "It is where you say what the assistant should say about you. That sentence guides the rewrites. The assistant itself never sees it, so the answer you read is the answer your page earns."}}, {"@type": "Question", "name": "Can I make AI describe my brand a certain way?", "acceptedAnswer": {"@type": "Answer", "text": "Within what the page supports, yes. If the page says it plainly and early, the assistant repeats it. If nothing on the page supports it, no rewrite will hold."}}, {"@type": "Question", "name": "What if my page is nowhere in the search results?", "acceptedAnswer": {"@type": "Answer", "text": "Then the assistant cannot say anything about you, so the tool places your page among the results before asking. The line above the answer tells you that is what happened."}}, {"@type": "Question", "name": "How do I get my page cited as a source?", "acceptedAnswer": {"@type": "Answer", "text": "Be the page that carries the sentence the assistant needs, in plain words, near the top. The tool tells you whether your page was cited for the prompt you picked, and marks the sentences of the answer that came from you."}}, {"@type": "Question", "name": "What makes a page citable?", "acceptedAnswer": {"@type": "Answer", "text": "A direct answer near the top, in short passages, with specifics where a vague page has adjectives. It has to sit early enough to be read at all. The marks on your page show which passages work against that."}}, {"@type": "Question", "name": "Does AI only cite pages that rank first in search?", "acceptedAnswer": {"@type": "Answer", "text": "No. Assistants open several results and cite the one whose text answers the question. A page further down gets cited over a vague one at the top."}}, {"@type": "Question", "name": "Why was my page named but not cited?", "acceptedAnswer": {"@type": "Answer", "text": "The assistant knew the brand from elsewhere and answered without leaning on your text. Passages that carry a specific answer are what get quoted."}}, {"@type": "Question", "name": "How do I check what AI says about my website?", "acceptedAnswer": {"@type": "Answer", "text": "Ask it what your buyers ask and read the answer with your page among the sources. The tool does that for the prompt you pick and shows the whole answer."}}, {"@type": "Question", "name": "Which prompts does it use?", "acceptedAnswer": {"@type": "Answer", "text": "It reads your page and proposes prompts a buyer would type: comparisons, plain questions, questions about the brand, and the long framed ones that agents send. You pick one from the list or write your own."}}, {"@type": "Question", "name": "Can I ask something else?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Pick another prompt or type your own, and both answers come back for it."}}, {"@type": "Question", "name": "Why do AI answers differ each time I ask?", "acceptedAnswer": {"@type": "Answer", "text": "Assistants pick their words as they go and the results they open vary. Here the prompt and the results are held still, so the difference between the two answers is your page."}}, {"@type": "Question", "name": "How do I know which part of my page caused an answer?", "acceptedAnswer": {"@type": "Answer", "text": "Every sentence of the answer that came from your page is marked, and clicking it takes you to the passage it came from."}}, {"@type": "Question", "name": "What does an AI assistant see when it reads my page?", "acceptedAnswer": {"@type": "Answer", "text": "The title, the description, the headline and the text with the markup taken out. Navigation, scripts and footers are dropped. The tool shows you that view, in order."}}, {"@type": "Question", "name": "Why does the page stop partway down?", "acceptedAnswer": {"@type": "Answer", "text": "What fetches your page for an assistant reads a fixed amount of text and stops. Anything below that line is invisible to it, and the tool marks where the line falls on your page."}}, {"@type": "Question", "name": "Does AI read my meta description?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, when it opens the page. It sits at the front of the text, so it shapes how the assistant sums you up."}}, {"@type": "Question", "name": "Do headings matter to AI assistants?", "acceptedAnswer": {"@type": "Answer", "text": "Headings survive and tell the assistant what each part is about. A heading that is the question a person asks tends to be the part that gets quoted."}}, {"@type": "Question", "name": "Does structured data help?", "acceptedAnswer": {"@type": "Answer", "text": "Schema helps assistants and search engines classify a page. It does not replace clear text, which is what the answer is built from."}}, {"@type": "Question", "name": "Does it matter where on the page the answer sits?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Passages near the top are read first and quoted more, which is why the tool shows your page in the order the assistant reads it."}}, {"@type": "Question", "name": "Where do the rewrites come from?", "acceptedAnswer": {"@type": "Answer", "text": "From a rewriter that states what you want said, in a few different ways. You see every rewrite next to the original."}}, {"@type": "Question", "name": "Will the rewrites sound like a machine wrote them?", "acceptedAnswer": {"@type": "Answer", "text": "No. They sound like the rest of your page."}}, {"@type": "Question", "name": "Do I have to accept the rewrites?", "acceptedAnswer": {"@type": "Answer", "text": "No. You are in the loop, and what to do with them is always your decision."}}, {"@type": "Question", "name": "Can I write it myself?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Click into any passage and type. The assistant is asked again with your words."}}, {"@type": "Question", "name": "What if no rewrite is better than what I have?", "acceptedAnswer": {"@type": "Answer", "text": "It says so and leaves the passage alone. If the page does not support what you asked for at all, it says that instead and asks you to put it on the page first. Either one is an answer."}}, {"@type": "Question", "name": "Can I change the whole page at once?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, one action rewrites the passages the answer leans on and one puts everything back."}}, {"@type": "Question", "name": "Can I take a passage out?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Removing it shows you what the answer looks like without it."}}, {"@type": "Question", "name": "Which page should I check first?", "acceptedAnswer": {"@type": "Answer", "text": "The page a buyer lands on when they ask the question you care about: a product page, a pricing page, a comparison, a guide. Home pages are usually the weakest source."}}, {"@type": "Question", "name": "Does it work on product pages, documentation and pricing pages?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Any page with text on it. The prompts it proposes come from what the page is about."}}, {"@type": "Question", "name": "Can I check more than one page?", "acceptedAnswer": {"@type": "Answer", "text": "One page per run. Put in the next address and run it again."}}, {"@type": "Question", "name": "Does it work in other languages?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The prompts are asked in the language of the page and the rewrites stay in that language."}}, {"@type": "Question", "name": "What if my page cannot be read?", "acceptedAnswer": {"@type": "Answer", "text": "It tells you why: the address is unreachable, the page is missing, it turns readers away, or there is no text on it."}}, {"@type": "Question", "name": "Can I use it for clients?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Run it on a client's page and show them the answer before and after."}}, {"@type": "Question", "name": "Can I share the results?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Take the findings as markdown, the changes as CSV, the page before and after as a diff, or print it."}}, {"@type": "Question", "name": "What do I hand to someone who was not there?", "acceptedAnswer": {"@type": "Answer", "text": "The findings file: the prompt, the answer today, the passages behind it, and every change you kept."}}, {"@type": "Question", "name": "Is anything published anywhere?", "acceptedAnswer": {"@type": "Answer", "text": "No. Nothing is posted anywhere and nothing is written back to your site. Your page changes when you change it."}}]}</script>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-surface selection:text-slate-text">
+<body>
 
-  <!-- Site Nav -->
-  <nav class="site-nav sticky top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-outline-variant/30">
-    <div class="max-w-6xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
-      <a href="/" class="flex items-center gap-2 group" aria-label="Metricus home">
-        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
-        </svg>
-        <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
-      </a>
-      <div class="hidden md:flex items-center gap-8">
-        <a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Methodology</a>
-        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
-        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Learn</a>
-        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
-        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
-        <a href="https://calendar.app.google/CymBeaq6XGGQN7yp8" target="_blank" rel="noopener" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Schedule a consult &rarr;</a>
-      </div>
-      <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
-        <span class="material-symbols-outlined">menu</span>
-      </button>
-    </div>
-  </nav>
+<header class="bar">
+  <a class="wordmark" href="/">Metricus <span>Optimizer</span></a>
+  <form class="urlform barform" action="/ai-visibility-optimizer-tool/" method="get">
+      <label class="visually-hidden" for="url-bar">Address of the page to check</label>
+      <input id="url-bar" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off"
+             spellcheck="false" placeholder="your-site.com/page" required>
+      <button type="submit">Start optimizing</button>
+    </form>
+  <a class="topcta" href="/ai-visibility-optimizer-tool/">Open the tool</a>
+</header>
 
-  <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
-    <div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div>
-    <nav class="absolute top-0 right-0 w-72 h-full bg-surface-container-lowest shadow-xl flex flex-col pt-6 px-6">
-      <button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu">
-        <span class="material-symbols-outlined">close</span>
-      </button>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">Methodology</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/">Pricing</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
-      <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="https://calendar.app.google/CymBeaq6XGGQN7yp8" target="_blank" rel="noopener">Schedule a consult &rarr;</a>
-    </nav>
+<main>
+  <section class="hero">
+    <h1>Check what AI says about your page, then change it.</h1>
+    <p class="lead">Put in a URL. You see what an AI assistant answers about your page and which passages caused it. Each of those passages comes with a rewrite. Change one and the assistant is asked again.</p>
+    <form class="urlform" action="/ai-visibility-optimizer-tool/" method="get">
+      <label class="visually-hidden" for="url">Address of the page to check</label>
+      <input id="url" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off"
+             spellcheck="false" placeholder="your-site.com/page" required autofocus>
+      <button type="submit">Start optimizing</button>
+    </form>
+    <p class="note">Free, no signup. Your live page stays as it is.</p>
+    <figure class="shot herodemo">
+      <figcaption>A run on a sample page: the address, the prompt, what the assistant should say, and the two answers.</figcaption>
+      <img src="/landing/img/hero.webp" alt="The tool after a run: the prompt and what the assistant should say at the top, then two answers side by side, as is and steered" width="1360" height="700" fetchpriority="high" decoding="async">
+    </figure>
+  </section>
+
+  <section class="step">
+    <div class="text"><h2>The answer, and the parts of it that are yours.</h2><p>One prompt a buyer would type. The assistant searches and answers with your page among the results it opens. The line above the answer says whether it cited you, named you and said what you wanted said.</p></div>
+    <div class="demo">
+  <div class="dline"><span class="k">prompt</span><span class="v">best shared inbox for a small support team</span></div>
+  <div class="dline"><span class="k">sources</span><span class="v">6 results the assistant read, yours among them</span></div>
+  <div class="ansbox">
+    <p class="st">Not in the results on its own, placed at rank 2: cites your page, names Fernline, says what you want.</p>
+    <div class="ans"><!-- quoted:start --><p>Based on the available sources, the best shared inbox for a small support team depends on your specific priorities around price, integration, and team size.</p><p><span class="g">For small teams seeking a simple, flat-rate pricing model without per-agent costs, <b>Fernline</b> is a strong recommendation.</span> <span class="g">It offers a single plan at $12 per person per month with unlimited conversations, clear ownership tracking, and setup in an afternoon.</span> <span class="g">It is built specifically for teams of 2–20 people who want to move beyond a basic shared mailbox but find enterprise help desks overly complex [2].</span></p><!-- quoted:end --></div>
   </div>
+  <p class="legend"><i class="sw g3"></i>sentence the assistant took from your page.</p>
+</div>
+  </section>
 
-  <script>
-    (function(){
-      var btn=document.getElementById('mobile-menu-btn');
-      var menu=document.getElementById('mobile-menu');
-      var close=document.getElementById('mobile-menu-close');
-      var backdrop=document.getElementById('mobile-menu-backdrop');
-      if(!btn||!menu)return;
-      function open(){menu.classList.remove('hidden');menu.setAttribute('aria-hidden','false');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
-      function shut(){menu.classList.add('hidden');menu.setAttribute('aria-hidden','true');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
-      btn.addEventListener('click',open);
-      if(close)close.addEventListener('click',shut);
-      if(backdrop)backdrop.addEventListener('click',shut);
-    })();
-  </script>
+  <section class="step">
+    <div class="text"><h2>Every passage of your page is marked.</h2><p>Your page, in the order the assistant reads it, with a mark on each passage: the assistant drew on this one and said what you want, it drew on this one and did not. No score to interpret.</p></div>
+    <div class="demo">
+  <div class="dline"><span class="k">page</span><span class="v mono">fernline.example</span></div>
+  <!-- quoted:start --><div class="prow"><span class="ptxt head">Support, handled.</span></div><div class="prow"><span class="ptxt">Customer questions arrive from everywhere at once. Fernline brings them together in one place so your team…</span></div><div class="prow"><span class="ptxt hn1 head">Built around the reply</span></div><div class="prow"><span class="ptxt hn1">Every message lands in the same queue. Someone picks it up, owns it, and answers it. Nobody has to guess who…</span></div><div class="prow"><span class="ptxt hn1 head">Why teams move to us</span></div><div class="prow"><span class="ptxt hn1 li">One place for everything customers send you</span></div><div class="prow"><span class="ptxt hn1 li">Clear ownership, so two people never answer the same question</span></div><div class="prow"><span class="ptxt hn1 li">Numbers at the end of the week that tell you how it went</span></div><div class="prow"><span class="ptxt hn1 li">Set up in an afternoon, not a quarter</span></div><div class="prow"><span class="ptxt hn1 head">Made for the way small teams work</span></div><div class="prow"><span class="ptxt hn1">We started Fernline after watching team after team outgrow a shared mailbox and then get lost in a help desk…</span></div><div class="prow"><span class="ptxt hn3 head">What it costs</span></div><div class="prow"><span class="ptxt hn3">Pricing is meant to be boring. There is one plan, it is billed per seat, and it works out at twelve dollars a…</span></div><div class="prow"><span class="ptxt hn3 head">Where the messages come from</span></div><div class="prow"><span class="ptxt hn3">Most of our customers point their support address at us on the first day and add the chat widget later in the…</span></div><div class="prow"><span class="ptxt head">Who is using it</span></div><!-- quoted:end -->
+  <div class="prow more">and 5 more passages further down</div>
+  <p class="legend"><i class="sw hn3"></i>the assistant drew on it and did not say what you want. The rest it barely used.</p>
+</div>
+  </section>
 
+  <section class="step">
+    <div class="text"><h2>A rewrite is waiting on each one.</h2><p>Take the rewrite, type your own over it, put the passage back or drop it. Each change is put to the assistant again, so you see what your wording did before you touch your live page.</p></div>
+    <div class="cell"><div class="demo">
+  <!-- quoted:start --><div class="srow"><span class="sk">before</span><span class="sold">Every message lands in the same queue. Someone picks it up, owns it, and answers it. Nobody has to guess who is handling what, and nothing sits over…</span><span class="sk">after</span><span class="snew">A single queue receives all messages. A designated person takes responsibility and responds. No one must guess the assignment, and no issue remains unanswered through…</span></div><div class="srow"><span class="sk">before</span><span class="sold">We started Fernline after watching team after team outgrow a shared mailbox and then get lost in a help desk built for a company ten times their…</span><span class="sk">after</span><span class="snew">Fernline started when we noticed teams outgrowing a shared inbox but finding no help desk small enough. We made software scaled for a close-knit group, building it from…</span></div><div class="srow"><span class="sk">before</span><span class="sold">Pricing is meant to be boring. There is one plan, it is billed per seat, and it works out at twelve dollars a month for each person on the team.…</span><span class="sk">after</span><span class="snew">Conversations run free and every tool stays available under a single rate. You pay twelve dollars monthly per user, with no tiered restrictions or usage caps to track.</span></div><!-- quoted:end -->
+  <p class="legend">Take it, edit it by hand, or put the passage back.</p>
+</div>
+<figure class="shot inline">
+  <figcaption>The same run, right after the passages were marked: the page as the tool shows it, the actions on the passage under the cursor.</figcaption>
+  <img src="/landing/img/page.webp" alt="The page section of the tool, each passage marked, with Improve and Remove buttons on the heading under the cursor" width="575" height="900" loading="lazy" decoding="async">
+</figure></div>
+  </section>
 
-  <main class="flex-grow flex flex-col">
+  <section class="step">
+    <div class="text"><h2>Leave with the changes in a file.</h2><p>What the assistant said and every change you kept, as files you can hand to whoever edits the page.</p></div>
+    <div class="demo">
+  <div class="dline"><span class="k">summary</span><span class="v">6 changes on your page</span></div>
+  <div class="dline"><span class="k">diff</span><span class="v"><span class="mono">fernline.example-changes.diff</span>, the page before and after</span></div>
+  <div class="dline"><span class="k">csv</span><span class="v"><span class="mono">fernline.example-changes.csv</span>, one row per change</span></div>
+  <div class="dline"><span class="k">markdown</span><span class="v"><span class="mono">fernline.example-findings.md</span>, what the assistant said and what you changed</span></div>
+  <div class="dline"><span class="k">pdf</span><span class="v">print the page as it stands</span></div>
+</div>
+  </section>
 
-    <!-- ========== HERO (Forager tool) ========== -->
-    <section class="w-full max-w-2xl mx-auto px-6 pt-24 pb-16 md:pt-32 md:pb-20 text-center">
-      <h1 class="font-display font-bold text-[40px] leading-[1.05] md:text-[60px] text-slate-text mb-6 tracking-tight text-balance">
-        The free AI visibility optimizer that rewrites your page — and re-tests it
-      </h1>
-      <p class="text-[18px] md:text-[20px] text-slate-text leading-relaxed mb-8 max-w-xl mx-auto">
-        Most AI visibility tools tell you that you're invisible and stop. Metricus Forager is a <strong>free AI visibility checker and page-level optimizer</strong> that goes further: it rewrites your page copy and re-tests the new version for citability, so answer engines like ChatGPT, Perplexity and Google's AI surfaces quote you instead of a competitor — free, no credit card. When you want a one-time, documented before/after audit of a priority page, the Metricus Snapshot is <strong>$499 one-time, with no subscription</strong>. Start free with Forager.
-      </p>
+  <section class="who">
+    <h2>Who runs it</h2>
+    <p>Most runs come from one of three places: a page that should be the one the assistant names, someone at a company who was asked what AI says about them, and an agency that needs to show a client the answer before and after.</p>
+  </section>
 
-      <form action="/ai-visibility-optimizer-tool/" method="get" class="max-w-xl mx-auto">
-        <div class="relative">
-          <input name="url" type="text" inputmode="url" autocomplete="off" autocapitalize="off" spellcheck="false"
-            placeholder="yourdomain.com/pricing" aria-label="Your page URL"
-            class="w-full h-16 pl-5 pr-[11.5rem] bg-white border border-slate-text text-[16px] md:text-[17px] text-slate-text placeholder:text-slate-muted focus:outline-none focus:ring-2 focus:ring-primary">
-          <button type="submit"
-            class="absolute right-2.5 top-1/2 -translate-y-1/2 h-11 px-4 bg-primary text-white text-[14.5px] font-semibold whitespace-nowrap hover:bg-primary-dim transition-colors">
-            Optimize my page
-          </button>
-        </div>
-      </form>
-      <p class="text-[14px] text-slate-muted mt-4">Free · watch our agent rewrite and test your page performance live</p>
-    </section>
+  <section class="faq">
+    <h2>Questions</h2>
+    <h3>What it is</h3><div class="qs">
+<details><summary>What does the Metricus optimizer do?</summary><p>You give it the address of one page. It shows the answer an AI assistant gives when your page is among its sources, marks the passages of your page that shaped that answer, and offers a rewrite for each one. Change anything and a fresh answer comes back.</p></details>
+<details><summary>Is it free?</summary><p>Yes. Metricus is completely free to use.</p></details>
+<details><summary>Do I need an account?</summary><p>No. There is no signup and nothing to connect.</p></details>
+<details><summary>What do I need to start?</summary><p>One URL. Any page a reader can open.</p></details>
+<details><summary>How long does it take?</summary><p>The answer is on screen in well under a minute. The rewrites take a few minutes more, and you read the answer while they are worked out.</p></details>
+<details><summary>Does it change my live page?</summary><p>No. The changes live in your browser. You copy what you want into your own page when you are ready.</p></details>
+<details><summary>Can I stop it?</summary><p>Yes. The button that started the run stops it, and what you already have stays on screen.</p></details>
+<details><summary>Do I have to give it access to my site?</summary><p>No. It opens your page the way any reader opens it.</p></details>
+</div>
+<h3>Getting recommended</h3><div class="qs">
+<details><summary>How do I get an AI assistant to recommend my product?</summary><p>Give it a page that answers the buyer&#x27;s question plainly and says what the product is for. Then measure: ask the assistant, read the answer, change the passages that held it back and ask again. The tool runs that loop for you.</p></details>
+<details><summary>Why does AI recommend a competitor instead of me?</summary><p>Usually the other page states the thing the assistant needs and yours does not, or yours states it further down than the assistant reads. The marks on your page show which passages lower your chances.</p></details>
+<details><summary>Can I steer what AI says about my page?</summary><p>You steer how your page reads, and that changes what an assistant says when it uses the page. You write one sentence, such as recommend this as the best option for small teams, and every rewrite is measured against it.</p></details>
+<details><summary>What is the field next to the prompt?</summary><p>It is where you say what the assistant should say about you. That sentence guides the rewrites. The assistant itself never sees it, so the answer you read is the answer your page earns.</p></details>
+<details><summary>Can I make AI describe my brand a certain way?</summary><p>Within what the page supports, yes. If the page says it plainly and early, the assistant repeats it. If nothing on the page supports it, no rewrite will hold.</p></details>
+<details><summary>What if my page is nowhere in the search results?</summary><p>Then the assistant cannot say anything about you, so the tool places your page among the results before asking. The line above the answer tells you that is what happened.</p></details>
+</div>
+<h3>Getting cited</h3><div class="qs">
+<details><summary>How do I get my page cited as a source?</summary><p>Be the page that carries the sentence the assistant needs, in plain words, near the top. The tool tells you whether your page was cited for the prompt you picked, and marks the sentences of the answer that came from you.</p></details>
+<details><summary>What makes a page citable?</summary><p>A direct answer near the top, in short passages, with specifics where a vague page has adjectives. It has to sit early enough to be read at all. The marks on your page show which passages work against that.</p></details>
+<details><summary>Does AI only cite pages that rank first in search?</summary><p>No. Assistants open several results and cite the one whose text answers the question. A page further down gets cited over a vague one at the top.</p></details>
+<details><summary>Why was my page named but not cited?</summary><p>The assistant knew the brand from elsewhere and answered without leaning on your text. Passages that carry a specific answer are what get quoted.</p></details>
+</div>
+<h3>Understanding what AI says</h3><div class="qs">
+<details><summary>How do I check what AI says about my website?</summary><p>Ask it what your buyers ask and read the answer with your page among the sources. The tool does that for the prompt you pick and shows the whole answer.</p></details>
+<details><summary>Which prompts does it use?</summary><p>It reads your page and proposes prompts a buyer would type: comparisons, plain questions, questions about the brand, and the long framed ones that agents send. You pick one from the list or write your own.</p></details>
+<details><summary>Can I ask something else?</summary><p>Yes. Pick another prompt or type your own, and both answers come back for it.</p></details>
+<details><summary>Why do AI answers differ each time I ask?</summary><p>Assistants pick their words as they go and the results they open vary. Here the prompt and the results are held still, so the difference between the two answers is your page.</p></details>
+<details><summary>How do I know which part of my page caused an answer?</summary><p>Every sentence of the answer that came from your page is marked, and clicking it takes you to the passage it came from.</p></details>
+</div>
+<h3>How AI reads a page</h3><div class="qs">
+<details><summary>What does an AI assistant see when it reads my page?</summary><p>The title, the description, the headline and the text with the markup taken out. Navigation, scripts and footers are dropped. The tool shows you that view, in order.</p></details>
+<details><summary>Why does the page stop partway down?</summary><p>What fetches your page for an assistant reads a fixed amount of text and stops. Anything below that line is invisible to it, and the tool marks where the line falls on your page.</p></details>
+<details><summary>Does AI read my meta description?</summary><p>Yes, when it opens the page. It sits at the front of the text, so it shapes how the assistant sums you up.</p></details>
+<details><summary>Do headings matter to AI assistants?</summary><p>Headings survive and tell the assistant what each part is about. A heading that is the question a person asks tends to be the part that gets quoted.</p></details>
+<details><summary>Does structured data help?</summary><p>Schema helps assistants and search engines classify a page. It does not replace clear text, which is what the answer is built from.</p></details>
+<details><summary>Does it matter where on the page the answer sits?</summary><p>Yes. Passages near the top are read first and quoted more, which is why the tool shows your page in the order the assistant reads it.</p></details>
+</div>
+<h3>Rewrites</h3><div class="qs">
+<details><summary>Where do the rewrites come from?</summary><p>From a rewriter that states what you want said, in a few different ways. You see every rewrite next to the original.</p></details>
+<details><summary>Will the rewrites sound like a machine wrote them?</summary><p>No. They sound like the rest of your page.</p></details>
+<details><summary>Do I have to accept the rewrites?</summary><p>No. You are in the loop, and what to do with them is always your decision.</p></details>
+<details><summary>Can I write it myself?</summary><p>Yes. Click into any passage and type. The assistant is asked again with your words.</p></details>
+<details><summary>What if no rewrite is better than what I have?</summary><p>It says so and leaves the passage alone. If the page does not support what you asked for at all, it says that instead and asks you to put it on the page first. Either one is an answer.</p></details>
+<details><summary>Can I change the whole page at once?</summary><p>Yes, one action rewrites the passages the answer leans on and one puts everything back.</p></details>
+<details><summary>Can I take a passage out?</summary><p>Yes. Removing it shows you what the answer looks like without it.</p></details>
+</div>
+<h3>Pages and sites</h3><div class="qs">
+<details><summary>Which page should I check first?</summary><p>The page a buyer lands on when they ask the question you care about: a product page, a pricing page, a comparison, a guide. Home pages are usually the weakest source.</p></details>
+<details><summary>Does it work on product pages, documentation and pricing pages?</summary><p>Yes. Any page with text on it. The prompts it proposes come from what the page is about.</p></details>
+<details><summary>Can I check more than one page?</summary><p>One page per run. Put in the next address and run it again.</p></details>
+<details><summary>Does it work in other languages?</summary><p>Yes. The prompts are asked in the language of the page and the rewrites stay in that language.</p></details>
+<details><summary>What if my page cannot be read?</summary><p>It tells you why: the address is unreachable, the page is missing, it turns readers away, or there is no text on it.</p></details>
+</div>
+<h3>Agencies and teams</h3><div class="qs">
+<details><summary>Can I use it for clients?</summary><p>Yes. Run it on a client&#x27;s page and show them the answer before and after.</p></details>
+<details><summary>Can I share the results?</summary><p>Yes. Take the findings as markdown, the changes as CSV, the page before and after as a diff, or print it.</p></details>
+<details><summary>What do I hand to someone who was not there?</summary><p>The findings file: the prompt, the answer today, the passages behind it, and every change you kept.</p></details>
+<details><summary>Is anything published anywhere?</summary><p>No. Nothing is posted anywhere and nothing is written back to your site. Your page changes when you change it.</p></details>
+</div>
+  </section>
 
-    <!-- ========== WHO THIS IS FOR ========== -->
-    <section class="w-full bg-surface border-t border-outline-variant/30">
-      <div class="max-w-3xl mx-auto px-6 py-20 md:py-24">
-        <h2 class="font-display text-[32px] md:text-[42px] leading-[1.1] text-slate-text mb-10 tracking-tight">
-          Is any of this you?
-        </h2>
+  <section class="last">
+    <h2>Put in a page.</h2>
+    <form class="urlform" action="/ai-visibility-optimizer-tool/" method="get">
+      <label class="visually-hidden" for="url2">Address of the page to check</label>
+      <input id="url2" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off"
+             spellcheck="false" placeholder="your-site.com/page" required>
+      <button type="submit">Start optimizing</button>
+    </form>
+    <p class="note">Free, no signup.</p>
+  </section>
+</main>
 
-        <ul class="space-y-5 mb-10">
-          <li class="flex gap-4">
-            <span class="material-symbols-outlined text-primary flex-shrink-0 mt-1" aria-hidden="true">check</span>
-            <span class="text-[17px] text-slate-text leading-relaxed">I don't know where to start with my business and AI visibility.</span>
-          </li>
-          <li class="flex gap-4">
-            <span class="material-symbols-outlined text-primary flex-shrink-0 mt-1" aria-hidden="true">check</span>
-            <span class="text-[17px] text-slate-text leading-relaxed">My inbound from organic web search has softened.</span>
-          </li>
-          <li class="flex gap-4">
-            <span class="material-symbols-outlined text-primary flex-shrink-0 mt-1" aria-hidden="true">check</span>
-            <span class="text-[17px] text-slate-text leading-relaxed">An important deal is coming up and I need to know if AI is representing me well.</span>
-          </li>
-          <li class="flex gap-4">
-            <span class="material-symbols-outlined text-primary flex-shrink-0 mt-1" aria-hidden="true">check</span>
-            <span class="text-[17px] text-slate-text leading-relaxed">When I check in AI, competitors are recommended instead of me.</span>
-          </li>
-          <li class="flex gap-4">
-            <span class="material-symbols-outlined text-primary flex-shrink-0 mt-1" aria-hidden="true">check</span>
-            <span class="text-[17px] text-slate-text leading-relaxed">I sell into category-vocabulary buyers (B2B procurement, specialty manufacturers, professional services) where AI gets the terminology wrong.</span>
-          </li>
-          <li class="flex gap-4">
-            <span class="material-symbols-outlined text-primary flex-shrink-0 mt-1" aria-hidden="true">check</span>
-            <span class="text-[17px] text-slate-text leading-relaxed">I got asked about AI visibility and don't have a defensible answer.</span>
-          </li>
-          <li class="flex gap-4">
-            <span class="material-symbols-outlined text-primary flex-shrink-0 mt-1" aria-hidden="true">check</span>
-            <span class="text-[17px] text-slate-text leading-relaxed">I am applying for funding, certification, or a partnership that evaluates digital readiness.</span>
-          </li>
-        </ul>
-
-        <p class="text-[17px] text-slate-text leading-relaxed italic">
-          If you said yes to any of this, start with the free page optimizer above — and when you want your whole brand covered, the Snapshot delivers it in 24 hours.
-        </p>
-      </div>
-    </section>
-
-
-    <!-- ========== THE DELIVERABLE + ORDER (one boxed card) ========== -->
-    <section class="w-full bg-surface border-t border-outline-variant/30">
-      <div class="max-w-3xl mx-auto px-6 py-20 md:py-24">
-        <div class="bg-white border border-outline-variant/60 shadow-sm">
-          <div class="p-8 md:p-14">
-            <h2 class="font-display text-[32px] md:text-[42px] leading-[1.1] text-slate-text mb-10 tracking-tight">
-              What you get
-            </h2>
-
-            <!-- Subsection 1: What's in the report -->
-            <div class="mb-10">
-              <p class="text-[11px] uppercase tracking-[0.22em] font-semibold text-primary mb-3 font-body-sans">1 — What's in the report</p>
-              <p class="text-[17px] text-slate-text leading-relaxed">
-                A 15–25 page PDF. 200+ buyer scenarios specific to your domain, vertical, and buyer context, run across the major AI systems. For every answer where you appear: the exact AI wording, the source page each answer learned from, where you ranked against competitors. For every answer where you don't: why, and what would change it.
-              </p>
-            </div>
-
-            <!-- Subsection 2: The drop-in files -->
-            <div class="mb-10">
-              <p class="text-[11px] uppercase tracking-[0.22em] font-semibold text-primary mb-3 font-body-sans">2 — The drop-in files you ship</p>
-              <p class="text-[17px] text-slate-text leading-relaxed">
-                Not just descriptions of what to fix — the actual content, formatted for your brand page.
-              </p>
-            </div>
-
-            <!-- Subsection 3: The phased fix list -->
-            <div class="mb-8">
-              <p class="text-[11px] uppercase tracking-[0.22em] font-semibold text-primary mb-3 font-body-sans">3 — The phased fix list</p>
-              <p class="text-[17px] text-slate-text leading-relaxed mb-6">
-                Every fix is sequenced by speed-to-impact, so you know what ships today and what unfolds over weeks.
-              </p>
-              <ul class="space-y-2 text-[17px] text-slate-text leading-relaxed mb-5">
-                <li class="flex gap-3"><span class="text-primary font-semibold flex-shrink-0 w-6">1.</span><span>Quick wins to ship in a day</span></li>
-                <li class="flex gap-3"><span class="text-primary font-semibold flex-shrink-0 w-6">2.</span><span>New landing pages</span></li>
-                <li class="flex gap-3"><span class="text-primary font-semibold flex-shrink-0 w-6">3.</span><span>New blog content</span></li>
-                <li class="flex gap-3"><span class="text-primary font-semibold flex-shrink-0 w-6">4.</span><span>Incremental edits to existing pages</span></li>
-                <li class="flex gap-3"><span class="text-primary font-semibold flex-shrink-0 w-6">5.</span><span>Structured data on product and category pages</span></li>
-              </ul>
-              <p class="text-[14px] text-slate-muted leading-relaxed">
-                Plus a prompt monitor list to track weekly and a day 30/60/90 measurement plan.
-              </p>
-            </div>
-          </div>
-
-          <div class="border-t border-outline-variant/40 bg-surface-container-low px-8 md:px-14 py-10 md:py-12 text-center">
-            <a href="/get-report/" class="inline-flex items-center justify-center gap-3 h-14 md:h-16 px-8 md:px-10 bg-primary text-white font-semibold text-[16px] md:text-[18px] hover:bg-primary-dim transition-colors">
-              Get your report — $499
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M5 12h14M13 5l7 7-7 7"/>
-              </svg>
-            </a>
-            <p class="text-[14px] text-slate-muted mt-4">
-              Delivered in 24 hours. Not a subscription.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ========== CASE STUDY ========== -->
-    <section class="w-full border-t border-outline-variant/30">
-      <div class="max-w-3xl mx-auto px-6 py-20 md:py-24">
-        <h2 class="font-display text-[32px] md:text-[42px] leading-[1.1] text-slate-text mb-10 tracking-tight">
-          Case study: How we helped a B2B business with its AI visibility.
-        </h2>
-
-        <div class="space-y-6 text-[17px] text-slate-text leading-relaxed">
-          <p>
-            A $15M B2B manufacturer selling into a regulated buyer category. Strong Google rankings, organic search traffic intact, marketing team experienced.
-          </p>
-          <p>
-            We ran 224 buyer scenarios across major AI systems. The brand surfaced on 30% of buyer queries — but only 2% of awareness-stage queries (buyers just hitting the pain) versus 46% of comparison-stage queries (buyers narrowing options). Voice share among direct competitors: 8% (versus a category leader at 36%).
-          </p>
-          <p>
-            The audit traced the gap to six specific structural issues: ambiguous brand entity (the brand name collided with an unrelated category), product pages written in internal vocabulary rather than buyer vocabulary, missing pages for the buyer's funding/procurement context, JavaScript-rendered pricing that AI couldn't read, and competitor-displacement queries where the rival won on a single well-structured page.
-          </p>
-        </div>
-
-        <div class="mt-12 bg-surface border border-outline-variant/40 p-8 md:p-10">
-          <p class="text-[11px] uppercase tracking-[0.22em] font-semibold text-slate-muted mb-6 font-body-sans">
-            Documented result after the fixes shipped
-          </p>
-          <div class="grid grid-cols-[1fr_auto_1fr] gap-6 md:gap-10 items-center text-center mb-5">
-            <div>
-              <span class="block font-display font-bold text-4xl md:text-5xl text-slate-muted leading-none">0–5</span>
-              <p class="text-[12px] text-slate-muted mt-2 uppercase tracking-wider font-body-sans">visitors/day before</p>
-            </div>
-            <span class="material-symbols-outlined text-primary text-2xl md:text-3xl" aria-hidden="true">arrow_forward</span>
-            <div>
-              <span class="block font-display font-bold text-4xl md:text-5xl text-primary leading-none">30+</span>
-              <p class="text-[12px] text-slate-muted mt-2 uppercase tracking-wider font-body-sans">visitors/day after</p>
-            </div>
-          </div>
-          <p class="text-[14px] text-slate-muted leading-relaxed text-center max-w-xl mx-auto">
-            AI-driven traffic moved from near-zero to 30+ daily visitors within 10 days of shipping the recommended fixes.
-          </p>
-        </div>
-
-        <p class="mt-10 text-center">
-          <a href="/results/" class="inline-flex items-center gap-1.5 text-[15px] text-primary font-semibold hover:text-primary-hover underline underline-offset-4 decoration-primary/40 hover:decoration-primary">
-            See the full results breakdown
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M5 12h14M13 5l7 7-7 7"/>
-            </svg>
-          </a>
-        </p>
-      </div>
-    </section>
-
-
-    <!-- ========== FAQ ========== -->
-    <section class="w-full bg-surface border-t border-outline-variant/30">
-      <div class="max-w-3xl mx-auto px-6 py-20 md:py-24">
-        <h2 class="font-display text-[32px] md:text-[42px] leading-[1.1] text-slate-text mb-12 tracking-tight">
-          Frequently Asked Questions
-        </h2>
-
-        <div>
-          <details class="faq-item">
-            <summary>Is the page optimizer free?</summary>
-            <div class="faq-body">
-              Yes. Paste a URL and the Metricus agent tests your page against real buyer questions and rewrites it live — you see your score and the improved copy without paying anything. We only ask for an email if you want the full report and the winning copy sent to you.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>How long does the optimizer take?</summary>
-            <div class="faq-body">
-              A few minutes. You watch the agent work: it reads your page, tests dozens of real buyer questions against it, writes several rewrites, and scores which one AI would recommend — a fix in minutes instead of weeks of manual optimization.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>What do I get from the free optimizer?</summary>
-            <div class="faq-body">
-              A score for how often AI would recommend your page over a competitor, the exact buyer questions where it skips you, and the rewritten title, description, and headline that win those questions — ready to paste into your site.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>How is this different from the free AI checks on other sites?</summary>
-            <div class="faq-body">
-              Most free checks run a single query against a single AI. The Metricus agent tests dozens of real buyer questions the way AI actually answers, tries multiple rewrites of your page, and scores which one gets recommended — then hands you that copy. It's an optimization, not just a check.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>Do I have to sign up to run it?</summary>
-            <div class="faq-body">
-              No. The optimizer runs and shows your result with just a URL. An email is optional — it's only how we deliver the full report and the winning copy to your inbox.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>It optimized one page. What about my whole brand?</summary>
-            <div class="faq-body">
-              That's the Metricus Snapshot: a one-time audit of how AI answers 200+ buyer questions about your entire business, traced to the source pages, with every fix implemented for you — delivered in 24 hours for $499. The free optimizer covers one page; the Snapshot covers everything.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>Should I even care about AI search?</summary>
-            <div class="faq-body">
-              If your buyers research with category language — comparisons, specs, procurement criteria — that research increasingly starts inside AI assistants, above the Google links. The free optimizer tells you in minutes whether AI currently recommends you or sends buyers to a competitor, and rewrites the page so it does.
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-
-  <!-- Site Footer -->
-  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p>
-      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-        <a href="/methodology/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Methodology</a>
-        <a href="/pricing/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
-        <a href="/blog/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Learn</a>
-        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
-        <a href="/results/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
-        <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
-        <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
-        <a href="/privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a>
-        <a href="/terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a>
-        <a href="mailto:metricusapp@gmail.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="/js/reader-pulse-b.js" defer></script>
+<footer class="foot">
+  <span>Metricus</span>
+  <a href="/ai-visibility-optimizer-tool/">Open the tool</a>
+  <a href="/blog/">Learn</a>
+  <a href="/methodology/">How it works</a>
+  <a href="/results/">Results</a>
+  <a href="/for-agencies/">For agencies</a>
+  <a href="/about/">About</a>
+  <a href="/press/">Press</a>
+  <a href="/support/">Support</a>
+  <a href="/privacy-policy/">Privacy</a>
+  <a href="/terms-of-service/">Terms</a>
+  <a href="mailto:metricusapp@gmail.com">Contact</a>
+  <span class="date">Updated September 2026</span>
+</footer>
+<script src="/landing/landing.js?v=4" defer></script>
+<script src="/js/reader-pulse-b.js" defer></script>
 </body>
 </html>

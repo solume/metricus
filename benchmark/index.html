@@ -11,11 +11,11 @@
   <meta property="og:description" content="See your AI visibility score in 60 seconds. Free benchmark against 100,000+ real brands.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://metricusapp.com/benchmark/">
-  <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Free AI Visibility Benchmark">
   <meta name="twitter:description" content="See your AI visibility score in 60 seconds. Free benchmark against 100,000+ real brands.">
-  <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
+  <meta name="twitter:image" content="https://metricusapp.com/landing/img/og.jpg">
 
   <!-- Google Tag Manager -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
@@ -29,14 +29,8 @@
     })(window, document, "clarity", "script", "w70oz7g1k3");
   </script>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Material Symbols -->
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -58,12 +52,7 @@
             'slate-text': '#0F172A',
             'slate-muted': '#64748B',
           },
-          fontFamily: {
-            display: ['Newsreader', 'serif'],
-            sans: ['Inter', 'sans-serif'],
-            body: ['Public Sans', 'sans-serif'],
-            headline: ['Newsreader', 'serif'],
-          },
+          fontFamily: { display: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'], sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'], body: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'], headline: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'] },
           borderRadius: {
             none: '0px', sm: '0px', DEFAULT: '0px', md: '0px',
             lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px',
@@ -85,25 +74,14 @@
 
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       background-color: #fafbfc;
       color: #0F172A;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
-    .font-display { font-family: 'Newsreader', serif; }
-    .font-body-sans { font-family: 'Public Sans', sans-serif; }
-    .bg-grid-motion {
-      background-image: radial-gradient(#F1F5F9 1.5px, transparent 1.5px);
-      background-size: 40px 40px;
-      will-change: transform;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-    }
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-    }
-    .visually-hidden {
+    .font-display { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .font-body-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }.visually-hidden {
       position: absolute;
       width: 1px;
       height: 1px;
@@ -128,9 +106,6 @@
 </head>
 <body class="min-h-screen flex items-center justify-center relative overflow-x-hidden">
 
-  <!-- Ambient background grid for continuity with the rest of the site -->
-  <div class="absolute inset-0 bg-grid-motion animate-subtle-drift -z-10 pointer-events-none" aria-hidden="true"></div>
-
   <!-- Visually-hidden page H1 for semantic + crawler hygiene. Not rendered visibly per takeover design. -->
   <h1 class="visually-hidden">Free AI visibility benchmark for your brand</h1>
 
@@ -138,7 +113,7 @@
     <div data-landing-quiz></div>
     <noscript>
       <p class="max-w-[560px] mx-auto text-center text-[15px] text-slate-muted leading-relaxed px-6">
-        This benchmark requires JavaScript. If you can&rsquo;t enable it, visit metricusapp.com/get-report/ to order a full AI visibility report.
+        This benchmark requires JavaScript. If you can&rsquo;t enable it, visit metricusapp.com/ai-visibility-optimizer-tool/ to run the free check on your page.
       </p>
     </noscript>
   </main>

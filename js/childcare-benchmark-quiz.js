@@ -26,19 +26,17 @@
         active: 'Building benchmark for {footprint} {segment} {orgPlural}…'
       },
       report: {
-        path: '/get-report/',
+        path: '/ai-visibility-optimizer-tool/',
         source: 'childcare-benchmark'
       },
       result: {
         leadLabel: 'Your benchmark result',
         titlePrefix: 'You landed in the ',
         titleSuffix: '.',
-        primaryCta: 'See what AI actually says about my center',
-        secondaryCta: 'See a sample report',
-        sampleReportUrl: '/sample-ai-visibility-report/',
+        primaryCta: 'See what AI says about my center',
         emailTitle: 'Send me this benchmark result',
         emailCta: 'Send me this result',
-        emailNote: 'This sends your benchmark summary only. The full Metricus report is a separate audit.',
+        emailNote: 'This sends your benchmark summary only.',
         emailThanks: 'Benchmark summary request received.',
         notePlaceholder: 'What\'s one wrong thing AI gets wrong most often about your center or category? (optional)',
         guardLine: 'This benchmark estimates your likely visibility pattern. It does not show the exact parent prompts where you disappear, the chains replacing you, or the source pages driving wrong answers. That is what the Metricus report measures.'

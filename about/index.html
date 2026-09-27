@@ -10,12 +10,12 @@
   <meta property="og:title" content="About Metricus — The Data Layer Between AI and Business">
   <meta property="og:description" content="Metricus is the data layer between AI and business. Built by researchers in recommender systems and information retrieval.">
   <meta property="og:url" content="https://metricusapp.com/about/">
-  <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
+  <meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
   <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="About Metricus — The Data Layer Between AI and Business">
   <meta name="twitter:description" content="Metricus is the data layer between AI and business. Built by researchers in recommender systems and information retrieval.">
-  <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
+  <meta name="twitter:image" content="https://metricusapp.com/landing/img/og.jpg">
 
   <script type="application/ld+json">
   {
@@ -42,17 +42,7 @@
     "areaServed": {
       "@type": "Place",
       "name": "Worldwide"
-    },
-    "makesOffer": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "AI Visibility Report",
-          "description": "Comprehensive measurement of how AI represents a business across hundreds of queries, with statistical analysis and actionable recommendations."
-        }
-      }
-    ]
+    }
   }
   </script>
   <script type="application/ld+json">
@@ -76,10 +66,6 @@
   </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,300;1,6..72,400;1,6..72,500&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
@@ -106,9 +92,11 @@
             lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px', full: '0px',
           },
           fontFamily: {
-            headline: ['Newsreader', 'serif'],
-            body: ['Public Sans', 'sans-serif'],
-            label: ['Public Sans', 'sans-serif'],
+            display: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+            body: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+            headline: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+            label: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
           },
         },
       },
@@ -117,156 +105,36 @@
   <style>
     * { border-radius: 0px !important; }
     body {
-      font-family: 'Public Sans', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       background-color: #f7f9fb;
       color: #2a3439;
-    }
-    .bg-grid {
-      background-image:
-        linear-gradient(rgba(81,95,116,0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(81,95,116,0.05) 1px, transparent 1px);
-      background-size: 48px 48px;
-    }
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-    }
-  </style>
-<style>
-  /* nav optimizer field */
-  .navopt{display:none;position:relative}
-  .navopt-wrap{position:relative;overflow:hidden;display:flex;align-items:stretch;border:1px solid #cbd2dc;background:#fff;transition:border-color .3s}
-  .navopt-tag{display:flex;align-items:center;padding:0 12px;background:#f3f4f6;border-right:1px solid #d1d5db;
-    font-size:11px;font-weight:600;letter-spacing:.06em;color:#374151;white-space:nowrap;user-select:none;transition:background .3s,color .3s}
-  .navopt-wrap::after{content:'';position:absolute;top:0;bottom:0;left:0;width:200%;pointer-events:none;
-    background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.45) 50%,transparent 60%);
-    transform:translateX(-100%)}
-  .navopt.sweep .navopt-wrap::after{animation:navopt-sweep 1.2s ease-in-out}
-  @keyframes navopt-sweep{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
-  .navopt input[name=url]{flex:1;min-width:0;border:0;outline:none;padding:0 12px;font-size:14px;background:transparent;color:#111827}
-  .navopt input[name=url]::placeholder{color:#6b7280}
-  .navopt-wrap:focus-within{box-shadow:0 0 0 2px rgba(81,95,116,.35)}
-  .navopt button{border:0;background:#515F74;color:#fff;font-size:13px;font-weight:600;padding:0 13px;cursor:pointer;
-    white-space:nowrap;font-family:inherit;margin:4px 4px 4px 0;align-self:stretch;transition:background .25s,box-shadow .25s}
-  .navopt button:hover{background:#414d61}
-  .navopt.scrolled .navopt-wrap{border-color:#9aa6b8}
-  .navopt.scrolled .navopt-tag{background:#e9edf4;color:#515F74}
-  @keyframes navopt-pulse{0%{transform:scale(1)}45%{transform:scale(1.045)}100%{transform:scale(1)}}
-  .navopt.pulse button{animation:navopt-pulse .45s ease-in-out}
-  .navopt-hint{position:absolute;top:calc(100% + 8px);left:0;right:0;z-index:60;
-    background:#fff;border:1px solid #cbd2dc;box-shadow:0 6px 18px rgba(17,24,39,.08);
-    padding:9px 12px;font-size:12.5px;line-height:1.5;color:#374151;
-    opacity:0;visibility:hidden;transition:opacity .18s ease;pointer-events:none}
-  .navopt.show-hint:focus-within .navopt-hint{opacity:1;visibility:visible}
-  @media (prefers-reduced-motion:reduce){
-    .navopt-wrap::after{animation:none!important}
-    .navopt.pulse button{animation:none!important}
-  }
-  .navopt .bshort{display:none}
-  @media (min-width:900px){
-    .navopt-desktop{display:block;flex:1;min-width:360px;max-width:520px;margin-left:28px}
-    .navopt-desktop .navopt-wrap{height:40px}
-    .navopt-mobile{display:none}
-  }
-  @media (min-width:900px) and (max-width:1120px){
-    .navopt-desktop{min-width:280px}
-    .navopt-desktop .navopt-tag{display:none}
-  }
-  @media (max-width:899.98px){
-    .navopt-mobile{display:block;margin-top:64px;padding:6px 12px}
-    .navopt-mobile .navopt-wrap{height:44px}
-    .navopt-mobile .navopt-tag{padding:0 9px;font-size:10.5px}
-    .navopt-mobile button .blong{display:none}
-    .navopt-mobile button .bshort{display:inline}
-    .navopt-hint{display:none}
-  }
-</style>
+    }</style>
 </head>
-<body class="bg-surface bg-grid antialiased">
+<body class="bg-surface antialiased">
 
   <!-- Site Nav -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
-      <a href="/" class="flex items-center gap-2 group" aria-label="Metricus home">
-        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
-        </svg>
-        <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
-      </a>
-      <form class="navopt navopt-desktop" action="/ai-visibility-optimizer-tool/" method="get" novalidate>
-        <div class="navopt-wrap">
-          <span class="navopt-tag" aria-hidden="true">FREE&nbsp;·&nbsp;2&nbsp;MIN</span>
-          <input name="url" type="url" inputmode="url" autocapitalize="none" autocorrect="off" spellcheck="false"
-            placeholder="yourdomain.com/pricing"
-            aria-label="Type yourdomain.com/pricing and get your page optimized in minutes — free" aria-describedby="navopt-hint-d">
-          <input type="hidden" name="src" value="nav--about">
-          <button type="submit"><span class="blong">Optimize page</span><span class="bshort">Optimize</span></button>
-        </div>
-        <div class="navopt-hint" role="tooltip" id="navopt-hint-d">Tests your page on real buyer questions — and hands you the version that wins. Free, ~2 min.</div>
-      </form>
-
-      <div class="hidden md:flex items-center gap-8">
-        <a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Methodology</a>
-        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
-        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Learn</a>
-        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
-        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-outline-variant/30">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 gap-4">
+      <a href="/" class="text-on-surface font-semibold" aria-label="Metricus home">Metricus <span class="font-normal text-on-surface-variant">Optimizer</span></a>
+      <div class="flex items-center gap-5">
+        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface">Learn</a>
+        <a href="/ai-visibility-optimizer-tool/" class="bg-primary text-on-primary text-sm font-semibold px-4 py-2.5 hover:bg-primary-dim">Open the tool</a>
       </div>
-      <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
-        <span class="material-symbols-outlined">menu</span>
-      </button>
     </div>
-  </nav>
-
-  <form class="navopt navopt-mobile" action="/ai-visibility-optimizer-tool/" method="get" novalidate>
-    <div class="navopt-wrap">
-      <span class="navopt-tag" aria-hidden="true">FREE&nbsp;·&nbsp;2&nbsp;MIN</span>
-      <input name="url" type="url" inputmode="url" autocapitalize="none" autocorrect="off" spellcheck="false"
-        placeholder="yourdomain.com/pricing"
-        aria-label="Type yourdomain.com/pricing and get your page optimized in minutes — free">
-      <input type="hidden" name="src" value="nav--about">
-      <button type="submit"><span class="blong">Optimize page</span><span class="bshort">Optimize</span></button>
-    </div>
-  </form>
+  </header>
 
 
-  <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
-    <div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div>
-    <nav class="absolute top-0 right-0 w-72 h-full bg-surface-container-lowest shadow-xl flex flex-col pt-6 px-6">
-      <button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu">
-        <span class="material-symbols-outlined">close</span>
-      </button>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">Methodology</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/">Pricing</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
-    </nav>
-  </div>
-  <script>
-    (function(){
-      var btn=document.getElementById('mobile-menu-btn');
-      var menu=document.getElementById('mobile-menu');
-      var close=document.getElementById('mobile-menu-close');
-      var backdrop=document.getElementById('mobile-menu-backdrop');
-      if(!btn||!menu)return;
-      function open(){menu.classList.remove('hidden');menu.setAttribute('aria-hidden','false');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
-      function shut(){menu.classList.add('hidden');menu.setAttribute('aria-hidden','true');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
-      btn.addEventListener('click',open);
-      if(close)close.addEventListener('click',shut);
-      if(backdrop)backdrop.addEventListener('click',shut);
-    })();
-  </script>
+
 
   <!-- Hero -->
   <section class="pt-32 pb-16 px-6 lg:px-8 max-w-7xl mx-auto">
-    <p class="uppercase tracking-widest text-xs font-label font-medium text-primary mb-6">About Metricus</p>
-    <h1 class="font-headline font-light text-5xl md:text-7xl text-on-surface leading-[0.95] mb-10">
+    <p class="text-xs font-label font-medium text-primary mb-6">About Metricus</p>
+    <h1 class="font-headline text-5xl md:text-7xl text-on-surface leading-[0.95] mb-10">
       The data layer between<br><em>AI and business.</em>
     </h1>
     <div class="max-w-3xl md:w-7/12">
       <p class="text-on-surface-variant text-lg leading-relaxed">
-        Metricus measures how AI represents businesses and makes that data actionable for everyone. A one-time <a href="/pricing/" class="text-primary underline underline-offset-2 hover:text-on-surface transition-colors">AI visibility report</a> for B2B SMBs — $499. PDF plus the actual drop-in files you ship. Curated by AI experts. Delivered in 24 hours. Published <a href="/methodology/" class="text-primary underline underline-offset-2 hover:text-on-surface transition-colors">methodology</a>.
+        Metricus measures how AI represents businesses and makes that data actionable for everyone. The <a href="/ai-visibility-optimizer-tool/" class="text-primary underline underline-offset-2 hover:text-on-surface transition-colors">free AI visibility optimizer</a> takes a page URL, shows what the major AI platforms answer when that page is the source, and proposes rewrites that change the answer. Free, no signup, no card. How it works: <a href="/methodology/" class="text-primary underline underline-offset-2 hover:text-on-surface transition-colors">what you put in, what you get back</a>.
       </p>
     </div>
   </section>
@@ -275,14 +143,14 @@
   <section class="border-t border-outline-variant/40 py-20 lg:py-24 px-6 lg:px-8 bg-surface-container-lowest">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
       <div class="lg:col-span-5">
-        <p class="uppercase tracking-widest text-xs font-label font-medium text-primary mb-4">The team</p>
-        <h2 class="font-headline font-light text-4xl md:text-5xl text-on-surface leading-[1.02] mb-6">
+        <p class="text-xs font-label font-medium text-primary mb-4">The team</p>
+        <h2 class="font-headline text-4xl md:text-5xl text-on-surface leading-[1.02] mb-6">
           Recommender systems<br><em>and AI researchers.</em>
         </h2>
       </div>
       <div class="lg:col-span-7 space-y-5">
         <p class="text-on-surface-variant text-base leading-relaxed">
-          Metricus was founded by researchers whose work spans recommender systems, information retrieval, natural language processing, and applied machine learning. Before building Metricus, the team spent over a decade studying the mechanisms that determine what algorithmic systems surface &mdash; and what they bury.
+          Metricus was founded by researchers whose work spans recommender systems, information retrieval, natural language processing, and applied machine learning. Before building Metricus, the team spent over a decade studying the mechanisms that determine what algorithmic systems surface, and what they bury.
         </p>
         <p class="text-on-surface-variant text-base leading-relaxed">
           When large language models became the new interface layer between consumers and businesses, we recognized the problem immediately: the same dynamics that govern search ranking and recommendation feeds now govern AI-generated answers.
@@ -294,35 +162,31 @@
   <!-- Expertise -->
   <section class="border-t border-outline-variant/40 py-20 lg:py-24 px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
-      <p class="uppercase tracking-widest text-xs font-label font-medium text-primary mb-4">Team expertise</p>
-      <h2 class="font-headline font-light text-4xl md:text-5xl text-on-surface leading-[1.02] mb-14">
+      <p class="text-xs font-label font-medium text-primary mb-4">Team expertise</p>
+      <h2 class="font-headline text-4xl md:text-5xl text-on-surface leading-[1.02] mb-14">
         What the team <em>has worked on.</em>
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant/30">
         <div class="bg-surface p-8 lg:p-10">
-          <span class="material-symbols-outlined text-primary mb-4 block" style="font-size:28px">model_training</span>
           <h3 class="font-headline text-lg text-on-surface mb-3">Recommender Systems</h3>
           <p class="text-on-surface-variant text-sm leading-relaxed">
             Collaborative filtering, content-based ranking, hybrid recommendation architectures, and the evaluation methods used to measure their accuracy.
           </p>
         </div>
         <div class="bg-surface p-8 lg:p-10">
-          <span class="material-symbols-outlined text-primary mb-4 block" style="font-size:28px">search_insights</span>
           <h3 class="font-headline text-lg text-on-surface mb-3">Information Retrieval</h3>
           <p class="text-on-surface-variant text-sm leading-relaxed">
             Retrieval-augmented generation, source selection and ranking in generative systems, and how grounding data propagates into AI-generated answers.
           </p>
         </div>
         <div class="bg-surface p-8 lg:p-10">
-          <span class="material-symbols-outlined text-primary mb-4 block" style="font-size:28px">translate</span>
           <h3 class="font-headline text-lg text-on-surface mb-3">Natural Language Processing</h3>
           <p class="text-on-surface-variant text-sm leading-relaxed">
             Entity recognition, semantic similarity, and sentiment and stance classification in generated text.
           </p>
         </div>
         <div class="bg-surface p-8 lg:p-10">
-          <span class="material-symbols-outlined text-primary mb-4 block" style="font-size:28px">query_stats</span>
           <h3 class="font-headline text-lg text-on-surface mb-3">Statistical Methods</h3>
           <p class="text-on-surface-variant text-sm leading-relaxed">
             Non-parametric hypothesis testing, bootstrap confidence intervals, and effect size estimation for stochastic text outputs.
@@ -331,7 +195,7 @@
       </div>
 
       <p class="text-on-surface-variant text-base leading-relaxed mt-10 max-w-4xl">
-        Every methodological choice in a Metricus report &mdash; how we design query sets, interpret outputs, and quantify confidence &mdash; traces directly to this research background.
+        The way the optimizer reads a page and measures an answer comes out of this research background.
       </p>
     </div>
   </section>
@@ -339,11 +203,11 @@
   <!-- Contact -->
   <section class="border-t border-outline-variant/40 py-16 lg:py-20 px-6 lg:px-8 bg-surface-container-lowest">
     <div class="max-w-7xl mx-auto text-center">
-      <h2 class="font-headline font-light text-3xl md:text-4xl text-on-surface leading-[1.1] mb-4">
+      <h2 class="font-headline text-3xl md:text-4xl text-on-surface leading-[1.1] mb-4">
         Get in touch.
       </h2>
       <p class="text-on-surface-variant text-base leading-relaxed max-w-xl mx-auto mb-8">
-        Questions about our methodology, partnership inquiries, or press requests.
+        Questions, partnership inquiries, or press requests.
       </p>
       <a href="mailto:metricusapp@gmail.com" class="inline-block bg-primary text-on-primary text-sm font-medium px-8 py-3 hover:bg-primary-dim transition-colors">metricusapp@gmail.com</a>
     </div>
@@ -351,106 +215,23 @@
 
   <!-- Site Footer -->
   <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p>
-      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-        <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
-        <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
-        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
-        <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
-        <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
-        <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
-        <a href="/privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a>
-        <a href="/terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a>
-        <a href="mailto:metricusapp@gmail.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
-      </div>
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-on-surface-variant">
+      <span class="text-on-surface font-semibold">Metricus</span>
+      <a href="/ai-visibility-optimizer-tool/" class="hover:text-on-surface">Open the tool</a>
+      <a href="/blog/" class="hover:text-on-surface">Learn</a>
+      <a href="/methodology/" class="hover:text-on-surface">How it works</a>
+      <a href="/results/" class="hover:text-on-surface">Results</a>
+      <a href="/for-agencies/" class="hover:text-on-surface">For agencies</a>
+      <a href="/about/" class="hover:text-on-surface">About</a>
+      <a href="/press/" class="hover:text-on-surface">Press</a>
+      <a href="/support/" class="hover:text-on-surface">Support</a>
+      <a href="/privacy-policy/" class="hover:text-on-surface">Privacy</a>
+      <a href="/terms-of-service/" class="hover:text-on-surface">Terms</a>
+      <a href="mailto:metricusapp@gmail.com" class="hover:text-on-surface">Contact</a>
+      <span class="ml-auto">&copy; 2026 Metricus</span>
     </div>
   </footer>
 
   <script src="/js/reader-pulse-b.js" defer></script>
-<script>
-  (function(){
-    var forms=[].slice.call(document.querySelectorAll('.navopt'));
-    if(!forms.length)return;
-    var inputs=forms.map(function(f){return f.querySelector('input[name=url]')}).filter(Boolean);
-    var reduced=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var retired=false;
-    var BASE='yourdomain.com/';
-    var EX=["pricing", "product", "services"];
-
-    function retire(){
-      retired=true;
-      forms.forEach(function(f){f.classList.remove('sweep','pulse')});
-      inputs.forEach(function(i){i.placeholder=BASE+EX[0]});
-    }
-    inputs.forEach(function(i){
-      i.addEventListener('focus',retire,{once:true});
-      i.addEventListener('input',retire,{once:true});
-    });
-    forms.forEach(function(f){f.classList.add('show-hint')});
-    inputs.forEach(function(i){
-      i.addEventListener('input',function(){if(i.value)forms.forEach(function(f){f.classList.remove('show-hint')})});
-    });
-
-    function sweep(){
-      if(retired||reduced)return;
-      forms.forEach(function(f){f.classList.remove('sweep');void f.offsetWidth;f.classList.add('sweep')});
-    }
-    setTimeout(sweep,2000);
-
-    if(reduced){inputs.forEach(function(i){i.placeholder=BASE+EX[0]})}
-    else{
-      inputs.forEach(function(i){i.placeholder=BASE});
-      var ei=0,ci=0,mode='type',timer=null;
-      function setPh(t){inputs.forEach(function(i){i.placeholder=t})}
-      function tick(){
-        if(retired)return;
-        if(document.hidden){timer=setTimeout(tick,800);return}
-        var word=EX[ei];
-        if(mode==='type'){
-          ci++;setPh(BASE+word.slice(0,ci));
-          if(ci>=word.length){mode='hold';timer=setTimeout(tick,7000);return}
-          timer=setTimeout(tick,45);
-        }else if(mode==='hold'){mode='del';timer=setTimeout(tick,18);}
-        else{
-          ci--;setPh(BASE+word.slice(0,ci));
-          if(ci<=0){ei=(ei+1)%EX.length;mode='type';timer=setTimeout(tick,350);return}
-          timer=setTimeout(tick,18);
-        }
-      }
-      timer=setTimeout(tick,600);
-    }
-
-    var pulsed=false,glinted60=false,scrolledOn=false;
-    window.addEventListener('scroll',function(){
-      var y=window.scrollY;
-      if(!scrolledOn&&y>80){scrolledOn=true;forms.forEach(function(f){f.classList.add('scrolled')})}
-      var max=document.documentElement.scrollHeight-window.innerHeight;
-      if(max<=0)return;
-      var d=y/max;
-      if(!pulsed&&!retired&&!reduced&&d>=0.35){pulsed=true;forms.forEach(function(f){f.classList.add('pulse')});setTimeout(function(){forms.forEach(function(f){f.classList.remove('pulse')})},600)}
-      if(!glinted60&&d>=0.6){glinted60=true;sweep()}
-    },{passive:true});
-
-    if(window.matchMedia&&matchMedia('(pointer: fine)').matches){
-      var btn=null,rafPending=false,lastE=null;
-      document.addEventListener('mousemove',function(e){
-        lastE=e;
-        if(rafPending)return;rafPending=true;
-        requestAnimationFrame(function(){
-          rafPending=false;
-          if(!btn){forms.forEach(function(f){if(getComputedStyle(f).display!=='none'&&!btn)btn=f.querySelector('button')});if(!btn)return;}
-          var r=btn.getBoundingClientRect();
-          var dx=Math.max(r.left-lastE.clientX,0,lastE.clientX-r.right);
-          var dy=Math.max(r.top-lastE.clientY,0,lastE.clientY-r.bottom);
-          var dist=Math.sqrt(dx*dx+dy*dy);
-          var t=Math.max(0,Math.min(1,1-dist/220));
-          btn.style.boxShadow=t>0?('0 1px '+(8*t)+'px rgba(81,95,116,'+(0.45*t)+')'):'';
-          btn.style.background=t>0?('rgb('+Math.round(81+20*t)+','+Math.round(95+18*t)+','+Math.round(116+22*t)+')'):'';
-        });
-      },{passive:true});
-    }
-  })();
-</script>
 </body>
 </html>

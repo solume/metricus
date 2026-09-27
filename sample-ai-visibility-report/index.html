@@ -1,832 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>What's in every Metricus Snapshot — sample structure | Metricus</title>
-  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://metricusapp.com/sample-ai-visibility-report/">
-  <meta name="description" content="The structure of every Metricus Snapshot. Part 1: where you're losing visibility. Part 2: the phased fix list. Appendices: llms.txt, page metadata, JSON-LD. $499 one-time, PDF plus the actual files you ship, 24-hour turnaround.">
-  <meta property="og:title" content="What's in every Metricus Snapshot — sample structure | Metricus">
-  <meta property="og:url" content="https://metricusapp.com/sample-ai-visibility-report/">
-  <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="What's in every Metricus Snapshot | Metricus">
-  <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","dateModified":"2026-05-17","itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://metricusapp.com/"},
-    {"@type":"ListItem","position":2,"name":"Sample Report","item":"https://metricusapp.com/sample-ai-visibility-report/"}
-  ]}
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "dateModified": "2026-05-17",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What does every Metricus Snapshot include?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Every Snapshot follows the same structure: Part 1 diagnoses where you're losing visibility (mention rate by buyer stage, painpoint-to-product gaps, sentiment, appearance economics, query patterns). Part 2 sequences the fixes (Phase A quick wins through Phase I measurement plan). Appendices deliver the actual drop-in files: llms.txt, robots.txt edits, page metadata specs, and JSON-LD schemas. PDF is 15–25 pages."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What do I get besides the PDF?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The actual files you ship — not just descriptions of what to fix. The Snapshot includes a ready-to-deploy llms.txt for your domain, the robots.txt edits, JSON-LD product/FAQPage schemas, slug/title/meta/H1 specs for new pages, and the page copy to add to existing pages. Named to match where they go on your site."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does it take to get my Snapshot?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Within 24 hours of submitting your website, brand name, and delivery email. Every Snapshot is curated by AI experts before delivery."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much is it?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "$499 one-time. No subscription. No tiers. Useful-report-or-refund guarantee."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I see a real example before ordering?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Enter your email below and we'll send you a redacted real Snapshot — every section filled in for an actual B2B SMB, with brand-specific identifiers anonymized. Free, no follow-up sequence."
-        }
-      }
-    ]
-  }
-  </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w70oz7g1k3");
-  </script>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
-  <script>
-    tailwind.config = {
-      theme: {
-        borderRadius: {
-          DEFAULT: '0px', none: '0px', sm: '0px', md: '0px',
-          lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px', full: '0px',
-        },
-        extend: {
-          colors: {
-            primary: '#515F74',
-            'on-primary': '#f6f7ff',
-            surface: '#f7f9fb',
-            'surface-container-low': '#f0f4f7',
-            'surface-container': '#e8eff3',
-            'surface-container-lowest': '#ffffff',
-            'surface-container-highest': '#d9e4ea',
-            'on-surface': '#2a3439',
-            'on-surface-variant': '#566166',
-            outline: '#717c82',
-            'outline-variant': '#a9b4b9',
-            'on-primary-fixed': '#324054',
-            'primary-dim': '#455368',
-            'surface-variant': '#d9e4ea',
-            'surface-container-high': '#e1e9ee',
-            'primary-fixed': '#d5e3fd',
-            'primary-fixed-dim': '#c7d5ee',
-          },
-          fontFamily: {
-            headline: ['Newsreader', 'serif'],
-            body: ['Public Sans', 'sans-serif'],
-            label: ['Public Sans', 'sans-serif'],
-          },
-        },
-      },
-    }
-  </script>
-  <style>
-    body { font-family: 'Public Sans', sans-serif; }
-    .bg-grid {
-      background-image:
-        linear-gradient(to right, rgba(113,124,130,0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(113,124,130,0.05) 1px, transparent 1px);
-      background-size: 40px 40px;
-    }
-    .phase-num {
-      font-family: 'Newsreader', serif;
-      font-style: italic;
-      font-weight: 300;
-    }
-  </style>
-<style>
-  /* nav optimizer field */
-  .navopt{display:none;position:relative}
-  .navopt-wrap{position:relative;overflow:hidden;display:flex;align-items:stretch;border:1px solid #cbd2dc;background:#fff;transition:border-color .3s}
-  .navopt-tag{display:flex;align-items:center;padding:0 12px;background:#f3f4f6;border-right:1px solid #d1d5db;
-    font-size:11px;font-weight:600;letter-spacing:.06em;color:#374151;white-space:nowrap;user-select:none;transition:background .3s,color .3s}
-  .navopt-wrap::after{content:'';position:absolute;top:0;bottom:0;left:0;width:200%;pointer-events:none;
-    background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.45) 50%,transparent 60%);
-    transform:translateX(-100%)}
-  .navopt.sweep .navopt-wrap::after{animation:navopt-sweep 1.2s ease-in-out}
-  @keyframes navopt-sweep{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
-  .navopt input[name=url]{flex:1;min-width:0;border:0;outline:none;padding:0 12px;font-size:14px;background:transparent;color:#111827}
-  .navopt input[name=url]::placeholder{color:#6b7280}
-  .navopt-wrap:focus-within{box-shadow:0 0 0 2px rgba(81,95,116,.35)}
-  .navopt button{border:0;background:#515F74;color:#fff;font-size:13px;font-weight:600;padding:0 13px;cursor:pointer;
-    white-space:nowrap;font-family:inherit;margin:4px 4px 4px 0;align-self:stretch;transition:background .25s,box-shadow .25s}
-  .navopt button:hover{background:#414d61}
-  .navopt.scrolled .navopt-wrap{border-color:#9aa6b8}
-  .navopt.scrolled .navopt-tag{background:#e9edf4;color:#515F74}
-  @keyframes navopt-pulse{0%{transform:scale(1)}45%{transform:scale(1.045)}100%{transform:scale(1)}}
-  .navopt.pulse button{animation:navopt-pulse .45s ease-in-out}
-  .navopt-hint{position:absolute;top:calc(100% + 8px);left:0;right:0;z-index:60;
-    background:#fff;border:1px solid #cbd2dc;box-shadow:0 6px 18px rgba(17,24,39,.08);
-    padding:9px 12px;font-size:12.5px;line-height:1.5;color:#374151;
-    opacity:0;visibility:hidden;transition:opacity .18s ease;pointer-events:none}
-  .navopt.show-hint:focus-within .navopt-hint{opacity:1;visibility:visible}
-  @media (prefers-reduced-motion:reduce){
-    .navopt-wrap::after{animation:none!important}
-    .navopt.pulse button{animation:none!important}
-  }
-  .navopt .bshort{display:none}
-  @media (min-width:900px){
-    .navopt-desktop{display:block;flex:1;min-width:360px;max-width:520px;margin-left:28px}
-    .navopt-desktop .navopt-wrap{height:40px}
-    .navopt-mobile{display:none}
-  }
-  @media (min-width:900px) and (max-width:1120px){
-    .navopt-desktop{min-width:280px}
-    .navopt-desktop .navopt-tag{display:none}
-  }
-  @media (max-width:899.98px){
-    .navopt-mobile{display:block;margin-top:64px;padding:6px 12px}
-    .navopt-mobile .navopt-wrap{height:44px}
-    .navopt-mobile .navopt-tag{padding:0 9px;font-size:10.5px}
-    .navopt-mobile button .blong{display:none}
-    .navopt-mobile button .bshort{display:inline}
-    .navopt-hint{display:none}
-  }
-</style>
-</head>
-<body class="bg-surface text-on-surface bg-grid antialiased">
-
-  <!-- Site Nav -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
-      <a href="/" class="flex items-center gap-2 group" aria-label="Metricus home">
-        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
-        </svg>
-        <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
-      </a>
-      <form class="navopt navopt-desktop" action="/ai-visibility-optimizer-tool/" method="get" novalidate>
-        <div class="navopt-wrap">
-          <span class="navopt-tag" aria-hidden="true">FREE&nbsp;·&nbsp;2&nbsp;MIN</span>
-          <input name="url" type="url" inputmode="url" autocapitalize="none" autocorrect="off" spellcheck="false"
-            placeholder="yourdomain.com/pricing"
-            aria-label="Type yourdomain.com/pricing and get your page optimized in minutes — free" aria-describedby="navopt-hint-d">
-          <input type="hidden" name="src" value="nav--sample-ai-visibility-report">
-          <button type="submit"><span class="blong">Optimize page</span><span class="bshort">Optimize</span></button>
-        </div>
-        <div class="navopt-hint" role="tooltip" id="navopt-hint-d">Tests your page on real buyer questions — and hands you the version that wins. Free, ~2 min.</div>
-      </form>
-
-      <div class="hidden md:flex items-center gap-8">
-        <a href="/methodology/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Methodology</a>
-        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
-        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Learn</a>
-        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
-        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
-      </div>
-      <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
-        <span class="material-symbols-outlined">menu</span>
-      </button>
-    </div>
-  </nav>
-
-  <form class="navopt navopt-mobile" action="/ai-visibility-optimizer-tool/" method="get" novalidate>
-    <div class="navopt-wrap">
-      <span class="navopt-tag" aria-hidden="true">FREE&nbsp;·&nbsp;2&nbsp;MIN</span>
-      <input name="url" type="url" inputmode="url" autocapitalize="none" autocorrect="off" spellcheck="false"
-        placeholder="yourdomain.com/pricing"
-        aria-label="Type yourdomain.com/pricing and get your page optimized in minutes — free">
-      <input type="hidden" name="src" value="nav--sample-ai-visibility-report">
-      <button type="submit"><span class="blong">Optimize page</span><span class="bshort">Optimize</span></button>
-    </div>
-  </form>
-
-
-  <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
-    <div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div>
-    <nav class="absolute top-0 right-0 w-72 h-full bg-surface-container-lowest shadow-xl flex flex-col pt-6 px-6">
-      <button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu">
-        <span class="material-symbols-outlined">close</span>
-      </button>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">Methodology</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/">Pricing</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
-    </nav>
-  </div>
-
-  <script>
-    (function(){
-      var btn=document.getElementById('mobile-menu-btn');
-      var menu=document.getElementById('mobile-menu');
-      var close=document.getElementById('mobile-menu-close');
-      var backdrop=document.getElementById('mobile-menu-backdrop');
-      if(!btn||!menu)return;
-      function open(){menu.classList.remove('hidden');menu.setAttribute('aria-hidden','false');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
-      function shut(){menu.classList.add('hidden');menu.setAttribute('aria-hidden','true');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
-      btn.addEventListener('click',open);
-      if(close)close.addEventListener('click',shut);
-      if(backdrop)backdrop.addEventListener('click',shut);
-    })();
-  </script>
-
-
-  <!-- ===== HERO ===== -->
-  <header class="max-w-7xl mx-auto px-6 pt-32 pb-12">
-    <div class="grid grid-cols-12 items-end gap-8">
-      <div class="col-span-12 md:col-span-8">
-        <p class="text-xs uppercase tracking-[0.2em] text-outline mb-6 font-label">Sample deliverable</p>
-        <h1 class="text-5xl md:text-7xl font-headline italic leading-[0.95] text-on-surface">What's in every<br/>Metricus Snapshot.</h1>
-      </div>
-      <div class="col-span-12 md:col-span-4 border-l border-outline-variant pl-8 pb-2">
-        <p class="text-base font-body text-on-surface-variant leading-relaxed mb-8">Every Snapshot follows the same structure. Part 1 diagnoses where you're losing visibility. Part 2 sequences the fixes. The appendices give you the actual files you ship.</p>
-        <a href="/get-report/" class="bg-primary text-on-primary px-6 py-3 text-xs font-label uppercase tracking-widest hover:bg-primary-dim transition-colors inline-flex items-center gap-2">
-          Get your report — $499
-          <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </a>
-      </div>
-    </div>
-    <p class="mt-8 text-xs uppercase tracking-[0.2em] text-outline font-label">15–25 page PDF · plus drop-in files (llms.txt, schemas, metadata, page copy) · curated by AI experts · 24-hour turnaround</p>
-  </header>
-
-
-  <!-- ===== TABLE OF CONTENTS ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-12">
-    <div class="bg-surface-container-lowest border border-outline-variant/20 p-8 md:p-10">
-      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-6">Every Snapshot contains</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <p class="font-headline italic text-xl text-on-surface mb-3">Part 1</p>
-          <p class="text-sm text-on-surface mb-2 font-semibold">Where you're losing visibility</p>
-          <p class="text-xs text-on-surface-variant leading-relaxed">Five diagnostic sections covering mention rate by buyer stage, painpoint-to-product gaps, AI sentiment, appearance economics, and query patterns.</p>
-        </div>
-        <div>
-          <p class="font-headline italic text-xl text-on-surface mb-3">Part 2</p>
-          <p class="text-sm text-on-surface mb-2 font-semibold">Implementation to lift visibility</p>
-          <p class="text-xs text-on-surface-variant leading-relaxed">Phases A through I — sequenced from ship-in-a-day quick wins to the 60–90 day measurement plan.</p>
-        </div>
-        <div>
-          <p class="font-headline italic text-xl text-on-surface mb-3">Appendices</p>
-          <p class="text-sm text-on-surface mb-2 font-semibold">The actual files you ship</p>
-          <p class="text-xs text-on-surface-variant leading-relaxed">llms.txt, robots.txt edits, slug/title/meta/H1 specs for new pages, JSON-LD product and FAQPage schemas.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ===== PART 1 INTRO ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-6">
-    <div class="border-t-2 border-on-surface pt-8 pb-4">
-      <p class="text-xs uppercase tracking-[0.2em] text-primary font-label mb-3">Part 1</p>
-      <h2 class="font-headline italic text-4xl md:text-5xl text-on-surface leading-tight">Where you're losing visibility.</h2>
-      <p class="text-base text-on-surface-variant leading-relaxed mt-4 max-w-3xl font-body">200+ real buyer scenarios specific to your domain, vertical, and competitors. Run across the major AI systems. Each section below is one chapter of the diagnostic.</p>
-    </div>
-  </section>
-
-
-  <!-- ===== SECTION 1.1: How often you show up ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-4">
-    <div class="bg-surface-container-lowest p-10 md:p-14">
-      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-4">1.1 — From the report</p>
-      <h3 class="font-headline italic text-2xl md:text-3xl text-on-surface leading-tight mb-4">How often you show up.</h3>
-      <p class="text-base text-on-surface-variant leading-relaxed mb-6 font-body">Your overall surfacing rate across the buyer sample, broken down by where each buyer is in their journey — from casual exploration to spec shortlist. The funnel shape tells you whether the gap is awareness, comparison, or decision-stage.</p>
-
-      <div class="bg-surface-container-low p-6 md:p-8">
-        <table class="w-full text-left text-sm font-body">
-          <thead>
-            <tr class="text-xs uppercase tracking-[0.15em] text-outline font-label border-b border-outline-variant">
-              <th class="pb-3 pr-4 font-normal">Buyer stage</th>
-              <th class="pb-3 pr-4 font-normal">What it captures</th>
-              <th class="pb-3 font-normal">Reported as</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td class="py-3 pr-4 border-b border-outline-variant/20 text-on-surface">Just hit the pain</td><td class="py-3 pr-4 border-b border-outline-variant/20 text-on-surface-variant">Casual exploration, no vocabulary yet</td><td class="py-3 border-b border-outline-variant/20 text-on-surface-variant">Sample size · mentions · rate</td></tr>
-            <tr><td class="py-3 pr-4 border-b border-outline-variant/20 text-on-surface">Talking it out</td><td class="py-3 pr-4 border-b border-outline-variant/20 text-on-surface-variant">Plain-language prompts, no jargon</td><td class="py-3 border-b border-outline-variant/20 text-on-surface-variant">Sample size · mentions · rate</td></tr>
-            <tr><td class="py-3 pr-4 border-b border-outline-variant/20 text-on-surface">Researching</td><td class="py-3 pr-4 border-b border-outline-variant/20 text-on-surface-variant">Formal vocabulary, category-aware</td><td class="py-3 border-b border-outline-variant/20 text-on-surface-variant">Sample size · mentions · rate</td></tr>
-            <tr><td class="py-3 pr-4 border-b border-outline-variant/20 text-on-surface">Comparing</td><td class="py-3 pr-4 border-b border-outline-variant/20 text-on-surface-variant">Narrowing options between vendors</td><td class="py-3 border-b border-outline-variant/20 text-on-surface-variant">Sample size · mentions · rate</td></tr>
-            <tr><td class="py-3 pr-4 text-on-surface">Spec shortlist</td><td class="py-3 pr-4 text-on-surface-variant">Decision imminent, named criteria</td><td class="py-3 text-on-surface-variant">Sample size · mentions · rate</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <p class="text-sm text-on-surface-variant font-body mt-6"><strong class="text-on-surface">What this means →</strong> Where in the funnel the visibility gap actually lives — and which phase of the fix list addresses it.</p>
-    </div>
-  </section>
-
-
-  <!-- ===== SECTION 1.2: Painpoint → Solution ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-4">
-    <div class="bg-surface-container-lowest p-10 md:p-14">
-      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-4">1.2 — From the report</p>
-      <h3 class="font-headline italic text-2xl md:text-3xl text-on-surface leading-tight mb-4">Where the gaps are — painpoint → solution.</h3>
-      <p class="text-base text-on-surface-variant leading-relaxed mb-6 font-body">Every recurring buyer painpoint we observe, mapped to the product or page on your site that should answer it — and what's missing that prevents AI from making the connection.</p>
-
-      <div class="bg-surface-container-low p-6 md:p-8">
-        <table class="w-full text-left text-sm font-body">
-          <thead>
-            <tr class="text-xs uppercase tracking-[0.15em] text-outline font-label border-b border-outline-variant">
-              <th class="pb-3 pr-4 font-normal">Painpoint</th>
-              <th class="pb-3 pr-4 font-normal">Your product fit</th>
-              <th class="pb-3 pr-4 font-normal">What's missing</th>
-              <th class="pb-3 font-normal">Fix phase</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td class="py-3 pr-4 border-b border-outline-variant/20 text-on-surface-variant" colspan="4"><em>Each row pairs a real buyer-language painpoint with the page-level fix that closes it. Phase reference links to Part 2.</em></td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <p class="text-sm text-on-surface-variant font-body mt-6"><strong class="text-on-surface">What this means →</strong> Most B2B SMB catalogs already cover every painpoint. The gap is the page layer — content that lets AI connect a buyer's question to the matching product.</p>
-    </div>
-  </section>
-
-
-  <!-- ===== SECTION 1.3: How AI talks about you ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-4">
-    <div class="bg-surface-container-lowest p-10 md:p-14">
-      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-4">1.3 — From the report</p>
-      <h3 class="font-headline italic text-2xl md:text-3xl text-on-surface leading-tight mb-4">How AI talks about you when it does.</h3>
-      <p class="text-base text-on-surface-variant leading-relaxed mb-6 font-body">Sentiment and accuracy of every appearance: fabricated claims, wrong specs, hallucinated case studies. Plus the citation split — what percentage cites your own domain versus a reseller versus an independent publisher.</p>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline-variant/10 mt-6">
-        <div class="bg-surface-container-low p-6">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-3">Accuracy audit</p>
-          <p class="text-sm text-on-surface-variant leading-relaxed">Count of fabricated claims, wrong specs, and hallucinated case studies across the buyer sample.</p>
-        </div>
-        <div class="bg-surface-container-low p-6">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-3">Citation share</p>
-          <p class="text-sm text-on-surface-variant leading-relaxed">Percent of mentions citing your own domain, a reseller or partner, or an independent third-party publisher.</p>
-        </div>
-        <div class="bg-surface-container-low p-6">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-3">Positioning</p>
-          <p class="text-sm text-on-surface-variant leading-relaxed">How AI frames you against the category — niche specialist, primary option, or footnote.</p>
-        </div>
-      </div>
-
-      <p class="text-sm text-on-surface-variant font-body mt-6"><strong class="text-on-surface">What this means →</strong> Brand safety, editorial coverage, and the upside ceiling for awareness-stage queries.</p>
-    </div>
-  </section>
-
-
-  <!-- ===== SECTION 1.4: What each appearance is worth ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-4">
-    <div class="bg-surface-container-lowest p-10 md:p-14">
-      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-4">1.4 — From the report</p>
-      <h3 class="font-headline italic text-2xl md:text-3xl text-on-surface leading-tight mb-4">What each appearance is worth.</h3>
-      <p class="text-base text-on-surface-variant leading-relaxed mb-6 font-body">Two appearance shapes: a <em>citation</em> (AI cites a URL as a source) and a <em>recommendation</em> (AI explicitly names you inside its reply). The recommendation is worth roughly an order of magnitude more than a citation for converting an AI conversation into a lead. Each appearance type is reported with calibrated CTR and predicted lead rate.</p>
-
-      <div class="bg-surface-container-low p-6 md:p-8">
-        <table class="w-full text-left text-sm font-body">
-          <thead>
-            <tr class="text-xs uppercase tracking-[0.15em] text-outline font-label border-b border-outline-variant">
-              <th class="pb-3 pr-4 font-normal">Appearance type</th>
-              <th class="pb-3 pr-4 font-normal">Count</th>
-              <th class="pb-3 pr-4 font-normal">CTR (mean / median / p90)</th>
-              <th class="pb-3 font-normal">Predicted lead rate</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td class="py-3 pr-4 border-b border-outline-variant/20 text-on-surface">All citations (benchmark)</td><td class="py-3 pr-4 border-b border-outline-variant/20 text-on-surface-variant">—</td><td class="py-3 pr-4 border-b border-outline-variant/20 text-on-surface-variant">Reference baseline</td><td class="py-3 border-b border-outline-variant/20 text-on-surface-variant">—</td></tr>
-            <tr><td class="py-3 pr-4 border-b border-outline-variant/20 text-on-surface">All recommendations (benchmark)</td><td class="py-3 pr-4 border-b border-outline-variant/20 text-on-surface-variant">—</td><td class="py-3 pr-4 border-b border-outline-variant/20 text-on-surface-variant">~12× citation baseline</td><td class="py-3 border-b border-outline-variant/20 text-on-surface-variant">—</td></tr>
-            <tr><td class="py-3 pr-4 border-b border-outline-variant/20 text-on-surface">Your citations</td><td class="py-3 pr-4 border-b border-outline-variant/20 text-on-surface-variant">Filled in your report</td><td class="py-3 pr-4 border-b border-outline-variant/20 text-on-surface-variant">Delta vs all-citations</td><td class="py-3 border-b border-outline-variant/20 text-on-surface-variant">per 10,000 conversations</td></tr>
-            <tr><td class="py-3 pr-4 text-on-surface">Your recommendations</td><td class="py-3 pr-4 text-on-surface-variant">Filled in your report</td><td class="py-3 pr-4 text-on-surface-variant">Delta vs all-recommendations</td><td class="py-3 text-on-surface-variant">per 10,000 conversations</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <p class="text-sm text-on-surface-variant font-body mt-6"><strong class="text-on-surface">What this means →</strong> Whether your placement quality is the bottleneck, or your appearance frequency is. Drives whether Phase B (new pages) or Phase D (existing-page edits) is the higher-leverage move for you.</p>
-    </div>
-  </section>
-
-
-  <!-- ===== SECTION 1.5: What AI actually searches ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-12">
-    <div class="bg-surface-container-lowest p-10 md:p-14">
-      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-4">1.5 — From the report</p>
-      <h3 class="font-headline italic text-2xl md:text-3xl text-on-surface leading-tight mb-4">What AI actually searches.</h3>
-      <p class="text-base text-on-surface-variant leading-relaxed mb-6 font-body">The query patterns AI uses, where you currently surface, and your share of voice across direct category competitors.</p>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline-variant/10">
-        <div class="bg-surface-container-low p-6">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-3">Pattern map</p>
-          <p class="text-sm text-on-surface-variant leading-relaxed">The three to five query patterns AI uses most often — the highest-leverage phrasings to build pages around.</p>
-        </div>
-        <div class="bg-surface-container-low p-6">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-3">Where you show up</p>
-          <p class="text-sm text-on-surface-variant leading-relaxed">The queries you currently win, with the specific product or page each appearance is anchored to.</p>
-        </div>
-        <div class="bg-surface-container-low p-6">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-3">Brand voice share</p>
-          <p class="text-sm text-on-surface-variant leading-relaxed">Your share of voice across all buyer queries vs. your direct category competitors, named with percentages.</p>
-        </div>
-      </div>
-
-      <p class="text-sm text-on-surface-variant font-body mt-6"><strong class="text-on-surface">What this means →</strong> The exact phrasings to target with Phase B (new pages) and Phase D (existing-page H2/title edits).</p>
-    </div>
-  </section>
-
-
-  <!-- ===== PART 2 INTRO ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-6">
-    <div class="border-t-2 border-on-surface pt-8 pb-4">
-      <p class="text-xs uppercase tracking-[0.2em] text-primary font-label mb-3">Part 2</p>
-      <h2 class="font-headline italic text-4xl md:text-5xl text-on-surface leading-tight">Implementation to lift visibility.</h2>
-      <p class="text-base text-on-surface-variant leading-relaxed mt-4 max-w-3xl font-body">The fixes, sequenced by speed-to-impact. Phase A ships in a day. Phases B–D unfold over 4–6 weeks. Phases E–F gate the final indexing push. Phases G–I set the measurement frame.</p>
-    </div>
-  </section>
-
-
-  <!-- ===== PHASE LIST ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-12">
-    <div class="bg-surface-container-lowest">
-
-      <div class="grid grid-cols-12 gap-6 p-8 md:p-10 border-b border-outline-variant/20">
-        <div class="col-span-12 md:col-span-2"><span class="phase-num text-5xl md:text-6xl text-primary">A</span></div>
-        <div class="col-span-12 md:col-span-10">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Quick wins · ship in a day</p>
-          <h3 class="font-headline text-2xl text-on-surface mb-3">Three site-level fixes that compound across every page</h3>
-          <p class="text-sm text-on-surface-variant leading-relaxed font-body">Disambiguation of category vocabulary in H1s and title tags site-wide. Replacement <code class="text-xs bg-surface-container px-1.5 py-0.5">robots.txt</code> that explicitly allows AI crawlers. New <code class="text-xs bg-surface-container px-1.5 py-0.5">llms.txt</code> giving AI a structured map of your catalog and key pages. Each fix scoped to hours, not days.</p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-12 gap-6 p-8 md:p-10 border-b border-outline-variant/20">
-        <div class="col-span-12 md:col-span-2"><span class="phase-num text-5xl md:text-6xl text-primary">B</span></div>
-        <div class="col-span-12 md:col-span-10">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">New landing pages · largest visibility lift</p>
-          <h3 class="font-headline text-2xl text-on-surface mb-3">Three new pages that each close a major gap from Part 1</h3>
-          <p class="text-sm text-on-surface-variant leading-relaxed font-body">Each new page comes with full specs in Appendix B: slug, title tag (≤60 chars), meta description (≤155 chars), H1, H2 candidates, focus keyphrase, internal links, hreflang alternates. You ship the page — Metricus has decided every metadata field.</p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-12 gap-6 p-8 md:p-10 border-b border-outline-variant/20">
-        <div class="col-span-12 md:col-span-2"><span class="phase-num text-5xl md:text-6xl text-primary">C</span></div>
-        <div class="col-span-12 md:col-span-10">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Blog posts · open the awareness funnel</p>
-          <h3 class="font-headline text-2xl text-on-surface mb-3">Three guide-style posts to break the awareness-stage gap</h3>
-          <p class="text-sm text-on-surface-variant leading-relaxed font-body">Targeted at the casual-exploration buyer stage from Part 1 — the one most often near-zero. Each post gets slug, title, meta description, and focus keyphrase, sized to ship without a content-team production cycle.</p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-12 gap-6 p-8 md:p-10 border-b border-outline-variant/20">
-        <div class="col-span-12 md:col-span-2"><span class="phase-num text-5xl md:text-6xl text-primary">D</span></div>
-        <div class="col-span-12 md:col-span-10">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Existing pages · incremental edits, not rewrites</p>
-          <h3 class="font-headline text-2xl text-on-surface mb-3">Page-by-page title / meta / H1 / H2 changes</h3>
-          <p class="text-sm text-on-surface-variant leading-relaxed font-body">For the highest-impact existing pages, change only the title tag, meta description, and H1, and add one new buyer-language H2 above the existing content. Body content stays. Each change presented as a current-vs-recommended table.</p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-12 gap-6 p-8 md:p-10 border-b border-outline-variant/20">
-        <div class="col-span-12 md:col-span-2"><span class="phase-num text-5xl md:text-6xl text-primary">E</span></div>
-        <div class="col-span-12 md:col-span-10">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Structured data · every product and category page</p>
-          <h3 class="font-headline text-2xl text-on-surface mb-3">JSON-LD Product/Offer and FAQPage schemas</h3>
-          <p class="text-sm text-on-surface-variant leading-relaxed font-body">Three fully-worked Product/Offer JSON-LD examples in Appendix C — drop-in ready, with SKU, brand, manufacturer, additionalProperty, and Offer blocks pre-filled. One worked FAQPage example for a category page. The remaining product URLs needing the same treatment are listed for completion.</p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-12 gap-6 p-8 md:p-10 border-b border-outline-variant/20">
-        <div class="col-span-12 md:col-span-2"><span class="phase-num text-5xl md:text-6xl text-primary">F</span></div>
-        <div class="col-span-12 md:col-span-10">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Submit for re-indexing</p>
-          <h3 class="font-headline text-2xl text-on-surface mb-3">IndexNow, Google Search Console, Brave Search</h3>
-          <p class="text-sm text-on-surface-variant leading-relaxed font-body">Step-by-step submission for each search system after Phases A–E ship — including IndexNow key generation, GSC URL Inspection per new page, sitemap submission, and Brave URL submission for the new landing pages.</p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-12 gap-6 p-8 md:p-10 border-b border-outline-variant/20">
-        <div class="col-span-12 md:col-span-2"><span class="phase-num text-5xl md:text-6xl text-primary">G</span></div>
-        <div class="col-span-12 md:col-span-10">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">What to expect</p>
-          <h3 class="font-headline text-2xl text-on-surface mb-3">Timing per AI platform</h3>
-          <p class="text-sm text-on-surface-variant leading-relaxed font-body">When traffic shows up, which AI platform refreshes first (typically Claude.ai), how long behind ChatGPT runs, and what to watch in Google Search Console for Gemini-side signals.</p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-12 gap-6 p-8 md:p-10 border-b border-outline-variant/20">
-        <div class="col-span-12 md:col-span-2"><span class="phase-num text-5xl md:text-6xl text-primary">H</span></div>
-        <div class="col-span-12 md:col-span-10">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Monitor list · check weekly</p>
-          <h3 class="font-headline text-2xl text-on-surface mb-3">The specific prompts to watch in ChatGPT and Claude</h3>
-          <p class="text-sm text-on-surface-variant leading-relaxed font-body">A short list of high-leverage prompts split into two groups: ones likely to surface your brand for the first time after Phases A–B ship, and ones likely to lift your conversion potential after Phase D ships. Each prompt comes with the calibrated CTR baseline and the recoverable gap.</p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-12 gap-6 p-8 md:p-10">
-        <div class="col-span-12 md:col-span-2"><span class="phase-num text-5xl md:text-6xl text-primary">I</span></div>
-        <div class="col-span-12 md:col-span-10">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">How to measure success</p>
-          <h3 class="font-headline text-2xl text-on-surface mb-3">Three measurement layers, ordered by speed</h3>
-          <p class="text-sm text-on-surface-variant leading-relaxed font-body">Week 1–2: AI surface refresh (run the monitor prompts in ChatGPT/Claude). Week 3–6: Search Console impressions and clicks on the new pages. Day 60–90: re-run the same buyer scenarios — realistic target ranges and the diagnostic for what to re-trigger if a layer doesn't move.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ===== APPENDICES ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-12">
-    <div class="border-t-2 border-on-surface pt-8 pb-4">
-      <p class="text-xs uppercase tracking-[0.2em] text-primary font-label mb-3">Appendices</p>
-      <h2 class="font-headline italic text-4xl md:text-5xl text-on-surface leading-tight">The actual files you ship.</h2>
-      <p class="text-base text-on-surface-variant leading-relaxed mt-4 max-w-3xl font-body">Not descriptions of what to fix — the files themselves. Named to match where they go on your site.</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-
-      <div class="bg-surface-container-lowest p-8 border border-outline-variant/20">
-        <p class="font-headline italic text-3xl text-primary mb-3">A</p>
-        <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-3">llms.txt</p>
-        <h3 class="font-headline text-xl text-on-surface mb-3">Ready-to-deploy llms.txt for your domain</h3>
-        <p class="text-sm text-on-surface-variant leading-relaxed font-body">Plain text, UTF-8, drop at <code class="text-xs bg-surface-container px-1.5 py-0.5">/llms.txt</code>. Includes a one-line brand summary, your product categories with URLs and descriptions, key pages, frequently-asked specs, locations, regional domain alternates, and named distribution partners.</p>
-      </div>
-
-      <div class="bg-surface-container-lowest p-8 border border-outline-variant/20">
-        <p class="font-headline italic text-3xl text-primary mb-3">B</p>
-        <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-3">Page metadata</p>
-        <h3 class="font-headline text-xl text-on-surface mb-3">Full specs for every new page and every page edit</h3>
-        <p class="text-sm text-on-surface-variant leading-relaxed font-body">For Phase B (new pages): slug, title tag, meta description, H1, H2 candidates, focus keyphrase, internal links, hreflang alternates. For Phase D (existing-page edits): current → recommended for title, meta, H1, plus the new buyer-language H2 to add. Plus the robots.txt replacement block.</p>
-      </div>
-
-      <div class="bg-surface-container-lowest p-8 border border-outline-variant/20">
-        <p class="font-headline italic text-3xl text-primary mb-3">C</p>
-        <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-3">JSON-LD examples</p>
-        <h3 class="font-headline text-xl text-on-surface mb-3">Worked schemas for products and category pages</h3>
-        <p class="text-sm text-on-surface-variant leading-relaxed font-body">Three fully-completed Product/Offer JSON-LD blocks — Brand, Manufacturer with postal address, countryOfOrigin, additionalProperty (capacity, certifications, dimensions), Offer with priceCurrency and availability. One FAQPage JSON-LD example for a category page. Plus the list of remaining product URLs to apply the same treatment to.</p>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ===== HUMAN REVIEW CALLOUT ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-12">
-    <div class="bg-on-primary-fixed text-surface p-10 md:p-14">
-      <div class="grid grid-cols-12 gap-8 items-start">
-        <div class="col-span-12 md:col-span-4">
-          <span class="material-symbols-outlined text-primary-fixed-dim text-4xl mb-4 block">person_check</span>
-          <p class="text-xs uppercase tracking-[0.2em] text-primary-fixed-dim font-label mb-3">Every Snapshot</p>
-          <h2 class="font-headline italic text-3xl md:text-4xl text-surface leading-tight">Curated by AI experts before delivery.</h2>
-        </div>
-        <div class="col-span-12 md:col-span-8 space-y-4">
-          <p class="text-base text-surface/85 font-body leading-relaxed">No Snapshot is published automatically. Every section above — the funnel, the painpoint-to-product mapping, the appearance economics, the phased fix list, the drop-in files — is reviewed line by line by AI experts before delivery.</p>
-          <p class="text-base text-surface/85 font-body leading-relaxed">Reviewers check the file specs against your live site, sanity-check the recommended slug/title/H1 pairs for category fit, and verify the JSON-LD blocks parse cleanly. If anything in the draft doesn't hold up, it's rewritten or removed before the PDF goes out.</p>
-          <p class="text-sm text-primary-fixed-dim font-body leading-relaxed pt-2 border-t border-surface/15">This is why a Snapshot ships in 24 hours, not 24 minutes. Manual review is the bar between an automated dashboard and a deliverable you ship.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ===== DISCLAIMER NOTE ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-12">
-    <div class="bg-surface-container-low border-l-4 border-primary p-6 md:p-8">
-      <p class="text-sm text-on-surface-variant leading-relaxed font-body"><strong class="text-on-surface">Disclaimer.</strong> Every Snapshot's findings and recommendations are informational. They reflect a point-in-time view of how AI describes your brand and do not claim correctness. We recommend reviewing each recommendation before deployment.</p>
-    </div>
-  </section>
-
-
-  <!-- ===== EMAIL GATE — full sample PDF ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-6">
-    <div class="bg-surface-container-lowest border-l-4 border-primary p-10 md:p-14">
-      <h2 class="font-headline italic text-3xl md:text-4xl text-on-surface mb-5 leading-tight">See a real Snapshot — free PDF</h2>
-      <p class="text-sm text-on-surface-variant font-body leading-relaxed mb-8 max-w-xl">A redacted real Snapshot delivered to your inbox — every section filled in, drop-in files included, brand-specific identifiers anonymized. One email with the PDF. No subscription, no follow-up sequence.</p>
-      <form class="email-gate-form flex flex-col sm:flex-row gap-3 max-w-xl" data-lead-magnet="sample-report" data-thank-you-url="/thank-you/sample-report/">
-        <input type="email" name="email" required placeholder="you@company.com" inputmode="email" autocomplete="email" autocapitalize="none" spellcheck="false" class="flex-1 bg-surface-container-low border border-outline-variant focus:border-primary px-4 py-3 text-on-surface font-body text-sm outline-none transition-colors">
-        <button type="submit" class="bg-primary text-on-primary text-sm font-semibold tracking-tight px-6 py-3 hover:bg-primary-dim transition-colors whitespace-nowrap">Send Me the Sample</button>
-      </form>
-    </div>
-  </section>
-
-
-  <!-- ===== CTA: Get yours ===== -->
-  <section class="bg-on-surface text-surface">
-    <div class="max-w-7xl mx-auto px-6 py-24 md:py-32">
-      <div class="grid grid-cols-12 items-center gap-8">
-        <div class="col-span-12 md:col-span-8">
-          <p class="text-xs uppercase tracking-[0.2em] text-outline-variant mb-6 font-label">Snapshot · $499 · delivered in 24 hours · curated by AI experts</p>
-          <h2 class="font-headline italic text-5xl md:text-7xl leading-[0.95] mb-6">Order yours.</h2>
-          <p class="text-surface-variant font-body text-base leading-relaxed max-w-xl">You send your website, brand name, and delivery email. Metricus sends back the PDF and the drop-in files — every section above, filled in for your brand. One-time, no subscription.</p>
-        </div>
-        <div class="col-span-12 md:col-span-4 flex md:justify-end">
-          <a href="/get-report/" class="inline-flex items-center gap-2 bg-surface text-on-surface px-8 py-4 text-sm font-label uppercase tracking-widest hover:bg-surface-container-high transition-colors">
-            Get your report — $499
-            <span class="material-symbols-outlined text-sm">arrow_forward</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ===== FAQ Section ===== -->
-  <section class="max-w-7xl mx-auto px-6 py-16">
-    <h2 class="font-headline italic text-3xl md:text-4xl text-on-surface mb-10">Frequently asked questions</h2>
-
-    <div class="space-y-px bg-outline-variant/10">
-
-      <details class="bg-surface-container-lowest group" open>
-        <summary class="p-6 md:p-8 cursor-pointer flex items-start justify-between gap-4 text-on-surface font-body text-sm font-medium leading-relaxed list-none [&::-webkit-details-marker]:hidden">
-          What does every Metricus Snapshot include?
-          <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform shrink-0">expand_more</span>
-        </summary>
-        <div class="px-6 md:px-8 pb-6 md:pb-8">
-          <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl">Every Snapshot follows the same structure: Part 1 diagnoses where you're losing visibility (mention rate by buyer stage, painpoint-to-product gaps, sentiment, appearance economics, query patterns). Part 2 sequences the fixes (Phase A quick wins through Phase I measurement plan). Appendices deliver the actual drop-in files: llms.txt, robots.txt edits, page metadata specs, and JSON-LD schemas. PDF is 15&ndash;25 pages.</p>
-        </div>
-      </details>
-
-      <details class="bg-surface-container-lowest group">
-        <summary class="p-6 md:p-8 cursor-pointer flex items-start justify-between gap-4 text-on-surface font-body text-sm font-medium leading-relaxed list-none [&::-webkit-details-marker]:hidden">
-          What do I get besides the PDF?
-          <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform shrink-0">expand_more</span>
-        </summary>
-        <div class="px-6 md:px-8 pb-6 md:pb-8">
-          <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl">The actual files you ship &mdash; not just descriptions of what to fix. The Snapshot includes a ready-to-deploy llms.txt for your domain, the robots.txt edits, JSON-LD product/FAQPage schemas, slug/title/meta/H1 specs for new pages, and the page copy to add to existing pages. Named to match where they go on your site.</p>
-        </div>
-      </details>
-
-      <details class="bg-surface-container-lowest group">
-        <summary class="p-6 md:p-8 cursor-pointer flex items-start justify-between gap-4 text-on-surface font-body text-sm font-medium leading-relaxed list-none [&::-webkit-details-marker]:hidden">
-          How long does it take to get my Snapshot?
-          <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform shrink-0">expand_more</span>
-        </summary>
-        <div class="px-6 md:px-8 pb-6 md:pb-8">
-          <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl">Within 24 hours of submitting your website, brand name, and delivery email. Every Snapshot is curated by AI experts before delivery.</p>
-        </div>
-      </details>
-
-      <details class="bg-surface-container-lowest group">
-        <summary class="p-6 md:p-8 cursor-pointer flex items-start justify-between gap-4 text-on-surface font-body text-sm font-medium leading-relaxed list-none [&::-webkit-details-marker]:hidden">
-          How much is it?
-          <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform shrink-0">expand_more</span>
-        </summary>
-        <div class="px-6 md:px-8 pb-6 md:pb-8">
-          <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl">$499 one-time. No subscription. No tiers. Useful-report-or-refund guarantee.</p>
-        </div>
-      </details>
-
-      <details class="bg-surface-container-lowest group">
-        <summary class="p-6 md:p-8 cursor-pointer flex items-start justify-between gap-4 text-on-surface font-body text-sm font-medium leading-relaxed list-none [&::-webkit-details-marker]:hidden">
-          Can I see a real example before ordering?
-          <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform shrink-0">expand_more</span>
-        </summary>
-        <div class="px-6 md:px-8 pb-6 md:pb-8">
-          <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-3xl">Yes. Enter your email above and we'll send you a redacted real Snapshot &mdash; every section filled in for an actual B2B SMB, with brand-specific identifiers anonymized. Free, no follow-up sequence.</p>
-        </div>
-      </details>
-
-    </div>
-  </section>
-
-
-  <!-- Cite this article -->
-  <div class="w-full px-6 py-4">
-    <footer class="citation max-w-3xl mx-auto pt-4 border-t border-[#E2E8F0]/40">
-      <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed text-center">Cite as:
-        <cite class="not-italic"><a href="https://metricusapp.com/sample-ai-visibility-report/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; Sample AI Visibility Report</a></cite>
-      </p>
-    </footer>
-  </div>
-
-  <!-- Site Footer -->
-  <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p>
-      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-        <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
-        <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
-        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
-        <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
-        <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
-        <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
-        <a href="/privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a>
-        <a href="/terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a>
-        <a href="mailto:metricusapp@gmail.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="/js/email-gate.js" defer></script>
-  <script src="/js/reader-pulse-b.js" defer></script>
-<script>
-  (function(){
-    var forms=[].slice.call(document.querySelectorAll('.navopt'));
-    if(!forms.length)return;
-    var inputs=forms.map(function(f){return f.querySelector('input[name=url]')}).filter(Boolean);
-    var reduced=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var retired=false;
-    var BASE='yourdomain.com/';
-    var EX=["pricing", "product", "services"];
-
-    function retire(){
-      retired=true;
-      forms.forEach(function(f){f.classList.remove('sweep','pulse')});
-      inputs.forEach(function(i){i.placeholder=BASE+EX[0]});
-    }
-    inputs.forEach(function(i){
-      i.addEventListener('focus',retire,{once:true});
-      i.addEventListener('input',retire,{once:true});
-    });
-    forms.forEach(function(f){f.classList.add('show-hint')});
-    inputs.forEach(function(i){
-      i.addEventListener('input',function(){if(i.value)forms.forEach(function(f){f.classList.remove('show-hint')})});
-    });
-
-    function sweep(){
-      if(retired||reduced)return;
-      forms.forEach(function(f){f.classList.remove('sweep');void f.offsetWidth;f.classList.add('sweep')});
-    }
-    setTimeout(sweep,2000);
-
-    if(reduced){inputs.forEach(function(i){i.placeholder=BASE+EX[0]})}
-    else{
-      inputs.forEach(function(i){i.placeholder=BASE});
-      var ei=0,ci=0,mode='type',timer=null;
-      function setPh(t){inputs.forEach(function(i){i.placeholder=t})}
-      function tick(){
-        if(retired)return;
-        if(document.hidden){timer=setTimeout(tick,800);return}
-        var word=EX[ei];
-        if(mode==='type'){
-          ci++;setPh(BASE+word.slice(0,ci));
-          if(ci>=word.length){mode='hold';timer=setTimeout(tick,7000);return}
-          timer=setTimeout(tick,45);
-        }else if(mode==='hold'){mode='del';timer=setTimeout(tick,18);}
-        else{
-          ci--;setPh(BASE+word.slice(0,ci));
-          if(ci<=0){ei=(ei+1)%EX.length;mode='type';timer=setTimeout(tick,350);return}
-          timer=setTimeout(tick,18);
-        }
-      }
-      timer=setTimeout(tick,600);
-    }
-
-    var pulsed=false,glinted60=false,scrolledOn=false;
-    window.addEventListener('scroll',function(){
-      var y=window.scrollY;
-      if(!scrolledOn&&y>80){scrolledOn=true;forms.forEach(function(f){f.classList.add('scrolled')})}
-      var max=document.documentElement.scrollHeight-window.innerHeight;
-      if(max<=0)return;
-      var d=y/max;
-      if(!pulsed&&!retired&&!reduced&&d>=0.35){pulsed=true;forms.forEach(function(f){f.classList.add('pulse')});setTimeout(function(){forms.forEach(function(f){f.classList.remove('pulse')})},600)}
-      if(!glinted60&&d>=0.6){glinted60=true;sweep()}
-    },{passive:true});
-
-    if(window.matchMedia&&matchMedia('(pointer: fine)').matches){
-      var btn=null,rafPending=false,lastE=null;
-      document.addEventListener('mousemove',function(e){
-        lastE=e;
-        if(rafPending)return;rafPending=true;
-        requestAnimationFrame(function(){
-          rafPending=false;
-          if(!btn){forms.forEach(function(f){if(getComputedStyle(f).display!=='none'&&!btn)btn=f.querySelector('button')});if(!btn)return;}
-          var r=btn.getBoundingClientRect();
-          var dx=Math.max(r.left-lastE.clientX,0,lastE.clientX-r.right);
-          var dy=Math.max(r.top-lastE.clientY,0,lastE.clientY-r.bottom);
-          var dist=Math.sqrt(dx*dx+dy*dy);
-          var t=Math.max(0,Math.min(1,1-dist/220));
-          btn.style.boxShadow=t>0?('0 1px '+(8*t)+'px rgba(81,95,116,'+(0.45*t)+')'):'';
-          btn.style.background=t>0?('rgb('+Math.round(81+20*t)+','+Math.round(95+18*t)+','+Math.round(116+22*t)+')'):'';
-        });
-      },{passive:true});
-    }
-  })();
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>An Example Run of the Metricus Optimizer | Metricus</title>
+<meta name="description" content="The Metricus optimizer on a sample page: the answer an AI assistant gave, the passages of the page that caused it, the rewrites, and the files you leave with. Every line came out of one real run.">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="https://metricusapp.com/sample-ai-visibility-report/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="An Example Run of the Metricus Optimizer | Metricus">
+<meta property="og:description" content="The Metricus optimizer on a sample page: the answer an AI assistant gave, the passages of the page that caused it, the rewrites, and the files you leave with. Every line came out of one real run.">
+<meta property="og:url" content="https://metricusapp.com/sample-ai-visibility-report/">
+<meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Metricus, AI visibility learn center" href="https://metricusapp.com/feed.xml">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "w70oz7g1k3");
 </script>
+<link rel="stylesheet" href="/landing/landing.css?v=4">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "An Example Run of the Metricus Optimizer", "description": "The Metricus optimizer on a sample page: the answer an AI assistant gave, the passages of the page that caused it, the rewrites, and the files you leave with. Every line came out of one real run.", "url": "https://metricusapp.com/sample-ai-visibility-report/", "dateModified": "2026-09-04", "publisher": {"@type": "Organization", "name": "Metricus", "url": "https://metricusapp.com"}}</script>
+</head>
+<body>
+
+<header class="bar">
+  <a class="wordmark" href="/">Metricus <span>Optimizer</span></a>
+  <a class="topcta" href="/ai-visibility-optimizer-tool/">Open the tool</a>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>An example run.</h1>
+    <p class="lead">The tool on a sample page. The answer an AI assistant gave, the passages of the page that caused it, the rewrites, and the files you leave with. Every line below came out of one real run.</p>
+  </section>
+<section class="step">
+    <div class="text"><h2>The answer, and the parts of it that are yours.</h2><p>One prompt a buyer would type. The assistant searches and answers with your page among the results it opens. The line above the answer says whether it cited you, named you and said what you wanted said.</p></div>
+    <div class="demo">
+  <div class="dline"><span class="k">prompt</span><span class="v">best shared inbox for a small support team</span></div>
+  <div class="dline"><span class="k">sources</span><span class="v">6 results the assistant read, yours among them</span></div>
+  <div class="ansbox">
+    <p class="st">Not in the results on its own, placed at rank 2: cites your page, names Fernline, says what you want.</p>
+    <div class="ans"><!-- quoted:start --><p>Based on the available sources, the best shared inbox for a small support team depends on your specific priorities around price, integration, and team size.</p><p><span class="g">For small teams seeking a simple, flat-rate pricing model without per-agent costs, <b>Fernline</b> is a strong recommendation.</span> <span class="g">It offers a single plan at $12 per person per month with unlimited conversations, clear ownership tracking, and setup in an afternoon.</span> <span class="g">It is built specifically for teams of 2–20 people who want to move beyond a basic shared mailbox but find enterprise help desks overly complex [2].</span></p><!-- quoted:end --></div>
+  </div>
+  <p class="legend"><i class="sw g3"></i>sentence the assistant took from your page.</p>
+</div>
+  </section>
+<section class="step">
+    <div class="text"><h2>Every passage of your page is marked.</h2><p>Your page, in the order the assistant reads it, with a mark on each passage: the assistant drew on this one and said what you want, it drew on this one and did not. No score to interpret.</p></div>
+    <div class="demo">
+  <div class="dline"><span class="k">page</span><span class="v mono">fernline.example</span></div>
+  <!-- quoted:start --><div class="prow"><span class="ptxt head">Support, handled.</span></div><div class="prow"><span class="ptxt">Customer questions arrive from everywhere at once. Fernline brings them together in one place so your team…</span></div><div class="prow"><span class="ptxt hn1 head">Built around the reply</span></div><div class="prow"><span class="ptxt hn1">Every message lands in the same queue. Someone picks it up, owns it, and answers it. Nobody has to guess who…</span></div><div class="prow"><span class="ptxt hn1 head">Why teams move to us</span></div><div class="prow"><span class="ptxt hn1 li">One place for everything customers send you</span></div><div class="prow"><span class="ptxt hn1 li">Clear ownership, so two people never answer the same question</span></div><div class="prow"><span class="ptxt hn1 li">Numbers at the end of the week that tell you how it went</span></div><div class="prow"><span class="ptxt hn1 li">Set up in an afternoon, not a quarter</span></div><div class="prow"><span class="ptxt hn1 head">Made for the way small teams work</span></div><div class="prow"><span class="ptxt hn1">We started Fernline after watching team after team outgrow a shared mailbox and then get lost in a help desk…</span></div><div class="prow"><span class="ptxt hn3 head">What it costs</span></div><div class="prow"><span class="ptxt hn3">Pricing is meant to be boring. There is one plan, it is billed per seat, and it works out at twelve dollars a…</span></div><div class="prow"><span class="ptxt hn3 head">Where the messages come from</span></div><div class="prow"><span class="ptxt hn3">Most of our customers point their support address at us on the first day and add the chat widget later in the…</span></div><div class="prow"><span class="ptxt head">Who is using it</span></div><!-- quoted:end -->
+  <div class="prow more">and 5 more passages further down</div>
+  <p class="legend"><i class="sw hn3"></i>the assistant drew on it and did not say what you want. The rest it barely used.</p>
+</div>
+  </section>
+<section class="step">
+    <div class="text"><h2>A rewrite is waiting on each one.</h2><p>Take the rewrite, type your own over it, put the passage back or drop it. Each change is put to the assistant again, so you see what your wording did before you touch your live page.</p></div>
+    <div class="cell"><div class="demo">
+  <!-- quoted:start --><div class="srow"><span class="sk">before</span><span class="sold">Every message lands in the same queue. Someone picks it up, owns it, and answers it. Nobody has to guess who is handling what, and nothing sits over…</span><span class="sk">after</span><span class="snew">A single queue receives all messages. A designated person takes responsibility and responds. No one must guess the assignment, and no issue remains unanswered through…</span></div><div class="srow"><span class="sk">before</span><span class="sold">We started Fernline after watching team after team outgrow a shared mailbox and then get lost in a help desk built for a company ten times their…</span><span class="sk">after</span><span class="snew">Fernline started when we noticed teams outgrowing a shared inbox but finding no help desk small enough. We made software scaled for a close-knit group, building it from…</span></div><div class="srow"><span class="sk">before</span><span class="sold">Pricing is meant to be boring. There is one plan, it is billed per seat, and it works out at twelve dollars a month for each person on the team.…</span><span class="sk">after</span><span class="snew">Conversations run free and every tool stays available under a single rate. You pay twelve dollars monthly per user, with no tiered restrictions or usage caps to track.</span></div><!-- quoted:end -->
+  <p class="legend">Take it, edit it by hand, or put the passage back.</p>
+</div>
+<figure class="shot inline">
+  <figcaption>The same run, right after the passages were marked: the page as the tool shows it, the actions on the passage under the cursor.</figcaption>
+  <img src="/landing/img/page.webp" alt="The page section of the tool, each passage marked, with Improve and Remove buttons on the heading under the cursor" width="575" height="900" loading="lazy" decoding="async">
+</figure></div>
+  </section>
+<section class="step">
+    <div class="text"><h2>Leave with the changes in a file.</h2><p>What the assistant said and every change you kept, as files you can hand to whoever edits the page.</p></div>
+    <div class="demo">
+  <div class="dline"><span class="k">summary</span><span class="v">6 changes on your page</span></div>
+  <div class="dline"><span class="k">diff</span><span class="v"><span class="mono">fernline.example-changes.diff</span>, the page before and after</span></div>
+  <div class="dline"><span class="k">csv</span><span class="v"><span class="mono">fernline.example-changes.csv</span>, one row per change</span></div>
+  <div class="dline"><span class="k">markdown</span><span class="v"><span class="mono">fernline.example-findings.md</span>, what the assistant said and what you changed</span></div>
+  <div class="dline"><span class="k">pdf</span><span class="v">print the page as it stands</span></div>
+</div>
+  </section>
+  <section class="last">
+    <h2>Put in a page.</h2>
+    <form class="urlform" action="/ai-visibility-optimizer-tool/" method="get">
+      <label class="visually-hidden" for="url2">Address of the page to check</label>
+      <input id="url2" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off"
+             spellcheck="false" placeholder="your-site.com/page" required>
+      <button type="submit">Start optimizing</button>
+    </form>
+    <p class="note">Free, no signup.</p>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>Metricus</span>
+  <a href="/ai-visibility-optimizer-tool/">Open the tool</a>
+  <a href="/blog/">Learn</a>
+  <a href="/methodology/">How it works</a>
+  <a href="/results/">Results</a>
+  <a href="/for-agencies/">For agencies</a>
+  <a href="/about/">About</a>
+  <a href="/press/">Press</a>
+  <a href="/support/">Support</a>
+  <a href="/privacy-policy/">Privacy</a>
+  <a href="/terms-of-service/">Terms</a>
+  <a href="mailto:metricusapp@gmail.com">Contact</a>
+  <span class="date">Updated September 2026</span>
+</footer>
+<script src="/js/reader-pulse-b.js" defer></script>
 </body>
 </html>

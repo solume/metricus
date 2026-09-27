@@ -26,19 +26,17 @@
         active: 'Building benchmark for {footprint} {segment} {orgPlural}…'
       },
       report: {
-        path: '/get-report/',
+        path: '/ai-visibility-optimizer-tool/',
         source: 'real-estate-benchmark'
       },
       result: {
         leadLabel: 'Your benchmark result',
         titlePrefix: 'You landed in the ',
         titleSuffix: '.',
-        primaryCta: 'See what AI actually says about my brokerage',
-        secondaryCta: 'See a sample report',
-        sampleReportUrl: '/sample-ai-visibility-report/',
+        primaryCta: 'See what AI says about my brokerage',
         emailTitle: 'Send me this benchmark result',
         emailCta: 'Send me this result',
-        emailNote: 'This sends your benchmark summary only. The full Metricus report is a separate audit.',
+        emailNote: 'This sends your benchmark summary only.',
         emailThanks: 'Benchmark summary request received.',
         notePlaceholder: 'What is one thing AI gets wrong most often about your market, brokerage, or service area? (optional)',
         guardLine: 'This benchmark estimates your likely real-estate visibility pattern. It does not show the exact prompts where you disappear, the portals replacing you, or the source pages driving wrong answers. That is what the Metricus report measures.'

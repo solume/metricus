@@ -3,539 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agency Margin Calculator: AI Visibility Report Resale Pricing | Metricus</title>
-  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <title>Using the Metricus Optimizer With Clients | Metricus</title>
+  <meta name="description" content="There is no margin to calculate: the optimizer is free for every page. How agencies use it before the pitch, in the meeting and after, and how to scope the work they charge for.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://metricusapp.com/agency-resources/margin-calculator/">
-  <meta name="description" content="Calculate your agency margins reselling AI visibility reports. The Metricus Snapshot is $499 — agencies typically resell at $999–$1,999. See your profit projections.">
-  <meta property="og:title" content="Agency Margin Calculator: AI Visibility Report Resale Pricing">
-    <meta property="og:description" content="Calculate your agency margins reselling AI visibility reports. The Metricus Snapshot is $499 — agencies typically resell at $999–$1,999.">
-    <meta property="og:url" content="https://metricusapp.com/agency-resources/margin-calculator/">
-    <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Agency Margin Calculator: AI Visibility Report Resale Pricing | Metricus">
-  <meta name="twitter:description" content="Calculate your agency margins reselling AI visibility reports. The Metricus Snapshot is $499 — agencies typically resell at $999–$1,999. See your profit projections.">
-  <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","dateModified":"2026-05-17","itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://metricusapp.com/"},
-    {"@type":"ListItem","position":2,"name":"Agency Resources","item":"https://metricusapp.c../ai-visibility-agency-resources/"},
-    {"@type":"ListItem","position":3,"name":"Margin Calculator","item":"https://metricusapp.com/agency-resources/margin-calculator/"}
-  ]}
-  </script>
+  <link rel="alternate" type="application/rss+xml" title="Metricus, AI visibility learn center" href="https://metricusapp.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Using the Metricus Optimizer With Clients | Metricus">
+  <meta property="og:description" content="There is no margin to calculate: the optimizer is free for every page. How agencies use it before the pitch, in the meeting and after, and how to scope the work they charge for.">
+  <meta property="og:url" content="https://metricusapp.com/agency-resources/margin-calculator/">
+  <meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <!-- Microsoft Clarity -->
   <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w70oz7g1k3");
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "w70oz7g1k3");
   </script>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500;1,6..72,600&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            primary: '#515F74',
-            'on-primary': '#f6f7ff',
-            surface: '#f7f9fb',
-            'surface-container-low': '#f0f4f7',
-            'surface-container': '#e8eff3',
-            'surface-container-lowest': '#ffffff',
-            'surface-container-highest': '#d9e4ea',
-            'on-surface': '#2a3439',
-            'on-surface-variant': '#566166',
-            outline: '#717c82',
-            'outline-variant': '#a9b4b9',
-            'on-primary-fixed': '#324054',
-            'primary-dim': '#455368',
-            'surface-variant': '#d9e4ea',
-            'surface-container-high': '#e1e9ee',
-            'primary-fixed': '#d5e3fd',
-            'primary-fixed-dim': '#c7d5ee',
-          },
-          borderRadius: {
-            none: '0px',
-            sm: '0px',
-            DEFAULT: '0px',
-            md: '0px',
-            lg: '0px',
-            xl: '0px',
-            '2xl': '0px',
-            '3xl': '0px',
-            full: '0px',
+            primary: '#515F74', 'primary-hover': '#1E293B', 'on-primary': '#f6f7ff', 'on-primary-fixed': '#324054', 'primary-dim': '#455368',
+            surface: '#f7f9fb', 'surface-container-low': '#f0f4f7', 'surface-container': '#e8eff3', 'surface-container-lowest': '#ffffff',
+            'surface-container-highest': '#d9e4ea', 'surface-container-high': '#e1e9ee', 'surface-variant': '#d9e4ea',
+            'on-surface': '#2a3439', 'on-surface-variant': '#566166', outline: '#717c82', 'outline-variant': '#a9b4b9',
+            'slate-text': '#0F172A', 'slate-muted': '#64748B', 'slate-accent': '#475569',
           },
           fontFamily: {
-            headline: ['Newsreader', 'serif'],
-            body: ['Public Sans', 'sans-serif'],
-            label: ['Public Sans', 'sans-serif'],
+            display: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+            body: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+            headline: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+            label: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
           },
+          borderRadius: { none: '0px', sm: '0px', DEFAULT: '0px', md: '0px', lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px', full: '0.75rem' },
         },
       },
     }
   </script>
   <style>
-    * { border-radius: 0px !important; }
-    body {
-      font-family: 'Public Sans', sans-serif;
-      background-color: #f7f9fb;
-      color: #2a3439;
-    }
-    .bg-grid {
-      background-image:
-        linear-gradient(rgba(81,95,116,0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(81,95,116,0.05) 1px, transparent 1px);
-      background-size: 48px 48px;
-    }
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-    }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #ffffff; color: #2a3439; -webkit-font-smoothing: antialiased; }
+    .prose-plain h2 { font-size: 1.5rem; font-weight: 600; color: #0F172A; margin: 2.5rem 0 0.75rem; line-height: 1.25; }
+    .prose-plain h3 { font-size: 1.125rem; font-weight: 600; color: #0F172A; margin: 1.75rem 0 0.5rem; }
+    .prose-plain p { margin: 0 0 1rem; line-height: 1.65; }
+    .prose-plain ul { margin: 0 0 1rem 1.25rem; list-style: disc; }
+    .prose-plain ol { margin: 0 0 1rem 1.25rem; list-style: decimal; }
+    .prose-plain li { margin: 0.35rem 0; line-height: 1.6; }
+    .prose-plain a { color: #515F74; text-decoration: underline; }
+    .prose-plain table { width: 100%; border-collapse: collapse; margin: 0 0 1.25rem; font-size: 0.95rem; }
+    .prose-plain th, .prose-plain td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid #e1e9ee; vertical-align: top; }
+    .prose-plain th { color: #0F172A; font-weight: 600; }
+    .qa details { border-bottom: 1px solid #e1e9ee; padding: 0.75rem 0; }
+    .qa summary { cursor: pointer; font-weight: 600; color: #0F172A; list-style: none; display: flex; gap: 0.6rem; }
+    .qa summary::-webkit-details-marker { display: none; }
+    .qa summary::before { content: "+"; color: #717c82; font-weight: 400; width: 0.8rem; flex: none; }
+    .qa details[open] summary::before { content: "\2212"; }
+    .qa details p { margin: 0.5rem 0 0.25rem 1.4rem; color: #566166; line-height: 1.6; }
   </style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Using the Metricus Optimizer With Clients", "description": "How agencies use the free optimizer with clients.", "url": "https://metricusapp.com/agency-resources/margin-calculator/", "dateModified": "2026-09-04", "publisher": {"@type": "Organization", "name": "Metricus", "url": "https://metricusapp.com"}}</script>
 </head>
-<body class="bg-surface bg-grid antialiased">
-
-  <!-- Site Nav -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
-      <a href="/" class="flex items-center gap-2 group" aria-label="Metricus home">
-        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
-        </svg>
-        <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
-      </a>
-      <div class="hidden md:flex items-center gap-8">
-        <a href="/methodology/" class="nav-link-howitworks text-sm text-on-surface-variant hover:text-on-surface transition-colors">Methodology</a>
-        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
-        <a href="/blog/" class="nav-link-blog text-sm text-on-surface-variant hover:text-on-surface transition-colors">Learn</a>
-        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
-        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
-        <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
-      </div>
-      <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
-        <span class="material-symbols-outlined">menu</span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
-    <div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div>
-    <nav class="absolute top-0 right-0 w-72 h-full bg-surface-container-lowest shadow-xl flex flex-col pt-6 px-6">
-      <button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu">
-        <span class="material-symbols-outlined">close</span>
-      </button>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">Methodology</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/">Pricing</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
-      <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
-    </nav>
-  </div>
-
-  <!-- Mobile Menu Script -->
-  <script>
-    (function(){
-      var btn=document.getElementById('mobile-menu-btn');
-      var menu=document.getElementById('mobile-menu');
-      var close=document.getElementById('mobile-menu-close');
-      var backdrop=document.getElementById('mobile-menu-backdrop');
-      if(!btn||!menu)return;
-      function open(){menu.classList.remove('hidden');menu.setAttribute('aria-hidden','false');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
-      function shut(){menu.classList.add('hidden');menu.setAttribute('aria-hidden','true');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
-      btn.addEventListener('click',open);
-      if(close)close.addEventListener('click',shut);
-      if(backdrop)backdrop.addEventListener('click',shut);
-    })();
-  </script>
-
-  <!-- Hero -->
-  <section class="pt-32 pb-20 px-6 lg:px-8 max-w-7xl mx-auto">
-    <p class="uppercase tracking-widest text-xs font-label font-medium text-primary mb-6">Agency Resources</p>
-    <h1 class="font-headline font-light text-6xl md:text-8xl text-on-surface leading-[0.95] mb-10">
-      Agency Margin Calculator
-    </h1>
-    <div class="max-w-3xl md:w-7/12">
-      <p class="text-on-surface-variant text-lg leading-relaxed">
-        See what you earn reselling the Metricus Snapshot to clients. One product, $499 cost, 24-hour turnaround, white-label ready.
-      </p>
-    </div>
-  </section>
-
-  <!-- Section 1: Static Reference Tables -->
-  <section class="border-t border-outline-variant/40 py-20 lg:py-28 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto">
-
-      <!-- Table 1: Example Scenario -->
-      <div class="mb-20">
-        <p class="uppercase tracking-widest text-xs font-label font-medium text-primary mb-4">Resale Pricing Scenarios</p>
-        <h2 class="font-headline text-3xl lg:text-4xl text-on-surface leading-tight mb-8">Example: Agency Running 10 Snapshot Audits Per Month</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full text-left border border-outline-variant/40">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="px-6 py-4 text-xs uppercase tracking-widest font-label font-medium text-on-surface-variant border-b border-r border-outline-variant/40"></th>
-                <th class="px-6 py-4 text-xs uppercase tracking-widest font-label font-medium text-on-surface-variant border-b border-r border-outline-variant/40">Resale at $999</th>
-                <th class="px-6 py-4 text-xs uppercase tracking-widest font-label font-medium text-on-surface-variant border-b border-r border-outline-variant/40">Resale at $1,499</th>
-                <th class="px-6 py-4 text-xs uppercase tracking-widest font-label font-medium text-on-surface-variant border-b border-outline-variant/40">Resale at $1,999</th>
-              </tr>
-            </thead>
-            <tbody class="font-body text-sm text-on-surface">
-              <tr class="border-b border-outline-variant/20">
-                <td class="px-6 py-4 font-medium text-on-surface-variant border-r border-outline-variant/40">Your cost per Snapshot</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$499</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$499</td>
-                <td class="px-6 py-4">$499</td>
-              </tr>
-              <tr class="border-b border-outline-variant/20 bg-surface-container-lowest">
-                <td class="px-6 py-4 font-medium text-on-surface-variant border-r border-outline-variant/40">Gross margin per Snapshot</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$500 (50%)</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$1,000 (67%)</td>
-                <td class="px-6 py-4">$1,500 (75%)</td>
-              </tr>
-              <tr class="border-b border-outline-variant/20">
-                <td class="px-6 py-4 font-medium text-on-surface-variant border-r border-outline-variant/40">Monthly revenue (10 Snapshots)</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$9,990</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$14,990</td>
-                <td class="px-6 py-4">$19,990</td>
-              </tr>
-              <tr class="border-b border-outline-variant/20 bg-surface-container-lowest">
-                <td class="px-6 py-4 font-medium text-on-surface-variant border-r border-outline-variant/40">Monthly cost</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$4,990</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$4,990</td>
-                <td class="px-6 py-4">$4,990</td>
-              </tr>
-              <tr class="border-b border-outline-variant/20">
-                <td class="px-6 py-4 font-medium text-on-surface-variant border-r border-outline-variant/40">Monthly gross profit</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$5,000</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$10,000</td>
-                <td class="px-6 py-4">$15,000</td>
-              </tr>
-              <tr class="bg-surface-container-low">
-                <td class="px-6 py-4 font-semibold text-on-surface border-r border-outline-variant/40">Annual gross profit</td>
-                <td class="px-6 py-4 font-semibold border-r border-outline-variant/40">$60,000</td>
-                <td class="px-6 py-4 font-semibold border-r border-outline-variant/40">$120,000</td>
-                <td class="px-6 py-4 font-semibold">$180,000</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- Table 2: Margin by Volume -->
-      <div class="mb-20">
-        <p class="uppercase tracking-widest text-xs font-label font-medium text-primary mb-4">Volume Scaling</p>
-        <h2 class="font-headline text-3xl lg:text-4xl text-on-surface leading-tight mb-8">Margin by Volume — Snapshot at $1,499 Resale</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full text-left border border-outline-variant/40">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="px-6 py-4 text-xs uppercase tracking-widest font-label font-medium text-on-surface-variant border-b border-r border-outline-variant/40">Snapshots/month</th>
-                <th class="px-6 py-4 text-xs uppercase tracking-widest font-label font-medium text-on-surface-variant border-b border-r border-outline-variant/40">Monthly cost</th>
-                <th class="px-6 py-4 text-xs uppercase tracking-widest font-label font-medium text-on-surface-variant border-b border-r border-outline-variant/40">Monthly revenue</th>
-                <th class="px-6 py-4 text-xs uppercase tracking-widest font-label font-medium text-on-surface-variant border-b border-r border-outline-variant/40">Gross profit</th>
-                <th class="px-6 py-4 text-xs uppercase tracking-widest font-label font-medium text-on-surface-variant border-b border-r border-outline-variant/40">Margin %</th>
-                <th class="px-6 py-4 text-xs uppercase tracking-widest font-label font-medium text-on-surface-variant border-b border-outline-variant/40">Annual profit</th>
-              </tr>
-            </thead>
-            <tbody class="font-body text-sm text-on-surface">
-              <tr class="border-b border-outline-variant/20">
-                <td class="px-6 py-4 font-medium border-r border-outline-variant/40">3</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$1,497</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$4,497</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$3,000</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">67%</td>
-                <td class="px-6 py-4">$36,000</td>
-              </tr>
-              <tr class="border-b border-outline-variant/20 bg-surface-container-lowest">
-                <td class="px-6 py-4 font-medium border-r border-outline-variant/40">5</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$2,495</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$7,495</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$5,000</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">67%</td>
-                <td class="px-6 py-4">$60,000</td>
-              </tr>
-              <tr class="border-b border-outline-variant/20">
-                <td class="px-6 py-4 font-medium border-r border-outline-variant/40">10</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$4,990</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$14,990</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$10,000</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">67%</td>
-                <td class="px-6 py-4">$120,000</td>
-              </tr>
-              <tr class="border-b border-outline-variant/20 bg-surface-container-lowest">
-                <td class="px-6 py-4 font-medium border-r border-outline-variant/40">15</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$7,485</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$22,485</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$15,000</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">67%</td>
-                <td class="px-6 py-4">$180,000</td>
-              </tr>
-              <tr class="border-b border-outline-variant/20">
-                <td class="px-6 py-4 font-medium border-r border-outline-variant/40">25</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$12,475</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$37,475</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$25,000</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">67%</td>
-                <td class="px-6 py-4">$300,000</td>
-              </tr>
-              <tr class="bg-surface-container-low">
-                <td class="px-6 py-4 font-semibold border-r border-outline-variant/40">50</td>
-                <td class="px-6 py-4 font-semibold border-r border-outline-variant/40">$24,950</td>
-                <td class="px-6 py-4 font-semibold border-r border-outline-variant/40">$74,950</td>
-                <td class="px-6 py-4 font-semibold border-r border-outline-variant/40">$50,000</td>
-                <td class="px-6 py-4 font-semibold border-r border-outline-variant/40">67%</td>
-                <td class="px-6 py-4 font-semibold">$600,000</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- Table 3: Volume Pricing -->
-      <div class="mb-8">
-        <p class="uppercase tracking-widest text-xs font-label font-medium text-primary mb-4">Your Cost Basis</p>
-        <h2 class="font-headline text-3xl lg:text-4xl text-on-surface leading-tight mb-4">Metricus Snapshot Volume Pricing (Your Cost)</h2>
-        <p class="text-on-surface-variant text-base leading-relaxed max-w-2xl mb-8">One product, $499 list price. Order 5+ Snapshots per month and your per-unit cost drops. Each Snapshot is a 15&ndash;25 page PDF plus drop-in files (llms.txt, schemas, metadata, page copy), curated by AI experts and delivered within 24 hours.</p>
-        <div class="overflow-x-auto">
-          <table class="w-full text-left border border-outline-variant/40">
-            <thead>
-              <tr class="bg-surface-container-low">
-                <th class="px-6 py-4 text-xs uppercase tracking-widest font-label font-medium text-on-surface-variant border-b border-r border-outline-variant/40">Volume Tier</th>
-                <th class="px-6 py-4 text-xs uppercase tracking-widest font-label font-medium text-on-surface-variant border-b border-r border-outline-variant/40">Your Cost per Snapshot</th>
-                <th class="px-6 py-4 text-xs uppercase tracking-widest font-label font-medium text-on-surface-variant border-b border-r border-outline-variant/40">Suggested Resale</th>
-                <th class="px-6 py-4 text-xs uppercase tracking-widest font-label font-medium text-on-surface-variant border-b border-outline-variant/40">Typical Margin</th>
-              </tr>
-            </thead>
-            <tbody class="font-body text-sm text-on-surface">
-              <tr class="border-b border-outline-variant/20">
-                <td class="px-6 py-4 font-medium border-r border-outline-variant/40">1&ndash;4 Snapshots / month</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$499</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$999&ndash;$1,999</td>
-                <td class="px-6 py-4">50&ndash;75%</td>
-              </tr>
-              <tr class="border-b border-outline-variant/20 bg-surface-container-lowest">
-                <td class="px-6 py-4 font-medium border-r border-outline-variant/40">5&ndash;9 Snapshots / month</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">Volume pricing</td>
-                <td class="px-6 py-4 border-r border-outline-variant/40">$999&ndash;$1,999</td>
-                <td class="px-6 py-4">Higher</td>
-              </tr>
-              <tr class="bg-surface-container-low">
-                <td class="px-6 py-4 font-semibold border-r border-outline-variant/40">10+ Snapshots / month</td>
-                <td class="px-6 py-4 font-semibold border-r border-outline-variant/40">Volume pricing</td>
-                <td class="px-6 py-4 font-semibold border-r border-outline-variant/40">$999&ndash;$1,999</td>
-                <td class="px-6 py-4 font-semibold">Highest</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="text-sm font-body text-on-surface-variant mt-4">Running 5+ Snapshots per month? <a href="/agency-inquiry/" class="text-primary hover:text-primary-dim underline underline-offset-2">Request volume pricing</a>.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Section 2: Interactive Calculator -->
-  <section class="bg-surface-container-low border-t border-outline-variant/40 py-20 lg:py-28 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto">
-      <p class="uppercase tracking-widest text-xs font-label font-medium text-primary mb-4">Interactive Tool</p>
-      <h2 class="font-headline text-3xl lg:text-4xl text-on-surface leading-tight mb-4">Build Your Own Projection</h2>
-      <p class="text-on-surface-variant text-base leading-relaxed max-w-2xl mb-12">Enter your expected volume and resale prices to see projected margins. All numbers update in real time.</p>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-
-        <!-- Inputs -->
-        <div>
-          <h3 class="font-headline text-xl text-on-surface mb-6">Your Inputs</h3>
-
-          <!-- Snapshot -->
-          <div class="bg-surface-container-lowest border border-outline-variant/40 p-6">
-            <p class="text-xs uppercase tracking-widest font-label font-medium text-primary mb-4">Metricus Snapshot ($499 cost)</p>
-            <div class="grid grid-cols-2 gap-4">
-              <div>
-                <label for="snapshot-qty" class="block text-xs font-label text-on-surface-variant mb-1">Snapshots/month</label>
-                <input type="number" id="snapshot-qty" min="0" value="10" class="w-full border border-outline-variant/60 bg-surface px-4 py-2.5 text-sm text-on-surface focus:outline-none focus:border-primary">
-              </div>
-              <div>
-                <label for="snapshot-price" class="block text-xs font-label text-on-surface-variant mb-1">Resale price ($)</label>
-                <input type="number" id="snapshot-price" min="0" value="1499" class="w-full border border-outline-variant/60 bg-surface px-4 py-2.5 text-sm text-on-surface focus:outline-none focus:border-primary">
-              </div>
-            </div>
-            <p class="text-xs font-body text-on-surface-variant mt-4 leading-relaxed">15&ndash;25 page PDF plus drop-in files (llms.txt, schemas, metadata, page copy). Curated by AI experts. 24-hour turnaround. White-label ready. Volume pricing kicks in at 5+ Snapshots/month.</p>
-          </div>
-        </div>
-
-        <!-- Outputs -->
-        <div>
-          <h3 class="font-headline text-xl text-on-surface mb-6">Your Projection</h3>
-
-          <!-- Per-Snapshot margin -->
-          <div class="bg-surface-container-lowest border border-outline-variant/40 p-6 mb-4">
-            <p class="text-xs uppercase tracking-widest font-label font-medium text-on-surface-variant mb-4">Per-Snapshot Margin</p>
-            <div class="space-y-3">
-              <div class="flex justify-between text-sm">
-                <span class="text-on-surface-variant">Margin ($)</span>
-                <span class="text-on-surface font-medium" id="out-snapshot-margin">$1,000</span>
-              </div>
-              <div class="flex justify-between text-sm">
-                <span class="text-on-surface-variant">Margin (%)</span>
-                <span class="text-on-surface font-medium" id="out-snapshot-pct">67%</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Monthly totals -->
-          <div class="bg-surface-container-lowest border border-outline-variant/40 p-6 mb-4">
-            <p class="text-xs uppercase tracking-widest font-label font-medium text-on-surface-variant mb-4">Monthly Totals</p>
-            <div class="space-y-3">
-              <div class="flex justify-between text-sm">
-                <span class="text-on-surface-variant">Monthly cost</span>
-                <span class="text-on-surface font-medium" id="out-monthly-cost">$0</span>
-              </div>
-              <div class="flex justify-between text-sm">
-                <span class="text-on-surface-variant">Monthly revenue</span>
-                <span class="text-on-surface font-medium" id="out-monthly-revenue">$0</span>
-              </div>
-              <div class="flex justify-between text-sm pt-3 border-t border-outline-variant/30">
-                <span class="text-on-surface font-semibold">Monthly gross profit</span>
-                <span class="text-on-surface font-semibold" id="out-monthly-profit">$0</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Annual projection -->
-          <div class="bg-on-primary-fixed border border-outline-variant/40 p-6">
-            <p class="text-xs uppercase tracking-widest font-label font-medium text-on-primary/60 mb-4">Annual Projection</p>
-            <p class="font-headline text-4xl lg:text-5xl font-light text-on-primary mb-2" id="out-annual-profit">$0</p>
-            <p class="text-sm text-on-primary/70" id="out-summary">Enter your monthly Snapshot volume above to see projected earnings.</p>
-          </div>
-        </div>
-
+<body class="min-h-screen flex flex-col">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-outline-variant/30">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 gap-4">
+      <a href="/" class="text-on-surface font-semibold" aria-label="Metricus home">Metricus <span class="font-normal text-on-surface-variant">Optimizer</span></a>
+      <div class="flex items-center gap-5">
+        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface">Learn</a>
+        <a href="/ai-visibility-optimizer-tool/" class="bg-primary text-on-primary text-sm font-semibold px-4 py-2.5 hover:bg-primary-dim">Open the tool</a>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- Related Resources -->
-  <section class="py-16 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto border-t border-outline-variant/30 pt-10">
-      <p class="uppercase tracking-widest text-xs font-label font-medium text-primary mb-6">Related Resources</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <a href="/ai-visibility-agency-resources/" class="block border border-outline-variant/30 p-5 hover:bg-surface-container-low transition-colors">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Hub</p>
-          <p class="text-sm font-body text-on-surface font-medium">Agency Resources</p>
-          <p class="text-xs font-body text-on-surface-variant mt-1">All tools and templates for agency AI visibility work</p>
-        </a>
-        <a href="/agency-resources/white-label-deck/" class="block border border-outline-variant/30 p-5 hover:bg-surface-container-low transition-colors">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Template</p>
-          <p class="text-sm font-body text-on-surface font-medium">White-Label Report Deck</p>
-          <p class="text-xs font-body text-on-surface-variant mt-1">10-slide presentation template for client meetings</p>
-        </a>
-        <a href="/blog/agency-guide-ai-visibility-audits/" class="block border border-outline-variant/30 p-5 hover:bg-surface-container-low transition-colors">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Guide</p>
-          <p class="text-sm font-body text-on-surface font-medium">AI Visibility Reporting for Agencies</p>
-          <p class="text-xs font-body text-on-surface-variant mt-1">Full guide on using Metricus for agency audits</p>
-        </a>
+  <main class="flex-grow pt-16">
+    <article class="max-w-3xl mx-auto px-6 py-14 prose-plain">
+<h1 class="text-4xl md:text-5xl font-bold text-slate-text tracking-tight leading-tight mb-5">There is no margin to calculate.</h1><p class="text-lg text-on-surface leading-relaxed mb-8">The Metricus optimizer is free, for one client page or a hundred. This page is how agencies use it with clients and how they scope the work around it.</p><h2>Before the pitch</h2>
+      <p>Run it on the prospect's main product, service or pricing page. Bring the answer an AI assistant gives to the first call.</p>
+      <h2>In the meeting</h2>
+      <p>Walk through the passages that shape the answer and the rewrites. Change one on screen and watch the answer move. Screenshot it or run it live.</p>
+      <h2>After</h2>
+      <p>The rewrites are plain text. Paste them into the client's site yourself or hand them to the client's team. Take the changes as a file and run it again after publishing.</p>
+      <h2>Your cost basis</h2>
+      <table>
+        <tr><th>The optimizer, per page</th><td>Free</td></tr>
+        <tr><th>Signup, account or card</th><td>None</td></tr>
+        <tr><th>Per-client or volume tiers</th><td>None</td></tr>
+        <tr><th>Your work around it</th><td>Priced by you</td></tr>
+      </table>
+      <h2>What clients pay you for</h2>
+      <ul>
+        <li>Running it across every page that matters to the client, rather than one.</li>
+        <li>Putting the rewrites into the client's site.</li>
+        <li>Running it again after each change and tracking what moved.</li>
+        <li>Explaining the result to the client in their own terms.</li>
+      </ul>
+      <p>Questions about using it with clients? <a href="/agency-inquiry/">Get in touch</a>.</p>
+      <p class="text-sm text-on-surface-variant mt-12">Last updated: September 2026</p>
+      <div class="border-t border-outline-variant/30 mt-16 pt-10" data-cta="tool">
+        <h2 class="text-2xl font-semibold text-on-surface mb-2">Put in a page.</h2>
+        <p class="text-on-surface-variant mb-5 max-w-xl">See what an AI assistant answers about your page, which passages caused it, and a rewrite for each one. Free, no signup.</p>
+        <form class="flex flex-col sm:flex-row gap-2 max-w-xl" action="/ai-visibility-optimizer-tool/" method="get">
+          <label class="sr-only" for="cta-url">Address of the page to check</label>
+          <input id="cta-url" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="your-site.com/page" required class="flex-1 min-w-0 px-4 py-3 border border-outline-variant bg-white text-on-surface">
+          <button type="submit" class="bg-primary text-on-primary font-semibold px-6 py-3 hover:bg-primary-dim whitespace-nowrap">Start optimizing</button>
+        </form>
       </div>
-      <p class="text-sm font-body text-on-surface-variant mt-6">See our <a href="/blog/ai-visibility-action-plan/" class="text-primary hover:text-primary-dim underline underline-offset-2">5-step action plan</a> for the framework behind every report's recommendations.</p>
-    </div>
-  </section>
+    </article>
+  </main>
 
-  <!-- CTA Section -->
-  <section class="py-24 lg:py-32 px-6 lg:px-8">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="font-headline text-4xl lg:text-6xl font-light text-on-surface leading-tight mb-10">
-        Ready to build your <em class="italic">margin?</em>
-      </h2>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="../../get-report/" class="bg-primary text-on-primary text-sm font-medium px-8 py-3.5 hover:bg-primary-dim transition-colors">See what AI says about your client's brand</a>
-        <a href="../../agency-inquiry/" class="bg-surface-container-highest text-on-surface text-sm font-medium px-8 py-3.5 hover:bg-surface-variant transition-colors">Running 5+ Snapshots/month? Get volume pricing.</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <!-- ========== CITE THIS ARTICLE ========== -->
-  <div class="w-full px-6 py-4">
-    <footer class="citation max-w-3xl mx-auto pt-4 border-t border-[#E2E8F0]/40">
-      <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed text-center">Cite as:
-        <cite class="not-italic"><a href="https://metricusapp.com/agency-resources/margin-calculator/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; Agency Margin Calculator: AI Visibility Report Resale Pricing</a></cite>
-      </p>
-    </footer>
-  </div>
-
-  <!-- Site Footer -->
   <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p>
-      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-        <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
-        <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
-        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
-        <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
-        <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
-        <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
-        <a href="/privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a>
-        <a href="/terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a>
-        <a href="mailto:metricusapp@gmail.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
-      </div>
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-on-surface-variant">
+      <span class="text-on-surface font-semibold">Metricus</span>
+      <a href="/ai-visibility-optimizer-tool/" class="hover:text-on-surface">Open the tool</a>
+      <a href="/blog/" class="hover:text-on-surface">Learn</a>
+      <a href="/methodology/" class="hover:text-on-surface">How it works</a>
+      <a href="/results/" class="hover:text-on-surface">Results</a>
+      <a href="/for-agencies/" class="hover:text-on-surface">For agencies</a>
+      <a href="/about/" class="hover:text-on-surface">About</a>
+      <a href="/press/" class="hover:text-on-surface">Press</a>
+      <a href="/support/" class="hover:text-on-surface">Support</a>
+      <a href="/privacy-policy/" class="hover:text-on-surface">Privacy</a>
+      <a href="/terms-of-service/" class="hover:text-on-surface">Terms</a>
+      <a href="mailto:metricusapp@gmail.com" class="hover:text-on-surface">Contact</a>
+      <span class="ml-auto">&copy; 2026 Metricus</span>
     </div>
   </footer>
-
-  <!-- Interactive Calculator JS -->
-  <script>
-    (function() {
-      var SNAPSHOT_COST = 499;
-
-      function fmt(n) {
-        return '$' + n.toLocaleString('en-US');
-      }
-
-      function pct(margin, price) {
-        if (price <= 0) return '0%';
-        return Math.round((margin / price) * 100) + '%';
-      }
-
-      function recalc() {
-        var qty = parseInt(document.getElementById('snapshot-qty').value) || 0;
-        var price = parseFloat(document.getElementById('snapshot-price').value) || 0;
-        var margin = price - SNAPSHOT_COST;
-        if (margin < 0) margin = 0;
-
-        document.getElementById('out-snapshot-margin').textContent = fmt(margin);
-        document.getElementById('out-snapshot-pct').textContent = price > 0 ? pct(margin, price) : '0%';
-
-        var totalCost = qty * SNAPSHOT_COST;
-        var totalRevenue = qty * price;
-        var totalProfit = totalRevenue - totalCost;
-        if (totalProfit < 0) totalProfit = 0;
-
-        document.getElementById('out-monthly-cost').textContent = fmt(totalCost);
-        document.getElementById('out-monthly-revenue').textContent = fmt(totalRevenue);
-        document.getElementById('out-monthly-profit').textContent = fmt(totalProfit);
-        document.getElementById('out-annual-profit').textContent = fmt(totalProfit * 12);
-
-        var summaryEl = document.getElementById('out-summary');
-        if (qty > 0) {
-          summaryEl.textContent = 'At this volume, you\u2019d earn ' + fmt(totalProfit) + '/month (' + fmt(totalProfit * 12) + '/year) in gross profit.';
-        } else {
-          summaryEl.textContent = 'Enter your monthly Snapshot volume above to see projected earnings.';
-        }
-      }
-
-      document.getElementById('snapshot-qty').addEventListener('input', recalc);
-      document.getElementById('snapshot-price').addEventListener('input', recalc);
-
-      // Initial calculation
-      recalc();
-    })();
-  </script>
   <script src="/js/reader-pulse-b.js" defer></script>
 </body>
 </html>

@@ -1,856 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>White-Label AI Visibility Report Template for Agencies | Metricus</title>
-  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Presentation Template | Metricus</title>
+  <meta name="description" content="A ten-slide template for showing a client what an AI assistant answers about their pages, the passages behind it, the rewrites, and what to do next. Fill in your data and your logo.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://metricusapp.com/agency-resources/white-label-deck/">
-  <meta name="description" content="Free white-label slide template for agencies. Present AI visibility reports under your brand. 10 slides covering findings, competitors, and action plans.">
-  <meta property="og:title" content="White-Label AI Visibility Report Template for Agencies">
-    <meta property="og:description" content="Free white-label slide template for agencies. Present AI visibility reports under your brand. 10 slides covering findings, competitors, and action plans.">
-    <meta property="og:url" content="https://metricusapp.com/agency-resources/white-label-deck/">
-    <meta property="og:image" content="https://metricusapp.com/metricus-og-image.png">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="White-Label AI Visibility Report Template for Agencies | Metricus">
-  <meta name="twitter:description" content="Free white-label slide template for agencies. Present AI visibility reports under your brand. 10 slides covering findings, competitors, and action plans.">
-  <meta name="twitter:image" content="https://metricusapp.com/metricus-og-image.png">
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","dateModified":"2026-05-17","itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://metricusapp.com/"},
-    {"@type":"ListItem","position":2,"name":"Agency Resources","item":"https://metricusapp.c../ai-visibility-agency-resources/"},
-    {"@type":"ListItem","position":3,"name":"White-Label Deck","item":"https://metricusapp.com/agency-resources/white-label-deck/"}
-  ]}
-  </script>
+  <link rel="alternate" type="application/rss+xml" title="Metricus, AI visibility learn center" href="https://metricusapp.com/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Client Presentation Template | Metricus">
+  <meta property="og:description" content="A ten-slide template for showing a client what an AI assistant answers about their pages, the passages behind it, the rewrites, and what to do next. Fill in your data and your logo.">
+  <meta property="og:url" content="https://metricusapp.com/agency-resources/white-label-deck/">
+  <meta property="og:image" content="https://metricusapp.com/landing/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-970082336"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-970082336');gtag('config','G-YYR4QTRTW');</script>
-  <!-- Microsoft Clarity -->
   <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w70oz7g1k3");
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "w70oz7g1k3");
   </script>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script>
     tailwind.config = {
       theme: {
-        borderRadius: {
-          DEFAULT: '0px', none: '0px', sm: '0px', md: '0px',
-          lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px', full: '0px',
-        },
         extend: {
           colors: {
-            primary: '#515F74',
-            'on-primary': '#f6f7ff',
-            surface: '#f7f9fb',
-            'surface-container-low': '#f0f4f7',
-            'surface-container': '#e8eff3',
-            'surface-container-lowest': '#ffffff',
-            'surface-container-highest': '#d9e4ea',
-            'on-surface': '#2a3439',
-            'on-surface-variant': '#566166',
-            outline: '#717c82',
-            'outline-variant': '#a9b4b9',
-            'on-primary-fixed': '#324054',
-            'primary-dim': '#455368',
-            'surface-variant': '#d9e4ea',
-            'surface-container-high': '#e1e9ee',
-            'primary-fixed': '#d5e3fd',
-            'primary-fixed-dim': '#c7d5ee',
+            primary: '#515F74', 'primary-hover': '#1E293B', 'on-primary': '#f6f7ff', 'on-primary-fixed': '#324054', 'primary-dim': '#455368',
+            surface: '#f7f9fb', 'surface-container-low': '#f0f4f7', 'surface-container': '#e8eff3', 'surface-container-lowest': '#ffffff',
+            'surface-container-highest': '#d9e4ea', 'surface-container-high': '#e1e9ee', 'surface-variant': '#d9e4ea',
+            'on-surface': '#2a3439', 'on-surface-variant': '#566166', outline: '#717c82', 'outline-variant': '#a9b4b9',
+            'slate-text': '#0F172A', 'slate-muted': '#64748B', 'slate-accent': '#475569',
           },
           fontFamily: {
-            headline: ['Newsreader', 'serif'],
-            body: ['Public Sans', 'sans-serif'],
-            label: ['Public Sans', 'sans-serif'],
+            display: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+            body: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+            headline: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+            label: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
           },
+          borderRadius: { none: '0px', sm: '0px', DEFAULT: '0px', md: '0px', lg: '0px', xl: '0px', '2xl': '0px', '3xl': '0px', full: '0.75rem' },
         },
       },
     }
   </script>
   <style>
-    body { font-family: 'Public Sans', sans-serif; }
-    .bg-grid {
-      background-image:
-        linear-gradient(to right, rgba(113,124,130,0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(113,124,130,0.05) 1px, transparent 1px);
-      background-size: 40px 40px;
-    }
-    .slide-card {
-      background: #fff;
-      border: 1px solid #d9e4ea;
-      box-shadow: 0 1px 3px rgba(42,52,57,0.04), 0 4px 12px rgba(42,52,57,0.03);
-      transition: box-shadow 0.2s ease, transform 0.2s ease;
-    }
-    .slide-card:hover {
-      box-shadow: 0 2px 8px rgba(42,52,57,0.08), 0 8px 24px rgba(42,52,57,0.06);
-      transform: translateY(-2px);
-    }
-    .slide-inner {
-      aspect-ratio: 16 / 9;
-      background: #f7f9fb;
-      border: 1px solid #e8eff3;
-      overflow: hidden;
-      position: relative;
-    }
-    .slide-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 2px 10px;
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      font-family: 'Public Sans', sans-serif;
-    }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #ffffff; color: #2a3439; -webkit-font-smoothing: antialiased; }
+    .prose-plain h2 { font-size: 1.5rem; font-weight: 600; color: #0F172A; margin: 2.5rem 0 0.75rem; line-height: 1.25; }
+    .prose-plain h3 { font-size: 1.125rem; font-weight: 600; color: #0F172A; margin: 1.75rem 0 0.5rem; }
+    .prose-plain p { margin: 0 0 1rem; line-height: 1.65; }
+    .prose-plain ul { margin: 0 0 1rem 1.25rem; list-style: disc; }
+    .prose-plain ol { margin: 0 0 1rem 1.25rem; list-style: decimal; }
+    .prose-plain li { margin: 0.35rem 0; line-height: 1.6; }
+    .prose-plain a { color: #515F74; text-decoration: underline; }
+    .prose-plain table { width: 100%; border-collapse: collapse; margin: 0 0 1.25rem; font-size: 0.95rem; }
+    .prose-plain th, .prose-plain td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid #e1e9ee; vertical-align: top; }
+    .prose-plain th { color: #0F172A; font-weight: 600; }
+    .qa details { border-bottom: 1px solid #e1e9ee; padding: 0.75rem 0; }
+    .qa summary { cursor: pointer; font-weight: 600; color: #0F172A; list-style: none; display: flex; gap: 0.6rem; }
+    .qa summary::-webkit-details-marker { display: none; }
+    .qa summary::before { content: "+"; color: #717c82; font-weight: 400; width: 0.8rem; flex: none; }
+    .qa details[open] summary::before { content: "\2212"; }
+    .qa details p { margin: 0.5rem 0 0.25rem 1.4rem; color: #566166; line-height: 1.6; }
   </style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Client Presentation Template", "description": "A ten-slide template for the client meeting.", "url": "https://metricusapp.com/agency-resources/white-label-deck/", "dateModified": "2026-09-04", "publisher": {"@type": "Organization", "name": "Metricus", "url": "https://metricusapp.com"}}</script>
 </head>
-<body class="bg-surface text-on-surface bg-grid antialiased">
-
-  <!-- Site Nav -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-md border-b border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
-      <a href="/" class="flex items-center gap-2 group" aria-label="Metricus home">
-        <svg class="size-5 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-          <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
-        </svg>
-        <span class="font-headline italic text-xl text-on-surface tracking-tight group-hover:text-primary transition-colors">Metricus</span>
-      </a>
-      <div class="hidden md:flex items-center gap-8">
-        <a href="/methodology/" class="nav-link-howitworks text-sm text-on-surface-variant hover:text-on-surface transition-colors">Methodology</a>
-        <a href="/pricing/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Pricing</a>
-        <a href="/blog/" class="nav-link-blog text-sm text-on-surface-variant hover:text-on-surface transition-colors">Learn</a>
-        <a href="/for-agencies/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
-        <a href="/results/" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Results</a>
-        <a href="/get-report/" class="bg-primary text-on-primary text-sm font-medium px-5 py-2.5 hover:bg-primary-dim transition-colors">Get Your Report</a>
-      </div>
-      <button id="mobile-menu-btn" class="md:hidden flex items-center text-on-surface" aria-label="Open menu" aria-expanded="false">
-        <span class="material-symbols-outlined">menu</span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
-    <div class="absolute inset-0 bg-black/40" id="mobile-menu-backdrop"></div>
-    <nav class="absolute top-0 right-0 w-72 h-full bg-surface-container-lowest shadow-xl flex flex-col pt-6 px-6">
-      <button id="mobile-menu-close" class="self-end mb-8 text-on-surface" aria-label="Close menu">
-        <span class="material-symbols-outlined">close</span>
-      </button>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/methodology/">Methodology</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/pricing/">Pricing</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/blog/">Learn</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/for-agencies/">For Agencies</a>
-      <a class="py-3 text-sm text-on-surface-variant hover:text-on-surface border-b border-outline-variant/30" href="/results/">Results</a>
-      <a class="py-3 text-sm font-medium text-primary hover:text-on-surface" href="/get-report/">Get Your Report</a>
-    </nav>
-  </div>
-
-  <!-- Mobile Menu Script -->
-  <script>
-    (function(){
-      var btn=document.getElementById('mobile-menu-btn');
-      var menu=document.getElementById('mobile-menu');
-      var close=document.getElementById('mobile-menu-close');
-      var backdrop=document.getElementById('mobile-menu-backdrop');
-      if(!btn||!menu)return;
-      function open(){menu.classList.remove('hidden');menu.setAttribute('aria-hidden','false');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
-      function shut(){menu.classList.add('hidden');menu.setAttribute('aria-hidden','true');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
-      btn.addEventListener('click',open);
-      if(close)close.addEventListener('click',shut);
-      if(backdrop)backdrop.addEventListener('click',shut);
-    })();
-  </script>
-
-  <!-- Hero Header -->
-  <header class="max-w-7xl mx-auto px-6 pt-32 pb-20">
-    <div class="grid grid-cols-12 items-end gap-8">
-      <div class="col-span-12 md:col-span-8">
-        <p class="text-xs uppercase tracking-[0.2em] text-outline mb-6 font-label">Agency Resources — Presentation Template</p>
-        <h1 class="text-6xl md:text-8xl font-headline italic leading-[0.9] text-on-surface">White-Label<br />Report Template</h1>
-        <div class="sr-only" aria-hidden="false">The Metricus white-label deck includes 10 slides: title slide, why AI visibility matters, audit scope, AI visibility assessments, AI quotes, wrong facts, source map, competitor comparison, action plan, and next steps. Agencies can customize with their own branding.</div>
-      </div>
-      <div class="col-span-12 md:col-span-4 border-l border-outline-variant pl-8 pb-2">
-        <p class="text-base font-body text-on-surface-variant leading-relaxed mb-8">Present AI visibility reports under your agency brand. Every slide is designed for client meetings.</p>
-        <a href="../../get-report/" class="bg-primary text-on-primary px-6 py-3 text-xs font-label uppercase tracking-widest hover:bg-primary-dim transition-colors inline-flex items-center gap-2">
-          Run Your First Client Audit
-          <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </a>
+<body class="min-h-screen flex flex-col">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-outline-variant/30">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 gap-4">
+      <a href="/" class="text-on-surface font-semibold" aria-label="Metricus home">Metricus <span class="font-normal text-on-surface-variant">Optimizer</span></a>
+      <div class="flex items-center gap-5">
+        <a href="/blog/" class="text-sm text-on-surface-variant hover:text-on-surface">Learn</a>
+        <a href="/ai-visibility-optimizer-tool/" class="bg-primary text-on-primary text-sm font-semibold px-4 py-2.5 hover:bg-primary-dim">Open the tool</a>
       </div>
     </div>
   </header>
 
-  <!-- Deck overview bar -->
-  <section class="max-w-7xl mx-auto px-6 pb-12">
-    <div class="bg-surface-container-lowest border border-outline-variant/30 p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-      <div class="flex items-center gap-6">
-        <span class="text-4xl font-headline italic text-on-surface">10</span>
-        <div>
-          <p class="text-sm font-body text-on-surface font-medium">Ready-to-present slides</p>
-          <p class="text-xs font-label text-on-surface-variant">Fill in your data, add your logo, present to clients</p>
-        </div>
+  <main class="flex-grow pt-16">
+    <article class="max-w-3xl mx-auto px-6 py-14 prose-plain">
+<h1 class="text-4xl md:text-5xl font-bold text-slate-text tracking-tight leading-tight mb-5">Client presentation template</h1><p class="text-lg text-on-surface leading-relaxed mb-8">Ten slides for the client meeting. Every number on them comes from a run of the Metricus optimizer on the client's page; nothing is filled in for you. Add your logo and present it under your own name.</p><h2>Slide 1: Title</h2><p>[Your agency logo]</p><p>What AI says about [Client]'s pages. Prepared for [Client name], [date].</p><h2>Slide 2: Why it matters</h2><p>Buyers ask AI assistants before they search. What an assistant answers about your pages decides whether you are in the conversation at all. Fill in the client's own market with a number they recognise, not a generic statistic.</p><h2>Slide 3: What we checked</h2><p>[client.com/page-1], [client.com/page-2], [client.com/page-3]. Each page was put into the optimizer on [date]. The assistant read it the way it reads any page.</p><h2>Slide 4: At a glance</h2><ul><li>Pages checked: [X]</li><li>Passages that shape the answers: [X]</li><li>Rewrites proposed: [X]</li><li>Pages that held as they are: [X]</li></ul><h2>Slide 5: What AI answers today</h2><p>For each page: the prompt a buyer would type, the answer the assistant gave with the page as a source, and the passage the answer leaned on, quoted.</p><h2>Slide 6: Page by page</h2><table><tr><th>Page</th><th>What the assistant answers</th><th>Passages marked</th><th>Rewrite</th></tr><tr><td>[page 1]</td><td>[short answer summary]</td><td>[X]</td><td>Proposed</td></tr><tr><td>[page 2]</td><td>[short answer summary]</td><td>[X]</td><td>Page held, no change</td></tr></table><h2>Slide 7: Before and after</h2><p>On the page now: [the passage the answer depends on]. Proposed rewrite: [the rewrite, as plain text]. The answer after the rewrite: [quoted].</p><h2>Slide 8: Passages that matter</h2><table><tr><th>Passage</th><th>Page</th><th>Proposed rewrite</th><th>Status</th></tr><tr><td>[passage]</td><td>[page]</td><td>[rewrite]</td><td>To paste</td></tr></table><h2>Slide 9: Action plan</h2><ol><li>Paste the kept rewrites into [page 1] and [page 2].</li><li>Publish.</li><li>Run the optimizer again and compare the answers.</li></ol><h2>Slide 10: Next steps</h2><p>What happens after publishing, who does it, and when the pages are run again. Your recommendation is the deliverable; the run is the evidence behind it.</p>
+      <p class="text-sm text-on-surface-variant mt-12">Last updated: September 2026</p>
+      <div class="border-t border-outline-variant/30 mt-16 pt-10" data-cta="tool">
+        <h2 class="text-2xl font-semibold text-on-surface mb-2">Put in a page.</h2>
+        <p class="text-on-surface-variant mb-5 max-w-xl">See what an AI assistant answers about your page, which passages caused it, and a rewrite for each one. Free, no signup.</p>
+        <form class="flex flex-col sm:flex-row gap-2 max-w-xl" action="/ai-visibility-optimizer-tool/" method="get">
+          <label class="sr-only" for="cta-url">Address of the page to check</label>
+          <input id="cta-url" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="your-site.com/page" required class="flex-1 min-w-0 px-4 py-3 border border-outline-variant bg-white text-on-surface">
+          <button type="submit" class="bg-primary text-on-primary font-semibold px-6 py-3 hover:bg-primary-dim whitespace-nowrap">Start optimizing</button>
+        </form>
       </div>
-      <div class="flex flex-wrap gap-3">
-        <span class="slide-badge bg-primary/10 text-primary">Your branding</span>
-        <span class="slide-badge bg-primary/10 text-primary">Client-ready</span>
-        <span class="slide-badge bg-primary/10 text-primary">Data-driven</span>
-      </div>
-    </div>
-  </section>
+    </article>
+  </main>
 
-
-  <!-- ===== SLIDE 1: Title Slide ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-10">
-    <div class="slide-card p-6 md:p-8">
-      <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center gap-3">
-          <span class="text-xs font-label text-on-primary bg-primary px-3 py-1 uppercase tracking-[0.15em]">Slide 1</span>
-          <span class="text-sm font-label text-on-surface-variant">Title Slide</span>
-        </div>
-      </div>
-      <div class="slide-inner flex flex-col items-center justify-center p-8 md:p-16 text-center">
-        <!-- Agency logo placeholder -->
-        <div class="w-48 h-16 border-2 border-dashed border-outline-variant flex items-center justify-center mb-10">
-          <span class="text-xs font-label text-outline uppercase tracking-[0.15em]">[Your Agency Logo]</span>
-        </div>
-        <!-- Report title -->
-        <h2 class="font-headline italic text-4xl md:text-6xl text-on-surface leading-tight mb-4">AI Visibility Report Report</h2>
-        <p class="text-base font-body text-on-surface-variant mb-8">Prepared for <span class="text-on-surface font-medium">[Client Name]</span> | <span class="text-on-surface font-medium">[Date]</span></p>
-        <!-- Powered by badge -->
-        <div class="mt-auto pt-8">
-          <span class="text-[10px] font-label text-outline uppercase tracking-[0.2em] border border-outline-variant/40 px-3 py-1.5">Powered by Metricus</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ===== SLIDE 2: Why AI Visibility Matters ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-10">
-    <div class="slide-card p-6 md:p-8">
-      <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center gap-3">
-          <span class="text-xs font-label text-on-primary bg-primary px-3 py-1 uppercase tracking-[0.15em]">Slide 2</span>
-          <span class="text-sm font-label text-on-surface-variant">Why AI Visibility Matters</span>
-        </div>
-      </div>
-      <div class="slide-inner p-8 md:p-14">
-        <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-6">The Shift</p>
-        <h2 class="font-headline italic text-3xl md:text-5xl text-on-surface leading-tight mb-12">Your Customers Are Asking AI, Not Google</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="bg-surface-container-lowest border border-outline-variant/30 p-6 flex flex-col items-center text-center">
-            <span class="text-5xl md:text-6xl font-headline font-light text-primary leading-none mb-3">[X]%</span>
-            <p class="text-xs font-label text-on-surface-variant uppercase tracking-[0.15em]">of B2B buyers use AI<br>in purchase research</p>
-          </div>
-          <div class="bg-surface-container-lowest border border-outline-variant/30 p-6 flex flex-col items-center text-center">
-            <span class="text-5xl md:text-6xl font-headline font-light text-primary leading-none mb-3">[X]%</span>
-            <p class="text-xs font-label text-on-surface-variant uppercase tracking-[0.15em]">of AI answers cite<br>a specific brand</p>
-          </div>
-          <div class="bg-surface-container-lowest border border-outline-variant/30 p-6 flex flex-col items-center text-center">
-            <span class="text-5xl md:text-6xl font-headline font-light text-primary leading-none mb-3">[X]%</span>
-            <p class="text-xs font-label text-on-surface-variant uppercase tracking-[0.15em]">of brands are invisible<br>to AI assistants</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ===== SLIDE 3: Audit Scope ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-10">
-    <div class="slide-card p-6 md:p-8">
-      <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center gap-3">
-          <span class="text-xs font-label text-on-primary bg-primary px-3 py-1 uppercase tracking-[0.15em]">Slide 3</span>
-          <span class="text-sm font-label text-on-surface-variant">Audit Scope</span>
-        </div>
-      </div>
-      <div class="slide-inner p-8 md:p-14">
-        <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-6">What We Tested</p>
-        <h2 class="font-headline italic text-3xl text-on-surface leading-tight mb-10">Audit Scope</h2>
-        <div class="grid grid-cols-12 gap-8">
-          <div class="col-span-12 md:col-span-7">
-            <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-4">Platforms Audited</p>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-              <div class="bg-surface-container-lowest border border-outline-variant/30 px-4 py-3 text-center">
-                <p class="text-sm font-body text-on-surface font-medium">ChatGPT</p>
-              </div>
-              <div class="bg-surface-container-lowest border border-outline-variant/30 px-4 py-3 text-center">
-                <p class="text-sm font-body text-on-surface font-medium">Perplexity</p>
-              </div>
-              <div class="bg-surface-container-lowest border border-outline-variant/30 px-4 py-3 text-center">
-                <p class="text-sm font-body text-on-surface font-medium">Gemini</p>
-              </div>
-              <div class="bg-surface-container-lowest border border-outline-variant/30 px-4 py-3 text-center">
-                <p class="text-sm font-body text-on-surface font-medium">Claude</p>
-              </div>
-              <div class="bg-surface-container-lowest border border-outline-variant/30 px-4 py-3 text-center">
-                <p class="text-sm font-body text-on-surface font-medium">Grok</p>
-              </div>
-              <div class="bg-surface-container-lowest border border-outline-variant/30 px-4 py-3 text-center">
-                <p class="text-sm font-body text-on-surface font-medium">DeepSeek</p>
-              </div>
-              <div class="bg-surface-container-lowest border border-outline-variant/30 px-4 py-3 text-center">
-                <p class="text-sm font-body text-on-surface font-medium">Copilot</p>
-              </div>
-              <div class="bg-surface-container-lowest border border-outline-variant/30 px-4 py-3 text-center">
-                <p class="text-sm font-body text-on-surface font-medium">AI Overviews</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-span-12 md:col-span-5 flex flex-col gap-4">
-            <div class="bg-surface-container-lowest border border-outline-variant/30 p-6">
-              <span class="text-4xl font-headline italic text-primary">[X]</span>
-              <p class="text-xs font-label text-on-surface-variant uppercase tracking-[0.15em] mt-2">Competitors tracked</p>
-            </div>
-            <div class="bg-surface-container-lowest border border-outline-variant/30 p-6">
-              <span class="text-4xl font-headline italic text-primary">[X]</span>
-              <p class="text-xs font-label text-on-surface-variant uppercase tracking-[0.15em] mt-2">Queries tested</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ===== SLIDE 4: Executive Summary ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-10">
-    <div class="slide-card p-6 md:p-8">
-      <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center gap-3">
-          <span class="text-xs font-label text-on-primary bg-primary px-3 py-1 uppercase tracking-[0.15em]">Slide 4</span>
-          <span class="text-sm font-label text-on-surface-variant">Executive Summary</span>
-        </div>
-      </div>
-      <div class="slide-inner p-8 md:p-14">
-        <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-6">At a Glance</p>
-        <h2 class="font-headline italic text-3xl text-on-surface leading-tight mb-10">Executive Summary</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- AI Visibility Assessment -->
-          <div class="bg-surface-container-lowest border border-outline-variant/30 p-8 flex flex-col items-center text-center">
-            <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-4">AI Visibility Assessment</p>
-            <div class="flex items-end gap-1">
-              <span class="text-7xl md:text-8xl font-headline font-light text-on-surface leading-none">[X]</span>
-              <span class="text-2xl font-headline italic text-on-surface-variant pb-2">/100</span>
-            </div>
-            <div class="w-full h-1 bg-outline-variant/20 mt-6">
-              <div class="h-1 bg-primary" style="width: 67%"></div>
-            </div>
-          </div>
-          <!-- Competitor Rank -->
-          <div class="bg-surface-container-lowest border border-outline-variant/30 p-8 flex flex-col items-center text-center">
-            <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-4">Competitor Rank</p>
-            <div class="flex items-end gap-1">
-              <span class="text-3xl font-headline italic text-on-surface-variant">#</span>
-              <span class="text-7xl md:text-8xl font-headline font-light text-on-surface leading-none">[X]</span>
-            </div>
-            <p class="text-sm font-label text-on-surface-variant mt-4">of <span class="text-on-surface font-medium">[Y]</span> competitors</p>
-          </div>
-          <!-- Accuracy Score -->
-          <div class="bg-surface-container-lowest border border-outline-variant/30 p-8 flex flex-col items-center text-center">
-            <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-4">Accuracy Score</p>
-            <div class="flex items-end gap-1">
-              <span class="text-7xl md:text-8xl font-headline font-light text-on-surface leading-none">[X]</span>
-              <span class="text-2xl font-headline italic text-on-surface-variant pb-2">%</span>
-            </div>
-            <p class="text-sm font-label text-on-surface-variant mt-4">of AI claims verified correct</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ===== SLIDE 5: Platform Breakdown ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-10">
-    <div class="slide-card p-6 md:p-8">
-      <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center gap-3">
-          <span class="text-xs font-label text-on-primary bg-primary px-3 py-1 uppercase tracking-[0.15em]">Slide 5</span>
-          <span class="text-sm font-label text-on-surface-variant">Platform Breakdown</span>
-        </div>
-      </div>
-      <div class="slide-inner p-8 md:p-14">
-        <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-6">Visibility by Platform</p>
-        <h2 class="font-headline italic text-3xl text-on-surface leading-tight mb-10">Platform Breakdown</h2>
-        <div class="space-y-5 max-w-3xl">
-          <div>
-            <div class="flex items-baseline justify-between mb-2">
-              <span class="font-headline italic text-lg text-on-surface">ChatGPT</span>
-              <span class="text-sm font-label text-on-surface-variant">[X]%</span>
-            </div>
-            <div class="w-full h-2 bg-outline-variant/15">
-              <div class="h-2 bg-primary" style="width: 78%"></div>
-            </div>
-          </div>
-          <div>
-            <div class="flex items-baseline justify-between mb-2">
-              <span class="font-headline italic text-lg text-on-surface">Perplexity</span>
-              <span class="text-sm font-label text-on-surface-variant">[X]%</span>
-            </div>
-            <div class="w-full h-2 bg-outline-variant/15">
-              <div class="h-2 bg-primary" style="width: 72%"></div>
-            </div>
-          </div>
-          <div>
-            <div class="flex items-baseline justify-between mb-2">
-              <span class="font-headline italic text-lg text-on-surface">Gemini</span>
-              <span class="text-sm font-label text-on-surface-variant">[X]%</span>
-            </div>
-            <div class="w-full h-2 bg-outline-variant/15">
-              <div class="h-2 bg-primary" style="width: 65%"></div>
-            </div>
-          </div>
-          <div>
-            <div class="flex items-baseline justify-between mb-2">
-              <span class="font-headline italic text-lg text-on-surface">Claude</span>
-              <span class="text-sm font-label text-on-surface-variant">[X]%</span>
-            </div>
-            <div class="w-full h-2 bg-outline-variant/15">
-              <div class="h-2 bg-primary" style="width: 61%"></div>
-            </div>
-          </div>
-          <div>
-            <div class="flex items-baseline justify-between mb-2">
-              <span class="font-headline italic text-lg text-on-surface">Grok</span>
-              <span class="text-sm font-label text-on-surface-variant">[X]%</span>
-            </div>
-            <div class="w-full h-2 bg-outline-variant/15">
-              <div class="h-2 bg-primary" style="width: 55%"></div>
-            </div>
-          </div>
-          <div>
-            <div class="flex items-baseline justify-between mb-2">
-              <span class="font-headline italic text-lg text-on-surface">DeepSeek</span>
-              <span class="text-sm font-label text-on-surface-variant">[X]%</span>
-            </div>
-            <div class="w-full h-2 bg-outline-variant/15">
-              <div class="h-2 bg-primary" style="width: 48%"></div>
-            </div>
-          </div>
-          <div>
-            <div class="flex items-baseline justify-between mb-2">
-              <span class="font-headline italic text-lg text-on-surface">Copilot</span>
-              <span class="text-sm font-label text-on-surface-variant">[X]%</span>
-            </div>
-            <div class="w-full h-2 bg-outline-variant/15">
-              <div class="h-2 bg-primary" style="width: 42%"></div>
-            </div>
-          </div>
-          <div>
-            <div class="flex items-baseline justify-between mb-2">
-              <span class="font-headline italic text-lg text-on-surface">AI Overviews</span>
-              <span class="text-sm font-label text-on-surface-variant">[X]%</span>
-            </div>
-            <div class="w-full h-2 bg-outline-variant/15">
-              <div class="h-2 bg-primary" style="width: 38%"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ===== SLIDE 6: Competitor Comparison ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-10">
-    <div class="slide-card p-6 md:p-8">
-      <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center gap-3">
-          <span class="text-xs font-label text-on-primary bg-primary px-3 py-1 uppercase tracking-[0.15em]">Slide 6</span>
-          <span class="text-sm font-label text-on-surface-variant">Competitor Comparison</span>
-        </div>
-      </div>
-      <div class="slide-inner p-8 md:p-14 overflow-x-auto">
-        <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-6">Head to Head</p>
-        <h2 class="font-headline italic text-3xl text-on-surface leading-tight mb-10">Competitor Comparison</h2>
-        <table class="w-full min-w-[600px]">
-          <thead>
-            <tr class="text-left">
-              <th class="text-xs uppercase tracking-[0.2em] text-outline font-label font-normal pb-4 pr-4">Brand</th>
-              <th class="text-xs uppercase tracking-[0.2em] text-outline font-label font-normal pb-4 pr-4">Visibility</th>
-              <th class="text-xs uppercase tracking-[0.2em] text-outline font-label font-normal pb-4 pr-4">ChatGPT</th>
-              <th class="text-xs uppercase tracking-[0.2em] text-outline font-label font-normal pb-4 pr-4">Perplexity</th>
-              <th class="text-xs uppercase tracking-[0.2em] text-outline font-label font-normal pb-4 pr-4">Gemini</th>
-              <th class="text-xs uppercase tracking-[0.2em] text-outline font-label font-normal pb-4 text-right">Accuracy</th>
-            </tr>
-          </thead>
-          <tbody class="text-sm">
-            <tr class="border-t border-outline-variant/20">
-              <td class="py-4 pr-4"><span class="font-headline italic text-on-surface">[Client]</span></td>
-              <td class="py-4 pr-4 font-label text-on-surface">[X]%</td>
-              <td class="py-4 pr-4"><span class="inline-block w-4 h-4 bg-primary/70"></span></td>
-              <td class="py-4 pr-4"><span class="inline-block w-4 h-4 bg-primary/50"></span></td>
-              <td class="py-4 pr-4"><span class="inline-block w-4 h-4 bg-primary/40"></span></td>
-              <td class="py-4 text-right font-label text-on-surface">[X]%</td>
-            </tr>
-            <tr class="border-t border-outline-variant/20">
-              <td class="py-4 pr-4"><span class="font-headline italic text-on-surface-variant">[Competitor A]</span></td>
-              <td class="py-4 pr-4 font-label text-on-surface-variant">[X]%</td>
-              <td class="py-4 pr-4"><span class="inline-block w-4 h-4 bg-red-400/60"></span></td>
-              <td class="py-4 pr-4"><span class="inline-block w-4 h-4 bg-red-400/80"></span></td>
-              <td class="py-4 pr-4"><span class="inline-block w-4 h-4 bg-red-400/40"></span></td>
-              <td class="py-4 text-right font-label text-on-surface-variant">[X]%</td>
-            </tr>
-            <tr class="border-t border-outline-variant/20">
-              <td class="py-4 pr-4"><span class="font-headline italic text-on-surface-variant">[Competitor B]</span></td>
-              <td class="py-4 pr-4 font-label text-on-surface-variant">[X]%</td>
-              <td class="py-4 pr-4"><span class="inline-block w-4 h-4 bg-amber-400/60"></span></td>
-              <td class="py-4 pr-4"><span class="inline-block w-4 h-4 bg-amber-400/40"></span></td>
-              <td class="py-4 pr-4"><span class="inline-block w-4 h-4 bg-amber-400/70"></span></td>
-              <td class="py-4 text-right font-label text-on-surface-variant">[X]%</td>
-            </tr>
-            <tr class="border-t border-outline-variant/20">
-              <td class="py-4 pr-4"><span class="font-headline italic text-on-surface-variant">[Competitor C]</span></td>
-              <td class="py-4 pr-4 font-label text-on-surface-variant">[X]%</td>
-              <td class="py-4 pr-4"><span class="inline-block w-4 h-4 bg-green-400/50"></span></td>
-              <td class="py-4 pr-4"><span class="inline-block w-4 h-4 bg-green-400/60"></span></td>
-              <td class="py-4 pr-4"><span class="inline-block w-4 h-4 bg-green-400/30"></span></td>
-              <td class="py-4 text-right font-label text-on-surface-variant">[X]%</td>
-            </tr>
-            <tr class="border-t border-outline-variant/20">
-              <td class="py-4 pr-4"><span class="font-headline italic text-on-surface-variant">[Competitor D]</span></td>
-              <td class="py-4 pr-4 font-label text-on-surface-variant">[X]%</td>
-              <td class="py-4 pr-4"><span class="inline-block w-4 h-4 bg-outline-variant/40"></span></td>
-              <td class="py-4 pr-4"><span class="inline-block w-4 h-4 bg-outline-variant/30"></span></td>
-              <td class="py-4 pr-4"><span class="inline-block w-4 h-4 bg-outline-variant/50"></span></td>
-              <td class="py-4 text-right font-label text-on-surface-variant">[X]%</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="flex items-center gap-6 mt-6 pt-4 border-t border-outline-variant/20">
-          <div class="flex items-center gap-2"><span class="inline-block w-3 h-3 bg-primary/60"></span><span class="text-[10px] font-label text-outline uppercase tracking-[0.1em]">Strong</span></div>
-          <div class="flex items-center gap-2"><span class="inline-block w-3 h-3 bg-amber-400/60"></span><span class="text-[10px] font-label text-outline uppercase tracking-[0.1em]">Moderate</span></div>
-          <div class="flex items-center gap-2"><span class="inline-block w-3 h-3 bg-red-400/60"></span><span class="text-[10px] font-label text-outline uppercase tracking-[0.1em]">Weak</span></div>
-          <div class="flex items-center gap-2"><span class="inline-block w-3 h-3 bg-outline-variant/40"></span><span class="text-[10px] font-label text-outline uppercase tracking-[0.1em]">Invisible</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ===== SLIDE 7: What AI Gets Wrong ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-10">
-    <div class="slide-card p-6 md:p-8">
-      <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center gap-3">
-          <span class="text-xs font-label text-on-primary bg-primary px-3 py-1 uppercase tracking-[0.15em]">Slide 7</span>
-          <span class="text-sm font-label text-on-surface-variant">What AI Gets Wrong</span>
-        </div>
-      </div>
-      <div class="slide-inner p-8 md:p-14">
-        <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-6">Wrong Facts / Hallucination Check</p>
-        <h2 class="font-headline italic text-3xl text-on-surface leading-tight mb-10">What AI Gets Wrong</h2>
-        <div class="space-y-6 max-w-3xl">
-          <!-- Error 1 -->
-          <div class="flex flex-col md:flex-row gap-4">
-            <div class="flex-1 bg-red-50 border border-red-200/60 p-5">
-              <p class="text-[10px] uppercase tracking-[0.2em] text-red-500 font-label mb-2">What AI says</p>
-              <p class="text-sm font-body text-on-surface italic">"[Client] pricing starts at $[X]/user/month with a minimum of [X] seats."</p>
-            </div>
-            <div class="flex items-center justify-center px-2">
-              <span class="material-symbols-outlined text-outline">arrow_forward</span>
-            </div>
-            <div class="flex-1 bg-green-50 border border-green-200/60 p-5">
-              <p class="text-[10px] uppercase tracking-[0.2em] text-green-600 font-label mb-2">What's actually true</p>
-              <p class="text-sm font-body text-on-surface italic">"[Corrected fact with actual pricing, minimums, or feature info]"</p>
-            </div>
-          </div>
-          <!-- Error 2 -->
-          <div class="flex flex-col md:flex-row gap-4">
-            <div class="flex-1 bg-red-50 border border-red-200/60 p-5">
-              <p class="text-[10px] uppercase tracking-[0.2em] text-red-500 font-label mb-2">What AI says</p>
-              <p class="text-sm font-body text-on-surface italic">"[Client] doesn't support [feature] — users need a third-party integration."</p>
-            </div>
-            <div class="flex items-center justify-center px-2">
-              <span class="material-symbols-outlined text-outline">arrow_forward</span>
-            </div>
-            <div class="flex-1 bg-green-50 border border-green-200/60 p-5">
-              <p class="text-[10px] uppercase tracking-[0.2em] text-green-600 font-label mb-2">What's actually true</p>
-              <p class="text-sm font-body text-on-surface italic">"[Corrected fact — feature has been available since Q[X] 202X]"</p>
-            </div>
-          </div>
-          <!-- Error 3 -->
-          <div class="flex flex-col md:flex-row gap-4">
-            <div class="flex-1 bg-red-50 border border-red-200/60 p-5">
-              <p class="text-[10px] uppercase tracking-[0.2em] text-red-500 font-label mb-2">What AI says</p>
-              <p class="text-sm font-body text-on-surface italic">"[Client] is best suited for enterprise teams of 500+ employees."</p>
-            </div>
-            <div class="flex items-center justify-center px-2">
-              <span class="material-symbols-outlined text-outline">arrow_forward</span>
-            </div>
-            <div class="flex-1 bg-green-50 border border-green-200/60 p-5">
-              <p class="text-[10px] uppercase tracking-[0.2em] text-green-600 font-label mb-2">What's actually true</p>
-              <p class="text-sm font-body text-on-surface italic">"[Corrected positioning — teams of all sizes, free tier available]"</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ===== SLIDE 8: Opportunity Map ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-10">
-    <div class="slide-card p-6 md:p-8">
-      <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center gap-3">
-          <span class="text-xs font-label text-on-primary bg-primary px-3 py-1 uppercase tracking-[0.15em]">Slide 8</span>
-          <span class="text-sm font-label text-on-surface-variant">Opportunity Map</span>
-        </div>
-      </div>
-      <div class="slide-inner p-8 md:p-14 overflow-x-auto">
-        <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-6">Missed Visibility</p>
-        <h2 class="font-headline italic text-3xl text-on-surface leading-tight mb-4">Queries You Should Own But Don't</h2>
-        <p class="text-sm text-on-surface-variant font-body leading-relaxed max-w-2xl mb-10">High-intent buyer queries where your brand is absent from AI answers, but competitors appear. Each row is a concrete opportunity.</p>
-        <table class="w-full min-w-[600px]">
-          <thead>
-            <tr class="text-left">
-              <th class="text-xs uppercase tracking-[0.2em] text-outline font-label font-normal pb-4 pr-4">Query</th>
-              <th class="text-xs uppercase tracking-[0.2em] text-outline font-label font-normal pb-4 pr-4">Intent</th>
-              <th class="text-xs uppercase tracking-[0.2em] text-outline font-label font-normal pb-4 pr-4">Who Appears</th>
-              <th class="text-xs uppercase tracking-[0.2em] text-outline font-label font-normal pb-4 text-right">Your Status</th>
-            </tr>
-          </thead>
-          <tbody class="text-sm">
-            <tr class="border-t border-outline-variant/20">
-              <td class="py-4 pr-4 font-body italic text-on-surface">"[buyer query placeholder 1]"</td>
-              <td class="py-4 pr-4 font-label text-on-surface-variant">Purchase</td>
-              <td class="py-4 pr-4 font-label text-on-surface-variant">[Competitor A], [Competitor B]</td>
-              <td class="py-4 text-right"><span class="text-xs font-label text-red-500 bg-red-50 px-2 py-1">Invisible</span></td>
-            </tr>
-            <tr class="border-t border-outline-variant/20">
-              <td class="py-4 pr-4 font-body italic text-on-surface">"[buyer query placeholder 2]"</td>
-              <td class="py-4 pr-4 font-label text-on-surface-variant">Comparison</td>
-              <td class="py-4 pr-4 font-label text-on-surface-variant">[Competitor C]</td>
-              <td class="py-4 text-right"><span class="text-xs font-label text-red-500 bg-red-50 px-2 py-1">Invisible</span></td>
-            </tr>
-            <tr class="border-t border-outline-variant/20">
-              <td class="py-4 pr-4 font-body italic text-on-surface">"[buyer query placeholder 3]"</td>
-              <td class="py-4 pr-4 font-label text-on-surface-variant">Switching</td>
-              <td class="py-4 pr-4 font-label text-on-surface-variant">[Competitor A], [Competitor D]</td>
-              <td class="py-4 text-right"><span class="text-xs font-label text-red-500 bg-red-50 px-2 py-1">Invisible</span></td>
-            </tr>
-            <tr class="border-t border-outline-variant/20">
-              <td class="py-4 pr-4 font-body italic text-on-surface">"[buyer query placeholder 4]"</td>
-              <td class="py-4 pr-4 font-label text-on-surface-variant">Industry</td>
-              <td class="py-4 pr-4 font-label text-on-surface-variant">[Competitor B], [Competitor C]</td>
-              <td class="py-4 text-right"><span class="text-xs font-label text-amber-600 bg-amber-50 px-2 py-1">Mentioned</span></td>
-            </tr>
-            <tr class="border-t border-outline-variant/20">
-              <td class="py-4 pr-4 font-body italic text-on-surface">"[buyer query placeholder 5]"</td>
-              <td class="py-4 pr-4 font-label text-on-surface-variant">Use case</td>
-              <td class="py-4 pr-4 font-label text-on-surface-variant">[Competitor A]</td>
-              <td class="py-4 text-right"><span class="text-xs font-label text-red-500 bg-red-50 px-2 py-1">Invisible</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ===== SLIDE 9: Action Plan ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-10">
-    <div class="slide-card p-6 md:p-8">
-      <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center gap-3">
-          <span class="text-xs font-label text-on-primary bg-primary px-3 py-1 uppercase tracking-[0.15em]">Slide 9</span>
-          <span class="text-sm font-label text-on-surface-variant">Action Plan</span>
-        </div>
-      </div>
-      <div class="slide-inner p-8 md:p-14">
-        <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-6">Prioritized Recommendations</p>
-        <h2 class="font-headline italic text-3xl text-on-surface leading-tight mb-10">Action Plan</h2>
-        <div class="space-y-0 max-w-3xl">
-          <!-- Action 1 -->
-          <div class="flex items-start gap-5 py-5 border-t border-outline-variant/20">
-            <span class="font-headline italic text-2xl text-primary w-8 flex-shrink-0">01</span>
-            <div class="flex-1">
-              <div class="flex flex-wrap items-center gap-3 mb-1">
-                <p class="text-on-surface font-body font-medium">[Action title — e.g., Fix third-party listing errors]</p>
-                <span class="text-[10px] font-label text-red-600 bg-red-50 px-2 py-0.5 uppercase tracking-[0.1em]">Critical</span>
-              </div>
-              <p class="text-sm text-on-surface-variant font-body leading-relaxed">[Brief rationale and expected impact]</p>
-              <p class="text-xs font-label text-outline mt-2">Timeline: [1-2 weeks]</p>
-            </div>
-          </div>
-          <!-- Action 2 -->
-          <div class="flex items-start gap-5 py-5 border-t border-outline-variant/20">
-            <span class="font-headline italic text-2xl text-primary w-8 flex-shrink-0">02</span>
-            <div class="flex-1">
-              <div class="flex flex-wrap items-center gap-3 mb-1">
-                <p class="text-on-surface font-body font-medium">[Action title — e.g., Add buyer-language content]</p>
-                <span class="text-[10px] font-label text-amber-700 bg-amber-50 px-2 py-0.5 uppercase tracking-[0.1em]">High</span>
-              </div>
-              <p class="text-sm text-on-surface-variant font-body leading-relaxed">[Brief rationale and expected impact]</p>
-              <p class="text-xs font-label text-outline mt-2">Timeline: [2-4 weeks]</p>
-            </div>
-          </div>
-          <!-- Action 3 -->
-          <div class="flex items-start gap-5 py-5 border-t border-outline-variant/20">
-            <span class="font-headline italic text-2xl text-primary w-8 flex-shrink-0">03</span>
-            <div class="flex-1">
-              <div class="flex flex-wrap items-center gap-3 mb-1">
-                <p class="text-on-surface font-body font-medium">[Action title — e.g., Publish comparison pages]</p>
-                <span class="text-[10px] font-label text-amber-700 bg-amber-50 px-2 py-0.5 uppercase tracking-[0.1em]">High</span>
-              </div>
-              <p class="text-sm text-on-surface-variant font-body leading-relaxed">[Brief rationale and expected impact]</p>
-              <p class="text-xs font-label text-outline mt-2">Timeline: [2-3 weeks]</p>
-            </div>
-          </div>
-          <!-- Action 4 -->
-          <div class="flex items-start gap-5 py-5 border-t border-outline-variant/20">
-            <span class="font-headline italic text-2xl text-primary w-8 flex-shrink-0">04</span>
-            <div class="flex-1">
-              <div class="flex flex-wrap items-center gap-3 mb-1">
-                <p class="text-on-surface font-body font-medium">[Action title — e.g., Update community presence]</p>
-                <span class="text-[10px] font-label text-primary bg-primary/10 px-2 py-0.5 uppercase tracking-[0.1em]">Medium</span>
-              </div>
-              <p class="text-sm text-on-surface-variant font-body leading-relaxed">[Brief rationale and expected impact]</p>
-              <p class="text-xs font-label text-outline mt-2">Timeline: [Ongoing]</p>
-            </div>
-          </div>
-          <!-- Action 5 -->
-          <div class="flex items-start gap-5 py-5 border-t border-outline-variant/20">
-            <span class="font-headline italic text-2xl text-primary w-8 flex-shrink-0">05</span>
-            <div class="flex-1">
-              <div class="flex flex-wrap items-center gap-3 mb-1">
-                <p class="text-on-surface font-body font-medium">[Action title — e.g., Add structured data markup]</p>
-                <span class="text-[10px] font-label text-primary bg-primary/10 px-2 py-0.5 uppercase tracking-[0.1em]">Medium</span>
-              </div>
-              <p class="text-sm text-on-surface-variant font-body leading-relaxed">[Brief rationale and expected impact]</p>
-              <p class="text-xs font-label text-outline mt-2">Timeline: [1 week]</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ===== SLIDE 10: Next Steps ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-10">
-    <div class="slide-card p-6 md:p-8">
-      <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center gap-3">
-          <span class="text-xs font-label text-on-primary bg-primary px-3 py-1 uppercase tracking-[0.15em]">Slide 10</span>
-          <span class="text-sm font-label text-on-surface-variant">Next Steps</span>
-        </div>
-      </div>
-      <div class="slide-inner p-8 md:p-14 flex flex-col items-center justify-center text-center">
-        <!-- Agency branding area -->
-        <div class="w-48 h-14 border-2 border-dashed border-outline-variant flex items-center justify-center mb-8">
-          <span class="text-xs font-label text-outline uppercase tracking-[0.15em]">[Your Agency Logo]</span>
-        </div>
-        <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-6">How We Can Help</p>
-        <h2 class="font-headline italic text-3xl md:text-4xl text-on-surface leading-tight mb-10">[Your Agency] Service Tiers</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-3xl mb-10">
-          <div class="bg-surface-container-lowest border border-outline-variant/30 p-6 text-center">
-            <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Tier 1</p>
-            <p class="font-headline italic text-xl text-on-surface mb-1">[Package Name]</p>
-            <p class="text-sm text-on-surface-variant font-body">[Brief description]</p>
-          </div>
-          <div class="bg-surface-container-lowest border-2 border-primary/30 p-6 text-center">
-            <p class="text-xs uppercase tracking-[0.15em] text-primary font-label mb-2">Tier 2 — Recommended</p>
-            <p class="font-headline italic text-xl text-on-surface mb-1">[Package Name]</p>
-            <p class="text-sm text-on-surface-variant font-body">[Brief description]</p>
-          </div>
-          <div class="bg-surface-container-lowest border border-outline-variant/30 p-6 text-center">
-            <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Tier 3</p>
-            <p class="font-headline italic text-xl text-on-surface mb-1">[Package Name]</p>
-            <p class="text-sm text-on-surface-variant font-body">[Brief description]</p>
-          </div>
-        </div>
-        <div class="border-2 border-dashed border-outline-variant p-6 w-full max-w-md">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Contact</p>
-          <p class="text-sm font-body text-on-surface">[Your Name] | [your@email.com]</p>
-          <p class="text-sm font-body text-on-surface-variant">[Phone] | [Website]</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ===== Related Resources ===== -->
-  <section class="max-w-7xl mx-auto px-6 pb-16">
-    <div class="border-t border-outline-variant/30 pt-10">
-      <p class="text-xs uppercase tracking-[0.2em] text-outline font-label mb-6">Related Resources</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <a href="/ai-visibility-agency-resources/" class="block border border-outline-variant/30 p-5 hover:bg-surface-container-low transition-colors">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Hub</p>
-          <p class="text-sm font-body text-on-surface font-medium">Agency Resources</p>
-          <p class="text-xs font-body text-on-surface-variant mt-1">All tools and templates for agency AI visibility work</p>
-        </a>
-        <a href="/agency-resources/margin-calculator/" class="block border border-outline-variant/30 p-5 hover:bg-surface-container-low transition-colors">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Tool</p>
-          <p class="text-sm font-body text-on-surface font-medium">Agency Margin Calculator</p>
-          <p class="text-xs font-body text-on-surface-variant mt-1">Project your earnings reselling AI audits to clients</p>
-        </a>
-        <a href="/blog/agency-guide-ai-visibility-audits/" class="block border border-outline-variant/30 p-5 hover:bg-surface-container-low transition-colors">
-          <p class="text-xs uppercase tracking-[0.15em] text-outline font-label mb-2">Guide</p>
-          <p class="text-sm font-body text-on-surface font-medium">AI Visibility Reporting for Agencies</p>
-          <p class="text-xs font-body text-on-surface-variant mt-1">Full guide on using Metricus for agency audits</p>
-        </a>
-      </div>
-      <p class="text-sm font-body text-on-surface-variant mt-6">Looking for the right tool to fill this deck? See our <a href="/blog/ai-visibility-tools-worth-it-2026/" class="text-primary hover:text-primary-dim underline underline-offset-2">comparison of AI visibility tools</a>.</p>
-    </div>
-  </section>
-
-  <!-- ===== CTA Section ===== -->
-  <section class="bg-on-surface text-surface">
-    <div class="max-w-7xl mx-auto px-6 py-24 md:py-32">
-      <div class="grid grid-cols-12 items-center gap-8">
-        <div class="col-span-12 md:col-span-8">
-          <h2 class="font-headline italic text-5xl md:text-7xl leading-[0.95] mb-6">Get your first reports<br />to fill this deck</h2>
-          <p class="text-surface-variant font-body text-base leading-relaxed max-w-xl mb-8">Each Metricus report gives you everything you need for every slide: AI visibility assessments, platform breakdowns, competitor data, wrong-facts audits, and prioritized actions. White-label ready.</p>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="../../get-report/" class="inline-block bg-surface text-on-surface px-8 py-4 text-sm font-label uppercase tracking-widest hover:bg-surface-container-high transition-colors text-center">Get Your Report</a>
-            <a href="../../agency-inquiry/" class="inline-block border border-surface-variant/40 text-surface px-8 py-4 text-sm font-label uppercase tracking-widest hover:bg-white/10 transition-colors text-center">Volume Pricing for Agencies</a>
-          </div>
-        </div>
-        <div class="col-span-12 md:col-span-4">
-          <p class="text-surface-variant font-body text-sm leading-relaxed">Running multiple client audits? See volume pricing for agencies managing 5+ client reports per month.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <!-- ========== CITE THIS ARTICLE ========== -->
-  <div class="w-full px-6 py-4">
-    <footer class="citation max-w-3xl mx-auto pt-4 border-t border-[#E2E8F0]/40">
-      <p class="text-[11px] text-[#94A3B8]/70 leading-relaxed text-center">Cite as:
-        <cite class="not-italic"><a href="https://metricusapp.com/agency-resources/white-label-deck/" class="text-[#94A3B8]/70 underline decoration-[#94A3B8]/30 hover:text-[#94A3B8]">Metricus &mdash; White-Label AI Visibility Report Template for Agencies</a></cite>
-      </p>
-    </footer>
-  </div>
-
-  <!-- Site Footer -->
   <footer class="border-t border-outline-variant/30 py-8 px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-xs uppercase tracking-tighter font-label text-on-surface-variant">&copy; 2026 Metricus. All rights reserved.</p>
-      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-        <a href="/sample-ai-visibility-report/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Sample Report</a>
-        <a href="/geo-knowledge-base/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Knowledge Base</a>
-        <a href="/for-agencies/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">For Agencies</a>
-        <a href="/press/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Press</a>
-        <a href="/about/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">About</a>
-        <a href="/support/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Support</a>
-        <a href="/privacy-policy/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Privacy Policy</a>
-        <a href="/terms-of-service/" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Terms of Service</a>
-        <a href="mailto:metricusapp@gmail.com" class="text-xs uppercase tracking-tighter font-label text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
-      </div>
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-on-surface-variant">
+      <span class="text-on-surface font-semibold">Metricus</span>
+      <a href="/ai-visibility-optimizer-tool/" class="hover:text-on-surface">Open the tool</a>
+      <a href="/blog/" class="hover:text-on-surface">Learn</a>
+      <a href="/methodology/" class="hover:text-on-surface">How it works</a>
+      <a href="/results/" class="hover:text-on-surface">Results</a>
+      <a href="/for-agencies/" class="hover:text-on-surface">For agencies</a>
+      <a href="/about/" class="hover:text-on-surface">About</a>
+      <a href="/press/" class="hover:text-on-surface">Press</a>
+      <a href="/support/" class="hover:text-on-surface">Support</a>
+      <a href="/privacy-policy/" class="hover:text-on-surface">Privacy</a>
+      <a href="/terms-of-service/" class="hover:text-on-surface">Terms</a>
+      <a href="mailto:metricusapp@gmail.com" class="hover:text-on-surface">Contact</a>
+      <span class="ml-auto">&copy; 2026 Metricus</span>
     </div>
   </footer>
-
   <script src="/js/reader-pulse-b.js" defer></script>
 </body>
 </html>

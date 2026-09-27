@@ -483,7 +483,7 @@
         topRiskLabel: riskLabel,
         topFixLabel: fixLabel,
         industryPlural: industryPlural,
-        reportUrl: ((cfg.report && cfg.report.path) || '/get-report/') + '?' + reportParams,
+        reportUrl: ((cfg.report && cfg.report.path) || '/ai-visibility-optimizer-tool/') + '?' + reportParams,
         guardLine: cfg.result.guardLine
       };
     }
@@ -708,14 +708,14 @@
               '<p class="m-bq__guard">' + escapeHtml(state.result.guardLine) + '</p>' +
               '<div class="m-bq__ctaSet">' +
                 '<a class="m-bq__linkBtn" data-bq-action="report" href="' + escapeHtml(state.result.reportUrl + '&quiz_id=' + encodeURIComponent(state.quizId)) + '">' + escapeHtml(cfg.result.primaryCta || 'See what AI actually says about my brand') + '</a>' +
-                '<a class="m-bq__linkBtn m-bq__linkBtn--secondary" data-bq-action="sample" href="' + escapeHtml((cfg.result.sampleReportUrl) || '/sample-ai-visibility-report/') + '">' + escapeHtml(cfg.result.secondaryCta || 'See a sample report') + '</a>' +
+                (cfg.result.sampleReportUrl ? '<a class="m-bq__linkBtn m-bq__linkBtn--secondary" data-bq-action="sample" href="' + escapeHtml(cfg.result.sampleReportUrl) + '">' + escapeHtml(cfg.result.secondaryCta || 'See an example run') + '</a>' : '') +
               '</div>' +
               '<div class="m-bq__form">' +
                 '<p class="m-bq__formTitle">' + escapeHtml(cfg.result.emailTitle || 'Send me this benchmark result') + '</p>' +
                 '<input class="m-bq__field" data-bq-field="email" type="email" placeholder="you@company.com" autocomplete="email">' +
                 '<textarea class="m-bq__field m-bq__textarea" data-bq-field="note" placeholder="' + escapeHtml(cfg.result.notePlaceholder || 'What&rsquo;s one wrong thing AI gets wrong most often about your brand or category? (optional)') + '"></textarea>' +
                 '<div class="m-bq__formRow"><button type="button" class="m-bq__btn" data-bq-action="email-result">' + escapeHtml(cfg.result.emailCta || 'Send me this result') + '</button></div>' +
-                '<p class="m-bq__small">' + escapeHtml(cfg.result.emailNote || 'This sends your benchmark summary only. The full Metricus report is a separate audit.') + '</p>' +
+                '<p class="m-bq__small">' + escapeHtml(cfg.result.emailNote || 'This sends your benchmark summary only.') + '</p>' +
                 (state.emailSent ? '<p class="m-bq__thanks">' + escapeHtml(cfg.result.emailThanks || 'Benchmark summary request received.') + '</p>' : '') +
               '</div>' +
             '</div>';

@@ -5,7 +5,7 @@
  *   <script src="/js/reader-pulse-b.js" defer></script>
  *   <div data-reader-pulse-b data-source="<slug>"></div>
  *
- * Same 3-stage flow as reader-pulse.js (choice → lead capture → thanks)
+ * Three stages: a multiple-choice question, then the way into the tool, then thanks.
  * but Stage 1 is a compact multiple-choice question instead of a textarea.
  * Logs to the same Cloudflare Worker endpoint with READER_PULSE_B_* kinds.
  *
@@ -56,7 +56,7 @@
   var CSS = [
     '.m-rpb{margin:2.5rem 0;font-family:Inter,-apple-system,BlinkMacSystemFont,system-ui,sans-serif}',
     '.m-rpb *{box-sizing:border-box}',
-    '.m-rpb__stage{background:#0F172A;color:#f6f7ff;padding:1.5rem;border-left:4px solid #f6f7ff}',
+    '.m-rpb__stage{background:#0F172A;color:#f6f7ff;padding:1.5rem}',
     '@media(min-width:768px){.m-rpb__stage{padding:2rem}}',
     '.m-rpb__h{font-family:Newsreader,Georgia,serif;font-weight:700;font-size:1.35rem;line-height:1.15;color:#fff;margin:0 0 .75rem 0}',
     '@media(min-width:768px){.m-rpb__h{font-size:1.5rem}}',
@@ -228,33 +228,20 @@
       el('div', { class: 'm-rpb__row' }, [continueBtn])
     ]);
 
-    // --- Stage 2: Lead capture ---
-    var emailEl = el('input', {
-      type: 'email', class: 'm-rpb__input', required: 'required',
-      placeholder: 'Work email', autocomplete: 'email'
-    });
-    var websiteEl = el('input', {
-      type: 'text', class: 'm-rpb__input',
-      placeholder: 'Website (optional)', autocomplete: 'url'
-    });
-    var submitBtn = el('button', { type: 'submit', class: 'm-rpb__btn', text: 'Send me the report' });
+    // --- Stage 2: the tool ---
+    var openBtn = el('a', { class: 'm-rpb__btn', href: '/ai-visibility-optimizer-tool/', text: 'Open the tool' });
     var skipBtn = el('button', {
       type: 'button', class: 'm-rpb__skip', text: 'No thanks'
     });
-    var form = el('form', { class: 'm-rpb__fields', novalidate: 'novalidate' }, [
-      emailEl, websiteEl,
-      el('div', { class: 'm-rpb__row' }, [submitBtn, skipBtn])
-    ]);
     var s2 = el('div', { class: 'm-rpb__stage', hidden: true, 'data-rpb-stage': '2' }, [
-      el('div', { class: 'm-rpb__h', role: 'heading', 'aria-level': '3', text: 'Want a free AI visibility report for your site?' }),
-      el('div', { class: 'm-rpb__body', text: 'Leave your work email and we\u2019ll send it over.' }),
-      form
+      el('div', { class: 'm-rpb__h', role: 'heading', 'aria-level': '3', text: 'See what an AI assistant says about your page.' }),
+      el('div', { class: 'm-rpb__body', text: 'Put in a URL. The answer, the passages behind it and a rewrite for each one. Free, no signup.' }),
+      el('div', { class: 'm-rpb__row' }, [openBtn, skipBtn])
     ]);
 
     // --- Stage 3: Thanks ---
     var s3 = el('div', { class: 'm-rpb__stage', hidden: true, 'data-rpb-stage': '3' }, [
-      el('div', { class: 'm-rpb__h', role: 'heading', 'aria-level': '3', text: 'Thanks \u2014 got it.' }),
-      el('div', { class: 'm-rpb__body', text: 'We\u2019ll send the report to your inbox shortly.' })
+      el('div', { class: 'm-rpb__h', role: 'heading', 'aria-level': '3', text: 'Thanks.' })
     ]);
 
     root.appendChild(s1);
@@ -278,21 +265,10 @@
       if (!answer) return;
       postLog('anonymous', buildPricing('READER_PULSE_B_REASON', source, { Answer: answer }));
       show(2);
-      try { emailEl.focus(); } catch (e) {}
     });
 
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      var email = (emailEl.value || '').trim();
-      if (!email || !/.+@.+\..+/.test(email)) {
-        try { emailEl.focus(); } catch (e2) {}
-        return;
-      }
-      postLog(email, buildPricing('READER_PULSE_B_LEAD', source, {
-        Website: (websiteEl.value || '').trim(),
-        Answer: getAnswer()
-      }));
-      show(3);
+    openBtn.addEventListener('click', function(){
+      postLog('anonymous', buildPricing('READER_PULSE_B_TOOL', source, { Answer: getAnswer() }));
     });
 
     skipBtn.addEventListener('click', function(){
