@@ -1122,7 +1122,6 @@ $("answertext").addEventListener("input", () => {
   clearTimeout(editTimer);
   editTimer = setTimeout(() => { if (S.versions.length) logEvent("METRICUS_EDIT", Object.assign(logState(), {text: fieldText().slice(0, 8000)})); }, 3000);
 });
-logEvent("METRICUS_VIEW", {path: location.pathname + location.search + location.hash, ref: document.referrer.slice(0, 300), width: window.innerWidth, height: window.innerHeight});
 
 function focusQ() {                                                // the question box, the cursor in it
   window.scrollTo({top: 0, behavior: "instant"});
