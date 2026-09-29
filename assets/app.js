@@ -536,6 +536,7 @@ function render() {
   const v = S.view;
   $("s-ask").hidden = false;
   $("landing").hidden = v !== "ask";                            // the landing only under the box before a session starts
+  if (v !== "ask" && $("tutorial") && !$("tutorial").paused) { $("tutorial").dataset.auto = String(performance.now()); $("tutorial").pause(); }   // never plays on behind the tool
   $("main").classList.toggle("home", v === "ask");
   $("s-trace").hidden = !(v === "asking" || v === "session");
   ["s-sources", "s-target"].forEach((id) => { $(id).hidden = v !== "session"; });
@@ -1117,6 +1118,52 @@ document.addEventListener("change", (e) => {                       // a pick in 
   const r = e.target;
   if (r && r.name === "rid") logEvent("METRICUS_PICK", Object.assign(logState(), {name: r.dataset.entity || r.dataset.find || "", host: r.dataset.host || "", kind: r.dataset.find ? "name" : (r.dataset.via ? "added" : "read")}));
 }, true);
+const tut = $("tutorial");     // the example video first under the tool: it plays muted once three quarters of it are on screen, once,
+if (tut) {                     // and waits when it leaves; "Sound on" unmutes it where it is; its end card leads up to the question box.
+  const snd = $("tutorial-sound"), toBox = $("tutorial-tobox"), endHit = $("tutorial-endhit");   // What the visitor does is logged,
+  const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;                           // the page's own muted plays are not
+  let own = false, engaged = false, quarter = 0, seekTimer = null, soundTimer = null;
+  const at = () => Math.round(tut.currentTime * 10) / 10;
+  const byPage = () => performance.now() - Number(tut.dataset.auto || 0) < 800;      // a play, pause or seek the page just made
+  const page = (fn) => { tut.dataset.auto = String(performance.now()); fn(); };
+  const endAt = () => Number(tut.dataset.endcard) || (tut.duration || 0) - 5;
+  const atEnd = () => tut.ended || (tut.duration > 0 && tut.currentTime >= endAt());
+  const pills = () => { const e = atEnd(); toBox.hidden = endHit.hidden = !e; snd.hidden = e || !tut.muted || tut.paused; };
+  if (!calm && "IntersectionObserver" in window) new IntersectionObserver((es) => {
+    const r = es[es.length - 1].intersectionRatio;
+    if (own || tut.ended || $("landing").hidden) return;
+    if (r >= 0.75 && tut.paused) page(() => tut.play().catch(() => {}));              // blocked (a phone's low power mode): the poster stays
+    else if (r < 0.35 && !tut.paused) page(() => tut.pause());
+  }, {threshold: [0, 0.35, 0.75]}).observe(tut);
+  snd.addEventListener("click", () => { own = engaged = true; page(() => { tut.muted = false; }); pills(); logEvent("METRICUS_VIDEO_SOUND_ON", {at: at()}); });
+  const up = (from) => { logEvent("METRICUS_VIDEO_TO_BOX", {at: at(), from: from}); if (!tut.paused) page(() => tut.pause()); focusQ(); };
+  toBox.addEventListener("click", () => up("button"));
+  endHit.addEventListener("click", () => up("end card"));
+  tut.addEventListener("playing", pills);
+  tut.addEventListener("play", () => { if (!byPage()) { own = engaged = true; logEvent("METRICUS_VIDEO_PLAY", {at: at(), muted: tut.muted}); } });
+  tut.addEventListener("pause", () => {
+    pills();
+    if (!byPage() && !tut.ended) { own = true; logEvent("METRICUS_VIDEO_PAUSE", {at: at()}); }
+  });
+  tut.addEventListener("timeupdate", () => {
+    pills();
+    if (!engaged) return;
+    const q = tut.duration ? Math.floor((4 * tut.currentTime) / tut.duration) : 0;
+    if (q > quarter && q < 4) { quarter = q; logEvent("METRICUS_VIDEO_PROGRESS", {quarter: q, at: at(), muted: tut.muted}); }
+  });
+  tut.addEventListener("ended", () => { pills(); quarter = 0; if (engaged) logEvent("METRICUS_VIDEO_END", {muted: tut.muted}); });
+  tut.addEventListener("seeked", () => {
+    pills();
+    if (byPage()) return;
+    clearTimeout(seekTimer); seekTimer = setTimeout(() => { own = engaged = true; logEvent("METRICUS_VIDEO_SEEK", {to: at()}); }, 600);
+  });
+  tut.addEventListener("volumechange", () => {
+    pills();
+    if (byPage()) return;
+    clearTimeout(soundTimer);
+    soundTimer = setTimeout(() => { own = engaged = true; logEvent("METRICUS_VIDEO_SOUND", {muted: tut.muted, volume: Math.round(tut.volume * 100) / 100}); }, 600);
+  });
+}
 let editTimer = null;                                              // the answer as edited, once typing pauses for 3 s
 $("answertext").addEventListener("input", () => {
   clearTimeout(editTimer);
